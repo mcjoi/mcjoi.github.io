@@ -10,9 +10,10 @@ function getExif() {
     EXIF.getData(img1, function() {
         var make = EXIF.getTag(this, "Make");
         var model = EXIF.getTag(this, "Model");        
+        var ISO = EXIF.getTag(this, "ISOSpeedRatings");
         var fNumber = EXIF.getTag(this, "FNumber");
         var makeAndModel = document.getElementById("makeAndModel");
-        makeAndModel.innerHTML = `${make} ${model} ${fNumber}`;
+        makeAndModel.innerHTML = `${make} ${model} ${model} ${fNumber}`;
     });
 
    
