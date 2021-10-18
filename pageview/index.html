@@ -12,23 +12,16 @@ function getExif() {
         var model = EXIF.getTag(this, "Model");
         var makeAndModel = document.getElementById("makeAndModel");
         makeAndModel.innerHTML = `${make} ${model}`;
-    });
-
-    var img2 = document.getElementById("img2");
-    EXIF.getData(img2, function() {
-        var allMetaData = EXIF.getAllTags(this);
-        var allMetaDataSpan = document.getElementById("allMetaDataSpan");
-        allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
-    });
+    });    
 }
 </script>
 </head>
+    
+    
 <body>
     <img src="image1.jpg" id="img1" />
-    <pre>Make and model: <span id="makeAndModel"></span></pre>
+    <pre>model:<span id="makeAndModel"></span></pre>
     <br/>
-    <img src="image1.jpg" id="img2" />
-    <pre id="allMetaDataSpan"></pre>
-    <br/>
+    
 </body>
 </html>
