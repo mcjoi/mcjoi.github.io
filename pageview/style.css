@@ -10,7 +10,7 @@
 	src: url('./images/NanumSquare.ttf');
 }
 
-exif {
+html {
 	float: center;
 	font-size: 1em;
 	font-family : 'NanumS';	
