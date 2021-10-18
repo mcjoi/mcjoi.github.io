@@ -1,0 +1,17 @@
+/* Web Font Load */
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+
+
+
+@font-face {
+	font-family : 'NanumS';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./images/NanumSquare.ttf');
+}
+
+.exif {
+	float: center;
+	font-size: 1em;
+	font-family : 'NanumS';	
+}
