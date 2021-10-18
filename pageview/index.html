@@ -13,7 +13,7 @@ function getExif() {
         var ISO = EXIF.getTag(this, "ISOSpeedRatings");
         var fNumber = EXIF.getTag(this, "FNumber");
         var makeAndModel = document.getElementById("makeAndModel");
-        makeAndModel.innerHTML = `${make} ${model} ${model} ${fNumber}`;
+        makeAndModel.innerHTML = `${make} ${model} ${ISO} ${fNumber}`;
     });
 
    
