@@ -13,7 +13,7 @@ function getExif() {
         var lens = EXIF.getTag(this, "undefined");
         var fNumber = EXIF.getTag(this, "FNumber");
         var makeAndModel = document.getElementById("makeAndModel");
-        makeAndModel.innerHTML = `${make} ${model} ${undefined} ${FNumber}`;
+        makeAndModel.innerHTML = `${make} ${model} ${lens} ${FNumber}`;
     });
 
    
