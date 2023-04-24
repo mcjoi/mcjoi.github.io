@@ -39204,7 +39204,7 @@ A.wM.prototype={
 aC(){return new A.Or(B.k)}}
 A.Or.prototype={
 b_(){this.bu()
-$.uc().du(0,"./pageindicator.riv").bm(new A.ab2(this),t.P)},
+$.uc().du(0,"./images/pageindicator.riv").bm(new A.ab2(this),t.P)},
 m(){var s=this.d
 s.Fi()
 s.SA()
