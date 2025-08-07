@@ -25,7 +25,7 @@ subtitle: # site tagline that appears below site title in masthead
 name: "your name here" # 블로그 닉네임 설정
 description: "this is my blog!" # 블로그 설명
 url: "https://mcjoi.github.io" # 블로그 URL
-baseurl: "/sunnybong"
+baseurl: "/"
 repository: "mcjoi/mcjoi.github.io" # GitHub Repo 이름
 teaser: #
 
