@@ -24,3 +24,4 @@ last_modified_at: 2021-10-09
 def hello():
   print("Hello, World!")
 ```
+![구글 로고](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "Google Logo")
