@@ -3,7 +3,7 @@ title: "바로 여기에 작성하면 빠르게 반영이 되나요?"
 excerpt: "본문의 주요 내용을 여기에 입력하세요"
 
 categories:
-  - Categories1
+  - Categories2
 tags:
   - [tag1, tag2]
 
