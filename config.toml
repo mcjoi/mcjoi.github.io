@@ -1,0 +1,12 @@
+
+theme = "book"
+
+baseURL = "http://mcjoi.github.io"
+languageCode = 'en-us'
+title = 'shaaaaalow Dive'
+author = "sunnybong"
+relativeURLs = false
+canonifyURLs = true
+
+
+
