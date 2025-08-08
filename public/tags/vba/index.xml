@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VBA on shaaaaalow Dive</title>
+    <link>http://localhost:1313/tags/vba/</link>
+    <description>Recent content in VBA on shaaaaalow Dive</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vba/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacroToolkit</title>
+      <link>http://localhost:1313/posts/0808_01/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/0808_01/</guid>
+      <description>&lt;h2 id=&#34;what-is-macrotoolkit&#34;&gt;&#xA;  What is MacroToolkit?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-macrotoolkit&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;여러 해동안 엑셀로 작업을 해오면서 자주 썼던 기능을 매크로로 만들었다. 개인적인 매크로들이지만, 다른 사람들에게 도움이 될까 배포를 한 적이 있었는데, 유료로 하든 무료로 하든 인기가 없어서 지금은 다 내렸다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;point&#34;&gt;&#xA;  point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;개별 기능이 마음에 쏙 든다기 보다 필요에 따라서 만드는 매크로들을 어느 한군데 모아서 관리할 수 있다는 점이 핵심이며, 이를 처리하기 위해서 &lt;code&gt;userform&lt;/code&gt;을 사용하였는데, 생각보다 &lt;code&gt;VB6&lt;/code&gt;의 &lt;code&gt;userform&lt;/code&gt;은 겁나게 구리고, 지금은 당연시 되는 기능들이 많이 누락이 되어있다.(예를 들어 &lt;code&gt;png&lt;/code&gt; 이미지를 사용을 하지 못한다거나&amp;hellip;)&lt;br&gt;&#xA;→ 그럼에도 불구하고, 매크로를 모아놓는 것에는 충분한 듯하다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
