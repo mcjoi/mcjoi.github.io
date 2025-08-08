@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/0808_01/</loc>
+    <loc>https://mcjoi.github.io/posts/0808_01/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/excel/</loc>
+    <loc>https://mcjoi.github.io/tags/excel/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://mcjoi.github.io/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://mcjoi.github.io/posts/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://mcjoi.github.io/tags/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/tags/vba/</loc>
+    <loc>https://mcjoi.github.io/tags/vba/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://mcjoi.github.io/categories/</loc>
   </url>
 </urlset>
