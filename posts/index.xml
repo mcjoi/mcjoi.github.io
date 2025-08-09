@@ -9,18 +9,18 @@
     <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Creating mouse hover effect in excel VBA userform </title>
+      <link>https://mcjoi.github.io/posts/003/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/posts/003/</guid>
+      <description>&lt;h2 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.&lt;br&gt;&#xA;Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>MacroToolkit(PowerPoint)</title>
       <link>https://mcjoi.github.io/posts/002/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/posts/002/</guid>
       <description>&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-point&#34;&gt;&#xA;  Key Point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#key-point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Instead of relying on &lt;code&gt;UserForm&lt;/code&gt;, I made active use of the Ribbon menu to enhance usability.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Making Excel VBA Userform mouse hover effect</title>
-      <link>https://mcjoi.github.io/posts/002/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/posts/002/</guid>
-      <description>&lt;h2 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.&lt;br&gt;&#xA;Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.&lt;/p&gt;</description>
     </item>
     <item>
       <title>MacroToolkit(Excel)</title>
