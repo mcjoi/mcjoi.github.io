@@ -4,37 +4,32 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  What is it?
+  Take #1
   #
 
-Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
-
-
-  Key Point
-  #
-
-Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://mcjoi.github.io/posts/002/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="MacroToolkit(PowerPoint)">
-  <meta property="og:description" content="What is it? # Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
-Key Point # Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+  <meta property="og:title" content="Making Excel VBA Userform mouse hover effect">
+  <meta property="og:description" content="Take #1 # When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
     <meta property="article:tag" content="VBA">
-    <meta property="article:tag" content="Powerpoint">
-<title>MacroToolkit(PowerPoint) | shaaaaalow Dive</title>
+    <meta property="article:tag" content="Excel">
+<title>Making Excel VBA Userform mouse hover effect | shaaaaalow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/posts/002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.5e05b5a81f09745e69699167e4baaded6d07c316ed55fe7349e376640f8f5f82.css" integrity="sha256-XgW1qB8JdF5paZFn5Lqt7W0HwxbtVf5zSeN2ZA&#43;PX4I=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.8f63ac2e3de16dbf9bbdf2d8fc09cf8bd6120aaa1fc5a8c5d01988f4286f186e.js" integrity="sha256-j2OsLj3hbb&#43;bvfLY/AnPi9YSCqofxajF0BmI9ChvGG4=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.c982e7e1342e176a971c2db8acdb473b99d84786ca1bd2cf39e2ddfecaec913f.js" integrity="sha256-yYLn4TQuF2qXHC24rNtHO5nYR4bKG9LPOeLd/srskT8=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -108,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>MacroToolkit(PowerPoint)</h3>
+  <h3>Making Excel VBA Userform mouse hover effect</h3>
 
   <label for="toc-control">
     
@@ -124,10 +119,13 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a>
+      <ul>
+        <li><a href="#vba-code">VBA code</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -142,7 +140,7 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown book-post">
   <h1>
-    MacroToolkit(PowerPoint)
+    Making Excel VBA Userform mouse hover effect
   </h1>
   
   <div class="flex align-center text-small book-post-date">
@@ -158,100 +156,33 @@ https://github.com/alex-shpak/hugo-book
   <div class="text-small">
     
       <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
-      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
   </div>
   
 
 
-  <div class="book-post-content"><h2 id="what-is-it">
-  What is it?
-  <a class="anchor" href="#what-is-it">#</a>
+  <div class="book-post-content"><h2 id="take-1">
+  Take #1
+  <a class="anchor" href="#take-1">#</a>
 </h2>
-<p>Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.</p>
+<p>When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.<br>
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.</p>
 <hr>
-<h2 id="key-point">
-  Key Point
-  <a class="anchor" href="#key-point">#</a>
+<h2 id="take-2">
+  Take #2
+  <a class="anchor" href="#take-2">#</a>
 </h2>
-<p>Instead of relying on <code>UserForm</code>, I made active use of the Ribbon menu to enhance usability.</p>
+<p>Create image pairs for default and hover states. Since changing colors later requires regenerating all images, you need to choose carefully. Overlay the two images: place the hover image on top with its Visible property set to False, and the default image underneath.<br>
+Then, place a transparent label covering the entire page background. Using the MouseMove event on the default image, set the hover image’s Visible to True on mouse over. Finally, use the MouseMove event on the transparent label to set the hover image’s Visible back to False when the mouse moves away.</p>
 <hr>
-<h2 id="functions">
-  Functions
-  <a class="anchor" href="#functions">#</a>
+<h2 id="take-3">
+  Take #3
+  <a class="anchor" href="#take-3">#</a>
 </h2>
-<table>
-  <thead>
-      <tr>
-          <th><strong>name</strong></th>
-          <th><strong>Description</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Make Table</td>
-          <td>Creates frequently used table templates</td>
-      </tr>
-      <tr>
-          <td>Table Size</td>
-          <td>Adjusts table size via UserForm</td>
-      </tr>
-      <tr>
-          <td>delblank</td>
-          <td>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</td>
-      </tr>
-      <tr>
-          <td>RGB Color</td>
-          <td>Displays RGB values of the selected shape via UserForm</td>
-      </tr>
-      <tr>
-          <td>Color palette</td>
-          <td>Creates a color palette in the slide master - newly added feature</td>
-      </tr>
-      <tr>
-          <td>Text arrange</td>
-          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
-      </tr>
-      <tr>
-          <td>zeromargin</td>
-          <td>Sets margins of text boxes or shapes to zero</td>
-      </tr>
-      <tr>
-          <td>tspacing</td>
-          <td>Adjusts line spacing</td>
-      </tr>
-      <tr>
-          <td>jpg export</td>
-          <td>Exports selected slides as JPG files</td>
-      </tr>
-      <tr>
-          <td>slide_resizes</td>
-          <td>Changes slide size based on pixel dimensions</td>
-      </tr>
-      <tr>
-          <td>groupRelease</td>
-          <td>Ungroups all groups on all slides at once</td>
-      </tr>
-      <tr>
-          <td>align_bottom</td>
-          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>align_right</td>
-          <td>Aligns selected shape(s) to the right of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>guidebox</td>
-          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="download">
-  Download
-  <a class="anchor" href="#download">#</a>
-</h2>
-<p>To manage versions, the files are stored at the following location:<br>
-<a href="http://naver.me/5UEO0oHw">http://naver.me/5UEO0oHw</a></p>
+<h3 id="vba-code">
+  VBA code
+  <a class="anchor" href="#vba-code">#</a>
+</h3>
 <hr>
 <p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/921">https://sunnybong.tistory.com/921</a></p>
 </div>
@@ -302,10 +233,13 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a>
+      <ul>
+        <li><a href="#vba-code">VBA code</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -317,7 +251,8 @@ https://github.com/alex-shpak/hugo-book
   </main>
 
   
-  <script src="https://mcjoi.github.io/theme/outlink.js"></script>
+  <script src="https://mcjoi.github.io/js/outlink.js"></script>
+  
 </body>
 </html>
 
