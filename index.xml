@@ -6,17 +6,24 @@
     <description>Recent content on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[엑셀]소수점 지리 한꺼번에 꺼내기</title>
+      <title>MacroToolkit(PowerPoint)</title>
       <link>https://mcjoi.github.io/posts/002/</link>
-      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/posts/002/</guid>
-      <description>&lt;h2 id=&#34;what-it&#34;&gt;&#xA;  What it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;엑셀 파일을 서로 주고받다가 보면, 본의 아니게.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;point&#34;&gt;&#xA;  point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;개별 기능이 마음에 쏙 든다기 보다 필요에 따라서 만드는 매크로들을 어느 한군데 모아서 관리할 수 있다는 점이 핵심이며, 이를 처리하기 위해서 &lt;code&gt;userform&lt;/code&gt;을 사용하였는데, 생각보다 &lt;code&gt;VB6&lt;/code&gt;의 &lt;code&gt;userform&lt;/code&gt;은 겁나게 구리고, 지금은 당연시 되는 기능들이 많이 누락이 되어있다.(예를 들어 &lt;code&gt;png&lt;/code&gt; 이미지를 사용을 하지 못한다거나&amp;hellip;)&lt;br&gt;&#xA;→ 그럼에도 불구하고, 매크로를 모아놓는 것에는 충분한 듯하다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;things-to-know&#34;&gt;&#xA;  things to know&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#things-to-know&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;어쩌다 보니, &lt;code&gt;VBA&lt;/code&gt;의 본질보다는 이외의 것에 대한 지식이 축적되었다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-point&#34;&gt;&#xA;  Key Point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#key-point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Instead of relying on &lt;code&gt;UserForm&lt;/code&gt;, I made active use of the Ribbon menu to enhance usability.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>MacroToolkit</title>
+      <title>Making Excel VBA Userform mouse hover effect</title>
+      <link>https://mcjoi.github.io/posts/002/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/posts/002/</guid>
+      <description>&lt;h2 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;vba의 기반인 vb6가 기술지원이 종료된게 언제일까? 비개발자, 마케터의 레벨에서 업무에서 친숙하게 사용하는 거의 유일한 프로그래밍 언어가 수십년전 기술이라는건 참 아쉽다.&lt;br&gt;&#xA;지금 시점의 기술과 비교하여 뭔가를 해보자면 이가 빠지게 된 건 당연한것인지도 모르지만, 오늘은 object를 버튼으로 사용할때 마우스 hover효과를 내는 우회방법에 대해 시도해본다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;take-2&#34;&gt;&#xA;  Take #2&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-2&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;이미지를 default 와 hover  쌍으로 만들어준다. 색을 다시 변경하려면 싹다 다시 뽑아야하니, 신중하게 골라야 한다. 두개 이미지를 겹쳐둔다.&#xA;위에 hover를 visible False로 두고, 아래 default를 깐다.&#xA;그리고 페이지 전체  백그라운드에 label 하나를 깔고, tranparent로 투명하게 만들어준다.&#xA;default에 mousemove 프로시저로, 오버시 hover의 visible을  True로 바꿔준다. 마지막으로 투명 label에 mousemove 프로시저를 통해 hover의 visible을 다시 False로 바꿔준다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacroToolkit(Excel)</title>
       <link>https://mcjoi.github.io/posts/001/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/posts/001/</guid>
