@@ -9,18 +9,18 @@
     <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[엑셀]소수점 지리 한꺼번에 꺼내기</title>
+      <link>https://mcjoi.github.io/posts/002/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/posts/002/</guid>
+      <description>&lt;h2 id=&#34;what-it&#34;&gt;&#xA;  What it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;엑셀 파일을 서로 주고받다가 보면, 본의 아니게.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;point&#34;&gt;&#xA;  point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;개별 기능이 마음에 쏙 든다기 보다 필요에 따라서 만드는 매크로들을 어느 한군데 모아서 관리할 수 있다는 점이 핵심이며, 이를 처리하기 위해서 &lt;code&gt;userform&lt;/code&gt;을 사용하였는데, 생각보다 &lt;code&gt;VB6&lt;/code&gt;의 &lt;code&gt;userform&lt;/code&gt;은 겁나게 구리고, 지금은 당연시 되는 기능들이 많이 누락이 되어있다.(예를 들어 &lt;code&gt;png&lt;/code&gt; 이미지를 사용을 하지 못한다거나&amp;hellip;)&lt;br&gt;&#xA;→ 그럼에도 불구하고, 매크로를 모아놓는 것에는 충분한 듯하다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;things-to-know&#34;&gt;&#xA;  things to know&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#things-to-know&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;어쩌다 보니, &lt;code&gt;VBA&lt;/code&gt;의 본질보다는 이외의 것에 대한 지식이 축적되었다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>MacroToolkit</title>
       <link>https://mcjoi.github.io/posts/001/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/posts/001/</guid>
-      <description>&lt;h2 id=&#34;what-is-macrotoolkit&#34;&gt;&#xA;  What is MacroToolkit?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-macrotoolkit&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;여러 해동안 엑셀로 작업을 해오면서 자주 썼던 기능을 매크로로 만들었다. 개인적인 매크로들이지만, 다른 사람들에게 도움이 될까 배포를 한 적이 있었는데, 유료로 하든 무료로 하든 인기가 없어서 지금은 다 내렸다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;point&#34;&gt;&#xA;  point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;개별 기능이 마음에 쏙 든다기 보다 필요에 따라서 만드는 매크로들을 어느 한군데 모아서 관리할 수 있다는 점이 핵심이며, 이를 처리하기 위해서 &lt;code&gt;userform&lt;/code&gt;을 사용하였는데, 생각보다 &lt;code&gt;VB6&lt;/code&gt;의 &lt;code&gt;userform&lt;/code&gt;은 겁나게 구리고, 지금은 당연시 되는 기능들이 많이 누락이 되어있다.(예를 들어 &lt;code&gt;png&lt;/code&gt; 이미지를 사용을 하지 못한다거나&amp;hellip;)&lt;br&gt;&#xA;→ 그럼에도 불구하고, 매크로를 모아놓는 것에는 충분한 듯하다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>sfsdfsdfsf</title>
-      <link>https://mcjoi.github.io/posts/002/</link>
-      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/posts/002/</guid>
-      <description>&lt;h2 id=&#34;what-is-macrotoolkit&#34;&gt;&#xA;  What is MacroToolkit?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-macrotoolkit&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;여러 해동안 엑셀로 작업을 해오면서 자주 썼던 기능을 매크로로 만들었다. 개인적인 매크로들이지만, 다른 사람들에게 도움이 될까 배포를 한 적이 있었는데, 유료로 하든 무료로 하든 인기가 없어서 지금은 다 내렸다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;point&#34;&gt;&#xA;  point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;개별 기능이 마음에 쏙 든다기 보다 필요에 따라서 만드는 매크로들을 어느 한군데 모아서 관리할 수 있다는 점이 핵심이며, 이를 처리하기 위해서 &lt;code&gt;userform&lt;/code&gt;을 사용하였는데, 생각보다 &lt;code&gt;VB6&lt;/code&gt;의 &lt;code&gt;userform&lt;/code&gt;은 겁나게 구리고, 지금은 당연시 되는 기능들이 많이 누락이 되어있다.(예를 들어 &lt;code&gt;png&lt;/code&gt; 이미지를 사용을 하지 못한다거나&amp;hellip;)&lt;br&gt;&#xA;→ 그럼에도 불구하고, 매크로를 모아놓는 것에는 충분한 듯하다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Over the years of working extensively with Excel, I created macros for frequently used tasks. Although these were personal macros, I once shared them publicly hoping they might help others. However, whether offered for free or as paid tools, they never gained much traction, so I eventually withdrew all of them.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-point&#34;&gt;&#xA;  Key Point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#key-point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The main value lies not so much in any individual feature, but in gathering various macros into one place for easier management. To handle this, I used a &lt;code&gt;UserForm&lt;/code&gt;, but surprisingly, the &lt;code&gt;VB6&lt;/code&gt; &lt;code&gt;UserForm&lt;/code&gt; is quite outdated and lacks many features that we now take for granted—like support for &lt;code&gt;PNG&lt;/code&gt; images, for example.&lt;br&gt;&#xA;→ Nonetheless, it serves well enough for organizing the macros.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
