@@ -7,32 +7,34 @@
   What is it?
   #
 
-Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
+Over the years of working extensively with Excel, I created macros for frequently used tasks. Although these were personal macros, I once shared them publicly hoping they might help others. However, whether offered for free or as paid tools, they never gained much traction, so I eventually withdrew all of them.
 
 
   Key Point
   #
 
-Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+The main value lies not so much in any individual feature, but in gathering various macros into one place for easier management. To handle this, I used a UserForm, but surprisingly, the VB6 UserForm is quite outdated and lacks many features that we now take for granted—like support for PNG images, for example.
+→ Nonetheless, it serves well enough for organizing the macros.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/002/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/secssion/001/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="MacroToolkit - powerpoint">
-  <meta property="og:description" content="What is it? # Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
-Key Point # Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+  <meta property="og:title" content="MacroToolkit - excel">
+  <meta property="og:description" content="What is it? # Over the years of working extensively with Excel, I created macros for frequently used tasks. Although these were personal macros, I once shared them publicly hoping they might help others. However, whether offered for free or as paid tools, they never gained much traction, so I eventually withdrew all of them.
+Key Point # The main value lies not so much in any individual feature, but in gathering various macros into one place for easier management. To handle this, I used a UserForm, but surprisingly, the VB6 UserForm is quite outdated and lacks many features that we now take for granted—like support for PNG images, for example.
+→ Nonetheless, it serves well enough for organizing the macros.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
+    <meta property="article:section" content="secssion">
     <meta property="article:published_time" content="2025-08-08T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-08-08T00:00:00+00:00">
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>MacroToolkit - powerpoint | shaaaaalow Dive</title>
+<title>MacroToolkit - excel | shaaaaalow Dive</title>
 <link rel="icon" href="http://localhost:1313/favicon.png" >
 <link rel="manifest" href="http://localhost:1313/manifest.json">
-<link rel="canonical" href="http://localhost:1313/posts/002/">
+<link rel="canonical" href="http://localhost:1313/secssion/001/">
 <link rel="stylesheet" href="http://localhost:1313/book.min.58f31da0bab6784a13027f5f5563278069a3d5b3e154905863b298dbe79a3460.css" integrity="sha256-WPMdoLq2eEoTAn9fVWMngGmj1bPhVJBYY7KY2&#43;eaNGA=" crossorigin="anonymous">
   <script defer src="http://localhost:1313/fuse.min.js"></script>
   <script defer src="http://localhost:1313/en.search.min.c961fc7ac6c4220cabfb2bcc796963c6b7b2bad353d4ac45cf48aad4ede5981f.js" integrity="sha256-yWH8esbEIgyr&#43;yvMeWljxreyutNT1KxFz0iq1O3lmB8=" crossorigin="anonymous"></script>
@@ -77,8 +79,6 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="http://localhost:1313/posts/004/">[snippets] VBA UI</a></li>
   
     <li><a href="http://localhost:1313/posts/003/">[snippets] VBA - excel</a></li>
-  
-    <li><a href="http://localhost:1313/posts/002/">MacroToolkit - powerpoint</a></li>
   
 </ul>
 
@@ -128,7 +128,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>MacroToolkit - powerpoint</h3>
+  <h3>MacroToolkit - excel</h3>
 
   <label for="toc-control">
     
@@ -146,7 +146,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#what-is-it">What is it?</a></li>
     <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
+    <li><a href="#what-i-learned">What I Learned</a></li>
     <li><a href="#download">Download</a></li>
   </ul>
 </nav>
@@ -160,127 +160,36 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown book-post">
-  <h1>
-    MacroToolkit - powerpoint
-  </h1>
-  
-  <div class="flex align-center text-small book-post-date">
-    <img src="http://localhost:1313/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 8, 2025</span>
-  </div>
-
-
-
-  
-  <div class="text-small">
-    
-      <a href="http://localhost:1313/categories/book1/">Book1</a>
-  </div>
-  
-
-  
-  <div class="text-small">
-    
-      <a href="http://localhost:1313/tags/vba/">VBA</a>, 
-      <a href="http://localhost:1313/tags/excel/">Excel</a>, 
-      <a href="http://localhost:1313/tags/powerpoint/">Powerpoint</a>
-  </div>
-  
-
-
-  <div class="book-post-content"><h2 id="what-is-it">
+  <article class="markdown book-article"><h2 id="what-is-it">
   What is it?
   <a class="anchor" href="#what-is-it">#</a>
 </h2>
-<p>Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.</p>
+<p>Over the years of working extensively with Excel, I created macros for frequently used tasks. Although these were personal macros, I once shared them publicly hoping they might help others. However, whether offered for free or as paid tools, they never gained much traction, so I eventually withdrew all of them.</p>
 <hr>
 <h2 id="key-point">
   Key Point
   <a class="anchor" href="#key-point">#</a>
 </h2>
-<p>Instead of relying on <code>UserForm</code>, I made active use of the Ribbon menu to enhance usability.</p>
+<p>The main value lies not so much in any individual feature, but in gathering various macros into one place for easier management. To handle this, I used a <code>UserForm</code>, but surprisingly, the <code>VB6</code> <code>UserForm</code> is quite outdated and lacks many features that we now take for granted—like support for <code>PNG</code> images, for example.<br>
+→ Nonetheless, it serves well enough for organizing the macros.</p>
 <hr>
-<h2 id="functions">
-  Functions
-  <a class="anchor" href="#functions">#</a>
+<h2 id="what-i-learned">
+  What I Learned
+  <a class="anchor" href="#what-i-learned">#</a>
 </h2>
-<table>
-  <thead>
-      <tr>
-          <th>name</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Make Table</td>
-          <td>Creates frequently used table templates</td>
-      </tr>
-      <tr>
-          <td>Table Size</td>
-          <td>Adjusts table size via UserForm</td>
-      </tr>
-      <tr>
-          <td>delblank</td>
-          <td>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</td>
-      </tr>
-      <tr>
-          <td>RGB Color</td>
-          <td>Displays RGB values of the selected shape via UserForm</td>
-      </tr>
-      <tr>
-          <td>Color palette</td>
-          <td>Creates a color palette in the slide master - newly added feature</td>
-      </tr>
-      <tr>
-          <td>Text arrange</td>
-          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
-      </tr>
-      <tr>
-          <td>zeromargin</td>
-          <td>Sets margins of text boxes or shapes to zero</td>
-      </tr>
-      <tr>
-          <td>tspacing</td>
-          <td>Adjusts line spacing</td>
-      </tr>
-      <tr>
-          <td>jpg export</td>
-          <td>Exports selected slides as JPG files</td>
-      </tr>
-      <tr>
-          <td>slide_resizes</td>
-          <td>Changes slide size based on pixel dimensions</td>
-      </tr>
-      <tr>
-          <td>groupRelease</td>
-          <td>Ungroups all groups on all slides at once</td>
-      </tr>
-      <tr>
-          <td>align_bottom</td>
-          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>align_right</td>
-          <td>Aligns selected shape(s) to the right of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>guidebox</td>
-          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
-      </tr>
-  </tbody>
-</table>
+<p>Somehow, I ended up accumulating knowledge more about peripheral topics than about the core of <code>VBA</code> itself.<br>
+→ I looked into <code>evilClippy</code> because I was embarrassed to expose my code publicly.<br>
+→ I explored <code>xlwings</code> for editing <code>VBA</code> code directly in <code>VSCode</code>.</p>
 <hr>
 <h2 id="download">
   Download
   <a class="anchor" href="#download">#</a>
 </h2>
-<p>To manage versions, the files are stored at the following location:<br>
-<a href="http://naver.me/5UEO0oHw">http://naver.me/5UEO0oHw</a></p>
+<p>To keep track of versions, I’ve stored the files at the following location:<br>
+v0.32<br>
+<a href="https://naver.me/5jBY9gto">https://naver.me/5jBY9gto</a></p>
 <hr>
-<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/620">https://sunnybong.tistory.com/620</a></p>
-</div>
+<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/874">https://sunnybong.tistory.com/874</a></p>
 </article>
  
       
@@ -330,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#what-is-it">What is it?</a></li>
     <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
+    <li><a href="#what-i-learned">What I Learned</a></li>
     <li><a href="#download">Download</a></li>
   </ul>
 </nav>

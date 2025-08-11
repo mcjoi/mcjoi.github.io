@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Book1 on shaaaaalow Dive</title>
-    <link>https://mcjoi.github.io/categories/book1/</link>
-    <description>Recent content in Book1 on shaaaaalow Dive</description>
+    <title>Books on shaaaaalow Dive</title>
+    <link>https://mcjoi.github.io/books/</link>
+    <description>Recent content in Books on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcjoi.github.io/categories/book1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcjoi.github.io/books/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacroToolkit - excel</title>
       <link>https://mcjoi.github.io/books/001/</link>
