@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
@@ -15,25 +15,26 @@ When did VB6—the foundation of VBA—officially lose technical support? It’s
 Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/003/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://mcjoi.github.io/posts/003/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="Self-Made MS-Office VBA">
+  <meta property="og:title" content="VBA snippets">
   <meta property="og:description" content="Creating mouse hover effect in excel VBA userform # Take #1 # When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
 Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-08-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-11T00:00:00+00:00">
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
-<title>Self-Made MS-Office VBA | shaaaaalow Dive</title>
-<link rel="icon" href="http://localhost:1313/favicon.png" >
-<link rel="manifest" href="http://localhost:1313/manifest.json">
-<link rel="canonical" href="http://localhost:1313/posts/003/">
-<link rel="stylesheet" href="http://localhost:1313/book.min.57853118de88ab304a60a47d3cd40adf988dcecae03bbef7441e364072726313.css" integrity="sha256-V4UxGN6IqzBKYKR9PNQK35iNzsrgO773RB42QHJyYxM=" crossorigin="anonymous">
-  <script defer src="http://localhost:1313/fuse.min.js"></script>
-  <script defer src="http://localhost:1313/en.search.min.84a895d4371e035d0b82569127806c216dd85aeec7725a647361db5e9c9ed43f.js" integrity="sha256-hKiV1DceA10LglaRJ4BsIW3YWu7Hclpkc2HbXpye1D8=" crossorigin="anonymous"></script>
+    <meta property="article:tag" content="Powerpoint">
+<title>VBA snippets | shaaaaalow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/posts/003/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.57853118de88ab304a60a47d3cd40adf988dcecae03bbef7441e364072726313.css" integrity="sha256-V4UxGN6IqzBKYKR9PNQK35iNzsrgO773RB42QHJyYxM=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.8e933cf2ed096a3a5fbf018883a7b0de4fbc10504a1380a2bc35ebd87b0edbc3.js" integrity="sha256-jpM88u0JajpfvwGIg6ew3k&#43;8EFBKE4CivDXr2HsO28M=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -49,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="http://localhost:1313/"><span>shaaaaalow Dive</span>
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaalow Dive</span>
   </a>
 </h2>
 
@@ -65,11 +66,11 @@ https://github.com/alex-shpak/hugo-book
 <h2 class="recent-posts"></h2>
 <ul>
   
-    <li><a href="http://localhost:1313/posts/004/"></a></li>
+    <li><a href="https://mcjoi.github.io/posts/003/">VBA snippets</a></li>
   
-    <li><a href="http://localhost:1313/posts/003/">Self-Made MS-Office VBA</a></li>
+    <li><a href="https://mcjoi.github.io/posts/002/">VBA userform</a></li>
   
-    <li><a href="http://localhost:1313/posts/001/">MS-OFFICE MacroToolkit</a></li>
+    <li><a href="https://mcjoi.github.io/posts/001/">MacroToolkit(excel, powerpoint)</a></li>
   
 </ul>
 
@@ -114,14 +115,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Self-Made MS-Office VBA</h3>
+  <h3>VBA snippets</h3>
 
   <label for="toc-control">
     
-    <img src="http://localhost:1313/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -140,13 +141,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#take-3">Take #3</a></li>
       </ul>
     </li>
-    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
-      <ul>
-        <li><a href="#take-1-1">Take #1</a></li>
-        <li><a href="#take-2-1">Take #2</a></li>
-        <li><a href="#take-3-1">Take #3</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
 
@@ -161,12 +155,12 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown book-post">
   <h1>
-    Self-Made MS-Office VBA
+    VBA snippets
   </h1>
   
   <div class="flex align-center text-small book-post-date">
-    <img src="http://localhost:1313/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 9, 2025</span>
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 11, 2025</span>
   </div>
 
 
@@ -176,8 +170,9 @@ https://github.com/alex-shpak/hugo-book
   
   <div class="text-small">
     
-      <a href="http://localhost:1313/tags/vba/">VBA</a>, 
-      <a href="http://localhost:1313/tags/excel/">Excel</a>
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
   </div>
   
 
@@ -211,42 +206,7 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>end sub
 </span></span></code></pre></div><hr>
 <p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/921">https://sunnybong.tistory.com/921</a></p>
-<h2 id="filling-blanks-in-a-database-style-table">
-  Filling Blanks in a Database-Style Table
-  <a class="anchor" href="#filling-blanks-in-a-database-style-table">#</a>
-</h2>
-<h3 id="take-1-1">
-  Take #1
-  <a class="anchor" href="#take-1-1">#</a>
-</h3>
-<p>Sometimes when receiving data, someone tries to &ldquo;tidy it up&rdquo; by only entering values in the very first row, leaving the rest of the cells blank.</p>
 <hr>
-<h3 id="take-2-1">
-  Take #2
-  <a class="anchor" href="#take-2-1">#</a>
-</h3>
-<p>Let&rsquo;s see how to fill in these blanks quickly and efficiently.<br>
-For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it using a <code>Do..Loop</code> statement.</p>
-<hr>
-<h3 id="take-3-1">
-  Take #3
-  <a class="anchor" href="#take-3-1">#</a>
-</h3>
-<p>VBA code snippets</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>Sub wordDBFill()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Do
-</span></span><span style="display:flex;"><span>If ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span> Then
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>Else
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> ActiveCell<span style="color:#f92672">.</span>End(xlUp)<span style="color:#f92672">.</span>value
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>End If
-</span></span><span style="display:flex;"><span>Loop Until ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>End Sub
-</span></span></code></pre></div><hr>
-<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/23">https://sunnybong.tistory.com/23</a></p>
 </div>
 </article>
  
@@ -300,13 +260,6 @@ For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it us
         <li><a href="#take-1">Take #1</a></li>
         <li><a href="#take-2">Take #2</a></li>
         <li><a href="#take-3">Take #3</a></li>
-      </ul>
-    </li>
-    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
-      <ul>
-        <li><a href="#take-1-1">Take #1</a></li>
-        <li><a href="#take-2-1">Take #2</a></li>
-        <li><a href="#take-3-1">Take #3</a></li>
       </ul>
     </li>
   </ul>

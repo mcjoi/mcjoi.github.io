@@ -6,17 +6,24 @@
     <description>Recent content in VBA on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tags/vba/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Self-Made MS-Office VBA</title>
-      <link>https://mcjoi.github.io/posts/002/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/posts/002/</guid>
+      <title>VBA snippets</title>
+      <link>https://mcjoi.github.io/posts/003/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/posts/003/</guid>
       <description>&lt;h2 id=&#34;creating-mouse-hover-effect-in-excel-vba-userform&#34;&gt;&#xA;  Creating mouse hover effect in excel VBA userform&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creating-mouse-hover-effect-in-excel-vba-userform&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.&lt;/p&gt;&#xA;&lt;p&gt;Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>MS-OFFICE MacroToolkit</title>
+      <title>VBA userform</title>
+      <link>https://mcjoi.github.io/posts/002/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/posts/002/</guid>
+      <description>&lt;h2 id=&#34;filling-blanks-in-a-database-style-table&#34;&gt;&#xA;  Filling Blanks in a Database-Style Table&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#filling-blanks-in-a-database-style-table&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Sometimes when receiving data, someone tries to &amp;ldquo;tidy it up&amp;rdquo; by only entering values in the very first row, leaving the rest of the cells blank.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;take-2&#34;&gt;&#xA;  Take #2&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-2&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s see how to fill in these blanks quickly and efficiently.&lt;br&gt;&#xA;For the sake of practice, I&amp;rsquo;ve set up simplified scenario. I handled it using a &lt;code&gt;Do..Loop&lt;/code&gt; statement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacroToolkit(excel, powerpoint)</title>
       <link>https://mcjoi.github.io/posts/001/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/posts/001/</guid>
