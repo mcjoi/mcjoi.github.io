@@ -6,14 +6,6 @@
     <description>Recent content in Book1s on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/book1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MacroToolkit(PowerPoint)</title>
-      <link>http://localhost:1313/book1/002/</link>
-      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/book1/002/</guid>
-      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-point&#34;&gt;&#xA;  Key Point&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#key-point&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Instead of relying on &lt;code&gt;UserForm&lt;/code&gt;, I made active use of the Ribbon menu to enhance usability.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
