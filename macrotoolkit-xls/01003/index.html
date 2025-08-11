@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  growthRate
+  #
+
+Calculate the growth rate.
+
+  achievementRate
+  #
+
+Calculate the achievement rate.
+
+  CAGR
+  #
+
+Calculate the CAGR.
+
+  WordFill
+  #
+
+If there is a value in the right side of the selected reference column, fill the cell value in a DB format.
+
+  allDecimals
+  #
+
+In the case of numbers with decimal points, all decimal points come out.
+
+  shownamelist
+  #
+
+Call the currently defined name list box.
+→ double click : activate name area">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-xls/01003/">
+  <meta property="og:site_name" content="shaaaaalow Dive">
+  <meta property="og:title" content="MacroToolkit - excel - scripts (2)">
+  <meta property="og:description" content="growthRate # Calculate the growth rate.
+achievementRate # Calculate the achievement rate.
+CAGR # Calculate the CAGR.
+WordFill # If there is a value in the right side of the selected reference column, fill the cell value in a DB format.
+allDecimals # In the case of numbers with decimal points, all decimal points come out.
+shownamelist # Call the currently defined name list box. → double click : activate name area">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="macrotoolkit-xls">
+    <meta property="article:published_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>MacroToolkit - excel - scripts (2) | shaaaaalow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-xls/01003/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.b94a4a5e2ebaae50290e5ae07ab54a6a3d3f6a26747d6c8df285fae2acdeae2b.css" integrity="sha256-uUpKXi66rlApDlrgerVKaj0/aiZ0fWyN8oX64qzeris=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.cb90d96b5719326a778793d297013c70a37eca6e76b66233701a67907fa03a07.js" integrity="sha256-y5DZa1cZMmp3h5PSlwE8cKN&#43;ym52tmIzcBpnkH&#43;gOgc=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaalow Dive</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+  <li class="">
+    <a href="https://mcjoi.github.io/macrotoolkit-xls/">MacroToolkit-xls</a>
+  </li>
+
+  <li class="">
+    <a href="https://mcjoi.github.io/macrotoolkit-ppt/">MacroToolkit-ppt</a>
+  </li>
+
+  <li class="">
+    <a href="https://mcjoi.github.io/vba/">VBA</a>
+  </li>
+
+  <li class="">
+    <a href="https://mcjoi.github.io/python/">Python</a>
+  </li>
+
+  <li class="">
+    <a href="https://mcjoi.github.io/flutter/">Flutter</a>
+  </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar-post-list">
+    <h3>MacroToolkit-xls</h3>
+    <ul>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-xls/01001/" >
+            MacroToolkit - excel
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
+            MacroToolkit - excel - scripts (1)
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" class="active">
+            MacroToolkit - excel - scripts (2)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>MacroToolkit - excel - scripts (2)</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#growthrate">growthRate</a></li>
+    <li><a href="#achievementrate">achievementRate</a></li>
+    <li><a href="#cagr">CAGR</a></li>
+    <li><a href="#wordfill">WordFill</a></li>
+    <li><a href="#alldecimals">allDecimals</a></li>
+    <li><a href="#shownamelist">shownamelist</a></li>
+    <li><a href="#upsidedown">upsidedown</a></li>
+    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
+    <li><a href="#septext">sepText</a></li>
+    <li><a href="#tabletoarray">tableToArray</a></li>
+    <li><a href="#pivotrefresh">pivotRefresh</a></li>
+    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
+      <ul>
+        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
+        <li><a href="#controlvisibility">controlVisibility</a></li>
+        <li><a href="#sheetnow">sheetNow</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="growthrate">
+  growthRate
+  <a class="anchor" href="#growthrate">#</a>
+</h2>
+<p>Calculate the growth rate.</p>
+<h2 id="achievementrate">
+  achievementRate
+  <a class="anchor" href="#achievementrate">#</a>
+</h2>
+<p>Calculate the achievement rate.</p>
+<h2 id="cagr">
+  CAGR
+  <a class="anchor" href="#cagr">#</a>
+</h2>
+<p>Calculate the CAGR.</p>
+<h2 id="wordfill">
+  WordFill
+  <a class="anchor" href="#wordfill">#</a>
+</h2>
+<p>If there is a value in the right side of the selected reference column, fill the cell value in a DB format.</p>
+<h2 id="alldecimals">
+  allDecimals
+  <a class="anchor" href="#alldecimals">#</a>
+</h2>
+<p>In the case of numbers with decimal points, all decimal points come out.</p>
+<h2 id="shownamelist">
+  shownamelist
+  <a class="anchor" href="#shownamelist">#</a>
+</h2>
+<p>Call the currently defined name list box.
+→ double click : activate name area</p>
+<h2 id="upsidedown">
+  upsidedown
+  <a class="anchor" href="#upsidedown">#</a>
+</h2>
+<p>Return the data of the selected column and return it to the right side.</p>
+<h2 id="inputrandomvalue">
+  inputRandomValue
+  <a class="anchor" href="#inputrandomvalue">#</a>
+</h2>
+<p>Enter the sequential date or random integer.</p>
+<h2 id="septext">
+  sepText
+  <a class="anchor" href="#septext">#</a>
+</h2>
+<p>In the text that is mixed with characters+numbers, only the number is returned to the right side.</p>
+<h2 id="tabletoarray">
+  tableToArray
+  <a class="anchor" href="#tabletoarray">#</a>
+</h2>
+<p>Copy the clipboard to set the table as a name definition.</p>
+<h2 id="pivotrefresh">
+  pivotRefresh
+  <a class="anchor" href="#pivotrefresh">#</a>
+</h2>
+<p>Automatically update the Pivot Table.</p>
+<h2 id="sheetvisibilitycontrol">
+  SheetVisibilityControl
+  <a class="anchor" href="#sheetvisibilitycontrol">#</a>
+</h2>
+<h3 id="sheetvisibleornot">
+  sheetVisibleOrNot
+  <a class="anchor" href="#sheetvisibleornot">#</a>
+</h3>
+<p>Display visibility property table for all sheets in the current workbook.<br>
+→ recommended to work on a new sheet</p>
+<h3 id="controlvisibility">
+  controlVisibility
+  <a class="anchor" href="#controlvisibility">#</a>
+</h3>
+<p>Apply value for the changed visibility property.</p>
+<h3 id="sheetnow">
+  sheetNow
+  <a class="anchor" href="#sheetnow">#</a>
+</h3>
+<p>Simply check with the message box to see if there is a hidden sheet in the current sheet.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#growthrate">growthRate</a></li>
+    <li><a href="#achievementrate">achievementRate</a></li>
+    <li><a href="#cagr">CAGR</a></li>
+    <li><a href="#wordfill">WordFill</a></li>
+    <li><a href="#alldecimals">allDecimals</a></li>
+    <li><a href="#shownamelist">shownamelist</a></li>
+    <li><a href="#upsidedown">upsidedown</a></li>
+    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
+    <li><a href="#septext">sepText</a></li>
+    <li><a href="#tabletoarray">tableToArray</a></li>
+    <li><a href="#pivotrefresh">pivotRefresh</a></li>
+    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
+      <ul>
+        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
+        <li><a href="#controlvisibility">controlVisibility</a></li>
+        <li><a href="#sheetnow">sheetNow</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
