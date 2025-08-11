@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Filling Blanks in a Database-Style Table
+  #
+
+
+  what is it?
+  #
+
+When there are columns A and B, fill the empty cells in column A with the value from the cell above.
+
+  sample code
+  #
+
+Sub wordDBFill()
+
+Do
+If ActiveCell.value &lt;&gt; &#34;&#34; Then
+    ActiveCell.Offset(1, 0).Activate
+Else
+    ActiveCell.value = ActiveCell.End(xlUp).value
+    ActiveCell.Offset(1, 0).Activate
+End If
+Loop Until ActiveCell.Offset(0, 1).value = &#34;&#34;
+
+End Sub
+→ original post(from my Kor blog) : https://sunnybong.tistory.com/23">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/vba/0302/">
+  <meta property="og:site_name" content="shaaaaalow Dive">
+  <meta property="og:title" content="Filling Blanks">
+  <meta property="og:description" content="Filling Blanks in a Database-Style Table # what is it? # When there are columns A and B, fill the empty cells in column A with the value from the cell above.
+sample code # Sub wordDBFill() Do If ActiveCell.value &lt;&gt; &#34;&#34; Then ActiveCell.Offset(1, 0).Activate Else ActiveCell.value = ActiveCell.End(xlUp).value ActiveCell.Offset(1, 0).Activate End If Loop Until ActiveCell.Offset(0, 1).value = &#34;&#34; End Sub → original post(from my Kor blog) : https://sunnybong.tistory.com/23">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="vba">
+    <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>Filling Blanks | shaaaaalow Dive</title>
+<link rel="icon" href="http://localhost:1313/favicon.png" >
+<link rel="manifest" href="http://localhost:1313/manifest.json">
+<link rel="canonical" href="http://localhost:1313/vba/0302/">
+<link rel="stylesheet" href="http://localhost:1313/book.min.b94a4a5e2ebaae50290e5ae07ab54a6a3d3f6a26747d6c8df285fae2acdeae2b.css" integrity="sha256-uUpKXi66rlApDlrgerVKaj0/aiZ0fWyN8oX64qzeris=" crossorigin="anonymous">
+  <script defer src="http://localhost:1313/fuse.min.js"></script>
+  <script defer src="http://localhost:1313/en.search.min.582dc09ef6538aeaa815080f3366f845b93c8e1c2ed6387792b8fb25cf8cf50f.js" integrity="sha256-WC3AnvZTiuqoFQgPM2b4Rbk8jhwu1jh3krj7Jc&#43;M9Q8=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="http://localhost:1313/"><span>shaaaaalow Dive</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+  <li class="">
+    <a href="http://localhost:1313/macrotoolkit-xls/">MacroToolkit-xls</a>
+  </li>
+
+  <li class="">
+    <a href="http://localhost:1313/macrotoolkit-ppt/">MacroToolkit-ppt</a>
+  </li>
+
+  <li class="">
+    <a href="http://localhost:1313/vba/">VBA</a>
+  </li>
+
+  <li class="">
+    <a href="http://localhost:1313/python/">Python</a>
+  </li>
+
+  <li class="">
+    <a href="http://localhost:1313/flutter/">Flutter</a>
+  </li>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar-post-list">
+    <h3>VBA</h3>
+    <ul>
+      
+        <li>
+          <a href="http://localhost:1313/vba/0301/" >
+            Filling Blanks
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://localhost:1313/vba/0302/" class="active">
+            Filling Blanks
+          </a>
+        </li>
+      
+        <li>
+          <a href="http://localhost:1313/vba/006/" >
+            [snippets] python
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Filling Blanks</h3>
+
+  <label for="toc-control">
+    
+    <img src="http://localhost:1313/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
+      <ul>
+        <li><a href="#what-is-it">what is it?</a></li>
+        <li><a href="#sample-code">sample code</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h2 id="filling-blanks-in-a-database-style-table">
+  Filling Blanks in a Database-Style Table
+  <a class="anchor" href="#filling-blanks-in-a-database-style-table">#</a>
+</h2>
+<h3 id="what-is-it">
+  what is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h3>
+<p>When there are columns A and B, fill the empty cells in column A with the value from the cell above.</p>
+<h3 id="sample-code">
+  sample code
+  <a class="anchor" href="#sample-code">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>Sub wordDBFill()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do
+</span></span><span style="display:flex;"><span>If ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span> Then
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
+</span></span><span style="display:flex;"><span>Else
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> ActiveCell<span style="color:#f92672">.</span>End(xlUp)<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
+</span></span><span style="display:flex;"><span>End If
+</span></span><span style="display:flex;"><span>Loop Until ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>End Sub
+</span></span></code></pre></div><p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/23">https://sunnybong.tistory.com/23</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
+      <ul>
+        <li><a href="#what-is-it">what is it?</a></li>
+        <li><a href="#sample-code">sample code</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+  
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
