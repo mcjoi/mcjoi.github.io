@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Powerpoint on shaaaaalow Dive</title>
-    <link>http://localhost:1313/tags/powerpoint/</link>
-    <description>Recent content in Powerpoint on shaaaaalow Dive</description>
+    <title>Book1s on shaaaaalow Dive</title>
+    <link>http://localhost:1313/book1/</link>
+    <description>Recent content in Book1s on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/powerpoint/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/book1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MacroToolkit(PowerPoint)</title>
       <link>http://localhost:1313/book1/002/</link>

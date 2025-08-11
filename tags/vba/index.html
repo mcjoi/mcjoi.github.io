@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://mcjoi.github.io/tags/vba/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.57853118de88ab304a60a47d3cd40adf988dcecae03bbef7441e364072726313.css" integrity="sha256-V4UxGN6IqzBKYKR9PNQK35iNzsrgO773RB42QHJyYxM=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.5db8eed602ed1bd8337eff602c003c1f7198037f7ad4462dd4d421f199b61b53.js" integrity="sha256-Xbju1gLtG9gzfv9gLAA8H3GYA3961EYt1NQh8Zm2G1M=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.b6c97d4800cccddaee0c575ff71c9eb60fbb2d788e40fd130e596e57b570512a.js" integrity="sha256-tsl9SADMzdruDFdf9xyetg&#43;7LXiOQP0TDlluV7VwUSo=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://mcjoi.github.io/tags/vba/index.xml" title="shaaaaalow Dive" />
 <!--
 Made with Book Theme
@@ -47,6 +47,14 @@ https://github.com/alex-shpak/hugo-book
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
+<h2 class="recent-posts"></h2>
+<ul>
+  
+    <li><a href="https://mcjoi.github.io/posts/002/">Self-Made MS-Office VBA</a></li>
+  
+    <li><a href="https://mcjoi.github.io/posts/001/">MS-OFFICE MacroToolkit</a></li>
+  
+</ul>
 
 
 
@@ -124,17 +132,12 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>4</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>1</span>
+          <span>2</span>
         </li>
       
       </ul>
@@ -155,64 +158,7 @@ https://github.com/alex-shpak/hugo-book
   
   <article class="markdown book-post">
     <h2>
-      <a href="https://mcjoi.github.io/posts/004/">Filling Blanks in a Database-Style Table</a>
-    </h2>
-    
-  <div class="flex align-center text-small book-post-date">
-    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 11, 2025</span>
-  </div>
-
-
-
-  
-
-  
-  <div class="text-small">
-    
-      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
-      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-  </div>
-  
-
-
-    <p><h2 id="take-1">
-  Take #1
-  <a class="anchor" href="#take-1">#</a>
-</h2>
-<p>Sometimes when receiving data, someone tries to &ldquo;tidy it up&rdquo; by only entering values in the very first row, leaving the rest of the cells blank.</p>
-<hr>
-<h2 id="take-2">
-  Take #2
-  <a class="anchor" href="#take-2">#</a>
-</h2>
-<p>Let&rsquo;s see how to fill in these blanks quickly and efficiently.<br>
-For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it using a <code>Do..Loop</code> statement.</p>
-<hr>
-<h2 id="take-3">
-  Take #3
-  <a class="anchor" href="#take-3">#</a>
-</h2>
-<p>VBA code snippets</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>Sub wordDBFill()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Do
-</span></span><span style="display:flex;"><span>If ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span> Then
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>Else
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> ActiveCell<span style="color:#f92672">.</span>End(xlUp)<span style="color:#f92672">.</span>value
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>End If
-</span></span><span style="display:flex;"><span>Loop Until ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>End Sub
-</span></span></code></pre></div><hr>
-<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/23">https://sunnybong.tistory.com/23</a></p></p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="https://mcjoi.github.io/posts/003/">Creating mouse hover effect in excel VBA userform </a>
+      <a href="https://mcjoi.github.io/posts/002/">Self-Made MS-Office VBA</a>
     </h2>
     
   <div class="flex align-center text-small book-post-date">
@@ -233,17 +179,21 @@ For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it us
   
 
 
-    <p><h2 id="take-1">
+    <p><h2 id="creating-mouse-hover-effect-in-excel-vba-userform">
+  Creating mouse hover effect in excel VBA userform
+  <a class="anchor" href="#creating-mouse-hover-effect-in-excel-vba-userform">#</a>
+</h2>
+<h3 id="take-1">
   Take #1
   <a class="anchor" href="#take-1">#</a>
-</h2>
+</h3>
 <p>When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.</p>
 <p>Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.</p></p>
   </article>
   
   <article class="markdown book-post">
     <h2>
-      <a href="https://mcjoi.github.io/posts/001/">MacroToolkit(Excel)</a>
+      <a href="https://mcjoi.github.io/posts/001/">MS-OFFICE MacroToolkit</a>
     </h2>
     
   <div class="flex align-center text-small book-post-date">
@@ -264,54 +214,22 @@ For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it us
   
 
 
-    <p><h2 id="what-is-it">
+    <p><h2 id="macrotoolkitexcel">
+  MacroToolkit(Excel)
+  <a class="anchor" href="#macrotoolkitexcel">#</a>
+</h2>
+<h3 id="what-is-it">
   What is it?
   <a class="anchor" href="#what-is-it">#</a>
-</h2>
+</h3>
 <p>Over the years of working extensively with Excel, I created macros for frequently used tasks. Although these were personal macros, I once shared them publicly hoping they might help others. However, whether offered for free or as paid tools, they never gained much traction, so I eventually withdrew all of them.</p>
 <hr>
-<h2 id="key-point">
+<h3 id="key-point">
   Key Point
   <a class="anchor" href="#key-point">#</a>
-</h2>
+</h3>
 <p>The main value lies not so much in any individual feature, but in gathering various macros into one place for easier management. To handle this, I used a <code>UserForm</code>, but surprisingly, the <code>VB6</code> <code>UserForm</code> is quite outdated and lacks many features that we now take for granted—like support for <code>PNG</code> images, for example.<br>
 → Nonetheless, it serves well enough for organizing the macros.</p></p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="https://mcjoi.github.io/posts/002/">MacroToolkit(PowerPoint)</a>
-    </h2>
-    
-  <div class="flex align-center text-small book-post-date">
-    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 8, 2025</span>
-  </div>
-
-
-
-  
-
-  
-  <div class="text-small">
-    
-      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
-      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-  </div>
-  
-
-
-    <p><h2 id="what-is-it">
-  What is it?
-  <a class="anchor" href="#what-is-it">#</a>
-</h2>
-<p>Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.</p>
-<hr>
-<h2 id="key-point">
-  Key Point
-  <a class="anchor" href="#key-point">#</a>
-</h2>
-<p>Instead of relying on <code>UserForm</code>, I made active use of the Ribbon menu to enhance usability.</p></p>
   </article>
   
 
@@ -374,17 +292,12 @@ For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it us
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>3</span>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>4</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>1</span>
+          <span>2</span>
         </li>
       
       </ul>

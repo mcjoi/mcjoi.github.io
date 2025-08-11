@@ -4,37 +4,36 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  What is it?
+  Creating mouse hover effect in excel VBA userform
   #
 
-Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
 
-
-  Key Point
+  Take #1
   #
 
-Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://mcjoi.github.io/posts/002/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="MacroToolkit(PowerPoint)">
-  <meta property="og:description" content="What is it? # Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
-Key Point # Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+  <meta property="og:title" content="Self-Made MS-Office VBA">
+  <meta property="og:description" content="Creating mouse hover effect in excel VBA userform # Take #1 # When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-08T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
     <meta property="article:tag" content="VBA">
-    <meta property="article:tag" content="Powerpoint">
-<title>MacroToolkit(PowerPoint) | shaaaaalow Dive</title>
+    <meta property="article:tag" content="Excel">
+<title>Self-Made MS-Office VBA | shaaaaalow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/posts/002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.57853118de88ab304a60a47d3cd40adf988dcecae03bbef7441e364072726313.css" integrity="sha256-V4UxGN6IqzBKYKR9PNQK35iNzsrgO773RB42QHJyYxM=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.5db8eed602ed1bd8337eff602c003c1f7198037f7ad4462dd4d421f199b61b53.js" integrity="sha256-Xbju1gLtG9gzfv9gLAA8H3GYA3961EYt1NQh8Zm2G1M=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.b6c97d4800cccddaee0c575ff71c9eb60fbb2d788e40fd130e596e57b570512a.js" integrity="sha256-tsl9SADMzdruDFdf9xyetg&#43;7LXiOQP0TDlluV7VwUSo=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -63,6 +62,14 @@ https://github.com/alex-shpak/hugo-book
 <script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
 
+<h2 class="recent-posts"></h2>
+<ul>
+  
+    <li><a href="https://mcjoi.github.io/posts/002/">Self-Made MS-Office VBA</a></li>
+  
+    <li><a href="https://mcjoi.github.io/posts/001/">MS-OFFICE MacroToolkit</a></li>
+  
+</ul>
 
 
 
@@ -108,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>MacroToolkit(PowerPoint)</h3>
+  <h3>Self-Made MS-Office VBA</h3>
 
   <label for="toc-control">
     
@@ -124,10 +131,20 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#creating-mouse-hover-effect-in-excel-vba-userform">Creating mouse hover effect in excel VBA userform</a>
+      <ul>
+        <li><a href="#take-1">Take #1</a></li>
+        <li><a href="#take-2">Take #2</a></li>
+        <li><a href="#take-3">Take #3</a></li>
+      </ul>
+    </li>
+    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
+      <ul>
+        <li><a href="#take-1-1">Take #1</a></li>
+        <li><a href="#take-2-1">Take #2</a></li>
+        <li><a href="#take-3-1">Take #3</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -142,12 +159,12 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown book-post">
   <h1>
-    MacroToolkit(PowerPoint)
+    Self-Made MS-Office VBA
   </h1>
   
   <div class="flex align-center text-small book-post-date">
     <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 8, 2025</span>
+    <span>August 9, 2025</span>
   </div>
 
 
@@ -158,102 +175,76 @@ https://github.com/alex-shpak/hugo-book
   <div class="text-small">
     
       <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
-      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
   </div>
   
 
 
-  <div class="book-post-content"><h2 id="what-is-it">
-  What is it?
-  <a class="anchor" href="#what-is-it">#</a>
+  <div class="book-post-content"><h2 id="creating-mouse-hover-effect-in-excel-vba-userform">
+  Creating mouse hover effect in excel VBA userform
+  <a class="anchor" href="#creating-mouse-hover-effect-in-excel-vba-userform">#</a>
 </h2>
-<p>Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.</p>
+<h3 id="take-1">
+  Take #1
+  <a class="anchor" href="#take-1">#</a>
+</h3>
+<p>When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.</p>
+<p>Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.</p>
 <hr>
-<h2 id="key-point">
-  Key Point
-  <a class="anchor" href="#key-point">#</a>
+<h3 id="take-2">
+  Take #2
+  <a class="anchor" href="#take-2">#</a>
+</h3>
+<p>Create image pairs for default and hover states. Since changing colors later requires regenerating all images, you need to choose carefully. Overlay the two images: place the hover image on top with its Visible property set to False, and the default image underneath.</p>
+<p>Then, place a transparent label covering the entire page background. Using the MouseMove event on the default image, set the hover image’s Visible to True on mouse over.</p>
+<p>Finally, use the MouseMove event on the transparent label to set the hover image’s Visible back to False when the mouse moves away.</p>
+<hr>
+<h3 id="take-3">
+  Take #3
+  <a class="anchor" href="#take-3">#</a>
+</h3>
+<p>VBA code snippets</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>sub code()
+</span></span><span style="display:flex;"><span>    msgbox <span style="color:#e6db74">&#34;This code will be ready to show soon&#34;</span>
+</span></span><span style="display:flex;"><span>end sub
+</span></span></code></pre></div><hr>
+<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/921">https://sunnybong.tistory.com/921</a></p>
+<h2 id="filling-blanks-in-a-database-style-table">
+  Filling Blanks in a Database-Style Table
+  <a class="anchor" href="#filling-blanks-in-a-database-style-table">#</a>
 </h2>
-<p>Instead of relying on <code>UserForm</code>, I made active use of the Ribbon menu to enhance usability.</p>
+<h3 id="take-1-1">
+  Take #1
+  <a class="anchor" href="#take-1-1">#</a>
+</h3>
+<p>Sometimes when receiving data, someone tries to &ldquo;tidy it up&rdquo; by only entering values in the very first row, leaving the rest of the cells blank.</p>
 <hr>
-<h2 id="functions">
-  Functions
-  <a class="anchor" href="#functions">#</a>
-</h2>
-<table>
-  <thead>
-      <tr>
-          <th><strong>name</strong></th>
-          <th><strong>Description</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Make Table</td>
-          <td>Creates frequently used table templates</td>
-      </tr>
-      <tr>
-          <td>Table Size</td>
-          <td>Adjusts table size via UserForm</td>
-      </tr>
-      <tr>
-          <td>delblank</td>
-          <td>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</td>
-      </tr>
-      <tr>
-          <td>RGB Color</td>
-          <td>Displays RGB values of the selected shape via UserForm</td>
-      </tr>
-      <tr>
-          <td>Color palette</td>
-          <td>Creates a color palette in the slide master - newly added feature</td>
-      </tr>
-      <tr>
-          <td>Text arrange</td>
-          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
-      </tr>
-      <tr>
-          <td>zeromargin</td>
-          <td>Sets margins of text boxes or shapes to zero</td>
-      </tr>
-      <tr>
-          <td>tspacing</td>
-          <td>Adjusts line spacing</td>
-      </tr>
-      <tr>
-          <td>jpg export</td>
-          <td>Exports selected slides as JPG files</td>
-      </tr>
-      <tr>
-          <td>slide_resizes</td>
-          <td>Changes slide size based on pixel dimensions</td>
-      </tr>
-      <tr>
-          <td>groupRelease</td>
-          <td>Ungroups all groups on all slides at once</td>
-      </tr>
-      <tr>
-          <td>align_bottom</td>
-          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>align_right</td>
-          <td>Aligns selected shape(s) to the right of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>guidebox</td>
-          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
-      </tr>
-  </tbody>
-</table>
+<h3 id="take-2-1">
+  Take #2
+  <a class="anchor" href="#take-2-1">#</a>
+</h3>
+<p>Let&rsquo;s see how to fill in these blanks quickly and efficiently.<br>
+For the sake of practice, I&rsquo;ve set up simplified scenario. I handled it using a <code>Do..Loop</code> statement.</p>
 <hr>
-<h2 id="download">
-  Download
-  <a class="anchor" href="#download">#</a>
-</h2>
-<p>To manage versions, the files are stored at the following location:<br>
-<a href="http://naver.me/5UEO0oHw">http://naver.me/5UEO0oHw</a></p>
-<hr>
-<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/620">https://sunnybong.tistory.com/620</a></p>
+<h3 id="take-3-1">
+  Take #3
+  <a class="anchor" href="#take-3-1">#</a>
+</h3>
+<p>VBA code snippets</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>Sub wordDBFill()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do
+</span></span><span style="display:flex;"><span>If ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span> Then
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
+</span></span><span style="display:flex;"><span>Else
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> ActiveCell<span style="color:#f92672">.</span>End(xlUp)<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
+</span></span><span style="display:flex;"><span>End If
+</span></span><span style="display:flex;"><span>Loop Until ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>End Sub
+</span></span></code></pre></div><hr>
+<p>→ original post(from my Kor blog) : <a href="https://sunnybong.tistory.com/23">https://sunnybong.tistory.com/23</a></p>
 </div>
 </article>
  
@@ -302,10 +293,20 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#key-point">Key Point</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#creating-mouse-hover-effect-in-excel-vba-userform">Creating mouse hover effect in excel VBA userform</a>
+      <ul>
+        <li><a href="#take-1">Take #1</a></li>
+        <li><a href="#take-2">Take #2</a></li>
+        <li><a href="#take-3">Take #3</a></li>
+      </ul>
+    </li>
+    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
+      <ul>
+        <li><a href="#take-1-1">Take #1</a></li>
+        <li><a href="#take-2-1">Take #2</a></li>
+        <li><a href="#take-3-1">Take #3</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
