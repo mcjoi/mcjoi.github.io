@@ -6,6 +6,14 @@
     <description>Recent content in Python on shaaaaalow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebP Conversion Program</title>
+      <link>https://mcjoi.github.io/python/04001/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/python/04001/</guid>
+      <description>&lt;h2 id=&#34;webp-conversion-program&#34;&gt;&#xA;  WebP Conversion Program&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#webp-conversion-program&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.&lt;/p&gt;&#xA;&lt;p&gt;I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
