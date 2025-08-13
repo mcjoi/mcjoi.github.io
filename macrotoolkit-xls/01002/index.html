@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
+  Script - Cell format
+  #
+
+
   cell outline
   #
 
@@ -15,26 +19,55 @@
 Remove the guidelines and create the gray line.
 → click : outskirt of the cell range selected.
 → double click : entire cell of the cell range selected.
+** code sample - single click
+Private Sub lineGray()
+    
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
 
-  lineBlack {ALT &#43; SHIFT &#43; 2}
-  #
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249946592608417
+        .Weight = xlThin
+    End With
+    
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249946592608417
+        .Weight = xlThin
+    End With
 
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249946592608417
+        .Weight = xlThin
+    End With
+    
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ThemeColor = 1
+        .TintAndShade = -0.249946592608417
+        .Weight = xlThin
+    End With
 
-Remove the guidelines and create the black line.
-→ click : outskirt of the cell range selected.
-→ double click : entire cell of the cell range selected.">
+   ActiveWindow.DisplayGridlines = False
+
+End Sub
+ ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
 <meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-xls/01002/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="MacroToolkit - excel - scripts (1)">
-  <meta property="og:description" content="cell outline # lineGray {ALT &#43; SHIFT &#43; 1} # Remove the guidelines and create the gray line.
+  <meta property="og:title" content="Script - Cell format">
+  <meta property="og:description" content="Script - Cell format # cell outline # lineGray {ALT &#43; SHIFT &#43; 1} # Remove the guidelines and create the gray line.
 → click : outskirt of the cell range selected.
 → double click : entire cell of the cell range selected.
-lineBlack {ALT &#43; SHIFT &#43; 2} # Remove the guidelines and create the black line.
-→ click : outskirt of the cell range selected.
-→ double click : entire cell of the cell range selected.">
+** code sample - single click
+Private Sub lineGray() Selection.Borders(xlDiagonalDown).LineStyle = xlNone Selection.Borders(xlDiagonalUp).LineStyle = xlNone With Selection.Borders(xlEdgeLeft) .LineStyle = xlContinuous .ThemeColor = 1 .TintAndShade = -0.249946592608417 .Weight = xlThin End With With Selection.Borders(xlEdgeTop) .LineStyle = xlContinuous .ThemeColor = 1 .TintAndShade = -0.249946592608417 .Weight = xlThin End With With Selection.Borders(xlEdgeBottom) .LineStyle = xlContinuous .ThemeColor = 1 .TintAndShade = -0.249946592608417 .Weight = xlThin End With With Selection.Borders(xlEdgeRight) .LineStyle = xlContinuous .ThemeColor = 1 .TintAndShade = -0.249946592608417 .Weight = xlThin End With ActiveWindow.DisplayGridlines = False End Sub">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="macrotoolkit-xls">
@@ -43,13 +76,13 @@ lineBlack {ALT &#43; SHIFT &#43; 2} # Remove the guidelines and create the black
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>MacroToolkit - excel - scripts (1) | shaaaaalow Dive</title>
+<title>Script - Cell format | shaaaaalow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-xls/01002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.bae8462b059469ad5a59c33728e1f0656501f47c5625f0fad91532819eb0bdb9.css" integrity="sha256-uuhGKwWUaa1aWcM3KOHwZWUB9HxWJfD62RUygZ6wvbk=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.f58a92e7718f0db4d5df17543195a9a06c6322f43d07c479a01533ac3b8507ec.js" integrity="sha256-9YqS53GPDbTV3xdUMZWpoGxjIvQ9B8R5oBUzrDuFB&#43;w=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.4c6be2daa34394c3e1a0bdaca5b12816616335afc3d4311e7c4e71f3a153bc61.js" integrity="sha256-TGvi2qNDlMPhoL2spbEoFmFjNa/D1DEefE5x86FTvGE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -85,11 +118,11 @@ https://github.com/alex-shpak/hugo-book
 
 
   <li class="">
-    <a href="https://mcjoi.github.io/macrotoolkit-xls/">MacroToolkit-xls</a>
+    <a href="https://mcjoi.github.io/macrotoolkit-xls/">MacroToolkit-Excel</a>
   </li>
 
   <li class="">
-    <a href="https://mcjoi.github.io/macrotoolkit-ppt/">MacroToolkit-ppt</a>
+    <a href="https://mcjoi.github.io/macrotoolkit-ppt/">MacroToolkit-PPT</a>
   </li>
 
   <li class="">
@@ -133,25 +166,31 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
           <a href="https://mcjoi.github.io/macrotoolkit-xls/01001/" >
-            MacroToolkit - excel
+            MacroToolkit - Excel
           </a>
         </li>
       
         <li>
           <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" class="active">
-            MacroToolkit - excel - scripts (1)
+            Script - Cell format
           </a>
         </li>
       
         <li>
           <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-            MacroToolkit - Value format
+            Script - Value format
           </a>
         </li>
       
         <li>
           <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-            MacroToolkit - Function
+            Script - Function
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
+            Script - Data Util
           </a>
         </li>
       
@@ -209,7 +248,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>MacroToolkit - excel - scripts (1)</h3>
+  <h3>Script - Cell format</h3>
 
   <label for="toc-control">
     
@@ -234,29 +273,8 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#colorfill">colorFill</a></li>
     <li><a href="#seta4">setA4</a></li>
-    <li><a href="#tofirstsheet">toFirstSheet</a></li>
-    <li><a href="#copywidthheight">copyWidthHeight</a></li>
     <li><a href="#colorpicker">colorpicker</a></li>
-    <li><a href="#growthrate">growthRate</a></li>
-    <li><a href="#achievementrate">achievementRate</a></li>
-    <li><a href="#cagr">CAGR</a></li>
-    <li><a href="#wordfill">WordFill</a></li>
-    <li><a href="#alldecimals">allDecimals</a></li>
-    <li><a href="#shownamelist">shownamelist</a></li>
-    <li><a href="#upsidedown">upsidedown</a></li>
-    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
-    <li><a href="#septext">sepText</a></li>
-    <li><a href="#tabletoarray">tableToArray</a></li>
-    <li><a href="#pivotrefresh">pivotRefresh</a></li>
-    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
-      <ul>
-        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
-        <li><a href="#controlvisibility">controlVisibility</a></li>
-        <li><a href="#sheetnow">sheetNow</a></li>
-      </ul>
-    </li>
-    <li><a href="#dietfilesize">dietFileSize</a></li>
-    <li><a href="#launchtextsplitter">LaunchTextSplitter</a></li>
+    <li><a href="#copywidthheight">copyWidthHeight</a></li>
   </ul>
 </nav>
 
@@ -270,7 +288,11 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h2 id="cell-outline">
+  <article class="markdown book-article"><h1 id="script---cell-format">
+  Script - Cell format
+  <a class="anchor" href="#script---cell-format">#</a>
+</h1>
+<h2 id="cell-outline">
   cell outline
   <a class="anchor" href="#cell-outline">#</a>
 </h2>
@@ -282,6 +304,96 @@ https://github.com/alex-shpak/hugo-book
 Remove the guidelines and create the gray line.<br>
 → click : outskirt of the cell range selected.<br>
 → double click : entire cell of the cell range selected.</p>
+<p>** code sample - single click</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">lineGray</span>()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    Selection.Borders(xlDiagonalDown).LineStyle <span style="color:#f92672">=</span> xlNone
+</span></span><span style="display:flex;"><span>    Selection.Borders(xlDiagonalUp).LineStyle <span style="color:#f92672">=</span> xlNone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeLeft)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeTop)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeBottom)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeRight)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   ActiveWindow.DisplayGridlines <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p> </p>
+<p>** code sample - double click</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">lineGrayDblClick</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Selection.Borders(xlDiagonalDown).LineStyle <span style="color:#f92672">=</span> xlNone
+</span></span><span style="display:flex;"><span>    Selection.Borders(xlDiagonalUp).LineStyle <span style="color:#f92672">=</span> xlNone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeLeft)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeTop)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeBottom)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlEdgeRight)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlInsideVertical)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> Selection.Borders(xlInsideHorizontal)
+</span></span><span style="display:flex;"><span>        .LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>        .ThemeColor <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        .TintAndShade <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>0.249946592608417
+</span></span><span style="display:flex;"><span>        .Weight <span style="color:#f92672">=</span> xlThin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ActiveWindow.DisplayGridlines <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
 <h3 id="lineblack-alt--shift--2">
   lineBlack {ALT + SHIFT + 2}
   <a class="anchor" href="#lineblack-alt--shift--2">#</a>
@@ -290,6 +402,7 @@ Remove the guidelines and create the gray line.<br>
 Remove the guidelines and create the black line.<br>
 → click : outskirt of the cell range selected.<br>
 → double click : entire cell of the cell range selected.</p>
+<hr>
 <h3 id="lineblackbold-alt--shift--3">
   lineBlackBold {ALT + SHIFT + 3}
   <a class="anchor" href="#lineblackbold-alt--shift--3">#</a>
@@ -315,12 +428,12 @@ fill gray color on the cell selected.<br>
 Adjust the page size for A4 size.<br>
 → recommended for new worksheet.</p>
 <hr>
-<h2 id="tofirstsheet">
-  toFirstSheet
-  <a class="anchor" href="#tofirstsheet">#</a>
+<h2 id="colorpicker">
+  colorpicker
+  <a class="anchor" href="#colorpicker">#</a>
 </h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FJMPq4%2FbtsPPO2QVXs%2FAAAAAAAAAAAAAAAAAAAAAIKidtejqGw1ypQWT6lp7ntXCyh-X0WKKaiL6LmqT-OO%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Da3NeCWU8mzQEzzBPWaHWUEXmQbg%253D" alt="tofirstsheet" title="tofirstsheet"/><br>
-Go to the first sheet.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Flu0WT%2FbtsPMQ1WVZr%2FAAAAAAAAAAAAAAAAAAAAAL3-6-GlNOdeksRwSgpwpH8fjRVwoStvPmt9xBO4jTSm%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D38ycMwM20EJG2C6%252BvBC4MHw0aE0%253D" alt="colorpicker" title="colorpicker"/><br>
+Copy the color of the selected cell and paste it to the cell that is selected.</p>
 <hr>
 <h2 id="copywidthheight">
   copyWidthHeight
@@ -329,127 +442,6 @@ Go to the first sheet.</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fv3uII%2FbtsPQr0n3la%2FAAAAAAAAAAAAAAAAAAAAAOzKBH1mIeAkUvLVVWv8v3FrPGDKuCOZUHzCnXV5ti-c%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DwmsOftQ4uC3yYICfKXIQgzSUuZc%253D" alt="copyWidthHeight" title="copyWidthHeight"/><br>
 Copy the width &amp; height of the selected cell and paste it to the cell that is selected.</p>
 <hr>
-<h2 id="colorpicker">
-  colorpicker
-  <a class="anchor" href="#colorpicker">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Flu0WT%2FbtsPMQ1WVZr%2FAAAAAAAAAAAAAAAAAAAAAL3-6-GlNOdeksRwSgpwpH8fjRVwoStvPmt9xBO4jTSm%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D38ycMwM20EJG2C6%252BvBC4MHw0aE0%253D" alt="colorpicker" title="colorpicker"/><br>
-Copy the color of the selected cell and paste it to the cell that is selected.</p>
-<hr>
-<h2 id="growthrate">
-  growthRate
-  <a class="anchor" href="#growthrate">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcjio96%2FbtsPP8GLCGw%2FAAAAAAAAAAAAAAAAAAAAABDf8eVwtcoZF8LRu2_xownI5vsORWyCUyGCqzfcn1MM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DEN6hffaNgW1cfjQp3lpe7rYlvA0%253D" alt="growthRate" title="growthRate"/><br>
-Calculate the growth rate.</p>
-<hr>
-<h2 id="achievementrate">
-  achievementRate
-  <a class="anchor" href="#achievementrate">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FlPg6x%2FbtsPMWgSeWL%2FAAAAAAAAAAAAAAAAAAAAAEqTGJsQJqsBOGXtGW77Gy035g1XZuLhi3ofhFQMA7dw%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DBdQIUhYNlV0m3x%252BrN8EB0Cfk5vc%253D" alt="achievementRate" title="achievementRate"/><br>
-Calculate the achievement rate.</p>
-<hr>
-<h2 id="cagr">
-  CAGR
-  <a class="anchor" href="#cagr">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsoKb3%2FbtsPN4eyZXo%2FAAAAAAAAAAAAAAAAAAAAABtGLMUo8xzitZknlS8GGsyFTLSVQOdKjTOSqNkqGPW0%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DqAL97aySd9AAkQ5Pfdq5jONv71Y%253D" alt="CAGR" title="CAGR"/><br>
-Calculate the CAGR.</p>
-<hr>
-<h2 id="wordfill">
-  WordFill
-  <a class="anchor" href="#wordfill">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRz9B1%2FbtsPM13sHmV%2FAAAAAAAAAAAAAAAAAAAAAFNDjl4c8njpb6wh8LkMaDagD9JHi81ZXsfAasdnB9ON%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dxc%252Fd2JEhHE%252B%252FG7MDl3FYTIoPtOc%253D" alt="WordFill" title="WordFill"/><br>
-If there is a value in the right side of the selected reference column, fill the cell value in a DB format.</p>
-<hr>
-<h2 id="alldecimals">
-  allDecimals
-  <a class="anchor" href="#alldecimals">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbX7uV2%2FbtsPO7avOIW%2FAAAAAAAAAAAAAAAAAAAAAHdSU_uW8CujPEk4UW2mBR0_lTLCmuvkCQ3u1XWO58LZ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DB99sDNUwLjY2pjh0sc0fjzf3zNY%253D" alt="allDecimals" title="allDecimals"/><br>
-In the case of numbers with decimal points, all decimal points come out.</p>
-<hr>
-<h2 id="shownamelist">
-  shownamelist
-  <a class="anchor" href="#shownamelist">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Ftsdsf%2FbtsPQAbXZJl%2FAAAAAAAAAAAAAAAAAAAAAEsquOYqTusetlkB0kriGB-MoRhBwGOjrxkt6WMKJdEN%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DZ%252BJGZnON%252F1Oi%252BoU8pp0Qm2qulns%253D" alt="shownamelist" title="shownamelist"/><br>
-Call the currently defined name list box.
-→ double click : activate name area</p>
-<hr>
-<h2 id="upsidedown">
-  upsidedown
-  <a class="anchor" href="#upsidedown">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdIJmMq%2FbtsPPCuPiF6%2FAAAAAAAAAAAAAAAAAAAAAB03kAHgmv131qLVh3UG0R_VKMBJ22e_JqUdz91LKbHM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DQh4DBZhWKbwPU0dZFlpwW9islcM%253D" alt="upsidedown" title="upsidedown"/><br>
-Return the data of the selected column and return it to the right side.</p>
-<hr>
-<h2 id="inputrandomvalue">
-  inputRandomValue
-  <a class="anchor" href="#inputrandomvalue">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdUifMR%2FbtsPNfHe3N1%2FAAAAAAAAAAAAAAAAAAAAAFVMuLioboqE3xHEfiVMtNPfPJX4pw3bOxNtQeghHl8w%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dp34y5wmxh8p59f7THxxdFwqAInw%253D" alt="inputRandomValue" title="inputRandomValue"/><br>
-Enter the sequential date or random integer.</p>
-<hr>
-<h2 id="septext">
-  sepText
-  <a class="anchor" href="#septext">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJEsi9%2FbtsPPHbPT6d%2FAAAAAAAAAAAAAAAAAAAAAKvHsaF9jLn2tjleR_On1eds_Jv0OE3mLQs-h0GgAGSM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dk%252FKVbmqGyK7WnFGWICZ3sWmartY%253D" alt="sepText" title="sepText"/><br>
-In the text that is mixed with characters+numbers, only the number is returned to the right side.</p>
-<hr>
-<h2 id="tabletoarray">
-  tableToArray
-  <a class="anchor" href="#tabletoarray">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbGbErD%2FbtsPOoDDoif%2FAAAAAAAAAAAAAAAAAAAAANiME-YqYG5G4dQX-E5J09pPirTZUhujyxROGIfByk4H%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dzxrsi7VHaUMW%252F1XxJ5o7Ieavbtk%253D" alt="tableToArray" title="tableToArray"/><br>
-Copy the clipboard to set the table as a name definition.</p>
-<hr>
-<h2 id="pivotrefresh">
-  pivotRefresh
-  <a class="anchor" href="#pivotrefresh">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FoBMdN%2FbtsPNJBfyUb%2FAAAAAAAAAAAAAAAAAAAAAEvlKoGRa49www76Rx2bmnlKoUw1P_Nde8Pka7kBTrI7%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DVZj5X95D7q2RBytj7CbG952No80%253D" alt="pivotRefresh" title="pivotRefresh"/><br>
-Automatically update the Pivot Table.</p>
-<hr>
-<h2 id="sheetvisibilitycontrol">
-  SheetVisibilityControl
-  <a class="anchor" href="#sheetvisibilitycontrol">#</a>
-</h2>
-<h3 id="sheetvisibleornot">
-  sheetVisibleOrNot
-  <a class="anchor" href="#sheetvisibleornot">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsTcgY%2FbtsPNcRhW8F%2FAAAAAAAAAAAAAAAAAAAAALwVc5_Ix8bZRNfeImWjlthEPJ5ghhH5g9PmyYzhhEwK%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DwSoo3oNBu%252Fw1Ec4bM2x6St%252BmhSs%253D" alt="sheetVisibleOrNot" title="sheetVisibleOrNot"/><br>
-Display visibility property table for all sheets in the current workbook.<br>
-→ recommended to work on a new sheet</p>
-<h3 id="controlvisibility">
-  controlVisibility
-  <a class="anchor" href="#controlvisibility">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbTBNBo%2FbtsPMXtcsgU%2FAAAAAAAAAAAAAAAAAAAAAE94eOLopM67-UU3Xm8NhqXVyi66GcIqd9_cHtAn8YXp%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DKb4wGOL1CXteFxgzWOAxcNxl8X8%253D" alt="controlVisibility" title="controlVisibility"/><br>
-Apply value for the changed visibility property.</p>
-<h3 id="sheetnow">
-  sheetNow
-  <a class="anchor" href="#sheetnow">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmFAQY%2FbtsPPLZk33e%2FAAAAAAAAAAAAAAAAAAAAAJeRH-Z1tuqX3fNl_eGydIKYuRk8sCFH5j7ZOtcpNtL7%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D62SyfDzRnDsVOdn24%252FwM0TlWhQw%253D" alt="sheetNow" title="sheetNow"/><br>
-Simply check with the message box to see if there is a hidden sheet in the current sheet.</p>
-<hr>
-<h2 id="dietfilesize">
-  dietFileSize
-  <a class="anchor" href="#dietfilesize">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXeBPQ%2FbtsPPXZMAd6%2FAAAAAAAAAAAAAAAAAAAAAPyJPGYTesow-o_ccSTmlHFWTtqzBABH2MLz2Q7-cfxJ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dhr7BepaZDxFS7OA05PscBCnYK28%253D" alt="dietFileSize" title="dietFileSize"/><br>
-Excel file size diet. check all sheet and clear.</p>
-<hr>
-<h2 id="launchtextsplitter">
-  LaunchTextSplitter
-  <a class="anchor" href="#launchtextsplitter">#</a>
-</h2>
-<p>split text from pdf table.</p>
 </article>
  
       
@@ -511,29 +503,8 @@ Excel file size diet. check all sheet and clear.</p>
     </li>
     <li><a href="#colorfill">colorFill</a></li>
     <li><a href="#seta4">setA4</a></li>
-    <li><a href="#tofirstsheet">toFirstSheet</a></li>
-    <li><a href="#copywidthheight">copyWidthHeight</a></li>
     <li><a href="#colorpicker">colorpicker</a></li>
-    <li><a href="#growthrate">growthRate</a></li>
-    <li><a href="#achievementrate">achievementRate</a></li>
-    <li><a href="#cagr">CAGR</a></li>
-    <li><a href="#wordfill">WordFill</a></li>
-    <li><a href="#alldecimals">allDecimals</a></li>
-    <li><a href="#shownamelist">shownamelist</a></li>
-    <li><a href="#upsidedown">upsidedown</a></li>
-    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
-    <li><a href="#septext">sepText</a></li>
-    <li><a href="#tabletoarray">tableToArray</a></li>
-    <li><a href="#pivotrefresh">pivotRefresh</a></li>
-    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
-      <ul>
-        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
-        <li><a href="#controlvisibility">controlVisibility</a></li>
-        <li><a href="#sheetnow">sheetNow</a></li>
-      </ul>
-    </li>
-    <li><a href="#dietfilesize">dietFileSize</a></li>
-    <li><a href="#launchtextsplitter">LaunchTextSplitter</a></li>
+    <li><a href="#copywidthheight">copyWidthHeight</a></li>
   </ul>
 </nav>
 
