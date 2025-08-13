@@ -4,29 +4,31 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Filling Blanks in a Database-Style Table
+  Making Keyboard Shortcut
   #
 
 
   what is it?
   #
 
-When there are columns A and B, fill the empty cells in column A with the value from the cell above.
+If you want to create a shortcut key to run an Excel macro, you can write the code as follows. The example below applies the shortcut key when the userform is launched.
 
-  sample code
+  sample
   #
 
-Sub wordDBFill()
+You can set macro shortcut key with below:
+% : shift, ^ : control, &#43; : alt
+Sub showMenu()
+    MyMacros.Show
 
-Do
-If ActiveCell.value &lt;&gt; &#34;&#34; Then
-    ActiveCell.Offset(1, 0).Activate
-Else
-    ActiveCell.value = ActiveCell.End(xlUp).value
-    ActiveCell.Offset(1, 0).Activate
-End If
-Loop Until ActiveCell.Offset(0, 1).value = &#34;&#34;
-
+    &#39;shift &#43; alt &#43; 1
+    Application.OnKey &#34;%&#43;1&#34;, &#34;lineGrayDblClick&#34; &#39;macro name
+    &#39;shift &#43; alt &#43; 2
+    Application.OnKey &#34;%&#43;2&#34;, &#34;lineBlackDblClick&#34;
+    &#39;shift &#43; alt &#43; 3
+    Application.OnKey &#34;%&#43;3&#34;, &#34;lineBlackBoldDblClick&#34;
+    &#39;shift &#43; alt &#43; 4
+    Application.OnKey &#34;%&#43;4&#34;, &#34;colorFill&#34;
 End Sub
  
 
@@ -37,9 +39,11 @@ original post (Kor)
 <meta name="color-scheme" content="light dark">
 <meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="https://mcjoi.github.io/vba/03002/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="Filling Blanks">
-  <meta property="og:description" content="Filling Blanks in a Database-Style Table # what is it? # When there are columns A and B, fill the empty cells in column A with the value from the cell above.
-sample code # Sub wordDBFill() Do If ActiveCell.value &lt;&gt; &#34;&#34; Then ActiveCell.Offset(1, 0).Activate Else ActiveCell.value = ActiveCell.End(xlUp).value ActiveCell.Offset(1, 0).Activate End If Loop Until ActiveCell.Offset(0, 1).value = &#34;&#34; End Sub original post (Kor)">
+  <meta property="og:title" content="Making Keyboard Shortcut">
+  <meta property="og:description" content="Making Keyboard Shortcut # what is it? # If you want to create a shortcut key to run an Excel macro, you can write the code as follows. The example below applies the shortcut key when the userform is launched.
+sample # You can set macro shortcut key with below:
+% : shift, ^ : control, &#43; : alt
+Sub showMenu() MyMacros.Show &#39;shift &#43; alt &#43; 1 Application.OnKey &#34;%&#43;1&#34;, &#34;lineGrayDblClick&#34; &#39;macro name &#39;shift &#43; alt &#43; 2 Application.OnKey &#34;%&#43;2&#34;, &#34;lineBlackDblClick&#34; &#39;shift &#43; alt &#43; 3 Application.OnKey &#34;%&#43;3&#34;, &#34;lineBlackBoldDblClick&#34; &#39;shift &#43; alt &#43; 4 Application.OnKey &#34;%&#43;4&#34;, &#34;colorFill&#34; End Sub original post (Kor)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="vba">
@@ -48,13 +52,13 @@ sample code # Sub wordDBFill() Do If ActiveCell.value &lt;&gt; &#34;&#34; Then A
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>Filling Blanks | shaaaaalow Dive</title>
+<title>Making Keyboard Shortcut | shaaaaalow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/vba/03002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.bae8462b059469ad5a59c33728e1f0656501f47c5625f0fad91532819eb0bdb9.css" integrity="sha256-uuhGKwWUaa1aWcM3KOHwZWUB9HxWJfD62RUygZ6wvbk=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.4c6be2daa34394c3e1a0bdaca5b12816616335afc3d4311e7c4e71f3a153bc61.js" integrity="sha256-TGvi2qNDlMPhoL2spbEoFmFjNa/D1DEefE5x86FTvGE=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.b713a7c0903fac023410681683da64fa5c523559f0a2845f4354608133fc7205.js" integrity="sha256-txOnwJA/rAI0EGgWg9pk&#43;lxSNVnwooRfQ1RggTP8cgU=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -138,7 +142,7 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
           <a href="https://mcjoi.github.io/vba/03002/" class="active">
-            Filling Blanks
+            Making Keyboard Shortcut
           </a>
         </li>
       
@@ -202,7 +206,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Filling Blanks</h3>
+  <h3>Making Keyboard Shortcut</h3>
 
   <label for="toc-control">
     
@@ -218,12 +222,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
-      <ul>
-        <li><a href="#what-is-it">what is it?</a></li>
-        <li><a href="#sample-code">sample code</a></li>
-      </ul>
-    </li>
+    <li><a href="#what-is-it">what is it?</a></li>
+    <li><a href="#sample">sample</a></li>
   </ul>
 </nav>
 
@@ -237,35 +237,37 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h2 id="filling-blanks-in-a-database-style-table">
-  Filling Blanks in a Database-Style Table
-  <a class="anchor" href="#filling-blanks-in-a-database-style-table">#</a>
-</h2>
-<h3 id="what-is-it">
+  <article class="markdown book-article"><h1 id="making-keyboard-shortcut">
+  Making Keyboard Shortcut
+  <a class="anchor" href="#making-keyboard-shortcut">#</a>
+</h1>
+<h2 id="what-is-it">
   what is it?
   <a class="anchor" href="#what-is-it">#</a>
-</h3>
-<p>When there are columns A and B, fill the empty cells in column A with the value from the cell above.</p>
-<h3 id="sample-code">
-  sample code
-  <a class="anchor" href="#sample-code">#</a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bas" data-lang="bas"><span style="display:flex;"><span>Sub wordDBFill()
+</h2>
+<p>If you want to create a shortcut key to run an Excel macro, you can write the code as follows. The example below applies the shortcut key when the <code>userform</code> is launched.</p>
+<h2 id="sample">
+  sample
+  <a class="anchor" href="#sample">#</a>
+</h2>
+<p>You can set macro shortcut key with below:<br>
+% : shift, ^ : control, + : alt</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">showMenu</span>()
+</span></span><span style="display:flex;"><span>    MyMacros.Show
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Do
-</span></span><span style="display:flex;"><span>If ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span> Then
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>Else
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> ActiveCell<span style="color:#f92672">.</span>End(xlUp)<span style="color:#f92672">.</span>value
-</span></span><span style="display:flex;"><span>    ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">.</span>Activate
-</span></span><span style="display:flex;"><span>End If
-</span></span><span style="display:flex;"><span>Loop Until ActiveCell<span style="color:#f92672">.</span>Offset(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>End Sub
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;shift + alt + 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+1&#34;</span>, <span style="color:#e6db74">&#34;lineGrayDblClick&#34;</span> <span style="color:#75715e">&#39;macro name
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">&#39;shift + alt + 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+2&#34;</span>, <span style="color:#e6db74">&#34;lineBlackDblClick&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;shift + alt + 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+3&#34;</span>, <span style="color:#e6db74">&#34;lineBlackBoldDblClick&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;shift + alt + 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+4&#34;</span>, <span style="color:#e6db74">&#34;colorFill&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><p> <br>
 
 <a
-   href="https://sunnybong.tistory.com/23" 
+   href="https://sunnybong.tistory.com/516" 
    target="_blank" rel="noopener" 
   class="book-btn danger"
 >original post (Kor)</a>
@@ -322,12 +324,8 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#filling-blanks-in-a-database-style-table">Filling Blanks in a Database-Style Table</a>
-      <ul>
-        <li><a href="#what-is-it">what is it?</a></li>
-        <li><a href="#sample-code">sample code</a></li>
-      </ul>
-    </li>
+    <li><a href="#what-is-it">what is it?</a></li>
+    <li><a href="#sample">sample</a></li>
   </ul>
 </nav>
 
