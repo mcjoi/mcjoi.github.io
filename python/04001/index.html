@@ -31,9 +31,9 @@ I downloaded a conversion program from the Google Dev site, but it requires ente
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/python/04001/">
-<link rel="stylesheet" href="https://mcjoi.github.io/book.min.3ecb9194ba2cb1538a28c04db527cc7233591bb17dbcc8c2d9a3e6ee85bfdc36.css" integrity="sha256-PsuRlLossVOKKMBNtSfMcjNZG7F9vMjC2aPm7oW/3DY=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.5926814f3fdc7a169691449077203c65e02e0c7558b76437ea1b4aaed266cd0f.css" integrity="sha256-WSaBTz/cehaWkUSQdyA8ZeAuDHVYt2Q36htKrtJmzQ8=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.2479db93889413b78b8c6a7e15a3c179bb057ac2e78db1b84c84de91119dc1b0.js" integrity="sha256-JHnbk4iUE7eLjGp&#43;FaPBebsFesLnjbG4TITekRGdwbA=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.136077611eaa56f00719b9f8bb9bfb21aaf1c32b2704f8fe9d6dadcbb937238c.js" integrity="sha256-E2B3YR6qVvAHGbn4u5v7IarxwysnBPj&#43;nW2ty7k3I4w=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -109,6 +109,12 @@ https://github.com/alex-shpak/hugo-book
         <li>
           <a href="https://mcjoi.github.io/python/04001/" class="active">
             WebP Conversion Program
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/python/04002/" >
+            Move file by extensions
           </a>
         </li>
       
@@ -191,12 +197,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#webp-conversion-program">WebP Conversion Program</a>
-      <ul>
-        <li><a href="#what-is-it">What is it?</a></li>
-        <li><a href="#result">result</a></li>
-      </ul>
-    </li>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#sample-code">sample code</a></li>
+    <li><a href="#result">result</a></li>
   </ul>
 </nav>
 
@@ -210,14 +213,14 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h2 id="webp-conversion-program">
+  <article class="markdown book-article"><h1 id="webp-conversion-program">
   WebP Conversion Program
   <a class="anchor" href="#webp-conversion-program">#</a>
-</h2>
-<h3 id="what-is-it">
+</h1>
+<h2 id="what-is-it">
   What is it?
   <a class="anchor" href="#what-is-it">#</a>
-</h3>
+</h2>
 <p>I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.</p>
 <p>I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.</p>
 <hr>
@@ -226,6 +229,10 @@ https://github.com/alex-shpak/hugo-book
 <hr>
 <p>By placing a batch file on the desktop (or anywhere else), you can easily execute the Python program. Just make sure the required Python packages are installed in advance.</p>
 <p>When you run it, the first file explorer window will let you select the file you want to convert, and the second will let you choose the folder where the converted file will be saved. Of course, you can also tweak the code to fix the target folder to any location you prefer.</p>
+<h2 id="sample-code">
+  sample code
+  <a class="anchor" href="#sample-code">#</a>
+</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog
@@ -270,12 +277,13 @@ https://github.com/alex-shpak/hugo-book
 </span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> programPath <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#34;&#39;</span> <span style="color:#f92672">+</span> fileConvertion <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34; -q 100 -o &#34;&#39;</span> <span style="color:#f92672">+</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.webp&#34;&#39;</span>
 </span></span><span style="display:flex;"><span>   
 </span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(command<span style="color:#f92672">=</span>command)
-</span></span></code></pre></div><h3 id="result">
+</span></span></code></pre></div><h2 id="result">
   result
   <a class="anchor" href="#result">#</a>
-</h3>
+</h2>
 <p>Because the size was also converted, the file size is greatly reduced.
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbIm1mr%2FbtsLSd79Asf%2FAAAAAAAAAAAAAAAAAAAAAN0P-Sf26XYiDAV9mjMjFPCSKJdxw_nlXEjgttrMJ9Mh%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DXCA1xO11dxfDcgsrU7Fyx3FStLw%253D" alt="result" title="result"/></p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8J36t%2FbtsLobitiW3%2FAAAAAAAAAAAAAAAAAAAAAIjVhocnK8xzPRRCHH0AAjZY1j89rFnH-4l3RYkxrlO_%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DkfLv2Lb%252FkPI869vqtSYCIjmYZh0%253D" alt="result" title="result"/></p>
 <p> </p>
 
 <a
@@ -336,12 +344,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#webp-conversion-program">WebP Conversion Program</a>
-      <ul>
-        <li><a href="#what-is-it">What is it?</a></li>
-        <li><a href="#result">result</a></li>
-      </ul>
-    </li>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#sample-code">sample code</a></li>
+    <li><a href="#result">result</a></li>
   </ul>
 </nav>
 
