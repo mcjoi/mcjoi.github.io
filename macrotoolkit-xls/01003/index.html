@@ -4,54 +4,54 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  growthRate
+  MacroToolkit - Value format
   #
 
 
-Calculate the growth rate.
-
-  achievementRate
+  Number format
   #
 
 
-Calculate the achievement rate.
-
-  CAGR
+  formatNum_normal
   #
 
 
-Calculate the CAGR.
+Change to a normal number format.
+[yes - with right padding(accounting)] #,##0_-;[Red]-#,##0_-;-_-
+[no - without right padding] #,##0;[Red]-#,##0;-
 
-  WordFill
+
+  formatNum_thousand
   #
 
 
-If there is a value in the right side of the selected reference column, fill the cell value in a DB format.
+Change in a thousand unit number format.
+[yes - with right padding(accounting)] #,##0,-;[Red]-#,##0,-;-_-
+[no - without right padding] #,##0,;[Red]-#,##0,;-
 
-  allDecimals
+
+  formatNum_mil
   #
 
 
-In the case of numbers with decimal points, all decimal points come out.
-
-  shownamelist
-  #
-
-
-Call the currently defined name list box.
-→ double click : activate name area">
+Change in a million unit number format.
+[yes - with right padding(accounting)] #,##0,,-;[Red]-#,##0,,-;-_-
+[no - without right padding] #,##0,,;[Red]-#,##0,,;-">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
 <meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-xls/01003/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="MacroToolkit - excel - scripts (2)">
-  <meta property="og:description" content="growthRate # Calculate the growth rate.
-achievementRate # Calculate the achievement rate.
-CAGR # Calculate the CAGR.
-WordFill # If there is a value in the right side of the selected reference column, fill the cell value in a DB format.
-allDecimals # In the case of numbers with decimal points, all decimal points come out.
-shownamelist # Call the currently defined name list box. → double click : activate name area">
+  <meta property="og:title" content="MacroToolkit - Value format">
+  <meta property="og:description" content="MacroToolkit - Value format # Number format # formatNum_normal # Change to a normal number format.
+[yes - with right padding(accounting)] #,##0_-;[Red]-#,##0_-;-_-
+[no - without right padding] #,##0;[Red]-#,##0;-
+formatNum_thousand # Change in a thousand unit number format.
+[yes - with right padding(accounting)] #,##0,-;[Red]-#,##0,-;-_-
+[no - without right padding] #,##0,;[Red]-#,##0,;-
+formatNum_mil # Change in a million unit number format.
+[yes - with right padding(accounting)] #,##0,,-;[Red]-#,##0,,-;-_-
+[no - without right padding] #,##0,,;[Red]-#,##0,,;-">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="macrotoolkit-xls">
@@ -60,13 +60,13 @@ shownamelist # Call the currently defined name list box. → double click : acti
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>MacroToolkit - excel - scripts (2) | shaaaaalow Dive</title>
+<title>MacroToolkit - Value format | shaaaaalow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-xls/01003/">
-<link rel="stylesheet" href="https://mcjoi.github.io/book.min.dfca790bcda1876f527aae6fd31b97845c08374e0c0ab6891aca91abd08e4831.css" integrity="sha256-38p5C82hh29Seq5v0xuXhFwIN04MCraJGsqRq9COSDE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.bae8462b059469ad5a59c33728e1f0656501f47c5625f0fad91532819eb0bdb9.css" integrity="sha256-uuhGKwWUaa1aWcM3KOHwZWUB9HxWJfD62RUygZ6wvbk=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.dc7879ea1175db974200ad1148d3e7853919c8f641380905a523d3a72c7a0bce.js" integrity="sha256-3Hh56hF125dCAK0RSNPnhTkZyPZBOAkFpSPTpyx6C84=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.f58a92e7718f0db4d5df17543195a9a06c6322f43d07c479a01533ac3b8507ec.js" integrity="sha256-9YqS53GPDbTV3xdUMZWpoGxjIvQ9B8R5oBUzrDuFB&#43;w=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -162,7 +162,13 @@ https://github.com/alex-shpak/hugo-book
       
         <li>
           <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" class="active">
-            MacroToolkit - excel - scripts (2)
+            MacroToolkit - Value format
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
+            MacroToolkit - Function
           </a>
         </li>
       
@@ -220,7 +226,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>MacroToolkit - excel - scripts (2)</h3>
+  <h3>MacroToolkit - Value format</h3>
 
   <label for="toc-control">
     
@@ -236,26 +242,16 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#growthrate">growthRate</a></li>
-    <li><a href="#achievementrate">achievementRate</a></li>
-    <li><a href="#cagr">CAGR</a></li>
-    <li><a href="#wordfill">WordFill</a></li>
-    <li><a href="#alldecimals">allDecimals</a></li>
-    <li><a href="#shownamelist">shownamelist</a></li>
-    <li><a href="#upsidedown">upsidedown</a></li>
-    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
-    <li><a href="#septext">sepText</a></li>
-    <li><a href="#tabletoarray">tableToArray</a></li>
-    <li><a href="#pivotrefresh">pivotRefresh</a></li>
-    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
+    <li><a href="#number-format">Number format</a>
       <ul>
-        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
-        <li><a href="#controlvisibility">controlVisibility</a></li>
-        <li><a href="#sheetnow">sheetNow</a></li>
+        <li><a href="#formatnum_normal">formatNum_normal</a></li>
+        <li><a href="#formatnum_thousand">formatNum_thousand</a></li>
+        <li><a href="#formatnum_mil">formatNum_mil</a></li>
+        <li><a href="#formatnum_date">formatNum_date</a></li>
       </ul>
     </li>
-    <li><a href="#dietfilesize">dietFileSize</a></li>
-    <li><a href="#launchtextsplitter">LaunchTextSplitter</a></li>
+    <li><a href="#delhyperlink">delHyperlink</a></li>
+    <li><a href="#delblank">delBlank</a></li>
   </ul>
 </nav>
 
@@ -269,107 +265,64 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h2 id="growthrate">
-  growthRate
-  <a class="anchor" href="#growthrate">#</a>
+  <article class="markdown book-article"><h1 id="macrotoolkit---value-format">
+  MacroToolkit - Value format
+  <a class="anchor" href="#macrotoolkit---value-format">#</a>
+</h1>
+<h2 id="number-format">
+  Number format
+  <a class="anchor" href="#number-format">#</a>
 </h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcjio96%2FbtsPP8GLCGw%2FAAAAAAAAAAAAAAAAAAAAABDf8eVwtcoZF8LRu2_xownI5vsORWyCUyGCqzfcn1MM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DEN6hffaNgW1cfjQp3lpe7rYlvA0%253D" alt="growthRate" title="growthRate"/><br>
-Calculate the growth rate.</p>
-<h2 id="achievementrate">
-  achievementRate
-  <a class="anchor" href="#achievementrate">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FlPg6x%2FbtsPMWgSeWL%2FAAAAAAAAAAAAAAAAAAAAAEqTGJsQJqsBOGXtGW77Gy035g1XZuLhi3ofhFQMA7dw%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DBdQIUhYNlV0m3x%252BrN8EB0Cfk5vc%253D" alt="achievementRate" title="achievementRate"/><br>
-Calculate the achievement rate.</p>
-<h2 id="cagr">
-  CAGR
-  <a class="anchor" href="#cagr">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsoKb3%2FbtsPN4eyZXo%2FAAAAAAAAAAAAAAAAAAAAABtGLMUo8xzitZknlS8GGsyFTLSVQOdKjTOSqNkqGPW0%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DqAL97aySd9AAkQ5Pfdq5jONv71Y%253D" alt="CAGR" title="CAGR"/><br>
-Calculate the CAGR.</p>
-<h2 id="wordfill">
-  WordFill
-  <a class="anchor" href="#wordfill">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRz9B1%2FbtsPM13sHmV%2FAAAAAAAAAAAAAAAAAAAAAFNDjl4c8njpb6wh8LkMaDagD9JHi81ZXsfAasdnB9ON%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dxc%252Fd2JEhHE%252B%252FG7MDl3FYTIoPtOc%253D" alt="WordFill" title="WordFill"/><br>
-If there is a value in the right side of the selected reference column, fill the cell value in a DB format.</p>
-<h2 id="alldecimals">
-  allDecimals
-  <a class="anchor" href="#alldecimals">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbX7uV2%2FbtsPO7avOIW%2FAAAAAAAAAAAAAAAAAAAAAHdSU_uW8CujPEk4UW2mBR0_lTLCmuvkCQ3u1XWO58LZ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DB99sDNUwLjY2pjh0sc0fjzf3zNY%253D" alt="allDecimals" title="allDecimals"/><br>
-In the case of numbers with decimal points, all decimal points come out.</p>
-<h2 id="shownamelist">
-  shownamelist
-  <a class="anchor" href="#shownamelist">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Ftsdsf%2FbtsPQAbXZJl%2FAAAAAAAAAAAAAAAAAAAAAEsquOYqTusetlkB0kriGB-MoRhBwGOjrxkt6WMKJdEN%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DZ%252BJGZnON%252F1Oi%252BoU8pp0Qm2qulns%253D" alt="shownamelist" title="shownamelist"/><br>
-Call the currently defined name list box.
-→ double click : activate name area</p>
-<h2 id="upsidedown">
-  upsidedown
-  <a class="anchor" href="#upsidedown">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdIJmMq%2FbtsPPCuPiF6%2FAAAAAAAAAAAAAAAAAAAAAB03kAHgmv131qLVh3UG0R_VKMBJ22e_JqUdz91LKbHM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DQh4DBZhWKbwPU0dZFlpwW9islcM%253D" alt="upsidedown" title="upsidedown"/><br>
-Return the data of the selected column and return it to the right side.</p>
-<h2 id="inputrandomvalue">
-  inputRandomValue
-  <a class="anchor" href="#inputrandomvalue">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdUifMR%2FbtsPNfHe3N1%2FAAAAAAAAAAAAAAAAAAAAAFVMuLioboqE3xHEfiVMtNPfPJX4pw3bOxNtQeghHl8w%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dp34y5wmxh8p59f7THxxdFwqAInw%253D" alt="inputRandomValue" title="inputRandomValue"/><br>
-Enter the sequential date or random integer.</p>
-<h2 id="septext">
-  sepText
-  <a class="anchor" href="#septext">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJEsi9%2FbtsPPHbPT6d%2FAAAAAAAAAAAAAAAAAAAAAKvHsaF9jLn2tjleR_On1eds_Jv0OE3mLQs-h0GgAGSM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dk%252FKVbmqGyK7WnFGWICZ3sWmartY%253D" alt="sepText" title="sepText"/><br>
-In the text that is mixed with characters+numbers, only the number is returned to the right side.</p>
-<h2 id="tabletoarray">
-  tableToArray
-  <a class="anchor" href="#tabletoarray">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbGbErD%2FbtsPOoDDoif%2FAAAAAAAAAAAAAAAAAAAAANiME-YqYG5G4dQX-E5J09pPirTZUhujyxROGIfByk4H%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dzxrsi7VHaUMW%252F1XxJ5o7Ieavbtk%253D" alt="tableToArray" title="tableToArray"/><br>
-Copy the clipboard to set the table as a name definition.</p>
-<h2 id="pivotrefresh">
-  pivotRefresh
-  <a class="anchor" href="#pivotrefresh">#</a>
-</h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FoBMdN%2FbtsPNJBfyUb%2FAAAAAAAAAAAAAAAAAAAAAEvlKoGRa49www76Rx2bmnlKoUw1P_Nde8Pka7kBTrI7%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DVZj5X95D7q2RBytj7CbG952No80%253D" alt="pivotRefresh" title="pivotRefresh"/><br>
-Automatically update the Pivot Table.</p>
-<h2 id="sheetvisibilitycontrol">
-  SheetVisibilityControl
-  <a class="anchor" href="#sheetvisibilitycontrol">#</a>
-</h2>
-<h3 id="sheetvisibleornot">
-  sheetVisibleOrNot
-  <a class="anchor" href="#sheetvisibleornot">#</a>
+<h3 id="formatnum_normal">
+  formatNum_normal
+  <a class="anchor" href="#formatnum_normal">#</a>
 </h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsTcgY%2FbtsPNcRhW8F%2FAAAAAAAAAAAAAAAAAAAAALwVc5_Ix8bZRNfeImWjlthEPJ5ghhH5g9PmyYzhhEwK%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DwSoo3oNBu%252Fw1Ec4bM2x6St%252BmhSs%253D" alt="sheetVisibleOrNot" title="sheetVisibleOrNot"/><br>
-Display visibility property table for all sheets in the current workbook.<br>
-→ recommended to work on a new sheet</p>
-<h3 id="controlvisibility">
-  controlVisibility
-  <a class="anchor" href="#controlvisibility">#</a>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FoW5yo%2FbtsPNgF47CO%2FAAAAAAAAAAAAAAAAAAAAADVo8O9Fsj7rnpOGPU9TF7rIbDQvS6nK3P3yvWRHSS9B%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dbiznfx4KZ3fUbcoA%252BxCjX4uMWy8%253D" alt="formatNum_normal" title="formatNum_normal"/><br>
+Change to a normal number format.<br>
+[yes - with right padding(accounting)] #,##0_-;[Red]-#,##0_-;-_-<br>
+[no - without right padding] #,##0;[Red]-#,##0;-</p>
+<hr>
+<h3 id="formatnum_thousand">
+  formatNum_thousand
+  <a class="anchor" href="#formatnum_thousand">#</a>
 </h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbTBNBo%2FbtsPMXtcsgU%2FAAAAAAAAAAAAAAAAAAAAAE94eOLopM67-UU3Xm8NhqXVyi66GcIqd9_cHtAn8YXp%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DKb4wGOL1CXteFxgzWOAxcNxl8X8%253D" alt="controlVisibility" title="controlVisibility"/><br>
-Apply value for the changed visibility property.</p>
-<h3 id="sheetnow">
-  sheetNow
-  <a class="anchor" href="#sheetnow">#</a>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbxeuR8%2FbtsPOJgSamJ%2FAAAAAAAAAAAAAAAAAAAAAHkI2iVc3zuNo-HcCn2lcXd4_Pcss-UTjIdTsUtAhKSB%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DSmHK5ALjVYgT3fZeopyK2pdz7q4%253D" alt="formatNum_thousand" title="formatNum_thousand"/><br>
+Change in a thousand unit number format.<br>
+[yes - with right padding(accounting)] #,##0,-;[Red]-#,##0,-;-_-<br>
+[no - without right padding] #,##0,;[Red]-#,##0,;-</p>
+<hr>
+<h3 id="formatnum_mil">
+  formatNum_mil
+  <a class="anchor" href="#formatnum_mil">#</a>
 </h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmFAQY%2FbtsPPLZk33e%2FAAAAAAAAAAAAAAAAAAAAAJeRH-Z1tuqX3fNl_eGydIKYuRk8sCFH5j7ZOtcpNtL7%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D62SyfDzRnDsVOdn24%252FwM0TlWhQw%253D" alt="sheetNow" title="sheetNow"/><br>
-Simply check with the message box to see if there is a hidden sheet in the current sheet.</p>
-<h2 id="dietfilesize">
-  dietFileSize
-  <a class="anchor" href="#dietfilesize">#</a>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbfBzAg%2FbtsPNkuYTlt%2FAAAAAAAAAAAAAAAAAAAAAGuBYBkFpAPt-sikarJ7kVjwTOkOtZW5W-pyTteCObms%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D0RJsQTMBaBoyjsPa%252BW%252BesT0Tf4Q%253D" alt="formatNum_mil" title="formatNum_mil"/><br>
+Change in a million unit number format.<br>
+[yes - with right padding(accounting)] #,##0,,-;[Red]-#,##0,,-;-_-<br>
+[no - without right padding] #,##0,,;[Red]-#,##0,,;-</p>
+<hr>
+<h3 id="formatnum_date">
+  formatNum_date
+  <a class="anchor" href="#formatnum_date">#</a>
+</h3>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FnKhW6%2FbtsPQIuimLO%2FAAAAAAAAAAAAAAAAAAAAALigwuk5JDRO8GDITn_rDSzdojQF2s60YQsG_x_lcoRS%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DnekEFdoltWCQIgpjWo33Z5to43M%253D" alt="formatNum_date" title="formatNum_date"/><br>
+Change to a date format containing the day.<br>
+[yes - with day of the week] yyyy-mm-dd(aaa)<br>
+[no - without day of the week] yyyy-mm-dd</p>
+<hr>
+<h2 id="delhyperlink">
+  delHyperlink
+  <a class="anchor" href="#delhyperlink">#</a>
 </h2>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXeBPQ%2FbtsPPXZMAd6%2FAAAAAAAAAAAAAAAAAAAAAPyJPGYTesow-o_ccSTmlHFWTtqzBABH2MLz2Q7-cfxJ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dhr7BepaZDxFS7OA05PscBCnYK28%253D" alt="dietFileSize" title="dietFileSize"/><br>
-Excel file size diet. check all sheet and clear.</p>
-<h2 id="launchtextsplitter">
-  LaunchTextSplitter
-  <a class="anchor" href="#launchtextsplitter">#</a>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FTp4wq%2FbtsPO2mKJKK%2FAAAAAAAAAAAAAAAAAAAAANlj2R8gE9O9OIXgUW_87KMfteIiKNxzOm8rCB6N2qS5%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252BiszdFTnMMHaXZBnmn%252BAxQXYd0k%253D" alt="delhyperlink" title="delhyperlink"/><br>
+Delete hyperlinks. The format is all erased together.</p>
+<hr>
+<h2 id="delblank">
+  delBlank
+  <a class="anchor" href="#delblank">#</a>
 </h2>
-<p>split text from pdf table.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fb9wio8%2FbtsPM0jbhij%2FAAAAAAAAAAAAAAAAAAAAAHDYFLF8-0xfGzF56aMafDSv2ozVJYdPFCuFOchq3C0X%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D1ThdORud0um%252FXKjC9mN%252BfBQXhzE%253D" alt="delblank" title="delblank"/><br>
+Delete all the spaces of the selected cell.</p>
+<hr>
 </article>
  
       
@@ -422,26 +375,16 @@ Excel file size diet. check all sheet and clear.</p>
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#growthrate">growthRate</a></li>
-    <li><a href="#achievementrate">achievementRate</a></li>
-    <li><a href="#cagr">CAGR</a></li>
-    <li><a href="#wordfill">WordFill</a></li>
-    <li><a href="#alldecimals">allDecimals</a></li>
-    <li><a href="#shownamelist">shownamelist</a></li>
-    <li><a href="#upsidedown">upsidedown</a></li>
-    <li><a href="#inputrandomvalue">inputRandomValue</a></li>
-    <li><a href="#septext">sepText</a></li>
-    <li><a href="#tabletoarray">tableToArray</a></li>
-    <li><a href="#pivotrefresh">pivotRefresh</a></li>
-    <li><a href="#sheetvisibilitycontrol">SheetVisibilityControl</a>
+    <li><a href="#number-format">Number format</a>
       <ul>
-        <li><a href="#sheetvisibleornot">sheetVisibleOrNot</a></li>
-        <li><a href="#controlvisibility">controlVisibility</a></li>
-        <li><a href="#sheetnow">sheetNow</a></li>
+        <li><a href="#formatnum_normal">formatNum_normal</a></li>
+        <li><a href="#formatnum_thousand">formatNum_thousand</a></li>
+        <li><a href="#formatnum_mil">formatNum_mil</a></li>
+        <li><a href="#formatnum_date">formatNum_date</a></li>
       </ul>
     </li>
-    <li><a href="#dietfilesize">dietFileSize</a></li>
-    <li><a href="#launchtextsplitter">LaunchTextSplitter</a></li>
+    <li><a href="#delhyperlink">delHyperlink</a></li>
+    <li><a href="#delblank">delBlank</a></li>
   </ul>
 </nav>
 
