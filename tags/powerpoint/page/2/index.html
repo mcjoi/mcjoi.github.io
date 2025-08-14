@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://mcjoi.github.io/tags/powerpoint/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.cdef3a4d3f0d4dc6d38b3abaa9628c340045707cee03645db9b9c448364977c1.css" integrity="sha256-ze86TT8NTcbTizq6qWKMNABFcHzuA2RdubnESDZJd8E=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.2dda251bf1b5f26463046f4a8cdafb407dad19fb7e911e41d626c190af13ff15.js" integrity="sha256-LdolG/G18mRjBG9KjNr7QH2tGft&#43;kR5B1ibBkK8T/xU=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.be1d55fa2a2ccde6a6cf42e318638f89cb3cc73e0ab6b9a1fac3ce2b3d2ca637.js" integrity="sha256-vh1V&#43;ioszeamz0LjGGOPics8xz4Ktrmh&#43;sPOKz0spjc=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://mcjoi.github.io/tags/powerpoint/index.xml" title="shaaaaalow Dive" />
 <!--
 Made with Book Theme
@@ -180,17 +180,17 @@ https://github.com/alex-shpak/hugo-book
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">
@@ -228,6 +228,231 @@ https://github.com/alex-shpak/hugo-book
 
       
       
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/">Sctipt - slide</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 14, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+  </div>
+  
+
+
+    <p><h1 id="sctipt---slide">
+  Sctipt - slide
+  <a class="anchor" href="#sctipt---slide">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling slide.</p>
+<hr>
+<h2 id="jpg-export">
+  jpg export
+  <a class="anchor" href="#jpg-export">#</a>
+</h2>
+<p>Exports selected slides as JPG files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">jpgExport</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pptPres <span style="color:#f92672">As</span> Presentation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> filePath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slidenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slicePageNum() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pagenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> pptPres <span style="color:#f92672">=</span> ActivePresentation
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> pptPres.Path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;프레젠테이션이 파일로 저장되지 않았습니다. 저장 후 다시 시도하세요.&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Else</span>
+</span></span><span style="display:flex;"><span>        filePath <span style="color:#f92672">=</span> pptPres.Path
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    slidenum <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;Input PageNumber&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> InStr(slidenum, <span style="color:#e6db74">&#34;,&#34;</span>) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        slicePageNum <span style="color:#f92672">=</span> Split(Replace(slidenum, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>), <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> LBound(slicePageNum) <span style="color:#66d9ef">To</span> UBound(slicePageNum)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>            pagenum <span style="color:#f92672">=</span> <span style="color:#66d9ef">CInt</span>(slicePageNum(i))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> IsNumeric(pagenum) <span style="color:#f92672">And</span> pagenum <span style="color:#f92672">&lt;=</span> pptPres.Slides.Count <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">With</span> pptPres.Slides(pagenum)
+</span></span><span style="display:flex;"><span>                    .Export filePath <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\Slide&#34;</span> <span style="color:#f92672">&amp;</span> pagenum <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;.jpg&#34;</span>, <span style="color:#e6db74">&#34;JPG&#34;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                MsgBox <span style="color:#e6db74">&#34;non-numeric value or wrong page number: &#34;</span> <span style="color:#f92672">&amp;</span> slicePageNum(i), vbExclamation
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>        
+</span></span><span style="display:flex;"><span>        pagenum <span style="color:#f92672">=</span> <span style="color:#66d9ef">CInt</span>(slidenum)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> IsNumeric(pagenum) <span style="color:#f92672">And</span> pagenum <span style="color:#f92672">&lt;=</span> pptPres.Slides.Count <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> pptPres.Slides(pagenum)
+</span></span><span style="display:flex;"><span>                .Export filePath <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\Slide&#34;</span> <span style="color:#f92672">&amp;</span> pagenum <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;.jpg&#34;</span>, <span style="color:#e6db74">&#34;JPG&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;non-numeric value or wrong page number&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;export complete&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;오류번호: &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용: &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="slide_resizes">
+  slide_resizes
+  <a class="anchor" href="#slide_resizes">#</a>
+</h2>
+<p>Changes slide size based on pixel dimensions.</p></p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/">Script - Data Util</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 8, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+  </div>
+  
+
+
+    <p><h1 id="script---data-util">
+  Script - Data Util
+  <a class="anchor" href="#script---data-util">#</a>
+</h1>
+<h2 id="calculation">
+  Calculation
+  <a class="anchor" href="#calculation">#</a>
+</h2>
+<h3 id="growthrate">
+  growthRate
+  <a class="anchor" href="#growthrate">#</a>
+</h3>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fcjio96%2FbtsPP8GLCGw%2FAAAAAAAAAAAAAAAAAAAAABDf8eVwtcoZF8LRu2_xownI5vsORWyCUyGCqzfcn1MM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DEN6hffaNgW1cfjQp3lpe7rYlvA0%253D" alt="growthRate" title="growthRate"/><br>
+Calculate the growth rate.</p>
+<hr>
+<h3 id="achievementrate">
+  achievementRate
+  <a class="anchor" href="#achievementrate">#</a>
+</h3>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FlPg6x%2FbtsPMWgSeWL%2FAAAAAAAAAAAAAAAAAAAAAEqTGJsQJqsBOGXtGW77Gy035g1XZuLhi3ofhFQMA7dw%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DBdQIUhYNlV0m3x%252BrN8EB0Cfk5vc%253D" alt="achievementRate" title="achievementRate"/><br>
+Calculate the achievement rate.</p>
+<hr>
+<h3 id="cagr">
+  CAGR
+  <a class="anchor" href="#cagr">#</a>
+</h3>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsoKb3%2FbtsPN4eyZXo%2FAAAAAAAAAAAAAAAAAAAAABtGLMUo8xzitZknlS8GGsyFTLSVQOdKjTOSqNkqGPW0%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DqAL97aySd9AAkQ5Pfdq5jONv71Y%253D" alt="CAGR" title="CAGR"/><br>
+Calculate the CAGR.</p>
+<hr>
+<h2 id="wordfill">
+  WordFill
+  <a class="anchor" href="#wordfill">#</a>
+</h2>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRz9B1%2FbtsPM13sHmV%2FAAAAAAAAAAAAAAAAAAAAAFNDjl4c8njpb6wh8LkMaDagD9JHi81ZXsfAasdnB9ON%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Dxc%252Fd2JEhHE%252B%252FG7MDl3FYTIoPtOc%253D" alt="WordFill" title="WordFill"/><br>
+If there is a value in the right side of the selected reference column, fill the cell value in a DB format.</p>
+<hr>
+<h2 id="alldecimals">
+  allDecimals
+  <a class="anchor" href="#alldecimals">#</a>
+</h2>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbX7uV2%2FbtsPO7avOIW%2FAAAAAAAAAAAAAAAAAAAAAHdSU_uW8CujPEk4UW2mBR0_lTLCmuvkCQ3u1XWO58LZ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DB99sDNUwLjY2pjh0sc0fjzf3zNY%253D" alt="allDecimals" title="allDecimals"/><br>
+In the case of numbers with decimal points, all decimal points come out.</p></p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/">Sctipt - shape</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 14, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+  </div>
+  
+
+
+    <p><h1 id="sctipt---shape">
+  Sctipt - shape
+  <a class="anchor" href="#sctipt---shape">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling shape.</p>
+<hr>
+<h2 id="align_bottom">
+  align_bottom
+  <a class="anchor" href="#align_bottom">#</a>
+</h2>
+<p>Aligns selected shape(s) to the bottom of the first selected shape.</p>
+<hr>
+<h2 id="align_right">
+  align_right
+  <a class="anchor" href="#align_right">#</a>
+</h2>
+<p>Aligns selected shape(s) to the right of the first selected shape.</p>
+<hr>
+<h2 id="guidebox">
+  guidebox
+  <a class="anchor" href="#guidebox">#</a>
+</h2>
+<p>Creates guide boxes (rectangles) spaced at regular intervals.</p>
+<hr></p>
+  </article>
   
   <article class="markdown book-post">
     <h2>
@@ -349,17 +574,17 @@ Go to the first sheet.</p></p>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>11</span>
+          <span>14</span>
         </li>
       
         <li class="flex justify-between">

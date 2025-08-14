@@ -4,111 +4,156 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Sctipt - table
+  Sctipt - color
   #
 
 
   What is it?
   #
 
-Useful functions for handling tables.
+Useful functions for handling color.
 
-  Make Table
+
+  RGB_color
   #
 
-Creates frequently used table templates.
+Displays RGB values of the selected shape via UserForm.
+→ Refer to the .PPAM file for the userForm code.
 
-  Table Size
+
+  Color_palette
   #
 
-Adjusts table size via UserForm.
+Creates a color palette in the slide master - newly added feature.
+Sub pal2()    
+    Dim mySlideMaster As Master
+    Dim left As Integer
+    Dim top As Integer
+    Dim size As Integer
+    Dim idx As Integer
+    Dim rgb1 As Long
+    Dim rgb2 As Long
+    Dim hexcolor As String
+    Dim colred As Integer
+    Dim colgreen As Integer
+    Dim colblue As Integer
+    Dim newcol As String
+    Dim pagenum As Integer
 
-  delblank
-  #
+    On Error GoTo Err_Check
 
-Removes blanks created when copying tables in Excel; note it removes all spaces in the table
+    Set mySlideMaster = Application.ActivePresentation.slideMaster
 
-  Functions
-  #
+    If MsgBox(&#34;do you wanna set default?&#34;, vbYesNo) = vbNo Then
+        If MsgBox(&#34;do you wanna use HEX color data?&#34;, vbYesNo) = vbYes Then
+            On Error GoTo Err_Check
+            hexcolor = InputBox(&#34;your hex color&#34;)            
+            
+            newcol = HexToRGB(hexcolor)
+            colred = Replace(Split(newcol, &#34;,&#34;)(0), &#34; &#34;, &#34;&#34;)
+            colgreen = Replace(Split(newcol, &#34;,&#34;)(1), &#34; &#34;, &#34;&#34;)
+            colblue = Replace(Split(newcol, &#34;,&#34;)(2), &#34; &#34;, &#34;&#34;)
+            
+            idx = InputBox(&#34;index&#34;)
+        Else
+            On Error GoTo Err_Check
+            colred = InputBox(&#34;type R&#34;)
+            colgreen = InputBox(&#34;type G&#34;)
+            colblue = InputBox(&#34;type B&#34;)
+            idx = InputBox(&#34;index&#34;)
+        
+            If colred &lt; 0 Or colgreen &lt; 0 Or colblue &lt; 0 Or idx &lt;= 0 Then
+                MsgBox &#34;Invalid input values&#34;, vbCritical
+                GoTo Err_Check2
+            End If
+        End If
 
+        top = 0
+        left = -25
+        size = 20
+        
+        With mySlideMaster.Shapes.AddShape(Type:=msoShapeRectangle, left:=left, top:=topcal(idx, size), width:=size, height:=size)
+            .Fill.ForeColor.RGB = RGB(colred, colgreen, colblue)
+            .line.Visible = msoFalse
+        End With
+    Else
+        rgb1 = RGB(0, 63, 104)
+        rgb2 = RGB(237, 116, 35)
 
-  
-      
-          name
-          Description
-      
-  
-  
-      
-          
-          
-      
-      
-          
-          
-      
-      
-          
-          
-      
-      
-          RGB Color
-          Displays RGB values of the selected shape via UserForm
-      
-      
-          Color palette
-          Creates a color palette in the slide master - newly added feature
-      
-      
-          Text arrange
-          Adjusts letter spacing of Malgun Gothic font to 0.3
-      
-      
-          zeromargin
-          Sets margins of text boxes or shapes to zero
-      
-      
-          tspacing
-          Adjusts line spacing
-      
-      
-          jpg export
-          Exports selected slides as JPG files
-      
-      
-          slide_resizes
-          Changes slide size based on pixel dimensions
-      
-      
-          groupRelease
-          Ungroups all groups on all slides at once
-      
-      
-          align_bottom
-          Aligns selected shape(s) to the bottom of the first selected shape
-      
-      
-          align_right
-          Aligns selected shape(s) to the right of the first selected shape
-      
-      
-          guidebox
-          Creates guide boxes (rectangles) spaced at regular intervals
-      
-  
+        For x = 1 To 4
+            counter = counter &#43; 1
+            With mySlideMaster.Shapes.AddShape(Type:=msoShapeRectangle, left:=-25, top:=((x - 1) * 20) &#43; (ConvertCmToPoint(0.3) * (x - 1)), width:=20, height:=20)
+                If x = 1 Then
+                    .Fill.ForeColor.RGB = rgb1
+                ElseIf x = 2 Then
+                    .Fill.ForeColor.RGB = rgb2
+                Else
+                    .Fill.ForeColor.RGB = RGB(0, 0, 0)
+                End If
+                .line.Visible = msoFalse
+            End With
+        Next x
+    End If
 
+    Exit Sub
 
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류&#34;
+    End If
+    Exit Sub
 
-  Download
-  #
+Err_Check2:
+    MsgBox &#34;you have wrong input value&#34;, vbCritical, &#34;잘못된 입력&#34;
+    Exit Sub
+End Sub
 
-To manage versions, the files are stored at the following location:
- 
-
-download (.ppam)
+Function topcal(idx As Integer, size As Integer)
+    If idx = 1 Then
+        topcal = 0
+    Else
+        topcal = ((idx - 1) * size) &#43; (ConvertCmToPoint(0.3) * (idx - 1))
+    End If
+End Function
 
 
-original post (Kor)
+Function ConvertPointToCm(ByVal pnt As Double) As Double
+    ConvertPointToCm = pnt * 0.03527778
+End Function
+
+
+Function ConvertCmToPoint(ByVal cm As Double) As Double
+    ConvertCmToPoint = cm * 28.34646
+End Function
+
+
+Function HexToRGB(hexcolor As String) As String
+    Dim r As Integer
+    Dim G As Integer
+    Dim B As Integer
+    Dim newrgbcolor As String
+
+    On Error GoTo Err_Check
+
+    hexcolor = Replace(hexcolor, &#34;#&#34;, &#34;&#34;)
+    hexcolor = Right$(&#34;000000&#34; &amp; hexcolor, 6)
+    r = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 1, 2))
+    G = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 3, 2))
+    B = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 5, 2))
+
+    newrgbcolor = r &amp; &#34;, &#34; &amp; G &amp; &#34;, &#34; &amp; B
+    Debug.Print newrgbcolor
+
+    HexToRGB = newrgbcolor
+
+    Exit Function
+
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류&#34;
+    End If
+    Exit Function
+End Function
 ">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
@@ -116,12 +161,10 @@ original post (Kor)
 <meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-ppt/02003/">
   <meta property="og:site_name" content="shaaaaalow Dive">
   <meta property="og:title" content="Sctipt - color">
-  <meta property="og:description" content="Sctipt - table # What is it? # Useful functions for handling tables.
-Make Table # Creates frequently used table templates.
-Table Size # Adjusts table size via UserForm.
-delblank # Removes blanks created when copying tables in Excel; note it removes all spaces in the table
-Functions # name Description RGB Color Displays RGB values of the selected shape via UserForm Color palette Creates a color palette in the slide master - newly added feature Text arrange Adjusts letter spacing of Malgun Gothic font to 0.3 zeromargin Sets margins of text boxes or shapes to zero tspacing Adjusts line spacing jpg export Exports selected slides as JPG files slide_resizes Changes slide size based on pixel dimensions groupRelease Ungroups all groups on all slides at once align_bottom Aligns selected shape(s) to the bottom of the first selected shape align_right Aligns selected shape(s) to the right of the first selected shape guidebox Creates guide boxes (rectangles) spaced at regular intervals Download # To manage versions, the files are stored at the following location:
-download (.ppam) original post (Kor)">
+  <meta property="og:description" content="Sctipt - color # What is it? # Useful functions for handling color.
+RGB_color # Displays RGB values of the selected shape via UserForm. → Refer to the .PPAM file for the userForm code.
+Color_palette # Creates a color palette in the slide master - newly added feature.
+Sub pal2() Dim mySlideMaster As Master Dim left As Integer Dim top As Integer Dim size As Integer Dim idx As Integer Dim rgb1 As Long Dim rgb2 As Long Dim hexcolor As String Dim colred As Integer Dim colgreen As Integer Dim colblue As Integer Dim newcol As String Dim pagenum As Integer On Error GoTo Err_Check Set mySlideMaster = Application.ActivePresentation.slideMaster If MsgBox(&#34;do you wanna set default?&#34;, vbYesNo) = vbNo Then If MsgBox(&#34;do you wanna use HEX color data?&#34;, vbYesNo) = vbYes Then On Error GoTo Err_Check hexcolor = InputBox(&#34;your hex color&#34;) newcol = HexToRGB(hexcolor) colred = Replace(Split(newcol, &#34;,&#34;)(0), &#34; &#34;, &#34;&#34;) colgreen = Replace(Split(newcol, &#34;,&#34;)(1), &#34; &#34;, &#34;&#34;) colblue = Replace(Split(newcol, &#34;,&#34;)(2), &#34; &#34;, &#34;&#34;) idx = InputBox(&#34;index&#34;) Else On Error GoTo Err_Check colred = InputBox(&#34;type R&#34;) colgreen = InputBox(&#34;type G&#34;) colblue = InputBox(&#34;type B&#34;) idx = InputBox(&#34;index&#34;) If colred &lt; 0 Or colgreen &lt; 0 Or colblue &lt; 0 Or idx &lt;= 0 Then MsgBox &#34;Invalid input values&#34;, vbCritical GoTo Err_Check2 End If End If top = 0 left = -25 size = 20 With mySlideMaster.Shapes.AddShape(Type:=msoShapeRectangle, left:=left, top:=topcal(idx, size), width:=size, height:=size) .Fill.ForeColor.RGB = RGB(colred, colgreen, colblue) .line.Visible = msoFalse End With Else rgb1 = RGB(0, 63, 104) rgb2 = RGB(237, 116, 35) For x = 1 To 4 counter = counter &#43; 1 With mySlideMaster.Shapes.AddShape(Type:=msoShapeRectangle, left:=-25, top:=((x - 1) * 20) &#43; (ConvertCmToPoint(0.3) * (x - 1)), width:=20, height:=20) If x = 1 Then .Fill.ForeColor.RGB = rgb1 ElseIf x = 2 Then .Fill.ForeColor.RGB = rgb2 Else .Fill.ForeColor.RGB = RGB(0, 0, 0) End If .line.Visible = msoFalse End With Next x End If Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류&#34; End If Exit Sub Err_Check2: MsgBox &#34;you have wrong input value&#34;, vbCritical, &#34;잘못된 입력&#34; Exit Sub End Sub Function topcal(idx As Integer, size As Integer) If idx = 1 Then topcal = 0 Else topcal = ((idx - 1) * size) &#43; (ConvertCmToPoint(0.3) * (idx - 1)) End If End Function Function ConvertPointToCm(ByVal pnt As Double) As Double ConvertPointToCm = pnt * 0.03527778 End Function Function ConvertCmToPoint(ByVal cm As Double) As Double ConvertCmToPoint = cm * 28.34646 End Function Function HexToRGB(hexcolor As String) As String Dim r As Integer Dim G As Integer Dim B As Integer Dim newrgbcolor As String On Error GoTo Err_Check hexcolor = Replace(hexcolor, &#34;#&#34;, &#34;&#34;) hexcolor = Right$(&#34;000000&#34; &amp; hexcolor, 6) r = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 1, 2)) G = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 3, 2)) B = val(&#34;&amp;H&#34; &amp; Mid(hexcolor, 5, 2)) newrgbcolor = r &amp; &#34;, &#34; &amp; G &amp; &#34;, &#34; &amp; B Debug.Print newrgbcolor HexToRGB = newrgbcolor Exit Function Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류&#34; End If Exit Function End Function">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="macrotoolkit-ppt">
@@ -136,7 +179,7 @@ download (.ppam) original post (Kor)">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02003/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.cdef3a4d3f0d4dc6d38b3abaa9628c340045707cee03645db9b9c448364977c1.css" integrity="sha256-ze86TT8NTcbTizq6qWKMNABFcHzuA2RdubnESDZJd8E=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.2dda251bf1b5f26463046f4a8cdafb407dad19fb7e911e41d626c190af13ff15.js" integrity="sha256-LdolG/G18mRjBG9KjNr7QH2tGft&#43;kR5B1ibBkK8T/xU=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.be1d55fa2a2ccde6a6cf42e318638f89cb3cc73e0ab6b9a1fac3ce2b3d2ca637.js" integrity="sha256-vh1V&#43;ioszeamz0LjGGOPics8xz4Ktrmh&#43;sPOKz0spjc=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -234,6 +277,24 @@ https://github.com/alex-shpak/hugo-book
           </a>
         </li>
       
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" >
+            Sctipt - text
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" >
+            Sctipt - slide
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" >
+            Sctipt - shape
+          </a>
+        </li>
+      
     </ul>
   </div>
 
@@ -307,11 +368,8 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#make-table">Make Table</a></li>
-    <li><a href="#table-size">Table Size</a></li>
-    <li><a href="#delblank">delblank</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#rgb_color">RGB_color</a></li>
+    <li><a href="#color_palette">Color_palette</a></li>
   </ul>
 </nav>
 
@@ -325,122 +383,158 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h1 id="sctipt---table">
-  Sctipt - table
-  <a class="anchor" href="#sctipt---table">#</a>
+  <article class="markdown book-article"><h1 id="sctipt---color">
+  Sctipt - color
+  <a class="anchor" href="#sctipt---color">#</a>
 </h1>
 <h2 id="what-is-it">
   What is it?
   <a class="anchor" href="#what-is-it">#</a>
 </h2>
-<p>Useful functions for handling tables.</p>
-<h2 id="make-table">
-  Make Table
-  <a class="anchor" href="#make-table">#</a>
-</h2>
-<p>Creates frequently used table templates.</p>
-<h2 id="table-size">
-  Table Size
-  <a class="anchor" href="#table-size">#</a>
-</h2>
-<p>Adjusts table size via UserForm.</p>
-<h2 id="delblank">
-  delblank
-  <a class="anchor" href="#delblank">#</a>
-</h2>
-<p>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</p>
-<h2 id="functions">
-  Functions
-  <a class="anchor" href="#functions">#</a>
-</h2>
-<table>
-  <thead>
-      <tr>
-          <th>name</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>RGB Color</td>
-          <td>Displays RGB values of the selected shape via UserForm</td>
-      </tr>
-      <tr>
-          <td>Color palette</td>
-          <td>Creates a color palette in the slide master - newly added feature</td>
-      </tr>
-      <tr>
-          <td>Text arrange</td>
-          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
-      </tr>
-      <tr>
-          <td>zeromargin</td>
-          <td>Sets margins of text boxes or shapes to zero</td>
-      </tr>
-      <tr>
-          <td>tspacing</td>
-          <td>Adjusts line spacing</td>
-      </tr>
-      <tr>
-          <td>jpg export</td>
-          <td>Exports selected slides as JPG files</td>
-      </tr>
-      <tr>
-          <td>slide_resizes</td>
-          <td>Changes slide size based on pixel dimensions</td>
-      </tr>
-      <tr>
-          <td>groupRelease</td>
-          <td>Ungroups all groups on all slides at once</td>
-      </tr>
-      <tr>
-          <td>align_bottom</td>
-          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>align_right</td>
-          <td>Aligns selected shape(s) to the right of the first selected shape</td>
-      </tr>
-      <tr>
-          <td>guidebox</td>
-          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
-      </tr>
-  </tbody>
-</table>
+<p>Useful functions for handling color.</p>
 <hr>
-<h2 id="download">
-  Download
-  <a class="anchor" href="#download">#</a>
+<h2 id="rgb_color">
+  RGB_color
+  <a class="anchor" href="#rgb_color">#</a>
 </h2>
-<p>To manage versions, the files are stored at the following location:<br>
- <br>
-
-<a
-   href="https://naver.me/xbjntzEA" 
-   target="_blank" rel="noopener" 
-  class="book-btn secondary"
->download (.ppam)</a>
-
-
-<a
-   href="https://sunnybong.tistory.com/620" 
-   target="_blank" rel="noopener" 
-  class="book-btn primary"
->original post (Kor)</a>
-</p>
+<p>Displays RGB values of the selected shape via UserForm.
+→ Refer to the .PPAM file for the <code>userForm</code> code.</p>
 <hr>
+<h2 id="color_palette">
+  Color_palette
+  <a class="anchor" href="#color_palette">#</a>
+</h2>
+<p>Creates a color palette in the slide master - newly added feature.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">pal2</span>()    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> mySlideMaster <span style="color:#f92672">As</span> Master
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> size <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rgb1 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rgb2 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> hexcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colred <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colgreen <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colblue <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> newcol <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pagenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> mySlideMaster <span style="color:#f92672">=</span> Application.ActivePresentation.slideMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;do you wanna set default?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbNo <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;do you wanna use HEX color data?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>            hexcolor <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;your hex color&#34;</span>)            
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            newcol <span style="color:#f92672">=</span> HexToRGB(hexcolor)
+</span></span><span style="display:flex;"><span>            colred <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(0), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            colgreen <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(1), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            colblue <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(2), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            idx <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;index&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>            colred <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type R&#34;</span>)
+</span></span><span style="display:flex;"><span>            colgreen <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type G&#34;</span>)
+</span></span><span style="display:flex;"><span>            colblue <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type B&#34;</span>)
+</span></span><span style="display:flex;"><span>            idx <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;index&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> colred <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> colgreen <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> colblue <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> idx <span style="color:#f92672">&lt;=</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                MsgBox <span style="color:#e6db74">&#34;Invalid input values&#34;</span>, vbCritical
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GoTo</span> Err_Check2
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        top <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>25
+</span></span><span style="display:flex;"><span>        size <span style="color:#f92672">=</span> 20
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=</span>left, top:<span style="color:#f92672">=</span>topcal(idx, size), width:<span style="color:#f92672">=</span>size, height:<span style="color:#f92672">=</span>size)
+</span></span><span style="display:flex;"><span>            .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(colred, colgreen, colblue)
+</span></span><span style="display:flex;"><span>            .line.Visible <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        rgb1 <span style="color:#f92672">=</span> RGB(0, 63, 104)
+</span></span><span style="display:flex;"><span>        rgb2 <span style="color:#f92672">=</span> RGB(237, 116, 35)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 4
+</span></span><span style="display:flex;"><span>            counter <span style="color:#f92672">=</span> counter <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=-</span>25, top:<span style="color:#f92672">=</span>((x <span style="color:#f92672">-</span> 1) <span style="color:#f92672">*</span> 20) <span style="color:#f92672">+</span> (ConvertCmToPoint(0.3) <span style="color:#f92672">*</span> (x <span style="color:#f92672">-</span> 1)), width:<span style="color:#f92672">=</span>20, height:<span style="color:#f92672">=</span>20)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> rgb1
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ElseIf</span> x <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> rgb2
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(0, 0, 0)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>                .line.Visible <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check2</span>:
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;you have wrong input value&#34;</span>, vbCritical, <span style="color:#e6db74">&#34;잘못된 입력&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Function</span> topcal(idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, size <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> idx <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        topcal <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        topcal <span style="color:#f92672">=</span> ((idx <span style="color:#f92672">-</span> 1) <span style="color:#f92672">*</span> size) <span style="color:#f92672">+</span> (ConvertCmToPoint(0.3) <span style="color:#f92672">*</span> (idx <span style="color:#f92672">-</span> 1))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertPointToCm</span>(<span style="color:#66d9ef">ByVal</span> pnt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertPointToCm <span style="color:#f92672">=</span> pnt <span style="color:#f92672">*</span> 0.03527778
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertCmToPoint</span>(<span style="color:#66d9ef">ByVal</span> cm <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertCmToPoint <span style="color:#f92672">=</span> cm <span style="color:#f92672">*</span> 28.34646
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">HexToRGB</span>(hexcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> G <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> B <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> newrgbcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    hexcolor <span style="color:#f92672">=</span> Replace(hexcolor, <span style="color:#e6db74">&#34;#&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    hexcolor <span style="color:#f92672">=</span> Right<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#34;000000&#34;</span> <span style="color:#f92672">&amp;</span> hexcolor, 6)
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 1, 2))
+</span></span><span style="display:flex;"><span>    G <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 3, 2))
+</span></span><span style="display:flex;"><span>    B <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 5, 2))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    newrgbcolor <span style="color:#f92672">=</span> r <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&amp;</span> G <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&amp;</span> B
+</span></span><span style="display:flex;"><span>    Debug.Print newrgbcolor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    HexToRGB <span style="color:#f92672">=</span> newrgbcolor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Function</span>
+</span></span></code></pre></div><hr>
 </article>
  
       
@@ -458,6 +552,12 @@ https://github.com/alex-shpak/hugo-book
   </span>
   
   <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" class="flex align-center book-icon">
+      <span>Sctipt - text</span>
+      <img src="https://mcjoi.github.io/svg/forward.svg" class="book-icon" alt="Previous" />
+    </a>
   
   </span>
 </div>
@@ -486,11 +586,8 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#make-table">Make Table</a></li>
-    <li><a href="#table-size">Table Size</a></li>
-    <li><a href="#delblank">delblank</a></li>
-    <li><a href="#functions">Functions</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#rgb_color">RGB_color</a></li>
+    <li><a href="#color_palette">Color_palette</a></li>
   </ul>
 </nav>
 
