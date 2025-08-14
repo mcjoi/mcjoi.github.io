@@ -1,0 +1,11 @@
+
+button
+{{< button href="./macrotoolkit-xls/01001/"  >}}MacroToolkit - Excel{{< /button >}}
+
+image
+![mainimage](url "main image")  
+
+hint
+{{< hint warning >}}
+이건 힌트 텍스트입니다.
+{{< /hint >}}
