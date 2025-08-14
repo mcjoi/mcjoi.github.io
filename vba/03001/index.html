@@ -199,13 +199,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#creating-mouse-hover-effect-in-excel-vba-userform">Creating mouse hover effect in excel VBA userform</a>
-      <ul>
-        <li><a href="#take-1">Take #1</a></li>
-        <li><a href="#take-2">Take #2</a></li>
-        <li><a href="#take-3">Take #3</a></li>
-      </ul>
-    </li>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a></li>
   </ul>
 </nav>
 
@@ -219,29 +215,29 @@ https://github.com/alex-shpak/hugo-book
       
       
   
-  <article class="markdown book-article"><h2 id="creating-mouse-hover-effect-in-excel-vba-userform">
+  <article class="markdown book-article"><h1 id="creating-mouse-hover-effect-in-excel-vba-userform">
   Creating mouse hover effect in excel VBA userform
   <a class="anchor" href="#creating-mouse-hover-effect-in-excel-vba-userform">#</a>
-</h2>
-<h3 id="take-1">
+</h1>
+<h2 id="take-1">
   Take #1
   <a class="anchor" href="#take-1">#</a>
-</h3>
+</h2>
 <p>When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.</p>
 <p>Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.</p>
 <hr>
-<h3 id="take-2">
+<h2 id="take-2">
   Take #2
   <a class="anchor" href="#take-2">#</a>
-</h3>
+</h2>
 <p>Create image pairs for default and hover states. Since changing colors later requires regenerating all images, you need to choose carefully. Overlay the two images: place the hover image on top with its Visible property set to False, and the default image underneath.</p>
 <p>Then, place a transparent label covering the entire page background. Using the MouseMove event on the default image, set the hover image’s Visible to True on mouse over.</p>
 <p>Finally, use the MouseMove event on the transparent label to set the hover image’s Visible back to False when the mouse moves away.</p>
 <hr>
-<h3 id="take-3">
+<h2 id="take-3">
   Take #3
   <a class="anchor" href="#take-3">#</a>
-</h3>
+</h2>
 <p>button - over</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">btn1_1_MouseMove</span>(<span style="color:#66d9ef">ByVal</span> Button <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> Shift <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> X <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, <span style="color:#66d9ef">ByVal</span> Y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>)
 </span></span><span style="display:flex;"><span>  btn1_1.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
@@ -307,13 +303,9 @@ button - out</p>
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#creating-mouse-hover-effect-in-excel-vba-userform">Creating mouse hover effect in excel VBA userform</a>
-      <ul>
-        <li><a href="#take-1">Take #1</a></li>
-        <li><a href="#take-2">Take #2</a></li>
-        <li><a href="#take-3">Take #3</a></li>
-      </ul>
-    </li>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a></li>
   </ul>
 </nav>
 
