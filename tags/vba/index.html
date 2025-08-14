@@ -18,7 +18,7 @@
 <link rel="canonical" href="https://mcjoi.github.io/tags/vba/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.cdef3a4d3f0d4dc6d38b3abaa9628c340045707cee03645db9b9c448364977c1.css" integrity="sha256-ze86TT8NTcbTizq6qWKMNABFcHzuA2RdubnESDZJd8E=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.0ea3c622ab07c5bb9e8f89ec3e9f52884eb470295ba1e8986bfa0db0ec959083.js" integrity="sha256-DqPGIqsHxbuej4nsPp9SiE60cClboeiYa/oNsOyVkIM=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.2dda251bf1b5f26463046f4a8cdafb407dad19fb7e911e41d626c190af13ff15.js" integrity="sha256-LdolG/G18mRjBG9KjNr7QH2tGft&#43;kR5B1ibBkK8T/xU=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://mcjoi.github.io/tags/vba/index.xml" title="shaaaaalow Dive" />
 <!--
 Made with Book Theme
@@ -179,13 +179,23 @@ https://github.com/alex-shpak/hugo-book
       <ul>
       
         <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>2</span>
+          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
+          <span>11</span>
         </li>
       
         <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>9</span>
+          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/python/">Python</a>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -196,16 +206,6 @@ https://github.com/alex-shpak/hugo-book
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/linux/">Linux</a>
           <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>9</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>9</span>
         </li>
       
         <li class="flex justify-between">
@@ -348,6 +348,116 @@ https://github.com/alex-shpak/hugo-book
   
   <article class="markdown book-post">
     <h2>
+      <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/">Sctipt - table</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 14, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+  </div>
+  
+
+
+    <p><h1 id="sctipt---table">
+  Sctipt - table
+  <a class="anchor" href="#sctipt---table">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling tables.</p>
+<h2 id="make-table">
+  Make Table
+  <a class="anchor" href="#make-table">#</a>
+</h2>
+<p>Creates frequently used table templates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">tableMaker</span>(control <span style="color:#f92672">As</span> IRibbonControl)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> myt <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> cnum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rnum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    idx <span style="color:#f92672">=</span> ActiveWindow.View.slide.slideIndex
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> ActivePresentation.Slides(idx).Shapes.AddTable(4, 4)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cnum <span style="color:#f92672">=</span> myt.Table.Columns.Count
+</span></span><span style="display:flex;"><span>    rnum <span style="color:#f92672">=</span> myt.Table.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> myt.Table
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderTop).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderTop).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                    .cell(r, c).shape.Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(242, 242, 242)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).shape.Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(255, 255, 255)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> c <span style="color:#f92672">&lt;</span> cnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderRight).ForeColor.RGB <span style="color:#f92672">=</span> RGB(191, 191, 191)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderRight).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">&gt;</span> 1 <span style="color:#f92672">And</span> r <span style="color:#f92672">&lt;</span> rnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(191, 191, 191)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">=</span> rnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.size <span style="color:#f92672">=</span> 12
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Bold <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;맑은 고딕&#34;</span>
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Color.RGB <span style="color:#f92672">=</span> RGB(0, 0, 0)
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.ParagraphFormat.Alignment <span style="color:#f92672">=</span> ppAlignCenter
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><h2 id="table-size">
+  Table Size
+  <a class="anchor" href="#table-size">#</a>
+</h2>
+<p>Adjusts table size via UserForm.</p></p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
       <a href="https://mcjoi.github.io/vba/03002/">Making Keyboard Shortcut</a>
     </h2>
     
@@ -456,6 +566,147 @@ Remove the guidelines and create the gray line.<br>
 Remove the guidelines and create the black line.<br>
 → click : outskirt of the cell range selected.<br>
 → double click : entire cell of the cell range selected.</p></p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/">Sctipt - color</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>August 14, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
+      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
+      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+  </div>
+  
+
+
+    <p><h1 id="sctipt---table">
+  Sctipt - table
+  <a class="anchor" href="#sctipt---table">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling tables.</p>
+<h2 id="make-table">
+  Make Table
+  <a class="anchor" href="#make-table">#</a>
+</h2>
+<p>Creates frequently used table templates.</p>
+<h2 id="table-size">
+  Table Size
+  <a class="anchor" href="#table-size">#</a>
+</h2>
+<p>Adjusts table size via UserForm.</p>
+<h2 id="delblank">
+  delblank
+  <a class="anchor" href="#delblank">#</a>
+</h2>
+<p>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</p>
+<h2 id="functions">
+  Functions
+  <a class="anchor" href="#functions">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>name</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>RGB Color</td>
+          <td>Displays RGB values of the selected shape via UserForm</td>
+      </tr>
+      <tr>
+          <td>Color palette</td>
+          <td>Creates a color palette in the slide master - newly added feature</td>
+      </tr>
+      <tr>
+          <td>Text arrange</td>
+          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
+      </tr>
+      <tr>
+          <td>zeromargin</td>
+          <td>Sets margins of text boxes or shapes to zero</td>
+      </tr>
+      <tr>
+          <td>tspacing</td>
+          <td>Adjusts line spacing</td>
+      </tr>
+      <tr>
+          <td>jpg export</td>
+          <td>Exports selected slides as JPG files</td>
+      </tr>
+      <tr>
+          <td>slide_resizes</td>
+          <td>Changes slide size based on pixel dimensions</td>
+      </tr>
+      <tr>
+          <td>groupRelease</td>
+          <td>Ungroups all groups on all slides at once</td>
+      </tr>
+      <tr>
+          <td>align_bottom</td>
+          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
+      </tr>
+      <tr>
+          <td>align_right</td>
+          <td>Aligns selected shape(s) to the right of the first selected shape</td>
+      </tr>
+      <tr>
+          <td>guidebox</td>
+          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="download">
+  Download
+  <a class="anchor" href="#download">#</a>
+</h2>
+<p>To manage versions, the files are stored at the following location:<br>
+ <br>
+
+<a
+   href="https://naver.me/xbjntzEA" 
+   target="_blank" rel="noopener" 
+  class="book-btn secondary"
+>download (.ppam)</a>
+
+
+<a
+   href="https://sunnybong.tistory.com/620" 
+   target="_blank" rel="noopener" 
+  class="book-btn primary"
+>original post (Kor)</a>
+</p></p>
   </article>
   
   <article class="markdown book-post">
@@ -654,66 +905,28 @@ If there is a value in the right side of the selected reference column, fill the
 In the case of numbers with decimal points, all decimal points come out.</p></p>
   </article>
   
-  <article class="markdown book-post">
-    <h2>
-      <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/">Script - Sheet Visibility</a>
-    </h2>
-    
-  <div class="flex align-center text-small book-post-date">
-    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 8, 2025</span>
-  </div>
-
-
 
   
-
-  
-  <div class="text-small">
-    
-      <a href="https://mcjoi.github.io/tags/vba/">VBA</a>, 
-      <a href="https://mcjoi.github.io/tags/excel/">Excel</a>, 
-      <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-  </div>
-  
-
-
-    <p><h1 id="script---sheet-visibility">
-  Script - Sheet Visibility
-  <a class="anchor" href="#script---sheet-visibility">#</a>
-</h1>
-<h3 id="sheetvisibleornot">
-  sheetVisibleOrNot
-  <a class="anchor" href="#sheetvisibleornot">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsTcgY%2FbtsPNcRhW8F%2FAAAAAAAAAAAAAAAAAAAAALwVc5_Ix8bZRNfeImWjlthEPJ5ghhH5g9PmyYzhhEwK%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DwSoo3oNBu%252Fw1Ec4bM2x6St%252BmhSs%253D" alt="sheetVisibleOrNot" title="sheetVisibleOrNot"/><br>
-Display visibility property table for all sheets in the current workbook.<br>
-→ recommended to work on a new sheet</p>
-<hr>
-<h3 id="controlvisibility">
-  controlVisibility
-  <a class="anchor" href="#controlvisibility">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbTBNBo%2FbtsPMXtcsgU%2FAAAAAAAAAAAAAAAAAAAAAE94eOLopM67-UU3Xm8NhqXVyi66GcIqd9_cHtAn8YXp%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DKb4wGOL1CXteFxgzWOAxcNxl8X8%253D" alt="controlVisibility" title="controlVisibility"/><br>
-Apply value for the changed visibility property.</p>
-<hr>
-<h3 id="sheetnow">
-  sheetNow
-  <a class="anchor" href="#sheetnow">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmFAQY%2FbtsPPLZk33e%2FAAAAAAAAAAAAAAAAAAAAAJeRH-Z1tuqX3fNl_eGydIKYuRk8sCFH5j7ZOtcpNtL7%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D62SyfDzRnDsVOdn24%252FwM0TlWhQw%253D" alt="sheetNow" title="sheetNow"/><br>
-Simply check with the message box to see if there is a hidden sheet in the current sheet.</p>
-<hr>
-<h3 id="tofirstsheet">
-  toFirstSheet
-  <a class="anchor" href="#tofirstsheet">#</a>
-</h3>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FJMPq4%2FbtsPPO2QVXs%2FAAAAAAAAAAAAAAAAAAAAAIKidtejqGw1ypQWT6lp7ntXCyh-X0WKKaiL6LmqT-OO%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3Da3NeCWU8mzQEzzBPWaHWUEXmQbg%253D" alt="tofirstsheet" title="tofirstsheet"/><br>
-Go to the first sheet.</p></p>
-  </article>
-  
-
-  
+    <ul class="pagination pagination-default">
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item disabled">
+        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="https://mcjoi.github.io/tags/vba/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="https://mcjoi.github.io/tags/vba/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://mcjoi.github.io/tags/vba/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul>
  
       
 
@@ -753,13 +966,23 @@ Go to the first sheet.</p></p>
       <ul>
       
         <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>2</span>
+          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
+          <span>11</span>
         </li>
       
         <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>9</span>
+          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
+          <span>11</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/python/">Python</a>
+          <span>2</span>
         </li>
       
         <li class="flex justify-between">
@@ -770,16 +993,6 @@ Go to the first sheet.</p></p>
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/linux/">Linux</a>
           <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>9</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>9</span>
         </li>
       
         <li class="flex justify-between">
