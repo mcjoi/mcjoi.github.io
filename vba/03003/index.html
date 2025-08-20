@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Under construction
+  How to use self-made macro without any setting?
   #
 
-I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.
-I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.">
+
+  in excel
+  #
+
+Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.
+If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the XLSTART folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
-<meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="http://localhost:1313/vba/03003/">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274"><meta property="og:url" content="https://mcjoi.github.io/vba/03003/">
   <meta property="og:site_name" content="shaaaaalow Dive">
-  <meta property="og:title" content="WebP Conversion Program">
-  <meta property="og:description" content="Under construction # I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.
-I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.">
+  <meta property="og:title" content="How to use macro?">
+  <meta property="og:description" content="How to use self-made macro without any setting? # in excel # Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.
+If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the XLSTART folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="vba">
-    <meta property="article:published_time" content="2025-08-11T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-11T00:00:00+00:00">
-    <meta property="article:tag" content="Python">
-<title>WebP Conversion Program | shaaaaalow Dive</title>
-<link rel="icon" href="http://localhost:1313/favicon.png" >
-<link rel="manifest" href="http://localhost:1313/manifest.json">
-<link rel="canonical" href="http://localhost:1313/vba/03003/">
-<link rel="stylesheet" href="http://localhost:1313/book.min.5bd5e052fc2a1a8185c97b8d38a7cfd2f1e267d9f5fe99a0538a17fcd51d06bd.css" integrity="sha256-W9XgUvwqGoGFyXuNOKfP0vHiZ9n1/pmgU4oX/NUdBr0=" crossorigin="anonymous">
-  <script defer src="http://localhost:1313/fuse.min.js"></script>
-  <script defer src="http://localhost:1313/en.search.min.9d507413cf9c4d97e9c87079fb0fd2cec55e6ff146bfb79601b5844727a8c93c.js" integrity="sha256-nVB0E8&#43;cTZfpyHB5&#43;w/SzsVeb/FGv7eWAbWERyeoyTw=" crossorigin="anonymous"></script>
+    <meta property="article:published_time" content="2025-08-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-20T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>How to use macro? | shaaaaalow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/vba/03003/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.6f18b5243d92fe0c80970520347c44ae61fa876c617199e4f03f124bac6e42f1.css" integrity="sha256-bxi1JD2S/gyAlwUgNHxErmH6h2xhcZnk8D8SS6xuQvE=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7becb824efc1167516ce38ad88dde7cdc6550d04aafc2feec36b7d1d4995a453.js" integrity="sha256-e&#43;y4JO/BFnUWzjitiN3nzcZVDQSq/C/uw2t9HUmVpFM=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -47,7 +53,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="http://localhost:1313/"><span>shaaaaalow Dive</span>
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaalow Dive</span>
   </a>
 </h2>
 
@@ -65,24 +71,31 @@ https://github.com/alex-shpak/hugo-book
 
 
   <li class="">
-    <a href="http://localhost:1313/macrotoolkit-xls/">MacroToolkit-xls</a>
+    <a href="https://mcjoi.github.io/macrotoolkit-xls/">MacroToolkit-Excel</a>
   </li>
 
   <li class="">
-    <a href="http://localhost:1313/macrotoolkit-ppt/">MacroToolkit-ppt</a>
+    <a href="https://mcjoi.github.io/macrotoolkit-ppt/">MacroToolkit-PPT</a>
   </li>
 
   <li class="">
-    <a href="http://localhost:1313/vba/">VBA</a>
+    <a href="https://mcjoi.github.io/vba/">VBA</a>
   </li>
 
   <li class="">
-    <a href="http://localhost:1313/python/">Python</a>
+    <a href="https://mcjoi.github.io/python/">Python</a>
   </li>
 
   <li class="">
-    <a href="http://localhost:1313/flutter/">Flutter</a>
+    <a href="https://mcjoi.github.io/flutter/">Flutter</a>
   </li>
+
+  <li class="">
+    <a href="https://mcjoi.github.io/windows_linux/">Windows_Linux</a>
+  </li>
+
+
+
 
 
 
@@ -99,20 +112,20 @@ https://github.com/alex-shpak/hugo-book
     <ul>
       
         <li>
-          <a href="http://localhost:1313/vba/03001/" >
+          <a href="https://mcjoi.github.io/vba/03001/" >
             Hover effect
           </a>
         </li>
       
         <li>
-          <a href="http://localhost:1313/vba/03002/" >
-            Filling Blanks
+          <a href="https://mcjoi.github.io/vba/03002/" >
+            Making Keyboard Shortcut
           </a>
         </li>
       
         <li>
-          <a href="http://localhost:1313/vba/03003/" class="active">
-            WebP Conversion Program
+          <a href="https://mcjoi.github.io/vba/03003/" class="active">
+            How to use macro?
           </a>
         </li>
       
@@ -173,14 +186,14 @@ https://github.com/alex-shpak/hugo-book
         
   <div class="flex align-center justify-between">
   <label for="menu-control">
-    <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>WebP Conversion Program</h3>
+  <h3>How to use macro?</h3>
 
   <label for="toc-control">
     
-    <img src="http://localhost:1313/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
@@ -192,11 +205,14 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#in-excel">in excel</a>
       <ul>
-        <li><a href="#under-construction">Under construction</a></li>
+        <li><a href="#xlstart-folder">XLSTART Folder</a></li>
+        <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
+        <li><a href="#ribbon-menu">Ribbon menu</a></li>
       </ul>
     </li>
+    <li><a href="#in-powerpoint">in powerpoint</a></li>
   </ul>
 </nav>
 
@@ -209,84 +225,94 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><h3 id="under-construction">
-  Under construction
-  <a class="anchor" href="#under-construction">#</a>
+  
+  <article class="markdown book-article"><h1 id="how-to-use-self-made-macro-without-any-setting">
+  How to use self-made macro without any setting?
+  <a class="anchor" href="#how-to-use-self-made-macro-without-any-setting">#</a>
+</h1>
+<h2 id="in-excel">
+  in excel
+  <a class="anchor" href="#in-excel">#</a>
+</h2>
+<p>Usually, the common approach is to save your current workbook as an <code>.xlsm</code> file and keep the VBA code inside it. But when you need to share the file with colleagues, an <code>.xlsm</code> file can sometimes be a bit inconvenient.</p>
+<p>If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the <code>XLSTART</code> folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.</p>
+<h3 id="xlstart-folder">
+  XLSTART Folder
+  <a class="anchor" href="#xlstart-folder">#</a>
 </h3>
-<p>I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.</p>
-<p>I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog
+<p>The <code>XLSTART</code> folder is usually located in the path shown below. Any file placed in this folder will automatically open whenever Excel starts — whether it’s an <code>.xlsx</code> file, a <code>.txt</code> file, or anything else.
+ <br>
+XLSTART folder path :<br>
+C:\Users[User_name]\AppData\Roaming\Microsoft\Excel\XLSTART</p>
+<h3 id="add-in-filexla-or-xlam">
+  Add-in file(.xla or .xlam)
+  <a class="anchor" href="#add-in-filexla-or-xlam">#</a>
+</h3>
+<p>The <code>.xla</code> and <code>.xlam</code> files are Excel add-in files. When they are loaded from the <code>XLSTART</code> folder, they don’t open in a separate workbook window — instead, only the add-in features become available in Excel. This means they won’t interfere with the files you’re working on, keeping your workbooks clean while still giving you access to your personal macros.</p>
+<h3 id="ribbon-menu">
+  Ribbon menu
+  <a class="anchor" href="#ribbon-menu">#</a>
+</h3>
+<p>Now, all you need to do is create a button on the Ribbon menu and start assigning your general-purpose macros to it one by one. This way, your favorite tools are always just a click away, no matter which workbook you’re working on.
+ <br>
+VBA code(ThisWorkbook in .xla file) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">workbook_open</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;shorcut
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+^q&#34;</span>, <span style="color:#e6db74">&#34;showMenu&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL.ExifTags <span style="color:#f92672">import</span> TAGS
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;ribbon menu icon
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> Application.CommandBars(<span style="color:#e6db74">&#34;tools&#34;</span>)        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> .Controls.Add(msoControlButton)
+</span></span><span style="display:flex;"><span>                .Caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MacroToolKit&#34;</span>
+</span></span><span style="display:flex;"><span>                .OnAction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;showMenu&#34;</span>
+</span></span><span style="display:flex;"><span>                .FaceId <span style="color:#f92672">=</span> 6270
+</span></span><span style="display:flex;"><span>                .Style <span style="color:#f92672">=</span> msoButtonIconAndCaption
+</span></span><span style="display:flex;"><span>                .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_image_width</span>(image_path):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Open the image</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> Image<span style="color:#f92672">.</span>open(image_path) <span style="color:#66d9ef">as</span> img:
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get the width</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> img<span style="color:#f92672">.</span>width            
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 폴더선택</span>
-</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> tkinter<span style="color:#f92672">.</span>Tk()
-</span></span><span style="display:flex;"><span>    root<span style="color:#f92672">.</span>withdraw()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    file_path <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askopenfilenames(
-</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">=</span>root, initialdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Please select target files&#39;</span>) <span style="color:#75715e"># 대상파일선택</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    dir_path <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askdirectory(
-</span></span><span style="display:flex;"><span>        parent<span style="color:#f92672">=</span>root, initialdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Please select saving directory&#39;</span>) <span style="color:#75715e"># 저장폴더선택</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    programPath <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/libwebp-1.4.0-windows-x64/bin/cwebp.exe&#34;</span> <span style="color:#75715e"># 프로그램저장경로(수정!!!)</span>
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> fileConvertion <span style="color:#f92672">in</span> file_path :        
-</span></span><span style="display:flex;"><span>       
-</span></span><span style="display:flex;"><span>        filename <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(fileConvertion)        
-</span></span><span style="display:flex;"><span>        name, extension <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>splitext(filename, )        
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Example usage</span>
-</span></span><span style="display:flex;"><span>        image_path <span style="color:#f92672">=</span> fileConvertion
-</span></span><span style="display:flex;"><span>        print(image_path)
-</span></span><span style="display:flex;"><span>        width <span style="color:#f92672">=</span> get_image_width(image_path)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Image width: </span><span style="color:#e6db74">{</span>width<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> width <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">700</span> :
-</span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> programPath <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#34;&#39;</span> <span style="color:#f92672">+</span> fileConvertion <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34; -q 100 -resize 700 0 -o &#34;&#39;</span> <span style="color:#f92672">+</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.webp&#34;&#39;</span>
-</span></span><span style="display:flex;"><span>            print(command)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> :
-</span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> programPath <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#34;&#39;</span> <span style="color:#f92672">+</span> fileConvertion <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34; -q 100 -o &#34;&#39;</span> <span style="color:#f92672">+</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.webp&#34;&#39;</span>
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(command<span style="color:#f92672">=</span>command)
-</span></span></code></pre></div></article>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Workbook_BeforeClose</span>(Cancel <span style="color:#f92672">As</span> <span style="color:#66d9ef">Boolean</span>)
+</span></span><span style="display:flex;"><span>    Application.CommandBars(<span style="color:#e6db74">&#34;tools&#34;</span>).Reset
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p> <br>
+As shown in the image below, the Add-ins menu is now active, and you can see the buttons you’ve registered.
+If you want to change the icon, simply modify the <code>Faceid</code> value in the code.<br>
+ <br>
+You can check the <code>Faceid</code> at the following location:<br>
+<a href="https://bettersolutions.com/vba/ribbon/face-ids-2003.htm">https://bettersolutions.com/vba/ribbon/face-ids-2003.htm</a></p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fb1pwbX%2FbtsPXy0DzDp%2FAAAAAAAAAAAAAAAAAAAAANIC_qXCswnV0ebtlG9K1XT0MhfLZyiAIrh-MN4xxH5i%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DurNubPcLZXTPMDpQBTL%252B8y5PEHQ%253D" alt="&ldquo;sample image&rdquo;" title="sample image"/></p>
+<hr>
+<h2 id="in-powerpoint">
+  in powerpoint
+  <a class="anchor" href="#in-powerpoint">#</a>
+</h2>
+<hr>
+</article>
  
       
 
-      <footer class="book-footer">
-        
-  <div class="flex flex-wrap justify-between">
 
 
-
-
-
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/vba/03002/" class="flex align-center book-icon">
+      <img src="https://mcjoi.github.io/svg/backward.svg" class="book-icon" alt="Next" />
+      <span>Making Keyboard Shortcut</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+  </span>
 </div>
 
 
+      
 
-
-
-
-
-
-
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
-
-
- 
-        
-      </footer>
+      
 
       
   
@@ -306,11 +332,14 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#in-excel">in excel</a>
       <ul>
-        <li><a href="#under-construction">Under construction</a></li>
+        <li><a href="#xlstart-folder">XLSTART Folder</a></li>
+        <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
+        <li><a href="#ribbon-menu">Ribbon menu</a></li>
       </ul>
     </li>
+    <li><a href="#in-powerpoint">in powerpoint</a></li>
   </ul>
 </nav>
 
