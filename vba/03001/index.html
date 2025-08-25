@@ -8,11 +8,24 @@
   #
 
 
-  in excel
+  Loading Add-ins in Excel vs. PowerPoint
   #
 
-Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.
-If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the XLSTART folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.">
+Although not required, using the designated folder can be convenient and helps keep your add-ins organized.
+So, for clarity, we can summarize the difference like this:
+
+  
+Excel → Automatically loads add-ins from the XLSTART folder  
+PowerPoint → Requires manual add-in registration, regardless of file location
+
+
+
+
+
+  Using VBA and Add-ins in Excel
+  #
+
+Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
@@ -20,8 +33,8 @@ If the macro is just for your personal use, a better way is to create an add-in 
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" /><meta property="og:url" content="https://mcjoi.github.io/vba/03001/">
   <meta property="og:site_name" content="shaaaaallow Dive">
   <meta property="og:title" content="How to use macro?">
-  <meta property="og:description" content="How to use self-made macro without any setting? # in excel # Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.
-If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the XLSTART folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.">
+  <meta property="og:description" content="How to use self-made macro without any setting? # Loading Add-ins in Excel vs. PowerPoint # Although not required, using the designated folder can be convenient and helps keep your add-ins organized. So, for clarity, we can summarize the difference like this:
+Excel → Automatically loads add-ins from the XLSTART folder PowerPoint → Requires manual add-in registration, regardless of file location Using VBA and Add-ins in Excel # Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="vba">
@@ -36,7 +49,7 @@ If the macro is just for your personal use, a better way is to create an add-in 
 <link rel="canonical" href="https://mcjoi.github.io/vba/03001/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.6f18b5243d92fe0c80970520347c44ae61fa876c617199e4f03f124bac6e42f1.css" integrity="sha256-bxi1JD2S/gyAlwUgNHxErmH6h2xhcZnk8D8SS6xuQvE=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.9be74f3de530017af0ceb36335ef0aff194ac430c070ed4b73462898ad7a50a8.js" integrity="sha256-m&#43;dPPeUwAXrwzrNjNe8K/xlKxDDAcO1Lc0YomK16UKg=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.d7de24ca89656aecaddddb51f58ecf57b9f46cf01d3d49405ff635c7237e2a23.js" integrity="sha256-194kyollauyt3dtR9Y7PV7n0bPAdPUlAX/Y1xyN&#43;KiM=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -208,14 +221,22 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#in-excel">in excel</a>
+    <li><a href="#loading-add-ins-in-excel-vs-powerpoint">Loading Add-ins in Excel vs. PowerPoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-excel">Using VBA and Add-ins in Excel</a>
       <ul>
         <li><a href="#xlstart-folder">XLSTART Folder</a></li>
         <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
         <li><a href="#ribbon-menu">Ribbon menu</a></li>
       </ul>
     </li>
-    <li><a href="#in-powerpoint">in powerpoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-powerpoint">Using VBA and Add-ins in PowerPoint</a>
+      <ul>
+        <li><a href="#default-file-format-pptx">Default File Format: .pptx</a></li>
+        <li><a href="#macro-enabled-file-format-pptm">Macro-Enabled File Format: .pptm</a></li>
+        <li><a href="#add-in-file-format-ppam">Add-in File Format: .ppam</a></li>
+        <li><a href="#powerpoint-manual-add-in-registration">PowerPoint: Manual Add-in Registration</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -233,9 +254,23 @@ https://github.com/alex-shpak/hugo-book
   How to use self-made macro without any setting?
   <a class="anchor" href="#how-to-use-self-made-macro-without-any-setting">#</a>
 </h1>
-<h2 id="in-excel">
-  in excel
-  <a class="anchor" href="#in-excel">#</a>
+<h2 id="loading-add-ins-in-excel-vs-powerpoint">
+  Loading Add-ins in Excel vs. PowerPoint
+  <a class="anchor" href="#loading-add-ins-in-excel-vs-powerpoint">#</a>
+</h2>
+<p>Although not required, using the designated folder can be convenient and helps keep your add-ins organized.
+So, for clarity, we can summarize the difference like this:<br>
+<blockquote class="book-hint warning">
+  
+Excel → Automatically loads add-ins from the XLSTART folder  <br>
+PowerPoint → Requires manual add-in registration, regardless of file location
+
+</blockquote>
+</p>
+<hr>
+<h2 id="using-vba-and-add-ins-in-excel">
+  Using VBA and Add-ins in Excel
+  <a class="anchor" href="#using-vba-and-add-ins-in-excel">#</a>
 </h2>
 <p>Usually, the common approach is to save your current workbook as an <code>.xlsm</code> file and keep the VBA code inside it. But when you need to share the file with colleagues, an <code>.xlsm</code> file can sometimes be a bit inconvenient.</p>
 <p>If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the <code>XLSTART</code> folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.</p>
@@ -286,11 +321,38 @@ You can check the <code>Faceid</code> at the following location:<br>
 <a href="https://bettersolutions.com/vba/ribbon/face-ids-2003.htm">https://bettersolutions.com/vba/ribbon/face-ids-2003.htm</a></p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fb1pwbX%2FbtsPXy0DzDp%2FAAAAAAAAAAAAAAAAAAAAANIC_qXCswnV0ebtlG9K1XT0MhfLZyiAIrh-MN4xxH5i%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DurNubPcLZXTPMDpQBTL%252B8y5PEHQ%253D" alt="&ldquo;sample image&rdquo;" title="sample image"/></p>
 <hr>
-<h2 id="in-powerpoint">
-  in powerpoint
-  <a class="anchor" href="#in-powerpoint">#</a>
+<h2 id="using-vba-and-add-ins-in-powerpoint">
+  Using VBA and Add-ins in PowerPoint
+  <a class="anchor" href="#using-vba-and-add-ins-in-powerpoint">#</a>
 </h2>
+<p>PowerPoint supports VBA (Visual Basic for Applications) similar to Excel, but there are some differences in how file formats and add-ins are handled. This document explains the key file types and how to use VBA in PowerPoint.</p>
 <hr>
+<h3 id="default-file-format-pptx">
+  Default File Format: .pptx
+  <a class="anchor" href="#default-file-format-pptx">#</a>
+</h3>
+<p>When you open PowerPoint and create a new presentation, it is saved by default in the .pptx format. This is the standard presentation format, and it does not support macros.</p>
+<h3 id="macro-enabled-file-format-pptm">
+  Macro-Enabled File Format: .pptm
+  <a class="anchor" href="#macro-enabled-file-format-pptm">#</a>
+</h3>
+<p>If you want to insert VBA code or use macros in your presentation, you need to save the file as a .pptm file.
+Since .pptx files cannot store macros, PowerPoint requires macro-enabled presentations to be saved in the .pptm format.</p>
+<h3 id="add-in-file-format-ppam">
+  Add-in File Format: .ppam
+  <a class="anchor" href="#add-in-file-format-ppam">#</a>
+</h3>
+<p>Just like Excel uses .xlam files for macro-based add-ins, PowerPoint uses .ppam files.
+A .ppam file contains VBA code only, without standard slide content. It is used to create custom add-ins that can extend PowerPoint&rsquo;s functionality across all presentations.</p>
+<h3 id="powerpoint-manual-add-in-registration">
+  PowerPoint: Manual Add-in Registration
+  <a class="anchor" href="#powerpoint-manual-add-in-registration">#</a>
+</h3>
+<p>PowerPoint handles add-ins differently. It does not automatically load add-ins from a specific folder at startup.
+Instead, you need to manually register each .ppam file through the PowerPoint Add-ins menu.</p>
+<p>While Microsoft provides a default AddIns folder for convenience (which opens automatically when you browse for add-ins), you are not required to store your .ppam files there. You can register add-ins from any location.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>C:\Users\[username]\AppData\Roaming\Microsoft\AddIns\
+</span></span></code></pre></div><hr>
 </article>
  
       
@@ -336,14 +398,22 @@ You can check the <code>Faceid</code> at the following location:<br>
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#in-excel">in excel</a>
+    <li><a href="#loading-add-ins-in-excel-vs-powerpoint">Loading Add-ins in Excel vs. PowerPoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-excel">Using VBA and Add-ins in Excel</a>
       <ul>
         <li><a href="#xlstart-folder">XLSTART Folder</a></li>
         <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
         <li><a href="#ribbon-menu">Ribbon menu</a></li>
       </ul>
     </li>
-    <li><a href="#in-powerpoint">in powerpoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-powerpoint">Using VBA and Add-ins in PowerPoint</a>
+      <ul>
+        <li><a href="#default-file-format-pptx">Default File Format: .pptx</a></li>
+        <li><a href="#macro-enabled-file-format-pptm">Macro-Enabled File Format: .pptm</a></li>
+        <li><a href="#add-in-file-format-ppam">Add-in File Format: .ppam</a></li>
+        <li><a href="#powerpoint-manual-add-in-registration">PowerPoint: Manual Add-in Registration</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
