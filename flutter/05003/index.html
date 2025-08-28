@@ -35,7 +35,7 @@ Windows has a long history, but since Vista, I haven’t really come across prog
 <link rel="canonical" href="https://mcjoi.github.io/flutter/05003/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.df5290a8938cc6a68520b409dcdaa6890cb37aca76be81085dd170dabffdfbdc.css" integrity="sha256-31KQqJOMxqaFILQJ3NqmiQyzesp2voEIXdFw2r/9&#43;9w=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.dd9f2ce6ceb3a2cddfc1ee34ad8b0948cfa0425e0d1b47e000f005a0590973a0.js" integrity="sha256-3Z8s5s6zos3fwe40rYsJSM&#43;gQl4NG0fgAPAFoFkJc6A=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.a2b439a2fc23265d74092f5cdbdf9b0feb839f7211806c5478ffb9c0282905d2.js" integrity="sha256-orQ5ovwjJl10CS9c29&#43;bD&#43;uDn3IRgGxUeP&#43;5wCgpBdI=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -270,10 +270,16 @@ if(window.wcs) {
   Two Scenarios
   <a class="anchor" href="#two-scenarios">#</a>
 </h2>
-<p>#1 → Send the click coordinates from Windows to Flutter<br>
+<ol>
+<li>
+<p>Send the click coordinates from Windows to Flutter<br>
 You run the Flutter app as an invisible layer, and when click coordinates are received, it plays an animation.</p>
-<p>#2 → Send the clicked coordinates from Flutter to Windows<br>
+</li>
+<li>
+<p>Send the clicked coordinates from Flutter to Windows<br>
 Flutter plays the animation, and the coordinates sent to Windows trigger the actual click.</p>
+</li>
+</ol>
 <p>These are simple scenarios, but ChatGPT recommended #2. Following that advice led to a few days of trial and error. Eventually, I realized that #1 is the reliable approach.</p>
 <hr>
 <h2 id="win32-and-ffi">
@@ -322,7 +328,8 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 </h2>
 <p>Rive provides incredible features, but Lottie just runs animations—and that’s perfect. You don’t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
 <p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
-<p>The full source code is available at the link below.<br>
+<p>The full source code is available at the link below.</p>
+<p> 
 
 <a
    href="https://sunnybong.tistory.com/896" 
@@ -342,9 +349,9 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>Should I add a separate button to change the animation?<br>
 Should right-clicks have a separate animation?</p>
 <p>No. That was just my thought process—so let’s leave it cleanly here.</p>
-<p>The End.</p>
-<hr>
-<p>
+<p>The End.<br>
+ 
+
 <a
    href="https://sunnybong.tistory.com/895" 
    target="_blank" rel="noopener" 
