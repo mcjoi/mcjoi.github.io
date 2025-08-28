@@ -6,8 +6,15 @@
     <description>Recent content in Tags on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter</title>
+      <link>https://mcjoi.github.io/tags/flutter/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tags/flutter/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Linux</title>
       <link>https://mcjoi.github.io/tags/linux/</link>
@@ -27,13 +34,6 @@
       <link>https://mcjoi.github.io/tags/windows/</link>
       <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Flutter</title>
-      <link>https://mcjoi.github.io/tags/flutter/</link>
-      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/tags/flutter/</guid>
       <description></description>
     </item>
     <item>
