@@ -65,7 +65,7 @@
       <description>&lt;h1 id=&#34;creating-a-txt-file-of-environment-variables&#34;&gt;&#xA;  Creating a TXT File of Environment Variables&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creating-a-txt-file-of-environment-variables&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Normally, there&amp;rsquo;s little need to mess with Windows environment variables.&lt;/p&gt;&#xA;&lt;p&gt;However, if you&amp;rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.&lt;/p&gt;&#xA;&lt;p&gt;When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?&lt;/p&gt;&#xA;&lt;p&gt;If you type &lt;code&gt;set&lt;/code&gt; in the Command Prompt, you can view all environment variables. Of course, this isn’t exactly its intended use, but…&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Windows Shortcut</title>
+      <title>Windows Desktop Shortcut</title>
       <link>https://mcjoi.github.io/flutter/05002/</link>
       <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/flutter/05002/</guid>

@@ -35,7 +35,7 @@ Windows has a long history, but since Vista, I haven’t really come across prog
 <link rel="canonical" href="https://mcjoi.github.io/flutter/05003/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.df5290a8938cc6a68520b409dcdaa6890cb37aca76be81085dd170dabffdfbdc.css" integrity="sha256-31KQqJOMxqaFILQJ3NqmiQyzesp2voEIXdFw2r/9&#43;9w=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.a2b439a2fc23265d74092f5cdbdf9b0feb839f7211806c5478ffb9c0282905d2.js" integrity="sha256-orQ5ovwjJl10CS9c29&#43;bD&#43;uDn3IRgGxUeP&#43;5wCgpBdI=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.5d23c91f3c63044b0f249c933cad9cb18bba16a5b70d7bdab4c8b44c351e77f2.js" integrity="sha256-XSPJHzxjBEsPJJyTPK2csYu6FqW3DXvatMi0TDUed/I=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -137,7 +137,7 @@ if(window.wcs) {
       
         <li>
           <a href="https://mcjoi.github.io/flutter/05002/" >
-            Windows Shortcut
+            Windows Desktop Shortcut
           </a>
         </li>
       
@@ -329,15 +329,71 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>Rive provides incredible features, but Lottie just runs animations—and that’s perfect. You don’t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
 <p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
 <p>The full source code is available at the link below.</p>
-<p> 
 
-<a
-   href="https://sunnybong.tistory.com/896" 
-   target="_blank" rel="noopener" 
-  class="book-btn"
->original post (Kor)</a>
-
- </p>
+<blockquote class='book-hint '>
+  <p>mouse_hook.cpp</p>
+</blockquote><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;windows.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;pch.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>HHOOK mouseHook;
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>string outputPath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Temp</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">click_position.txt&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LRESULT CALLBACK <span style="color:#a6e22e">MouseProc</span>(<span style="color:#66d9ef">int</span> nCode, WPARAM wParam, LPARAM lParam) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (nCode <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> wParam <span style="color:#f92672">==</span> WM_LBUTTONDOWN) {
+</span></span><span style="display:flex;"><span>        MSLLHOOKSTRUCT<span style="color:#f92672">*</span> mouseInfo <span style="color:#f92672">=</span> (MSLLHOOKSTRUCT<span style="color:#f92672">*</span>)lParam;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> mouseInfo<span style="color:#f92672">-&gt;</span>pt.x;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> mouseInfo<span style="color:#f92672">-&gt;</span>pt.y;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>ofstream out(outputPath);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (out.is_open()) {
+</span></span><span style="display:flex;"><span>            out <span style="color:#f92672">&lt;&lt;</span> x <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> y;
+</span></span><span style="display:flex;"><span>            out.close();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//            log(&#34;Click detected: &#34; + std::to_string(x) + &#34;,&#34; + std::to_string(y));
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> CallNextHookEx(mouseHook, nCode, wParam, lParam);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">SetClickHook</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// log(&#34;SetClickHook called&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    HMODULE hInstance <span style="color:#f92672">=</span> GetModuleHandle(NULL);
+</span></span><span style="display:flex;"><span>    mouseHook <span style="color:#f92672">=</span> SetWindowsHookEx(WH_MOUSE_LL, MouseProc, hInstance, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (mouseHook <span style="color:#f92672">==</span> NULL) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//log(&#34;Failed to set mouse hook&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        MessageBoxW(NULL, <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;Failed to set hook&#34;</span>, <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;Error&#34;</span>, MB_ICONERROR);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//log(&#34;Mouse hook successfully set&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    MSG msg;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (GetMessage(<span style="color:#f92672">&amp;</span>msg, NULL, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)) {
+</span></span><span style="display:flex;"><span>        TranslateMessage(<span style="color:#f92672">&amp;</span>msg);
+</span></span><span style="display:flex;"><span>        DispatchMessage(<span style="color:#f92672">&amp;</span>msg);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// log(&#34;Message loop exited&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">__declspec</span>(dllexport) <span style="color:#66d9ef">void</span> RemoveClickHook() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (mouseHook) {
+</span></span><span style="display:flex;"><span>        UnhookWindowsHookEx(mouseHook);
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e">// log(&#34;Mouse hook removed&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DWORD WINAPI <span style="color:#a6e22e">HookThreadProc</span>(LPVOID) {
+</span></span><span style="display:flex;"><span>    SetClickHook();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">__declspec</span>(dllexport) <span style="color:#66d9ef">void</span> StartHookThread() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//  log(&#34;Starting hook thread...&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    CreateThread(NULL, <span style="color:#ae81ff">0</span>, HookThreadProc, NULL, <span style="color:#ae81ff">0</span>, NULL);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p> </p>
 <hr>
 <h2 id="result">
   Result
@@ -349,8 +405,8 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>Should I add a separate button to change the animation?<br>
 Should right-clicks have a separate animation?</p>
 <p>No. That was just my thought process—so let’s leave it cleanly here.</p>
-<p>The End.<br>
- 
+<p>The End.</p>
+<p> 
 
 <a
    href="https://sunnybong.tistory.com/895" 
@@ -371,7 +427,7 @@ Should right-clicks have a separate animation?</p>
       
     <a href="https://mcjoi.github.io/flutter/05002/" class="flex align-center book-icon">
       <img src="https://mcjoi.github.io/svg/backward.svg" class="book-icon" alt="Next" />
-      <span>Windows Shortcut</span>
+      <span>Windows Desktop Shortcut</span>
     </a>
   
   </span>
