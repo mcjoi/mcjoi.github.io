@@ -2,18 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on shaaaaallow Dive</title>
-    <link>https://mcjoi.github.io/notes/</link>
+    <link>http://localhost:1313/notes/</link>
     <description>Recent content in Notes on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcjoi.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Focus</title>
-      <link>https://mcjoi.github.io/notes/07001/</link>
-      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/notes/07001/</guid>
-      <description>&lt;h1 id=&#34;what-to-focus-on&#34;&gt;&#xA;  what to focus on..?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-to-focus-on&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Everyone Knows. but no one does.&lt;/p&gt;</description>
+      <title>Image1</title>
+      <link>http://localhost:1313/notes/image1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/image1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image2</title>
+      <link>http://localhost:1313/notes/image2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/notes/image2/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
