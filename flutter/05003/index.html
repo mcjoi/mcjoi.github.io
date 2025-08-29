@@ -18,10 +18,7 @@ Windows has a long history, but since Vista, I haven’t really come across prog
 <meta name="color-scheme" content="light dark">
 <meta name="google-adsense-account" content="ca-pub-7362089186642274">
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
-<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-
-
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet"><meta property="og:url" content="https://mcjoi.github.io/flutter/05003/">
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/flutter/05003/">
   <meta property="og:site_name" content="shaaaaallow Dive">
   <meta property="og:title" content="[result] Windows Mouse Click Animation">
   <meta property="og:description" content="Windows Mouse Click Animation (Lottie) # What is it? # Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…
@@ -694,8 +691,18 @@ Should right-clicks have a separate animation?</p>
 
   
   
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      });
+    });
+  </script>
+
 </body>
 </html>
 
