@@ -436,6 +436,26 @@ Copy the width &amp; height of the selected cell and paste it to the cell that i
   
   
 
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      if (typeof lightbox !== 'undefined') {
+          lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true
+          });
+      } else {
+          console.error("Lightbox가 정의되지 않았습니다.");
+      }
+  });
+  </script>
+  
+
+
+
+
 </body>
 </html>
 
