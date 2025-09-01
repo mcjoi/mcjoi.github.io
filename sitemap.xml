@@ -1,40 +1,4 @@
-&lt;?xml version="1.0" encoding="UTF-8"?>
-
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://mcjoi.github.io/flutter/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/windows_linux/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/vba/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/macrotoolkit-ppt/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/python/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/macrotoolkit-xls/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/gallery/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://mcjoi.github.io/posts/</loc>
-    <lastmod>2025-09-01T17:40:52&#43;09:00</lastmod>
-  </sitemap>
-</sitemapindex>
-
+<xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mcjoi.github.io/vba/03001/</loc>
@@ -266,61 +230,51 @@
   </url>
   <url>
     <loc>https://mcjoi.github.io/categories/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/cave-nikon-d750--samyang-85.4mf/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/everland1-sony-a6100--sigma-56.4/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/everland2-sony-a6100--sigma-56.4/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/everland3-sony-a6100--sigma-56.4/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/phone-booth-nikon-d750--nikon-35.8/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/posts/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/startfield-library-sony-a6100--vitrox-20/2.8/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mcjoi.github.io/gallery/tree-sony-a6100--viltrox-25.7/</loc>
-    <lastmod>0001-01-01T00:00:00&#43;00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
