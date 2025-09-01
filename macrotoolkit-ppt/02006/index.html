@@ -18,19 +18,91 @@ Useful functions for handling shape.
   #
 
 Aligns selected shape(s) to the bottom of the first selected shape.
+Sub shapealign_bottom()
+    Dim standardshape As shape
+    Dim shapeName() As String
+    Dim shapenameOrigin() As String
+    Dim selectShapes As ShapeRange
+    Dim arrcount As Integer
+    Dim x As Integer
+    Dim y As Integer
+    Dim culumheight As Single
+    Dim standardshape_height As Single
+    Dim standardshape_width As Single
+    Dim standardshape_left As Single
+    Dim standardshape_top As Single
+
+    On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동
+    
+    If ActiveWindow.Selection.Type = ppSelectionShapes Then
+        Set selectShapes = ActiveWindow.Selection.ShapeRange
+        
+        &#39;selected shape name array
+        ReDim Preserve shapeName(selectShapes.Count)
+        ReDim Preserve shapenameOrigin(selectShapes.Count)
+        
+        &#39;selected shape name array count
+        arrcount = UBound(shapeName) - LBound(shapeName)
+        
+        For x = 1 To arrcount
+            shapenameOrigin(x) = selectShapes(x).Name
+            selectShapes(x).Name = selectShapes(x).Name &amp; x
+        Next x
+        
+        For Each shp In selectShapes
+            For x = 1 To arrcount
+                If shapeName(x) = &#34;&#34; Then
+                    shapeName(x) = shp.Name
+                    Exit For
+                End If
+            Next x
+        Next shp
+    Else
+        MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34;
+        Exit Sub
+    End If
+
+    &#39; Ensure there is at least one shape to align
+    If arrcount &lt; 1 Then
+        MsgBox &#34;No shapes were selected for alignment!&#34;, vbExclamation
+        Exit Sub
+    End If
+
+    &#39; Get standard shape dimensions and position
+    standardshape_height = ActiveWindow.Selection.ShapeRange(shapeName(1)).height
+    standardshape_width = ActiveWindow.Selection.ShapeRange(shapeName(1)).width
+    standardshape_left = ActiveWindow.Selection.ShapeRange(shapeName(1)).left
+    standardshape_top = ActiveWindow.Selection.ShapeRange(shapeName(1)).top
+
+    For y = 2 To arrcount
+        ActiveWindow.Selection.ShapeRange(shapeName(y)).top = standardshape_top &#43; standardshape_height
+        
+        If y &gt; 2 Then
+            culumheight = culumheight &#43; ActiveWindow.Selection.ShapeRange(shapeName(y - 1)).height
+            ActiveWindow.Selection.ShapeRange(shapeName(y)).top = ActiveWindow.Selection.ShapeRange(shapeName(y)).top &#43; culumheight
+        End If
+        
+        ActiveWindow.Selection.ShapeRange(shapeName(y)).left = standardshape_left
+    Next y
+
+    For x = 1 To arrcount
+        selectShapes(x).Name = shapenameOrigin(x)
+    Next x
+
+    Exit Sub
+    
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34;
+    End If
+    Exit Sub
+End Sub
 
 
   align_right
   #
 
-Aligns selected shape(s) to the right of the first selected shape.
-
-
-  guidebox
-  #
-
-Creates guide boxes (rectangles) spaced at regular intervals.
-">
+Aligns selected shape(s) to the right of the first selected shape.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
@@ -41,8 +113,7 @@ Creates guide boxes (rectangles) spaced at regular intervals.
   <meta property="og:title" content="Sctipt - shape">
   <meta property="og:description" content="Sctipt - shape # What is it? # Useful functions for handling shape.
 align_bottom # Aligns selected shape(s) to the bottom of the first selected shape.
-align_right # Aligns selected shape(s) to the right of the first selected shape.
-guidebox # Creates guide boxes (rectangles) spaced at regular intervals.">
+Sub shapealign_bottom() Dim standardshape As shape Dim shapeName() As String Dim shapenameOrigin() As String Dim selectShapes As ShapeRange Dim arrcount As Integer Dim x As Integer Dim y As Integer Dim culumheight As Single Dim standardshape_height As Single Dim standardshape_width As Single Dim standardshape_left As Single Dim standardshape_top As Single On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동 If ActiveWindow.Selection.Type = ppSelectionShapes Then Set selectShapes = ActiveWindow.Selection.ShapeRange &#39;selected shape name array ReDim Preserve shapeName(selectShapes.Count) ReDim Preserve shapenameOrigin(selectShapes.Count) &#39;selected shape name array count arrcount = UBound(shapeName) - LBound(shapeName) For x = 1 To arrcount shapenameOrigin(x) = selectShapes(x).Name selectShapes(x).Name = selectShapes(x).Name &amp; x Next x For Each shp In selectShapes For x = 1 To arrcount If shapeName(x) = &#34;&#34; Then shapeName(x) = shp.Name Exit For End If Next x Next shp Else MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34; Exit Sub End If &#39; Ensure there is at least one shape to align If arrcount &lt; 1 Then MsgBox &#34;No shapes were selected for alignment!&#34;, vbExclamation Exit Sub End If &#39; Get standard shape dimensions and position standardshape_height = ActiveWindow.Selection.ShapeRange(shapeName(1)).height standardshape_width = ActiveWindow.Selection.ShapeRange(shapeName(1)).width standardshape_left = ActiveWindow.Selection.ShapeRange(shapeName(1)).left standardshape_top = ActiveWindow.Selection.ShapeRange(shapeName(1)).top For y = 2 To arrcount ActiveWindow.Selection.ShapeRange(shapeName(y)).top = standardshape_top &#43; standardshape_height If y &gt; 2 Then culumheight = culumheight &#43; ActiveWindow.Selection.ShapeRange(shapeName(y - 1)).height ActiveWindow.Selection.ShapeRange(shapeName(y)).top = ActiveWindow.Selection.ShapeRange(shapeName(y)).top &#43; culumheight End If ActiveWindow.Selection.ShapeRange(shapeName(y)).left = standardshape_left Next y For x = 1 To arrcount selectShapes(x).Name = shapenameOrigin(x) Next x Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If Exit Sub End Sub align_right # Aligns selected shape(s) to the right of the first selected shape.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="macrotoolkit-ppt">
@@ -57,7 +128,7 @@ guidebox # Creates guide boxes (rectangles) spaced at regular intervals.">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02006/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.3747fe938f50caa34f89423e58f3928d972259c5f2330bac9ccf0a78a066c5d7.css" integrity="sha256-N0f&#43;k49QyqNPiUI&#43;WPOSjZciWcXyMwusnM8KeKBmxdc=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.43dbc1df6f33c1a18f8dcfdaaa6e9ae9c8656337a3200d2fb438eb8151ef88ef.js" integrity="sha256-Q9vB328zwaGPjc/aqm6a6chlYzejIA0vtDjrgVHviO8=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.e4d78cd022a8a37abed79e6c24a01cd2f7fa2ed9b97a2ca1bd6f6f91f52f249f.js" integrity="sha256-5NeM0CKoo3q&#43;155sJKAc0vf6Ltm5eiyhvW9vkfUvJJ8=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -306,13 +377,128 @@ if(window.wcs) {
   <a class="anchor" href="#align_bottom">#</a>
 </h2>
 <p>Aligns selected shape(s) to the bottom of the first selected shape.</p>
-<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_bottom</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeName() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapenameOrigin() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectShapes <span style="color:#f92672">As</span> ShapeRange
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> arrcount <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> x <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> culumheight <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_height <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_width <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> selectShapes <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">ReDim</span> Preserve shapeName(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ReDim</span> Preserve shapenameOrigin(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        arrcount <span style="color:#f92672">=</span> UBound(shapeName) <span style="color:#f92672">-</span> LBound(shapeName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>            shapenameOrigin(x) <span style="color:#f92672">=</span> selectShapes(x).Name
+</span></span><span style="display:flex;"><span>            selectShapes(x).Name <span style="color:#f92672">=</span> selectShapes(x).Name <span style="color:#f92672">&amp;</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> selectShapes
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> shapeName(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    shapeName(x) <span style="color:#f92672">=</span> shp.Name
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Ensure there is at least one shape to align
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> arrcount <span style="color:#f92672">&lt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;No shapes were selected for alignment!&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Get standard shape dimensions and position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    standardshape_height <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).height
+</span></span><span style="display:flex;"><span>    standardshape_width <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).width
+</span></span><span style="display:flex;"><span>    standardshape_left <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).left
+</span></span><span style="display:flex;"><span>    standardshape_top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> y <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> standardshape_top <span style="color:#f92672">+</span> standardshape_height
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> y <span style="color:#f92672">&gt;</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            culumheight <span style="color:#f92672">=</span> culumheight <span style="color:#f92672">+</span> ActiveWindow.Selection.ShapeRange(shapeName(y <span style="color:#f92672">-</span> 1)).height
+</span></span><span style="display:flex;"><span>            ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">+</span> culumheight
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).left <span style="color:#f92672">=</span> standardshape_left
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        selectShapes(x).Name <span style="color:#f92672">=</span> shapenameOrigin(x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
 <h2 id="align_right">
   align_right
   <a class="anchor" href="#align_right">#</a>
 </h2>
 <p>Aligns selected shape(s) to the right of the first selected shape.</p>
-<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_right</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectedShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> secondShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeLeftInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeWidthInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sel <span style="color:#f92672">As</span> Selection
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sel <span style="color:#f92672">=</span> ActiveWindow.Selection
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> sel.ShapeRange.Count <span style="color:#f92672">&gt;=</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> selectedShape <span style="color:#f92672">=</span> sel.ShapeRange(1)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> sel.ShapeRange.Count
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Set</span> secondShape <span style="color:#f92672">=</span> sel.ShapeRange(i)
+</span></span><span style="display:flex;"><span>                shapeLeftInPoints <span style="color:#f92672">=</span> selectedShape.left
+</span></span><span style="display:flex;"><span>                shapeWidthInPoints <span style="color:#f92672">=</span> selectedShape.width
+</span></span><span style="display:flex;"><span>                secondShape.left <span style="color:#f92672">=</span> shapeLeftInPoints <span style="color:#f92672">+</span> shapeWidthInPoints
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;Please select over 2 shapes&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Please select shapes.&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
 <h2 id="guidebox">
   guidebox
   <a class="anchor" href="#guidebox">#</a>
