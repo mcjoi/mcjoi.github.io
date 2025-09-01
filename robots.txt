@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /gallery/
 
 Sitemap: https://mcjoi.github.io/sitemap.xml
