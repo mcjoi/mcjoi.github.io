@@ -3,5 +3,6 @@ Disallow: /tags/
 Disallow: /gallery/
 Disallow: /category/
 Disallow: /posts/
+Disallow: /docs/
 
 Sitemap: https://mcjoi.github.io/sitemap.xml
