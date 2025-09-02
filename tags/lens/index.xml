@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lens on shaaaaallow Dive</title>
-    <link>http://localhost:1313/tags/lens/</link>
+    <link>https://mcjoi.github.io/tags/lens/</link>
     <description>Recent content in Lens on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/lens/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tags/lens/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sony Creative Look</title>
+      <link>https://mcjoi.github.io/life/08001/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08001/</guid>
+      <description>&lt;h1 id=&#34;creative-look&#34;&gt;&#xA;  Creative Look&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creative-look&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;color-filter&#34;&gt;&#xA;  color filter&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#color-filter&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Whenever I bought a new camera, I always felt the urge to try out all the new features—and honestly, that often led me to make mistakes. One typical example was color filters. I remember doing it when I was using the Nikon D750, and again when I first switched over to Sony, playing around with those so-called “My Style” color filters.&lt;/p&gt;&#xA;&lt;p&gt;Now, think about this: when you take photos with your smartphone and post them on Instagram, how often do you actually use those filters?&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

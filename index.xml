@@ -6,8 +6,15 @@
     <description>Recent content in shaaaaalow Dive on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sony Creative Look</title>
+      <link>https://mcjoi.github.io/life/08001/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08001/</guid>
+      <description>&lt;h1 id=&#34;creative-look&#34;&gt;&#xA;  Creative Look&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creative-look&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;color-filter&#34;&gt;&#xA;  color filter&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#color-filter&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Whenever I bought a new camera, I always felt the urge to try out all the new features—and honestly, that often led me to make mistakes. One typical example was color filters. I remember doing it when I was using the Nikon D750, and again when I first switched over to Sony, playing around with those so-called “My Style” color filters.&lt;/p&gt;&#xA;&lt;p&gt;Now, think about this: when you take photos with your smartphone and post them on Instagram, how often do you actually use those filters?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to use macro?</title>
       <link>https://mcjoi.github.io/vba/03001/</link>
@@ -34,7 +41,7 @@
       <link>https://mcjoi.github.io/windows_linux/06001/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/windows_linux/06001/</guid>
-      <description>&lt;h1 id=&#34;bypasses-the-script-execution-policy&#34;&gt;&#xA;  bypasses the script execution policy&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#bypasses-the-script-execution-policy&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h1 id=&#34;bypasses-the-script-execution-policy&#34;&gt;&#xA;  bypasses the script execution policy&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#bypasses-the-script-execution-policy&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;</description>
     </item>
     <item>
       <title>MacroToolkit - Excel</title>
