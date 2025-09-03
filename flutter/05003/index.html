@@ -281,9 +281,9 @@ if(window.wcs) {
 </h2>
 <p>Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…</p>
 <p>Windows has a long history, but since Vista, I haven’t really come across programs or open-source projects that deal with click animations. Sure, it’s mostly a trivial feature, but the built-in Windows functionality is just… terrible.</p>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F8Khaq%2FbtsMWk49PJw%2FAAAAAAAAAAAAAAAAAAAAAAnMV4AKSKo7xX1ASvBkH4pAoZfsK9fIVDs11wIzR_wA%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252FcMuUOOB0cw%252FOVKcWgyOkEIzdRk%253D" alt="&ldquo;image&rdquo;" title="image"/></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/main/click_motion.png" alt="image" title="image"/></p>
 <p>Still, I decided to give it a try.</p>
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdAXYP0%2FbtsMW9VRf82%2FAAAAAAAAAAAAAAAAAAAAAPxl94lCwv9F75U9-EEltTZVy68lPB0fIMTtTWgOBOSQ%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DdVVCf9LgoGfVK8zNsyeCcLjd0U8%253D" alt="&ldquo;image&rdquo;" title="image"/></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/main/click_motion2.png" alt="image" title="image"/></p>
 <hr>
 <h2 id="two-scenarios">
   Two Scenarios
@@ -317,9 +317,9 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <li>Flutter runs the DLL file.</li>
 <li>Windows, via the DLL, writes click coordinates to a text file whenever a click occurs.</li>
 <li>Flutter reads the coordinates from the text file and uses them to determine where to play the animation.</li>
-<li>The Flutter app runs fullscreen with a transparent background, in the background.
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbxs4XD%2FbtsMVutHh6G%2FAAAAAAAAAAAAAAAAAAAAAP27oCRpsbPwaD9Ia8i5do25DAU62a1f7Tz9iLuWX_hY%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DvMiT6U0Mm5M0i4Aipzt5qdDHzLc%253D" alt="&ldquo;image&rdquo;" title="image"/></li>
+<li>The Flutter app runs fullscreen with a transparent background, in the background.</li>
 </ol>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/main/click_motion.gif" alt="image" title="image"/></p>
 <hr>
 <h2 id="packages-used">
   Packages Used
