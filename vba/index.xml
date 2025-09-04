@@ -6,7 +6,7 @@
     <description>Recent content in VBA on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/vba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use macro?</title>
@@ -28,6 +28,13 @@
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/vba/03003/</guid>
       <description>&lt;h1 id=&#34;creating-mouse-hover-effect-in-excel-vba-userform&#34;&gt;&#xA;  Creating mouse hover effect in excel VBA userform&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creating-mouse-hover-effect-in-excel-vba-userform&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;take-1&#34;&gt;&#xA;  Take #1&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#take-1&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.&lt;/p&gt;&#xA;&lt;p&gt;Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Unviewable</title>
+      <link>https://mcjoi.github.io/vba/03004/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/vba/03004/</guid>
+      <description>&lt;h1 id=&#34;how-to-protect-your-vba-code&#34;&gt;&#xA;  How to protect your VBA code?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#how-to-protect-your-vba-code&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;project-is-unviewable&#34;&gt;&#xA;  Project is Unviewable&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#project-is-unviewable&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;When working with VBA add-ins, you might sometimes see a message that says “Project is unviewable.”&#xA;This means that you won’t be able to access or review the code inside certain files. It can be a bit puzzling at first, but it usually happens because the project has been locked or restricted by the developer.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;evilclippy&#34;&gt;&#xA;  EvilClippy&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#evilclippy&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;At first, I thought this was something that could only be done with paid software. But while searching on Google, I came across a tool called EvilClippy. With this program, it looks like you can not only apply protection but also add code obfuscation, making the VBA project harder to read.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
