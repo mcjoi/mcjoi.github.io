@@ -6,8 +6,15 @@
     <description>Recent content in Tags on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://mcjoi.github.io/tags/python/</link>
+      <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Camera</title>
       <link>https://mcjoi.github.io/tags/camera/</link>
@@ -69,13 +76,6 @@
       <link>https://mcjoi.github.io/tags/windows/</link>
       <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://mcjoi.github.io/tags/python/</link>
-      <pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/tags/python/</guid>
       <description></description>
     </item>
   </channel>

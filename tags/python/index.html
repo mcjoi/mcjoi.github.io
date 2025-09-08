@@ -20,7 +20,7 @@
 <link rel="canonical" href="https://mcjoi.github.io/tags/python/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.d36427ac8f54c22927c8a16b6a047ae2ce33ac9ef42c86ba6f96b0e8f98d65f6.css" integrity="sha256-02QnrI9UwiknyKFragR64s4zrJ70LIa6b5aw6PmNZfY=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.3d8a17bcd2fdf4554d158f2163329f93854f71a5add709f7724a617dbd8fbc2b.js" integrity="sha256-PYoXvNL99FVNFY8hYzKfk4VPcaWt1wn3ckphfb2PvCs=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.9728d9ea433238aa4ce581558256fc7a006d485d16b8ac762f0d75da226b2ea6.js" integrity="sha256-lyjZ6kMyOKpM5YFVglb8egBtSF0WuKx2Lw112iJrLqY=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://mcjoi.github.io/tags/python/index.xml" title="shaaaaallow Dive" />
 <!--
 Made with Book Theme
@@ -247,13 +247,13 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/python/04002/" >
-                  [◇] Extracting Tables from PDF
+                  [◇] Move file by extensions
                 </a>
               </li>
             
               <li>
-                <a href="https://mcjoi.github.io/python/04002/" >
-                  [◇] Move file by extensions
+                <a href="https://mcjoi.github.io/python/04003/" >
+                  [◇] Extracting Tables from PDF
                 </a>
               </li>
             
@@ -462,6 +462,11 @@ if(window.wcs) {
       <ul>
       
         <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/python/">Python</a>
+          <span>3</span>
+        </li>
+      
+        <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/camera/">Camera</a>
           <span>2</span>
         </li>
@@ -504,11 +509,6 @@ if(window.wcs) {
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/windows/">Windows</a>
           <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>3</span>
         </li>
       
       </ul>
@@ -559,100 +559,6 @@ if(window.wcs) {
 </h2>
 <p>I once wrote about converting images to WebP for blog image optimization. However, uploading images online for conversion every time is a bit inconvenient, and using Photoshop for this is also not ideal.</p>
 <p>I downloaded a conversion program from the Google Dev site, but it requires entering commands in the CMD each time. This is also tedious, so I decided to create a simple Python program. I set up the program as shown below, making sure that Python is added to the Windows PATH so it can be run from anywhere.</p></p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="https://mcjoi.github.io/python/04002/">[◇] Extracting Tables from PDF</a>
-    </h2>
-    
-  <div class="flex align-center text-small book-post-date">
-    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>August 13, 2025</span>
-  </div>
-
-
-
-  
-
-  
-  <div class="text-small">
-    
-      <a href="https://mcjoi.github.io/tags/python/">Python</a>
-  </div>
-  
-
-
-    <p><h1 id="extracting-tables-from-pdf-documents">
-  Extracting Tables from PDF Documents
-  <a class="anchor" href="#extracting-tables-from-pdf-documents">#</a>
-</h1>
-<h2 id="what-is-it">
-  What is it?
-  <a class="anchor" href="#what-is-it">#</a>
-</h2>
-<p>I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.<br>
-However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.</p>
-<hr>
-<h2 id="code-sample">
-  code sample
-  <a class="anchor" href="#code-sample">#</a>
-</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Tk
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> askopenfilename, asksaveasfilename
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hide the main Tkinter window</span>
-</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Tk()
-</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Select a PDF file</span>
-</span></span><span style="display:flex;"><span>pdf_file <span style="color:#f92672">=</span> askopenfilename(
-</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select PDF File&#34;</span>,
-</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF files&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_file:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No PDF file selected.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Extract tables from the PDF using Camelot</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines</span>
-</span></span><span style="display:flex;"><span>tables <span style="color:#f92672">=</span> camelot<span style="color:#f92672">.</span>read_pdf(pdf_file, pages<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, flavor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lattice&#39;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tables<span style="color:#f92672">.</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No tables found in the PDF.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Number of tables found: </span><span style="color:#e6db74">{</span>tables<span style="color:#f92672">.</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Select the location to save the Excel file</span>
-</span></span><span style="display:flex;"><span>excel_file <span style="color:#f92672">=</span> asksaveasfilename(
-</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Save as Excel&#34;</span>,
-</span></span><span style="display:flex;"><span>    defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.xlsx&#34;</span>,
-</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;Excel files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx&#34;</span>)]
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> excel_file:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No Excel file selected.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Save all extracted tables into an Excel file, each table in a separate sheet</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(excel_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, table <span style="color:#f92672">in</span> enumerate(tables):
-</span></span><span style="display:flex;"><span>        sheet_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Table_</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># Sheet name for each table</span>
-</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><p> <br>
-
-<a
-   href="https://sunnybong.tistory.com/940" 
-   target="_blank" rel="noopener" 
-  class="book-btn"
->original post (Kor)</a>
-</p></p>
   </article>
   
   <article class="markdown book-post">
@@ -765,6 +671,100 @@ However, for documents with heavy design elements, Python sometimes fails to rec
 </p></p>
   </article>
   
+  <article class="markdown book-post">
+    <h2>
+      <a href="https://mcjoi.github.io/python/04003/">[◇] Extracting Tables from PDF</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
+    <span>September 8, 2025</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="https://mcjoi.github.io/tags/python/">Python</a>
+  </div>
+  
+
+
+    <p><h1 id="extracting-tables-from-pdf-documents">
+  Extracting Tables from PDF Documents
+  <a class="anchor" href="#extracting-tables-from-pdf-documents">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.<br>
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.</p>
+<hr>
+<h2 id="code-sample">
+  code sample
+  <a class="anchor" href="#code-sample">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Tk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> askopenfilename, asksaveasfilename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hide the main Tkinter window</span>
+</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Tk()
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Select a PDF file</span>
+</span></span><span style="display:flex;"><span>pdf_file <span style="color:#f92672">=</span> askopenfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select PDF File&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF files&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No PDF file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Extract tables from the PDF using Camelot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines</span>
+</span></span><span style="display:flex;"><span>tables <span style="color:#f92672">=</span> camelot<span style="color:#f92672">.</span>read_pdf(pdf_file, pages<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, flavor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lattice&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tables<span style="color:#f92672">.</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No tables found in the PDF.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Number of tables found: </span><span style="color:#e6db74">{</span>tables<span style="color:#f92672">.</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Select the location to save the Excel file</span>
+</span></span><span style="display:flex;"><span>excel_file <span style="color:#f92672">=</span> asksaveasfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Save as Excel&#34;</span>,
+</span></span><span style="display:flex;"><span>    defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.xlsx&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;Excel files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> excel_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No Excel file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Save all extracted tables into an Excel file, each table in a separate sheet</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(excel_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, table <span style="color:#f92672">in</span> enumerate(tables):
+</span></span><span style="display:flex;"><span>        sheet_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Table_</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># Sheet name for each table</span>
+</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p> <br>
+
+<a
+   href="https://sunnybong.tistory.com/940" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+>original post (Kor)</a>
+</p></p>
+  </article>
+  
 
   
  
@@ -802,6 +802,11 @@ However, for documents with heavy design elements, Python sometimes fails to rec
     <li class="book-section-flat">
       <span>Tags</span>
       <ul>
+      
+        <li class="flex justify-between">
+          <a href="https://mcjoi.github.io/tags/python/">Python</a>
+          <span>3</span>
+        </li>
       
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/camera/">Camera</a>
@@ -846,11 +851,6 @@ However, for documents with heavy design elements, Python sometimes fails to rec
         <li class="flex justify-between">
           <a href="https://mcjoi.github.io/tags/windows/">Windows</a>
           <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>3</span>
         </li>
       
       </ul>
