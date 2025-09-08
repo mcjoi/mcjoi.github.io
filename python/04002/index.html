@@ -4,83 +4,67 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Create folders by file extension and move the file
+  Extracting Tables from PDF Documents
   #
 
 
   What is it?
   #
 
-I created a program that, in a folder containing files with various types of extensions, generates folders only for the desired extensions and moves the corresponding files into them.
-When compiled into an exe file, it can run lightweight on Windows.
+I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.
 
 
   code sample
   #
 
-import os
-import tkinter
-from tkinter import filedialog
+import camelot
+import pandas as pd
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename, asksaveasfilename
 
-import shutil
-
-# 폴더선택
-root = tkinter.Tk()
+# Hide the main Tkinter window
+root = Tk()
 root.withdraw()
-dir_path = filedialog.askdirectory(
-    parent=root, initialdir=&#34;/&#34;, title=&#39;Please select a directory&#39;)
-print(&#34;\ndir_path : &#34;, dir_path)
 
+# 1. Select a PDF file
+pdf_file = askopenfilename(
+    title=&#34;Select PDF File&#34;,
+    filetypes=[(&#34;PDF files&#34;, &#34;*.pdf&#34;)]
+)
 
-# 폴더내파일검사
-global_cache = {}
+if not pdf_file:
+    print(&#34;No PDF file selected.&#34;)
+    exit()
 
-def cached_listdir(path):
-    res = global_cache.get(path)
-    if res is None:
-        res = os.listdir(path)
-        global_cache[path] = res
-    return res
+# 2. Extract tables from the PDF using Camelot
+# &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines
+tables = camelot.read_pdf(pdf_file, pages=&#39;all&#39;, flavor=&#39;lattice&#39;)
 
+if tables.n == 0:
+    print(&#34;No tables found in the PDF.&#34;)
+    exit()
 
-def moveFile(ext, str):
-    # 현재 파일 위치
-    filePath = dir_path &#43; &#39;/&#39; &#43; item        
-    # 옮길 파일 위치
-    finalPath = dir_path &#43; &#39;/&#39; &#43; str &#43; &#39;/&#39; &#43; item        
-   
-    if os.path.isfile(filePath):
-        shutil.move(filePath, finalPath)
-           
+print(f&#34;Number of tables found: {tables.n}&#34;)
 
-if __name__ == &#39;__main__&#39;:
-   
-    # 기본 폴더 생성
-    newdir = [&#34;RAW&#34;, &#34;MOV&#34;]
-    for nd in newdir :
-        newtDir = dir_path &#43; &#39;/&#39; &#43; nd
-        if not os.path.isdir(newtDir):
-            os.mkdir(newtDir)
-   
+# 3. Select the location to save the Excel file
+excel_file = asksaveasfilename(
+    title=&#34;Save as Excel&#34;,
+    defaultextension=&#34;.xlsx&#34;,
+    filetypes=[(&#34;Excel files&#34;, &#34;*.xlsx&#34;)]
+)
 
-    # 각 기본 폴더에 옮겨질 확장자 리스트 정의
-    extList = {&#34;RAW&#34; : [&#34;arw&#34;, &#34;nef&#34;],
-               &#34;MOV&#34; : [&#34;mov&#34;, &#34;mp4&#34;],
-               }
-     
-    for item in cached_listdir(dir_path):
-       
-        # RAW에 해당하는 확장자인 경우        
-        for extItem in extList[&#34;RAW&#34;] :
-            if item.rpartition(&#34;.&#34;)[2] == extItem :
-                moveFile(extItem, &#34;RAW&#34;)
+if not excel_file:
+    print(&#34;No Excel file selected.&#34;)
+    exit()
 
-        # MOV에 해당하는 확장자인 경우
-        for extItem in extList[&#34;MOV&#34;] :
-            if item.rpartition(&#34;.&#34;)[2] == extItem :
-                moveFile(extItem, &#34;MOV&#34;)
+# 4. Save all extracted tables into an Excel file, each table in a separate sheet
+with pd.ExcelWriter(excel_file, engine=&#39;openpyxl&#39;) as writer:
+    for i, table in enumerate(tables):
+        sheet_name = f&#34;Table_{i&#43;1}&#34;  # Sheet name for each table
+        table.df.to_excel(writer, index=False, sheet_name=sheet_name)
 
-    print(&#34;complete&#34;)  
+print(f&#34;Excel file saved successfully: {excel_file}&#34;)
  
 
 original post (Kor)
@@ -92,23 +76,23 @@ original post (Kor)
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
 <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/python/04002/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="[◇] Move file by extensions">
-  <meta property="og:description" content="Create folders by file extension and move the file # What is it? # I created a program that, in a folder containing files with various types of extensions, generates folders only for the desired extensions and moves the corresponding files into them.
-When compiled into an exe file, it can run lightweight on Windows.
-code sample # import os import tkinter from tkinter import filedialog import shutil # 폴더선택 root = tkinter.Tk() root.withdraw() dir_path = filedialog.askdirectory( parent=root, initialdir=&#34;/&#34;, title=&#39;Please select a directory&#39;) print(&#34;\ndir_path : &#34;, dir_path) # 폴더내파일검사 global_cache = {} def cached_listdir(path): res = global_cache.get(path) if res is None: res = os.listdir(path) global_cache[path] = res return res def moveFile(ext, str): # 현재 파일 위치 filePath = dir_path &#43; &#39;/&#39; &#43; item # 옮길 파일 위치 finalPath = dir_path &#43; &#39;/&#39; &#43; str &#43; &#39;/&#39; &#43; item if os.path.isfile(filePath): shutil.move(filePath, finalPath) if __name__ == &#39;__main__&#39;: # 기본 폴더 생성 newdir = [&#34;RAW&#34;, &#34;MOV&#34;] for nd in newdir : newtDir = dir_path &#43; &#39;/&#39; &#43; nd if not os.path.isdir(newtDir): os.mkdir(newtDir) # 각 기본 폴더에 옮겨질 확장자 리스트 정의 extList = {&#34;RAW&#34; : [&#34;arw&#34;, &#34;nef&#34;], &#34;MOV&#34; : [&#34;mov&#34;, &#34;mp4&#34;], } for item in cached_listdir(dir_path): # RAW에 해당하는 확장자인 경우 for extItem in extList[&#34;RAW&#34;] : if item.rpartition(&#34;.&#34;)[2] == extItem : moveFile(extItem, &#34;RAW&#34;) # MOV에 해당하는 확장자인 경우 for extItem in extList[&#34;MOV&#34;] : if item.rpartition(&#34;.&#34;)[2] == extItem : moveFile(extItem, &#34;MOV&#34;) print(&#34;complete&#34;) original post (Kor)">
+  <meta property="og:title" content="[◇] Extracting Tables from PDF">
+  <meta property="og:description" content="Extracting Tables from PDF Documents # What is it? # I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.
+code sample # import camelot import pandas as pd from tkinter import Tk from tkinter.filedialog import askopenfilename, asksaveasfilename # Hide the main Tkinter window root = Tk() root.withdraw() # 1. Select a PDF file pdf_file = askopenfilename( title=&#34;Select PDF File&#34;, filetypes=[(&#34;PDF files&#34;, &#34;*.pdf&#34;)] ) if not pdf_file: print(&#34;No PDF file selected.&#34;) exit() # 2. Extract tables from the PDF using Camelot # &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines tables = camelot.read_pdf(pdf_file, pages=&#39;all&#39;, flavor=&#39;lattice&#39;) if tables.n == 0: print(&#34;No tables found in the PDF.&#34;) exit() print(f&#34;Number of tables found: {tables.n}&#34;) # 3. Select the location to save the Excel file excel_file = asksaveasfilename( title=&#34;Save as Excel&#34;, defaultextension=&#34;.xlsx&#34;, filetypes=[(&#34;Excel files&#34;, &#34;*.xlsx&#34;)] ) if not excel_file: print(&#34;No Excel file selected.&#34;) exit() # 4. Save all extracted tables into an Excel file, each table in a separate sheet with pd.ExcelWriter(excel_file, engine=&#39;openpyxl&#39;) as writer: for i, table in enumerate(tables): sheet_name = f&#34;Table_{i&#43;1}&#34; # Sheet name for each table table.df.to_excel(writer, index=False, sheet_name=sheet_name) print(f&#34;Excel file saved successfully: {excel_file}&#34;) original post (Kor)">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="python">
     <meta property="article:published_time" content="2025-08-13T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-08-13T00:00:00+00:00">
     <meta property="article:tag" content="Python">
-<title>[◇] Move file by extensions | shaaaaallow Dive</title>
+<title>[◇] Extracting Tables from PDF | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/python/04002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.d36427ac8f54c22927c8a16b6a047ae2ce33ac9ef42c86ba6f96b0e8f98d65f6.css" integrity="sha256-02QnrI9UwiknyKFragR64s4zrJ70LIa6b5aw6PmNZfY=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.d1d69a7641864a434f0ced3061cea859dfdde43f79cb2d96f67df076792183d0.js" integrity="sha256-0daadkGGSkNPDO0wYc6oWd/d5D95yy2W9n3wdnkhg9A=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.3d8a17bcd2fdf4554d158f2163329f93854f71a5add709f7724a617dbd8fbc2b.js" integrity="sha256-PYoXvNL99FVNFY8hYzKfk4VPcaWt1wn3ckphfb2PvCs=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -334,6 +318,12 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/python/04002/" class="active">
+                  [◇] Extracting Tables from PDF
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/python/04002/" class="active">
                   [◇] Move file by extensions
                 </a>
               </li>
@@ -512,7 +502,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>[◇] Move file by extensions</h3>
+  <h3>[◇] Extracting Tables from PDF</h3>
 
   <label for="toc-control">
     
@@ -543,88 +533,72 @@ if(window.wcs) {
       
       
   
-  <article class="markdown book-article"><h1 id="create-folders-by-file-extension-and-move-the-file">
-  Create folders by file extension and move the file
-  <a class="anchor" href="#create-folders-by-file-extension-and-move-the-file">#</a>
+  <article class="markdown book-article"><h1 id="extracting-tables-from-pdf-documents">
+  Extracting Tables from PDF Documents
+  <a class="anchor" href="#extracting-tables-from-pdf-documents">#</a>
 </h1>
 <h2 id="what-is-it">
   What is it?
   <a class="anchor" href="#what-is-it">#</a>
 </h2>
-<p>I created a program that, in a folder containing files with various types of extensions, generates folders only for the desired extensions and moves the corresponding files into them.</p>
-<p>When compiled into an exe file, it can run lightweight on Windows.</p>
+<p>I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.<br>
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.</p>
 <hr>
 <h2 id="code-sample">
   code sample
   <a class="anchor" href="#code-sample">#</a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Tk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> askopenfilename, asksaveasfilename
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> shutil
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 폴더선택</span>
-</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> tkinter<span style="color:#f92672">.</span>Tk()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hide the main Tkinter window</span>
+</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Tk()
 </span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
-</span></span><span style="display:flex;"><span>dir_path <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askdirectory(
-</span></span><span style="display:flex;"><span>    parent<span style="color:#f92672">=</span>root, initialdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Please select a directory&#39;</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">dir_path : &#34;</span>, dir_path)
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Select a PDF file</span>
+</span></span><span style="display:flex;"><span>pdf_file <span style="color:#f92672">=</span> askopenfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select PDF File&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF files&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 폴더내파일검사</span>
-</span></span><span style="display:flex;"><span>global_cache <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No PDF file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cached_listdir</span>(path):
-</span></span><span style="display:flex;"><span>    res <span style="color:#f92672">=</span> global_cache<span style="color:#f92672">.</span>get(path)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> res <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
-</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(path)
-</span></span><span style="display:flex;"><span>        global_cache[path] <span style="color:#f92672">=</span> res
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Extract tables from the PDF using Camelot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines</span>
+</span></span><span style="display:flex;"><span>tables <span style="color:#f92672">=</span> camelot<span style="color:#f92672">.</span>read_pdf(pdf_file, pages<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, flavor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lattice&#39;</span>)
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tables<span style="color:#f92672">.</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No tables found in the PDF.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moveFile</span>(ext, str):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 현재 파일 위치</span>
-</span></span><span style="display:flex;"><span>    filePath <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> item        
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 옮길 파일 위치</span>
-</span></span><span style="display:flex;"><span>    finalPath <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> str <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> item        
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isfile(filePath):
-</span></span><span style="display:flex;"><span>        shutil<span style="color:#f92672">.</span>move(filePath, finalPath)
-</span></span><span style="display:flex;"><span>           
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Number of tables found: </span><span style="color:#e6db74">{</span>tables<span style="color:#f92672">.</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 기본 폴더 생성</span>
-</span></span><span style="display:flex;"><span>    newdir <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;RAW&#34;</span>, <span style="color:#e6db74">&#34;MOV&#34;</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> nd <span style="color:#f92672">in</span> newdir :
-</span></span><span style="display:flex;"><span>        newtDir <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> nd
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isdir(newtDir):
-</span></span><span style="display:flex;"><span>            os<span style="color:#f92672">.</span>mkdir(newtDir)
-</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Select the location to save the Excel file</span>
+</span></span><span style="display:flex;"><span>excel_file <span style="color:#f92672">=</span> asksaveasfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Save as Excel&#34;</span>,
+</span></span><span style="display:flex;"><span>    defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.xlsx&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;Excel files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 각 기본 폴더에 옮겨질 확장자 리스트 정의</span>
-</span></span><span style="display:flex;"><span>    extList <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;RAW&#34;</span> : [<span style="color:#e6db74">&#34;arw&#34;</span>, <span style="color:#e6db74">&#34;nef&#34;</span>],
-</span></span><span style="display:flex;"><span>               <span style="color:#e6db74">&#34;MOV&#34;</span> : [<span style="color:#e6db74">&#34;mov&#34;</span>, <span style="color:#e6db74">&#34;mp4&#34;</span>],
-</span></span><span style="display:flex;"><span>               }
-</span></span><span style="display:flex;"><span>     
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> cached_listdir(dir_path):
-</span></span><span style="display:flex;"><span>       
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># RAW에 해당하는 확장자인 경우        </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> extItem <span style="color:#f92672">in</span> extList[<span style="color:#e6db74">&#34;RAW&#34;</span>] :
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>rpartition(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> extItem :
-</span></span><span style="display:flex;"><span>                moveFile(extItem, <span style="color:#e6db74">&#34;RAW&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> excel_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No Excel file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># MOV에 해당하는 확장자인 경우</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> extItem <span style="color:#f92672">in</span> extList[<span style="color:#e6db74">&#34;MOV&#34;</span>] :
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>rpartition(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> extItem :
-</span></span><span style="display:flex;"><span>                moveFile(extItem, <span style="color:#e6db74">&#34;MOV&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Save all extracted tables into an Excel file, each table in a separate sheet</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(excel_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, table <span style="color:#f92672">in</span> enumerate(tables):
+</span></span><span style="display:flex;"><span>        sheet_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Table_</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># Sheet name for each table</span>
+</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;complete&#34;</span>)  
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span></code></pre></div><p> <br>
 
 <a
-   href="https://sunnybong.tistory.com/742" 
+   href="https://sunnybong.tistory.com/940" 
    target="_blank" rel="noopener" 
   class="book-btn"
 >original post (Kor)</a>
@@ -647,6 +621,12 @@ if(window.wcs) {
   </span>
   
   <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/python/04002/" class="flex align-center book-icon">
+      <span>[◇] Move file by extensions →</span>
+      
+    </a>
   
   </span>
 </div>
