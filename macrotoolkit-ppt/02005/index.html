@@ -87,7 +87,7 @@ Changes slide size based on pixel dimensions.">
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
 <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-ppt/02005/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="Sctipt - slide">
+  <meta property="og:title" content="ℹ️ Sctipt - slide">
   <meta property="og:description" content="Sctipt - slide # What is it? # Useful functions for handling slide.
 jpg export # Exports selected slides as JPG files.
 Sub jpgExport() Dim pptPres As Presentation Dim filePath As String Dim slidenum As String Dim slicePageNum() As String Dim pagenum As Integer Dim i As Integer On Error GoTo Err_Check Set pptPres = ActivePresentation If pptPres.Path = &#34;&#34; Then MsgBox &#34;프레젠테이션이 파일로 저장되지 않았습니다. 저장 후 다시 시도하세요.&#34;, vbExclamation Exit Sub Else filePath = pptPres.Path End If slidenum = InputBox(&#34;Input PageNumber&#34;) If InStr(slidenum, &#34;,&#34;) Then slicePageNum = Split(Replace(slidenum, &#34; &#34;, &#34;&#34;), &#34;,&#34;) For i = LBound(slicePageNum) To UBound(slicePageNum) On Error Resume Next pagenum = CInt(slicePageNum(i)) If IsNumeric(pagenum) And pagenum &lt;= pptPres.Slides.Count Then With pptPres.Slides(pagenum) .Export filePath &amp; &#34;\Slide&#34; &amp; pagenum &amp; &#34;.jpg&#34;, &#34;JPG&#34; End With Else MsgBox &#34;non-numeric value or wrong page number: &#34; &amp; slicePageNum(i), vbExclamation End If On Error GoTo Err_Check Next i Else pagenum = CInt(slidenum) If IsNumeric(pagenum) And pagenum &lt;= pptPres.Slides.Count Then With pptPres.Slides(pagenum) .Export filePath &amp; &#34;\Slide&#34; &amp; pagenum &amp; &#34;.jpg&#34;, &#34;JPG&#34; End With Else MsgBox &#34;non-numeric value or wrong page number&#34;, vbExclamation Exit Sub End If End If MsgBox &#34;export complete&#34; Exit Sub Err_Check: MsgBox &#34;오류번호: &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용: &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; Exit Sub End Sub slide_resizes # Changes slide size based on pixel dimensions.">
@@ -99,13 +99,13 @@ Sub jpgExport() Dim pptPres As Presentation Dim filePath As String Dim slidenum 
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>Sctipt - slide | shaaaaallow Dive</title>
+<title>ℹ️ Sctipt - slide | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02005/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.915e9fdaf38b70b3909d2d802a4865dd534e67901acb5096c4ca460f2181d2fe.css" integrity="sha256-kV6f2vOLcLOQnS2AKkhl3VNOZ5Aay1CWxMpGDyGB0v4=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.7858f022438c22a84c6fda6c7c34ca01a39f7590dbcbf08c53fc6d1183d470a7.js" integrity="sha256-eFjwIkOMIqhMb9psfDTKAaOfdZDby/CMU/xtEYPUcKc=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.8568c22bfeea2dfeb4dcbbae49d6e36c700d8e03869a08419c6c0ed77babc592.js" integrity="sha256-hWjCK/7qLf603LuuSdbjbHANjgOGmghBnGwO13urxZI=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -187,31 +187,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
-                  Script - Cell format
+                  ℹ️ Script - Cell format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-                  Script - Value format
+                  ℹ️ Script - Value format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-                  Script - Function
+                  ℹ️ Script - Function
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
-                  Script - Data Util
+                  ℹ️ Script - Data Util
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/" >
-                  Script - Sheet Visibility
+                  ℹ️ Script - Sheet Visibility
                 </a>
               </li>
             
@@ -239,31 +239,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/" >
-                  Sctipt - table
+                  ℹ️ Sctipt - table
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" >
-                  Sctipt - color
+                  ℹ️ Sctipt - color
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" >
-                  Sctipt - text
+                  ℹ️ Sctipt - text
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" class="active">
-                  Sctipt - slide
+                  ℹ️ Sctipt - slide
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" >
-                  Sctipt - shape
+                  ℹ️ Sctipt - shape
                 </a>
               </li>
             
@@ -405,12 +405,6 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/windows_linux/06002/" >
-                  ℹ️ Windows path setting to TXT
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://mcjoi.github.io/windows_linux/06003/" >
                   ℹ️ Windows10 Clipboard
                 </a>
               </li>
@@ -527,7 +521,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Sctipt - slide</h3>
+  <h3>ℹ️ Sctipt - slide</h3>
 
   <label for="toc-control">
     
@@ -655,7 +649,7 @@ if(window.wcs) {
       
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" class="flex align-center book-icon">
       
-      <span>← Sctipt - text</span>
+      <span>← ℹ️ Sctipt - text</span>
     </a>
   
   </span>
@@ -664,7 +658,7 @@ if(window.wcs) {
   
     
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" class="flex align-center book-icon">
-      <span>Sctipt - shape →</span>
+      <span>ℹ️ Sctipt - shape →</span>
       
     </a>
   

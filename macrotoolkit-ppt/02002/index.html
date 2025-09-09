@@ -96,7 +96,7 @@ Adjusts table size via UserForm.
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
 <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-ppt/02002/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="Sctipt - table">
+  <meta property="og:title" content="ℹ️ Sctipt - table">
   <meta property="og:description" content="Sctipt - table # What is it? # Useful functions for handling tables.
 Make Table # Creates frequently used table templates.
 Sub tableMaker(control As IRibbonControl) On Error GoTo Err_Check Dim myt As shape Dim idx As Integer Dim cnum As Integer Dim rnum As Integer Dim c As Integer Dim r As Integer idx = ActiveWindow.View.slide.slideIndex Set myt = ActivePresentation.Slides(idx).Shapes.AddTable(4, 4) cnum = myt.Table.Columns.Count rnum = myt.Table.Rows.Count With myt.Table For c = 1 To cnum For r = 1 To rnum If r = 1 Then .cell(r, c).Borders(ppBorderTop).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderTop).Weight = 0.5 .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 .cell(r, c).shape.Fill.ForeColor.RGB = RGB(242, 242, 242) Else .cell(r, c).shape.Fill.ForeColor.RGB = RGB(255, 255, 255) End If If c &lt; cnum Then .cell(r, c).Borders(ppBorderRight).ForeColor.RGB = RGB(191, 191, 191) .cell(r, c).Borders(ppBorderRight).Weight = 0.5 End If If r &gt; 1 And r &lt; rnum Then .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(191, 191, 191) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 End If If r = rnum Then .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 End If .cell(r, c).shape.TextFrame.TextRange.Font.size = 12 .cell(r, c).shape.TextFrame.TextRange.Font.Bold = msoFalse .cell(r, c).shape.TextFrame.TextRange.Font.Name = &#34;맑은 고딕&#34; .cell(r, c).shape.TextFrame.TextRange.Font.Color.RGB = RGB(0, 0, 0) .cell(r, c).shape.TextFrame.TextRange.ParagraphFormat.Alignment = ppAlignCenter .cell(r, c).shape.TextFrame.VerticalAnchor = msoAnchorMiddle Next r Next c End With Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If End Sub Table Size # Adjusts table size via UserForm. → Refer to the .PPAM file for the userForm code.">
@@ -108,13 +108,13 @@ Sub tableMaker(control As IRibbonControl) On Error GoTo Err_Check Dim myt As sha
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>Sctipt - table | shaaaaallow Dive</title>
+<title>ℹ️ Sctipt - table | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02002/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.915e9fdaf38b70b3909d2d802a4865dd534e67901acb5096c4ca460f2181d2fe.css" integrity="sha256-kV6f2vOLcLOQnS2AKkhl3VNOZ5Aay1CWxMpGDyGB0v4=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.7858f022438c22a84c6fda6c7c34ca01a39f7590dbcbf08c53fc6d1183d470a7.js" integrity="sha256-eFjwIkOMIqhMb9psfDTKAaOfdZDby/CMU/xtEYPUcKc=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.8568c22bfeea2dfeb4dcbbae49d6e36c700d8e03869a08419c6c0ed77babc592.js" integrity="sha256-hWjCK/7qLf603LuuSdbjbHANjgOGmghBnGwO13urxZI=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -196,31 +196,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
-                  Script - Cell format
+                  ℹ️ Script - Cell format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-                  Script - Value format
+                  ℹ️ Script - Value format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-                  Script - Function
+                  ℹ️ Script - Function
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
-                  Script - Data Util
+                  ℹ️ Script - Data Util
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/" >
-                  Script - Sheet Visibility
+                  ℹ️ Script - Sheet Visibility
                 </a>
               </li>
             
@@ -248,31 +248,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/" class="active">
-                  Sctipt - table
+                  ℹ️ Sctipt - table
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" >
-                  Sctipt - color
+                  ℹ️ Sctipt - color
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" >
-                  Sctipt - text
+                  ℹ️ Sctipt - text
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" >
-                  Sctipt - slide
+                  ℹ️ Sctipt - slide
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" >
-                  Sctipt - shape
+                  ℹ️ Sctipt - shape
                 </a>
               </li>
             
@@ -414,12 +414,6 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/windows_linux/06002/" >
-                  ℹ️ Windows path setting to TXT
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://mcjoi.github.io/windows_linux/06003/" >
                   ℹ️ Windows10 Clipboard
                 </a>
               </li>
@@ -536,7 +530,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Sctipt - table</h3>
+  <h3>ℹ️ Sctipt - table</h3>
 
   <label for="toc-control">
     
@@ -719,7 +713,7 @@ if(window.wcs) {
   
     
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" class="flex align-center book-icon">
-      <span>Sctipt - color →</span>
+      <span>ℹ️ Sctipt - color →</span>
       
     </a>
   

@@ -9,7 +9,14 @@
 
 a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-">
+
+
+  Creating a TXT File of Environment Variables
+  #
+
+Normally, there&rsquo;s little need to mess with Windows environment variables.
+However, if you&rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.
+When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
@@ -19,7 +26,9 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
   <meta property="og:site_name" content="shaaaaallow Dive">
   <meta property="og:title" content="ℹ️ useful command">
   <meta property="og:description" content="bypasses the script execution policy # a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass">
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass Creating a TXT File of Environment Variables # Normally, there’s little need to mess with Windows environment variables.
+However, if you’re using development tools or portable programs, you may need to register the PATH variable at least.
+When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="windows_linux">
@@ -33,7 +42,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass">
 <link rel="canonical" href="https://mcjoi.github.io/windows_linux/06001/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.915e9fdaf38b70b3909d2d802a4865dd534e67901acb5096c4ca460f2181d2fe.css" integrity="sha256-kV6f2vOLcLOQnS2AKkhl3VNOZ5Aay1CWxMpGDyGB0v4=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.7858f022438c22a84c6fda6c7c34ca01a39f7590dbcbf08c53fc6d1183d470a7.js" integrity="sha256-eFjwIkOMIqhMb9psfDTKAaOfdZDby/CMU/xtEYPUcKc=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.8568c22bfeea2dfeb4dcbbae49d6e36c700d8e03869a08419c6c0ed77babc592.js" integrity="sha256-hWjCK/7qLf603LuuSdbjbHANjgOGmghBnGwO13urxZI=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -115,31 +124,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
-                  Script - Cell format
+                  ℹ️ Script - Cell format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-                  Script - Value format
+                  ℹ️ Script - Value format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-                  Script - Function
+                  ℹ️ Script - Function
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
-                  Script - Data Util
+                  ℹ️ Script - Data Util
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/" >
-                  Script - Sheet Visibility
+                  ℹ️ Script - Sheet Visibility
                 </a>
               </li>
             
@@ -167,31 +176,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/" >
-                  Sctipt - table
+                  ℹ️ Sctipt - table
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" >
-                  Sctipt - color
+                  ℹ️ Sctipt - color
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" >
-                  Sctipt - text
+                  ℹ️ Sctipt - text
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" >
-                  Sctipt - slide
+                  ℹ️ Sctipt - slide
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" >
-                  Sctipt - shape
+                  ℹ️ Sctipt - shape
                 </a>
               </li>
             
@@ -333,12 +342,6 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/windows_linux/06002/" >
-                  ℹ️ Windows path setting to TXT
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://mcjoi.github.io/windows_linux/06003/" >
                   ℹ️ Windows10 Clipboard
                 </a>
               </li>
@@ -488,6 +491,27 @@ if(window.wcs) {
 <p>a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 </span></span></code></pre></div><hr>
+<h1 id="creating-a-txt-file-of-environment-variables">
+  Creating a TXT File of Environment Variables
+  <a class="anchor" href="#creating-a-txt-file-of-environment-variables">#</a>
+</h1>
+<p>Normally, there&rsquo;s little need to mess with Windows environment variables.</p>
+<p>However, if you&rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.</p>
+<p>When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?</p>
+<p>If you type <code>set</code> in the Command Prompt, you can view all environment variables. Of course, this isn’t exactly its intended use, but…</p>
+<p>This command below saves the environment variables to a TXT file at the specified path. Be sure to include the <code>&gt;</code> symbol.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span><span style="color:#66d9ef">set</span> &gt; c:\[desired path to save the txt file]\[filename].txt
+</span></span></code></pre></div><p>Since you can check the PATH settings in the TXT file, you can copy them and apply them to another PC as needed.</p>
+<p>That’s it.</p>
+<p> <br>
+
+<a
+   href="https://sunnybong.tistory.com/680" 
+   target="_blank" rel="noopener" 
+  class="book-btn danger"
+>original post (Kor)</a>
+</p>
+<hr>
 </article>
  
       
@@ -503,7 +527,7 @@ if(window.wcs) {
   
     
     <a href="https://mcjoi.github.io/windows_linux/06002/" class="flex align-center book-icon">
-      <span>ℹ️ Windows path setting to TXT →</span>
+      <span>ℹ️ Windows10 Clipboard →</span>
       
     </a>
   
