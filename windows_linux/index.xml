@@ -22,5 +22,12 @@
       <guid>https://mcjoi.github.io/windows_linux/06002/</guid>
       <description>&lt;h1 id=&#34;creating-a-txt-file-of-environment-variables&#34;&gt;&#xA;  Creating a TXT File of Environment Variables&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#creating-a-txt-file-of-environment-variables&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Normally, there&amp;rsquo;s little need to mess with Windows environment variables.&lt;/p&gt;&#xA;&lt;p&gt;However, if you&amp;rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.&lt;/p&gt;&#xA;&lt;p&gt;When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?&lt;/p&gt;&#xA;&lt;p&gt;If you type &lt;code&gt;set&lt;/code&gt; in the Command Prompt, you can view all environment variables. Of course, this isn’t exactly its intended use, but…&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>ℹ️ Windows10 Clipboard</title>
+      <link>https://mcjoi.github.io/windows_linux/06003/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/windows_linux/06003/</guid>
+      <description>&lt;h1 id=&#34;clipboard-permanently-store-frequently-used-text&#34;&gt;&#xA;  Clipboard: Permanently Store Frequently Used Text&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#clipboard-permanently-store-frequently-used-text&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;One of my favorite recent features in Windows 10 is the ability to save frequently used text in the clipboard and use it like a snippet whenever needed. You could use tools like sticker memos, but if you have text that you use very often, this method is by far the most efficient.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/06003/clipboard.webp&#34; alt=&#34;image&#34; title=&#34;image&#34;/&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Most people know that pressing Ctrl + C copies a single image or text to the clipboard. However, after copying with Ctrl + C, instead of pressing Ctrl + V, press Windows Key + V to open the clipboard history.&#xA;You’ll see previously copied items, and you can click the one you want to paste. As mentioned earlier, if you want to store something permanently, click the three dots on the right and choose Pin. If your permanent items are pushed down due to too many copied entries, click Clear All so only your pinned items remain.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
