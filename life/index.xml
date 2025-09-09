@@ -6,7 +6,7 @@
     <description>Recent content in Life on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sony Creative Look</title>
@@ -28,6 +28,13 @@
       <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/life/08005/</guid>
       <description>&lt;h1 id=&#34;using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;&#xA;  Using an APS-C Lens on a Full-Frame Camera&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a7c2-sigma-56mm&#34;&gt;&#xA;  A7C2, Sigma 56mm&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#a7c2-sigma-56mm&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Normally, crop lenses with a smaller image circle tend to reveal frustrating black edges when used on full-frame cameras. However, some lenses have an unusually large image circle, making them usable even on full-frame bodies. One of my favorite lenses in this category is the Sigma 56mm.&lt;/p&gt;&#xA;&lt;p&gt;The shape of the image circle becomes more defined as you stop down the aperture, so I tried shooting at the maximum aperture to see the effect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration_sitemap_on_GSC</title>
+      <link>https://mcjoi.github.io/life/08006/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08006/</guid>
+      <description>&lt;h1 id=&#34;issue-when-submitting-sitemap-to-google-search-console&#34;&gt;&#xA;  Issue When Submitting Sitemap to Google Search Console&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#issue-when-submitting-sitemap-to-google-search-console&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sitemapxml-registration-failure&#34;&gt;&#xA;  sitemap.xml Registration Failure&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#sitemapxml-registration-failure&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;sitemap-generation&#34;&gt;&#xA;  Sitemap Generation&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#sitemap-generation&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
