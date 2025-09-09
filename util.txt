@@ -26,3 +26,6 @@ markdown image
 ![image](https://raw.githubusercontent.com/mcjoi/img1-repo/main/userform_xls.webp "image")
 
 
+▶️ represents an ongoing or updated project.    
+⏹️ represents a completed project.    
+ℹ️ represents a knowledge snippet note.   
