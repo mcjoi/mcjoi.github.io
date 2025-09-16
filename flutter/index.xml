@@ -9,28 +9,28 @@
     <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ℹ️ Init Flutter APIs</title>
+      <title>Init Flutter APIs</title>
       <link>https://mcjoi.github.io/flutter/05001/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/flutter/05001/</guid>
       <description>&lt;h2 id=&#34;init-flutter-apis&#34;&gt;&#xA;  Init Flutter APIs&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#init-flutter-apis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;the Flutter framework and widget binding are initialized before you use any Flutter APIs.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; main() &lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  WidgetsFlutterBinding.ensureInitialized();  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Example: Initialize Firebase or other async services&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; Firebase.initializeApp();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  runApp(MyApp());&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;a&#xA;   href=&#34;https://sunnybong.tistory.com/792&#34; &#xA;   target=&#34;_blank&#34; rel=&#34;noopener&#34; &#xA;  class=&#34;book-btn&#34;&#xA;&gt;original post (Kor)&lt;/a&gt;</description>
     </item>
     <item>
-      <title>⏹️ Windows Desktop Shortcut</title>
+      <title>Windows Desktop Shortcut</title>
       <link>https://mcjoi.github.io/flutter/05002/</link>
       <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/flutter/05002/</guid>
       <description>&lt;h1 id=&#34;windows-shortcut---flutter-desktop&#34;&gt;&#xA;  Windows Shortcut - Flutter Desktop&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#windows-shortcut---flutter-desktop&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;inspiration&#34;&gt;&#xA;  Inspiration&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#inspiration&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Organizing and keeping track of countless applications, folders, and web URLs scattered across Windows can be a tedious task. In that sense, Rainmeter is an excellent tool, offering a sleek way to manage and access resources directly from your desktop.&lt;/p&gt;&#xA;&lt;p&gt;That said, there’s one drawback: adding new bookmarks is unnecessarily cumbersome. Of course, it’s understandable, since bookmark management was never intended to be one of Rainmeter’s core features.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>⏹️ Windows Click Animation</title>
+      <title>Windows Click Animation</title>
       <link>https://mcjoi.github.io/flutter/05003/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/flutter/05003/</guid>
       <description>&lt;h1 id=&#34;windows-mouse-click-animation-lottie&#34;&gt;&#xA;  Windows Mouse Click Animation (Lottie)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#windows-mouse-click-animation-lottie&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…&lt;/p&gt;&#xA;&lt;p&gt;Windows has a long history, but since Vista, I haven’t really come across programs or open-source projects that deal with click animations. Sure, it’s mostly a trivial feature, but the built-in Windows functionality is just… terrible.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>ℹ️ Hiding Google API key</title>
+      <title>Hiding Google API key</title>
       <link>https://mcjoi.github.io/flutter/05004/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/flutter/05004/</guid>
