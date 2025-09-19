@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-  Sctipt - text
+  Sctipt-text
   #
 
 
@@ -139,8 +139,8 @@ End Function
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
 <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-ppt/02004/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="Sctipt - text">
-  <meta property="og:description" content="Sctipt - text # What is it? # Useful functions for handling text.
+  <meta property="og:title" content="Sctipt-text">
+  <meta property="og:description" content="Sctipt-text # What is it? # Useful functions for handling text.
 Text arrange # Adjusts letter spacing of Malgun Gothic font to 0.3.
 zeromargin # Sets margins of text boxes or shapes to zero.
 Sub textMarginZero() On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동 Dim shp As shape Dim activeshape As shape Dim myt As Table Dim z As Double Dim dtb As Double Dim dlr As Double &#39; 선택된 도형이 있는지 확인 If ActiveWindow.Selection.Type = ppSelectionShapes Then For Each shp In ActiveWindow.Selection.ShapeRange Set activeshape = shp Exit For Next shp Else MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34; Exit Sub End If z = 0 dlr = ConvertCmToPoint(0.13) dtb = ConvertCmToPoint(0.25) &#39; 메시지 박스에서 사용자가 선택한 값을 처리 If MsgBox(&#34;To Zero : Yes, To Default : No&#34;, vbYesNo) = vbYes Then If shp.HasTable Then Set myt = shp.Table cnum = myt.Columns.Count rnum = myt.Rows.Count &#39; 테이블 내의 셀에 마진 값 적용 With myt For c = 1 To cnum For r = 1 To rnum .cell(r, c).shape.TextFrame2.MarginTop = z .cell(r, c).shape.TextFrame2.MarginBottom = z .cell(r, c).shape.TextFrame2.MarginLeft = z .cell(r, c).shape.TextFrame2.MarginRight = z .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle Next r Next c End With Else &#39; 테이블이 아닌 경우 일반 텍스트 상자의 마진 값 적용 With shp.TextFrame2 .MarginTop = z .MarginBottom = z .MarginLeft = z .MarginRight = z .VerticalAnchor = msoAnchorMiddle End With End If Else If shp.HasTable Then Set myt = shp.Table cnum = myt.Columns.Count rnum = myt.Rows.Count &#39; 테이블 내의 셀에 기본 마진 값 적용 With myt For c = 1 To cnum For r = 1 To rnum .cell(r, c).shape.TextFrame2.MarginTop = dtb .cell(r, c).shape.TextFrame2.MarginBottom = dtb .cell(r, c).shape.TextFrame2.MarginLeft = dlr .cell(r, c).shape.TextFrame2.MarginRight = dlr .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle Next r Next c End With Else &#39; 테이블이 아닌 경우 일반 텍스트 상자의 기본 마진 값 적용 With shp.TextFrame2 .MarginTop = dtb .MarginBottom = dtb .MarginLeft = dlr .MarginRight = dlr .VerticalAnchor = msoAnchorMiddle End With End If End If Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If End Sub Function ConvertPointToCm(ByVal pnt As Double) As Double ConvertPointToCm = pnt * 0.03527778 End Function Function ConvertCmToPoint(ByVal cm As Double) As Double ConvertCmToPoint = cm * 28.34646 End Function">
@@ -152,13 +152,13 @@ Sub textMarginZero() On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check�
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>Sctipt - text | shaaaaallow Dive</title>
+<title>Sctipt-text | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02004/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.79a783889a79238213494faa2e01b72c6d4d865067fc4047db9068d0718a0a8c.css" integrity="sha256-eaeDiJp5I4ITSU&#43;qLgG3LG1NhlBn/EBH25Bo0HGKCow=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.1916f78c42d48b4f195f8b9340b198bbba3ebee19fe8de6955b468636dbd60b2.js" integrity="sha256-GRb3jELUi08ZX4uTQLGYu7o&#43;vuGf6N5pVbRoY229YLI=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.1baa3038baee3f76d7b22014e9439ef2c0b0a4ae92975257b82d20ad91d2f07b.js" integrity="sha256-G6owOLruP3bXsiAU6UOe8sCwpK6Sl1JXuC0grZHS8Hs=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -236,37 +236,37 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01001/" >
-                  MacroToolkit - Excel
+                  MacroToolkit-Excel
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
-                  Script - Cell format
+                  Script-Cell format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-                  Script - Value format
+                  Script-Value format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-                  Script - Function
+                  Script-Function
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
-                  Script - Data Util
+                  Script-Data Util
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/" >
-                  Script - Sheet Visibility
+                  Script-Sheet Visibility
                 </a>
               </li>
             
@@ -289,37 +289,37 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02001/" >
-                  MacroToolkit - powerpoint
+                  MacroToolkit-powerpoint
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/" >
-                  Sctipt - table
+                  Sctipt-table
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" >
-                  Sctipt - color
+                  Sctipt-color
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" class="active">
-                  Sctipt - text
+                  Sctipt-text
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" >
-                  Sctipt - slide
+                  Sctipt-slide
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" >
-                  Sctipt - shape
+                  Sctipt-shape
                 </a>
               </li>
             
@@ -583,7 +583,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Sctipt - text</h3>
+  <h3>Sctipt-text</h3>
 
   <label for="toc-control">
     
@@ -615,9 +615,9 @@ if(window.wcs) {
       
       
   
-  <article class="markdown book-article"><h1 id="sctipt---text">
-  Sctipt - text
-  <a class="anchor" href="#sctipt---text">#</a>
+  <article class="markdown book-article"><h1 id="sctipt-text">
+  Sctipt-text
+  <a class="anchor" href="#sctipt-text">#</a>
 </h1>
 <h2 id="what-is-it">
   What is it?
@@ -755,7 +755,7 @@ if(window.wcs) {
       
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" class="flex align-center book-icon">
       
-      <span>← Sctipt - color</span>
+      <span>← Sctipt-color</span>
     </a>
   
   </span>
@@ -764,7 +764,7 @@ if(window.wcs) {
   
     
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" class="flex align-center book-icon">
-      <span>Sctipt - slide →</span>
+      <span>Sctipt-slide →</span>
       
     </a>
   
