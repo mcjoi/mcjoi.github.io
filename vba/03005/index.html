@@ -3,25 +3,65 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="
+  Error Handler
+  #
+
+
+  Error Handler with a Class Module
+  #
+
+In VBA, where classes are not frequently used, you might wonder if it’s really necessary to implement an error handler as a class module. Still, compared to writing multiple lines of repetitive code, it might offer a slight improvement—so I decided to give it a try.
+
+
+  your Module
+  #
+
+Dim eh As New ErrorHandler
+&#39;your codes
+On Error GoTo Err_Handler
+&#39;your codes
+Err_Handler:
+    eh.CheckError
+
+  your Class Modues - ErrorHandler
+  #
+
+Option Explicit
+
+Public Sub CheckError()
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;errNo : &#34; &amp; Err.Number &amp; vbCr &amp; _
+               &#34;err : &#34; &amp; Err.Description, vbCritical, &#34;Error&#34;
+        Err.Clear
+    End If
+End Sub
+That said, you still end up writing around four lines of code, so in practice, the benefit may not be that significant.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
 <meta name="google-adsense-account" content="ca-pub-7362089186642274">
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
-<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/tags/blog/">
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/vba/03005/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="Blog">
+  <meta property="og:title" content="Error Handler">
+  <meta property="og:description" content="Error Handler # Error Handler with a Class Module # In VBA, where classes are not frequently used, you might wonder if it’s really necessary to implement an error handler as a class module. Still, compared to writing multiple lines of repetitive code, it might offer a slight improvement—so I decided to give it a try.
+your Module # Dim eh As New ErrorHandler &#39;your codes On Error GoTo Err_Handler &#39;your codes Err_Handler: eh.CheckError your Class Modues - ErrorHandler # Option Explicit Public Sub CheckError() If Err.Number &lt;&gt; 0 Then MsgBox &#34;errNo : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;err : &#34; &amp; Err.Description, vbCritical, &#34;Error&#34; Err.Clear End If End Sub That said, you still end up writing around four lines of code, so in practice, the benefit may not be that significant.">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
-<title>Blog | shaaaaallow Dive</title>
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="vba">
+    <meta property="article:published_time" content="2025-09-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-22T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>Error Handler | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
-<link rel="canonical" href="https://mcjoi.github.io/tags/blog/">
+<link rel="canonical" href="https://mcjoi.github.io/vba/03005/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.a4bab9b6371a04c7c45f2d661c963d5035afcc62ea3bc5291cdcc884adc47e9a.css" integrity="sha256-pLq5tjcaBMfEXy1mHJY9UDWvzGLqO8UpHNzIhK3Efpo=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
   <script defer src="https://mcjoi.github.io/en.search.min.023830f9d8009ddf0e4a2819d577e1d1ef9143b833ec623210f66265d662d7dd.js" integrity="sha256-Ajgw&#43;dgAnd8OSigZ1Xfh0e&#43;RQ7gz7GIyEPZiZdZi190=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://mcjoi.github.io/tags/blog/index.xml" title="shaaaaallow Dive" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -193,7 +233,7 @@ if(window.wcs) {
     
       
       
-      <li class="">        
+      <li class="active">        
         
           <a href="https://mcjoi.github.io/vba/">MS-Office_VBA </a>
 
@@ -228,7 +268,7 @@ if(window.wcs) {
               </li>
             
               <li>
-                <a href="https://mcjoi.github.io/vba/03005/" >
+                <a href="https://mcjoi.github.io/vba/03005/" class="active">
                   Error Handler
                 </a>
               </li>
@@ -452,7 +492,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Blog</h3>
+  <h3>Error Handler</h3>
 
   <label for="toc-control">
     
@@ -465,84 +505,18 @@ if(window.wcs) {
   
   <aside class="hidden clearfix">
     
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <span>Categories</span>
+    <li><a href="#error-handler-with-a-class-module">Error Handler with a Class Module</a>
       <ul>
-      
+        <li><a href="#your-module">your Module</a></li>
+        <li><a href="#your-class-modues---errorhandler">your Class Modues - ErrorHandler</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <span>Tags</span>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/blog/">Blog</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>3</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/camera/">Camera</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/lens/">Lens</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/program/">Program</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/flutter/">Flutter</a>
-          <span>4</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/linux/">Linux</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/windows/">Windows</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
 
   </aside>
@@ -553,52 +527,62 @@ if(window.wcs) {
       
       
   
-  <article class="markdown book-post">
-    <h2>
-      <a href="https://mcjoi.github.io/life/08006/">Registration_sitemap_on_GSC</a>
-    </h2>
-    
-  <div class="flex align-center text-small book-post-date">
-    <img src="https://mcjoi.github.io/svg/calendar.svg" class="book-icon " alt="" />
-    <span>September 9, 2025</span>
-  </div>
-
-
-
-  
-
-  
-  <div class="text-small">
-    
-      <a href="https://mcjoi.github.io/tags/blog/">Blog</a>
-  </div>
-  
-
-
-    <p><h1 id="issue-when-submitting-sitemap-to-search-console">
-  Issue When Submitting Sitemap to Search Console
-  <a class="anchor" href="#issue-when-submitting-sitemap-to-search-console">#</a>
+  <article class="markdown book-article"><h1 id="error-handler">
+  Error Handler
+  <a class="anchor" href="#error-handler">#</a>
 </h1>
-<h2 id="sitemapxml-registration-failure">
-  sitemap.xml Registration Failure
-  <a class="anchor" href="#sitemapxml-registration-failure">#</a>
+<h2 id="error-handler-with-a-class-module">
+  Error Handler with a Class Module
+  <a class="anchor" href="#error-handler-with-a-class-module">#</a>
 </h2>
-<p>Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/08006/001.webp" alt="gsc_fail" title="gsc_fail"/></p>
+<p>In VBA, where classes are not frequently used, you might wonder if it’s really necessary to implement an error handler as a class module. Still, compared to writing multiple lines of repetitive code, it might offer a slight improvement—so I decided to give it a try.</p>
 <hr>
-<h2 id="sitemap-generation">
-  Sitemap Generation
-  <a class="anchor" href="#sitemap-generation">#</a>
-</h2>
-<p>Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.</p></p>
-  </article>
-  
-
-  
+<h3 id="your-module">
+  your Module
+  <a class="anchor" href="#your-module">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> eh <span style="color:#f92672">As</span> <span style="color:#66d9ef">New</span> ErrorHandler
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;your codes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Handler
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;your codes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Err_Handler:
+</span></span><span style="display:flex;"><span>    eh.CheckError
+</span></span></code></pre></div><h3 id="your-class-modues---errorhandler">
+  your Class Modues - ErrorHandler
+  <a class="anchor" href="#your-class-modues---errorhandler">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">CheckError</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;errNo : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>               <span style="color:#e6db74">&#34;err : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;Error&#34;</span>
+</span></span><span style="display:flex;"><span>        Err.Clear
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p>That said, you still end up writing around four lines of code, so in practice, the benefit may not be that significant.</p>
+<p> </p>
+<hr>
+</article>
  
       
 
 
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/vba/03004/" class="flex align-center book-icon">
+      
+      <span>← Project is Unviewable</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+  </span>
+</div>
 
 
       
@@ -614,84 +598,18 @@ if(window.wcs) {
     <aside class="book-toc">
       <div class="book-toc-content">
         
-  <nav>
+  
+<nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <span>Categories</span>
+    <li><a href="#error-handler-with-a-class-module">Error Handler with a Class Module</a>
       <ul>
-      
+        <li><a href="#your-module">your Module</a></li>
+        <li><a href="#your-class-modues---errorhandler">your Class Modues - ErrorHandler</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <span>Tags</span>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/excel/">Excel</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/powerpoint/">Powerpoint</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/vba/">VBA</a>
-          <span>17</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/blog/">Blog</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/python/">Python</a>
-          <span>3</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/camera/">Camera</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/lens/">Lens</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/program/">Program</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/flutter/">Flutter</a>
-          <span>4</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/linux/">Linux</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="https://mcjoi.github.io/tags/windows/">Windows</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
+
 
  
       </div>
