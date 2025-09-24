@@ -110,7 +110,7 @@ Aligns selected shape(s) to the right of the first selected shape.">
 <meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
 <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit-ppt/02006/">
   <meta property="og:site_name" content="shaaaaallow Dive">
-  <meta property="og:title" content="Sctipt-shape">
+  <meta property="og:title" content="└ Sctipt-shape">
   <meta property="og:description" content="Sctipt-shape # What is it? # Useful functions for handling shape.
 align_bottom # Aligns selected shape(s) to the bottom of the first selected shape.
 Sub shapealign_bottom() Dim standardshape As shape Dim shapeName() As String Dim shapenameOrigin() As String Dim selectShapes As ShapeRange Dim arrcount As Integer Dim x As Integer Dim y As Integer Dim culumheight As Single Dim standardshape_height As Single Dim standardshape_width As Single Dim standardshape_left As Single Dim standardshape_top As Single On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동 If ActiveWindow.Selection.Type = ppSelectionShapes Then Set selectShapes = ActiveWindow.Selection.ShapeRange &#39;selected shape name array ReDim Preserve shapeName(selectShapes.Count) ReDim Preserve shapenameOrigin(selectShapes.Count) &#39;selected shape name array count arrcount = UBound(shapeName) - LBound(shapeName) For x = 1 To arrcount shapenameOrigin(x) = selectShapes(x).Name selectShapes(x).Name = selectShapes(x).Name &amp; x Next x For Each shp In selectShapes For x = 1 To arrcount If shapeName(x) = &#34;&#34; Then shapeName(x) = shp.Name Exit For End If Next x Next shp Else MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34; Exit Sub End If &#39; Ensure there is at least one shape to align If arrcount &lt; 1 Then MsgBox &#34;No shapes were selected for alignment!&#34;, vbExclamation Exit Sub End If &#39; Get standard shape dimensions and position standardshape_height = ActiveWindow.Selection.ShapeRange(shapeName(1)).height standardshape_width = ActiveWindow.Selection.ShapeRange(shapeName(1)).width standardshape_left = ActiveWindow.Selection.ShapeRange(shapeName(1)).left standardshape_top = ActiveWindow.Selection.ShapeRange(shapeName(1)).top For y = 2 To arrcount ActiveWindow.Selection.ShapeRange(shapeName(y)).top = standardshape_top &#43; standardshape_height If y &gt; 2 Then culumheight = culumheight &#43; ActiveWindow.Selection.ShapeRange(shapeName(y - 1)).height ActiveWindow.Selection.ShapeRange(shapeName(y)).top = ActiveWindow.Selection.ShapeRange(shapeName(y)).top &#43; culumheight End If ActiveWindow.Selection.ShapeRange(shapeName(y)).left = standardshape_left Next y For x = 1 To arrcount selectShapes(x).Name = shapenameOrigin(x) Next x Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If Exit Sub End Sub align_right # Aligns selected shape(s) to the right of the first selected shape.">
@@ -122,13 +122,13 @@ Sub shapealign_bottom() Dim standardshape As shape Dim shapeName() As String Dim
     <meta property="article:tag" content="VBA">
     <meta property="article:tag" content="Excel">
     <meta property="article:tag" content="Powerpoint">
-<title>Sctipt-shape | shaaaaallow Dive</title>
+<title>└ Sctipt-shape | shaaaaallow Dive</title>
 <link rel="icon" href="https://mcjoi.github.io/favicon.png" >
 <link rel="manifest" href="https://mcjoi.github.io/manifest.json">
 <link rel="canonical" href="https://mcjoi.github.io/macrotoolkit-ppt/02006/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.1553418b9500180d431e2cf5186782e68bddc7f3b9832f4d93b1768a447af23d.css" integrity="sha256-FVNBi5UAGA1DHiz1GGeC5ovdx/O5gy9Nk7F2ikR68j0=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.7a1da7322ed031f4047067715b1af1819a19e6520ed54d2a366cebf80ee7b3a4.js" integrity="sha256-eh2nMi7QMfQEcGdxWxrxgZoZ5lIO1U0qNmzr&#43;A7ns6Q=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.8b3bee82921ed3088584342283eb3a66645932c93fbbcb1bd754f6c3298ba3db.js" integrity="sha256-izvugpIe0wiFhDQig&#43;s6ZmRZMsk/u8sb11T2wymLo9s=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -212,31 +212,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01002/" >
-                  Script-Cell format
+                  └ Script-Cell format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01003/" >
-                  Script-Value format
+                  └ Script-Value format
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01004/" >
-                  Script-Function
+                  └ Script-Function
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01005/" >
-                  Script-Data Util
+                  └ Script-Data Util
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-xls/01006/" >
-                  Script-Sheet Visibility
+                  └ Script-Sheet Visibility
                 </a>
               </li>
             
@@ -265,31 +265,31 @@ if(window.wcs) {
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02002/" >
-                  Sctipt-table
+                  └ Sctipt-table
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02003/" >
-                  Sctipt-color
+                  └ Sctipt-color
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02004/" >
-                  Sctipt-text
+                  └ Sctipt-text
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" >
-                  Sctipt-slide
+                  └ Sctipt-slide
                 </a>
               </li>
             
               <li>
                 <a href="https://mcjoi.github.io/macrotoolkit-ppt/02006/" class="active">
-                  Sctipt-shape
+                  └ Sctipt-shape
                 </a>
               </li>
             
@@ -559,7 +559,7 @@ if(window.wcs) {
     <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <h3>Sctipt-shape</h3>
+  <h3>└ Sctipt-shape</h3>
 
   <label for="toc-control">
     
@@ -746,7 +746,7 @@ if(window.wcs) {
       
     <a href="https://mcjoi.github.io/macrotoolkit-ppt/02005/" class="flex align-center book-icon">
       
-      <span>← Sctipt-slide</span>
+      <span>← └ Sctipt-slide</span>
     </a>
   
   </span>
