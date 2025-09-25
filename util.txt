@@ -5,6 +5,14 @@ button
 image
 ![mainimage](url "main image")  
 
+markdown image
+![image](https://raw.githubusercontent.com/mcjoi/img1-repo/main/userform_xls.webp "image")
+
+
+original post
+{{< button href="https://sunnybong.tistory.com/516" color="danger" >}}original post (Kor){{< /button >}}
+
+
 hint
 {{< hint warning >}}
 이건 힌트 텍스트입니다.
@@ -12,7 +20,6 @@ hint
 
 
 > 인용문
-
 
 table
 |r1|r2|r3|r4|
@@ -22,10 +29,6 @@ table
 |rr|rr|rr|rr|
 
 
-markdown image
-![image](https://raw.githubusercontent.com/mcjoi/img1-repo/main/userform_xls.webp "image")
 
 
-▶️ represents an ongoing or updated project.    
-⏹️ represents a completed project.    
-ℹ️ represents a knowledge snippet note.   
+

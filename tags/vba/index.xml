@@ -6,7 +6,7 @@
     <description>Recent content in VBA on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tags/vba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use macro?</title>
@@ -112,6 +112,13 @@
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/macrotoolkit-xls/01005/</guid>
       <description>&lt;h1 id=&#34;script-data-util&#34;&gt;&#xA;  Script-Data Util&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#script-data-util&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;calculation&#34;&gt;&#xA;  Calculation&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#calculation&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;growthrate&#34;&gt;&#xA;  growthRate&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#growthrate&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;div class=&#34;image-container_48&#34;&gt;&#xA;    &lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/main/48x48/icon15_1.jpg&#34; alt=&#34;growthRate&#34; title=&#34;growthRate&#34;&gt;&#xA;  &lt;/div&gt;&#xA;Calculate the growth rate.&lt;/p&gt;&#xA;&lt;h3 id=&#34;achievementrate&#34;&gt;&#xA;  achievementRate&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#achievementrate&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;div class=&#34;image-container_48&#34;&gt;&#xA;    &lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/main/48x48/icon16_1.jpg&#34; alt=&#34;achievementRate&#34; title=&#34;achievementRate&#34;&gt;&#xA;  &lt;/div&gt;&#xA;Calculate the achievement rate.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cagr&#34;&gt;&#xA;  CAGR&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#cagr&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;div class=&#34;image-container_48&#34;&gt;&#xA;    &lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/main/48x48/icon17_1.jpg&#34; alt=&#34;CAGR&#34; title=&#34;CAGR&#34;&gt;&#xA;  &lt;/div&gt;&#xA;Calculate the CAGR.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;wordfill&#34;&gt;&#xA;  WordFill&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#wordfill&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;div class=&#34;image-container_48&#34;&gt;&#xA;    &lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/main/48x48/icon05_1.jpg&#34; alt=&#34;WordFill&#34; title=&#34;WordFill&#34;&gt;&#xA;  &lt;/div&gt;&#xA;If there is a value in the right side of the selected reference column, fill the cell value in a DB format.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;alldecimals&#34;&gt;&#xA;  allDecimals&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#alldecimals&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;div class=&#34;image-container_48&#34;&gt;&#xA;    &lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/main/48x48/icon06_1.jpg&#34; alt=&#34;allDecimals&#34; title=&#34;allDecimals&#34;&gt;&#xA;  &lt;/div&gt;&#xA;In the case of numbers with decimal points, all decimal points come out.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UCF-xlookup</title>
+      <link>https://mcjoi.github.io/vba/03006/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/vba/03006/</guid>
+      <description>&lt;h1 id=&#34;using-xlookup-in-office-2019&#34;&gt;&#xA;  Using XLOOKUP in Office 2019&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#using-xlookup-in-office-2019&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why&#34;&gt;&#xA;  Why&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#why&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Microsoft only releases new features for MS365. Otherwise, you’re forced to purchase an entirely new version. Spending extra money just for a few new functions feels wasteful, so I decided to benchmark the new features and build them as user-defined functions instead.&lt;/p&gt;&#xA;&lt;h2 id=&#34;xlookup&#34;&gt;&#xA;  xlookup&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#xlookup&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unlike VLOOKUP or HLOOKUP, the XLOOKUP function allows you to search for values without being restricted by row or column order. With a bit of VBA, you can implement a similar function yourself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>└ Sctipt-shape</title>
