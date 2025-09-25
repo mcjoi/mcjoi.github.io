@@ -35,7 +35,7 @@ Windows has a long history, but since Vista, I haven’t really come across prog
 <link rel="canonical" href="https://mcjoi.github.io/flutter/05003/">
 <link rel="stylesheet" href="https://mcjoi.github.io/book.min.1553418b9500180d431e2cf5186782e68bddc7f3b9832f4d93b1768a447af23d.css" integrity="sha256-FVNBi5UAGA1DHiz1GGeC5ovdx/O5gy9Nk7F2ikR68j0=" crossorigin="anonymous">
   <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
-  <script defer src="https://mcjoi.github.io/en.search.min.0aa36d1675397f687ecdcfe71395fb13927ddd29d5d33b5c07941b40bbc14d07.js" integrity="sha256-CqNtFnU5f2h&#43;zc/nE5X7E5J93SnV0ztcB5QbQLvBTQc=" crossorigin="anonymous"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.ae64d143a5e829bdc9d1b5ee0a3afc08eb5a751bd435889b0f0d6fc27be0d7bc.js" integrity="sha256-rmTRQ6XoKb3J0bXuCjr8COtadRvUNYibDw1vwnvg17w=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -585,10 +585,8 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>Rive provides incredible features, but Lottie just runs animations—and that’s perfect. You don’t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
 <p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
 <p>First, here’s the <code>C++</code> source code that needs to be built as a <code>DLL</code> using Visual Studio.</p>
-
-<blockquote class='book-hint '>
-  <p>mouse_hook.cpp</p>
-</blockquote><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;windows.h&gt;</span><span style="color:#75715e">
+<p><em>mouse_hook.cpp</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;windows.h&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;pch.h&#34;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
@@ -653,10 +651,8 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>On the Flutter side, there isn’t much to configure, but calling the <code>DLL</code> itself was a bit unfamiliar.</p>
 <p>Also, even when using a dual-monitor setup, I limited the mouse click animation to appear only within the range from coordinate (0,0) up to 1920×1080.</p>
 <p>For the Lottie animation specified in <code>assets/click2.json</code>, make sure to update the file name if necessary. Alternatively, you could add a feature to dynamically select different motions. Currently, the default animation duration is set to under 0.8 seconds. If you use a different animation length, you’ll need to adjust the duration code accordingly.</p>
-
-<blockquote class='book-hint '>
-  <p>main.dart</p>
-</blockquote><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:async&#39;</span>;
+<p><em>main.dart</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:async&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
 </span></span><span style="display:flex;"><span>
@@ -844,8 +840,7 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> Offset offset;
 </span></span><span style="display:flex;"><span>  _ClickEffect(<span style="color:#66d9ef">this</span>.offset);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p> <br>
- </p>
+</span></span></code></pre></div><p> </p>
 <hr>
 <h2 id="result">
   Result
