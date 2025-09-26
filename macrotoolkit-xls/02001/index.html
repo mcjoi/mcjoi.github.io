@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  What is it?
+  #
+
+Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
+
+
+
+  Key Point
+  #
+
+Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="http://localhost:1313/macrotoolkit-xls/02001/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="MacroToolkit-powerpoint">
+  <meta property="og:description" content="What is it? # Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.
+Key Point # Instead of relying on UserForm, I made active use of the Ribbon menu to enhance usability.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="macrotoolkit">
+    <meta property="article:published_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>MacroToolkit-powerpoint | shaaaaallow Dive</title>
+<link rel="icon" href="http://localhost:1313/favicon.png" >
+<link rel="manifest" href="http://localhost:1313/manifest.json">
+<link rel="canonical" href="http://localhost:1313/macrotoolkit-xls/02001/">
+<link rel="stylesheet" href="http://localhost:1313/book.min.1553418b9500180d431e2cf5186782e68bddc7f3b9832f4d93b1768a447af23d.css" integrity="sha256-FVNBi5UAGA1DHiz1GGeC5ovdx/O5gy9Nk7F2ikR68j0=" crossorigin="anonymous">
+  <script defer src="http://localhost:1313/fuse.min.js"></script>
+  <script defer src="http://localhost:1313/en.search.min.bd0c3910d410c0c80b35e0a816f08a6d46954fb55eef55159b6ab9fc956befb8.js" integrity="sha256-vQw5ENQQwMgLNeCoFvCKbUaVT7Ve71UVm2q5/JVr77g=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+
+  
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="http://localhost:1313/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  <br>
+  <h3>Category</h3>
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="http://localhost:1313/macrotoolkit-xls/">MacroToolkit-Excel </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/macrotoolkit-ppt/">MacroToolkit-PPT </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/vba/">MS-Office_VBA </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/vba/03001/" >
+                  How to use macro?
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03002/" >
+                  Making Keyboard Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03003/" >
+                  Hover effect
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03004/" >
+                  Project is Unviewable
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03005/" >
+                  Error Handler
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03006/" >
+                  UCF-xlookup
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/python/">Python </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/python/04001/" >
+                  WebP Conversion Program
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/python/04002/" >
+                  Move file by extensions
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/python/04003/" >
+                  Extracting Tables from PDF
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/flutter/">Flutter </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05001/" >
+                  Init Flutter APIs
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05002/" >
+                  Windows Desktop Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05003/" >
+                  Windows Click Animation
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05004/" >
+                  Hiding Google API key
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/windows_linux/">Windows_Linux </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/windows_linux/06001/" >
+                  useful command
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/windows_linux/06002/" >
+                  Windows10 Clipboard
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/life/">Life </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/life/08001/" >
+                  Sony Creative Look
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08003/" >
+                  SW - PicPick
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08005/" >
+                  APS-C lens on FullFrame
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08006/" >
+                  Registration_sitemap_on_GSC
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/gallery/">Gallery </a>
+
+        
+        <div class="sidebar-post-list">
+          
+        </div>
+      </li>
+    
+  </ul>
+
+  <br>
+  <hr class="divider">
+  <br>
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+  </ul>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>MacroToolkit-powerpoint</h3>
+
+  <label for="toc-control">
+    
+    <img src="http://localhost:1313/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#key-point">Key Point</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#download">Download</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Since PowerPoint often requires manual work tailored to each specific scenario, it’s harder to create standardized features compared to Excel. For that reason, I’ve gathered useful code snippets I found through extensive web surfing. Feel free to review and modify them to fit your needs.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/02001/ppt_icon.webp" alt="ppt" title="ppt"/></p>
+<hr>
+<h2 id="key-point">
+  Key Point
+  <a class="anchor" href="#key-point">#</a>
+</h2>
+<p>Instead of relying on <code>UserForm</code>, I made active use of the Ribbon menu to enhance usability.</p>
+<hr>
+<h2 id="functions">
+  Functions
+  <a class="anchor" href="#functions">#</a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>name</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Make Table</td>
+          <td>Creates frequently used table templates</td>
+      </tr>
+      <tr>
+          <td>Table Size</td>
+          <td>Adjusts table size via UserForm</td>
+      </tr>
+      <tr>
+          <td>delblank</td>
+          <td>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</td>
+      </tr>
+      <tr>
+          <td>RGB Color</td>
+          <td>Displays RGB values of the selected shape via UserForm</td>
+      </tr>
+      <tr>
+          <td>Color palette</td>
+          <td>Creates a color palette in the slide master - newly added feature</td>
+      </tr>
+      <tr>
+          <td>Text arrange</td>
+          <td>Adjusts letter spacing of Malgun Gothic font to 0.3</td>
+      </tr>
+      <tr>
+          <td>zeromargin</td>
+          <td>Sets margins of text boxes or shapes to zero</td>
+      </tr>
+      <tr>
+          <td>tspacing</td>
+          <td>Adjusts line spacing</td>
+      </tr>
+      <tr>
+          <td>jpg export</td>
+          <td>Exports selected slides as JPG files</td>
+      </tr>
+      <tr>
+          <td>slide_resizes</td>
+          <td>Changes slide size based on pixel dimensions</td>
+      </tr>
+      <tr>
+          <td>groupRelease</td>
+          <td>Ungroups all groups on all slides at once</td>
+      </tr>
+      <tr>
+          <td>align_bottom</td>
+          <td>Aligns selected shape(s) to the bottom of the first selected shape</td>
+      </tr>
+      <tr>
+          <td>align_right</td>
+          <td>Aligns selected shape(s) to the right of the first selected shape</td>
+      </tr>
+      <tr>
+          <td>guidebox</td>
+          <td>Creates guide boxes (rectangles) spaced at regular intervals</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="download">
+  Download
+  <a class="anchor" href="#download">#</a>
+</h2>
+<p>To manage versions, the files are stored at the following location:<br>
+ <br>
+
+<a
+   href="https://github.com/mcjoi/office_macro_toolkit" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+> github - download </a>
+
+
+<a
+   href="https://sunnybong.tistory.com/620" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+>original post (Kor)</a>
+</p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="http://localhost:1313/macrotoolkit-xls/01006/" class="flex align-center book-icon">
+      
+      <span>← └ Script-Sheet Visibility</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="http://localhost:1313/macrotoolkit-xls/02002/" class="flex align-center book-icon">
+      <span>└ Sctipt-table →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#key-point">Key Point</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#download">Download</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Sctipt-text
+  #
+
+
+  What is it?
+  #
+
+Useful functions for handling text.
+
+
+  Text arrange
+  #
+
+Adjusts letter spacing of Malgun Gothic font to 0.3.
+
+
+  zeromargin
+  #
+
+Sets margins of text boxes or shapes to zero.
+Sub textMarginZero()
+
+    On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동
+
+    Dim shp As shape
+    Dim activeshape As shape
+    Dim myt As Table
+    Dim z As Double
+    Dim dtb As Double
+    Dim dlr As Double
+
+    &#39; 선택된 도형이 있는지 확인
+    If ActiveWindow.Selection.Type = ppSelectionShapes Then
+        For Each shp In ActiveWindow.Selection.ShapeRange
+            Set activeshape = shp
+            Exit For
+        Next shp
+    Else
+        MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34;
+        Exit Sub
+    End If
+
+    z = 0
+    dlr = ConvertCmToPoint(0.13)
+    dtb = ConvertCmToPoint(0.25)
+
+    &#39; 메시지 박스에서 사용자가 선택한 값을 처리
+    If MsgBox(&#34;To Zero : Yes, To Default : No&#34;, vbYesNo) = vbYes Then
+
+        If shp.HasTable Then
+            Set myt = shp.Table
+
+            cnum = myt.Columns.Count
+            rnum = myt.Rows.Count
+
+            &#39; 테이블 내의 셀에 마진 값 적용
+            With myt
+                For c = 1 To cnum
+                    For r = 1 To rnum
+                        .cell(r, c).shape.TextFrame2.MarginTop = z
+                        .cell(r, c).shape.TextFrame2.MarginBottom = z
+                        .cell(r, c).shape.TextFrame2.MarginLeft = z
+                        .cell(r, c).shape.TextFrame2.MarginRight = z
+                        .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle
+                    Next r
+                Next c
+            End With
+        Else
+            &#39; 테이블이 아닌 경우 일반 텍스트 상자의 마진 값 적용
+            With shp.TextFrame2
+                .MarginTop = z
+                .MarginBottom = z
+                .MarginLeft = z
+                .MarginRight = z
+                .VerticalAnchor = msoAnchorMiddle
+            End With
+        End If
+
+    Else
+        If shp.HasTable Then
+            Set myt = shp.Table
+
+            cnum = myt.Columns.Count
+            rnum = myt.Rows.Count
+
+            &#39; 테이블 내의 셀에 기본 마진 값 적용
+            With myt
+                For c = 1 To cnum
+                    For r = 1 To rnum
+                        .cell(r, c).shape.TextFrame2.MarginTop = dtb
+                        .cell(r, c).shape.TextFrame2.MarginBottom = dtb
+                        .cell(r, c).shape.TextFrame2.MarginLeft = dlr
+                        .cell(r, c).shape.TextFrame2.MarginRight = dlr
+                        .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle
+                    Next r
+                Next c
+            End With
+        Else
+            &#39; 테이블이 아닌 경우 일반 텍스트 상자의 기본 마진 값 적용
+            With shp.TextFrame2
+                .MarginTop = dtb
+                .MarginBottom = dtb
+                .MarginLeft = dlr
+                .MarginRight = dlr
+                .VerticalAnchor = msoAnchorMiddle
+            End With
+        End If
+    End If
+
+    Exit Sub
+
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _
+        &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34;
+    End If
+
+End Sub
+
+
+Function ConvertPointToCm(ByVal pnt As Double) As Double
+    ConvertPointToCm = pnt * 0.03527778
+End Function
+
+Function ConvertCmToPoint(ByVal cm As Double) As Double
+    ConvertCmToPoint = cm * 28.34646
+End Function
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="http://localhost:1313/macrotoolkit-xls/02004/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="└ Sctipt-text">
+  <meta property="og:description" content="Sctipt-text # What is it? # Useful functions for handling text.
+Text arrange # Adjusts letter spacing of Malgun Gothic font to 0.3.
+zeromargin # Sets margins of text boxes or shapes to zero.
+Sub textMarginZero() On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동 Dim shp As shape Dim activeshape As shape Dim myt As Table Dim z As Double Dim dtb As Double Dim dlr As Double &#39; 선택된 도형이 있는지 확인 If ActiveWindow.Selection.Type = ppSelectionShapes Then For Each shp In ActiveWindow.Selection.ShapeRange Set activeshape = shp Exit For Next shp Else MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34; Exit Sub End If z = 0 dlr = ConvertCmToPoint(0.13) dtb = ConvertCmToPoint(0.25) &#39; 메시지 박스에서 사용자가 선택한 값을 처리 If MsgBox(&#34;To Zero : Yes, To Default : No&#34;, vbYesNo) = vbYes Then If shp.HasTable Then Set myt = shp.Table cnum = myt.Columns.Count rnum = myt.Rows.Count &#39; 테이블 내의 셀에 마진 값 적용 With myt For c = 1 To cnum For r = 1 To rnum .cell(r, c).shape.TextFrame2.MarginTop = z .cell(r, c).shape.TextFrame2.MarginBottom = z .cell(r, c).shape.TextFrame2.MarginLeft = z .cell(r, c).shape.TextFrame2.MarginRight = z .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle Next r Next c End With Else &#39; 테이블이 아닌 경우 일반 텍스트 상자의 마진 값 적용 With shp.TextFrame2 .MarginTop = z .MarginBottom = z .MarginLeft = z .MarginRight = z .VerticalAnchor = msoAnchorMiddle End With End If Else If shp.HasTable Then Set myt = shp.Table cnum = myt.Columns.Count rnum = myt.Rows.Count &#39; 테이블 내의 셀에 기본 마진 값 적용 With myt For c = 1 To cnum For r = 1 To rnum .cell(r, c).shape.TextFrame2.MarginTop = dtb .cell(r, c).shape.TextFrame2.MarginBottom = dtb .cell(r, c).shape.TextFrame2.MarginLeft = dlr .cell(r, c).shape.TextFrame2.MarginRight = dlr .cell(r, c).shape.TextFrame2.VerticalAnchor = msoAnchorMiddle Next r Next c End With Else &#39; 테이블이 아닌 경우 일반 텍스트 상자의 기본 마진 값 적용 With shp.TextFrame2 .MarginTop = dtb .MarginBottom = dtb .MarginLeft = dlr .MarginRight = dlr .VerticalAnchor = msoAnchorMiddle End With End If End If Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If End Sub Function ConvertPointToCm(ByVal pnt As Double) As Double ConvertPointToCm = pnt * 0.03527778 End Function Function ConvertCmToPoint(ByVal cm As Double) As Double ConvertCmToPoint = cm * 28.34646 End Function">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="macrotoolkit">
+    <meta property="article:published_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>└ Sctipt-text | shaaaaallow Dive</title>
+<link rel="icon" href="http://localhost:1313/favicon.png" >
+<link rel="manifest" href="http://localhost:1313/manifest.json">
+<link rel="canonical" href="http://localhost:1313/macrotoolkit-xls/02004/">
+<link rel="stylesheet" href="http://localhost:1313/book.min.1553418b9500180d431e2cf5186782e68bddc7f3b9832f4d93b1768a447af23d.css" integrity="sha256-FVNBi5UAGA1DHiz1GGeC5ovdx/O5gy9Nk7F2ikR68j0=" crossorigin="anonymous">
+  <script defer src="http://localhost:1313/fuse.min.js"></script>
+  <script defer src="http://localhost:1313/en.search.min.bd0c3910d410c0c80b35e0a816f08a6d46954fb55eef55159b6ab9fc956befb8.js" integrity="sha256-vQw5ENQQwMgLNeCoFvCKbUaVT7Ve71UVm2q5/JVr77g=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+
+  
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="http://localhost:1313/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  <br>
+  <h3>Category</h3>
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="http://localhost:1313/macrotoolkit-xls/">MacroToolkit-Excel </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/macrotoolkit-ppt/">MacroToolkit-PPT </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/vba/">MS-Office_VBA </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/vba/03001/" >
+                  How to use macro?
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03002/" >
+                  Making Keyboard Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03003/" >
+                  Hover effect
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03004/" >
+                  Project is Unviewable
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03005/" >
+                  Error Handler
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/vba/03006/" >
+                  UCF-xlookup
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/python/">Python </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/python/04001/" >
+                  WebP Conversion Program
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/python/04002/" >
+                  Move file by extensions
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/python/04003/" >
+                  Extracting Tables from PDF
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/flutter/">Flutter </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05001/" >
+                  Init Flutter APIs
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05002/" >
+                  Windows Desktop Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05003/" >
+                  Windows Click Animation
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/flutter/05004/" >
+                  Hiding Google API key
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/windows_linux/">Windows_Linux </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/windows_linux/06001/" >
+                  useful command
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/windows_linux/06002/" >
+                  Windows10 Clipboard
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/life/">Life </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="http://localhost:1313/life/08001/" >
+                  Sony Creative Look
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08003/" >
+                  SW - PicPick
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08005/" >
+                  APS-C lens on FullFrame
+                </a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/life/08006/" >
+                  Registration_sitemap_on_GSC
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="http://localhost:1313/gallery/">Gallery </a>
+
+        
+        <div class="sidebar-post-list">
+          
+        </div>
+      </li>
+    
+  </ul>
+
+  <br>
+  <hr class="divider">
+  <br>
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+  </ul>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="http://localhost:1313/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>└ Sctipt-text</h3>
+
+  <label for="toc-control">
+    
+    <img src="http://localhost:1313/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#text-arrange">Text arrange</a></li>
+    <li><a href="#zeromargin">zeromargin</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="sctipt-text">
+  Sctipt-text
+  <a class="anchor" href="#sctipt-text">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling text.</p>
+<hr>
+<h2 id="text-arrange">
+  Text arrange
+  <a class="anchor" href="#text-arrange">#</a>
+</h2>
+<p>Adjusts letter spacing of <code>Malgun Gothic</code> font to 0.3.</p>
+<hr>
+<h2 id="zeromargin">
+  zeromargin
+  <a class="anchor" href="#zeromargin">#</a>
+</h2>
+<p>Sets margins of text boxes or shapes to zero.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">textMarginZero</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> activeshape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> myt <span style="color:#f92672">As</span> Table
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> z <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dtb <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dlr <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 선택된 도형이 있는지 확인
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> activeshape <span style="color:#f92672">=</span> shp
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>    dlr <span style="color:#f92672">=</span> ConvertCmToPoint(0.13)
+</span></span><span style="display:flex;"><span>    dtb <span style="color:#f92672">=</span> ConvertCmToPoint(0.25)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 메시지 박스에서 사용자가 선택한 값을 처리
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;To Zero : Yes, To Default : No&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> shp.Table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cnum <span style="color:#f92672">=</span> myt.Columns.Count
+</span></span><span style="display:flex;"><span>            rnum <span style="color:#f92672">=</span> myt.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블 내의 셀에 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> myt
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginTop <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginBottom <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginLeft <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginRight <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블이 아닌 경우 일반 텍스트 상자의 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> shp.TextFrame2
+</span></span><span style="display:flex;"><span>                .MarginTop <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginBottom <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginLeft <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginRight <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> shp.Table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cnum <span style="color:#f92672">=</span> myt.Columns.Count
+</span></span><span style="display:flex;"><span>            rnum <span style="color:#f92672">=</span> myt.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블 내의 셀에 기본 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> myt
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginTop <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginBottom <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginLeft <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginRight <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블이 아닌 경우 일반 텍스트 상자의 기본 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> shp.TextFrame2
+</span></span><span style="display:flex;"><span>                .MarginTop <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                .MarginBottom <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                .MarginLeft <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                .MarginRight <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                .VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertPointToCm</span>(<span style="color:#66d9ef">ByVal</span> pnt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertPointToCm <span style="color:#f92672">=</span> pnt <span style="color:#f92672">*</span> 0.03527778
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertCmToPoint</span>(<span style="color:#66d9ef">ByVal</span> cm <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertCmToPoint <span style="color:#f92672">=</span> cm <span style="color:#f92672">*</span> 28.34646
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span></code></pre></div><hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="http://localhost:1313/macrotoolkit-xls/02003/" class="flex align-center book-icon">
+      
+      <span>← └ Sctipt-color</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="http://localhost:1313/macrotoolkit-xls/02005/" class="flex align-center book-icon">
+      <span>└ Sctipt-slide →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#text-arrange">Text arrange</a></li>
+    <li><a href="#zeromargin">zeromargin</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Sctipt-shape
+  #
+
+
+  What is it?
+  #
+
+Useful functions for handling shape.
+
+
+  align_bottom
+  #
+
+Aligns selected shape(s) to the bottom of the first selected shape.
+Sub shapealign_bottom()
+    Dim standardshape As shape
+    Dim shapeName() As String
+    Dim shapenameOrigin() As String
+    Dim selectShapes As ShapeRange
+    Dim arrcount As Integer
+    Dim x As Integer
+    Dim y As Integer
+    Dim culumheight As Single
+    Dim standardshape_height As Single
+    Dim standardshape_width As Single
+    Dim standardshape_left As Single
+    Dim standardshape_top As Single
+
+    On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동
+    
+    If ActiveWindow.Selection.Type = ppSelectionShapes Then
+        Set selectShapes = ActiveWindow.Selection.ShapeRange
+        
+        &#39;selected shape name array
+        ReDim Preserve shapeName(selectShapes.Count)
+        ReDim Preserve shapenameOrigin(selectShapes.Count)
+        
+        &#39;selected shape name array count
+        arrcount = UBound(shapeName) - LBound(shapeName)
+        
+        For x = 1 To arrcount
+            shapenameOrigin(x) = selectShapes(x).Name
+            selectShapes(x).Name = selectShapes(x).Name &amp; x
+        Next x
+        
+        For Each shp In selectShapes
+            For x = 1 To arrcount
+                If shapeName(x) = &#34;&#34; Then
+                    shapeName(x) = shp.Name
+                    Exit For
+                End If
+            Next x
+        Next shp
+    Else
+        MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34;
+        Exit Sub
+    End If
+
+    &#39; Ensure there is at least one shape to align
+    If arrcount &lt; 1 Then
+        MsgBox &#34;No shapes were selected for alignment!&#34;, vbExclamation
+        Exit Sub
+    End If
+
+    &#39; Get standard shape dimensions and position
+    standardshape_height = ActiveWindow.Selection.ShapeRange(shapeName(1)).height
+    standardshape_width = ActiveWindow.Selection.ShapeRange(shapeName(1)).width
+    standardshape_left = ActiveWindow.Selection.ShapeRange(shapeName(1)).left
+    standardshape_top = ActiveWindow.Selection.ShapeRange(shapeName(1)).top
+
+    For y = 2 To arrcount
+        ActiveWindow.Selection.ShapeRange(shapeName(y)).top = standardshape_top &#43; standardshape_height
+        
+        If y &gt; 2 Then
+            culumheight = culumheight &#43; ActiveWindow.Selection.ShapeRange(shapeName(y - 1)).height
+            ActiveWindow.Selection.ShapeRange(shapeName(y)).top = ActiveWindow.Selection.ShapeRange(shapeName(y)).top &#43; culumheight
+        End If
+        
+        ActiveWindow.Selection.ShapeRange(shapeName(y)).left = standardshape_left
+    Next y
+
+    For x = 1 To arrcount
+        selectShapes(x).Name = shapenameOrigin(x)
+    Next x
+
+    Exit Sub
+    
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34;
+    End If
+    Exit Sub
+End Sub
+
+
+  align_right
+  #
+
+Aligns selected shape(s) to the right of the first selected shape.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/macrotoolkit/02006/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="└ Sctipt-shape">
+  <meta property="og:description" content="Sctipt-shape # What is it? # Useful functions for handling shape.
+align_bottom # Aligns selected shape(s) to the bottom of the first selected shape.
+Sub shapealign_bottom() Dim standardshape As shape Dim shapeName() As String Dim shapenameOrigin() As String Dim selectShapes As ShapeRange Dim arrcount As Integer Dim x As Integer Dim y As Integer Dim culumheight As Single Dim standardshape_height As Single Dim standardshape_width As Single Dim standardshape_left As Single Dim standardshape_top As Single On Error GoTo Err_Check &#39; 에러 발생 시 Err_Check로 이동 If ActiveWindow.Selection.Type = ppSelectionShapes Then Set selectShapes = ActiveWindow.Selection.ShapeRange &#39;selected shape name array ReDim Preserve shapeName(selectShapes.Count) ReDim Preserve shapenameOrigin(selectShapes.Count) &#39;selected shape name array count arrcount = UBound(shapeName) - LBound(shapeName) For x = 1 To arrcount shapenameOrigin(x) = selectShapes(x).Name selectShapes(x).Name = selectShapes(x).Name &amp; x Next x For Each shp In selectShapes For x = 1 To arrcount If shapeName(x) = &#34;&#34; Then shapeName(x) = shp.Name Exit For End If Next x Next shp Else MsgBox &#34;There is no shape currently selected!&#34;, vbExclamation, &#34;No Shape Found&#34; Exit Sub End If &#39; Ensure there is at least one shape to align If arrcount &lt; 1 Then MsgBox &#34;No shapes were selected for alignment!&#34;, vbExclamation Exit Sub End If &#39; Get standard shape dimensions and position standardshape_height = ActiveWindow.Selection.ShapeRange(shapeName(1)).height standardshape_width = ActiveWindow.Selection.ShapeRange(shapeName(1)).width standardshape_left = ActiveWindow.Selection.ShapeRange(shapeName(1)).left standardshape_top = ActiveWindow.Selection.ShapeRange(shapeName(1)).top For y = 2 To arrcount ActiveWindow.Selection.ShapeRange(shapeName(y)).top = standardshape_top &#43; standardshape_height If y &gt; 2 Then culumheight = culumheight &#43; ActiveWindow.Selection.ShapeRange(shapeName(y - 1)).height ActiveWindow.Selection.ShapeRange(shapeName(y)).top = ActiveWindow.Selection.ShapeRange(shapeName(y)).top &#43; culumheight End If ActiveWindow.Selection.ShapeRange(shapeName(y)).left = standardshape_left Next y For x = 1 To arrcount selectShapes(x).Name = shapenameOrigin(x) Next x Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If Exit Sub End Sub align_right # Aligns selected shape(s) to the right of the first selected shape.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="macrotoolkit">
+    <meta property="article:published_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>└ Sctipt-shape | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/macrotoolkit/02006/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.1553418b9500180d431e2cf5186782e68bddc7f3b9832f4d93b1768a447af23d.css" integrity="sha256-FVNBi5UAGA1DHiz1GGeC5ovdx/O5gy9Nk7F2ikR68j0=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.ebba9526a739ce4b863bacee201b64d023712c93e93d91a0038a3491bd30902e.js" integrity="sha256-67qVJqc5zkuGO6zuIBtk0CNxLJPpPZGgA4o0kb0wkC4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+
+  
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  <br>
+  <h3>Category</h3>
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/macrotoolkit/">MacroToolkit </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01001/" >
+                  MacroToolkit-Excel
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01002/" >
+                  └ Script-Cell format
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01003/" >
+                  └ Script-Value format
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01004/" >
+                  └ Script-Function
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01005/" >
+                  └ Script-Data Util
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/01006/" >
+                  └ Script-Sheet Visibility
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02001/" >
+                  MacroToolkit-powerpoint
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02002/" >
+                  └ Sctipt-table
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02003/" >
+                  └ Sctipt-color
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02004/" >
+                  └ Sctipt-text
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02005/" >
+                  └ Sctipt-slide
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/macrotoolkit/02006/" class="active">
+                  └ Sctipt-shape
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/vba/">MS-Office_VBA </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03001/" >
+                  How to use macro?
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03002/" >
+                  Making Keyboard Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03003/" >
+                  Hover effect
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03004/" >
+                  Project is Unviewable
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03005/" >
+                  Error Handler
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/vba/03006/" >
+                  UCF-xlookup
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/python/">Python </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/python/04001/" >
+                  WebP Conversion Program
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/python/04002/" >
+                  Move file by extensions
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/python/04003/" >
+                  Extracting Tables from PDF
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/flutter/">Flutter </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/flutter/05001/" >
+                  Init Flutter APIs
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/flutter/05002/" >
+                  Windows Desktop Shortcut
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/flutter/05003/" >
+                  Windows Click Animation
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/flutter/05004/" >
+                  Hiding Google API key
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/windows_linux/">Windows_Linux </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/windows_linux/06001/" >
+                  useful command
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/windows_linux/06002/" >
+                  Windows10 Clipboard
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        <div class="sidebar-post-list">
+          
+          <ul>
+            
+            
+              <li>
+                <a href="https://mcjoi.github.io/life/08001/" >
+                  Sony Creative Look
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/life/08003/" >
+                  SW - PicPick
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/life/08005/" >
+                  APS-C lens on FullFrame
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://mcjoi.github.io/life/08006/" >
+                  Registration_sitemap_on_GSC
+                </a>
+              </li>
+            
+          </ul>
+          
+        </div>
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        <div class="sidebar-post-list">
+          
+        </div>
+      </li>
+    
+  </ul>
+
+  <br>
+  <hr class="divider">
+  <br>
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+  </ul>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>└ Sctipt-shape</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#align_bottom">align_bottom</a></li>
+    <li><a href="#align_right">align_right</a></li>
+    <li><a href="#guidebox">guidebox</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="sctipt-shape">
+  Sctipt-shape
+  <a class="anchor" href="#sctipt-shape">#</a>
+</h1>
+<h2 id="what-is-it">
+  What is it?
+  <a class="anchor" href="#what-is-it">#</a>
+</h2>
+<p>Useful functions for handling shape.</p>
+<hr>
+<h2 id="align_bottom">
+  align_bottom
+  <a class="anchor" href="#align_bottom">#</a>
+</h2>
+<p>Aligns selected shape(s) to the bottom of the first selected shape.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_bottom</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeName() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapenameOrigin() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectShapes <span style="color:#f92672">As</span> ShapeRange
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> arrcount <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> x <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> culumheight <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_height <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_width <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> selectShapes <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">ReDim</span> Preserve shapeName(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ReDim</span> Preserve shapenameOrigin(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        arrcount <span style="color:#f92672">=</span> UBound(shapeName) <span style="color:#f92672">-</span> LBound(shapeName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>            shapenameOrigin(x) <span style="color:#f92672">=</span> selectShapes(x).Name
+</span></span><span style="display:flex;"><span>            selectShapes(x).Name <span style="color:#f92672">=</span> selectShapes(x).Name <span style="color:#f92672">&amp;</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> selectShapes
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> shapeName(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    shapeName(x) <span style="color:#f92672">=</span> shp.Name
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Ensure there is at least one shape to align
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> arrcount <span style="color:#f92672">&lt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;No shapes were selected for alignment!&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Get standard shape dimensions and position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    standardshape_height <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).height
+</span></span><span style="display:flex;"><span>    standardshape_width <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).width
+</span></span><span style="display:flex;"><span>    standardshape_left <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).left
+</span></span><span style="display:flex;"><span>    standardshape_top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> y <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> standardshape_top <span style="color:#f92672">+</span> standardshape_height
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> y <span style="color:#f92672">&gt;</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            culumheight <span style="color:#f92672">=</span> culumheight <span style="color:#f92672">+</span> ActiveWindow.Selection.ShapeRange(shapeName(y <span style="color:#f92672">-</span> 1)).height
+</span></span><span style="display:flex;"><span>            ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">+</span> culumheight
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).left <span style="color:#f92672">=</span> standardshape_left
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        selectShapes(x).Name <span style="color:#f92672">=</span> shapenameOrigin(x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="align_right">
+  align_right
+  <a class="anchor" href="#align_right">#</a>
+</h2>
+<p>Aligns selected shape(s) to the right of the first selected shape.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_right</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectedShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> secondShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeLeftInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeWidthInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sel <span style="color:#f92672">As</span> Selection
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sel <span style="color:#f92672">=</span> ActiveWindow.Selection
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> sel.ShapeRange.Count <span style="color:#f92672">&gt;=</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> selectedShape <span style="color:#f92672">=</span> sel.ShapeRange(1)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> sel.ShapeRange.Count
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Set</span> secondShape <span style="color:#f92672">=</span> sel.ShapeRange(i)
+</span></span><span style="display:flex;"><span>                shapeLeftInPoints <span style="color:#f92672">=</span> selectedShape.left
+</span></span><span style="display:flex;"><span>                shapeWidthInPoints <span style="color:#f92672">=</span> selectedShape.width
+</span></span><span style="display:flex;"><span>                secondShape.left <span style="color:#f92672">=</span> shapeLeftInPoints <span style="color:#f92672">+</span> shapeWidthInPoints
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;Please select over 2 shapes&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Please select shapes.&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="guidebox">
+  guidebox
+  <a class="anchor" href="#guidebox">#</a>
+</h2>
+<p>Creates guide boxes (rectangles) spaced at regular intervals.</p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/macrotoolkit/02005/" class="flex align-center book-icon">
+      
+      <span>← └ Sctipt-slide</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#align_bottom">align_bottom</a></li>
+    <li><a href="#align_right">align_right</a></li>
+    <li><a href="#guidebox">guidebox</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
