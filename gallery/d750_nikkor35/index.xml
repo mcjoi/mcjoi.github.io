@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nikon D750 &#43; Nikkor 35 on shaaaaallow Dive</title>
-    <link>https://mcjoi.github.io/gallery/d750_nikkor35/</link>
+    <link>http://localhost:1313/gallery/d750_nikkor35/</link>
     <description>Recent content in Nikon D750 &#43; Nikkor 35 on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mcjoi.github.io/gallery/d750_nikkor35/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/gallery/d750_nikkor35/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bike</title>
-      <link>https://mcjoi.github.io/gallery/bike/</link>
+      <link>http://localhost:1313/gallery/bike/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/bike/</guid>
+      <guid>http://localhost:1313/gallery/bike/</guid>
       <description></description>
     </item>
     <item>
       <title>phone booth</title>
-      <link>https://mcjoi.github.io/gallery/phone-booth/</link>
+      <link>http://localhost:1313/gallery/phone-booth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/phone-booth/</guid>
+      <guid>http://localhost:1313/gallery/phone-booth/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lens on shaaaaallow Dive</title>
-    <link>https://mcjoi.github.io/tags/lens/</link>
+    <link>http://localhost:1313/tags/lens/</link>
     <description>Recent content in Lens on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcjoi.github.io/tags/lens/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/lens/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sony Creative Look</title>
-      <link>https://mcjoi.github.io/life/08001/</link>
+      <link>http://localhost:1313/life/08001/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/life/08001/</guid>
+      <guid>http://localhost:1313/life/08001/</guid>
       <description>&lt;h1 id=&#34;sony-creative-look&#34;&gt;&#xA;  Sony Creative Look&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#sony-creative-look&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;color-filter&#34;&gt;&#xA;  color filter&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#color-filter&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Whenever I bought a new camera, I always felt the urge to try out all the new features—and honestly, that often led me to make mistakes. One typical example was color filters. I remember doing it when I was using the Nikon D750, and again when I first switched over to Sony, playing around with those so-called “My Style” color filters.&lt;/p&gt;</description>
     </item>
     <item>
       <title>APS-C lens on FullFrame</title>
-      <link>https://mcjoi.github.io/life/08005/</link>
+      <link>http://localhost:1313/life/08005/</link>
       <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/life/08005/</guid>
+      <guid>http://localhost:1313/life/08005/</guid>
       <description>&lt;h1 id=&#34;using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;&#xA;  Using an APS-C Lens on a Full-Frame Camera&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a7c2-sigma-56mm&#34;&gt;&#xA;  A7C2, Sigma 56mm&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#a7c2-sigma-56mm&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Normally, crop lenses with a smaller image circle tend to reveal frustrating black edges when used on full-frame cameras. However, some lenses have an unusually large image circle, making them usable even on full-frame bodies. One of my favorite lenses in this category is the Sigma 56mm.&lt;/p&gt;&#xA;&lt;p&gt;The shape of the image circle becomes more defined as you stop down the aperture, so I tried shooting at the maximum aperture to see the effect.&lt;/p&gt;</description>
     </item>
   </channel>
