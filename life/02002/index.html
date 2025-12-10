@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sctipt-table
+What is it?
+Useful functions for handling tables.
+
+Make Table
+Creates frequently used table templates.
+Sub tableMaker(control As IRibbonControl)
+
+    On Error GoTo Err_Check
+
+    Dim myt As shape
+    Dim idx As Integer
+    Dim cnum As Integer
+    Dim rnum As Integer
+    Dim c As Integer
+    Dim r As Integer
+
+    idx = ActiveWindow.View.slide.slideIndex
+    Set myt = ActivePresentation.Slides(idx).Shapes.AddTable(4, 4)
+
+    cnum = myt.Table.Columns.Count
+    rnum = myt.Table.Rows.Count
+
+    With myt.Table
+        For c = 1 To cnum
+            For r = 1 To rnum
+                If r = 1 Then
+                    .cell(r, c).Borders(ppBorderTop).ForeColor.RGB = RGB(64, 64, 64)
+                    .cell(r, c).Borders(ppBorderTop).Weight = 0.5
+                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64)
+                    .cell(r, c).Borders(ppBorderBottom).Weight = 0.5
+                    .cell(r, c).shape.Fill.ForeColor.RGB = RGB(242, 242, 242)
+                Else
+                    .cell(r, c).shape.Fill.ForeColor.RGB = RGB(255, 255, 255)
+                End If
+
+                If c &lt; cnum Then
+                    .cell(r, c).Borders(ppBorderRight).ForeColor.RGB = RGB(191, 191, 191)
+                    .cell(r, c).Borders(ppBorderRight).Weight = 0.5
+                End If
+
+                If r &gt; 1 And r &lt; rnum Then
+                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(191, 191, 191)
+                    .cell(r, c).Borders(ppBorderBottom).Weight = 0.5
+                End If
+
+                If r = rnum Then
+                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64)
+                    .cell(r, c).Borders(ppBorderBottom).Weight = 0.5
+                End If
+
+                .cell(r, c).shape.TextFrame.TextRange.Font.size = 12
+                .cell(r, c).shape.TextFrame.TextRange.Font.Bold = msoFalse
+                .cell(r, c).shape.TextFrame.TextRange.Font.Name = &#34;맑은 고딕&#34;
+                .cell(r, c).shape.TextFrame.TextRange.Font.Color.RGB = RGB(0, 0, 0)
+                .cell(r, c).shape.TextFrame.TextRange.ParagraphFormat.Alignment = ppAlignCenter
+                .cell(r, c).shape.TextFrame.VerticalAnchor = msoAnchorMiddle
+
+            Next r
+        Next c
+    End With
+
+    Exit Sub
+
+Err_Check:
+    If Err.Number &lt;&gt; 0 Then
+        MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _
+        &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34;
+    End If
+
+End Sub
+Table Size
+Adjusts table size via UserForm.
+→ Refer to the .PPAM file for the userForm code.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/life/02002/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="└ Sctipt List">
+  <meta property="og:description" content="Sctipt-table What is it? Useful functions for handling tables.
+Make Table Creates frequently used table templates.
+Sub tableMaker(control As IRibbonControl) On Error GoTo Err_Check Dim myt As shape Dim idx As Integer Dim cnum As Integer Dim rnum As Integer Dim c As Integer Dim r As Integer idx = ActiveWindow.View.slide.slideIndex Set myt = ActivePresentation.Slides(idx).Shapes.AddTable(4, 4) cnum = myt.Table.Columns.Count rnum = myt.Table.Rows.Count With myt.Table For c = 1 To cnum For r = 1 To rnum If r = 1 Then .cell(r, c).Borders(ppBorderTop).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderTop).Weight = 0.5 .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 .cell(r, c).shape.Fill.ForeColor.RGB = RGB(242, 242, 242) Else .cell(r, c).shape.Fill.ForeColor.RGB = RGB(255, 255, 255) End If If c &lt; cnum Then .cell(r, c).Borders(ppBorderRight).ForeColor.RGB = RGB(191, 191, 191) .cell(r, c).Borders(ppBorderRight).Weight = 0.5 End If If r &gt; 1 And r &lt; rnum Then .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(191, 191, 191) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 End If If r = rnum Then .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB = RGB(64, 64, 64) .cell(r, c).Borders(ppBorderBottom).Weight = 0.5 End If .cell(r, c).shape.TextFrame.TextRange.Font.size = 12 .cell(r, c).shape.TextFrame.TextRange.Font.Bold = msoFalse .cell(r, c).shape.TextFrame.TextRange.Font.Name = &#34;맑은 고딕&#34; .cell(r, c).shape.TextFrame.TextRange.Font.Color.RGB = RGB(0, 0, 0) .cell(r, c).shape.TextFrame.TextRange.ParagraphFormat.Alignment = ppAlignCenter .cell(r, c).shape.TextFrame.VerticalAnchor = msoAnchorMiddle Next r Next c End With Exit Sub Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류 발생&#34; End If End Sub Table Size Adjusts table size via UserForm. → Refer to the .PPAM file for the userForm code.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="life">
+    <meta property="article:published_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-14T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>└ Sctipt List | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/life/02002/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.124856d72c4f685c4ee8c7a1454823305e5bd01bc69a20e63280e9e6e2053a5d.css" integrity="sha256-EkhW1yxPaFxO6MehRUgjMF5b0BvGmiDmMoDp5uIFOl0=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7e8c09354a04e43b4b9971237bae24c028a5eac25361c0c9a28e1f7eec66426c.js" integrity="sha256-fowJNUoE5DtLmXEje64kwCil6sJTYcDJoo4ffuxmQmw=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+  
+  
+</head>
+
+<body dir="ltr">
+
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+
+  <br>
+  
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        
+          
+        
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  <br>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>└ Sctipt List</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#make-table">Make Table</a></li>
+    <li><a href="#table-size">Table Size</a></li>
+    <li><a href="#delblank">delblank</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-1">What is it?</a></li>
+    <li><a href="#rgb_color">RGB_color</a></li>
+    <li><a href="#color_palette">Color_palette</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-2">What is it?</a></li>
+    <li><a href="#text-arrange">Text arrange</a></li>
+    <li><a href="#zeromargin">zeromargin</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-3">What is it?</a></li>
+    <li><a href="#jpg-export">jpg export</a></li>
+    <li><a href="#slide_resizes">slide_resizes</a></li>
+    <li><a href="#grouprelease">groupRelease</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-4">What is it?</a></li>
+    <li><a href="#align_bottom">align_bottom</a></li>
+    <li><a href="#align_right">align_right</a></li>
+    <li><a href="#guidebox">guidebox</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="sctipt-table">Sctipt-table</h1>
+<h2 id="what-is-it">What is it?</h2>
+<p>Useful functions for handling tables.</p>
+<hr>
+<h2 id="make-table">Make Table</h2>
+<p>Creates frequently used table templates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">tableMaker</span>(control <span style="color:#f92672">As</span> IRibbonControl)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> myt <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> cnum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rnum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    idx <span style="color:#f92672">=</span> ActiveWindow.View.slide.slideIndex
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> ActivePresentation.Slides(idx).Shapes.AddTable(4, 4)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cnum <span style="color:#f92672">=</span> myt.Table.Columns.Count
+</span></span><span style="display:flex;"><span>    rnum <span style="color:#f92672">=</span> myt.Table.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> myt.Table
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderTop).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderTop).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                    .cell(r, c).shape.Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(242, 242, 242)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).shape.Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(255, 255, 255)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> c <span style="color:#f92672">&lt;</span> cnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderRight).ForeColor.RGB <span style="color:#f92672">=</span> RGB(191, 191, 191)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderRight).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">&gt;</span> 1 <span style="color:#f92672">And</span> r <span style="color:#f92672">&lt;</span> rnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(191, 191, 191)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> r <span style="color:#f92672">=</span> rnum <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).ForeColor.RGB <span style="color:#f92672">=</span> RGB(64, 64, 64)
+</span></span><span style="display:flex;"><span>                    .cell(r, c).Borders(ppBorderBottom).Weight <span style="color:#f92672">=</span> 0.5
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.size <span style="color:#f92672">=</span> 12
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Bold <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;맑은 고딕&#34;</span>
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.Font.Color.RGB <span style="color:#f92672">=</span> RGB(0, 0, 0)
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.TextRange.ParagraphFormat.Alignment <span style="color:#f92672">=</span> ppAlignCenter
+</span></span><span style="display:flex;"><span>                .cell(r, c).shape.TextFrame.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><h2 id="table-size">Table Size</h2>
+<p>Adjusts table size via UserForm.
+→ Refer to the .PPAM file for the <code>userForm</code> code.</p>
+<hr>
+<h2 id="delblank">delblank</h2>
+<p>Removes blanks created when copying tables in Excel; note it removes all spaces in the table</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">delBlank</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> j <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> ErrorHandler
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shps <span style="color:#f92672">In</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> shp <span style="color:#f92672">=</span> shps
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shps
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no table!&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GoTo</span> dd
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> shp.Table.Rows.Count
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> j <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> shp.Table.Columns.Count
+</span></span><span style="display:flex;"><span>                shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text <span style="color:#f92672">=</span> _
+</span></span><span style="display:flex;"><span>                    Replace(shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text <span style="color:#f92672">=</span> _
+</span></span><span style="display:flex;"><span>                    Replace(shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text, <span style="color:#e6db74">&#34;　&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text <span style="color:#f92672">=</span> _
+</span></span><span style="display:flex;"><span>                    Replace(shp.Table.Rows.Item(i).Cells(j).shape.TextFrame.TextRange.Text, vbCr, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> j
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dd:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ErrorHandler</span>:
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;An error occurred: &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Resume</span> dd
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h1 id="sctipt-color">Sctipt-color</h1>
+<h2 id="what-is-it-1">What is it?</h2>
+<p>Useful functions for handling color.</p>
+<hr>
+<h2 id="rgb_color">RGB_color</h2>
+<p>Displays RGB values of the selected shape via UserForm.
+→ Refer to the .PPAM file for the <code>userForm</code> code.</p>
+<hr>
+<h2 id="color_palette">Color_palette</h2>
+<p>Creates a color palette in the slide master - newly added feature.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">pal2</span>()    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> mySlideMaster <span style="color:#f92672">As</span> Master
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> size <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rgb1 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> rgb2 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> hexcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colred <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colgreen <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> colblue <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> newcol <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pagenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> mySlideMaster <span style="color:#f92672">=</span> Application.ActivePresentation.slideMaster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;do you wanna set default?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbNo <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;do you wanna use HEX color data?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>            hexcolor <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;your hex color&#34;</span>)            
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            newcol <span style="color:#f92672">=</span> HexToRGB(hexcolor)
+</span></span><span style="display:flex;"><span>            colred <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(0), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            colgreen <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(1), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            colblue <span style="color:#f92672">=</span> Replace(Split(newcol, <span style="color:#e6db74">&#34;,&#34;</span>)(2), <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            idx <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;index&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>            colred <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type R&#34;</span>)
+</span></span><span style="display:flex;"><span>            colgreen <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type G&#34;</span>)
+</span></span><span style="display:flex;"><span>            colblue <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;type B&#34;</span>)
+</span></span><span style="display:flex;"><span>            idx <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;index&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> colred <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> colgreen <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> colblue <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">Or</span> idx <span style="color:#f92672">&lt;=</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                MsgBox <span style="color:#e6db74">&#34;Invalid input values&#34;</span>, vbCritical
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">GoTo</span> Err_Check2
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        top <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>25
+</span></span><span style="display:flex;"><span>        size <span style="color:#f92672">=</span> 20
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=</span>left, top:<span style="color:#f92672">=</span>topcal(idx, size), width:<span style="color:#f92672">=</span>size, height:<span style="color:#f92672">=</span>size)
+</span></span><span style="display:flex;"><span>            .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(colred, colgreen, colblue)
+</span></span><span style="display:flex;"><span>            .line.Visible <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        rgb1 <span style="color:#f92672">=</span> RGB(0, 63, 104)
+</span></span><span style="display:flex;"><span>        rgb2 <span style="color:#f92672">=</span> RGB(237, 116, 35)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 4
+</span></span><span style="display:flex;"><span>            counter <span style="color:#f92672">=</span> counter <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=-</span>25, top:<span style="color:#f92672">=</span>((x <span style="color:#f92672">-</span> 1) <span style="color:#f92672">*</span> 20) <span style="color:#f92672">+</span> (ConvertCmToPoint(0.3) <span style="color:#f92672">*</span> (x <span style="color:#f92672">-</span> 1)), width:<span style="color:#f92672">=</span>20, height:<span style="color:#f92672">=</span>20)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> rgb1
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">ElseIf</span> x <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> rgb2
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                    .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(0, 0, 0)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>                .line.Visible <span style="color:#f92672">=</span> msoFalse
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check2</span>:
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;you have wrong input value&#34;</span>, vbCritical, <span style="color:#e6db74">&#34;잘못된 입력&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Function</span> topcal(idx <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, size <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> idx <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        topcal <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        topcal <span style="color:#f92672">=</span> ((idx <span style="color:#f92672">-</span> 1) <span style="color:#f92672">*</span> size) <span style="color:#f92672">+</span> (ConvertCmToPoint(0.3) <span style="color:#f92672">*</span> (idx <span style="color:#f92672">-</span> 1))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertPointToCm</span>(<span style="color:#66d9ef">ByVal</span> pnt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertPointToCm <span style="color:#f92672">=</span> pnt <span style="color:#f92672">*</span> 0.03527778
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertCmToPoint</span>(<span style="color:#66d9ef">ByVal</span> cm <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertCmToPoint <span style="color:#f92672">=</span> cm <span style="color:#f92672">*</span> 28.34646
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">HexToRGB</span>(hexcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> G <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> B <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> newrgbcolor <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    hexcolor <span style="color:#f92672">=</span> Replace(hexcolor, <span style="color:#e6db74">&#34;#&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>    hexcolor <span style="color:#f92672">=</span> Right<span style="color:#960050;background-color:#1e0010">$</span>(<span style="color:#e6db74">&#34;000000&#34;</span> <span style="color:#f92672">&amp;</span> hexcolor, 6)
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 1, 2))
+</span></span><span style="display:flex;"><span>    G <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 3, 2))
+</span></span><span style="display:flex;"><span>    B <span style="color:#f92672">=</span> val(<span style="color:#e6db74">&#34;&amp;H&#34;</span> <span style="color:#f92672">&amp;</span> Mid(hexcolor, 5, 2))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    newrgbcolor <span style="color:#f92672">=</span> r <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&amp;</span> G <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">&amp;</span> B
+</span></span><span style="display:flex;"><span>    Debug.Print newrgbcolor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    HexToRGB <span style="color:#f92672">=</span> newrgbcolor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Function</span>
+</span></span></code></pre></div><hr>
+<h1 id="sctipt-text">Sctipt-text</h1>
+<h2 id="what-is-it-2">What is it?</h2>
+<p>Useful functions for handling text.</p>
+<hr>
+<h2 id="text-arrange">Text arrange</h2>
+<p>Adjusts letter spacing of <code>Malgun Gothic</code> font to 0.3.</p>
+<hr>
+<h2 id="zeromargin">zeromargin</h2>
+<p>Sets margins of text boxes or shapes to zero.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">textMarginZero</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> activeshape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> myt <span style="color:#f92672">As</span> Table
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> z <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dtb <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dlr <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 선택된 도형이 있는지 확인
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> activeshape <span style="color:#f92672">=</span> shp
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>    dlr <span style="color:#f92672">=</span> ConvertCmToPoint(0.13)
+</span></span><span style="display:flex;"><span>    dtb <span style="color:#f92672">=</span> ConvertCmToPoint(0.25)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 메시지 박스에서 사용자가 선택한 값을 처리
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;To Zero : Yes, To Default : No&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> shp.Table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cnum <span style="color:#f92672">=</span> myt.Columns.Count
+</span></span><span style="display:flex;"><span>            rnum <span style="color:#f92672">=</span> myt.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블 내의 셀에 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> myt
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginTop <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginBottom <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginLeft <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginRight <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블이 아닌 경우 일반 텍스트 상자의 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> shp.TextFrame2
+</span></span><span style="display:flex;"><span>                .MarginTop <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginBottom <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginLeft <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .MarginRight <span style="color:#f92672">=</span> z
+</span></span><span style="display:flex;"><span>                .VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> myt <span style="color:#f92672">=</span> shp.Table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            cnum <span style="color:#f92672">=</span> myt.Columns.Count
+</span></span><span style="display:flex;"><span>            rnum <span style="color:#f92672">=</span> myt.Rows.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블 내의 셀에 기본 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> myt
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> cnum
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rnum
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginTop <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginBottom <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginLeft <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.MarginRight <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                        .cell(r, c).shape.TextFrame2.VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Next</span> r
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Next</span> c
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 테이블이 아닌 경우 일반 텍스트 상자의 기본 마진 값 적용
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">With</span> shp.TextFrame2
+</span></span><span style="display:flex;"><span>                .MarginTop <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                .MarginBottom <span style="color:#f92672">=</span> dtb
+</span></span><span style="display:flex;"><span>                .MarginLeft <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                .MarginRight <span style="color:#f92672">=</span> dlr
+</span></span><span style="display:flex;"><span>                .VerticalAnchor <span style="color:#f92672">=</span> msoAnchorMiddle
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertPointToCm</span>(<span style="color:#66d9ef">ByVal</span> pnt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertPointToCm <span style="color:#f92672">=</span> pnt <span style="color:#f92672">*</span> 0.03527778
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">ConvertCmToPoint</span>(<span style="color:#66d9ef">ByVal</span> cm <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    ConvertCmToPoint <span style="color:#f92672">=</span> cm <span style="color:#f92672">*</span> 28.34646
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span></code></pre></div><hr>
+<h1 id="sctipt-slide">Sctipt-slide</h1>
+<h2 id="what-is-it-3">What is it?</h2>
+<p>Useful functions for handling slide.</p>
+<hr>
+<h2 id="jpg-export">jpg export</h2>
+<p>Exports selected slides as JPG files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">jpgExport</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pptPres <span style="color:#f92672">As</span> Presentation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> filePath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slidenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slicePageNum() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> pagenum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> pptPres <span style="color:#f92672">=</span> ActivePresentation
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> pptPres.Path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;프레젠테이션이 파일로 저장되지 않았습니다. 저장 후 다시 시도하세요.&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Else</span>
+</span></span><span style="display:flex;"><span>        filePath <span style="color:#f92672">=</span> pptPres.Path
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    slidenum <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;Input PageNumber&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> InStr(slidenum, <span style="color:#e6db74">&#34;,&#34;</span>) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        slicePageNum <span style="color:#f92672">=</span> Split(Replace(slidenum, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>), <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> LBound(slicePageNum) <span style="color:#66d9ef">To</span> UBound(slicePageNum)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>            pagenum <span style="color:#f92672">=</span> <span style="color:#66d9ef">CInt</span>(slicePageNum(i))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> IsNumeric(pagenum) <span style="color:#f92672">And</span> pagenum <span style="color:#f92672">&lt;=</span> pptPres.Slides.Count <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">With</span> pptPres.Slides(pagenum)
+</span></span><span style="display:flex;"><span>                    .Export filePath <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\Slide&#34;</span> <span style="color:#f92672">&amp;</span> pagenum <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;.jpg&#34;</span>, <span style="color:#e6db74">&#34;JPG&#34;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                MsgBox <span style="color:#e6db74">&#34;non-numeric value or wrong page number: &#34;</span> <span style="color:#f92672">&amp;</span> slicePageNum(i), vbExclamation
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>        
+</span></span><span style="display:flex;"><span>        pagenum <span style="color:#f92672">=</span> <span style="color:#66d9ef">CInt</span>(slidenum)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> IsNumeric(pagenum) <span style="color:#f92672">And</span> pagenum <span style="color:#f92672">&lt;=</span> pptPres.Slides.Count <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> pptPres.Slides(pagenum)
+</span></span><span style="display:flex;"><span>                .Export filePath <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\Slide&#34;</span> <span style="color:#f92672">&amp;</span> pagenum <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;.jpg&#34;</span>, <span style="color:#e6db74">&#34;JPG&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;non-numeric value or wrong page number&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;export complete&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;오류번호: &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용: &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="slide_resizes">slide_resizes</h2>
+<p>Changes slide size based on pixel dimensions.</p>
+<hr>
+<h2 id="grouprelease">groupRelease</h2>
+<p>Ungroups all groups on all slides at once</p>
+<hr>
+<h1 id="sctipt-shape">Sctipt-shape</h1>
+<h2 id="what-is-it-4">What is it?</h2>
+<p>Useful functions for handling shape.</p>
+<hr>
+<h2 id="align_bottom">align_bottom</h2>
+<p>Aligns selected shape(s) to the bottom of the first selected shape.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_bottom</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeName() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapenameOrigin() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectShapes <span style="color:#f92672">As</span> ShapeRange
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> arrcount <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> x <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> culumheight <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_height <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_width <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> standardshape_top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> selectShapes <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">ReDim</span> Preserve shapeName(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">ReDim</span> Preserve shapenameOrigin(selectShapes.Count)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;selected shape name array count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        arrcount <span style="color:#f92672">=</span> UBound(shapeName) <span style="color:#f92672">-</span> LBound(shapeName)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>            shapenameOrigin(x) <span style="color:#f92672">=</span> selectShapes(x).Name
+</span></span><span style="display:flex;"><span>            selectShapes(x).Name <span style="color:#f92672">=</span> selectShapes(x).Name <span style="color:#f92672">&amp;</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> selectShapes
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> shapeName(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    shapeName(x) <span style="color:#f92672">=</span> shp.Name
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Ensure there is at least one shape to align
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">If</span> arrcount <span style="color:#f92672">&lt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;No shapes were selected for alignment!&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Get standard shape dimensions and position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    standardshape_height <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).height
+</span></span><span style="display:flex;"><span>    standardshape_width <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).width
+</span></span><span style="display:flex;"><span>    standardshape_left <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).left
+</span></span><span style="display:flex;"><span>    standardshape_top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(1)).top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> y <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> standardshape_top <span style="color:#f92672">+</span> standardshape_height
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> y <span style="color:#f92672">&gt;</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            culumheight <span style="color:#f92672">=</span> culumheight <span style="color:#f92672">+</span> ActiveWindow.Selection.ShapeRange(shapeName(y <span style="color:#f92672">-</span> 1)).height
+</span></span><span style="display:flex;"><span>            ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapeName(y)).top <span style="color:#f92672">+</span> culumheight
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapeName(y)).left <span style="color:#f92672">=</span> standardshape_left
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        selectShapes(x).Name <span style="color:#f92672">=</span> shapenameOrigin(x)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="align_right">align_right</h2>
+<p>Aligns selected shape(s) to the right of the first selected shape.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_right</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectedShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> secondShape <span style="color:#f92672">As</span> shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeLeftInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeWidthInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sel <span style="color:#f92672">As</span> Selection
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check <span style="color:#75715e">&#39; 에러 발생 시 Err_Check로 이동
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sel <span style="color:#f92672">=</span> ActiveWindow.Selection
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> sel.ShapeRange.Count <span style="color:#f92672">&gt;=</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> selectedShape <span style="color:#f92672">=</span> sel.ShapeRange(1)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> sel.ShapeRange.Count
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Set</span> secondShape <span style="color:#f92672">=</span> sel.ShapeRange(i)
+</span></span><span style="display:flex;"><span>                shapeLeftInPoints <span style="color:#f92672">=</span> selectedShape.left
+</span></span><span style="display:flex;"><span>                shapeWidthInPoints <span style="color:#f92672">=</span> selectedShape.width
+</span></span><span style="display:flex;"><span>                secondShape.left <span style="color:#f92672">=</span> shapeLeftInPoints <span style="color:#f92672">+</span> shapeWidthInPoints
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;Please select over 2 shapes&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Please select shapes.&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Err_Check</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류 발생&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><hr>
+<h2 id="guidebox">guidebox</h2>
+<p>Creates guide boxes (rectangles) spaced at regular intervals.</p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/life/02001/" class="flex align-center book-icon">
+      
+      <span>← MacroToolkit-powerpoint</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/life/03001/" class="flex align-center book-icon">
+      <span>How to use macro? →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#make-table">Make Table</a></li>
+    <li><a href="#table-size">Table Size</a></li>
+    <li><a href="#delblank">delblank</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-1">What is it?</a></li>
+    <li><a href="#rgb_color">RGB_color</a></li>
+    <li><a href="#color_palette">Color_palette</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-2">What is it?</a></li>
+    <li><a href="#text-arrange">Text arrange</a></li>
+    <li><a href="#zeromargin">zeromargin</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-3">What is it?</a></li>
+    <li><a href="#jpg-export">jpg export</a></li>
+    <li><a href="#slide_resizes">slide_resizes</a></li>
+    <li><a href="#grouprelease">groupRelease</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#what-is-it-4">What is it?</a></li>
+    <li><a href="#align_bottom">align_bottom</a></li>
+    <li><a href="#align_right">align_right</a></li>
+    <li><a href="#guidebox">guidebox</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

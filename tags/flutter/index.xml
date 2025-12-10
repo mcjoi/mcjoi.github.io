@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flutter on shaaaaallow Dive</title>
-    <link>http://localhost:1313/tags/flutter/</link>
+    <link>https://mcjoi.github.io/tags/flutter/</link>
     <description>Recent content in Flutter on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcjoi.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Init Flutter APIs</title>
-      <link>http://localhost:1313/flutter/05001/</link>
+      <link>https://mcjoi.github.io/life/05001/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/flutter/05001/</guid>
-      <description>&lt;h1 id=&#34;init-flutter-apis&#34;&gt;&#xA;  Init Flutter APIs&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#init-flutter-apis&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;the Flutter framework and widget binding are initialized before you use any Flutter APIs.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; main() &lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  WidgetsFlutterBinding.ensureInitialized();  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Example: Initialize Firebase or other async services&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; Firebase.initializeApp();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  runApp(MyApp());&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a&#xA;   href=&#34;https://sunnybong.tistory.com/792&#34; &#xA;   target=&#34;_blank&#34; rel=&#34;noopener&#34; &#xA;  class=&#34;book-btn&#34;&#xA;&gt;original post (Kor)&lt;/a&gt;&#xA;&lt;br&gt;&#xA; &lt;/p&gt;&#xA;&lt;hr&gt;</description>
+      <guid>https://mcjoi.github.io/life/05001/</guid>
+      <description>&lt;h1 id=&#34;init-flutter-apis&#34;&gt;Init Flutter APIs&lt;/h1&gt;&#xA;&lt;p&gt;the Flutter framework and widget binding are initialized before you use any Flutter APIs.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; main() &lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  WidgetsFlutterBinding.ensureInitialized();  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Example: Initialize Firebase or other async services&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; Firebase.initializeApp();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  runApp(MyApp());&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a&#xA;   href=&#34;https://sunnybong.tistory.com/792&#34; &#xA;   target=&#34;_blank&#34; rel=&#34;noopener&#34; &#xA;  class=&#34;book-btn&#34;&#xA;&gt;original post (Kor)&lt;/a&gt;&#xA;&lt;br&gt;&#xA; &lt;/p&gt;&#xA;&lt;hr&gt;</description>
     </item>
     <item>
       <title>Windows Desktop Shortcut</title>
-      <link>http://localhost:1313/flutter/05002/</link>
+      <link>https://mcjoi.github.io/life/05002/</link>
       <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/flutter/05002/</guid>
-      <description>&lt;h1 id=&#34;windows-shortcut---flutter-desktop&#34;&gt;&#xA;  Windows Shortcut - Flutter Desktop&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#windows-shortcut---flutter-desktop&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;inspiration&#34;&gt;&#xA;  Inspiration&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#inspiration&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Organizing and keeping track of countless applications, folders, and web URLs scattered across Windows can be a tedious task. In that sense, Rainmeter is an excellent tool, offering a sleek way to manage and access resources directly from your desktop.&lt;/p&gt;&#xA;&lt;p&gt;That said, there’s one drawback: adding new bookmarks is unnecessarily cumbersome. Of course, it’s understandable, since bookmark management was never intended to be one of Rainmeter’s core features.&lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/05002/</guid>
+      <description>&lt;h1 id=&#34;windows-shortcut---flutter-desktop&#34;&gt;Windows Shortcut - Flutter Desktop&lt;/h1&gt;&#xA;&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;&#xA;&lt;p&gt;Organizing and keeping track of countless applications, folders, and web URLs scattered across Windows can be a tedious task. In that sense, Rainmeter is an excellent tool, offering a sleek way to manage and access resources directly from your desktop.&lt;/p&gt;&#xA;&lt;p&gt;That said, there’s one drawback: adding new bookmarks is unnecessarily cumbersome. Of course, it’s understandable, since bookmark management was never intended to be one of Rainmeter’s core features.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows Click Animation</title>
-      <link>http://localhost:1313/flutter/05003/</link>
+      <link>https://mcjoi.github.io/life/05003/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/flutter/05003/</guid>
-      <description>&lt;h1 id=&#34;windows-mouse-click-animationlottie&#34;&gt;&#xA;  Windows Mouse Click Animation(Lottie)&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#windows-mouse-click-animationlottie&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-is-it&#34;&gt;&#xA;  What is it?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#what-is-it&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…&lt;/p&gt;&#xA;&lt;p&gt;Windows has a long history, but since Vista, I haven’t really come across programs or open-source projects that deal with click animations. Sure, it’s mostly a trivial feature, but the built-in Windows functionality is just… terrible.&lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/05003/</guid>
+      <description>&lt;h1 id=&#34;windows-mouse-click-animationlottie&#34;&gt;Windows Mouse Click Animation(Lottie)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…&lt;/p&gt;&#xA;&lt;p&gt;Windows has a long history, but since Vista, I haven’t really come across programs or open-source projects that deal with click animations. Sure, it’s mostly a trivial feature, but the built-in Windows functionality is just… terrible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hiding Google API key</title>
-      <link>http://localhost:1313/flutter/05004/</link>
+      <link>https://mcjoi.github.io/life/05004/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/flutter/05004/</guid>
-      <description>&lt;h1 id=&#34;hiding-google-api-key&#34;&gt;&#xA;  Hiding Google API key&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hiding-google-api-key&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;no-one-really-tells-you-this&#34;&gt;&#xA;  No one really tells you this…&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#no-one-really-tells-you-this&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I’ve been using the Google Sheets API quite well.&lt;br&gt;&#xA;The problem is that the API key was just hardcoded in a JSON file, and when I pressed F12 in Chrome, the API key was completely exposed.&#xA; &lt;/p&gt;&#xA;&lt;p&gt;After some Googling… of course, I realized I was the only one who hadn’t thought about handling these security issues.&#xA; &lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/05004/</guid>
+      <description>&lt;h1 id=&#34;hiding-google-api-key&#34;&gt;Hiding Google API key&lt;/h1&gt;&#xA;&lt;h2 id=&#34;no-one-really-tells-you-this&#34;&gt;No one really tells you this…&lt;/h2&gt;&#xA;&lt;p&gt;I’ve been using the Google Sheets API quite well.&lt;br&gt;&#xA;The problem is that the API key was just hardcoded in a JSON file, and when I pressed F12 in Chrome, the API key was completely exposed.&#xA; &lt;/p&gt;&#xA;&lt;p&gt;After some Googling… of course, I realized I was the only one who hadn’t thought about handling these security issues.&#xA; &lt;/p&gt;&#xA;&lt;p&gt;I’m not sure what programming language the tutorials were for, but there are several ways to hide an API key that are easy to find online. However, I couldn’t find a post that explained a method that could be directly used in Flutter, so I got a bit lazy.&#xA; &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

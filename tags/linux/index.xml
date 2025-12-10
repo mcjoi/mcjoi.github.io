@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on shaaaaallow Dive</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://mcjoi.github.io/tags/linux/</link>
     <description>Recent content in Linux on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcjoi.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>useful command</title>
-      <link>http://localhost:1313/windows_linux/06001/</link>
+      <link>https://mcjoi.github.io/life/06001/</link>
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/windows_linux/06001/</guid>
-      <description>&lt;h1 id=&#34;bypasses-the-script-execution-policy&#34;&gt;&#xA;  bypasses the script execution policy&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#bypasses-the-script-execution-policy&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h1 id=&#34;path-to-text&#34;&gt;&#xA;  Path to Text&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#path-to-text&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Normally, there&amp;rsquo;s little need to mess with Windows environment variables.&lt;/p&gt;&#xA;&lt;p&gt;However, if you&amp;rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.&lt;/p&gt;&#xA;&lt;p&gt;When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?&lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/06001/</guid>
+      <description>&lt;h1 id=&#34;bypasses-the-script-execution-policy&#34;&gt;bypasses the script execution policy&lt;/h1&gt;&#xA;&lt;p&gt;a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h1 id=&#34;path-to-text&#34;&gt;Path to Text&lt;/h1&gt;&#xA;&lt;p&gt;Normally, there&amp;rsquo;s little need to mess with Windows environment variables.&lt;/p&gt;&#xA;&lt;p&gt;However, if you&amp;rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.&lt;/p&gt;&#xA;&lt;p&gt;When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows10 Clipboard</title>
-      <link>http://localhost:1313/windows_linux/06002/</link>
+      <link>https://mcjoi.github.io/life/06002/</link>
       <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/windows_linux/06002/</guid>
-      <description>&lt;h1 id=&#34;clipboard-permanently-store-frequently-used-text&#34;&gt;&#xA;  Clipboard: Permanently Store Frequently Used Text&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#clipboard-permanently-store-frequently-used-text&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;One of my favorite recent features in Windows 10 is the ability to save frequently used text in the clipboard and use it like a snippet whenever needed. You could use tools like sticker memos, but if you have text that you use very often, this method is by far the most efficient.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/06002/clipboard.webp&#34; alt=&#34;image&#34; title=&#34;image&#34;/&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Most people know that pressing &lt;code&gt;Ctrl + C&lt;/code&gt; copies a single image or text to the clipboard. However, after copying with &lt;code&gt;Ctrl + C&lt;/code&gt;, instead of pressing &lt;code&gt;Ctrl + V&lt;/code&gt;, press &lt;code&gt;Windows Key + V&lt;/code&gt; to open the clipboard history.&#xA;You’ll see previously copied items, and you can click the one you want to paste. As mentioned earlier, if you want to store something permanently, click the three dots on the right and choose Pin. If your permanent items are pushed down due to too many copied entries, click Clear All so only your pinned items remain.&lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/06002/</guid>
+      <description>&lt;h1 id=&#34;clipboard-permanently-store-frequently-used-text&#34;&gt;Clipboard: Permanently Store Frequently Used Text&lt;/h1&gt;&#xA;&lt;p&gt;One of my favorite recent features in Windows 10 is the ability to save frequently used text in the clipboard and use it like a snippet whenever needed. You could use tools like sticker memos, but if you have text that you use very often, this method is by far the most efficient.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/06002/clipboard.webp&#34; alt=&#34;image&#34; title=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Most people know that pressing &lt;code&gt;Ctrl + C&lt;/code&gt; copies a single image or text to the clipboard. However, after copying with &lt;code&gt;Ctrl + C&lt;/code&gt;, instead of pressing &lt;code&gt;Ctrl + V&lt;/code&gt;, press &lt;code&gt;Windows Key + V&lt;/code&gt; to open the clipboard history.&#xA;You’ll see previously copied items, and you can click the one you want to paste. As mentioned earlier, if you want to store something permanently, click the three dots on the right and choose Pin. If your permanent items are pushed down due to too many copied entries, click Clear All so only your pinned items remain.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

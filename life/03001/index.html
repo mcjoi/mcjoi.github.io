@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to use self-made macro?
+Loading Add-ins in Excel vs. PowerPoint
+Although not required, using the designated folder can be convenient and helps keep your add-ins organized.
+So, for clarity, we can summarize the difference like this:
+
+  
+Excel Automatically loads add-ins from the XLSTART folder  
+PowerPoint  Requires manual add-in registration, regardless of file location
+
+
+
+
+Using VBA and Add-ins in Excel
+Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/life/03001/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="How to use macro?">
+  <meta property="og:description" content="How to use self-made macro? Loading Add-ins in Excel vs. PowerPoint Although not required, using the designated folder can be convenient and helps keep your add-ins organized. So, for clarity, we can summarize the difference like this:
+Excel Automatically loads add-ins from the XLSTART folder PowerPoint Requires manual add-in registration, regardless of file location Using VBA and Add-ins in Excel Usually, the common approach is to save your current workbook as an .xlsm file and keep the VBA code inside it. But when you need to share the file with colleagues, an .xlsm file can sometimes be a bit inconvenient.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="life">
+    <meta property="article:published_time" content="2025-08-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-20T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>How to use macro? | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/life/03001/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.124856d72c4f685c4ee8c7a1454823305e5bd01bc69a20e63280e9e6e2053a5d.css" integrity="sha256-EkhW1yxPaFxO6MehRUgjMF5b0BvGmiDmMoDp5uIFOl0=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7e8c09354a04e43b4b9971237bae24c028a5eac25361c0c9a28e1f7eec66426c.js" integrity="sha256-fowJNUoE5DtLmXEje64kwCil6sJTYcDJoo4ffuxmQmw=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+  
+  
+</head>
+
+<body dir="ltr">
+
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+
+  <br>
+  
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        
+          
+        
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  <br>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>How to use macro?</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#loading-add-ins-in-excel-vs-powerpoint">Loading Add-ins in Excel vs. PowerPoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-excel">Using VBA and Add-ins in Excel</a>
+      <ul>
+        <li><a href="#xlstart-folder">XLSTART Folder</a></li>
+        <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
+        <li><a href="#ribbon-menu">Ribbon menu</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-vba-and-add-ins-in-powerpoint">Using VBA and Add-ins in PowerPoint</a>
+      <ul>
+        <li><a href="#default-file-format-pptx">Default File Format: .pptx</a></li>
+        <li><a href="#macro-enabled-file-format-pptm">Macro-Enabled File Format: .pptm</a></li>
+        <li><a href="#add-in-file-format-ppam">Add-in File Format: .ppam</a></li>
+        <li><a href="#powerpoint-manual-add-in-registration">PowerPoint: Manual Add-in Registration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="how-to-use-self-made-macro">How to use self-made macro?</h1>
+<h2 id="loading-add-ins-in-excel-vs-powerpoint">Loading Add-ins in Excel vs. PowerPoint</h2>
+<p>Although not required, using the designated folder can be convenient and helps keep your add-ins organized.
+So, for clarity, we can summarize the difference like this:<br>
+<blockquote class="book-hint warning">
+  
+<b>Excel</b> <br>Automatically loads add-ins from the XLSTART folder  <br>
+<b>PowerPoint</b>  <br>Requires manual add-in registration, regardless of file location
+
+</blockquote>
+</p>
+<hr>
+<h2 id="using-vba-and-add-ins-in-excel">Using VBA and Add-ins in Excel</h2>
+<p>Usually, the common approach is to save your current workbook as an <code>.xlsm</code> file and keep the VBA code inside it. But when you need to share the file with colleagues, an <code>.xlsm</code> file can sometimes be a bit inconvenient.</p>
+<p>If the macro is just for your personal use, a better way is to create an add-in (.xlam or .xla) and place it in the <code>XLSTART</code> folder. This way, your macro will always be available for you, without getting in the way when you share your workbook with others.</p>
+<h3 id="xlstart-folder">XLSTART Folder</h3>
+<p>The <code>XLSTART</code> folder is usually located in the path shown below. Any file placed in this folder will automatically open whenever Excel starts — whether it’s an <code>.xlsx</code> file, a <code>.txt</code> file, or anything else.
+ <br>
+XLSTART folder path :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>C:\Users\[User_name]\AppData\Roaming\Microsoft\Excel\XLSTART
+</span></span></code></pre></div><h3 id="add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</h3>
+<p>The <code>.xla</code> and <code>.xlam</code> files are Excel add-in files. When they are loaded from the <code>XLSTART</code> folder, they don’t open in a separate workbook window — instead, only the add-in features become available in Excel. This means they won’t interfere with the files you’re working on, keeping your workbooks clean while still giving you access to your personal macros.</p>
+<h3 id="ribbon-menu">Ribbon menu</h3>
+<p>Now, all you need to do is create a button on the Ribbon menu and start assigning your general-purpose macros to it one by one. This way, your favorite tools are always just a click away, no matter which workbook you’re working on.<br>
+VBA code(ThisWorkbook in .xla file) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">workbook_open</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;shorcut
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Application.OnKey <span style="color:#e6db74">&#34;%+^q&#34;</span>, <span style="color:#e6db74">&#34;showMenu&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;ribbon menu icon
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">With</span> Application.CommandBars(<span style="color:#e6db74">&#34;tools&#34;</span>)        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> .Controls.Add(msoControlButton)
+</span></span><span style="display:flex;"><span>                .Caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MacroToolKit&#34;</span>
+</span></span><span style="display:flex;"><span>                .OnAction <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;showMenu&#34;</span>
+</span></span><span style="display:flex;"><span>                .FaceId <span style="color:#f92672">=</span> 6270
+</span></span><span style="display:flex;"><span>                .Style <span style="color:#f92672">=</span> msoButtonIconAndCaption
+</span></span><span style="display:flex;"><span>                .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Workbook_BeforeClose</span>(Cancel <span style="color:#f92672">As</span> <span style="color:#66d9ef">Boolean</span>)
+</span></span><span style="display:flex;"><span>    Application.CommandBars(<span style="color:#e6db74">&#34;tools&#34;</span>).Reset
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p> <br>
+As shown in the image below, the Add-ins menu is now active, and you can see the buttons you’ve registered.
+If you want to change the icon, simply modify the <code>Faceid</code> value in the code.<br>
+ <br>
+You can check the <code>Faceid</code> at the following location:<br>
+
+<a
+   href="https://bettersolutions.com/vba/ribbon/face-ids-2003.htm" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+> Faceid link </a>
+</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/03001/xls_icon.webp" alt="macrotoolkit" title="macrotoolkit"></p>
+<hr>
+<h2 id="using-vba-and-add-ins-in-powerpoint">Using VBA and Add-ins in PowerPoint</h2>
+<p>PowerPoint supports VBA (Visual Basic for Applications) similar to Excel, but there are some differences in how file formats and add-ins are handled. This document explains the key file types and how to use VBA in PowerPoint.</p>
+<h3 id="default-file-format-pptx">Default File Format: .pptx</h3>
+<p>When you open PowerPoint and create a new presentation, it is saved by default in the <code>.pptx</code> format. This is the standard presentation format, and it does not support macros.</p>
+<h3 id="macro-enabled-file-format-pptm">Macro-Enabled File Format: .pptm</h3>
+<p>If you want to insert VBA code or use macros in your presentation, you need to save the file as a <code>.pptm</code> file.
+Since <code>.pptx</code> files cannot store macros, PowerPoint requires macro-enabled presentations to be saved in the <code>.pptm</code> format.</p>
+<h3 id="add-in-file-format-ppam">Add-in File Format: .ppam</h3>
+<p>Just like Excel uses .xlam files for macro-based add-ins, PowerPoint uses .ppam files.
+A <code>.ppam</code> file contains VBA code only, without standard slide content. It is used to create custom add-ins that can extend PowerPoint&rsquo;s functionality across all presentations.</p>
+<h3 id="powerpoint-manual-add-in-registration">PowerPoint: Manual Add-in Registration</h3>
+<p>PowerPoint handles add-ins differently. It does not automatically load add-ins from a specific folder at startup.
+Instead, you need to manually register each .ppam file through the PowerPoint Add-ins menu.</p>
+<p>While Microsoft provides a default AddIns folder for convenience (which opens automatically when you browse for add-ins), you are not required to store your .ppam files there. You can register add-ins from any location.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>C:\Users\[username]\AppData\Roaming\Microsoft\AddIns\
+</span></span></code></pre></div><hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/life/02002/" class="flex align-center book-icon">
+      
+      <span>← └ Sctipt List</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/life/03002/" class="flex align-center book-icon">
+      <span>Making Keyboard Shortcut →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#loading-add-ins-in-excel-vs-powerpoint">Loading Add-ins in Excel vs. PowerPoint</a></li>
+    <li><a href="#using-vba-and-add-ins-in-excel">Using VBA and Add-ins in Excel</a>
+      <ul>
+        <li><a href="#xlstart-folder">XLSTART Folder</a></li>
+        <li><a href="#add-in-filexla-or-xlam">Add-in file(.xla or .xlam)</a></li>
+        <li><a href="#ribbon-menu">Ribbon menu</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-vba-and-add-ins-in-powerpoint">Using VBA and Add-ins in PowerPoint</a>
+      <ul>
+        <li><a href="#default-file-format-pptx">Default File Format: .pptx</a></li>
+        <li><a href="#macro-enabled-file-format-pptm">Macro-Enabled File Format: .pptm</a></li>
+        <li><a href="#add-in-file-format-ppam">Add-in File Format: .ppam</a></li>
+        <li><a href="#powerpoint-manual-add-in-registration">PowerPoint: Manual Add-in Registration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on shaaaaallow Dive</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>https://mcjoi.github.io/tags/blog/</link>
     <description>Recent content in Blog on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcjoi.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Registration_sitemap_on_GSC</title>
-      <link>http://localhost:1313/life/08006/</link>
+      <link>https://mcjoi.github.io/life/08006/</link>
       <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/life/08006/</guid>
-      <description>&lt;h1 id=&#34;issue-when-submitting-sitemap-to-search-console&#34;&gt;&#xA;  Issue When Submitting Sitemap to Search Console&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#issue-when-submitting-sitemap-to-search-console&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sitemapxml-registration-failure&#34;&gt;&#xA;  sitemap.xml Registration Failure&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#sitemapxml-registration-failure&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/08006/001.webp&#34; alt=&#34;gsc_fail&#34; title=&#34;gsc_fail&#34;/&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;sitemap-generation&#34;&gt;&#xA;  Sitemap Generation&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#sitemap-generation&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.&lt;/p&gt;</description>
+      <guid>https://mcjoi.github.io/life/08006/</guid>
+      <description>&lt;h1 id=&#34;issue-when-submitting-sitemap-to-search-console&#34;&gt;Issue When Submitting Sitemap to Search Console&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sitemapxml-registration-failure&#34;&gt;sitemap.xml Registration Failure&lt;/h2&gt;&#xA;&lt;p&gt;Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/08006/001.webp&#34; alt=&#34;gsc_fail&#34; title=&#34;gsc_fail&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;sitemap-generation&#34;&gt;Sitemap Generation&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

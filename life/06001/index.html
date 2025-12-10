@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="bypasses the script execution policy
+a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Path to Text
+Normally, there&rsquo;s little need to mess with Windows environment variables.
+However, if you&rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.
+When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/life/06001/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="useful command">
+  <meta property="og:description" content="bypasses the script execution policy a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass Path to Text Normally, there’s little need to mess with Windows environment variables.
+However, if you’re using development tools or portable programs, you may need to register the PATH variable at least.
+When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="life">
+    <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="Linux">
+<title>useful command | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/life/06001/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.124856d72c4f685c4ee8c7a1454823305e5bd01bc69a20e63280e9e6e2053a5d.css" integrity="sha256-EkhW1yxPaFxO6MehRUgjMF5b0BvGmiDmMoDp5uIFOl0=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7e8c09354a04e43b4b9971237bae24c028a5eac25361c0c9a28e1f7eec66426c.js" integrity="sha256-fowJNUoE5DtLmXEje64kwCil6sJTYcDJoo4ffuxmQmw=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+  
+  
+</head>
+
+<body dir="ltr">
+
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+
+  <br>
+  
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        
+          
+        
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  <br>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>useful command</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="bypasses-the-script-execution-policy">bypasses the script execution policy</h1>
+<p>a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+</span></span></code></pre></div><hr>
+<h1 id="path-to-text">Path to Text</h1>
+<p>Normally, there&rsquo;s little need to mess with Windows environment variables.</p>
+<p>However, if you&rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.</p>
+<p>When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?</p>
+<p>If you type <code>set</code> in the Command Prompt, you can view all environment variables. Of course, this isn’t exactly its intended use, but…</p>
+<p>This command below saves the environment variables to a TXT file at the specified path. Be sure to include the <code>&gt;</code> symbol.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span><span style="color:#66d9ef">set</span> &gt; c:\[desired path to save the txt file]\[filename].txt
+</span></span></code></pre></div><p>Since you can check the PATH settings in the TXT file, you can copy them and apply them to another PC as needed.</p>
+<p>That’s it.</p>
+<p> <br>
+
+<a
+   href="https://sunnybong.tistory.com/680" 
+   target="_blank" rel="noopener" 
+  class="book-btn danger"
+>original post (Kor)</a>
+</p>
+<hr>
+<h1 id="shortcuts">Shortcuts</h1>
+<p>control panel : control<br>
+disk manager : diskmgmt.msc<br>
+registry editor : regedit<br>
+sevice management : services.msc</p>
+<p> </p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/life/05004/" class="flex align-center book-icon">
+      
+      <span>← Hiding Google API key</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/life/06002/" class="flex align-center book-icon">
+      <span>Windows10 Clipboard →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

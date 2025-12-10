@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hover effect in VBA
+Take #1
+When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/life/03003/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="Hover effect">
+  <meta property="og:description" content="Hover effect in VBA Take #1 When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.
+Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="life">
+    <meta property="article:published_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-09T00:00:00+00:00">
+    <meta property="article:tag" content="VBA">
+    <meta property="article:tag" content="Excel">
+    <meta property="article:tag" content="Powerpoint">
+<title>Hover effect | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/life/03003/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.124856d72c4f685c4ee8c7a1454823305e5bd01bc69a20e63280e9e6e2053a5d.css" integrity="sha256-EkhW1yxPaFxO6MehRUgjMF5b0BvGmiDmMoDp5uIFOl0=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7e8c09354a04e43b4b9971237bae24c028a5eac25361c0c9a28e1f7eec66426c.js" integrity="sha256-fowJNUoE5DtLmXEje64kwCil6sJTYcDJoo4ffuxmQmw=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+  
+  
+</head>
+
+<body dir="ltr">
+
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+
+  <br>
+  
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        
+          
+        
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  <br>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Hover effect</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="hover-effect-in-vba">Hover effect in VBA</h1>
+<h2 id="take-1">Take #1</h2>
+<p>When did VB6—the foundation of VBA—officially lose technical support? It’s quite unfortunate that one of the few programming languages familiar and accessible to non-developers and marketers at work is based on technology from decades ago.</p>
+<p>Compared to today’s technologies, it might be natural that it shows its limitations. Today, I’m attempting a workaround to implement a mouse hover effect on an object used as a button.</p>
+<hr>
+<h2 id="take-2">Take #2</h2>
+<p>Create image pairs for default and hover states. Since changing colors later requires regenerating all images, you need to choose carefully. Overlay the two images: place the hover image on top with its Visible property set to False, and the default image underneath.</p>
+<p>Then, place a transparent label covering the entire page background. Using the MouseMove event on the default image, set the hover image’s Visible to True on mouse over.</p>
+<p>Finally, use the MouseMove event on the transparent label to set the hover image’s Visible back to False when the mouse moves away.</p>
+<hr>
+<h2 id="take-3">Take #3</h2>
+<p>Here is the result</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/03003/img.gif" alt="&ldquo;hover effect&rdquo;" title="hover effect"></p>
+<p>button - over</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">btn1_1_MouseMove</span>(<span style="color:#66d9ef">ByVal</span> Button <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> Shift <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> X <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, <span style="color:#66d9ef">ByVal</span> Y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>)
+</span></span><span style="display:flex;"><span>  btn1_1.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>  btn1_1_2.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p> <br>
+ </p>
+<p>button - out</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">transparent_bg0_MouseMove</span>(<span style="color:#66d9ef">ByVal</span> Button <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> Shift <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>, <span style="color:#66d9ef">ByVal</span> X <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>, <span style="color:#66d9ef">ByVal</span> Y <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>)
+</span></span><span style="display:flex;"><span>  btn1_1.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>  btn1_1_2.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p> <br>
+
+<a
+   href="https://sunnybong.tistory.com/921" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+>original post (Kor)</a>
+</p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/life/03002/" class="flex align-center book-icon">
+      
+      <span>← Making Keyboard Shortcut</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/life/03004/" class="flex align-center book-icon">
+      <span>Project is Unviewable →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#take-1">Take #1</a></li>
+    <li><a href="#take-2">Take #2</a></li>
+    <li><a href="#take-3">Take #3</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
