@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>and one on shaaaaallow Dive</title>
+    <link>https://mcjoi.github.io/life/andone/</link>
+    <description>Recent content in and one on shaaaaallow Dive</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/life/andone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Init Flutter APIs</title>
+      <link>https://mcjoi.github.io/life/05001/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/05001/</guid>
+      <description>&lt;h1 id=&#34;init-flutter-apis&#34;&gt;Init Flutter APIs&lt;/h1&gt;&#xA;&lt;p&gt;the Flutter framework and widget binding are initialized before you use any Flutter APIs.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; main() &lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  WidgetsFlutterBinding.ensureInitialized();  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Example: Initialize Firebase or other async services&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; Firebase.initializeApp();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  runApp(MyApp());&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a&#xA;   href=&#34;https://sunnybong.tistory.com/792&#34; &#xA;   target=&#34;_blank&#34; rel=&#34;noopener&#34; &#xA;  class=&#34;book-btn&#34;&#xA;&gt;original post (Kor)&lt;/a&gt;&#xA;&lt;br&gt;&#xA; &lt;/p&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>Windows Desktop Shortcut</title>
+      <link>https://mcjoi.github.io/life/05002/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/05002/</guid>
+      <description>&lt;h1 id=&#34;windows-shortcut---flutter-desktop&#34;&gt;Windows Shortcut - Flutter Desktop&lt;/h1&gt;&#xA;&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;&#xA;&lt;p&gt;Organizing and keeping track of countless applications, folders, and web URLs scattered across Windows can be a tedious task. In that sense, Rainmeter is an excellent tool, offering a sleek way to manage and access resources directly from your desktop.&lt;/p&gt;&#xA;&lt;p&gt;That said, there’s one drawback: adding new bookmarks is unnecessarily cumbersome. Of course, it’s understandable, since bookmark management was never intended to be one of Rainmeter’s core features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows Click Animation</title>
+      <link>https://mcjoi.github.io/life/05003/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/05003/</guid>
+      <description>&lt;h1 id=&#34;windows-mouse-click-animationlottie&#34;&gt;Windows Mouse Click Animation(Lottie)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10? If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app…&lt;/p&gt;&#xA;&lt;p&gt;Windows has a long history, but since Vista, I haven’t really come across programs or open-source projects that deal with click animations. Sure, it’s mostly a trivial feature, but the built-in Windows functionality is just… terrible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hiding Google API key</title>
+      <link>https://mcjoi.github.io/life/05004/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/05004/</guid>
+      <description>&lt;h1 id=&#34;hiding-google-api-key&#34;&gt;Hiding Google API key&lt;/h1&gt;&#xA;&lt;h2 id=&#34;no-one-really-tells-you-this&#34;&gt;No one really tells you this…&lt;/h2&gt;&#xA;&lt;p&gt;I’ve been using the Google Sheets API quite well.&lt;br&gt;&#xA;The problem is that the API key was just hardcoded in a JSON file, and when I pressed F12 in Chrome, the API key was completely exposed.&#xA; &lt;/p&gt;&#xA;&lt;p&gt;After some Googling… of course, I realized I was the only one who hadn’t thought about handling these security issues.&#xA; &lt;/p&gt;&#xA;&lt;p&gt;I’m not sure what programming language the tutorials were for, but there are several ways to hide an API key that are easy to find online. However, I couldn’t find a post that explained a method that could be directly used in Flutter, so I got a bit lazy.&#xA; &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>useful command</title>
+      <link>https://mcjoi.github.io/life/06001/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/06001/</guid>
+      <description>&lt;h1 id=&#34;bypasses-the-script-execution-policy&#34;&gt;bypasses the script execution policy&lt;/h1&gt;&#xA;&lt;p&gt;a PowerShell command that temporarily bypasses the script execution policy for the current PowerShell session (process) only.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h1 id=&#34;path-to-text&#34;&gt;Path to Text&lt;/h1&gt;&#xA;&lt;p&gt;Normally, there&amp;rsquo;s little need to mess with Windows environment variables.&lt;/p&gt;&#xA;&lt;p&gt;However, if you&amp;rsquo;re using development tools or portable programs, you may need to register the PATH variable at least.&lt;/p&gt;&#xA;&lt;p&gt;When using multiple PCs, keeping these settings in sync can be a hassle. So, how about this?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows10 Clipboard</title>
+      <link>https://mcjoi.github.io/life/06002/</link>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/06002/</guid>
+      <description>&lt;h1 id=&#34;clipboard-permanently-store-frequently-used-text&#34;&gt;Clipboard: Permanently Store Frequently Used Text&lt;/h1&gt;&#xA;&lt;p&gt;One of my favorite recent features in Windows 10 is the ability to save frequently used text in the clipboard and use it like a snippet whenever needed. You could use tools like sticker memos, but if you have text that you use very often, this method is by far the most efficient.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/heads/main/06002/clipboard.webp&#34; alt=&#34;image&#34; title=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Most people know that pressing &lt;code&gt;Ctrl + C&lt;/code&gt; copies a single image or text to the clipboard. However, after copying with &lt;code&gt;Ctrl + C&lt;/code&gt;, instead of pressing &lt;code&gt;Ctrl + V&lt;/code&gt;, press &lt;code&gt;Windows Key + V&lt;/code&gt; to open the clipboard history.&#xA;You’ll see previously copied items, and you can click the one you want to paste. As mentioned earlier, if you want to store something permanently, click the three dots on the right and choose Pin. If your permanent items are pushed down due to too many copied entries, click Clear All so only your pinned items remain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sony Creative Look</title>
+      <link>https://mcjoi.github.io/life/08001/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08001/</guid>
+      <description>&lt;h1 id=&#34;sony-creative-look&#34;&gt;Sony Creative Look&lt;/h1&gt;&#xA;&lt;h2 id=&#34;color-filter&#34;&gt;color filter&lt;/h2&gt;&#xA;&lt;p&gt;Whenever I bought a new camera, I always felt the urge to try out all the new features—and honestly, that often led me to make mistakes. One typical example was color filters. I remember doing it when I was using the Nikon D750, and again when I first switched over to Sony, playing around with those so-called “My Style” color filters.&lt;/p&gt;&#xA;&lt;p&gt;Now, think about this: when you take photos with your smartphone and post them on Instagram, how often do you actually use those filters?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lens</title>
+      <link>https://mcjoi.github.io/life/08002/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08002/</guid>
+      <description>&lt;h1 id=&#34;viltrox-50mm-f20&#34;&gt;Viltrox 50mm F2.0&lt;/h1&gt;&#xA;&lt;h2 id=&#34;viltrox&#34;&gt;Viltrox&lt;/h2&gt;&#xA;&lt;p&gt;Viltrox 50mm is pretty well-known among lens reviewers for its sharp image quality.&lt;/p&gt;&#xA;&lt;p&gt;Is it really?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SW - PicPick</title>
+      <link>https://mcjoi.github.io/life/08003/</link>
+      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08003/</guid>
+      <description>&lt;h1 id=&#34;the-most-powerful-screenshot-tool&#34;&gt;The Most Powerful Screenshot Tool&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sw-in-work&#34;&gt;SW in work&lt;/h2&gt;&#xA;&lt;p&gt;It might be the same in other countries, but in Korea, software usage for businesses is strictly regulated. Still, there are many situations at work where I need simple tools like image or video viewers, or screenshot programs. Finding a tool that balances both licensing policies and functionality can be quite a challenge.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;picpick&#34;&gt;PicPick&lt;/h2&gt;&#xA;&lt;p&gt;Recently, PicPick added support for the WebP format, making it the program that now has all the features I was looking for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>APS-C lens on FullFrame</title>
+      <link>https://mcjoi.github.io/life/08005/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08005/</guid>
+      <description>&lt;h1 id=&#34;using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;Using an APS-C Lens on a Full-Frame Camera&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a7c2-sigma-56mm&#34;&gt;A7C2, Sigma 56mm&lt;/h2&gt;&#xA;&lt;p&gt;Normally, crop lenses with a smaller image circle tend to reveal frustrating black edges when used on full-frame cameras. However, some lenses have an unusually large image circle, making them usable even on full-frame bodies. One of my favorite lenses in this category is the Sigma 56mm.&lt;/p&gt;&#xA;&lt;p&gt;The shape of the image circle becomes more defined as you stop down the aperture, so I tried shooting at the maximum aperture to see the effect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration_sitemap_on_GSC</title>
+      <link>https://mcjoi.github.io/life/08006/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08006/</guid>
+      <description>&lt;h1 id=&#34;issue-when-submitting-sitemap-to-search-console&#34;&gt;Issue When Submitting Sitemap to Search Console&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sitemapxml-registration-failure&#34;&gt;sitemap.xml Registration Failure&lt;/h2&gt;&#xA;&lt;p&gt;Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/08006/001.webp&#34; alt=&#34;gsc_fail&#34; title=&#34;gsc_fail&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;sitemap-generation&#34;&gt;Sitemap Generation&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
