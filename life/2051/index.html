@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Extracting Tables from PDF Documents
+What is it?
+I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.
+
+code sample
+import camelot
+import pandas as pd
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename, asksaveasfilename
+
+# Hide the main Tkinter window
+root = Tk()
+root.withdraw()
+
+# 1. Select a PDF file
+pdf_file = askopenfilename(
+    title=&#34;Select PDF File&#34;,
+    filetypes=[(&#34;PDF files&#34;, &#34;*.pdf&#34;)]
+)
+
+if not pdf_file:
+    print(&#34;No PDF file selected.&#34;)
+    exit()
+
+# 2. Extract tables from the PDF using Camelot
+# &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines
+tables = camelot.read_pdf(pdf_file, pages=&#39;all&#39;, flavor=&#39;lattice&#39;)
+
+if tables.n == 0:
+    print(&#34;No tables found in the PDF.&#34;)
+    exit()
+
+print(f&#34;Number of tables found: {tables.n}&#34;)
+
+# 3. Select the location to save the Excel file
+excel_file = asksaveasfilename(
+    title=&#34;Save as Excel&#34;,
+    defaultextension=&#34;.xlsx&#34;,
+    filetypes=[(&#34;Excel files&#34;, &#34;*.xlsx&#34;)]
+)
+
+if not excel_file:
+    print(&#34;No Excel file selected.&#34;)
+    exit()
+
+# 4. Save all extracted tables into an Excel file, each table in a separate sheet
+with pd.ExcelWriter(excel_file, engine=&#39;openpyxl&#39;) as writer:
+    for i, table in enumerate(tables):
+        sheet_name = f&#34;Table_{i&#43;1}&#34;  # Sheet name for each table
+        table.df.to_excel(writer, index=False, sheet_name=sheet_name)
+
+print(f&#34;Excel file saved successfully: {excel_file}&#34;)
+ 
+
+original post (Kor)
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+<meta name="google-adsense-account" content="ca-pub-7362089186642274">
+<meta name="naver-site-verification" content="836a15f31b5398a85626d8b06558547bcadd8a4c" />
+<meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" /><meta property="og:url" content="https://mcjoi.github.io/life/2051/">
+  <meta property="og:site_name" content="shaaaaallow Dive">
+  <meta property="og:title" content="Extracting Tables from PDF">
+  <meta property="og:description" content="Extracting Tables from PDF Documents What is it? I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.
+code sample import camelot import pandas as pd from tkinter import Tk from tkinter.filedialog import askopenfilename, asksaveasfilename # Hide the main Tkinter window root = Tk() root.withdraw() # 1. Select a PDF file pdf_file = askopenfilename( title=&#34;Select PDF File&#34;, filetypes=[(&#34;PDF files&#34;, &#34;*.pdf&#34;)] ) if not pdf_file: print(&#34;No PDF file selected.&#34;) exit() # 2. Extract tables from the PDF using Camelot # &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines tables = camelot.read_pdf(pdf_file, pages=&#39;all&#39;, flavor=&#39;lattice&#39;) if tables.n == 0: print(&#34;No tables found in the PDF.&#34;) exit() print(f&#34;Number of tables found: {tables.n}&#34;) # 3. Select the location to save the Excel file excel_file = asksaveasfilename( title=&#34;Save as Excel&#34;, defaultextension=&#34;.xlsx&#34;, filetypes=[(&#34;Excel files&#34;, &#34;*.xlsx&#34;)] ) if not excel_file: print(&#34;No Excel file selected.&#34;) exit() # 4. Save all extracted tables into an Excel file, each table in a separate sheet with pd.ExcelWriter(excel_file, engine=&#39;openpyxl&#39;) as writer: for i, table in enumerate(tables): sheet_name = f&#34;Table_{i&#43;1}&#34; # Sheet name for each table table.df.to_excel(writer, index=False, sheet_name=sheet_name) print(f&#34;Excel file saved successfully: {excel_file}&#34;) original post (Kor)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="life">
+    <meta property="article:published_time" content="2025-09-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-08T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+<title>Extracting Tables from PDF | shaaaaallow Dive</title>
+<link rel="icon" href="https://mcjoi.github.io/favicon.png" >
+<link rel="manifest" href="https://mcjoi.github.io/manifest.json">
+<link rel="canonical" href="https://mcjoi.github.io/life/2051/">
+<link rel="stylesheet" href="https://mcjoi.github.io/book.min.7cabca4b7c4e1e5926abca9ec888e3cfb8372ebcf98f93fc4511bd05a1988d45.css" integrity="sha256-fKvKS3xOHlkmq8qeyIjjz7g3Lrz5j5P8RRG9BaGYjUU=" crossorigin="anonymous">
+  <script defer src="https://mcjoi.github.io/fuse.min.js"></script>
+  <script defer src="https://mcjoi.github.io/en.search.min.7bf0cc5b188bed94e3ee35cebf25ba0b2caac5b02090803413c5e0e9161af753.js" integrity="sha256-e/DMWxiL7ZTj7jXOvyW6CyyqxbAgkIA0E8Xg6RYa91M=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+     crossorigin="anonymous"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MCBX55V1KD');
+</script>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "14fdea2e7a4d6b0";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+
+
+
+  
+  
+</head>
+
+<body dir="ltr">
+
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="https://mcjoi.github.io/"><span>shaaaaallow Dive</span>
+  </a>
+</h2>
+
+  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  <br>
+  
+
+  
+  
+
+  <ul class="main-menu">
+    
+      
+      
+      <li class="active">        
+        
+          <a href="https://mcjoi.github.io/life/">Life </a>
+
+        
+        
+          
+        
+      </li>
+    
+      
+      
+      <li class="">        
+        
+          <a href="https://mcjoi.github.io/gallery/">Gallery </a>
+
+        
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  <br>
+  
+  
+
+  
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="https://mcjoi.github.io/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Extracting Tables from PDF</h3>
+
+  <label for="toc-control">
+    
+    <img src="https://mcjoi.github.io/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#code-sample">code sample</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-article"><h1 id="extracting-tables-from-pdf-documents">Extracting Tables from PDF Documents</h1>
+<h2 id="what-is-it">What is it?</h2>
+<p>I tried several methods for extracting tables from PDF files, and the method below seems to be the most effective - camelot package.<br>
+However, for documents with heavy design elements, Python sometimes fails to recognize the tables correctly.</p>
+<hr>
+<h2 id="code-sample">code sample</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Tk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> askopenfilename, asksaveasfilename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hide the main Tkinter window</span>
+</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Tk()
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Select a PDF file</span>
+</span></span><span style="display:flex;"><span>pdf_file <span style="color:#f92672">=</span> askopenfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select PDF File&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF files&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No PDF file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Extract tables from the PDF using Camelot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines</span>
+</span></span><span style="display:flex;"><span>tables <span style="color:#f92672">=</span> camelot<span style="color:#f92672">.</span>read_pdf(pdf_file, pages<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, flavor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lattice&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tables<span style="color:#f92672">.</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No tables found in the PDF.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Number of tables found: </span><span style="color:#e6db74">{</span>tables<span style="color:#f92672">.</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Select the location to save the Excel file</span>
+</span></span><span style="display:flex;"><span>excel_file <span style="color:#f92672">=</span> asksaveasfilename(
+</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Save as Excel&#34;</span>,
+</span></span><span style="display:flex;"><span>    defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.xlsx&#34;</span>,
+</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;Excel files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx&#34;</span>)]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> excel_file:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No Excel file selected.&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Save all extracted tables into an Excel file, each table in a separate sheet</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(excel_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, table <span style="color:#f92672">in</span> enumerate(tables):
+</span></span><span style="display:flex;"><span>        sheet_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Table_</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># Sheet name for each table</span>
+</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p> <br>
+
+<a
+   href="https://sunnybong.tistory.com/940" 
+   target="_blank" rel="noopener" 
+  class="book-btn"
+>original post (Kor)</a>
+</p>
+<hr>
+</article>
+ 
+      
+
+
+
+<div class="flex flex-wrap justify-between">
+  <span class="flex justify-start">
+      
+    <a href="https://mcjoi.github.io/life/2050/" class="flex align-center book-icon">
+      
+      <span>← Move file by extensions</span>
+    </a>
+  
+  </span>
+  
+  <span class="flex justify-end">
+  
+    
+    <a href="https://mcjoi.github.io/life/05001/" class="flex align-center book-icon">
+      <span>Init Flutter APIs →</span>
+      
+    </a>
+  
+  </span>
+</div>
+
+
+      
+
+      
+
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-it">What is it?</a></li>
+    <li><a href="#code-sample">code sample</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+  
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

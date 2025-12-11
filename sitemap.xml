@@ -13,14 +13,38 @@
 
   
       <url>
+        <loc>https://mcjoi.github.io/life/8001/</loc>
+        <lastmod>2025-09-02T00:00:00Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://mcjoi.github.io/life/2049/</loc>
+        <lastmod>2025-08-12T00:00:00Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>https://mcjoi.github.io/life/01001/</loc>
         <lastmod>2025-08-08T00:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
       <url>
+        <loc>https://mcjoi.github.io/life/2050/</loc>
+        <lastmod>2025-08-13T00:00:00Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
         <loc>https://mcjoi.github.io/life/01002/</loc>
         <lastmod>2025-08-08T00:00:00Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+      <url>
+        <loc>https://mcjoi.github.io/life/2051/</loc>
+        <lastmod>2025-09-08T00:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>
@@ -73,24 +97,6 @@
         <priority>0.5</priority>
       </url>
       <url>
-        <loc>https://mcjoi.github.io/life/04001/</loc>
-        <lastmod>2025-08-12T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>https://mcjoi.github.io/life/04002/</loc>
-        <lastmod>2025-08-13T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>https://mcjoi.github.io/life/04003/</loc>
-        <lastmod>2025-09-08T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
         <loc>https://mcjoi.github.io/life/05001/</loc>
         <lastmod>2025-08-09T00:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -123,18 +129,6 @@
       <url>
         <loc>https://mcjoi.github.io/life/06002/</loc>
         <lastmod>2025-08-26T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>https://mcjoi.github.io/life/08001/</loc>
-        <lastmod>2025-09-02T00:00:00Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-      <url>
-        <loc>https://mcjoi.github.io/life/08002/</loc>
-        <lastmod>2025-09-02T00:00:00Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
       </url>

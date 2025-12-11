@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dev_flutter on shaaaaallow Dive</title>
-    <link>https://mcjoi.github.io/life/dev_flutter/</link>
+    <link>http://localhost:1313/life/dev_flutter/</link>
     <description>Recent content in dev_flutter on shaaaaallow Dive</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://mcjoi.github.io/life/dev_flutter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/life/dev_flutter/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>etc on shaaaaallow Dive</title>
+    <link>https://mcjoi.github.io/life/etc/</link>
+    <description>Recent content in etc on shaaaaallow Dive</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/life/etc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sony Creative Look</title>
+      <link>https://mcjoi.github.io/life/8001/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/8001/</guid>
+      <description>&lt;h1 id=&#34;sony-creative-look&#34;&gt;Sony Creative Look&lt;/h1&gt;&#xA;&lt;h2 id=&#34;color-filter&#34;&gt;color filter&lt;/h2&gt;&#xA;&lt;p&gt;Whenever I bought a new camera, I always felt the urge to try out all the new features—and honestly, that often led me to make mistakes. One typical example was color filters. I remember doing it when I was using the Nikon D750, and again when I first switched over to Sony, playing around with those so-called “My Style” color filters.&lt;/p&gt;&#xA;&lt;p&gt;Now, think about this: when you take photos with your smartphone and post them on Instagram, how often do you actually use those filters?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SW - PicPick</title>
+      <link>https://mcjoi.github.io/life/08003/</link>
+      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08003/</guid>
+      <description>&lt;h1 id=&#34;the-most-powerful-screenshot-tool&#34;&gt;The Most Powerful Screenshot Tool&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sw-in-work&#34;&gt;SW in work&lt;/h2&gt;&#xA;&lt;p&gt;It might be the same in other countries, but in Korea, software usage for businesses is strictly regulated. Still, there are many situations at work where I need simple tools like image or video viewers, or screenshot programs. Finding a tool that balances both licensing policies and functionality can be quite a challenge.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;picpick&#34;&gt;PicPick&lt;/h2&gt;&#xA;&lt;p&gt;Recently, PicPick added support for the WebP format, making it the program that now has all the features I was looking for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>APS-C lens on FullFrame</title>
+      <link>https://mcjoi.github.io/life/08005/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08005/</guid>
+      <description>&lt;h1 id=&#34;using-an-aps-c-lens-on-a-full-frame-camera&#34;&gt;Using an APS-C Lens on a Full-Frame Camera&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a7c2-sigma-56mm&#34;&gt;A7C2, Sigma 56mm&lt;/h2&gt;&#xA;&lt;p&gt;Normally, crop lenses with a smaller image circle tend to reveal frustrating black edges when used on full-frame cameras. However, some lenses have an unusually large image circle, making them usable even on full-frame bodies. One of my favorite lenses in this category is the Sigma 56mm.&lt;/p&gt;&#xA;&lt;p&gt;The shape of the image circle becomes more defined as you stop down the aperture, so I tried shooting at the maximum aperture to see the effect.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Registration_sitemap_on_GSC</title>
+      <link>https://mcjoi.github.io/life/08006/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/life/08006/</guid>
+      <description>&lt;h1 id=&#34;issue-when-submitting-sitemap-to-search-console&#34;&gt;Issue When Submitting Sitemap to Search Console&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sitemapxml-registration-failure&#34;&gt;sitemap.xml Registration Failure&lt;/h2&gt;&#xA;&lt;p&gt;Even after submitting a sitemap request, it hasn’t been registered for several days. I’m not sure if the issue is with GitHub Pages or Hugo, so I need to check each step one by one.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/08006/001.webp&#34; alt=&#34;gsc_fail&#34; title=&#34;gsc_fail&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;sitemap-generation&#34;&gt;Sitemap Generation&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides a built-in sitemap generator, so no additional work is usually needed. Still, I created a custom sitemap just in case, though I’m not sure if it’s the correct approach.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

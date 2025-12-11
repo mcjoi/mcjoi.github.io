@@ -29,9 +29,9 @@ The shape of the image circle becomes more defined as you stop down the aperture
 <link rel="icon" href="http://localhost:1313/favicon.png" >
 <link rel="manifest" href="http://localhost:1313/manifest.json">
 <link rel="canonical" href="http://localhost:1313/life/08004/">
-<link rel="stylesheet" href="http://localhost:1313/book.min.0284ea0573bd6f17b10b7ec2921d612da2c6a9285a7512c3e371a6fe9d761922.css" integrity="sha256-AoTqBXO9bxexC37Ckh1hLaLGqShadRLD43Gm/p12GSI=" crossorigin="anonymous">
+<link rel="stylesheet" href="http://localhost:1313/book.min.7cabca4b7c4e1e5926abca9ec888e3cfb8372ebcf98f93fc4511bd05a1988d45.css" integrity="sha256-fKvKS3xOHlkmq8qeyIjjz7g3Lrz5j5P8RRG9BaGYjUU=" crossorigin="anonymous">
   <script defer src="http://localhost:1313/fuse.min.js"></script>
-  <script defer src="http://localhost:1313/en.search.min.fbd44e41535e0fc1e39bc0b4b6667b5924022e8b7eccb0d94583ea1eb8341b74.js" integrity="sha256-&#43;9ROQVNeD8Hjm8C0tmZ7WSQCLot&#43;zLDZRYPqHrg0G3Q=" crossorigin="anonymous"></script>
+  <script defer src="http://localhost:1313/en.search.min.32ba367f37dcf8c613cc1b62828d74cc9474a80d53e91552eae6e0aca93e8802.js" integrity="sha256-Mro2fzfc&#43;MYTzBtigo10zJR0qA1T6RVS6ubgrKk&#43;iAI=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -80,6 +80,14 @@ if(window.wcs) {
 </h2>
 
   
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
 
   <br>
   
