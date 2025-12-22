@@ -79246,7 +79246,7 @@ tJ(){var s=0,r=A.O(t.Wv),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f,e,d,c,b
 var $async$tJ=A.P(function(a,a0){if(a===1){o.push(a0)
 s=p}for(;;)switch(s){case 0:p=4
 s=7
-return A.R(A.ayn(A.d7("https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/posts/index.json")),$async$tJ)
+return A.R(A.ayn(A.d7("https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/posts/index.json")),$async$tJ)
 case 7:m=a0
 if(m.b!==200){f=A.c([],t.no)
 q=f
@@ -79262,7 +79262,7 @@ break}d=f.d
 i=d==null?e.a(d):d
 h=A.bq(J.iM(i,"md"))
 s=10
-return A.R(A.ayn(A.d7("https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/main/posts/"+A.j(h))),$async$tJ)
+return A.R(A.ayn(A.d7("https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/posts/"+A.j(h))),$async$tJ)
 case 10:g=a0
 if(g.b!==200){s=8
 break}d=g
