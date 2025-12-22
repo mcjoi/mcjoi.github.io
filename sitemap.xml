@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mcjoi.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/post/helloworld34</loc>
+    <lastmod>2025-01-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/post/helloworld342</loc>
+    <lastmod>2025-01-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/post/helloworld343</loc>
+    <lastmod>2025-01-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/post/helloworld344</loc>
+    <lastmod>2025-01-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
