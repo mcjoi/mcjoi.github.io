@@ -5,6 +5,14 @@
     <priority>1.0</priority>
   </url>
   <url>
+<<<<<<< HEAD
+=======
+    <loc>https://mcjoi.github.io/post/03004_fl_google_api_env222</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+>>>>>>> 5d7b8bb (dsfsdf)
     <loc>https://mcjoi.github.io/post/03002_fl_windows_shortcut</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
