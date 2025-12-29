@@ -35,11 +35,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/02998_py</loc>
-    <lastmod>2025-12-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://mcjoi.github.io/post/02997_py_webp_convertor</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
@@ -56,6 +51,11 @@
   </url>
   <url>
     <loc>https://mcjoi.github.io/post/02999_py_extracting_table_pdf</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/post/02998_py_move_file_ext</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
