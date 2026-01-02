@@ -5,58 +5,98 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/05998_life_newblog</loc>
+    <loc>https://mcjoi.github.io/#/post/01994</loc>
+    <lastmod>2026-01-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/01996</loc>
+    <lastmod>2025-12-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/05997</loc>
+    <lastmod>2025-12-31</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/01996</loc>
     <lastmod>2025-12-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/05999_life_viltrox_lens</loc>
-    <lastmod>2025-12-27</lastmod>
+    <loc>https://mcjoi.github.io/#/post/05998</loc>
+    <lastmod>2025-12-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/01997_mt_ppt</loc>
+    <loc>https://mcjoi.github.io/#/post/01999</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/01998_mt_ex</loc>
+    <loc>https://mcjoi.github.io/#/post/00998</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/01999_mt_intro</loc>
+    <loc>https://mcjoi.github.io/#/post/00997</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/02999_py_extracting_table_pdf</loc>
+    <loc>https://mcjoi.github.io/#/post/00995</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/02997_py_webp_convertor</loc>
+    <loc>https://mcjoi.github.io/#/post/00996</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/02998_py_move_file_ext</loc>
+    <loc>https://mcjoi.github.io/#/post/02997</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/03999_fl_hiding_key</loc>
+    <loc>https://mcjoi.github.io/#/post/02998</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/03997_fl_desktopshrortcut</loc>
+    <loc>https://mcjoi.github.io/#/post/02999</loc>
     <lastmod>2025-12-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mcjoi.github.io/post/03998_fl_click_ani</loc>
+    <loc>https://mcjoi.github.io/#/post/03999</loc>
     <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/03997</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/03998</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/05999</loc>
+    <lastmod>2025-12-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/05996</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mcjoi.github.io/#/post/00999</loc>
+    <lastmod>2024-01-24</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
