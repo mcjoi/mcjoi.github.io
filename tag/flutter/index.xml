@@ -16,13 +16,6 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;초, 중, 고 과정의 영단어를 교육부 홈페이지에서 찾아보니.. 3000천여개가 되는 것 같다.&lt;br&gt;&#xA;간단한 플래시 카드를 만들어 본다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;dksl&lt;/li&gt;&#xA;&lt;li&gt;dksl&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;간단한 이야기&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;영단어가 나오고, pass, del, hint 버튼이 있다.&lt;br&gt;&#xA;→ 계속 외워야할 필요가 있는 단어는 두고, &lt;code&gt;pass&lt;/code&gt;를 누르면 다음 단어로 변경,&lt;br&gt;&#xA;→ 외운 단어는 &lt;code&gt;del&lt;/code&gt;을 누르면 리스트에 삭제, 삭제된 단어는 별도 페이지에서 관리,&lt;br&gt;&#xA;→ &lt;code&gt;hint&lt;/code&gt; 버튼을 누르면, 해당단어에 대한 papago 해석 페이지가 하단 웹뷰로 노출.&lt;/p&gt;&#xA;&lt;p&gt;papago의 해석은 별로이지만, 하단에 사전 기능과 듣기 기능이 있으므로, 정확한 해석과 발음을 보기에 나쁘지 않다. 따로 사전 부분만 api로 떼어오려고 했는데, api 서비스가 종료되었다고 한다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>flutter web - SPA adsense 등록하기</title>
-      <link>https://mcjoi.github.io/post/05884/</link>
-      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/05884/</guid>
-      <description>&lt;h2 id=&#34;spa&#34;&gt;SPA&lt;/h2&gt;&#xA;&lt;p&gt;SPA(Single Page Application)란 웹사이트의 초기 로딩 시 단 하나의 HTML 페이지를 불러온 뒤, 이후의 화면 전환이나 데이터 변경은 페이지 전체를 새로고침하지 않고, JavaScript로 필요한 부분만 동적으로 갱신하는 웹 애플리케이션 구조이다.&lt;/p&gt;&#xA;&lt;p&gt;flutter web은 SPA이다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;내용1&lt;/li&gt;&#xA;&lt;li&gt;내용2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;adsense&#34;&gt;adsense&lt;/h2&gt;&#xA;&lt;p&gt;내가 알고 있는 adsense 승인을 막는 요인은 2가지 정도이다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;첫쨰 콘텐츠 문제 : 완성되지 않은 사이트는 불가, 콘텐츠가 얼마 없으면 승인 불가&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;둘쨰 호스팅 문제 : firebase hosting 처럼, 테스트 도메인 불가&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;문제는 flutter web을 firebase hosting으로 처리한다면, 두가지 모두가 문제가 되며, 두번째 문제는 도메인을 사서 달면 그만이지만, 첫번째 문제가 해결되지 않으면 두번째 문제는 구경도 못하기 때문에 골치가 아프다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>flutter - Desktop Shortcut</title>
       <link>https://mcjoi.github.io/post/03997_en/</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
