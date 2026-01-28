@@ -1,0 +1,135 @@
+{
+  "page": 4,
+  "total_pages": 6,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "02998",
+      "title": "pyhton - 확장자별 폴더생성, 이동",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02998",
+      "md": "python/02998.md"
+    },
+    {
+      "slug": "02999",
+      "title": "python - PDF에서 테이블 추출하기",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02999",
+      "md": "python/02999.md"
+    },
+    {
+      "slug": "00991",
+      "title": "사용자정의 숫자 서식 좀 편하게 설정하기",
+      "date": "2025-12-15",
+      "updated": "2025-12-15",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00991",
+      "md": "office/00991.md"
+    },
+    {
+      "slug": "05999",
+      "title": "빌트록스 air 시리즈 사용기 (15,20,25,50)",
+      "date": "2025-12-14",
+      "updated": "2025-12-14",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05999",
+      "md": "life/05999.md"
+    },
+    {
+      "slug": "05885",
+      "title": "야외 플래시(스트로브) 촬영 시 TTL 측광 오류",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05885",
+      "md": "life/05885.md"
+    },
+    {
+      "slug": "05886",
+      "title": "조명 트리거(x-2t, x3)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/10.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05886",
+      "md": "life/05886.md"
+    },
+    {
+      "slug": "05887",
+      "title": "화이트밸런스 카드 DIY",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05887/17.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05887",
+      "md": "life/05887.md"
+    },
+    {
+      "slug": "05888",
+      "title": "플래시(godox tt350, Desiontal F02)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05888/02.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05888",
+      "md": "life/05888.md"
+    },
+    {
+      "slug": "05889",
+      "title": "몇 가지 접이식 키보드 사용기",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05889/05889_12.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05889",
+      "md": "life/05889.md"
+    }
+  ]
+}

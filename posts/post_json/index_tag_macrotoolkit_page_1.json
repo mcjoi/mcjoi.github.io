@@ -1,0 +1,24 @@
+{
+  "page": 1,
+  "total_pages": 1,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "01999",
+      "title": "MacroToolkit - excel, powerpoint",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "macrotoolkit",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01999",
+      "md": "office_vba/01999.md"
+    }
+  ]
+}

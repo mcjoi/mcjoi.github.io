@@ -1,0 +1,697 @@
+{
+  "posts": [
+    {
+      "slug": "03994",
+      "title": "flutter - android 영단어 플래시 카드 + papago",
+      "date": "2026-01-27",
+      "updated": "2026-01-27",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03994",
+      "md": "flutter/03994.md"
+    },
+    {
+      "slug": "00990",
+      "title": "엑셀 용량 비정상적으로 커졌을 때 줄이기",
+      "date": "2026-01-27",
+      "updated": "2026-01-27",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00990",
+      "md": "office/00990.md"
+    },
+    {
+      "slug": "01991",
+      "title": "VBA Userform 마우스 hover effect",
+      "date": "2026-01-27",
+      "updated": "2026-01-27",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/01991",
+      "md": "office_vba/01991.md"
+    },
+    {
+      "slug": "02996",
+      "title": "오피스 파일 열지않고 pdf로 변환하기",
+      "date": "2026-01-27",
+      "updated": "2026-01-27",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02996",
+      "md": "python/02996.md"
+    },
+    {
+      "slug": "05884",
+      "title": "flutter web - SPA adsense 등록하기",
+      "date": "2026-01-26",
+      "updated": "2026-01-26",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter",
+        "blog"
+      ],
+      "category": "dev",
+      "path": "/post/05884",
+      "md": "life/05884.md"
+    },
+    {
+      "slug": "01993",
+      "title": "Project is unviewable - EvilClippy",
+      "date": "2026-01-08",
+      "updated": "2026-01-08",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/01993",
+      "md": "office_vba/01993.md"
+    },
+    {
+      "slug": "05993",
+      "title": "원하는 사이즈로 윈도우(창) 크기 조절",
+      "date": "2026-01-06",
+      "updated": "2026-01-06",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05993",
+      "md": "life/05993.md"
+    },
+    {
+      "slug": "05994",
+      "title": "광각 렌즈와 일상 사진 그리고 후보정",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05994/05994_01.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05994",
+      "md": "life/05994.md"
+    },
+    {
+      "slug": "05995",
+      "title": "카카오스토리 데이터 백업",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05995",
+      "md": "life/05995.md"
+    },
+    {
+      "slug": "00993",
+      "title": "엑셀 - 배열수식",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00993",
+      "md": "office/00993.md"
+    },
+    {
+      "slug": "00998",
+      "title": "엑셀 - 셀 값 오류와 순환참조 에러",
+      "date": "2025-12-22",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00998",
+      "md": "office/00998.md"
+    },
+    {
+      "slug": "01994",
+      "title": "파워포인트 - 도형 잠그기(office2019)",
+      "date": "2026-01-02",
+      "updated": "2026-01-02",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/04_powerpoint.webp",
+      "tags": [
+        "powerpoint"
+      ],
+      "category": "office",
+      "path": "/post/01994",
+      "md": "office_vba/01994.md"
+    },
+    {
+      "slug": "05997",
+      "title": "소니 4세대 카메라(A7C2) 리모컨",
+      "date": "2025-12-31",
+      "updated": "2025-12-31",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05997/05997_remo_03.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05997",
+      "md": "life/05997.md"
+    },
+    {
+      "slug": "01995",
+      "title": "엑셀-파워포인트 VBA/매크로 사용하기",
+      "date": "2025-12-31",
+      "updated": "2025-12-31",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01995",
+      "md": "office_vba/01995.md"
+    },
+    {
+      "slug": "05998",
+      "title": "블로그 이사(티스토리 → ?)",
+      "date": "2025-12-29",
+      "updated": "2025-12-29",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05998",
+      "md": "life/05998.md"
+    },
+    {
+      "slug": "01996",
+      "title": "엑셀-파워포인트 테이블(표) 연동 관련",
+      "date": "2025-12-29",
+      "updated": "2025-12-29",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/04_powerpoint.webp",
+      "tags": [
+        "powerpoint"
+      ],
+      "category": "office",
+      "path": "/post/01996",
+      "md": "office_vba/01996.md"
+    },
+    {
+      "slug": "03997",
+      "title": "flutter - 바탕화면 바로가기 모음",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03997",
+      "md": "flutter/03997.md"
+    },
+    {
+      "slug": "03997_en",
+      "title": "flutter - Desktop Shortcut",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03997_en",
+      "md": "flutter/03997_en.md"
+    },
+    {
+      "slug": "03998_en",
+      "title": "flutter - Mouse Click Animation",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03998_en",
+      "md": "flutter/03998_en.md"
+    },
+    {
+      "slug": "03999",
+      "title": "flutter - Google API key 감추기",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03999",
+      "md": "flutter/03999.md"
+    },
+    {
+      "slug": "03999_en",
+      "title": "flutter - Hiding Google API keys",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03999_en",
+      "md": "flutter/03999_en.md"
+    },
+    {
+      "slug": "00994",
+      "title": "엑셀 - 함수 - 오피스 하위버전(2019)에서 xlookup함수 사용하기",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00994",
+      "md": "office/00994.md"
+    },
+    {
+      "slug": "00995",
+      "title": "엑셀 - 함수 - numberstring(숫자 한글로 바꾸기)",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00995",
+      "md": "office/00995.md"
+    },
+    {
+      "slug": "00996",
+      "title": "엑셀 - 함수 - 조건값 찾기, 배열수식",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00996",
+      "md": "office/00996.md"
+    },
+    {
+      "slug": "00997",
+      "title": "엑셀 - 함수 - vlookup, rank, dsum",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00997",
+      "md": "office/00997.md"
+    },
+    {
+      "slug": "01999",
+      "title": "MacroToolkit - excel, powerpoint",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "macrotoolkit",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01999",
+      "md": "office_vba/01999.md"
+    },
+    {
+      "slug": "02997",
+      "title": "python - Webp 변환 유틸",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02997",
+      "md": "python/02997.md"
+    },
+    {
+      "slug": "02998",
+      "title": "pyhton - 확장자별 폴더생성, 이동",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02998",
+      "md": "python/02998.md"
+    },
+    {
+      "slug": "02999",
+      "title": "python - PDF에서 테이블 추출하기",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp",
+      "tags": [
+        "windows",
+        "pyhton"
+      ],
+      "category": "dev",
+      "path": "/post/02999",
+      "md": "python/02999.md"
+    },
+    {
+      "slug": "00991",
+      "title": "사용자정의 숫자 서식 좀 편하게 설정하기",
+      "date": "2025-12-15",
+      "updated": "2025-12-15",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00991",
+      "md": "office/00991.md"
+    },
+    {
+      "slug": "05999",
+      "title": "빌트록스 air 시리즈 사용기 (15,20,25,50)",
+      "date": "2025-12-14",
+      "updated": "2025-12-14",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05999",
+      "md": "life/05999.md"
+    },
+    {
+      "slug": "05885",
+      "title": "야외 플래시(스트로브) 촬영 시 TTL 측광 오류",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05885",
+      "md": "life/05885.md"
+    },
+    {
+      "slug": "05886",
+      "title": "조명 트리거(x-2t, x3)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/10.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05886",
+      "md": "life/05886.md"
+    },
+    {
+      "slug": "05887",
+      "title": "화이트밸런스 카드 DIY",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05887/17.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05887",
+      "md": "life/05887.md"
+    },
+    {
+      "slug": "05888",
+      "title": "플래시(godox tt350, Desiontal F02)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05888/02.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05888",
+      "md": "life/05888.md"
+    },
+    {
+      "slug": "05889",
+      "title": "몇 가지 접이식 키보드 사용기",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05889/05889_12.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05889",
+      "md": "life/05889.md"
+    },
+    {
+      "slug": "05992",
+      "title": "QCY melobuds neo",
+      "date": "2025-11-08",
+      "updated": "2025-11-08",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05992/05992_04.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05992",
+      "md": "life/05992.md"
+    },
+    {
+      "slug": "05996",
+      "title": "늦은 삼양 75mm F1.8 사용기",
+      "date": "2025-11-03",
+      "updated": "2025-11-03",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_04.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05996",
+      "md": "life/05996.md"
+    },
+    {
+      "slug": "01992",
+      "title": "배열수식 조건에서 엑셀 함수 조건 간단하게 처리하기 (isin)",
+      "date": "2025-10-24",
+      "updated": "2025-10-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/01992",
+      "md": "office_vba/01992.md"
+    },
+    {
+      "slug": "03995",
+      "title": "flutter - Rust를 c++ 대신 사용하기",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03995",
+      "md": "flutter/03995.md"
+    },
+    {
+      "slug": "03995_en",
+      "title": "flutter - Rust instead of c++",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03995_en",
+      "md": "flutter/03995_en.md"
+    },
+    {
+      "slug": "03996",
+      "title": "flutter - Exif 표시 프레임 만들기",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03996",
+      "md": "flutter/03996.md"
+    },
+    {
+      "slug": "03996_en",
+      "title": "flutter - Exif Frame",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03996_en",
+      "md": "flutter/03996_en.md"
+    },
+    {
+      "slug": "05990",
+      "title": "풀프레임에서도 사용할만한 크롭 렌즈인가 sigma 56.4",
+      "date": "2025-08-13",
+      "updated": "2025-08-13",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05990/05990_08.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05990",
+      "md": "life/05990.md"
+    },
+    {
+      "slug": "05991",
+      "title": "A7C2 늦은 구매 후기, 그리고 리뷰로는 다 알지 못한 사실",
+      "date": "2025-08-13",
+      "updated": "2025-08-13",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05991/05991_02.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05991",
+      "md": "life/05991.md"
+    },
+    {
+      "slug": "00992",
+      "title": "엑셀 - 배열수식, sumproduct, dsum, sumifs 처리 속도 차이",
+      "date": "2025-07-10",
+      "updated": "2025-07-10",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00992",
+      "md": "office/00992.md"
+    },
+    {
+      "slug": "01990",
+      "title": "powerpoint - 동일한 너비의 도형으로 페이지 분할하기",
+      "date": "2025-02-24",
+      "updated": "2025-02-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01990",
+      "md": "office_vba/01990.md"
+    },
+    {
+      "slug": "00999",
+      "title": "엑셀 - 보이는 셀만 복사하기",
+      "date": "2024-01-24",
+      "updated": "2024-01-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00999",
+      "md": "office/00999.md"
+    }
+  ]
+}

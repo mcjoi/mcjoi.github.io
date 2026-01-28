@@ -1,0 +1,94 @@
+{
+  "page": 2,
+  "total_pages": 2,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "00997",
+      "title": "엑셀 - 함수 - vlookup, rank, dsum",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00997",
+      "md": "office/00997.md"
+    },
+    {
+      "slug": "01999",
+      "title": "MacroToolkit - excel, powerpoint",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "macrotoolkit",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01999",
+      "md": "office_vba/01999.md"
+    },
+    {
+      "slug": "00991",
+      "title": "사용자정의 숫자 서식 좀 편하게 설정하기",
+      "date": "2025-12-15",
+      "updated": "2025-12-15",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00991",
+      "md": "office/00991.md"
+    },
+    {
+      "slug": "01992",
+      "title": "배열수식 조건에서 엑셀 함수 조건 간단하게 처리하기 (isin)",
+      "date": "2025-10-24",
+      "updated": "2025-10-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/01992",
+      "md": "office_vba/01992.md"
+    },
+    {
+      "slug": "00992",
+      "title": "엑셀 - 배열수식, sumproduct, dsum, sumifs 처리 속도 차이",
+      "date": "2025-07-10",
+      "updated": "2025-07-10",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00992",
+      "md": "office/00992.md"
+    },
+    {
+      "slug": "00999",
+      "title": "엑셀 - 보이는 셀만 복사하기",
+      "date": "2024-01-24",
+      "updated": "2024-01-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp",
+      "tags": [
+        "excel"
+      ],
+      "category": "office",
+      "path": "/post/00999",
+      "md": "office/00999.md"
+    }
+  ]
+}

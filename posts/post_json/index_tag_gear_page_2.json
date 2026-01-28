@@ -1,0 +1,21 @@
+{
+  "page": 2,
+  "total_pages": 2,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "05991",
+      "title": "A7C2 늦은 구매 후기, 그리고 리뷰로는 다 알지 못한 사실",
+      "date": "2025-08-13",
+      "updated": "2025-08-13",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05991/05991_02.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05991",
+      "md": "life/05991.md"
+    }
+  ]
+}

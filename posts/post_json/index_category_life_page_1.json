@@ -1,0 +1,133 @@
+{
+  "page": 1,
+  "total_pages": 2,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "05993",
+      "title": "원하는 사이즈로 윈도우(창) 크기 조절",
+      "date": "2026-01-06",
+      "updated": "2026-01-06",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05993",
+      "md": "life/05993.md"
+    },
+    {
+      "slug": "05994",
+      "title": "광각 렌즈와 일상 사진 그리고 후보정",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05994/05994_01.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05994",
+      "md": "life/05994.md"
+    },
+    {
+      "slug": "05995",
+      "title": "카카오스토리 데이터 백업",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05995",
+      "md": "life/05995.md"
+    },
+    {
+      "slug": "05997",
+      "title": "소니 4세대 카메라(A7C2) 리모컨",
+      "date": "2025-12-31",
+      "updated": "2025-12-31",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05997/05997_remo_03.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05997",
+      "md": "life/05997.md"
+    },
+    {
+      "slug": "05998",
+      "title": "블로그 이사(티스토리 → ?)",
+      "date": "2025-12-29",
+      "updated": "2025-12-29",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "blog"
+      ],
+      "category": "life",
+      "path": "/post/05998",
+      "md": "life/05998.md"
+    },
+    {
+      "slug": "05999",
+      "title": "빌트록스 air 시리즈 사용기 (15,20,25,50)",
+      "date": "2025-12-14",
+      "updated": "2025-12-14",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05999",
+      "md": "life/05999.md"
+    },
+    {
+      "slug": "05885",
+      "title": "야외 플래시(스트로브) 촬영 시 TTL 측광 오류",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05885",
+      "md": "life/05885.md"
+    },
+    {
+      "slug": "05886",
+      "title": "조명 트리거(x-2t, x3)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/10.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05886",
+      "md": "life/05886.md"
+    },
+    {
+      "slug": "05887",
+      "title": "화이트밸런스 카드 DIY",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05887/17.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05887",
+      "md": "life/05887.md"
+    }
+  ]
+}

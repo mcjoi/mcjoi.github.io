@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/blog/</link>
+    <description>Recent content in Blog on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>flutter web - SPA adsense 등록하기</title>
+      <link>https://mcjoi.github.io/post/05884/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05884/</guid>
+      <description>&lt;h2 id=&#34;spa&#34;&gt;SPA&lt;/h2&gt;&#xA;&lt;p&gt;SPA(Single Page Application)란 웹사이트의 초기 로딩 시 단 하나의 HTML 페이지를 불러온 뒤, 이후의 화면 전환이나 데이터 변경은 페이지 전체를 새로고침하지 않고, JavaScript로 필요한 부분만 동적으로 갱신하는 웹 애플리케이션 구조이다.&lt;/p&gt;&#xA;&lt;p&gt;flutter web은 SPA이다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;내용1&lt;/li&gt;&#xA;&lt;li&gt;내용2&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;adsense&#34;&gt;adsense&lt;/h2&gt;&#xA;&lt;p&gt;내가 알고 있는 adsense 승인을 막는 요인은 2가지 정도이다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;첫쨰 콘텐츠 문제 : 완성되지 않은 사이트는 불가, 콘텐츠가 얼마 없으면 승인 불가&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;둘쨰 호스팅 문제 : firebase hosting 처럼, 테스트 도메인 불가&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;문제는 flutter web을 firebase hosting으로 처리한다면, 두가지 모두가 문제가 되며, 두번째 문제는 도메인을 사서 달면 그만이지만, 첫번째 문제가 해결되지 않으면 두번째 문제는 구경도 못하기 때문에 골치가 아프다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>원하는 사이즈로 윈도우(창) 크기 조절</title>
+      <link>https://mcjoi.github.io/post/05993/</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05993/</guid>
+      <description>&lt;h2 id=&#34;고정-영역-캡쳐를-위한-창-사이즈-설정&#34;&gt;고정 영역 캡쳐를 위한 창 사이즈 설정&lt;/h2&gt;&#xA;&lt;p&gt;화면 캡쳐를 신나게 받다 보면 동일한 크기의 화면을 여러번 받아야할 때가 있는데,&lt;br&gt;&#xA;고정 캡쳐 영역을 정해두고 창 사이즈를 맞춰주면 해당 작업이 편해진다.&lt;/p&gt;&#xA;&lt;p&gt;어차피 윈도우즈의 기능이니, bat 파일과 powershell 코드를 사용한다.&lt;br&gt;&#xA;bat 파일을 실행하면, 현재 창이 떠있는 프로그램 리스트가 나오니, 원하는 창의 번호를 선택한다.&lt;/p&gt;&#xA;&lt;p&gt;이후 위치값과 창 사이즈를 설정한다. 그냥 엔터를 치면 디폴트 값 [대괄호 안의 값]이 정해지니, &lt;strong&gt;.ps1&lt;/strong&gt; 파일 안에서 디폴트 값을 수정해두는 것이 좋다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>카카오스토리 데이터 백업</title>
+      <link>https://mcjoi.github.io/post/05995/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05995/</guid>
+      <description>&lt;h2 id=&#34;카카오스토리&#34;&gt;카카오스토리&lt;/h2&gt;&#xA;&lt;p&gt;25년 11월쯤이던가? 카카오스토리에서는 카카오톡과의 연동을 공식적으로 종료한다는 공지를 낸 적이 있었다.&lt;br&gt;&#xA;카카오는 25년 꽤 많은 서비스에 대한 개편을 진행한 바 있는데, 가뜩이나 접근성이 떨어졌던 카카오스토리에 카카오톡과의 연동을 종료한다는 건 사형선고나 다름없는 판단이 아니었을까?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05995/05995_ks_bak_0.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;데이터-백업&#34;&gt;데이터 백업&lt;/h2&gt;&#xA;&lt;p&gt;몰랐으면 모를까, 서비스 종료 수순이 되어가는 이상, 이대로 사진들을 방치할 수는 없기에, 백업을 시작해야한다.&lt;br&gt;&#xA;하지만 큰 걱정은 필요없다.&lt;br&gt;&#xA;티스토리 이전 때, 데이터 백업이 굉장히 원환하게 제공된다는 것을 확인한 바 있기 때문이다. 역시나 아래 그림처럼, 백업 기능을 제공해주고 있으며, 버튼 한번으로 모든 내용을 받을 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>블로그 이사(티스토리 → ?)</title>
+      <link>https://mcjoi.github.io/post/05998/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05998/</guid>
+      <description>&lt;h2 id=&#34;티스토리&#34;&gt;티스토리&lt;/h2&gt;&#xA;&lt;p&gt;꽤 오랜시간 티스토리 블로그에 글을 적어왔다.&lt;br&gt;&#xA;가끔 까먹는 엑셀 함수를 기재해두는 메모 용도로 시작했는데, 세월의 길이 만큼이나, 글이 많아졌다. 본의 아니게 adsense 광고비가 들어오던 때가 있어, 나름 동기부여가 되어오기도 했는데&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;세상에 가장 좋지 않은 것이 줬다 뺏는 거라고 했던가? &lt;strong&gt;CPM&lt;/strong&gt; 정책으로 변경 뒤부터 지급되던 코묻은 돈은 이제는 0이 되었다.&lt;br&gt;&#xA;수익은 없는데, 가독성을 떨어뜨리는 광고만 수두룩한 페이지가 되었다.&lt;/p&gt;&#xA;&lt;p&gt;선택지는 분명하다. 광고를 털어내고 깔끔한 메모장으로 사용하거나, 다른 블로그 서비스로 이전을 하는 것 둘 중 하나이다.&lt;br&gt;&#xA;시간을 들여 CSS를 내 입맛에 맞게 수정한 시간이 좀 아깝기는 하지만, 새로운 블로그를 만들면서 그간 몰랐던 것을 익히는 공부의 시간이라고 생각하자.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

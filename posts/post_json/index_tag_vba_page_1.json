@@ -1,0 +1,55 @@
+{
+  "page": 1,
+  "total_pages": 1,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "01995",
+      "title": "엑셀-파워포인트 VBA/매크로 사용하기",
+      "date": "2025-12-31",
+      "updated": "2025-12-31",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01995",
+      "md": "office_vba/01995.md"
+    },
+    {
+      "slug": "01999",
+      "title": "MacroToolkit - excel, powerpoint",
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "excel",
+        "macrotoolkit",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01999",
+      "md": "office_vba/01999.md"
+    },
+    {
+      "slug": "01990",
+      "title": "powerpoint - 동일한 너비의 도형으로 페이지 분할하기",
+      "date": "2025-02-24",
+      "updated": "2025-02-24",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp",
+      "tags": [
+        "powerpoint",
+        "vba"
+      ],
+      "category": "office",
+      "path": "/post/01990",
+      "md": "office_vba/01990.md"
+    }
+  ]
+}

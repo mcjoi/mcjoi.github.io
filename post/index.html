@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> | shaaaaallow dive</title>
+    <meta name="description" content="shaaaaallow dive" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="appbar">
+      <div class="appbar-inner">
+        <button class="menu-btn" type="button" aria-label="Open menu">
+          <span class="menu-icon"></span>
+        </button>
+        <a class="appbar-title" href="/">shaaaaallow dive</a>
+      </div>
+    </div>
+    <div class="drawer-overlay" aria-hidden="true"></div>
+    <aside class="drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <button class="drawer-close" type="button" aria-label="Close menu">✕</button>
+      </div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">Category</div>
+        <div class="drawer-chips">
+          
+            <a class="chip chip--tag" href="/category/dev/">dev</a>
+          
+            <a class="chip chip--tag" href="/category/life/">life</a>
+          
+            <a class="chip chip--tag" href="/category/office/">office</a>
+          
+        </div>
+      </div>
+      
+    </aside>
+    <main class="page">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+      <div class="post-meta">
+        
+        <span>0001-01-01</span>
+        
+      </div>
+      
+      
+    </header>
+
+    <div class="post-content">
+      
+    </div>
+
+    
+  </article>
+
+    </main>
+    <script>
+      (function() {
+        const body = document.body;
+        const menuBtn = document.querySelector('.menu-btn');
+        const drawer = document.querySelector('.drawer');
+        const overlay = document.querySelector('.drawer-overlay');
+        const closeBtn = document.querySelector('.drawer-close');
+        if (!menuBtn || !drawer || !overlay || !closeBtn) return;
+
+        const openDrawer = () => {
+          body.classList.add('drawer-open');
+          drawer.setAttribute('aria-hidden', 'false');
+          overlay.setAttribute('aria-hidden', 'false');
+        };
+        const closeDrawer = () => {
+          body.classList.remove('drawer-open');
+          drawer.setAttribute('aria-hidden', 'true');
+          overlay.setAttribute('aria-hidden', 'true');
+        };
+
+        menuBtn.addEventListener('click', openDrawer);
+        closeBtn.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeDrawer();
+        });
+      })();
+    </script>
+  </body>
+</html>

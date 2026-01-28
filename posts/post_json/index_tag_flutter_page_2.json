@@ -1,0 +1,37 @@
+{
+  "page": 2,
+  "total_pages": 2,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "03996",
+      "title": "flutter - Exif 표시 프레임 만들기",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03996",
+      "md": "flutter/03996.md"
+    },
+    {
+      "slug": "03996_en",
+      "title": "flutter - Exif Frame",
+      "date": "2025-10-20",
+      "updated": "2025-10-20",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp",
+      "tags": [
+        "windows",
+        "flutter"
+      ],
+      "category": "dev",
+      "path": "/post/03996_en",
+      "md": "flutter/03996_en.md"
+    }
+  ]
+}

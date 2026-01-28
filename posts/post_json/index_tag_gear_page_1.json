@@ -1,0 +1,133 @@
+{
+  "page": 1,
+  "total_pages": 2,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "05997",
+      "title": "소니 4세대 카메라(A7C2) 리모컨",
+      "date": "2025-12-31",
+      "updated": "2025-12-31",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05997/05997_remo_03.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05997",
+      "md": "life/05997.md"
+    },
+    {
+      "slug": "05885",
+      "title": "야외 플래시(스트로브) 촬영 시 TTL 측광 오류",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05885",
+      "md": "life/05885.md"
+    },
+    {
+      "slug": "05886",
+      "title": "조명 트리거(x-2t, x3)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/10.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05886",
+      "md": "life/05886.md"
+    },
+    {
+      "slug": "05887",
+      "title": "화이트밸런스 카드 DIY",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05887/17.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05887",
+      "md": "life/05887.md"
+    },
+    {
+      "slug": "05888",
+      "title": "플래시(godox tt350, Desiontal F02)",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05888/02.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05888",
+      "md": "life/05888.md"
+    },
+    {
+      "slug": "05889",
+      "title": "몇 가지 접이식 키보드 사용기",
+      "date": "2023-09-12",
+      "updated": "2025-11-21",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05889/05889_12.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05889",
+      "md": "life/05889.md"
+    },
+    {
+      "slug": "05992",
+      "title": "QCY melobuds neo",
+      "date": "2025-11-08",
+      "updated": "2025-11-08",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05992/05992_04.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05992",
+      "md": "life/05992.md"
+    },
+    {
+      "slug": "05996",
+      "title": "늦은 삼양 75mm F1.8 사용기",
+      "date": "2025-11-03",
+      "updated": "2025-11-03",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_04.png",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05996",
+      "md": "life/05996.md"
+    },
+    {
+      "slug": "05990",
+      "title": "풀프레임에서도 사용할만한 크롭 렌즈인가 sigma 56.4",
+      "date": "2025-08-13",
+      "updated": "2025-08-13",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05990/05990_08.webp",
+      "tags": [
+        "gear"
+      ],
+      "category": "life",
+      "path": "/post/05990",
+      "md": "life/05990.md"
+    }
+  ]
+}

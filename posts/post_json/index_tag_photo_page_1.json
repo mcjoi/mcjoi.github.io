@@ -1,0 +1,35 @@
+{
+  "page": 1,
+  "total_pages": 1,
+  "page_size": 9,
+  "posts": [
+    {
+      "slug": "05994",
+      "title": "광각 렌즈와 일상 사진 그리고 후보정",
+      "date": "2026-01-05",
+      "updated": "2026-01-05",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05994/05994_01.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05994",
+      "md": "life/05994.md"
+    },
+    {
+      "slug": "05999",
+      "title": "빌트록스 air 시리즈 사용기 (15,20,25,50)",
+      "date": "2025-12-14",
+      "updated": "2025-12-14",
+      "excerpt": null,
+      "cover": "https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png",
+      "tags": [
+        "photo"
+      ],
+      "category": "life",
+      "path": "/post/05999",
+      "md": "life/05999.md"
+    }
+  ]
+}
