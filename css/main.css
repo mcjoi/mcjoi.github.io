@@ -650,6 +650,31 @@ a {
   list-style-type: circle;
 }
 
+.post-content ul,
+.post-content ol {
+  padding-left: 20px;
+}
+
+.post-content p + ul,
+.post-content p + ol {
+  margin-top: 6px;
+}
+
+.post-content ul + p,
+.post-content ol + p {
+  margin-top: 6px;
+}
+
+.post-content ul li,
+.post-content ol li {
+  margin: 0 0 6px;
+}
+
+.post-content ul li:last-child,
+.post-content ol li:last-child {
+  margin-bottom: 0;
+}
+
 .post-content ul ::marker {
   font-size: 0.75em;
 }
@@ -665,6 +690,53 @@ a {
 
 .post-content h3 {
   font-size: 20px;
+}
+
+.post-content h1,
+.post-content h2 {
+  position: relative;
+  padding-left: 18px;
+}
+
+.post-content h1::before,
+.post-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0.9em;
+  background: linear-gradient(180deg, #ffffff, #8a8a8a);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.post-content .text-box {
+  margin: 0 0 16px;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, #222222, #1d1d1d);
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  color: var(--muted);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.post-content .text-box p {
+  margin: 0 0 8px;
+}
+
+.post-content .text-box p:last-child {
+  margin-bottom: 0;
+}
+
+.post-content .text-box cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  color: #9c9c9c;
 }
 
 .post-content a {
@@ -750,7 +822,7 @@ a {
   max-width: 100%;
   border-radius: 10px;
   display: block;
-  margin: 0 0 16px;
+  margin: 20px 0;
 }
 
 .btn-link {
