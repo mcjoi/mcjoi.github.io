@@ -591,7 +591,7 @@ a {
 
 .post-header {
   margin-bottom: 18px;
-  max-width: 1200px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -615,7 +615,7 @@ a {
   flex-wrap: wrap;
   gap: 8px;
   padding-bottom: 18px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #5a5a5a;
   width: 100%;
 }
 
@@ -634,7 +634,7 @@ a {
   font-size: 18px;
   line-height: 2;
   color: var(--text);
-  max-width: 1200px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 18px;
@@ -643,7 +643,11 @@ a {
 
 .post-content hr {
   border: 0;
-  border-top: 1px solid #2a2a2a;
+  height: 2px;
+  background-image: radial-gradient(circle, #5a5a5a 1px, transparent 1.5px);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  background-position: center;
   margin: 26px 0;
 }
 
