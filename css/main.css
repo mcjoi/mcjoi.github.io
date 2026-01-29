@@ -641,6 +641,12 @@ a {
   width: 100%;
 }
 
+.post-content hr {
+  border: 0;
+  border-top: 1px solid #2a2a2a;
+  margin: 26px 0;
+}
+
 .post-content p,
 .post-content ul,
 .post-content ol {
