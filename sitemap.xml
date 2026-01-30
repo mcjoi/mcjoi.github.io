@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mcjoi.github.io/post/03994/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mcjoi.github.io/category/</loc>
     <lastmod>2026-01-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,9 +15,6 @@
     <lastmod>2026-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/tag/flutter/</loc>
-    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mcjoi.github.io/post/03994/</loc>
     <lastmod>2026-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/</loc>
@@ -92,19 +92,10 @@
     <loc>https://mcjoi.github.io/post/01996/</loc>
     <lastmod>2025-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mcjoi.github.io/post/03997_en/</loc>
-    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mcjoi.github.io/post/03999/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/post/03999_en/</loc>
-    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mcjoi.github.io/post/03998_en/</loc>
-    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mcjoi.github.io/post/03997/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/tag/macrotoolkit/</loc>
@@ -113,13 +104,22 @@
     <loc>https://mcjoi.github.io/post/01999/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mcjoi.github.io/post/02998/</loc>
+    <loc>https://mcjoi.github.io/post/03997_en/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/03998_en/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/post/02999/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/post/02997/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/03997/</loc>
+    <lastmod>2025-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/02998/</loc>
     <lastmod>2025-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/post/00998/</loc>
@@ -152,16 +152,16 @@
     <loc>https://mcjoi.github.io/post/01992/</loc>
     <lastmod>2025-10-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mcjoi.github.io/post/03996_en/</loc>
-    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mcjoi.github.io/post/03996/</loc>
-    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mcjoi.github.io/post/03995_en/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mcjoi.github.io/post/03996_en/</loc>
+    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mcjoi.github.io/post/03995/</loc>
+    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/03996/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mcjoi.github.io/post/05991/</loc>
