@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gear</title>
-      <link>https://mcjoi.github.io/tag/gear/</link>
+      <title>Windows</title>
+      <link>https://mcjoi.github.io/tag/windows/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/tag/gear/</guid>
+      <guid>https://mcjoi.github.io/tag/windows/</guid>
       <description></description>
     </item>
     <item>
@@ -37,13 +37,6 @@
       <description></description>
     </item>
     <item>
-      <title>Windows</title>
-      <link>https://mcjoi.github.io/tag/windows/</link>
-      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/tag/windows/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Blog</title>
       <link>https://mcjoi.github.io/tag/blog/</link>
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
@@ -62,6 +55,13 @@
       <link>https://mcjoi.github.io/tag/powerpoint/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/tag/powerpoint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gear</title>
+      <link>https://mcjoi.github.io/tag/gear/</link>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/gear/</guid>
       <description></description>
     </item>
     <item>
