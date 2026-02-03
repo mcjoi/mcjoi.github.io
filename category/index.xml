@@ -6,8 +6,15 @@
     <description>Recent content in Category on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life</title>
+      <link>https://mcjoi.github.io/category/life/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/category/life/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dev</title>
       <link>https://mcjoi.github.io/category/dev/</link>
@@ -20,13 +27,6 @@
       <link>https://mcjoi.github.io/category/office/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/category/office/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Life</title>
-      <link>https://mcjoi.github.io/category/life/</link>
-      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/category/life/</guid>
       <description></description>
     </item>
   </channel>
