@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Posts | shaaaaallow dive</title>
+    <title>excel - INPUTBOX로 영역 선택하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -106,250 +106,75 @@
     </aside>
     <main class="page">
       
-  <header class="page-header">
-    <h1 class="page-title">Posts</h1>
-    
-      <p class="page-subtitle">기록과 정리</p>
-    
-  </header>
+  <article class="post">
+    <header class="post-header">
+      <h1>excel - INPUTBOX로 영역 선택하기</h1>
+      <div class="post-meta">
+        
+        
+        <div class="post-meta-date">
+          <span>2016-11-15</span>
+          
+        </div>
+        <div class="post-meta-tags">
+          
+            
+            
+            
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+              
+            
+          
+        </div>
+      </div>
+    </header>
 
-  
-  
-  
+    <div class="post-content">
+      <h2 id="inspiration">inspiration</h2>
+<ul>
+<li>VBA에서 <code>INPUTBOX</code>를 사용하면 문자 형식으로 입력을 받게 되는데,</li>
+<li><code>APPLICATION.INPUTBOX</code>로 사용하게 되면, 맨 마지막 옵션에 여러가지 입력값 유형을 정할 수 있게 된다.</li>
+<li><code>RANGE</code>를 쓰려면 8번을 쓰면 된다.</li>
+</ul>
+<br>
+<Br>
+<h2 id="execution">execution</h2>
+<p>특정영역을 선택해서 뭔가 작업을 할 때 영역의 값을 1차원 array로 반환한다고 쉽게 생각하면 편하다.</p>
+<p>아래 코드는 특정영역을 선택해서, 테두리를 치는 예시다.<br>
+어디까지나. APPLICATION.INPUTBOX를 위해 임의로 짠 코드일뿐 구지 이런 기능은 필요없을꺼다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">BORDER_</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> MyRNG <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> MyRNG <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;테두리칠 영역을 고르시오&#34;</span>, , , , , , , 8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> MyRNG
+</span></span><span style="display:flex;"><span>.Borders(xlEdgeLeft).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>.Borders(xlEdgeTop).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>.Borders(xlEdgeBottom).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>.Borders(xlEdgeRight).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>.Borders((xlInsideHorizontal)).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span>.Borders((xlInsideVertical)).LineStyle <span style="color:#f92672">=</span> xlContinuous
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<br>
+<p>적용 예시이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01989/01.gif" alt="myimg"></p>
+<br>
+<br>
+<p>끝.</p>
 
-  <section class="grid">
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/02999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/01_python.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/02999/">windows - PDF에서 테이블 추출하기</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/03998_en/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/03998_en/">windows - Mouse Click Animation</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/03997_en/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/03997_en/">windows - Desktop Shortcut</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/01999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/01999/">MacroToolkit - excel, powerpoint</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/office/">office</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/03999_en/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/03999_en/">flutter - Hiding Google API keys</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/03999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/03_flutter.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/03999/">flutter - Google API key 감추기</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
-            
-            
-            
-            <span>2025-12-22</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/00991/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/05_excel.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/00991/">사용자정의 숫자 서식 좀 편하게 설정하기</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/office/">office</a>
-            
-            
-            
-            <span>2025-12-15</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05999/">빌트록스 air 시리즈 사용기 (15,20,25,50)</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2025-12-14</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05887/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05887/17.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05887/">화이트밸런스 카드 DIY</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2023-09-12</span>
-            
-              <span>updated : 2025-11-21</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05888/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05888/02.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05888/">플래시(godox tt350, Desiontal F02)</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2023-09-12</span>
-            
-              <span>updated : 2025-11-21</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05886/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/10.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05886/">조명 트리거(x-2t, x3)</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2023-09-12</span>
-            
-              <span>updated : 2025-11-21</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05885/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/00_noimage.webp');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05885/">야외 플래시(스트로브) 촬영 시 TTL 측광 오류</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2023-09-12</span>
-            
-              <span>updated : 2025-11-21</span>
-            
-          </div>
-        </div>
-      </article>
-    
-  </section>
-
-  
-    <div class="more-wrap">
-      <a class="more-btn" href="/posts/page/4/">More</a>
     </div>
-  
+
+  </article>
 
     </main>
     <footer class="footer">
