@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>블로그 이사(티스토리 → ?) | shaaaaallow dive</title>
+    <title>excel - sumif 없이 날짜데이터 월별 합계 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -108,14 +108,14 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>블로그 이사(티스토리 → ?)</h1>
+      <h1>excel - sumif 없이 날짜데이터 월별 합계</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-29</span>
+          <span>2016-11-17</span>
           
-            <span>updated : 2026-01-28</span>
+            <span>updated : 2026-02-04</span>
           
         </div>
         <div class="post-meta-tags">
@@ -126,7 +126,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/blog/">#blog</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -135,85 +140,80 @@
     </header>
 
     <div class="post-content">
-      <h2 id="티스토리">티스토리</h2>
-<p>꽤 오랜시간 티스토리 블로그에 글을 적어왔다. 가끔 까먹는 엑셀 함수를 기재해두는 메모 용도로 시작했는데, 세월의 길이 만큼이나, 글이 많아졌다.</p>
-<br>
-<p>이로 인해 본의 아니게 <code>adsense</code> 광고비가 들어오던 때가 있어, 나름 동기부여가 되어오기도 했는데&hellip;<br>
-세상에 가장 좋지 않은 것이 줬다 뺏는 거라고 했던가?<br>
-<code>CPM</code> 정책으로 변경 뒤부터 지급되던 코묻은 돈은 이제는 0이 되었다. 수익은 없는데, 가독성을 떨어뜨리는 광고만 수두룩한 페이지가 되었다.</p>
-<br>
-<p>선택지는 분명하다.<br>
-광고를 털어내고 깔끔한 메모장으로 사용하거나, 다른 블로그 서비스로 이전을 하는 것 둘 중 하나이다.<br>
-시간을 들여 <code>CSS</code>를 내 입맛에 맞게 수정한 시간이 좀 아깝기는 하지만, 새로운 블로그를 만들면서 그간 몰랐던 것을 익히는 공부의 시간이라고 생각하자.</p>
-<br>
-<br>
-<h2 id="블로그-서비스">블로그 서비스</h2>
-<p>블로그의 시대는 유튜브의 득세, AI의 도둑질에 힘을 입어 끝난거나 마찬가지다.<br>
-그럼에도, 다시 블로그들을 찾아보는 이유는 가장 시간적인 부담이 없다는 이유 때문일 것이다. 놀고 있는 태블릿으로도 충분히 끄적일 수 있다는 활용 측면도 있다.</p>
-<p>여튼 아래와 같이 호스팅할만한 서비스들의 후보군을 찾아보았다.</p>
-<p class="text-box"><strong>블로거(blogger)</strong><br>
-구글의 블로그 서비스, html과 css가 하나의 xml로 구성되어 유지보수를 하는데 난이도가 너무 높다. 놀랍게도 구글의 서비스임에도 구글에서 SEO가 잘 되지 않는다.</p>
-<p class="text-box"><strong>워드프레스(wordpress)</strong><br>
-직접 뭔가를 해보지는 않았는데, 유료이고, 난이도가 있다고 한다. 내가 싫어하는 두가지 단점을 모두 가지고 있다.</p>
-<p class="text-box"><strong>Github pages</strong><br>
-Github에서 제공하는 서비스. Markdown 언어로 작성을 하며, gitbook으로 사용을 해도 되지만, Jekll/Hugo 등의 정적사이트 템플릿을 사용할 수도 있다.</p>
-<p class="text-box"><strong>firebase hosting</strong><br>
-엄밀히 말하면 블로깅 서비스는 아니지만, 블로그를 따로 만들어서, hosting만 진행할 수 있다.</p>
-<br>
-<br>
-<p>이것 저것 여러 서비스를 사용해보니, 티스토리나 네이버 블로그가 얼마나 고마운 서비스였는지 알 수 있다.<br>
-특히 티스토리는 이사를 가는 사람들을 위해 백업기능까지 제공한다. 포스트들을 다 압축파일로 제공해주며, 이미지 파일은 무려 원본으로 받을 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05998/05998_img_01.webp" alt="img"></p>
-<br>
-<br>
-<h2 id="구조">구조</h2>
-<p>블로그의 <code>UI</code>를 구성하는 서비스와 이를 저장하고 관리하는 <code>STORAGE</code> 파트로 구분을 해서 생각한다. 어떤 서비스를 활용할 것인지가 관건이겠다.</p>
-<br>
-<h3 id="hugo--github-pages">hugo + github pages</h3>
-<p><code>hugo</code>는 정적사이트 생성기 중에서도 난이도가 쉽다고 알려져 있는데, 제공되는 템플릿을 사용하던 사람(티스토리나 네이버)에게는 접근조차 쉽지가 않다.<br>
-무엇이든 할 수 있지만, 나에게는 아닌 것이다.</p>
-<br>
-<p>특히 Go 언어로 설계된 커스텀 부분은 주어진 템플릿과 뒤죽박죽이 될 수 있기 때문에 정리력이 필요하다.<br>
-그럼에도 상대적으로 손쉽게 블로그를 구현할 수 있었고, 이미 만들어진 템플릿도 상당히 고급스럽고, 나무랄 곳이 없었다.</p>
-<br>
-<p><code>hugo</code>로 열심히 UI를 만들었다면, 어딘가에 올려서 서비스를 해야하기 때문에, 이 분야의 최고인 <code>github pages</code>를 선택할 수 있다.<br>
-물론 <code>github pages</code> 대신 <code>firebase hosting</code>이 사용도 훨씬 편한 대안이 될 수 있지만, 아쉽게도 같은 계열사(?)인 <code>adsense</code>와는 궁합이 맞지 않는다.<br>
-이는 아래 자세히 적는다.</p>
-<br>
-<p>여튼 <code>hugo + github pages</code> 는 티스토리의 대안을 가질 수 있는 가장 쉽고 빠른 방법이다.</p>
-<br>
-<br>
-<h3 id="flutter-web--github-pages">flutter web + Github pages</h3>
-<p><code>flutter web</code>으로 블로그를 만드니, 템플릿은 전혀 필요없다.<br>
-자유도가 매우 높아지고, 기본 디자인이나 애니메이션도 HTML에 비해 월등하게 수려하다. 또한 로그인 기능을 넣어서 직접 POST를 작성할 수 있게 만들 수도 있다.</p>
-<p>하지만 이런 장점들을 무력화 시키는 단점이 있다. <code>flutter web</code>은 <code>SPA</code>이다.</p>
-<p class="text-box">SPA(Single Page Application)란 웹사이트의 초기 로딩 시 단 하나의 HTML 페이지를 불러온 뒤, 이후의 화면 전환이나 데이터 변경은 페이지 전체를 새로고침하지 않고, JavaScript로 필요한 부분만 동적으로 갱신하는 웹 애플리케이션 구조이다.</p>
-<br>
-<p>그래서 post의 url이 <code>~~.com/#/post/xxx</code> 형태가 된다. 페이지 하나에서 영역이 분리되는 형태가 된다고 생각하면 간단하다.<br>
-이로 인해, <code>github pages</code> 에서 주소 체계를 원래 형태로 만들기가 불가능에 가깝다. 즉, SEO하고는 작별이다.</p>
-<br>
-<p>우연히 <code>firebase hosting</code> 에서는 SPA의 라우팅을 지원하고 주소체계를 익숙한 형태로 컨트롤 할 수 있다는 것을 알게 되었지만, 희망은 좌절의 다른 이름인가.. 두 가지 이유로 여전히 adsense에 가까이 갈 수는 없다.</p>
-<ul>
-<li>기본 제공 주소를 사용하는 경우 (xxx.web.app) adsense 승인이 나는 것이 매우 어렵다 한다.</li>
-<li>javascript가 실행되기 전까지 빈페이지 index 파일이기 때문에, adsense 승인이 시작도 안된다.</li>
+      <h2 id="inspiration">inspiration</h2>
+<p>아래와 같이 조건이 있다고 하자.</p>
+<ul class="text-box">
+<li>오늘 날짜 또는 특정 기준일이 있다</li>
+<li>여러날짜들 중 특정 기준일의 월과 매칭하여, 이에 맞는 값을 합산한다</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05998/05998_img_02.webp" alt="img"></p>
+<p>함수로 하면 별거 아닐 수 있겠지만, VBA로는 어떨까,</p>
+<p>myimg</p>
 <br>
 <br>
-<h2 id="경과">경과</h2>
-<p>아래와 같이 3가지 블로그 유형을 게재했다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05998/05998_img_03.webp" alt="img"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">MonthlySum_BySelection</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> baseDateCell <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> dateRange <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sumRange <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> resultCell <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> resultSum <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Store active cell at execution time
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> resultCell <span style="color:#f92672">=</span> ActiveCell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Select base date (single cell)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> baseDateCell <span style="color:#f92672">=</span> Application.InputBox( _
+</span></span><span style="display:flex;"><span>        Prompt:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select the base date (single cell)&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Title:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Base Date&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Type:<span style="color:#f92672">=</span>8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Select date range
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> dateRange <span style="color:#f92672">=</span> Application.InputBox( _
+</span></span><span style="display:flex;"><span>        Prompt:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select the date range&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Title:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Date Range&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Type:<span style="color:#f92672">=</span>8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Select sum range (must be same size as date range)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sumRange <span style="color:#f92672">=</span> Application.InputBox( _
+</span></span><span style="display:flex;"><span>        Prompt:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select the sum range (same size as date range)&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Title:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Sum Range&#34;</span>, _
+</span></span><span style="display:flex;"><span>        Type:<span style="color:#f92672">=</span>8)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Validate range size
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> dateRange.Rows.Count <span style="color:#f92672">&lt;&gt;</span> sumRange.Rows.Count <span style="color:#f92672">Or</span> _
+</span></span><span style="display:flex;"><span>       dateRange.Columns.Count <span style="color:#f92672">&lt;&gt;</span> sumRange.Columns.Count <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Date range and sum range must be the same size.&#34;</span>, vbCritical
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    resultSum <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Loop through each cell
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> dateRange.Cells.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> Year(dateRange.Cells(i).Value) <span style="color:#f92672">=</span> Year(baseDateCell.Value) <span style="color:#f92672">And</span> _
+</span></span><span style="display:flex;"><span>           Month(dateRange.Cells(i).Value) <span style="color:#f92672">=</span> Month(baseDateCell.Value) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            resultSum <span style="color:#f92672">=</span> resultSum <span style="color:#f92672">+</span> sumRange.Cells(i).Value
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; Write result to originally active cell
+</span></span></span><span style="display:flex;"><span>    resultCell.ClearContents
+</span></span><span style="display:flex;"><span>    resultCell.Value <span style="color:#f92672">=</span> resultSum
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;Monthly sum completed.&#34;</span>, vbInformation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
 <br>
-<br>
-<p>역시나 firebase + flutter web은 콘텐츠가 없다는 이유로 계속 반려가 된다.<br>
-동일한 콘텐츠를 가지고 검수 요청을 한 gitpage는 어떨까? 검수 대기중이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05998/05998_img_04.png" alt="img"></p>
-<br>
-<br>
-<h2 id="결론">결론</h2>
-<p>티스토리에서 아쉬웠던 완성도나, 편의성, 관리적 이슈 등 flutter, hugo, github, firebase 까지 여러 서비스의 맛을 보게된 끔찍한 몇일이었다.</p>
-<p>chatGPT와 함께한 어마어마한 오류와 에러, 작업요소들이 재미가 있었는지&hellip; 기억하고 싶지 않다.<br>
-돌아돌아.. 당신이 보고 있는 블로그가 되었다&hellip; 어떤가?</p>
+<p>sumif 를 쓰기 귀찮다면, 한번 해볼만 하지 않을까??</p>
 <p>끝.</p>
 
     </div>
