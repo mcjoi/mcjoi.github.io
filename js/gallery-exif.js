@@ -1494,6 +1494,8 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
       const parts = [];
       const model = [data.Make, data.Model].filter(Boolean).join(" ").trim();
       if (model) parts.push(model);
+      const lens = [data.LensMake, data.LensModel].filter(Boolean).join(" ").trim() || (data.LensModel || data.Lens);
+      if (lens) parts.push(lens);
       if (data.FocalLength) parts.push(`${Math.round(data.FocalLength)}mm`);
       if (data.FNumber) parts.push(`f/${Number(data.FNumber).toFixed(1)}`);
       const exposure = formatExposure(data.ExposureTime);

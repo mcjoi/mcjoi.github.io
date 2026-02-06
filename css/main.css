@@ -406,6 +406,12 @@ ul li::marker {
   margin-top: 16px;
 }
 
+.drawer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .drawer-section-title {
   font-size: 13px;
   color: var(--muted);
