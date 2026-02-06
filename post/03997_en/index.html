@@ -157,35 +157,27 @@
       
       
       
-      
-        
         
         
         
           
             
+          
+        
+          
             
             <h2 id="what-is-it">What is it?</h2>
-            
-          
-        
-          
-            
-            
-            
 <p>I was tired of digging for folders and files, so I made a shortcut app.<br>
 You can do this with Windows shortcuts or tools like Rainmeter, but they&rsquo;re too broad for my use.<br>
 So I rebuilt it with Flutter desktop.</p>
 <br>
 <br>
-<h2 id="structure">Structure</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="structure">Structure</h2>
 <p>Goal: a floating panel with program launches, site shortcuts, and folder shortcuts.<br>
 Windows shortcuts are enough, but mine kept disappearing when I cleaned the desktop.<br>
 So I made this.</p>
@@ -194,12 +186,20 @@ So I made this.</p>
 ✶ Use icons, but show a hover tooltip so I remember what each one is.</p>
 <br>
 <br>
-<h2 id="package">Package</h2>
-            
+
           
         
           
             
+            <h2 id="package">Package</h2>
+<p>Flutter Windows has matured enough to build an exe without much trouble.<br>
+Packages I used:</p>
+<br>
+<br>
+
+          
+        
+          
             
               <div class="ad-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
@@ -217,19 +217,7 @@ So I made this.</p>
 
               </div>
             
-            
-<p>Flutter Windows has matured enough to build an exe without much trouble.<br>
-Packages I used:</p>
-<br>
-<br>
-<h2 id="window-manager">window manager</h2>
-            
-          
-        
-          
-            
-            
-            
+            <h2 id="window-manager">window manager</h2>
 <p>I picked the first package on pub.dev for controlling the window.<br>
 Not sure if it&rsquo;s the best, but it does what I need.</p>
 <p><code>init</code></p>
@@ -263,14 +251,12 @@ Not sure if it&rsquo;s the best, but it does what I need.</p>
 </span></span><span style="display:flex;"><span>  });
 </span></span></code></pre></div><br>
 <br>
-<h2 id="flutter_acrylic">flutter_acrylic</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="flutter_acrylic">flutter_acrylic</h2>
 <p>I wanted some visual style, so I used acrylic.<br>
 But the window border kept misaligning by ~5px, not sure if it&rsquo;s Windows 10 or me.<br>
 So I ended up using transparent only.<br>
@@ -285,25 +271,23 @@ It looked fine on Windows 10, but Windows 11 doesn&rsquo;t seem to like it.</p>
 </span></span><span style="display:flex;"><span>  );
 </span></span></code></pre></div><br>
 <br>
-<h2 id="system_tray">system_tray</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="system_tray">system_tray</h2>
 <p>Because the window is always on top, it can get in the way.<br>
 I used system_tray to minimize it into the tray when needed.<br>
 The sample code works out of the box.</p>
 <br>
 <br>
-<h2 id="result">Result</h2>
-            
+
           
         
           
             
+            <h2 id="result">Result</h2>
 <p>Using a json file for bookmarks was convenient at first.<br>
 But once the list grows and changes often, it gets annoying.<br>
 I&rsquo;ll need a settings page eventually.</p>

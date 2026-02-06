@@ -157,35 +157,27 @@
       
       
       
-      
-        
         
         
         
           
             
+          
+        
+          
             
             <h2 id="inspiration">inspiration</h2>
-            
-          
-        
-          
-            
-            
-            
 <p>Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10. If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app.</p>
 <p>Windows has a long history, but since Vista, I haven&rsquo;t really come across programs or open-source projects that deal with click animations. Sure, it&rsquo;s mostly a trivial feature, but the built-in Windows functionality is just terrible.</p>
 <p>Still, I decided to give it a try.</p>
 <br>
 <br>
-<h2 id="two-scenarios">Two Scenarios</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="two-scenarios">Two Scenarios</h2>
 <p class="text-box">#1 Send the click coordinates from Windows to Flutter<br>
 You run the Flutter app as an invisible layer, and when click coordinates are received, it plays an animation.</p>
 <p class="text-box">#2 Send the clicked coordinates from Flutter to Windows<br>
@@ -193,12 +185,21 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <p>These are simple scenarios, but ChatGPT recommended #2. Following that advice led to a few days of trial and error. Eventually, I realized that #1 is the reliable approach.</p>
 <br>
 <br>
-<h2 id="win32-and-ffi">Win32 and FFI</h2>
-            
+
           
         
           
             
+            <h2 id="win32-and-ffi">Win32 and FFI</h2>
+<p>On Flutter Android, whenever you try to do anything, you often need to touch native code?and it can easily break. Windows is no different: you have to deal with C++.</p>
+<p>There are two ways to do this: write everything in Dart, or build a C++ DLL in Visual Studio and call it from Flutter.</p>
+<p>Since I had no idea if it would even work, I did it for fun. Otherwise, I would have given up immediately.</p>
+<br>
+<br>
+
+          
+        
+          
             
               <div class="ad-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
@@ -216,45 +217,28 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 
               </div>
             
-            
-<p>On Flutter Android, whenever you try to do anything, you often need to touch native code?and it can easily break. Windows is no different: you have to deal with C++.</p>
-<p>There are two ways to do this: write everything in Dart, or build a C++ DLL in Visual Studio and call it from Flutter.</p>
-<p>Since I had no idea if it would even work, I did it for fun. Otherwise, I would have given up immediately.</p>
-<br>
-<br>
-<h2 id="scenario-details">Scenario Details</h2>
-            
-          
-        
-          
-            
-            
-            
+            <h2 id="scenario-details">Scenario Details</h2>
 <p class="text-box">→ Flutter runs the DLL file.<br>
 → Windows, via the DLL, writes click coordinates to a text file whenever a click occurs.<br>
 → Flutter reads the coordinates from the text file and uses them to determine where to play the animation.<br>
 → The Flutter app runs fullscreen with a transparent background, in the background.</p>
 <br>
 <br>
-<h2 id="packages-used">Packages Used</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="packages-used">Packages Used</h2>
 <p>For controlling the DLL, we just import io and ffi. For window management, we use window_manager. To play animations, we use the lottie package.</p>
 <br>
 <br>
-<h2 id="calling-the-dll">Calling the DLL</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="calling-the-dll">Calling the DLL</h2>
 <p>The DLL must be executed from main(). I didn&rsquo;t know why, but following ChatGPT&rsquo;s instructions, it should be defined like this.</p>
 <p><code>calling .dll files</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> StartHookThreadC <span style="color:#f92672">=</span> Void Function();
@@ -269,14 +253,12 @@ Flutter only reads the coordinates saved in the text file.</p>
 </span></span><span style="display:flex;"><span>startHookThread();
 </span></span></code></pre></div><br>
 <br>
-<h2 id="lottie-animation">Lottie Animation</h2>
-            
+
           
         
           
             
-            
-            
+            <h2 id="lottie-animation">Lottie Animation</h2>
 <p>Rive provides incredible features, but Lottie just runs animations and that&rsquo;s perfect. You don&rsquo;t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
 <p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
 <p>First, here&rsquo;s the <code>C++</code> source code that needs to be built as a <code>DLL</code> using Visual Studio.</p>
@@ -529,12 +511,12 @@ Flutter only reads the coordinates saved in the text file.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
 <br>
-<h2 id="result">Result</h2>
-            
+
           
         
           
             
+            <h2 id="result">Result</h2>
 <p>For click motions, a simple one-time animation is enough. You don&rsquo;t need Rive animations, and LottieFiles provides animations you can download and use easily without much effort.</p>
 <p>The GIF below shows the result of a Lottie animation. The quality isn’t bad at all, though the GIF format makes it look slightly choppy.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03998/img.gif" alt="img"></p>
