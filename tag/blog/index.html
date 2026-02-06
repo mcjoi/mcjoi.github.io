@@ -216,6 +216,30 @@
   </script>
 
     </main>
+    <div class="fab">
+      <button class="fab-btn" type="button" aria-label="Open quick links" aria-expanded="false">
+        <span class="fab-preview" aria-hidden="true">
+          <img src="/icon/youtube.svg" alt="" />
+          <img src="/icon/instagram.svg" alt="" />
+          <img src="/icon/tistory.svg" alt="" />
+          <img src="/icon/gallery.svg" alt="" />
+        </span>
+      </button>
+      <div class="fab-menu" aria-hidden="true">
+        <a class="fab-item" href="https://www.youtube.com/channel/UCuHWXrgMa5vkGVNseVu03JQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <img src="/icon/youtube.svg" alt="" />
+        </a>
+        <a class="fab-item" href="https://www.instagram.com/mcjoi80/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/icon/instagram.svg" alt="" />
+        </a>
+        <a class="fab-item" href="https://sunnybong.tistory.com/" target="_blank" rel="noopener noreferrer" aria-label="Tistory">
+          <img src="/icon/tistory.svg" alt="" />
+        </a>
+        <a class="fab-item" href="/gallery/" aria-label="Gallery">
+          <img src="/icon/gallery.svg" alt="" />
+        </a>
+      </div>
+    </div>
     <script>
       (function() {
         const body = document.body;
@@ -381,6 +405,41 @@
             e.stopPropagation();
             copyCode();
           });
+        });
+      })();
+    </script>
+    <script>
+      (function() {
+        const fab = document.querySelector('.fab');
+        const btn = document.querySelector('.fab-btn');
+        const menu = document.querySelector('.fab-menu');
+        if (!fab || !btn || !menu) return;
+
+        const open = () => {
+          fab.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          menu.setAttribute('aria-hidden', 'false');
+        };
+        const close = () => {
+          fab.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        };
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (fab.classList.contains('open')) {
+            close();
+          } else {
+            open();
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!fab.contains(e.target)) close();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') close();
         });
       })();
     </script>
