@@ -1538,9 +1538,18 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
         if (!src) return;
         open(src, btn.getAttribute("data-title"));
       });
+      btn.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+      });
     });
     overlay.addEventListener("click", (e2) => {
       if (e2.target === img || e2.target === backdrop || e2.target === overlay) close();
+    });
+    overlay.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+    img.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
     });
     document.addEventListener("keydown", (e2) => {
       if (e2.key === "Escape") close();

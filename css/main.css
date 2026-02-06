@@ -973,15 +973,46 @@ ul li::marker {
 
 .code-block-body {
   padding: 0;
+  position: relative;
 }
 
 .code-block.collapsed .code-block-body {
   display: none;
 }
 
+.code-block-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: rgba(24, 24, 24, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.code-block-copy svg {
+  width: 16px;
+  height: 16px;
+  fill: #d2d8e5;
+}
+
+.code-block-copy.copied svg {
+  fill: #95f2b5;
+}
+
+.code-block-copy.failed svg {
+  fill: #ffb3b3;
+}
+
 .post-content pre {
   margin: 0;
-  padding: 14px;
+  padding: 14px 46px 14px 14px;
   border-radius: 10px;
   white-space: pre-wrap;
   word-break: break-word;
