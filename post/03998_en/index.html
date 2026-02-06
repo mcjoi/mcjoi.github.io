@@ -137,7 +137,8 @@
       </div>
     </header>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+    <div class="ad-slot">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -150,21 +151,27 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    </div>
 
     <div class="post-content">
       
       
       
+      
+        
         
         
         
           
+            
+            
             <h2 id="inspiration">inspiration</h2>
             
-            
           
         
           
+            
+            
             
 <p>Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10. If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app.</p>
 <p>Windows has a long history, but since Vista, I haven&rsquo;t really come across programs or open-source projects that deal with click animations. Sure, it&rsquo;s mostly a trivial feature, but the built-in Windows functionality is just terrible.</p>
@@ -173,24 +180,11 @@
 <br>
 <h2 id="two-scenarios">Two Scenarios</h2>
             
-            
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-     crossorigin="anonymous"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-            
           
         
           
+            
+            
             
 <p class="text-box">#1 Send the click coordinates from Windows to Flutter<br>
 You run the Flutter app as an invisible layer, and when click coordinates are received, it plays an animation.</p>
@@ -201,20 +195,13 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <br>
 <h2 id="win32-and-ffi">Win32 and FFI</h2>
             
-            
           
         
           
             
-<p>On Flutter Android, whenever you try to do anything, you often need to touch native code?and it can easily break. Windows is no different: you have to deal with C++.</p>
-<p>There are two ways to do this: write everything in Dart, or build a C++ DLL in Visual Studio and call it from Flutter.</p>
-<p>Since I had no idea if it would even work, I did it for fun. Otherwise, I would have given up immediately.</p>
-<br>
-<br>
-<h2 id="scenario-details">Scenario Details</h2>
             
-            
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              <div class="ad-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -227,10 +214,21 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+              </div>
+            
+            
+<p>On Flutter Android, whenever you try to do anything, you often need to touch native code?and it can easily break. Windows is no different: you have to deal with C++.</p>
+<p>There are two ways to do this: write everything in Dart, or build a C++ DLL in Visual Studio and call it from Flutter.</p>
+<p>Since I had no idea if it would even work, I did it for fun. Otherwise, I would have given up immediately.</p>
+<br>
+<br>
+<h2 id="scenario-details">Scenario Details</h2>
             
           
         
           
+            
+            
             
 <p class="text-box">→ Flutter runs the DLL file.<br>
 → Windows, via the DLL, writes click coordinates to a text file whenever a click occurs.<br>
@@ -240,34 +238,22 @@ Flutter plays the animation, and the coordinates sent to Windows trigger the act
 <br>
 <h2 id="packages-used">Packages Used</h2>
             
-            
           
         
           
+            
+            
             
 <p>For controlling the DLL, we just import io and ffi. For window management, we use window_manager. To play animations, we use the lottie package.</p>
 <br>
 <br>
 <h2 id="calling-the-dll">Calling the DLL</h2>
             
-            
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-     crossorigin="anonymous"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-            
           
         
           
+            
+            
             
 <p>The DLL must be executed from main(). I didn&rsquo;t know why, but following ChatGPT&rsquo;s instructions, it should be defined like this.</p>
 <p><code>calling .dll files</code></p>
@@ -285,10 +271,11 @@ Flutter only reads the coordinates saved in the text file.</p>
 <br>
 <h2 id="lottie-animation">Lottie Animation</h2>
             
-            
           
         
           
+            
+            
             
 <p>Rive provides incredible features, but Lottie just runs animations and that&rsquo;s perfect. You don&rsquo;t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
 <p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
@@ -544,21 +531,6 @@ Flutter only reads the coordinates saved in the text file.</p>
 <br>
 <h2 id="result">Result</h2>
             
-            
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-     crossorigin="anonymous"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-            
           
         
           
@@ -578,7 +550,8 @@ Should right-clicks have a separate animation?</p>
       
     </div>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+    <div class="ad-slot">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -591,6 +564,7 @@ Should right-clicks have a separate animation?</p>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    </div>
 
     
     

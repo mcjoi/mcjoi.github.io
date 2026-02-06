@@ -687,6 +687,12 @@ ul li::marker {
   width: 100%;
 }
 
+.ad-slot {
+  max-width: 980px;
+  margin: 50px auto;
+  width: 100%;
+}
+
 .post-header {
   margin-bottom: 18px;
   max-width: 980px;
