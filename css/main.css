@@ -437,7 +437,7 @@ ul li::marker {
 
 .page {
   min-height: calc(100vh - 50px);
-  padding-bottom: 90px;
+  padding-bottom: 0;
 }
 
 .page-header {
@@ -750,7 +750,7 @@ ul li::marker {
 .related-posts {
   max-width: 980px;
   width: 100%;
-  margin: 50px auto 0;
+  margin: 50px auto 20px;
   padding: 0;
 }
 
