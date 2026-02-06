@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gallery on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/gallery/</link>
+    <description>Recent content in Gallery on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>everland</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_003/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - macchiatea</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_004/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_004/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - macchiatea</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_005/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_005/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>everland</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_001/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_001/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - sky</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_002/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_002/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

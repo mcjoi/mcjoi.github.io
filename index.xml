@@ -310,6 +310,41 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>everland</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_003/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - macchiatea</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_004/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_004/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - macchiatea</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_005/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_005/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>everland</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_001/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_001/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pangyo - sky</title>
+      <link>https://mcjoi.github.io/gallery/landscape/l_002/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/landscape/l_002/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>엑셀 - 보이는 셀만 복사하기</title>
       <link>https://mcjoi.github.io/post/00999/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
