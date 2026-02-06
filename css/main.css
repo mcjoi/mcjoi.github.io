@@ -343,11 +343,7 @@ ul li::marker {
   border-top: 1px solid #111;
   background: #1f1f1f;
   padding: 12px 0 10px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
+  position: static;
 }
 
 .drawer-overlay {
