@@ -517,6 +517,11 @@ ul li::marker {
   padding-bottom: 0;
 }
 
+.bottom-spacer {
+  height: 60px;
+  background: var(--bg);
+}
+
 .page-header {
   max-width: 1200px;
   margin: 0 auto;
