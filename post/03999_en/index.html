@@ -174,53 +174,20 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="security-problem">Security problem</h2>
+        <h2 id="security-problem">Security problem</h2>
 <p>I often use the <code>Google Sheets API</code> because running a DB feels heavy for personal projects.<br>
 But in web publishing, the <code>API key</code> is exposed in dev tools.</p>
 <p>I was glad I noticed it? but honestly, it just feels annoying.</p>
 <br>
 <br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="env">.env</h2>
+<h2 id="env">.env</h2>
 <p>It&rsquo;s not critical data, but if you know, you should handle it.<br>
 The simplest method I picked:<br>
 create a <code>.env</code> file and load it with Flutter&rsquo;s <code>dot_env</code> package.<br>
 It works, but security is never perfect.</p>
 <br>
 <br>
-
-          
-        
-          
-            
-            <h2 id="env-file-structure">.env file structure</h2>
+<h2 id="env-file-structure">.env file structure</h2>
 <p>The tricky part is that API keys often contain <code>\n</code>.<br>
 It&rsquo;s safer to ask ChatGPT for a template for both JSON and <code>.env</code>.</p>
 <p><code>.dart file</code></p>
@@ -246,8 +213,6 @@ It&rsquo;s safer to ask ChatGPT for a template for both JSON and <code>.env</cod
 </span></span></code></pre></div><p>That&rsquo;s it.</p>
 <p>end.</p>
 
-          
-        
       
     </div>
 

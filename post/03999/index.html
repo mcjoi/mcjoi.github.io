@@ -174,51 +174,18 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="보안-문제">보안 문제</h2>
+        <h2 id="보안-문제">보안 문제</h2>
 <p>개인적으로 DB를 사용하기 부담이 되는 경우가 많아 <code>Google Sheets API</code>를 자주 사용하곤 하는데, 최근 웹퍼블리싱을 하는 경우, 개발자 모드에서 나의 <code>API key</code>가 그대로 노출이 된다는 사실을 알게 되었다.</p>
 <p>알게 되서 다행이다 라는 생각보다는&hellip; 아놔 귀찮다&hellip; 라는 생각이 먼저 드는건 왜일까..</p>
 <br>
 <br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="env">.env</h2>
+<h2 id="env">.env</h2>
 <p>뭐 대단한 정보를 가지고 있거나, 처리하지는 않겠지만, 그래도 몰랐으면 모를까.. 이미 알게 되었었으니, 그 중 가장 간단한 방법을 선택하여 처리를 해본다.</p>
 <p>이게 맞는지 모르겠지만, <code>.env</code> 파일을 생성하고, 플러터의 <code>dot_env</code> 패키지를 사용해서 파일을 읽으면 끝이다. 정상작동까지는 확인했지만, 보안이란게 그렇지 않은가?</p>
 <p>완벽한 방법은 없다.</p>
 <br>
 <br>
-
-          
-        
-          
-            
-            <h2 id="env-파일-구성">.env 파일 구성</h2>
+<h2 id="env-파일-구성">.env 파일 구성</h2>
 <p>의외의 어려움은 .env 파일을 구성할 때 나타났는데, <code>API key</code> 에는 <code>\n</code>을 처리해야하는 부분이 있는데, <code>json</code> 구성과 <code>.env</code> 파일 구성은 chatGPT에게 템플릿을 만들어 달라고 하는 것이 여러모로 안전하다.</p>
 <p><code>.dart file</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> cremap <span style="color:#f92672">=</span> {
@@ -245,8 +212,6 @@
 <p>딱히 특별한 것은 없다.</p>
 <p>끝.</p>
 
-          
-        
       
     </div>
 
