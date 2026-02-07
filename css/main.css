@@ -417,8 +417,8 @@ ul li::marker {
 .fab {
   position: fixed;
   right: 24px;
-  bottom: 24px;
-  z-index: 30;
+  bottom: calc(24px + 60px + env(safe-area-inset-bottom));
+  z-index: 40;
 }
 
 .fab-btn {
@@ -489,6 +489,52 @@ ul li::marker {
   filter: brightness(0) invert(1);
 }
 
+.bottom-appbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background: #1f1f1f;
+  border-top: 1px solid #111;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.35);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-appbar-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.bottom-appbar-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  background: #1b1b1b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.bottom-appbar-item:hover,
+.bottom-appbar-item:focus-visible {
+  transform: translateY(-2px);
+  border-color: #3a3a3a;
+}
+
+.bottom-appbar-item img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
 .drawer-section-title {
   font-size: 13px;
   color: var(--muted);
@@ -518,7 +564,7 @@ ul li::marker {
 }
 
 .bottom-spacer {
-  height: 60px;
+  height: calc(60px + env(safe-area-inset-bottom));
   background: var(--bg);
 }
 
