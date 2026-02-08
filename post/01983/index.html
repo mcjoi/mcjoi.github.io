@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>늦은 삼양 75mm F1.8 사용기 | shaaaaallow dive</title>
+    <title>excel - usedrange - 마지막셀 주소 찾기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,12 +127,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>늦은 삼양 75mm F1.8 사용기</h1>
+      <h1>excel - usedrange - 마지막셀 주소 찾기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-11-03</span>
+          <span>2016-11-17</span>
           
         </div>
         <div class="post-meta-tags">
@@ -143,7 +143,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/gear/">#gear</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -169,104 +174,31 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="75mm-화각">75mm 화각</h2>
-<p>85mm 화각은 너무 좁다. 50mm 화각은 뭔가 아쉽다. 중도적인 초점거리는 65mm~75mm인데, 시그마의 65mm F2.0은 매물도 많지 않고 가격도 비싸서 대안으로 삼양의 75mm가 적당해 보였다.</p>
+        <h2 id="마지막셀-주소-찾기">마지막셀 주소 찾기</h2>
+<p>마지막 셀을 찾는 작업은 항상 중요한 것 같다. <code>CURRENTREGION</code>과 <code>USEDRANGE</code>, <code>END</code> 정도면 충분할까?</p>
+<p>시트에 사용된 마지막 셀을 찾아봤다.</p>
+<p>myimg</p>
 <br>
 <br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LastCellNum</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> sht <span style="color:#f92672">As</span> Worksheet
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastRow <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastColumn <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> sht <span style="color:#f92672">=</span> ThisWorkbook.Worksheets(<span style="color:#e6db74">&#34;Sheet1&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LastRow <span style="color:#f92672">=</span> sht.UsedRange.Rows(sht.UsedRange.Rows.Count).Row
+</span></span><span style="display:flex;"><span>LastColumn <span style="color:#f92672">=</span> sht.UsedRange.Columns(sht.UsedRange.Columns.Count).Column
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MsgBox <span style="color:#e6db74">&#34;마지막셀은 &#34;</span> <span style="color:#f92672">&amp;</span> LastRow <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째 행, &#34;</span> <span style="color:#f92672">&amp;</span> LastColumn <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째열 입니다.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<br>
+<p>이후에 차차 업그레이드를 해보자고.</p>
+<p>끝.</p>
 
-          
-        
-          
-            
-            <h2 id="인기도">인기도</h2>
-<p>렌즈 자체는 크게 주목받지 못한 것처럼 보인다. 삼양의 tiny 시리즈 중 24와 35는 화질 면에서는 꽤나 호평을 받았지만 특이한 화각 때문인지, 못생긴 디자인 때문인지, 아직도 MTF 차트 때문인지 75는 그닥 주목을 받지 못한 것으로 보인다.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="가성비">가성비</h2>
-<p>17만에 중고로 구매했다. 보통 20만원 정도에 거래가 되는 걸로 보인다. 내껀 꺼낼수 없는 먼지로 인해 몇만원 저렴하게 구매했다. (후회 중이다.) 비싸지는 않지만, 빌트록스 air 시리즈 제품들 때문에 가성비라고 부르기는 어렵다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_01.webp" alt="img"></p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="사용성">사용성</h2>
-<p>삼양 렌즈의 최대 단점은 펌웨어 업데이트를 전용 dock을 통해 진행된다는 점이다. (지금은 그렇지 않은 것으로 보이지만)<br>
-다행히도 내가 구매한 렌즈는 최신 버전이었고, 삼양에서 더 이상 업데이트를 해줄 것 같지도 않았다.</p>
-<p>발표 당시 custom 스위치를 다른 기능으로 할당할 수 있도록 해준다는 것 같았는데, 약속은 이행되지 않고 있는 것으로 보인다.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="화질">화질</h2>
-<p>최신으로 나온 빌트록스 50/2처럼 최대 개방 화질이 좋지는 않다.</p>
-<p>그렇다고 완전 구리지는 않지만 최대 개방 매니아인 나로서는 항상 개방으로 쓰기엔 조금 아쉬운 느낌이다.<br>
-문제는 F2.8까지 조여도 시그마 56mm의 점수는 전혀 못 따라간다는 점이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_02.png" alt="img"></p>
-<p align="center"><code> lenstip </code></p>
-<br>  
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_03.jpg" alt="img"></p>
-<p align="center"><code> alpha blog </code></p>
-<br>
-<br>
-<p>삼양 특유의 옐로우 컬러는 거의 없어진 반면, 주변부 화질이 무너지는 현상은 존재하는 듯하다. 해당 렌즈는 대부분 인물 촬영에 쓰니, 주변부 화질이 그닥 중요하지는 않아 보인다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_04.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_05.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_06.png" alt="img"></p>
-<br>
-<br>
-<p>85mm보다 최소 초점거리가 짧다는 것이 장점이라면 장점</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_07.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_08.png" alt="img"></p>
-<br>
-<br>
-<p>F2.8에서도 보이는 색수차는 라이트룸으로 조정이 필요한 수준이다. 이게 결정적인 단점은 아니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_09.png" alt="img"></p>
-<br>
-<br>
-<p>주변부는 조금 더 써보며 판단해 보자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_10.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05996/05996_samyan75_11.png" alt="img"></p>
-<br>
-<br>
-<p>가성비든 뭐든, 볼 때마다 거슬리는 못생긴 외형은&hellip; 나만 그런걸까?</p>
-<p>이상. 끝</p>
-
-          
-        
       
     </div>
 
@@ -300,53 +232,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-03</span>
-                <a href="/post/05884/">시그마 65mm or 삼양 75mm</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-03</span>
-                <a href="/post/05883/">윈도우11 멀티태스킹 창조절 기능 끄기</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-28</span>
-                <a href="/post/05998/">블로그 이사(티스토리 → ?)</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-06</span>
-                <a href="/post/05993/">원하는 사이즈로 윈도우(창) 크기 조절</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/05994/">광각 렌즈와 일상 사진 그리고 후보정</a>
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/05995/">카카오스토리 데이터 백업</a>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-31</span>
-                <a href="/post/05997/">소니 4세대 카메라(A7C2) 리모컨</a>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-14</span>
-                <a href="/post/05999/">빌트록스 air 시리즈 사용기 (15,20,25,50)</a>
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-11-21</span>
-                <a href="/post/05889/">몇 가지 접이식 키보드 사용기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-11-21</span>
-                <a href="/post/05885/">야외 플래시(스트로브) 촬영 시 TTL 측광 오류</a>
+                <span class="related-posts-date">2025-12-22</span>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
