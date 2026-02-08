@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Photo | shaaaaallow dive</title>
+    <title>excel - 시트 추가하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -125,74 +125,173 @@
     </aside>
     <main class="page">
       
-  <section class="grid">
+  <article class="post">
+    <header class="post-header">
+      <h1>excel - 시트 추가하기</h1>
+      <div class="post-meta">
+        
+        
+        <div class="post-meta-date">
+          <span>2016-11-17</span>
+          
+        </div>
+        <div class="post-meta-tags">
+          
+            
+            
+            
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+              
+            
+          
+        </div>
+      </div>
+    </header>
+
+    <div class="ad-slot">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
+    <div class="post-content">
+      
+      
+      
+        <h2 id="시트-추가하기">시트 추가하기</h2>
+<p>시트추가하기같은 하찮은걸 원했다기 보다는 시트를 추가했을 때, &lsquo;첫번째 시트&rsquo;가 바뀌게 되는데, 순서와 갯수를 컨트롤하는 것을 알아보고자 했다. 추가하는 건 덤으로 알게됐으니&hellip;;;;</p>
+<p>myimg<br></p>
+<br>
+<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sheets_add</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> addNUM <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>    Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>      addNUM <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;시트를 몇장 추가하시겠습니까?&#34;</span>, , , , , , , 2)
+</span></span><span style="display:flex;"><span>    Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;시트를 &#34;</span> <span style="color:#f92672">&amp;</span> addNUM <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;장 추가하시겠습니까?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>    Worksheets.Add before:<span style="color:#f92672">=</span>Worksheets(1), Count:<span style="color:#f92672">=</span>addNUM
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>lsSHEETS_COUNT <span style="color:#f92672">=</span> Worksheets.Count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MsgBox _
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;마지막워크시트 이름은 &#34;</span> <span style="color:#f92672">&amp;</span> Worksheets(lsSHEETS_COUNT).Name <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; 입니다.&#34;</span> <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;첫번째워크시트 이름은 &#34;</span> <span style="color:#f92672">&amp;</span> Worksheets(1).Name <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; 입니다.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<br>
+<p>여러가지 조건하고 조합해서 상황에 맞춰 쓰면 될 일이다.</p>
+<p>끝.</p>
+
+      
+    </div>
+
+    <div class="ad-slot">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
     
     
       
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05994/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05994/05994_01.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05994/">광각 렌즈와 일상 사진 그리고 후보정</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2026-01-05</span>
-            
-          </div>
-        </div>
-      </article>
-    
       
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05999/">빌트록스 air 시리즈 사용기 (15,20,25,50)</a></h3>
-          <div class="post-meta">
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
             
-              <a class="chip chip--tag" href="/category/life/">life</a>
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
             
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
             
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
             
-            <span>2025-12-14</span>
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-22</span>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
+              </div>
             
           </div>
-        </div>
-      </article>
+        </section>
+      
     
-  </section>
 
-  <div class="more-wrap">
-    <button class="more-btn" type="button">More</button>
-  </div>
-
-  <script>
-    (function() {
-      const revealCount = 9;
-      const cards = Array.from(document.querySelectorAll('.post-card'));
-      const moreBtn = document.querySelector('.more-btn');
-      if (!moreBtn || cards.length <= revealCount) {
-        if (moreBtn) moreBtn.style.display = 'none';
-        return;
-      }
-      let visible = revealCount;
-      cards.forEach((card, idx) => {
-        if (idx >= revealCount) card.classList.add('hidden');
-      });
-      moreBtn.addEventListener('click', () => {
-        const next = cards.slice(visible, visible + revealCount);
-        next.forEach(card => card.classList.remove('hidden'));
-        visible += next.length;
-        if (visible >= cards.length) moreBtn.style.display = 'none';
-      });
-    })();
-  </script>
+  </article>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>

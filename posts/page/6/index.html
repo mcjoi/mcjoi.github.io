@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Photo | shaaaaallow dive</title>
+    <title>Posts | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -125,42 +125,32 @@
     </aside>
     <main class="page">
       
+  <header class="page-header">
+    <h1 class="page-title">Posts</h1>
+    
+      <p class="page-subtitle">기록과 정리</p>
+    
+  </header>
+
+  
+  
+  
+
   <section class="grid">
     
-    
-      
       <article class="post-card">
         
-        <a class="thumb" href="/post/05994/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05994/05994_01.png');"></a>
+        <a class="thumb" href="/post/01989/"
+           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/02_vba.webp');"></a>
         <div class="post-body">
-          <h3 class="post-title"><a href="/post/05994/">광각 렌즈와 일상 사진 그리고 후보정</a></h3>
+          <h3 class="post-title"><a href="/post/01989/">excel - INPUTBOX로 영역 선택하기</a></h3>
           <div class="post-meta">
             
-              <a class="chip chip--tag" href="/category/life/">life</a>
+              <a class="chip chip--tag" href="/category/office/">office</a>
             
             
             
-            <span>2026-01-05</span>
-            
-          </div>
-        </div>
-      </article>
-    
-      
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/05999/"
-           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05999/05999_vilt20_04.png');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/05999/">빌트록스 air 시리즈 사용기 (15,20,25,50)</a></h3>
-          <div class="post-meta">
-            
-              <a class="chip chip--tag" href="/category/life/">life</a>
-            
-            
-            
-            <span>2025-12-14</span>
+            <span>2016-11-15</span>
             
           </div>
         </div>
@@ -168,31 +158,7 @@
     
   </section>
 
-  <div class="more-wrap">
-    <button class="more-btn" type="button">More</button>
-  </div>
-
-  <script>
-    (function() {
-      const revealCount = 9;
-      const cards = Array.from(document.querySelectorAll('.post-card'));
-      const moreBtn = document.querySelector('.more-btn');
-      if (!moreBtn || cards.length <= revealCount) {
-        if (moreBtn) moreBtn.style.display = 'none';
-        return;
-      }
-      let visible = revealCount;
-      cards.forEach((card, idx) => {
-        if (idx >= revealCount) card.classList.add('hidden');
-      });
-      moreBtn.addEventListener('click', () => {
-        const next = cards.slice(visible, visible + revealCount);
-        next.forEach(card => card.classList.remove('hidden'));
-        visible += next.length;
-        if (visible >= cards.length) moreBtn.style.display = 'none';
-      });
-    })();
-  </script>
+  
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
