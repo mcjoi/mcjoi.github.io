@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Gallery_category | shaaaaallow dive</title>
+    <title>excel - 텍스트 글자별로 나누기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -125,29 +125,178 @@
     </aside>
     <main class="page">
       
-  <section class="grid">
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/food/"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/food/">Food</a></h3>
-          <div class="post-meta">
-            <span>5 posts</span>
-          </div>
+  <article class="post">
+    <header class="post-header">
+      <h1>excel - 텍스트 글자별로 나누기</h1>
+      <div class="post-meta">
+        
+        
+        <div class="post-meta-date">
+          <span>2016-11-17</span>
+          
         </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/landscape/"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/landscape/">Landscape</a></h3>
-          <div class="post-meta">
-            <span>5 posts</span>
-          </div>
+        <div class="post-meta-tags">
+          
+            
+            
+            
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+              
+            
+          
         </div>
-      </article>
+      </div>
+    </header>
+
+    <div class="ad-slot">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
+    <div class="post-content">
+      
+      
+      
+        <h2 id="텍스트-글자별로-나누기">텍스트 글자별로 나누기</h2>
+<p>엑셀 기본기능에 텍스트 나누기 기능이 있다. 실무에서 아직 쓴적은 없지만, 강력한 기능인것 같아, 코드로 짜봤다.</p>
+<p>매크로로 녹화해서 봤더니, ARRAY로 프로그래밍되서, 나의 실력으로는 커스터마이징이 어려울 거 같아, FOR NEXT로 노가다. ..</p>
+<p>ROW와 COLUMN이 동시에 되도록 했다. 사실. AUTOFIT 기능이 더 흥미롭다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01979/01.gif" alt="myimg"></p>
+<br>
+<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">txt_separation</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> k <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> text_Len <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> myTXT <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> N <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>k <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;텍스트입력&#34;</span>)
+</span></span><span style="display:flex;"><span>text_Len <span style="color:#f92672">=</span> Len(k)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> N <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> text_Len
+</span></span><span style="display:flex;"><span>    myTXT <span style="color:#f92672">=</span> Mid(k, N, 1)
+</span></span><span style="display:flex;"><span>    Cells(1, N).Value <span style="color:#f92672">=</span> myTXT
+</span></span><span style="display:flex;"><span>    Cells(N, 1).Value <span style="color:#f92672">=</span> myTXT
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> N
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ActiveWindow.DisplayGridlines <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> Cells
+</span></span><span style="display:flex;"><span>    .EntireColumn.AutoFit
+</span></span><span style="display:flex;"><span>    .EntireRow.AutoFit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p>단독으로 쓰일 일은 없겠지만, 시간되면 업데이트.</p>
+<p>끝.</p>
+
+      
+    </div>
+
+    <div class="ad-slot">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
     
-  </section>
+    
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-22</span>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
+              </div>
+            
+          </div>
+        </section>
+      
+    
+
+  </article>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
