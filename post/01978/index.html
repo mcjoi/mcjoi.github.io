@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>엑셀-파워포인트 테이블(표) 연동 관련 | shaaaaallow dive</title>
+    <title>excel - 색칠된 셀의 행 삭제하기 또는 값 합산하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,12 +127,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>엑셀-파워포인트 테이블(표) 연동 관련</h1>
+      <h1>excel - 색칠된 셀의 행 삭제하기 또는 값 합산하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-29</span>
+          <span>2016-11-17</span>
           
         </div>
         <div class="post-meta-tags">
@@ -143,7 +143,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -169,245 +174,164 @@
       
       
       
-        <h2 id="상황">상황</h2>
-<p>엑셀의 특정영역을 카피해서 파워포인트에 붙이기를 하면, 일반 표 형태로 엑셀이 달라붙어서 서식을 다시 지정해줘야하고,<br>
-import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 같아진다.</p>
-<p>그래서 다들 본인들 편한 방식으로 엑셀과 파워포인트간 테이블 연동을 처리 하고 있을 것이다.</p>
+        
+        
+        
+          
+            
+          
+        
+          
+            
+            <h2 id="색칠된-셀의-행-삭제하기">색칠된 셀의 행 삭제하기</h2>
+<p>문서를 검토하다 보면 특정 조건에 따라 셀에 색을 칠하는 경우가 많다.<br>
+노가다이든, 조건부 서식이든..</p>
+<p>그 다음이 문제다.<br>
+색 구분 해놓은걸 처리를 해야할 경우,<br>
+다시 일일이 선택해서 뭔가를 해야하는 경우가 많다.<br>
+대부분의 경우, 선택한걸 삭제하는 경우가 많으므로, 삭제하는 코드로 짯다.</p>
+<p>간단하다.</p>
+<p>선택 영역 내에서 기본 설정색(마치 흰색으로 보이는 아무것도 없는 색)이 아니면 행을 지우게 해놨다<br>
+의외로 유용하다.</p>
+<ul>
+<li>단, 조건부 서식에서 설정된 색은 먹히지 않는다!!!!</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01978/01.gif" alt="myimg"></p>
 <br>
 <br>
-<h2 id="테이블-통째로-복사-개선">테이블 통째로 복사 개선</h2>
-<p>생각할 수 있는 첫번째 방법은 파워포인트에서 만든 테이블 양식을 엑셀에다 붙이고, 데이터 작업을 해서, 데이터만 다시 복사하는 방법이다.</p>
-<p>테이블 양식을 고스란히 유지한다는 점에서 손이 덜가긴 하지만, 아쉽게도 엑셀에는 파워포인트 테이블 셀에서의 <code>margin</code> 값이 없다. <code>margin</code> 값 정보가 없으니, 0,0,0,0 으로 변한다. (숫자의 경우, 대부분 끝쪽에 아주 보기 싫게 붙는다.)</p>
-<p><code>margin</code> 값을 때마다 고쳐주는 것도 귀찮으니, <code>default</code> 값으로 변경하는 VBA를 짜본다.<br>
-물론 기존 테이블이 default margin 값(0.25, 0.25, 0.13, 0.13)을 사용했었다는 전제다.</p>
-<p>아래 프로시저로 <code>margin</code> 값을 초기화 할 수 있다.</p>
-<p><code>sample.bas</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">SetSelectedTableCellMargins_CM</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; cm → pt 변환 상수
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Const</span> CM_TO_PT <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span> <span style="color:#f92672">=</span> 28.3464567
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Const</span> M_LEFT <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span> <span style="color:#f92672">=</span> 0.25 <span style="color:#f92672">*</span> CM_TO_PT
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Const</span> M_RIGHT <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span> <span style="color:#f92672">=</span> 0.25 <span style="color:#f92672">*</span> CM_TO_PT
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Const</span> M_TOP <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span> <span style="color:#f92672">=</span> 0.13 <span style="color:#f92672">*</span> CM_TO_PT
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Const</span> M_BOTTOM <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span> <span style="color:#f92672">=</span> 0.13 <span style="color:#f92672">*</span> CM_TO_PT
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">row_del_COLOR</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sr <span style="color:#f92672">As</span> ShapeRange
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> tbl <span style="color:#f92672">As</span> Table
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> changed <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> myRNG <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> CmyRNG <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow <span style="color:#f92672">Is</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#66d9ef">Then</span> <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">If</span> ActiveWindow.Selection <span style="color:#f92672">Is</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#66d9ef">Then</span> <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> myRNG <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;영역&#34;</span>, , , , , , , 8)
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> EH
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sr <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> 0
+</span></span><span style="display:flex;"><span>CmyRNG <span style="color:#f92672">=</span> myRNG.Count
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sr <span style="color:#f92672">Is</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#f92672">Or</span> sr.Count <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;표 안에서 셀 영역을 선택한 후 실행하세요.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> sr
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> tbl <span style="color:#f92672">=</span> shp.Table
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> tbl.Rows.Count
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> tbl.Columns.Count
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">If</span> tbl.Cell(r, c).Selected <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">With</span> tbl.Cell(r, c).Shape.TextFrame
-</span></span><span style="display:flex;"><span>                            .MarginLeft <span style="color:#f92672">=</span> M_LEFT
-</span></span><span style="display:flex;"><span>                            .MarginRight <span style="color:#f92672">=</span> M_RIGHT
-</span></span><span style="display:flex;"><span>                            .MarginTop <span style="color:#f92672">=</span> M_TOP
-</span></span><span style="display:flex;"><span>                            .MarginBottom <span style="color:#f92672">=</span> M_BOTTOM
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>                        changed <span style="color:#f92672">=</span> changed <span style="color:#f92672">+</span> 1
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Next</span> c
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> r
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> shp
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> changed <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;선택된 셀이 없습니다. 셀을 드래그 선택 후 실행하세요.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;완료: 선택된 셀 &#34;</span> <span style="color:#f92672">&amp;</span> changed <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;개에 cm 기준 여백을 적용했습니다.&#34;</span>, vbInformation
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> CmyRNG <span style="color:#66d9ef">To</span> 1 <span style="color:#66d9ef">Step</span> <span style="color:#f92672">-</span>1
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> myRNG(i).Interior.ColorIndex <span style="color:#f92672">&lt;&gt;</span> <span style="color:#f92672">-</span>4142 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>    myRNG(i).EntireRow.Select
+</span></span><span style="display:flex;"><span>    Selection.Delete
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">EH</span>:
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;표 또는 셀 선택 상태를 확인하세요.&#34;</span>, vbInformation
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    myRNG(1).Activate
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div>
+          
+        
+          
+            
+              <div class="ad-slot">
+                
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+              </div>
+            
+            <h2 id="보너스-짝수값이-들어-있는-셀-색칠하기">[보너스] 짝수값이 들어 있는 셀 색칠하기</h2>
+<p>특정 영역에서 값이 짝수이면, 회색을 칠하고, 우측셀에 +1 한 값을 넣어본다.<br>
+아무 의미는 없다. 어느새 mod 함수를 까먹고 있었다는 사실을 알아냈다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01978/01.gif" alt="myimg"></p>
+<br>
+<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">range_T</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> a <span style="color:#f92672">As</span> Range
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> k <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> a <span style="color:#f92672">=</span> Range(<span style="color:#e6db74">&#34;a1:a10&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 10
+</span></span><span style="display:flex;"><span>    k <span style="color:#f92672">=</span> Val(a(i))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> k <span style="color:#f92672">Mod</span> 2 <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>          a(i).Offset(0, 1) <span style="color:#f92672">=</span> k <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>          a(i).Interior.Color <span style="color:#f92672">=</span> RGB(97, 97, 97)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<Br>
+
+          
+        
+          
+            
+            <h2 id="색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</h2>
+<p>특정 조건에 대하여 셀 색을 칠하는 것은 조건부 서식으로 되는데,<br>
+색이 칠해진 셀에 대하여, 합계를 구하는 방법이 묘연하다.</p>
+<p>배열수식으로 간단하게 만들어질 줄 알았는데, VBA를 사용해야하는 것 같다.<br>
+없으면 만들어야지 뭐..</p>
+
+          
+        
+          
+            
+            <h2 id="방법">방법</h2>
+<p>다들 아는 것이겠지만, VBA 프로시저 중, 일반적으로 사용하는 SUB프로시저를 만들기엔 변수가 좀 많다. FUNCTION 프로시저로 UDF를 만들어서 사용하는 게 나을 것 같다.</p>
+<p>그래도 뭐가 나을지 모르니, 둘 다 해보자.</p>
+<h3 id="case-1-sub-프로시저-사용">CASE #1. SUB 프로시저 사용</h3>
+<p>영역을 INPUTBOX로 받아서, 색상을 확인한다.흰색이 아니면, 값을 저장해서, 이후에 해당하는 값을 합산한다. 모든 영역에 검사가 끝나면, 최종적으로 합산된 값을 반환한다.</p>
+<p>그런데.. 어디다가 반환할 것인가?<br>
+셀을 지정해주거나, 현재 셀로 해도 되지만, 뭐.. 일단 아무데나..</p>
+<p>작성된 코드는 아래와 같다.<br>
+흰색 셀 색상 코드를 확인해서 넣어주는 것이 키포인트</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">colorSum</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> 영역 <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;영역을 선택하세요&#34;</span>, , , , , , , 8)
+</span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 영역.Count
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> 영역(i).Interior.Color <span style="color:#f92672">&lt;&gt;</span> 16777215 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        합계 <span style="color:#f92672">=</span> 합계 <span style="color:#f92672">+</span> 영역(i).Value
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ActiveCell.Value <span style="color:#f92672">=</span> 합계
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
-<p>급하게 작업을 할때, 파워포인트의 테이블을 엑셀로 붙여서 작업을 하고 또 복사를 하는 과정을 되풀이 하는데, 어느 정도 작업이 마무리 되었을 떄, 한번에 처리를 해주면 좀 수월해진다.</p>
-<br>
-<br>
-<hr>
-<br>
-<br>
-<h2 id="파일-연동링크-방법-개선">파일 연동(링크) 방법 개선</h2>
-<p>import로 파일 임베딩 연동(링크) 방법을 사용하면, 위에 언급했듯 디자인하기가 꽤나 까다로워지므로, ppt원본과 엑셀파일을 연동해두고, 같은 폴더 안에 관리하면서, 필요할때만 업데이트 하는 방식을 생각해 볼 수 있다. (업데이트를 하지 않으면, 텍스트 값은 그대로 유지)</p>
-<p>ppt의 특정 테이블에 대해서 연동/업데이트를 위한 두 개의 버튼이 필요하다.</p>
-<p class="text-box">첫번째는 파일간 링크를 만들어주고 엑셀의 특정 영역과 ppt의 테이블을 연결해주는 작업이다. (엑셀파일을 끈 상태로 클릭)<br>
-두번째는 엑셀 파일의 내용이 변경이 되었을 때, 데이터를 업데이트 하는 작업이다. (엑셀파일을 켠 상태로 클릭)</p>
-<br>
-<br>
-<p>장기적인 관점에서 데이터만 따로 연산을 해야하는 경우,<br>
-사용할 수 있다. 데이터만 가져가기 때문에, 표 서식은 그대로 유지된다.</p>
-<p>나름 꽤 사용성이 높다고 할 수 있지만, 행이나 열을 계속 추가하거나, 삭제 해야하는 경우는 비추천이다.</p>
-<p><code>sample.bas</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LinkExcelRange_AndSaveMapping</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> tbl <span style="color:#f92672">As</span> Table
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;1) 표 선택 확인
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">&lt;&gt;</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;PPT에서 표를 선택한 뒤 실행하세요.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> shp <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(1)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> <span style="color:#66d9ef">Not</span> shp.HasTable <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;선택한 개체가 표가 아닙니다.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> tbl <span style="color:#f92672">=</span> shp.Table
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;2) Excel 파일 선택
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> fd <span style="color:#f92672">As</span> FileDialog, xlPath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> fd <span style="color:#f92672">=</span> Application.FileDialog(msoFileDialogFilePicker)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> fd
-</span></span><span style="display:flex;"><span>        .Title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;연결할 Excel 파일 선택&#34;</span>
-</span></span><span style="display:flex;"><span>        .Filters.Clear
-</span></span><span style="display:flex;"><span>        .Filters.Add <span style="color:#e6db74">&#34;Excel Files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx;*.xlsm;*.xls&#34;</span>, 1
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> .Show <span style="color:#f92672">&lt;&gt;</span> <span style="color:#f92672">-</span>1 <span style="color:#66d9ef">Then</span> <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">xlPath</span> <span style="color:#f92672">=</span> .SelectedItems(1)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;3) Excel 열기
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> xlApp <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>, xlWb <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>, xlRng <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlApp <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;Excel.Application&#34;</span>)
-</span></span><span style="display:flex;"><span>    xlApp.Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlWb <span style="color:#f92672">=</span> xlApp.Workbooks.Open(xlPath)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;4) 범위 선택
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlRng <span style="color:#f92672">=</span> xlApp.InputBox( _
-</span></span><span style="display:flex;"><span>        Prompt:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;연결할 Excel 범위를 선택하세요.&#34;</span>, _
-</span></span><span style="display:flex;"><span>        Title:<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;범위 선택&#34;</span>, _
-</span></span><span style="display:flex;"><span>        Type:<span style="color:#f92672">=</span>8)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> xlRng <span style="color:#f92672">Is</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#66d9ef">Then</span> <span style="color:#66d9ef">GoTo</span> CLEANUP
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;5) 표 크기 조정
-</span></span></span><span style="display:flex;"><span>    ResizePPTTable tbl, xlRng.Rows.Count, xlRng.Columns.Count
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;6) 값 입력
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> xlRng.Rows.Count
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> xlRng.Columns.Count
-</span></span><span style="display:flex;"><span>            tbl.Cell(r, c).Shape.TextFrame.TextRange.Text <span style="color:#f92672">=</span> _
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">CStr</span>(xlRng.Cells(r, c).Value)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> c
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> r
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;7) ? 연결 정보 저장 (핵심)
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> shp.Tags
-</span></span><span style="display:flex;"><span>        .Add <span style="color:#e6db74">&#34;XL_File&#34;</span>, xlWb.FullName
-</span></span><span style="display:flex;"><span>        .Add <span style="color:#e6db74">&#34;XL_Sheet&#34;</span>, xlRng.Worksheet.Name
-</span></span><span style="display:flex;"><span>        .Add <span style="color:#e6db74">&#34;XL_Range&#34;</span>, xlRng.Address(<span style="color:#66d9ef">False</span>, <span style="color:#66d9ef">False</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;연결 완료: 이후에는 업데이트만 실행하면 됩니다.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CLEANUP:
-</span></span><span style="display:flex;"><span>    xlWb.Close SaveChanges:<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>
-</span></span><span style="display:flex;"><span>    xlApp.Quit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UpdateFromSavedExcelMapping</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> tbl <span style="color:#f92672">As</span> Table
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;1) 표 선택 확인
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">&lt;&gt;</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;업데이트할 표를 선택하세요.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> shp <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(1)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> <span style="color:#66d9ef">Not</span> shp.HasTable <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;선택한 개체가 표가 아닙니다.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> tbl <span style="color:#f92672">=</span> shp.Table
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;2) 저장된 연결 정보 확인
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> shp.Tags(<span style="color:#e6db74">&#34;XL_File&#34;</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;이 표에는 Excel 연결 정보가 없습니다.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> xlPath <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, xlSheet <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, xlAddr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>    xlPath <span style="color:#f92672">=</span> shp.Tags(<span style="color:#e6db74">&#34;XL_File&#34;</span>)
-</span></span><span style="display:flex;"><span>    xlSheet <span style="color:#f92672">=</span> shp.Tags(<span style="color:#e6db74">&#34;XL_Sheet&#34;</span>)
-</span></span><span style="display:flex;"><span>    xlAddr <span style="color:#f92672">=</span> shp.Tags(<span style="color:#e6db74">&#34;XL_Range&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;3) 열려있는 Excel 연결
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> xlApp <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>, xlWb <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>, xlRng <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlApp <span style="color:#f92672">=</span> GetObject(, <span style="color:#e6db74">&#34;Excel.Application&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> 0
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> xlApp <span style="color:#f92672">Is</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Excel이 열려 있지 않습니다.&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlWb <span style="color:#f92672">=</span> xlApp.Workbooks.Open(xlPath, <span style="color:#66d9ef">ReadOnly</span>:<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> xlRng <span style="color:#f92672">=</span> xlWb.Worksheets(xlSheet).Range(xlAddr)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;4) 표 크기 보정
-</span></span></span><span style="display:flex;"><span>    ResizePPTTable tbl, xlRng.Rows.Count, xlRng.Columns.Count
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;5) 값 업데이트
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> r <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, c <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> r <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> xlRng.Rows.Count
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> xlRng.Columns.Count
-</span></span><span style="display:flex;"><span>            tbl.Cell(r, c).Shape.TextFrame.TextRange.Text <span style="color:#f92672">=</span> _
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">CStr</span>(xlRng.Cells(r, c).Value)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> c
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> r
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;업데이트 완료 (기존 연결 범위 유지).&#34;</span>, vbInformation
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">ResizePPTTable</span>(<span style="color:#66d9ef">ByRef</span> tbl <span style="color:#f92672">As</span> Table, _
-</span></span><span style="display:flex;"><span>                           <span style="color:#66d9ef">ByVal</span> targetRows <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, _
-</span></span><span style="display:flex;"><span>                           <span style="color:#66d9ef">ByVal</span> targetCols <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> tbl.Rows.Count <span style="color:#f92672">&lt;</span> targetRows
-</span></span><span style="display:flex;"><span>        tbl.Rows.Add
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Loop</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> tbl.Rows.Count <span style="color:#f92672">&gt;</span> targetRows
-</span></span><span style="display:flex;"><span>        tbl.Rows(tbl.Rows.Count).Delete
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Loop</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> tbl.Columns.Count <span style="color:#f92672">&lt;</span> targetCols
-</span></span><span style="display:flex;"><span>        tbl.Columns.Add
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Loop</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> tbl.Columns.Count <span style="color:#f92672">&gt;</span> targetCols
-</span></span><span style="display:flex;"><span>        tbl.Columns(tbl.Columns.Count).Delete
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Loop</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>두 가지 방법 모두 엑셀의 연산이 필요함을 전제하므로, 그냥 텍스트 테이블이라면 그냥 ppt에서 치는게 훨씬 수월하다는건 구지 설명 안해도 될 것이다.</p>
+<h3 id="case-2-function-프로시저-사용">CASE #2. FUNCTION 프로시저 사용</h3>
+<p>함수의 인수로 영역을 넣어준다.<br>
+나머지 과정은 위와 동일하고, 함수이니, 현재 셀에 반환이 된다.</p>
+<p>그런데.. 색상값을 변경해도, 값이 변하지 않기 때문에, 함수가 재계산되지 않는다.<br>
+그냥 F9를 누르지.. 머..</p>
+<p>작성된 코드는 아래와 같다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;사용자 함수
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">cSum</span>(rng <span style="color:#f92672">As</span> Range) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Double</span>
+</span></span><span style="display:flex;"><span>    Application.Volatile
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> 영역 <span style="color:#f92672">=</span> rng
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 영역.Count
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> 영역(i).Interior.Color <span style="color:#f92672">&lt;&gt;</span> 16777215 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            합계 <span style="color:#f92672">=</span> 합계 <span style="color:#f92672">+</span> 영역(i).Value
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    cSum <span style="color:#f92672">=</span> 합계
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
+</span></span></code></pre></div><Br>
+<Br>
+<p>조건부 서식에서의 색상만 인식했어도 좋았을텐데, 참 아쉽다.</p>
 <p>끝.</p>
 
+          
+        
       
     </div>
 
@@ -481,13 +405,13 @@ import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 �
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/00995/">엑셀 - 함수 - numberstring(숫자 한글로 바꾸기)</a>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
