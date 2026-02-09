@@ -416,8 +416,8 @@ ul li::marker {
 
 .fab {
   position: fixed;
-  right: 24px;
-  bottom: calc(24px + 60px + env(safe-area-inset-bottom));
+  right: 50px;
+  bottom: calc(50px + env(safe-area-inset-bottom));
   z-index: 40;
 }
 
@@ -564,7 +564,7 @@ ul li::marker {
 }
 
 .bottom-spacer {
-  height: calc(120px + env(safe-area-inset-bottom));
+  height: calc(50px + env(safe-area-inset-bottom));
   background: var(--bg);
 }
 
