@@ -564,7 +564,7 @@ ul li::marker {
 }
 
 .bottom-spacer {
-  height: calc(50px + env(safe-area-inset-bottom));
+  height: calc(30px + env(safe-area-inset-bottom));
   background: var(--bg);
 }
 
