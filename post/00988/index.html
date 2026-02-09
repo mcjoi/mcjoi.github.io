@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>excel - 시트 추가하기 | shaaaaallow dive</title>
+    <title>excel - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록) | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,12 +127,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>excel - 시트 추가하기</h1>
+      <h1>excel - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록)</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-17</span>
+          <span>2016-11-25</span>
           
         </div>
         <div class="post-meta-tags">
@@ -140,11 +140,6 @@
             
             
             
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
-              
             
               
               
@@ -174,34 +169,66 @@
       
       
       
-        <h2 id="시트-추가하기">시트 추가하기</h2>
-<p>시트추가하기같은 하찮은걸 원했다기 보다는 시트를 추가했을 때, &lsquo;첫번째 시트&rsquo;가 바뀌게 되는데, 순서와 갯수를 컨트롤하는 것을 알아보고자 했다. 추가하는 건 덤으로 알게됐으니&hellip;;;;</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01980/01.gif" alt="myimg"></p>
+        <h2 id="드롭다운-메뉴-사용하기">드롭다운 메뉴 사용하기</h2>
+<p>엑셀에서도 웹에서처럼 입력되어야 하는 값이 정해져 있을 때나, 불필요한 값의 입력을 막기 위해 드롭다운 메뉴을 많이 활용하게 됩니다. 아래와 같이 과일명을 채울 때 드롭다운 메뉴를 활용한다고 가정해봅시다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/01.jpg" alt="img"></p>
 <br>
 <br>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sheets_add</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> addNUM <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
-</span></span><span style="display:flex;"><span>    Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
-</span></span><span style="display:flex;"><span>      addNUM <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;시트를 몇장 추가하시겠습니까?&#34;</span>, , , , , , , 2)
-</span></span><span style="display:flex;"><span>    Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;시트를 &#34;</span> <span style="color:#f92672">&amp;</span> addNUM <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;장 추가하시겠습니까?&#34;</span>, vbYesNo) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>    Worksheets.Add before:<span style="color:#f92672">=</span>Worksheets(1), Count:<span style="color:#f92672">=</span>addNUM
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>lsSHEETS_COUNT <span style="color:#f92672">=</span> Worksheets.Count
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>MsgBox _
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;마지막워크시트 이름은 &#34;</span> <span style="color:#f92672">&amp;</span> Worksheets(lsSHEETS_COUNT).Name <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; 입니다.&#34;</span> <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;첫번째워크시트 이름은 &#34;</span> <span style="color:#f92672">&amp;</span> Worksheets(1).Name <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; 입니다.&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
+<p>드롭다운 메뉴를 적용할 영을 드래그하여 선택합니다.<br>
+리본메뉴의 데이터 &gt; 데이터 유효성 검사를 선택합니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/02.jpg" alt="img"></p>
 <br>
-<p>여러가지 조건하고 조합해서 상황에 맞춰 쓰면 될 일이다.</p>
+<br>
+<p>데이터 유효성 검사창에서 제한대상을 목록으로 설정합니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/03.jpg" alt="img"></p>
+<br>
+<br>
+<p>입력대상을 선택하는 방법은 두가지가 있습니다.<br>
+원본에 직접 입력하는 방법과 목록을 선택하는 방법이 있습니다.</p>
+<p>아래는 원본을 직업 입력하는 방법입니다.<br>
+종류가 몇가지 안될 때나, 문서에 해당 원본을 넣을 곳이 마땅치 않을 때 씁니다.<br>
+각 항목은 콤마(,)로 구분합니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/04.jpg" alt="img"></p>
+<br>
+<br>
+<p>확인을 누르고 셀을 선택하면 드롭다운 메뉴가 생겼습니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/05.jpg" alt="img"></p>
+<br>
+<br>
+<p>입력했던 과일명이 나타납니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/06.jpg" alt="img"></p>
+<br>
+<br>
+<p>목록 이외의 값을 입력할 경우, 입력값이 잘못되었다는 얼럿 창이 표시됩니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/07.jpg" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/08.jpg" alt="img"></p>
+<br>
+<br>
+<p>다음은 목록을 선택하는 방법입니다.<br>
+목록선택 버튼을 클릭하면,</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/09.jpg" alt="img"></p>
+<br>
+<br>
+<p>목록선택 창이 뜹니다.<br>
+시트에서 원하는 영역을 선택합니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/10.jpg" alt="img"></p>
+<br>
+<br>
+<p>확인을 누르면 됩니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/11.jpg" alt="img"></p>
+<br>
+<br>
+<p>동일하게 목록 값이 뜹니다.<br>
+단, 원본 데이터가 들어있는 셀이 삭제되면, 해당 드롭다운 메뉴에서도사라집니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/12.jpg" alt="img"></p>
+<br>
+<br>
+<p>가끔 공백을 넣어야할 경우에는 영역을 공백까지 잡고, 공백을 입력할 수 있도록 합니다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/13.jpg" alt="img"></p>
+<br>
+<br>
+<p>기타 옵션사항은 직접 만져보시면 쉽게 확인 할 수 있습니다.<br>
+한글판이니까요.</p>
 <p>끝.</p>
 
       

@@ -114,6 +114,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록)</title>
+      <link>https://mcjoi.github.io/post/00988/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00988/</guid>
+      <description>&lt;h2 id=&#34;드롭다운-메뉴-사용하기&#34;&gt;드롭다운 메뉴 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;엑셀에서도 웹에서처럼 입력되어야 하는 값이 정해져 있을 때나, 불필요한 값의 입력을 막기 위해 드롭다운 메뉴을 많이 활용하게 됩니다. 아래와 같이 과일명을 채울 때 드롭다운 메뉴를 활용한다고 가정해봅시다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/01.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;드롭다운 메뉴를 적용할 영을 드래그하여 선택합니다.&lt;br&gt;&#xA;리본메뉴의 데이터 &amp;gt; 데이터 유효성 검사를 선택합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/02.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;데이터 유효성 검사창에서 제한대상을 목록으로 설정합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/03.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;입력대상을 선택하는 방법은 두가지가 있습니다.&lt;br&gt;&#xA;원본에 직접 입력하는 방법과 목록을 선택하는 방법이 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;아래는 원본을 직업 입력하는 방법입니다.&lt;br&gt;&#xA;종류가 몇가지 안될 때나, 문서에 해당 원본을 넣을 곳이 마땅치 않을 때 씁니다.&lt;br&gt;&#xA;각 항목은 콤마(,)로 구분합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - DB형식으로 빈칸(공백) 채우기</title>
       <link>https://mcjoi.github.io/post/01985/</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>

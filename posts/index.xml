@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록)</title>
+      <link>https://mcjoi.github.io/post/00988/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00988/</guid>
+      <description>&lt;h2 id=&#34;드롭다운-메뉴-사용하기&#34;&gt;드롭다운 메뉴 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;엑셀에서도 웹에서처럼 입력되어야 하는 값이 정해져 있을 때나, 불필요한 값의 입력을 막기 위해 드롭다운 메뉴을 많이 활용하게 됩니다. 아래와 같이 과일명을 채울 때 드롭다운 메뉴를 활용한다고 가정해봅시다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/01.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;드롭다운 메뉴를 적용할 영을 드래그하여 선택합니다.&lt;br&gt;&#xA;리본메뉴의 데이터 &amp;gt; 데이터 유효성 검사를 선택합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/02.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;데이터 유효성 검사창에서 제한대상을 목록으로 설정합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/03.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;입력대상을 선택하는 방법은 두가지가 있습니다.&lt;br&gt;&#xA;원본에 직접 입력하는 방법과 목록을 선택하는 방법이 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;아래는 원본을 직업 입력하는 방법입니다.&lt;br&gt;&#xA;종류가 몇가지 안될 때나, 문서에 해당 원본을 넣을 곳이 마땅치 않을 때 씁니다.&lt;br&gt;&#xA;각 항목은 콤마(,)로 구분합니다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>니콘 단렌즈 35mm 1.8g(35.8g) FF 렌즈 테스트샷</title>
       <link>https://mcjoi.github.io/post/05882/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0000</pubDate>
