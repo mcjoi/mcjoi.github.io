@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 병합된 셀 풀고 값 채우기(IF함수 활용)</title>
+      <link>https://mcjoi.github.io/post/00987/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00987/</guid>
+      <description>&lt;h2 id=&#34;병합된-셀-풀고-값-채우기if함수-활용&#34;&gt;병합된 셀 풀고 값 채우기(IF함수 활용)&lt;/h2&gt;&#xA;&lt;p&gt;셀병합은 표를 보기에는 좋으나, 정렬을 할때는 매우 불편함을 안겨준다. 때로는 셀병합을 풀고 싶을 때가 있다.&lt;br&gt;&#xA;아래와 같이 셀병합이 되어 있다고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00987/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;병합된 셀은 그 첫번째 셀에만 값이 있는 것으로 인식을 한다.&lt;br&gt;&#xA;그것을 이용해서 IF 함수로 값을 떼어내보자&lt;/p&gt;&#xA;&lt;p&gt;바로 옆에 열을 하나 만들고, 첫 행에 아래와 같이 입력한다.&lt;br&gt;&#xA;IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째가 아니라면(공백이라면),내 위의 값을 복사한다,내 왼쪽옆 값을 복사한다)&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록)</title>
       <link>https://mcjoi.github.io/post/00988/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
