@@ -416,8 +416,8 @@ ul li::marker {
 
 .fab {
   position: fixed;
-  right: 50px;
-  bottom: calc(50px + env(safe-area-inset-bottom));
+  right: 30px;
+  bottom: calc(30px + env(safe-area-inset-bottom));
   z-index: 40;
 }
 
