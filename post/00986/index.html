@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>windows - Desktop Shortcut | shaaaaallow dive</title>
+    <title>excel - 특정 문자가 포함된 SUMIF함수 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,12 +127,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>windows - Desktop Shortcut</h1>
+      <h1>excel - 특정 문자가 포함된 SUMIF함수</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2016-11-25</span>
           
         </div>
         <div class="post-meta-tags">
@@ -143,12 +143,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -174,145 +169,38 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="what-is-it">What is it?</h2>
-<p>I was tired of digging for folders and files, so I made a shortcut app.<br>
-You can do this with Windows shortcuts or tools like Rainmeter, but they&rsquo;re too broad for my use.<br>
-So I rebuilt it with Flutter desktop.</p>
+        <h2 id="특정-문자가-포함된-sumif함수">특정 문자가 포함된 SUMIF함수</h2>
+<p>SUMIF 함수 사용법을 자세하게 보자.<br>
+아래와 같이 비용과 이익이 비고 부분에 함께 들어가 있다고 치자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/1.jpg" alt="img"></p>
 <br>
 <br>
+<p>SUMIF 함수를 통해 비용이 들어간 항목과 이익이 들어간 항목을 나누어 계산해 보자</p>
+<p>우선 연간 비용은<br>
+<code>=SUMIF(B3:B8,&quot;*&quot;&amp;&quot;비용&quot;,C3:C8)</code><br>
+로 계산할 수 있다.</p>
+<p>비용이 공통텍스트 조건에 비용 앞에는 아무글자나 있어도 상관없음을 &ldquo;*&quot;&amp;로 표기해주자</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/2.jpg" alt="img"></p>
+<br>
+<br>
+<p>마찬가지로 연간 이익은<br>
+<code>=SUMIF(B3:B8,&quot;*&quot;&amp;&quot;이익&quot;,C3:C8)</code><br>
+로 계산할 수 있다.</p>
+<p>방법은 동일하다</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/3.jpg" alt="img"></p>
+<br>
+<br>
+<p>앞뒤로 변경되는 텍스트가 있다면,<br>
+아래처럼 처리하자.<br>
+여기에선 월비를 넣으니 연간비용과 답이 동일해졌다.<br>
+<code>=SUMIF(B3:B8,&quot;*&quot;&amp;&quot;월비&quot;&amp;&quot;*&quot;,C3:C8)</code><br>
+&ldquo;<em>&rdquo;&amp;&ldquo;월비&rdquo;&amp;&rdquo;</em>&quot;</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/4.jpg" alt="img"></p>
+<br>
+<br>
+<p>SUMIF 함수는 컴활1급에서도 자주 나오고, 실무에서도 쓸모가 많다.</p>
+<p>끝.</p>
 
-          
-        
-          
-            
-            <h2 id="structure">Structure</h2>
-<p>Goal: a floating panel with program launches, site shortcuts, and folder shortcuts.<br>
-Windows shortcuts are enough, but mine kept disappearing when I cleaned the desktop.<br>
-So I made this.</p>
-<p class="text-box">✶ No input UI. Edit the accompanying <code>json</code> file instead.<br>
-✶ Fixed width. Height grows with the number of bookmarks.<br>
-✶ Use icons, but show a hover tooltip so I remember what each one is.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="package">Package</h2>
-<p>Flutter Windows has matured enough to build an exe without much trouble.<br>
-Packages I used:</p>
-<br>
-<br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="window-manager">window manager</h2>
-<p>I picked the first package on pub.dev for controlling the window.<br>
-Not sure if it&rsquo;s the best, but it does what I need.</p>
-<p><code>init</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span> <span style="color:#75715e">// Initialize the window manager
-</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> windowManager.ensureInitialized();
-</span></span></code></pre></div><p><code>window manager</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> windowWidth <span style="color:#f92672">=</span> <span style="color:#ae81ff">240</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> windowHeight <span style="color:#f92672">=</span> <span style="color:#ae81ff">340</span> <span style="color:#f92672">+</span> addsize();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> posX <span style="color:#f92672">=</span> <span style="color:#ae81ff">1920</span> <span style="color:#f92672">-</span> windowWidth <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span>; 
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> posY <span style="color:#f92672">=</span> <span style="color:#ae81ff">1080</span> <span style="color:#f92672">-</span> windowHeight <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>; 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  WindowOptions windowOptions <span style="color:#f92672">=</span> WindowOptions(
-</span></span><span style="display:flex;"><span>    size: Size(windowWidth, windowHeight),
-</span></span><span style="display:flex;"><span>    alwaysOnTop: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>    minimumSize: Size(windowWidth, windowHeight),
-</span></span><span style="display:flex;"><span>    maximumSize: Size(windowWidth, windowHeight),
-</span></span><span style="display:flex;"><span>  );
-</span></span></code></pre></div><p><code>window manager</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>  windowManager.waitUntilReadyToShow(windowOptions, () <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>    windowManager.setPosition(Offset(posX, posY));
-</span></span><span style="display:flex;"><span>    windowManager.setHasShadow(<span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>    windowManager.setMaximizable(<span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>    windowManager.setMinimizable(<span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// windowManager.setClosable(false);
-</span></span></span><span style="display:flex;"><span>    windowManager.setPreventClose(<span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>    windowManager.addListener(MyWindowListener());
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> windowManager.show();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> windowManager.focus();
-</span></span><span style="display:flex;"><span>  });
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="flutter_acrylic">flutter_acrylic</h2>
-<p>I wanted some visual style, so I used acrylic.<br>
-But the window border kept misaligning by ~5px, not sure if it&rsquo;s Windows 10 or me.<br>
-So I ended up using transparent only.<br>
-It looked fine on Windows 10, but Windows 11 doesn&rsquo;t seem to like it.</p>
-<p><code>effect</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> Window.initialize();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> Window.setEffect(
-</span></span><span style="display:flex;"><span>    effect: WindowEffect.acrylic,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// color: fc.Colors.black.withAlpha(200),
-</span></span></span><span style="display:flex;"><span>    dark: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>  );
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="system_tray">system_tray</h2>
-<p>Because the window is always on top, it can get in the way.<br>
-I used system_tray to minimize it into the tray when needed.<br>
-The sample code works out of the box.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="result">Result</h2>
-<p>Using a json file for bookmarks was convenient at first.<br>
-But once the list grows and changes often, it gets annoying.<br>
-I&rsquo;ll need a settings page eventually.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03997/03997_desktop_bookmark.gif" alt="img"></p>
-<br>
-<br>
-<p>end.</p>
-
-          
-        
       
     </div>
 
@@ -346,53 +234,53 @@ I&rsquo;ll need a settings page eventually.</p>
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
