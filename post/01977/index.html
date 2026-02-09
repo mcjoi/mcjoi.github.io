@@ -203,41 +203,37 @@
 <br>
 <h2 id="filesystemobject-객체-메소드">FileSystemObject 객체 메소드</h2>
 <p>다른 블로그에서 퍼왔는데 어디였는지 까먹었다. 출처를 넣고 싶었지만, 어쩔 수 없다</p>
-<p><strong>드라이브 관련</strong></p>
-<ul class="text-box">
-<li><code>DriveExists</code> : 지정한 드라이브 존재 여부 True, False 반환</li>
-<li><code>GetDrive</code> : 지정한 경로에 있는 드라이브 해당하는 Drive 객체 반환</li>
-<li><code>GetDirveName</code> : 지정한 경로의 드라이브 이름을 포함하는 문자열 반환</li>
-</ul>
+<p class="text-box"><strong>드라이브 관련</strong><br>
+<code>DriveExists</code> : 지정한 드라이브 존재 여부 True, False 반환<br>
+<code>GetDrive</code> : 지정한 경로에 있는 드라이브 해당하는 Drive 객체 반환<br>
+<code>GetDirveName</code> : 지정한 경로의 드라이브 이름을 포함하는 문자열 반환</p>
 <Br>
-<p><strong>폴더 관련</strong></p>
-<ul class="text-box">
-<li><code>BuildPath</code> : 기존 경로에 이름을 추가한다.</li>
-<li><code>CopyFolder</code> : 폴더를 현재 위치에서 다른 위치로 이동</li>
-<li><code>CreateFolder</code> : 폴더 생성</li>
-<li><code>DeleteFolder</code> : 지정한 폴더와 그 내용 삭제</li>
-<li><code>FolderExists</code> : 지정한 폴더 존재 여부 True, False 반환</li>
-<li><code>GetAbsolutePathName</code> : 절대경로</li>
-<li><code>GetFolder</code> : 지정된 경로에 있는 폴더에 해당하는 Folder객체 반환</li>
-<li><code>GetParentFolderName</code> : 지정한 경로에 있는 마지막 파일이나 폴더의 상위 폴더 포함하는 문자열 반환</li>
-<li><code>GetSpecialFolder</code> : 지정한 특수 폴더 반환(Windows, system, temp 폴더)</li>
-<li><code>GetTempName</code> : 임시파일이나 폴더이름 반환</li>
-<li><code>MoveFolder</code> : 폴더 위치 이동</li>
-</ul>
+<p class="text-box"><strong>폴더 관련</strong><br>
+<code>BuildPath</code> : 기존 경로에 이름을 추가한다.<br>
+<code>CopyFolder</code> : 폴더를 현재 위치에서 다른 위치로 이동<br>
+<code>CreateFolder</code> : 폴더 생성<br>
+<code>DeleteFolder</code> : 지정한 폴더와 그 내용 삭제<br>
+<code>FolderExists</code> : 지정한 폴더 존재 여부 True, False 반환<br>
+<code>GetAbsolutePathName</code> : 절대경로<br>
+<code>GetFolder</code> : 지정된 경로에 있는 폴더에 해당하는 Folder객체 반환<br>
+<code>GetParentFolderName</code> : 지정한 경로에 있는 마지막 파일이나 폴더의 상위 폴더 포함하는 문자열 반환<br>
+<code>GetSpecialFolder</code> : 지정한 특수 폴더 반환(Windows, system, temp 폴더)<br>
+<code>GetTempName</code> : 임시파일이나 폴더이름 반환<br>
+<code>MoveFolder</code> : 폴더 위치 이동</p>
 <br>
-<p><strong>파일 관련</strong></p>
-<ul class="text-box">
-<li><code>CreateTextFile</code> : 지정한 이름으로 파일 생성, TextStream 객체 반환</li>
-<li><code>OpenTextFile</code> : 지정한 파일을 열고, 읽고 쓰고 추가하는데 사용할 수 있는 TextStream 객체 반환</li>
-<li><code>CopyFile</code> : 하나 이상의 파일을 현재 위치에서 다른 위치로 복사</li>
-<li><code>MoveFile</code> : 파일 위치 이동</li>
-<li><code>DeleteFile</code> : 지정한 파일 삭제</li>
-<li><code>FileExists</code> : 지정한 파일 존재 여부 True, False 반환</li>
-<li><code>GetFile</code> : 지정된 경로에 있는 파일에 해당하는 File객체 반환</li>
-<li><code>GetFileName</code> : 지정한 경로에서 드라이브 내역이 아닌 마지막 파일 이름이나 폴더 반환</li>
-<li><code>GetBaseName</code> : 파일명만 반환</li>
-<li><code>GetExtensionName</code> : 확장명 포함하는 문자열 반환</li>
-</ul>
+<p class="text-box"><strong>파일 관련</strong><br>
+<code>CreateTextFile</code> : 지정한 이름으로 파일 생성, TextStream 객체 반환<br>
+<code>OpenTextFile</code> : 지정한 파일을 열고, 읽고 쓰고 추가하는데 사용할 수 있는 TextStream 객체 반환<br>
+<code>CopyFile</code> : 하나 이상의 파일을 현재 위치에서 다른 위치로 복사<br>
+<code>MoveFile</code> : 파일 위치 이동<br>
+<code>DeleteFile</code> : 지정한 파일 삭제<br>
+<code>FileExists</code> : 지정한 파일 존재 여부 True, False 반환<br>
+<code>GetFile</code> : 지정된 경로에 있는 파일에 해당하는 File객체 반환<br>
+<code>GetFileName</code> : 지정한 경로에서 드라이브 내역이 아닌 마지막 파일 이름이나 폴더 반환<br>
+<code>GetBaseName</code> : 파일명만 반환<br>
+<code>GetExtensionName</code> : 확장명 포함하는 문자열 반환</p>
+<br>
+<br>
 <p>마이크로소프트 도움말 사이트에 가면 아주 자세히 나와있다.</p>
 <p>끝.</p>
 
