@@ -22,5 +22,12 @@
       <guid>https://mcjoi.github.io/gallery_category/landscape/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Portrait</title>
+      <link>https://mcjoi.github.io/gallery_category/portrait/</link>
+      <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery_category/portrait/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

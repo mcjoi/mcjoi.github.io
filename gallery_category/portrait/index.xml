@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portrait on shaaaaallow dive</title>
-    <link>http://localhost:1313/gallery_category/portrait/</link>
+    <link>https://mcjoi.github.io/gallery_category/portrait/</link>
     <description>Recent content in Portrait on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <atom:link href="http://localhost:1313/gallery_category/portrait/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/gallery_category/portrait/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>self-made album</title>
+      <link>https://mcjoi.github.io/gallery/portrait/p_001/</link>
+      <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/portrait/p_001/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
