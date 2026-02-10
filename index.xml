@@ -429,6 +429,13 @@
       <description>&lt;h2 id=&#34;엑셀-가상분석---데이터표&#34;&gt;엑셀 가상분석 - 데이터표&lt;/h2&gt;&#xA;&lt;p&gt;엑셀에는 가상분석 기능이 있다. 누가 쓸까, 조만간 없어져도 이상하지 않은 기능들이다.&lt;br&gt;&#xA;그렇게 생각하던 어느날, 심심해서 봤던 컴활1급시험에 데이터 표가 뚜악!!!!!&lt;br&gt;&#xA;매번 나오는 것은 아니라지만, 매크로랑 짬뽕되서 짜증났던 기억이 난다.&lt;br&gt;&#xA;각설하고, 아래 처럼 A와 B라는 임의의 셀 안에 숫자가 있다고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00982/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;A와 B의 관계를 회색 셀에다 넣어준다. 곱하기나 나누기 등등&amp;hellip; 나는 곱하기를 넣어줬다.&lt;br&gt;&#xA;그리고 행과 열로 관계를 알고 싶은 값을 넣어준다&amp;hellip;..이미 넣어놨다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00982/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;데이터&amp;gt;가상분석&amp;gt;데이터 표를 선택한다.&lt;br&gt;&#xA;입력할 내용은 매우 간단하다. 행입력셀에 A값, 열입력셀에 B값을 넣는다. 순서는 바뀌어도 무방하다. (적어도 이번 사례에서는&amp;hellip;)&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 데이터 연결 (편집)</title>
+      <link>https://mcjoi.github.io/post/00980/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00980/</guid>
+      <description>&lt;h2 id=&#34;데이터-연결-편집&#34;&gt;데이터 연결 편집&lt;/h2&gt;&#xA;&lt;p&gt;남들이 보내준 엑셀 파일을 열다 보면 흔히 볼수 있느 경고(에러?) 창 중 하나가 바로&lt;br&gt;&#xA;아래 있는 업데이트 여부를 확인하는 창이 되겠다.&lt;br&gt;&#xA;아무생각없이 나도모르는 사이 매번 업데이트를 누르게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;그럼,,, 빌어먹을 두번째 에러가 뜬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;연결 편집을 눌러보면 아래와 같은 문구가 뜬다.&lt;br&gt;&#xA;연결이 되어있는 파일까지 나한테 줬을리는 없겠지..&lt;br&gt;&#xA;연결끊기를 누르면 깔끔하게 에러가 뜨지 않는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/3.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;알겠지만.&lt;br&gt;&#xA;두개 파일을 연결시키는건 그냥 &amp;lsquo;=&amp;rsquo; 로 해주면 된다.&lt;br&gt;&#xA;아래 파일은 통합문서1의 A4셀을 통합문서2의 A1셀과 연결한 상태이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 데이터 통합</title>
       <link>https://mcjoi.github.io/post/00981/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
