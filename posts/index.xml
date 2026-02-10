@@ -352,6 +352,34 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 텍스트 앞뒤 바꾸기(뒤집기)</title>
+      <link>https://mcjoi.github.io/post/00974/</link>
+      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00974/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/P8EtSti7qU4&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;텍스트-앞뒤-바꾸기뒤집기&#34;&gt;텍스트 앞뒤 바꾸기(뒤집기)&lt;/h2&gt;&#xA;&lt;p&gt;얼마전에 순서대로 있는 셀들을 거꾸로 배치하는 방법을 올린적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;VBA와 함수를 사용하는 방법을 모두 올렸었다.&lt;br&gt;&#xA;이 꼼수 아닌 꼼수는 그 이후로 회사에서 정말 많이 써먹었었다.&lt;br&gt;&#xA;너무 뿌듯한 순간이 아닐 수 없다.&lt;/p&gt;&#xA;&lt;p&gt;물론, 회사에서 아무도 알아주는 사람은 없다.&lt;br&gt;&#xA;내가 발로하든 VBA를 쓰든, 결과가 맞으면 되니깐.&lt;/p&gt;&#xA;&lt;p&gt;각설하고, 위의 내용을 고민하던 중에,&lt;br&gt;&#xA;한 셀에 있는 텍스트를 뒤집는 것도 비슷하지 않을까라는 생각이 들었다.&lt;br&gt;&#xA;예를 들어 아래처럼 &amp;lsquo;가나다라마바사&amp;rsquo;가 있으면 거꾸로 &amp;lsquo;사바마라다나가&amp;rsquo;가 되도록 말이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>excel - 매크로 녹화 - 상대참조 vs 절대참조</title>
+      <link>https://mcjoi.github.io/post/00975/</link>
+      <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00975/</guid>
+      <description>&lt;h2 id=&#34;매크로-녹화---상대참조-vs-절대참조&#34;&gt;매크로 녹화 - 상대참조 vs 절대참조&lt;/h2&gt;&#xA;&lt;p&gt;매크로나 VBA 나 똑같은 말이라고 생각하는게 편할 수 있다.&lt;br&gt;&#xA;매크로 녹화 기능만 사용해도 많은 부분을 해결할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;녹화를 할때, 처음 하는 사람은 상대참조버튼을 보고 고민을 하게 되는데, 엑셀의 다른 많은 버튼 처럼 별거 아니다. (라고 생각하면 편하다.)&lt;/p&gt;&#xA;&lt;p&gt;일단 매크로를 통해서 무엇을 하고 싶은지 결정해보자.&lt;br&gt;&#xA;아래 조건이라고 해보자&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀에 노란색을 칠하고 싶다.&lt;/li&gt;&#xA;&lt;li&gt;노란색을 칠하고 싶은 셀은 주소가 항상 일정하다. (C2라고 가정하자.)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;아래 그림처럼 녹화를 하면 간단하다.&lt;br&gt;&#xA;상대참조 버튼은 누르지 않은 상태이다.&lt;br&gt;&#xA;잘보면, 녹화를 시작하고 나서, 왼쪽으로 두칸 움직인 다음 노란색을 칠했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>excel - 시트이름을 변수로 설정해서 셀 값 불러오기(indirect함수)</title>
+      <link>https://mcjoi.github.io/post/00976/</link>
+      <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00976/</guid>
+      <description>&lt;h2 id=&#34;시트이름을-변수로-설정해서-셀-값-불러오기indirect함수&#34;&gt;시트이름을 변수로 설정해서 셀 값 불러오기(indirect함수)&lt;/h2&gt;&#xA;&lt;p&gt;제목을 쓰고 나니 나도 뭔 얘긴지 모르겠는데,&lt;br&gt;&#xA;하고자 하는건 간단하다.&lt;/p&gt;&#xA;&lt;p&gt;아래 그림처럼 &lt;code&gt;Sheet1&lt;/code&gt; 에서 &lt;code&gt;Sheet2&lt;/code&gt; 의 &lt;code&gt;A1&lt;/code&gt; 셀 값을 불러오고 싶다.&lt;br&gt;&#xA;그대신 &lt;code&gt;Sheet2&lt;/code&gt; 라는 시트명을 셀 주소로 입력해서 다른 시트로 변경하거나 표 형태로 구성하는 방법이다. 길게 쓰니 더 헤깔린다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같이 시트명이 적혀있고, 그 시트의 &lt;code&gt;A1&lt;/code&gt; 셀 값을 우측에 적고 싶다고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00976/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;code&gt;Sheet2&lt;/code&gt;의 &lt;code&gt;A1&lt;/code&gt; 셀에는 아래와 같이 값이 적혀있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00976/3.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;code&gt;Sheet3&lt;/code&gt; 의 &lt;code&gt;A1&lt;/code&gt; 셀에는 아래와 같이 값이 적혀있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>excel - TEXT(텍스트) 함수 - 텍스트 중간 숫자에 천단위 구분 컴마 넣기</title>
+      <link>https://mcjoi.github.io/post/00978/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00978/</guid>
+      <description>&lt;h2 id=&#34;텍스트-중간-숫자에-천단위-구분-컴마-넣기&#34;&gt;텍스트 중간 숫자에 천단위 구분 컴마 넣기&lt;/h2&gt;&#xA;&lt;p&gt;나는 엑셀을 표 그리기 쉬운 워드프로세서로 많이 사용하고 있다.&lt;br&gt;&#xA;워드에서 가장 짜증나는 부분은 숫자를 칠때 오타가 발생하는 점이라고 할 수 있는데,&lt;br&gt;&#xA;적어도 엑셀에서 수식오류는 있어도 계산 오류는 없을 것이기 때문이다.&lt;/p&gt;&#xA;&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/-dUDUGryHuI&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;아래처럼 텍스트 중간에 숫자를 넣는다고 해보자,&lt;br&gt;&#xA;&lt;code&gt;&amp;amp;&lt;/code&gt; 로 연결할 경우, 아래처럼 숫자에 서식이 들어가질 않는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00978/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;&lt;code&gt;text&lt;/code&gt; 함수를 통해 표시형식을 간이로 지정해 줄 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 가상분석 - 데이터 표</title>
       <link>https://mcjoi.github.io/post/00982/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
@@ -371,6 +399,13 @@
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00981/</guid>
       <description>&lt;h2 id=&#34;엑셀-데이터-통합&#34;&gt;엑셀 데이터 통합&lt;/h2&gt;&#xA;&lt;p&gt;데이터 통합 역시, 어디에 쓸 수 있을까.&lt;br&gt;&#xA;단순히 말하면 두개의 표를 특정 조건으로 합치는 기능이다. 아래와 같이 두개의 표가 있다고 치자.&lt;br&gt;&#xA;통합버튼을 가볍게 누르자&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;쓸 수 있는 함수는 다양하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;주의할 점은 표를 고르고, 추가를 눌러 참조영역을 추가하는 것이다. 이 말은 2개 이상의 참조영역(표)를 활용하는것도 가능하다는 뜻이 되겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/3.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;함수는 곱을 골랐고, 레이블은 없는 표이기 때문에 별도 체킹은 하지 않았다. 레이블이 있는 경우는 체크를 해줘야 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>excel - 시트이름으로 하이퍼링크 만들기(시트이름 찾아 넘어가기)</title>
+      <link>https://mcjoi.github.io/post/00977/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00977/</guid>
+      <description>&lt;h2 id=&#34;시트이름-찾아-넘어가기&#34;&gt;시트이름 찾아 넘어가기&lt;/h2&gt;&#xA;&lt;p&gt;월별 또는 일별로 시트이름을 만들어서 관리를 하고 있다고 치자. 시트가 많아지면 나중에 그 시트를 찾기가 몹시 짜증난다.&lt;/p&gt;&#xA;&lt;p&gt;그래서 첫 시트에 아래와 같이 시트 이름으로 바로 갈 수 있는 하이퍼링크 목차 페이지를 만들어 놓으면 편하다.&lt;/p&gt;&#xA;&lt;p&gt;다른 시트로 하이퍼링크를 거는 방법은 아래와 같다. Sheet2 의 A1 셀로 이동하는 방법은 아래와 같다.간단하지만, 모르면 절대 모른다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;HYPERLINK(&amp;quot;#시트이름!셀주소&amp;quot;, &amp;ldquo;버튼이름)&lt;br&gt;&#xA;=HYPERLINK(&amp;quot;#Sheet2!A1&amp;rdquo;, &amp;ldquo;Sheet2의 A1셀로 이동하는 하이퍼링크&amp;rdquo;)&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00977/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;응용해서 시트이름이 쭈욱 나와있고, 하이퍼링크 버튼을 옆에 쭈욱 기재한다고 치자.&lt;br&gt;&#xA;시트이름을 셀주소로 넣고 &amp;amp; 로 연결해주면 끝이다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>excel - 피벗테이블 ; 날짜그룹, 계산필드</title>
