@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>everland | shaaaaallow dive</title>
+    <title>excel - 조건부서식 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,15 +127,25 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>everland</h1>
+      <h1>excel - 조건부서식</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-01-25</span>
+          <span>2016-11-17</span>
           
         </div>
         <div class="post-meta-tags">
+          
+            
+            
+            
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+              
+            
           
         </div>
       </div>
@@ -160,6 +170,297 @@
       
       
         
+        
+        
+          
+            
+          
+        
+          
+            
+            <h2 id="엑셀-조건부-서식">엑셀 조건부 서식</h2>
+<p>직장생활을 시작하고 꽤 오랜시간 엑셀을 썼지만, 엑셀은 자기가 쓰는 기능만 쓴다.<br>
+난, 엑셀을 네이버를 통해 배웠기 때문에, 조건부 서식같은 괴로운 기능은 쓰지 않는다. 하지만,, 대충 보면 뭔지는 알겠다. 만약, 컴활 1급을 준비한다면, 발로 할 수 있을 정도로 익히는 것이 좋을 것이다.</p>
+<p>남자이면서, 70킬로그램 이상의 사람들이 있는 열에 노란색 하일라이트를 치고 싶다면&hellip;<br>
+(이런 복잡한 일을 할 일이 있을까,,,) 조건부 서식을 써보는 것도 나쁘지 않다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/01.jpg" alt="img"></p>
+<br>
+<Br>
+<p>내가 색을 칠하고 싶은 영역을 선택하고 나서,<br>
+조건부 서식에서 새규칙을 누른다. 칠하고 싶은 영역을 버튼 누르기 전에 선택하는걸 잊지말자.<br>
+조건부 서식은 데이터 탭이 아니라, 홈탭에 있다.<br>
+(그만큼 많이 쓴다는 의미일수 있겠다&hellip;..)</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/02.jpg" alt="img"></p>
+<br>
+<br>
+<p>수식입력칸에서 수식을 넣는데&hellip;.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/03.jpg" alt="img"></p>
+<br>
+<br>
+<p>유의해야할 점은 머릿글 행을 제외하고 찾고 싶은 조건의 맨 위의 셀에서 열 고정 참조를 해야한다는 점이다.</p>
+<p class="text-box">=and($D5=&ldquo;남자&rdquo;,$F5&gt;=70)</p>
+<br>
+<br>
+<p>이거 아무도 안가르쳐 주면 절대 모를꺼이다.나도 엄청 헤맸었다.<br>
+그리고 서식 버튼을 클릭해서 서식을 정해준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/04.jpg" alt="img"></p>
+<br>
+<br>
+<p>색이 칠해졌다.<br>
+간단한 기능에 비해 유의해야할 점이 너무 많다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/05.jpg" alt="img"></p>
+<p>쓰고 싶은 사람만 쓰자!</p>
+<br>
+<br>
+
+          
+        
+          
+            
+              <div class="ad-slot">
+                
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+              </div>
+            
+            <h2 id="sumif-조건-및-스피닝-버튼스핀-단추-조건부-서식-응용">sumif 조건 및 스피닝 버튼(스핀 단추), 조건부 서식 응용</h2>
+<p>어느날, 구글링을 하다가, 아래와 같이 엑셀에서 스피닝 버튼을 사용한 설명을 본적이 있다.<br>
+설명이 된자료를 가져다가 링크만 남길려고 했는데, 어디서 봤던건지 기억이 나질 않는다.</p>
+<p>최대한 기억을 더듬어서 비슷하게 만들어 봤다.</p>
+<p>내용을 간단하게 설명하자면,,,<br>
+왼쪽에는 날짜별 매출금액이 적혀있다.</p>
+<p>오른쪽에는 날짜가 있고, 해당하는 날짜로 부터 과거의 날짜를 합산하는 합계 셀이 있다.<br>
+스피닝 버튼을 클릭하면 날짜가 변경이 되고, 합산이 되는 셀의 값은 붉은색으로 조건부 서식을 줬다.</p>
+<p>말로 설명하면 힘드니, 그림으로 보시면 간단하겠다.<br>
+누가 만들었는지 모르겠지만, 참&hellip; 창의적이었다고 생각이 들었다.<br>
+나한테 이런거 시켰으면 VBA로 끄적거리고 있었겠지. ㅋㅋㅋ</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/08.jpg" alt="img"></p>
+<br>
+<br>
+<p>하나씩 차근차근 만들어보자.<br>
+기본정보 표를 그린다. 매우 귀찮다. 꾸욱 참고 그린다.<br>
+옆에 기준이 되는 날짜와 합계를 넣을 표를 만든다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/09.jpg" alt="img"></p>
+<br>
+<br>
+<p>스피닝 버튼에 연결할 변수를 준다. G3 셀에 1을 입력한다.<br>
+스피닝 버튼을 하나 올려줄 때마다 1부터 시작해서 1씩 숫자가 올라갈 것이고, 최대 14까지 올라가도록 설정할 것이다. 14는 기본 데이터의 총 날짜의 수이다.</p>
+<p>기준 날짜는 첫번째 시작 날짜(B3)에서 변수(G3) 1을 더한값이 다시 1을 빼줬다.<br>
+그러면 변수는 0이 될 것이고, 결국에는 첫번째 시작 날짜에서 스피닝 버튼을 누를때마다 하루씩 늘어나는 기능이 설정 될 것이다. 물론 전제는 날짜데이터들이 하루씩 늘어난다는 것이다.</p>
+<ul>
+<li>오늘 날짜를 활용하고 싶다면, TODAY() 함수를 사용하는 것도 좋다</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/10.jpg" alt="img"></p>
+<br>
+<br>
+<p>F3에 수식을 입력하고 나면, 첫째날인 2016-11-25가 입력된다. 당연한&hellip;.건가..</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/11.jpg" alt="img"></p>
+<br>
+<br>
+<p>이제는 스피닝 버튼을 붙일 것이다. 버튼은 개발도구 &gt; 삽입에 보면 있다.<br>
+양식 컨트롤과 ACTIVE X 컨트롤이 있는데, 양식 컨트롤 쪽에 있는 걸 사용하자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/12.jpg" alt="img"></p>
+<br>
+<br>
+<p>일단 버튼을 위치를 잡고 그려준다.<br>
+아는 사람들은 알겠지만, ALT 키를 누르고 도형을 그리면 셀에 딱 맞게 마그네틱 기능이 생긴다.<br>
+버튼도 동일하게 된다. 이쁘게 그렸으면, 우클릭으로 컨트롤 서식을 선택한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/13.jpg" alt="img"></p>
+<br>
+<br>
+<p>컨트롤 개체서식 창이 뜬다.<br>
+현재값 1, 최소값 1, 최대값 14, 증분 1, 셀연결은 변수가 들어있는 G3 셀을 선택한다.<br>
+왜 그렇게 설정을 하느냐고 묻고 싶다면 &hellip;.. 음&hellip;</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/14.jpg" alt="img"></p>
+<br>
+<br>
+<p>스피닝 버튼을 눌러 변수와 날짜가 제대로 연동이 되고 있는지 확인해본다.<br>
+잘되고 있다면, 변수 텍스트를 흰색으로 바꾸자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/15.jpg" alt="img"></p>
+<br>
+<br>
+<p>이제 기준 날짜를 포함한 이전 날짜들의 매출금액 합계를 합계 셀에 기입한다.<br>
+가장 만만한 SUMIF 함수를 사용하자. 다른 배열 함수를 써도 되고, 뭘 써도 상관없다.<br>
+썸이프 (찾을 값이 있는 영역을 선택한다. , 조건을 입력한다 , 더할 값이 있는 영역을 선택한다.)<br>
+수식으로 입력하면 아래와 같이 되겠다.</p>
+<p>여기서 제일 중요한건<br>
+SUMIF 조건에 부등호는 텍스트로 인정되므로 따옴표를 붙여주는 걸 잊지말고, (&quot;&lt;=&quot;) &amp;로 연결하는 거 잊지말자!</p>
+<p class="text-box">=SUMIF(B4:B17,&quot;&lt;=&quot;&amp;F3,C4:C17)</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/16.jpg" alt="img"></p>
+<br>
+<br>
+<p>스피닝 버튼을 올려보면서 합계금액이 맞게 들어가나 확인해본다.<br>
+맞게 들어간다면 다음 페이지로~~</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/17.jpg" alt="img"></p>
+<br>
+<br>
+<p>마지막으로 합계가 이루어지는 셀을 조건부 서식을 통해 색을 칠할 예정이다.<br>
+색을 적용할 셀을 선택하고, 조건부 서식을 선택한다.<br>
+의외로 레이블까지 선택하려 하는 사람이 있다. 그러지 말자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/18.jpg" alt="img"></p>
+<br>
+<br>
+<p>수식을 사용한다고 하고, (딴거 써도 무방)<br>
+날짜값이 기준날짜값보다 작거나 같으면 빨강색 칠해지게 설정하자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/19.jpg" alt="img"></p>
+<br>
+<br>
+<p>엔터 눌러주면 조건부 서식이 적용된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/20.gif" alt="img"></p>
+<br>
+<br>
+
+          
+        
+          
+            
+            <h2 id="색-다른-조건부-서식">색 다른 조건부 서식</h2>
+<p>때때로,,, 사실 아주 가끔 아래처럼 색칠된 엑셀 파일을 본적이 있다.<br>
+사실, 불필요한 짓이라 느낄 때가 많지만, 막상 해야될 때는 막막할 때가 있다.<br>
+조건부 서식으로 해야한다는 사실을 모를 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/21.jpg" alt="img"></p>
+<Br>
+<br>
+<p>조건부 서식에는 다양한 형태의 숫자 조건이 기본적으로 제공된다.<br>
+물론, 숫자나 텍스트 조건은 수식으로 하는것이 편할수도 있겠다.</p>
+<p>셀 강조 규칙 메뉴이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/22.png" alt="img"></p>
+<Br>
+<br>
+<p>상위/하위 규칙 메뉴이다.<br>
+자주 쓰는 항목이 있다면 편하게 쓸 수 있겠다.<br>
+(나의 경우에는 단 한번도 쓴 적이 없는 것 같다.)<br>
+학교 선생님이라면 많이 쓰려나?</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/23.jpg" alt="img"></p>
+<Br>
+<br>
+<p>예쁜 색칠하기의 첫번째는 색조이다.</p>
+<p>룰은 간단하다. 최소값부터 시작해서, 최대값까지 선택된 색상으로 표현해 준다.<br>
+어떤 흐름이 있는 데이터라면 더욱 보기 좋을 것이다.<br>
+중간에 툭 튀는 숫자가 있으면, 그라데이션이 아름다운 형태를 유지할 수 가 없다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/24.png" alt="img"></p>
+<Br>
+<br>
+<p>조건부 서식 내에서 애매한 위치에 들어있어, 힘들여 찾지 않는다면 확인하기도 쉽지 않다.<br>
+색상은 나중에 조정할 수 있으니, 아무거나 고르자.</p>
+<ul>
+<li>조건부 서식은 기본적으로 해당 서식이 포함될 위치를 선택하고 메뉴를 고르는 것이 좋다. 아니면 나중에 귀찮아 진다.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/25.png" alt="img"></p>
+<Br>
+<br>
+<p>규칙 편집창 또한 색조는 매우 간단하다.<br>
+색을 골라주면 된다.</p>
+<ul>
+<li>2가지 색조를 골랐다면 양 끝쪽의 두가지 색만 고르면 되고,</li>
+<li>3가지 색조를 골랐다면, 중간값에 대한 색을 추가로 선택해 주어야 한다.</li>
+</ul>
+<p>한번씩 해보면 다 안다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/26.png" alt="img"></p>
+<Br>
+<br>
+<p>다음은 데이터 막대이다.</p>
+<p>셀 안에 들어가도록 만든 그래프라고 보면 쉽게 알 수 있을 것이다.<br>
+옆 셀에 변수명도 넣을 수 있어 무척이나 보기 깔끔하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/27.png" alt="img"></p>
+<Br>
+<br>
+<p>색도 다양하게 변경 할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/28.png" alt="img"></p>
+<Br>
+<br>
+<p>막대만 표시 옵션에 체크를 해줘야 셀값이 표시되지 않는다.<br>
+아무리 해봐도 셀값이 나왔을때 모양이 이쁘게 되지는 않는다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/29.png" alt="img"></p>
+<Br>
+<br>
+<p>마지막으로 아이콘 집합이다.</p>
+<p>특정 수치를 나타내는 부호로 변경하고 싶을때 딱 맞는 기능이라 하겠다.<br>
+과연, 회사에서 이 기능을 쓸 사람이 있을지는 의문이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/30.png" alt="img"></p>
+<Br>
+<br>
+<p>사용법은 간단하지만 매우 창의력과 상상력이 필요한 메뉴인것 같다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/31.png" alt="img"></p>
+<Br>
+<br>
+<p>아이콘 스타일이 다양하게 주어져 있어서, 재미있는 모습을 만들어낼 수도 있다.<br>
+엑셀을 하면서 재미&hellip; 있을 일을 기대했다만 말이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/32.png" alt="img"></p>
+<Br>
+<br>
+<p>부수적인 기능이기는 하지만, 모르면 못쓴다.<br>
+특히 좁은 공간에 챠트를 억지로 끼워넣기 보다 간지나게 데이터 막대를 써보는 것도 좋을 것 같다.</p>
+<Br>
+<br>
+
+          
+        
+          
+            
+            <h2 id="영역에서-n번째-행마다-색-넣기">영역에서 N번째 행마다 색 넣기</h2>
+<h3 id="테이블table--영역range">테이블(TABLE) &amp; 영역(RANGE)</h3>
+<p>1줄 또는 N개의 줄마다 서식을 걸어서, 데이터를 읽기 편하게 하는 서식은 테이블에서는 기본으로 제공되지만, 영역에서는 따로 조건부 서식을 지정해줘야한다.<br>
+!!! 아니, 내가 모르고 있는 뭔가가 있을 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/33.png" alt="img"></p>
+<br>
+<br>
+<h3 id="원하는-서식">원하는 서식</h3>
+<p>아래 그림은 각 일자별로, 5개의 값이 있는 영역이다. 가독성을 높이기 위해서, 회색라인을 쳤다가, 안쳤다를 조건부 서식을 통해 생성하고 싶다.<br>
+물론 조건부 서식을 활용하지 않더라도 노가다로 색을 칠해줄 수 있지만, 데이터가 변경될 경우 자동으로 들어가지 않는 단점이 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/34.png" alt="img"></p>
+<br>
+<br>
+<h3 id="step-1">STEP #1</h3>
+<p>영역이든 테이블이든 첫번째 행은 HEADER이고, 기본적으로 2번행부터 값이 들어올 것이다. 따라서, 데이터 행의 ROW()값은 {2,3,4,&hellip;. } 순서가 될 것이니, 헤깔리지 않게, {1,2,3,..} 순서로 바꿔주고 싶다.</p>
+<p class="text-box">① 일단, ROW()-2 수식으로 일단 값을 {0,1,2,3,&hellip;} 으로 만들어 준다.<br>
+② 이 값을 반복하고 싶은 행의 개수(여기서는 5개 행마다, 변경이 되므로, 5가 된다.)로 나누어 준다음, 나머지를 구해서 1을 더해 주면 5개의 행마다 1~5를 반복하게 된다. {1,2,3,4,5,1,2,3,4,5,1,2,&hellip;}</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/35.png" alt="img"></p>
+<br>
+<br>
+<h3 id="step-2">STEP #2</h3>
+<p>STEP #1에서 계산한 결과인 C열을 기준으로, D열의 행값의 직전 값까지의 C열에 기재된 행의 값의 개수를 세어 준다. 텍스트로 쓰다보니 뭔말인지 헤깔리는데, 예를 들어, D2의 경우, C2값이 1이므로, C2직전행까지 1값이 몇개인지를 찾아주면 된다. 여기서는 0이다.<br>
+마찬가지로, D7에서는 C2행에 1이 한개 있으므로, 결과는 1이 된다. 참조수식에 주의해줘야한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/36.png" alt="img"></p>
+<br>
+<br>
+<h3 id="step-3">STEP #3</h3>
+<p>D열의 수식 결과를 활용하여, 이를 2로 나누어 주면, 결과가 홀수이냐, 짝수이냐에 따라서, TRUE 또는 FALSE 값을 나타내게 할 수 있다.<br>
+IF 함수를 통해 TRUE일때는 1, FALSE일때는 0이 들어가는 수식으로 만들어주면 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/37.png" alt="img"></p>
+<br>
+<br>
+<h3 id="step-4">STEP #4</h3>
+<p>만들어진, 1 또는 0의 값에 대하여, 1일때 조건부 수식을 걸어주면 된다. 물론 이 전단계에서 {1,2,3,4,5} 중 그 어떤 값이라도 선택하여 조건부 수식을 줄 수도 있다. 내가 원하는 서식은 5개마다 반복되는 형태이므로, 필요할 떄 사용하면 된다.<br>
+!!! 아래 조건부 서식 그림에서 F열은 각자에 맞게 STEP #5에서의 최종 수식열(LINE)을 지정해줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/38.png" alt="img"></p>
+<br>
+<br>
+<h3 id="step-5">STEP #5</h3>
+<p>STEP #2~#3은 중간수식의 이해를 돕기 위함이고, 한개의 셀안에 두개 수식을 같이 넣어 주면 된다. 물론 불필요한 열이 2개나 생기지만, 한개의 열안에 모든 수식을 때려 넣으면 나중에 내가 기억하기 어려워질 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/39.png" alt="img"></p>
+<br>
+<br>
+<p>DIVIDER 열 안에 있는 나누는 수의 값을 조정하면, 반복할 행의 개수를 조절할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00985/40.png" alt="img"></p>
+<br>
+<br>
+<p>영역(RANGE)으로 뭔가를 컨트롤하는 것은 불완전하기 때문에, 만든사람이나, 사용할 사람이나 해당 내용을 서로 알고 있는 것이 좋다. 그말은 같이 쓰는 문서에서는 테이블로 만들어서 자유도를 낮추면 관리는 오히려 편해질 수 있다는 것이다.</p>
+<p>모든건 만들기 나름이 아니라 쓰기 나름이다.</p>
+<p>끝.</p>
+
+          
+        
       
     </div>
 
@@ -178,6 +479,73 @@
     </div>
 
     
+    
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-22</span>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
+              </div>
+            
+          </div>
+        </section>
+      
     
 
   </article>
