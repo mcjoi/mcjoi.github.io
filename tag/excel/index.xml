@@ -114,6 +114,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 가상분석 - 데이터 표</title>
+      <link>https://mcjoi.github.io/post/00982/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00982/</guid>
+      <description>&lt;h2 id=&#34;엑셀-가상분석---데이터표&#34;&gt;엑셀 가상분석 - 데이터표&lt;/h2&gt;&#xA;&lt;p&gt;엑셀에는 가상분석 기능이 있다. 누가 쓸까, 조만간 없어져도 이상하지 않은 기능들이다.&lt;br&gt;&#xA;그렇게 생각하던 어느날, 심심해서 봤던 컴활1급시험에 데이터 표가 뚜악!!!!!&lt;br&gt;&#xA;매번 나오는 것은 아니라지만, 매크로랑 짬뽕되서 짜증났던 기억이 난다.&lt;br&gt;&#xA;각설하고, 아래 처럼 A와 B라는 임의의 셀 안에 숫자가 있다고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00982/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;A와 B의 관계를 회색 셀에다 넣어준다. 곱하기나 나누기 등등&amp;hellip; 나는 곱하기를 넣어줬다.&lt;br&gt;&#xA;그리고 행과 열로 관계를 알고 싶은 값을 넣어준다&amp;hellip;..이미 넣어놨다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00982/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;데이터&amp;gt;가상분석&amp;gt;데이터 표를 선택한다.&lt;br&gt;&#xA;입력할 내용은 매우 간단하다. 행입력셀에 A값, 열입력셀에 B값을 넣는다. 순서는 바뀌어도 무방하다. (적어도 이번 사례에서는&amp;hellip;)&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 자동필터(숫자필터로 상위 30% 찾기)</title>
       <link>https://mcjoi.github.io/post/00984/</link>
       <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
