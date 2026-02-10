@@ -135,6 +135,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 자동필터(숫자필터로 상위 30% 찾기)</title>
+      <link>https://mcjoi.github.io/post/00984/</link>
+      <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00984/</guid>
+      <description>&lt;h2 id=&#34;숫자필터로-상위-30-찾기&#34;&gt;숫자필터로 상위 30% 찾기&lt;/h2&gt;&#xA;&lt;p&gt;자동필터는 엑셀에 있어 빼놓을 수 없는 기능이지만, 의외로 자주 쓰지는 않는다.&lt;br&gt;&#xA;특히 감추기 이후에 활용도가 매우 떨어지는 점은 나만&amp;hellip;. 그런가&lt;/p&gt;&#xA;&lt;p&gt;솔직히 자동 필터 중 숫자 필터가 있다는 점은 나의 경우는 좀 뒤늦게 알았다.&lt;br&gt;&#xA;이건 좀 유용하다.&lt;/p&gt;&#xA;&lt;p&gt;이번에는 여러가지 숫자가 있을 때 상위 30%를 고르는 필터를 사용해보자.&lt;br&gt;&#xA;아래와 같이 점수가 있다고 치자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;자동필터를 선택한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;자동필터가 붙었다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/3.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;중간부분에 숫자 필터가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/4.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;상위 10 이라고 되어 있는 메뉴를 선택한다.&lt;br&gt;&#xA;나머지는 한글이라 대충 메뉴만 보고 이해가 가는데,&lt;br&gt;&#xA;상위 10&amp;hellip; 음&amp;hellip; 이건 잘 안누르게 되서 몰랐던거 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 병합된 셀 풀고 값 채우기(IF함수 활용)</title>
       <link>https://mcjoi.github.io/post/00987/</link>
       <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
