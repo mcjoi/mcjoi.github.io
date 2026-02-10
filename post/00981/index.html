@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>windows - Mouse Click Animation | shaaaaallow dive</title>
+    <title>excel - 데이터 통합 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -127,12 +127,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>windows - Mouse Click Animation</h1>
+      <h1>excel - 데이터 통합</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2016-11-29</span>
           
         </div>
         <div class="post-meta-tags">
@@ -143,12 +143,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -174,376 +169,34 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="inspiration">inspiration</h2>
-<p>Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10. If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app.</p>
-<p>Windows has a long history, but since Vista, I haven&rsquo;t really come across programs or open-source projects that deal with click animations. Sure, it&rsquo;s mostly a trivial feature, but the built-in Windows functionality is just terrible.</p>
-<p>Still, I decided to give it a try.</p>
+        <h2 id="엑셀-데이터-통합">엑셀 데이터 통합</h2>
+<p>데이터 통합 역시, 어디에 쓸 수 있을까.<br>
+단순히 말하면 두개의 표를 특정 조건으로 합치는 기능이다. 아래와 같이 두개의 표가 있다고 치자.<br>
+통합버튼을 가볍게 누르자</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/1.jpg" alt="img"></p>
 <br>
+<Br>
+<p>쓸 수 있는 함수는 다양하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/2.jpg" alt="img"></p>
 <br>
+<Br>
+<p>주의할 점은 표를 고르고, 추가를 눌러 참조영역을 추가하는 것이다. 이 말은 2개 이상의 참조영역(표)를 활용하는것도 가능하다는 뜻이 되겠다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/3.jpg" alt="img"></p>
+<br>
+<Br>
+<p>함수는 곱을 골랐고, 레이블은 없는 표이기 때문에 별도 체킹은 하지 않았다. 레이블이 있는 경우는 체크를 해줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/4.jpg" alt="img"></p>
+<br>
+<Br>
+<p>확인을 눌러주면, 가볍게 통합이 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00981/5.jpg" alt="img"></p>
+<br>
+<Br>
+<p>통합 기능을 누르기 전에 복사를 원하는 곳을 선택했다면 그 곳으로 복사가 될 것이다.<br>
+하지만 원치 않는 셀이 선택되어 있었다면, 닫기를 누르고, 셀을 바꾸고, 다시 통합 기능을 누르면 선택했던 참조영역이 삭제를 하기 전까지는 살아 있으므로, 크게 짜증내지 않아도 된다.</p>
+<p>이제 어디다 쓸건지 고민해보자.</p>
+<p>끝.</p>
 
-          
-        
-          
-            
-            <h2 id="two-scenarios">Two Scenarios</h2>
-<p class="text-box">#1 Send the click coordinates from Windows to Flutter<br>
-You run the Flutter app as an invisible layer, and when click coordinates are received, it plays an animation.</p>
-<p class="text-box">#2 Send the clicked coordinates from Flutter to Windows<br>
-Flutter plays the animation, and the coordinates sent to Windows trigger the actual click.</p>
-<p>These are simple scenarios, but ChatGPT recommended #2. Following that advice led to a few days of trial and error. Eventually, I realized that #1 is the reliable approach.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="win32-and-ffi">Win32 and FFI</h2>
-<p>On Flutter Android, whenever you try to do anything, you often need to touch native code?and it can easily break. Windows is no different: you have to deal with C++.</p>
-<p>There are two ways to do this: write everything in Dart, or build a C++ DLL in Visual Studio and call it from Flutter.</p>
-<p>Since I had no idea if it would even work, I did it for fun. Otherwise, I would have given up immediately.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="scenario-details">Scenario Details</h2>
-<p class="text-box">→ Flutter runs the DLL file.<br>
-→ Windows, via the DLL, writes click coordinates to a text file whenever a click occurs.<br>
-→ Flutter reads the coordinates from the text file and uses them to determine where to play the animation.<br>
-→ The Flutter app runs fullscreen with a transparent background, in the background.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="packages-used">Packages Used</h2>
-<p>For controlling the DLL, we just import io and ffi. For window management, we use window_manager. To play animations, we use the lottie package.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="calling-the-dll">Calling the DLL</h2>
-<p>The DLL must be executed from main(). I didn&rsquo;t know why, but following ChatGPT&rsquo;s instructions, it should be defined like this.</p>
-<p><code>calling .dll files</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> StartHookThreadC <span style="color:#f92672">=</span> Void Function();
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> StartHookThreadDart <span style="color:#f92672">=</span> <span style="color:#66d9ef">void</span> Function();
-</span></span></code></pre></div><p>You run the startHookThread function. Its only function is to save click coordinates in C:\temp.<br>
-Flutter only reads the coordinates saved in the text file.</p>
-<p><code>calling .dll files</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">final</span> dylib <span style="color:#f92672">=</span> DynamicLibrary.open(<span style="color:#e6db74">&#39;click_hooking.dll&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">final</span> StartHookThreadDart startHookThread <span style="color:#f92672">=</span> dylib
-</span></span><span style="display:flex;"><span>      .lookupFunction<span style="color:#f92672">&lt;</span>StartHookThreadC, StartHookThreadDart<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#39;StartHookThread&#39;</span>);
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>startHookThread();
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="lottie-animation">Lottie Animation</h2>
-<p>Rive provides incredible features, but Lottie just runs animations and that&rsquo;s perfect. You don&rsquo;t need a full authoring tool like Rive to create animations; After Effects and Bodymovin can handle it.</p>
-<p>By using a Stack with Positioned widgets, you can play click animations exactly where you want, ending this tedious setup.</p>
-<p>First, here&rsquo;s the <code>C++</code> source code that needs to be built as a <code>DLL</code> using Visual Studio.</p>
-<p><code>mouse_hook.cpp</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// mouse_hook.cpp
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;windows.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;pch.h&#34;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fstream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>HHOOK mouseHook;
-</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>string outputPath <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Temp</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">click_position.txt&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>LRESULT CALLBACK <span style="color:#a6e22e">MouseProc</span>(<span style="color:#66d9ef">int</span> nCode, WPARAM wParam, LPARAM lParam) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (nCode <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> wParam <span style="color:#f92672">==</span> WM_LBUTTONDOWN) {
-</span></span><span style="display:flex;"><span>        MSLLHOOKSTRUCT<span style="color:#f92672">*</span> mouseInfo <span style="color:#f92672">=</span> (MSLLHOOKSTRUCT<span style="color:#f92672">*</span>)lParam;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> mouseInfo<span style="color:#f92672">-&gt;</span>pt.x;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> mouseInfo<span style="color:#f92672">-&gt;</span>pt.y;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>ofstream out(outputPath);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (out.is_open()) {
-</span></span><span style="display:flex;"><span>            out <span style="color:#f92672">&lt;&lt;</span> x <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">&lt;&lt;</span> y;
-</span></span><span style="display:flex;"><span>            out.close();
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> CallNextHookEx(mouseHook, nCode, wParam, lParam);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">SetClickHook</span>() {
-</span></span><span style="display:flex;"><span>    HMODULE hInstance <span style="color:#f92672">=</span> GetModuleHandle(NULL);
-</span></span><span style="display:flex;"><span>    mouseHook <span style="color:#f92672">=</span> SetWindowsHookEx(WH_MOUSE_LL, MouseProc, hInstance, <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (mouseHook <span style="color:#f92672">==</span> NULL) {        
-</span></span><span style="display:flex;"><span>        MessageBoxW(NULL, <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;Failed to set hook&#34;</span>, <span style="color:#e6db74">L</span><span style="color:#e6db74">&#34;Error&#34;</span>, MB_ICONERROR);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    MSG msg;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (GetMessage(<span style="color:#f92672">&amp;</span>msg, NULL, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)) {
-</span></span><span style="display:flex;"><span>        TranslateMessage(<span style="color:#f92672">&amp;</span>msg);
-</span></span><span style="display:flex;"><span>        DispatchMessage(<span style="color:#f92672">&amp;</span>msg);
-</span></span><span style="display:flex;"><span>    }   
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">__declspec</span>(dllexport) <span style="color:#66d9ef">void</span> RemoveClickHook() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (mouseHook) {
-</span></span><span style="display:flex;"><span>        UnhookWindowsHookEx(mouseHook);     
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>DWORD WINAPI <span style="color:#a6e22e">HookThreadProc</span>(LPVOID) {
-</span></span><span style="display:flex;"><span>    SetClickHook();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">__declspec</span>(dllexport) <span style="color:#66d9ef">void</span> StartHookThread() {
-</span></span><span style="display:flex;"><span>    CreateThread(NULL, <span style="color:#ae81ff">0</span>, HookThreadProc, NULL, <span style="color:#ae81ff">0</span>, NULL);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<br>
-<p>On the Flutter side, there isn&rsquo;t much to configure, but calling the <code>DLL</code> itself was a bit unfamiliar.</p>
-<p>Also, even when using a dual-monitor setup, I limited the mouse click animation to appear only within the range from coordinate (0,0) up to 1920x1080.</p>
-<p>For the Lottie animation specified in assets/click2.json, make sure to update the file name if necessary. Alternatively, you could add a feature to dynamically select different motions. Currently, the default animation duration is set to under 0.8 seconds. If you use a different animation length, you&rsquo;ll need to adjust the duration code accordingly.</p>
-<p><code>main.dart</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#75715e">// main.dart
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:async&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:io&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/material.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:lottie/lottie.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:window_manager/window_manager.dart&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// call dll
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> StartHookThreadC <span style="color:#f92672">=</span> Void Function();
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> StartHookThreadDart <span style="color:#f92672">=</span> <span style="color:#66d9ef">void</span> Function();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// main
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>  WidgetsFlutterBinding.ensureInitialized();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> windowManager.ensureInitialized();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> windowManager.waitUntilReadyToShow(
-</span></span><span style="display:flex;"><span>    WindowOptions(
-</span></span><span style="display:flex;"><span>      skipTaskbar: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>      alwaysOnTop: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>      fullScreen: <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>      backgroundColor: Colors.transparent,
-</span></span><span style="display:flex;"><span>    ),
-</span></span><span style="display:flex;"><span>    () <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> windowManager.setIgnoreMouseEvents(<span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> windowManager.setPosition(Offset.zero);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> windowManager.show();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      debugPrint(<span style="color:#e6db74">&#34;Window manager initialized&#34;</span>);
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  debugPrint(<span style="color:#e6db74">&#34;Loading DLL...&#34;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> dylib <span style="color:#f92672">=</span> DynamicLibrary.open(<span style="color:#e6db74">&#39;click_hooking.dll&#39;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> StartHookThreadDart startHookThread <span style="color:#f92672">=</span> dylib
-</span></span><span style="display:flex;"><span>      .lookupFunction<span style="color:#f92672">&lt;</span>StartHookThreadC, StartHookThreadDart<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#39;StartHookThread&#39;</span>);
-</span></span><span style="display:flex;"><span>  startHookThread();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  debugPrint(<span style="color:#e6db74">&#34;Setting mouse hook...&#34;</span>);
-</span></span><span style="display:flex;"><span>  startHookThread();
-</span></span><span style="display:flex;"><span>  debugPrint(<span style="color:#e6db74">&#34;Mouse hook thread started&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  runApp(<span style="color:#66d9ef">const</span> MyApp());
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//MyApp
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyApp</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> MyApp({<span style="color:#66d9ef">super</span>.key});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> MaterialApp(
-</span></span><span style="display:flex;"><span>      debugShowCheckedModeBanner: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      home: LayoutBuilder(
-</span></span><span style="display:flex;"><span>        builder: (context, constraints) {
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> SizedBox(
-</span></span><span style="display:flex;"><span>            width: constraints.maxWidth,
-</span></span><span style="display:flex;"><span>            height: constraints.maxHeight,
-</span></span><span style="display:flex;"><span>            child: ClickEffectOverlay(),
-</span></span><span style="display:flex;"><span>          );
-</span></span><span style="display:flex;"><span>        },
-</span></span><span style="display:flex;"><span>      ),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClickEffectOverlay</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> ClickEffectOverlay({<span style="color:#66d9ef">super</span>.key});
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  State<span style="color:#f92672">&lt;</span>ClickEffectOverlay<span style="color:#f92672">&gt;</span> createState() <span style="color:#f92672">=&gt;</span> _ClickEffectOverlayState();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_ClickEffectOverlayState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>ClickEffectOverlay<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>_ClickEffect<span style="color:#f92672">&gt;</span> _effects <span style="color:#f92672">=</span> [];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> initState() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>.initState();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    WidgetsBinding.instance.addPostFrameCallback((_) {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">final</span> size <span style="color:#f92672">=</span> MediaQuery.of(context).size;
-</span></span><span style="display:flex;"><span>      debugPrint(<span style="color:#e6db74">&#34;position : </span><span style="color:#e6db74">${</span>size.width<span style="color:#e6db74">}</span><span style="color:#e6db74"> x </span><span style="color:#e6db74">${</span>size.height<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    _startListeningForMessages();
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> _startListeningForMessages() {
-</span></span><span style="display:flex;"><span>    debugPrint(<span style="color:#e6db74">&#34;Start listening for click coordinates...&#34;</span>);
-</span></span><span style="display:flex;"><span>    Timer.periodic(<span style="color:#66d9ef">const</span> Duration(milliseconds: <span style="color:#ae81ff">100</span>), (_) {
-</span></span><span style="display:flex;"><span>      _readClickPosition();
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> _readClickPosition() <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> file <span style="color:#f92672">=</span> File(<span style="color:#e6db74">&#39;C:/Temp/click_position.txt&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">await</span> file.exists()) {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">final</span> content <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> file.readAsString();
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">final</span> parts <span style="color:#f92672">=</span> content.trim().split(<span style="color:#e6db74">&#39;,&#39;</span>);
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (parts.length <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> xRaw <span style="color:#f92672">=</span> <span style="color:#66d9ef">double</span>.tryParse(parts[<span style="color:#ae81ff">0</span>]);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">final</span> yRaw <span style="color:#f92672">=</span> <span style="color:#66d9ef">double</span>.tryParse(parts[<span style="color:#ae81ff">1</span>]);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (xRaw <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> yRaw <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> xRaw <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> yRaw <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) {          
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">final</span> dpiScale <span style="color:#f92672">=</span> MediaQuery.of(context).devicePixelRatio;   
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">final</span> x <span style="color:#f92672">=</span> xRaw <span style="color:#f92672">/</span> dpiScale;
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">final</span> y <span style="color:#f92672">=</span> yRaw <span style="color:#f92672">/</span> dpiScale;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>          debugPrint(<span style="color:#e6db74">&#39;Scaled click: x = </span><span style="color:#e6db74">$</span>x<span style="color:#e6db74">, y = </span><span style="color:#e6db74">$</span>y<span style="color:#e6db74">&#39;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>          _showClickEffect(Offset(x, y));
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">await</span> file.writeAsString(<span style="color:#e6db74">&#39;0,0&#39;</span>);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> _showClickEffect(Offset offset) {
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (offset.dx <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> offset.dy <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> offset.dx <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1920</span> <span style="color:#f92672">||</span> offset.dy <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1080</span>)
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    setState(() {
-</span></span><span style="display:flex;"><span>      _effects.add(_ClickEffect(offset));
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Timer(<span style="color:#66d9ef">const</span> Duration(milliseconds: <span style="color:#ae81ff">800</span>), () {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (_effects.isNotEmpty) {
-</span></span><span style="display:flex;"><span>        setState(() {
-</span></span><span style="display:flex;"><span>          _effects.removeAt(<span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>        });
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> size <span style="color:#f92672">=</span> MediaQuery.of(context).size;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> ratio <span style="color:#f92672">=</span> MediaQuery.of(context).devicePixelRatio;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    debugPrint(<span style="color:#e6db74">&#34;position : </span><span style="color:#e6db74">${</span>size.width<span style="color:#e6db74">}</span><span style="color:#e6db74"> x </span><span style="color:#e6db74">${</span>size.height<span style="color:#e6db74">}</span><span style="color:#e6db74">, DPI: </span><span style="color:#e6db74">$</span>ratio<span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Container(
-</span></span><span style="display:flex;"><span>      color: Color.fromRGBO(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0.01</span>),
-</span></span><span style="display:flex;"><span>      child: Stack(
-</span></span><span style="display:flex;"><span>        children: [          
-</span></span><span style="display:flex;"><span>          ..._effects
-</span></span><span style="display:flex;"><span>              .where(
-</span></span><span style="display:flex;"><span>                (e) <span style="color:#f92672">=&gt;</span>
-</span></span><span style="display:flex;"><span>                    e.offset.dx <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>                    e.offset.dx <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1920</span> <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>                    e.offset.dy <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>                    e.offset.dy <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1080</span>,
-</span></span><span style="display:flex;"><span>              )
-</span></span><span style="display:flex;"><span>              .map((e) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> Positioned(
-</span></span><span style="display:flex;"><span>                  left: e.offset.dx <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>,
-</span></span><span style="display:flex;"><span>                  top: e.offset.dy <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>,
-</span></span><span style="display:flex;"><span>                  child: SizedBox(
-</span></span><span style="display:flex;"><span>                    width: <span style="color:#ae81ff">100</span>,
-</span></span><span style="display:flex;"><span>                    height: <span style="color:#ae81ff">100</span>,
-</span></span><span style="display:flex;"><span>                    child: Lottie.asset(<span style="color:#e6db74">&#39;assets/click2.json&#39;</span>),
-</span></span><span style="display:flex;"><span>                  ),
-</span></span><span style="display:flex;"><span>                );
-</span></span><span style="display:flex;"><span>              })
-</span></span><span style="display:flex;"><span>              .toList(),
-</span></span><span style="display:flex;"><span>        ],
-</span></span><span style="display:flex;"><span>      ),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_ClickEffect</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> Offset offset;
-</span></span><span style="display:flex;"><span>  _ClickEffect(<span style="color:#66d9ef">this</span>.offset);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="result">Result</h2>
-<p>For click motions, a simple one-time animation is enough. You don&rsquo;t need Rive animations, and LottieFiles provides animations you can download and use easily without much effort.</p>
-<p>The GIF below shows the result of a Lottie animation. The quality isn’t bad at all, though the GIF format makes it look slightly choppy.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03998/img.gif" alt="img"></p>
-<br>
-<br>
-<p>Should I add a separate button to change the animation?<br>
-Should right-clicks have a separate animation?</p>
-<p>not today.</p>
-<p>The End.</p>
-
-          
-        
       
     </div>
 
@@ -577,53 +230,53 @@ Should right-clicks have a separate animation?</p>
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
