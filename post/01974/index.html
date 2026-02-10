@@ -185,7 +185,7 @@
             
             <h2 id="중복값-처리">중복값 처리</h2>
 <p>중복값을 확인하는 이유는 너무도 많기 때문에, 어떻게 처리할 것인지에 따라, 다양한 방법이 있으리라. 아래와 같은 간단한 원본 데이터에 대하여, 자주 쓰는 몇가지 방법을 요약해 보았다</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/10.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/10.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -204,7 +204,7 @@
 <br>
 <br>
 <p>단점은 다른 열을 하나 더 사용해야한다는 점이겠다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/11.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/11.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -225,7 +225,7 @@
             <h2 id="조건부-서식">조건부 서식</h2>
 <p>색이나 서식을 지정하여 중복값을 처리할 떄 사용한다.<br>
 아는 사람은 알겠지만, 조건부 서식은 이름정의와 함께 여러명이 작업할 떄, 파일을 뒤죽박죽으로 만드는 원흉이 되곤한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/12.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/12.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -354,7 +354,7 @@ E,F,G 열이 있고 각각 들어가 있는 값이 다르다.<br>
             <h2 id="중복값-없애고-텍스트-목록-가로로-이어붙이기">중복값 없애고, 텍스트 목록 가로로 이어붙이기</h2>
 <p>아래와 같은 테이블이 있을때, 우측의 테이블에 차종을 하나, 브랜드 이름을 현대/기아&hellip;. 이런식으로 나열을 하고 싶다.<br>
 차종은 추가될때 마다 자동으로 들어가게 하고 싶다. 당신의 선택은 무엇인가?</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/13.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/13.png" alt="myimg"></p>
 <Br>
 <br>
 
@@ -367,7 +367,7 @@ E,F,G 열이 있고 각각 들어가 있는 값이 다르다.<br>
 IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면, &ldquo;-&rdquo; 처리해준다. 실제로는 #N/A 에러가 뜰것이다.</p>
 <p class="text-box">{=IFERROR(INDEX($B$3:$B$15,MATCH(0,COUNTIF($E$2:E2,$B$3:$B$15),0)),&quot;-&quot;)}</p>
 <br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/14.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/14.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -379,7 +379,7 @@ IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면
 <p>TEXTJOIN함수에서 TEXT부분에 IF문으로 조건을 걸어주고, 배열수식 처리를 해주면 된다.</p>
 <p class="text-box">{=TEXTJOIN(&quot;/&quot;,TRUE,IF($B$3:$B$15=K3,$C$3:$C$15,&quot;&quot;))}</p>
 <br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/15.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01974/15.png" alt="myimg"></p>
 <br>
 <br>
 <p>자주 쓰지 않아서, 기억은 가물가물하지만, 언젠가는 유용하게 써먹을 날이 오겠지.</p>
