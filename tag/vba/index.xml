@@ -30,6 +30,13 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - _xlfn 에러, textjoin 함수 VBA로 대체</title>
+      <link>https://mcjoi.github.io/post/01966/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01966/</guid>
+      <description>&lt;h2 id=&#34;_xlfn-에러-textjoin-함수-vba로-대체해보기&#34;&gt;_xlfn 에러, textjoin 함수 VBA로 대체해보기&lt;/h2&gt;&#xA;&lt;p&gt;_xlfn은 상위버전에서 신규 생성된 함수를 이하 버전에서 켰을 때 나오는 에러문구인데, 예를들어 textjoin함수가 있겠다. (2003 기준)&lt;br&gt;&#xA;억울하고 원통하지만, 이하버전에서는 이 기능을 못쓰게 되니, VBA로 대체 해봐야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/oK4zOO4VORE&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;특히 회사에서는 2016버전을 쓰는 곳이 별로 없을 것 같은데, 뭐,,, MS도 장사하는거니 탓할수는 없다.&lt;br&gt;&#xA;약간 놀라운건 무료로 제공되는 안드로이드판 엑셀에도 이런 함수들이 적용이 되어있다는 점이다.&lt;br&gt;&#xA;그냥&amp;hellip; 로컬 프로그램을 업데이트 하는 과정이 복잡한걸로 이해한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 피벗테이블 없이 동적인 리스트로 요약테이블 항목 만들기</title>
       <link>https://mcjoi.github.io/post/01967/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>

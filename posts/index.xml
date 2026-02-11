@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - _xlfn 에러, textjoin 함수 VBA로 대체</title>
+      <link>https://mcjoi.github.io/post/01966/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01966/</guid>
+      <description>&lt;h2 id=&#34;_xlfn-에러-textjoin-함수-vba로-대체해보기&#34;&gt;_xlfn 에러, textjoin 함수 VBA로 대체해보기&lt;/h2&gt;&#xA;&lt;p&gt;_xlfn은 상위버전에서 신규 생성된 함수를 이하 버전에서 켰을 때 나오는 에러문구인데, 예를들어 textjoin함수가 있겠다. (2003 기준)&lt;br&gt;&#xA;억울하고 원통하지만, 이하버전에서는 이 기능을 못쓰게 되니, VBA로 대체 해봐야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/oK4zOO4VORE&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;특히 회사에서는 2016버전을 쓰는 곳이 별로 없을 것 같은데, 뭐,,, MS도 장사하는거니 탓할수는 없다.&lt;br&gt;&#xA;약간 놀라운건 무료로 제공되는 안드로이드판 엑셀에도 이런 함수들이 적용이 되어있다는 점이다.&lt;br&gt;&#xA;그냥&amp;hellip; 로컬 프로그램을 업데이트 하는 과정이 복잡한걸로 이해한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 피벗테이블 없이 동적인 리스트로 요약테이블 항목 만들기</title>
       <link>https://mcjoi.github.io/post/01967/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
