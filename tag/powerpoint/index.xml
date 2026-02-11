@@ -44,6 +44,20 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>powerpoint - 막대그래프 계열바 커스터마이징</title>
+      <link>https://mcjoi.github.io/post/01970/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01970/</guid>
+      <description>&lt;h2 id=&#34;막대그래프-커스터마이징&#34;&gt;막대그래프 커스터마이징&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 그래프는 사용하기 편하게 되어있다.&lt;br&gt;&#xA;엑셀보다 다루기가 편하고 간편하게 되어있다. 그래서인지 파워포인트를 쓴지 10여년만에, 이런 기능이 있다는걸 알았다.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;알고 있다고? 난 몰랐다.&lt;br&gt;&#xA;아래 그림처럼, 그림을 그리고, 하나씩 찍은다음 그림복사 &amp;gt; 계열 그래프를 찍고 붙여넣기 하면, 위의 그림처럼 완성된다.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;인포그래픽처럼, 이미지도 가능하다는 뜻이다.&lt;br&gt;&#xA;놀랍지 않은가? 안놀랍다면, 별수없다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>powerpoint - 텍스트 서식 한꺼번에 적용하기(볼드, 이탤릭)</title>
+      <link>https://mcjoi.github.io/post/01973/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01973/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/EWFtcruNgbA&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;파워포인트ppt-텍스트-서식-한꺼번에-적용하기볼드-이탤릭&#34;&gt;파워포인트(ppt) 텍스트 서식 한꺼번에 적용하기(볼드, 이탤릭)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 쓰다보면, 100장이 넘는 문서에 폰트나 텍스트 서식을 한꺼번에 바꾸려면,암담할 때가 있다.&lt;br&gt;&#xA;폰트 바꾸기 기능은 있지만, 서식을 일괄로 바꾸는 기능은 아직 없는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 한번 해보자.&lt;/p&gt;&#xA;&lt;p&gt;그냥 샘플로, 2개의 슬라이드를 준비했다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;1번은 그냥 텍스트 박스.&lt;/li&gt;&#xA;&lt;li&gt;2번은 표안에 있는 텍스트.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01973/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01973/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;구조는 아래와 같다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;전체슬라이드를 대상으로 슬라이드별 쉐이프를 순서대로 검사한다.&lt;/li&gt;&#xA;&lt;li&gt;(IF)텍스트박스면 안에 있는 텍스트에 볼드와 이탤릭 효과를 준다.&lt;/li&gt;&#xA;&lt;li&gt;(ELSEIF) 표이면, 표 셀을 하나하나씩 검사하여 텍스트에 볼드와 이탤릭 효과를 준다. 그렇지 않으면, IF 구문을 빠져나간다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;IF 구문을 쓰지 않으면 복잡하지 않았을텐데, 그림이나 표에서 에러가 난다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>powerpoint - 발표시 글자 선명하게 보기(텍스트 테두리)</title>
       <link>https://mcjoi.github.io/post/00983/</link>
       <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
