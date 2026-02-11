@@ -135,6 +135,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 동일조건인 값이 2개 이상일때, 첫 값과 마지막 값 찾기</title>
+      <link>https://mcjoi.github.io/post/01965/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01965/</guid>
+      <description>&lt;h2 id=&#34;동일조건인-값이-2개-이상일때-첫-값과-마지막-값-찾기&#34;&gt;동일조건인 값이 2개 이상일때, 첫 값과 마지막 값 찾기&lt;/h2&gt;&#xA;&lt;p&gt;2개 이상의 조건값을 테이블에서찾을때, SUM배열함수나 SUMPRODUCT를 사용하게되는데, 조건결과값이 2개 이상이면, 해당값이 합산된다.&lt;br&gt;&#xA;합산을 원치않는경우, INDEX/MATCH를 사용하면, 값만 반환을 받을수 있는데, 반환되는값이 기본적으로 데이터 테이블의 순서상 첫번째 값이나온다..&lt;/p&gt;&#xA;&lt;p&gt;물론 첫번째 값이라는건 현재의 정렬기준인데, 다른 열의 정렬에 따라 첫번째 값은 바뀌게 된다. 그럼에도 정렬이 원하는데로 되어있다면, 순서상 마지막값을 반환하도록 만드는방법도 필요할 것이다.&lt;/p&gt;&#xA;&lt;p&gt;그래서 찾아낸&amp;hellip; 아는 사람만 아는 그 방법..&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/8gRdW4mQt3s&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;이정도면,, 수식이 좀 과하지 않나 싶다. 😭&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - _xlfn 에러, textjoin 함수 VBA로 대체</title>
       <link>https://mcjoi.github.io/post/01966/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
