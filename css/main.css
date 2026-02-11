@@ -884,7 +884,7 @@ ul li::marker {
 
 .related-posts h3 {
   margin: 0 0 8px;
-  font-size: 12.67px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -973,7 +973,7 @@ ul li::marker {
 }
 
 .post-content h3 {
-  font-size: 18.67px;
+  font-size: 20px;
 }
 
 .post-content h1,
