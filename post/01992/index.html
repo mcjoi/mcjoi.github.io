@@ -178,14 +178,14 @@ IFERROR 와 NOT 를 사용하는 방법도 있고, ISNUMBER 함수를 사용하�
 <p>조건영역 1만 사용한다고 가정하고, 사과를 찾는 경우 다음과 같은 수식을 사용하면 된다.<br>
 이 경우에는 별다른 문제가 없고 굳이 배열수식을 사용하지 않아도 된다. (B열이 조건범위1, C열이 조건범위2, D열이 합산범위이다.)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>{ <span style="color:#f92672">=</span>SUM( <span style="color:#66d9ef">IF</span>( (<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>12<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;사과&#34;</span>), <span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>12 )) }
-</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01992/01.png" alt="img"></p>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01992/01.png" alt="img"></p>
 <br>
 <br>
 <p>조건을 조금 변경해<br>
 조건영역1에 사과 또는 포도가 포함되어 있고, 조건영역2가 겨울이라면 이야기가 달라진다.<br>
 이 경우에는 수식도 길어지고  논리식에 포함되는 값들도 꽤 많아진다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>{ <span style="color:#f92672">=</span>SUM(<span style="color:#66d9ef">IF</span>( (ISNUMBER(FIND({<span style="color:#e6db74">&#34;사과&#34;</span>,<span style="color:#e6db74">&#34;포도&#34;</span>}, <span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>12))) <span style="color:#f92672">*</span> (<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>12<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;겨울&#34;</span>),<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>12)) }
-</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01992/02.png" alt="img"></p>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01992/02.png" alt="img"></p>
 <br>
 <br>
 <p>즉, 사과 또는 포도가 포함되어 있다는 조건을 조금 더 깔끔한 함수로 처리할 수 있다면 수식도 훨씬 간단해질 것이다.</p>

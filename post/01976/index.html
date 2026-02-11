@@ -192,7 +192,7 @@
 <h2 id="엑셀-함수로-뒤집기">엑셀 함수로 뒤집기</h2>
 <p>편의상 1부터 6까지의 숫자가 있다고 치자. 우측 열에 거꾸로 뒤집어서 넣을 생각이다.<br>
 (숫자로 되어있다면 구지 이렇게 할 필요가 없다. 편의상이라고 했다.)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01976/01.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01976/01.jpg" alt="myimg"></p>
 <br>
 <br>
 <p>OFFSET 함수를 활용할 예정이다.<br>
@@ -212,14 +212,14 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
 =OFFSET(값,A,B)</p>
 <p>입력해보면 아래와 같다.<br>
 =OFFSET(B$4,COUNTA(B$4:B$9)-ROW(B1),)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01976/02.jpg" alt="myimg"><br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01976/02.jpg" alt="myimg"><br>
 ** 열 이동은 없으므로 열 인수 입력은 공백으로 둔다.</p>
 <br>
 <br>
 <p>=OFFSET(B$4,COUNTA(B$4:B$9)-ROW(B1), 열 입력)<br>
 기준이 되는 값과 데이터가 들어있는 영역은 변하면 안되기 때문에 절대참조로 해둔다.<br>
 결과는 아래와 같다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01976/03.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01976/03.jpg" alt="myimg"></p>
 <br>
 <br>
 <p>단, 1,2,3 행을 삭제하거나 변화를 주면, 수식이 어그러질 수 있다.<br>
@@ -229,7 +229,7 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
 <h2 id="엑셀-vba로-뒤집기">엑셀 VBA로 뒤집기</h2>
 <p>의외로 DB에서 추출한 데이터가 뒤집혀 있는 경우가 많다. 대부분 경우, 엑셀 노가다로 충분하지만, 엑셀에 버튼을 만들어 놓으면 편할 수 있다.<br>
 개인적으로 VBA를 몰랐을때 처음으로 시도한 거라 애착이 가고, 회사에서 가장 많이 자주 쓰고 있는 코드이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office_vba/01976/01.gif" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01976/01.gif" alt="myimg"></p>
 <br>
 <Br>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">upsidedown</span>()
