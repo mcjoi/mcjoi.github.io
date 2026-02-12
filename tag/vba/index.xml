@@ -30,6 +30,13 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - worksheetfunction에 없는 엑셀함수 사용하기</title>
+      <link>https://mcjoi.github.io/post/01961/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01961/</guid>
+      <description>&lt;h2 id=&#34;worksheetfunction에-없는-엑셀함수-사용하기&#34;&gt;worksheetfunction에 없는 엑셀함수 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;application.worksheetfuction 을 사용하면, 왠만한 엑셀함수를 VBE에서 사용할수 있다.&lt;br&gt;&#xA;문제는 당연히(?) 없는 함수도 있다는 점인데, 그냥 생각해보면 VBA에서 셀에다가 그냥 수식 텍스트가 입력되게 하면 될 것 같다&amp;hellip;. 확신은 없지만..&lt;/p&gt;&#xA;&lt;p&gt;우선, worksheetfuction을 써보자.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;Cells(1, 2).Value = Application.WorksheetFunction.Sum(1, 2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;요 식은 이런 텍스트를 쳤을때와 동일한 효과일 것이다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=sum(1,2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;이런 형태의 수식을 적어보는건 어떨까..?&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=HYPERLINK(&amp;quot;#&amp;rsquo;&amp;quot;&amp;amp;&amp;ldquo;Sheet2&amp;rdquo;&amp;amp;&amp;quot;&amp;rsquo;!A1&amp;quot;,&amp;ldquo;GO&amp;rdquo;)&lt;/p&gt;&#xA;&lt;p&gt;특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 시트 숨기기/해제하기 컨트롤러</title>
       <link>https://mcjoi.github.io/post/01962/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>

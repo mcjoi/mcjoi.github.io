@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>파워포인트 - 도형 잠그기(office2019) | shaaaaallow dive</title>
+    <title>excel - worksheetfunction에 없는 엑셀함수 사용하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01994/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01961/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>파워포인트 - 도형 잠그기(office2019)</h1>
+      <h1>excel - worksheetfunction에 없는 엑셀함수 사용하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2026-01-02</span>
+          <span>2019-12-03</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -170,107 +175,52 @@
       
       
       
-        <h2 id="도형-잠그기">도형 잠그기</h2>
-<p>오피스365에는 도형 잠그기 기능이 있어 배경 등으로 사용된 박스, 이미지가 선택되지 않도록 할 수 있다. 애석하게도 오피스2019버전에는 도형 잠그기 기능이 없는데.. 우회하는 방법으로 비슷하게 사용은 할 수 있다.</p>
+        <h2 id="worksheetfunction에-없는-엑셀함수-사용하기">worksheetfunction에 없는 엑셀함수 사용하기</h2>
+<p>application.worksheetfuction 을 사용하면, 왠만한 엑셀함수를 VBE에서 사용할수 있다.<br>
+문제는 당연히(?) 없는 함수도 있다는 점인데, 그냥 생각해보면 VBA에서 셀에다가 그냥 수식 텍스트가 입력되게 하면 될 것 같다&hellip;. 확신은 없지만..</p>
+<p>우선, worksheetfuction을 써보자.</p>
+<p class="text-box">Cells(1, 2).Value = Application.WorksheetFunction.Sum(1, 2)</p>
+<Br>
+<Br>
+<p>요 식은 이런 텍스트를 쳤을때와 동일한 효과일 것이다.</p>
+<p class="text-box">=sum(1,2)</p>
+<Br>
+<Br>
+<p>이런 형태의 수식을 적어보는건 어떨까..?</p>
+<p class="text-box">=HYPERLINK(&quot;#&rsquo;&quot;&amp;&ldquo;Sheet2&rdquo;&amp;&quot;&rsquo;!A1&quot;,&ldquo;GO&rdquo;)</p>
+<p>특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/01.jpg" alt="myimg"></p>
+<Br>
+<Br>
+<p>수식이 길어지면 헤깔리기 때문에, 나의 경우에는 chr함수를 사용하는 쪽으로 작성했다.<br>
+예를 들어, 첫 서두, <code>=HYPERLINK(&quot;</code> 까지를</p>
+<p><code>&quot;=HYPERLINK(&quot;&quot;&quot;</code> 이렇게 써도 되고,<br>
+<code>Chr(61) &amp; &quot;HYPERLINK(&quot;&quot;&quot;</code> 이렇게 써도 된다는 뜻이다.</p>
+<p>이런식으로 변환하게 되면 아래와 같다. 하이퍼링크 함수이기 때문에 이런식으로, 미리 txt 변수를 만들어 주었다.</p>
+<p class="text-box">Dim txt As String<br>
+txt = Cells(2, 4).Value</p>
+<p>myimg<img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/02.jpg" alt="myimg"></p>
 <br>
 <br>
-<h2 id="vba코드">VBA코드</h2>
-<p>VBA사용 코드를 모르는 경우, 아래 글을 참고한다.</p>
-<a class="btn-link" href="https://mcjoi.github.io/post/01995" target="_blank" rel="noopener noreferrer">VBA사용법</a>
-<br>
-<br>
-<p>vba에 표준 모듈 2개와 클래스 모듈 1개를 만든다. 클래스 모듈의 이름을 <code>clsPPTEvent</code> 로 한다.</p>
-<p><code>module #1</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;proc module
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; 선택된 도형에 잠금 태그 추가
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">MarkSelectedShapesAsLocked</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> Sel <span style="color:#f92672">As</span> Selection
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> Sel <span style="color:#f92672">=</span> ActiveWindow.Selection
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> Sel.ShapeRange
-</span></span><span style="display:flex;"><span>            shp.Tags.Add <span style="color:#e6db74">&#34;LOCKED&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;선택된 도형에 LOCKED 태그를 달았습니다.&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;도형을 선택한 상태에서 실행하세요.&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+<p>한줄로 쓰면 이런식이 되겠다.</p>
+<p class="text-box">Chr(61) &amp; &ldquo;HYPERLINK(&rdquo;&quot;&quot; &amp; Chr(35) &amp; &ldquo;&rsquo;&rdquo;&quot;&quot; &amp; Chr(38) &amp; &quot;&quot;&quot;&quot; &amp; txt &amp; &quot;&quot;&quot;&quot; &amp; Chr(38) &amp; &ldquo;&rdquo;&quot;&rsquo;!A1&quot;&quot;,&ldquo;&ldquo;GO&rdquo;&rdquo;)&quot;</p>
+<p>원래 쌍따옴표때문에, 복잡한 수식인데, 더 복잡해 졌다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">test</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> txt <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    txt <span style="color:#f92672">=</span> Cells(2, 4).Value
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UnlockLockedShapesOnCurrentSlide</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sld <span style="color:#f92672">As</span> Slide
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 현재 창에서 보고 있는 슬라이드
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sld <span style="color:#f92672">=</span> ActiveWindow.View.Slide   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> sld.Shapes
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> shp.Tags(<span style="color:#e6db74">&#34;LOCKED&#34;</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>            shp.Tags.Delete <span style="color:#e6db74">&#34;LOCKED&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> shp   
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;현재 슬라이드의 잠금(LOCKED 태그)을 모두 해제했습니다.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>    Cells(1, 2).Value <span style="color:#f92672">=</span> Application.WorksheetFunction.Sum(1, 2)
+</span></span><span style="display:flex;"><span>    Cells(2, 2).Value <span style="color:#f92672">=</span> _
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;=HYPERLINK(&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(35) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#39;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> txt <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#39;!A1&#34;&#34;,&#34;&#34;GO&#34;&#34;)&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UnlockAllLockedShapes</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sld <span style="color:#f92672">As</span> Slide
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> sld <span style="color:#f92672">In</span> ActivePresentation.Slides
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> sld.Shapes
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> shp.Tags(<span style="color:#e6db74">&#34;LOCKED&#34;</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>                shp.Tags.Delete <span style="color:#e6db74">&#34;LOCKED&#34;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> sld   
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;프레젠테이션의 모든 잠금(LOCKED 태그)을 해제했습니다.&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><p><code>module #2</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;==========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;exe module
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> PPTEvent <span style="color:#f92672">As</span> clsPPTEvent
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">StartLockMonitor</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> PPTEvent <span style="color:#f92672">=</span> <span style="color:#66d9ef">New</span> clsPPTEvent
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> PPTEvent.App <span style="color:#f92672">=</span> PowerPoint.Application
-</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;도형 잠금 감시가 시작되었습니다.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><p><code>class module</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;==========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;class module
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> <span style="color:#66d9ef">WithEvents</span> App <span style="color:#f92672">As</span> Application
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">App_WindowSelectionChange</span>(<span style="color:#66d9ef">ByVal</span> Sel <span style="color:#f92672">As</span> Selection)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sld <span style="color:#f92672">As</span> Slide   
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> Sel.ShapeRange
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> shp.Tags(<span style="color:#e6db74">&#34;LOCKED&#34;</span>) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&#39;MsgBox &#34;잠금된 도형은 선택할 수 없습니다.&#34;, vbExclamation
-</span></span></span><span style="display:flex;"><span>                <span style="color:#75715e">&#39; 선택 강제 해제
-</span></span></span><span style="display:flex;"><span>                App.ActiveWindow.Selection.Unselect
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
+</span></span></code></pre></div><Br>
 <br>
-<p>실행 방식은<br>
-→ 1번 표준 모듈의 <code>MarkSelectedShapesAsLocked</code> 로 선택한 도형에 마킹을 한다.<br>
-→ 2번 표준 모듈의 <code>StartLockMonitor</code> 로 모니터링을 시작한다.</p>
+<p>실행해보면, 잘 실행이 되고, 하이퍼링크 기능도 잘 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/03.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>해제를 원한다면,<br>
-→ 1번 표준모듈의 <code>UnlockLockedShapesOnCurrentSlide</code> 또는 <code>UnlockAllLockedShapes</code> 를 사용한다.<br>
-→ 선택된 슬라이드만 해제할지 전체를 해제할지에 따라 나뉜다.</p>
-<br>
-<br>
-<p>작동은 하지만, 사용하려면, 적어도 선택/시작/해제 버튼이 3개나 필요하므로..<br>
-그냥 둔다.</p>
+<p>그냥 생각만으로 썼는데, 더 쉬운 방법을 알고 계신다면, 그거 사용하시면 될듯 ㅋㅋ</p>
 <p>끝.</p>
 
       
@@ -336,6 +286,11 @@
               </div>
             
               <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-31</span>
                 <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
               </div>
@@ -348,11 +303,6 @@
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
                 <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/00995/">엑셀 - 함수 - numberstring(숫자 한글로 바꾸기)</a>
               </div>
             
           </div>

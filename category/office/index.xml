@@ -135,6 +135,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - worksheetfunction에 없는 엑셀함수 사용하기</title>
+      <link>https://mcjoi.github.io/post/01961/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01961/</guid>
+      <description>&lt;h2 id=&#34;worksheetfunction에-없는-엑셀함수-사용하기&#34;&gt;worksheetfunction에 없는 엑셀함수 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;application.worksheetfuction 을 사용하면, 왠만한 엑셀함수를 VBE에서 사용할수 있다.&lt;br&gt;&#xA;문제는 당연히(?) 없는 함수도 있다는 점인데, 그냥 생각해보면 VBA에서 셀에다가 그냥 수식 텍스트가 입력되게 하면 될 것 같다&amp;hellip;. 확신은 없지만..&lt;/p&gt;&#xA;&lt;p&gt;우선, worksheetfuction을 써보자.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;Cells(1, 2).Value = Application.WorksheetFunction.Sum(1, 2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;요 식은 이런 텍스트를 쳤을때와 동일한 효과일 것이다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=sum(1,2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;이런 형태의 수식을 적어보는건 어떨까..?&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=HYPERLINK(&amp;quot;#&amp;rsquo;&amp;quot;&amp;amp;&amp;ldquo;Sheet2&amp;rdquo;&amp;amp;&amp;quot;&amp;rsquo;!A1&amp;quot;,&amp;ldquo;GO&amp;rdquo;)&lt;/p&gt;&#xA;&lt;p&gt;특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 시트 숨기기/해제하기 컨트롤러</title>
       <link>https://mcjoi.github.io/post/01962/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>

@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - worksheetfunction에 없는 엑셀함수 사용하기</title>
+      <link>https://mcjoi.github.io/post/01961/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01961/</guid>
+      <description>&lt;h2 id=&#34;worksheetfunction에-없는-엑셀함수-사용하기&#34;&gt;worksheetfunction에 없는 엑셀함수 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;application.worksheetfuction 을 사용하면, 왠만한 엑셀함수를 VBE에서 사용할수 있다.&lt;br&gt;&#xA;문제는 당연히(?) 없는 함수도 있다는 점인데, 그냥 생각해보면 VBA에서 셀에다가 그냥 수식 텍스트가 입력되게 하면 될 것 같다&amp;hellip;. 확신은 없지만..&lt;/p&gt;&#xA;&lt;p&gt;우선, worksheetfuction을 써보자.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;Cells(1, 2).Value = Application.WorksheetFunction.Sum(1, 2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;요 식은 이런 텍스트를 쳤을때와 동일한 효과일 것이다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=sum(1,2)&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;이런 형태의 수식을 적어보는건 어떨까..?&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=HYPERLINK(&amp;quot;#&amp;rsquo;&amp;quot;&amp;amp;&amp;ldquo;Sheet2&amp;rdquo;&amp;amp;&amp;quot;&amp;rsquo;!A1&amp;quot;,&amp;ldquo;GO&amp;rdquo;)&lt;/p&gt;&#xA;&lt;p&gt;특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 시트 숨기기/해제하기 컨트롤러</title>
       <link>https://mcjoi.github.io/post/01962/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
