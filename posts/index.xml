@@ -366,6 +366,13 @@
       <description>&lt;h2 id=&#34;시트-숨기기해제하기&#34;&gt;시트 숨기기/해제하기&lt;/h2&gt;&#xA;&lt;p&gt;여러명이 파일이 사용하다보면 필요에 따라 시트를 만들기도 하고, 숨기기도 하는데, 시트를 숨기기/해제하기는 영 귀찮고, 놓치기도 쉽다.&lt;br&gt;&#xA;가끔 외부로 내보내는 파일에 숨기기가 되어있는지 모르고 보내는 ㅎㄷㄷ한 때도 있다.&lt;/p&gt;&#xA;&lt;p&gt;이를 방지하기 위해 간단한 숨기기/해제하기 컨트롤을 VBA로 만들어 보았다. 허접한 코드이지만, 좀 수정하면 괜찮아 질지 모른다.&lt;br&gt;&#xA;사용법은 아래 동영상으로 올려뒀는데, 핵심은 2개의 사용자 버튼을 사용했다는 점이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/1xTLYjLZQOQ&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;첫번째는 목록을 만드는 거고, 두번째는 정보가 업데이트 됐을때, 이를 갱신하는 것이다.&lt;br&gt;&#xA;코드는 아래 있으니, 필요하신 분들은 가져다가 수정해서 쓰시면 되겠음.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - 따옴표(&#34;)를 문자로 인식하는 방법(substitute 함수에서 따옴표(&#34;) 바꾸기)</title>
+      <link>https://mcjoi.github.io/post/01960/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01960/</guid>
+      <description>&lt;h2 id=&#34;엑셀-따옴표를-문자로-인식하는-방법substitute-함수에서-따옴표-바꾸기&#34;&gt;엑셀 따옴표(&amp;quot;)를 문자로 인식하는 방법(substitute 함수에서 따옴표(&amp;quot;) 바꾸기)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀에서는 문자를 &amp;quot;&amp;quot; 안에 넣어서 처리한다.&lt;br&gt;&#xA;그럼. substitute같은 함수에서 바꿀 텍스트를 넣어야하는데, 따옴표(&amp;quot;) 를 바꾸고 싶으면,세개(&amp;quot;&amp;quot;&amp;quot;) 넣으면 될까? 모두의 예상처럼 아니다.&lt;/p&gt;&#xA;&lt;p&gt;다른 프로그램 언어에서처럼 예외 문자에 대한 표시를 해줘야하는데, 그런데, 불행하게 엑셀에서는 그게.. 따옴표(&amp;quot;)다.&lt;/p&gt;&#xA;&lt;p&gt;즉, 따옴표(&amp;quot;)를 바꾸고 싶으면 텍스트를 나타내는 따옴표(&amp;quot;&amp;quot;) 사이에, 예외 처리 따옴표(&amp;quot;) 하나와 바꾸고픈 텍스트 따옴표(&amp;quot;)를 추가하여, 총 4개의 따옴표(&amp;quot;&amp;quot;&amp;quot;&amp;quot;)를 적어주면 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01960/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;Br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;그럼 여기서 문제, 따옴표 두개를 하나의 문자로 바꾸려면, 총 몇개의 따옴표를 써야할까.&lt;br&gt;&#xA;텍스트를 표시하는 따옴표는 그대로이고, 특수문자 구분 따옴표와 변경할 텍스트 따옴표 하나씩을 더 추가해주면 된다.&lt;br&gt;&#xA;총 6개의 따옴표를 적어주면 된다. 아래 그림을 확인해보자.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - CHAR함수로 8자리 랜덤문자 생성하기</title>
       <link>https://mcjoi.github.io/post/01963/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
