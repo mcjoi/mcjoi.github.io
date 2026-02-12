@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>엑셀 - 배열수식, sumproduct, dsum, sumifs 처리 속도 차이 | shaaaaallow dive</title>
+    <title>excel - 전체시트 PDF로 출력하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00992/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01964/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>엑셀 - 배열수식, sumproduct, dsum, sumifs 처리 속도 차이</h1>
+      <h1>excel - 전체시트 PDF로 출력하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-07-10</span>
+          <span>2019-09-19</span>
           
         </div>
         <div class="post-meta-tags">
@@ -141,6 +141,11 @@
             
             
             
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
             
               
               
@@ -170,88 +175,23 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="주요-함수의-처리속도">주요 함수의 처리속도</h2>
-<p>데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.<br>
-배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.</p>
-<br>
-<br>
+        <div class="video-embed">
+  <div class="video-embed-inner">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/5Gyf0td1BOg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
-          
-        
-          
-            
-            <h2 id="실망스러운-dsum">실망스러운 DSUM</h2>
-<p>뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.<br>
-조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png" alt="img"></p>
-<br>
-<br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="의외로-sumifs">의외로 sumifs</h2>
-<p><code>{sum(if()}</code> 배열수식을 <code>sumproduct</code> 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.<br>
-조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&hellip;..<br>
-다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png" alt="img"></p>
-<br>
-<Br>
-
-          
-        
-          
-            
-            <h2 id="실사용-테스트">실사용 테스트</h2>
-<p>약간의 속도차이가 있다고 하더라도, 사용이 불편하면 곤란하기 때문에, 흔히 사용하게 될 and / or 조건이 잘 먹히는지 사용 예시를 적어본다.<br>
-아래 그림을 확인해 보자.</p>
-<p class="text-box">① 번의 수식이 일반적인 sumifs의 사용이다. 기본적으로 모든 조건은 and로 묶이게 된다.<br>
-② 번은 or 조건을 먹이기 위해, {x,x,x} 를 사용했다. 이 방식은 애석하게도 2019버전은 안되고, 365에서 사용이 가능하다.<br>
-③ 번은 sum과 filter 함수의 조합으로 사용은 sum / if 배열함수와 거의 동일하다.<br>
-④ 번은 sum / if 배열함수이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_3.png" alt="img"></p>
-<Br>
-<Br>
-
-          
-        
-          
-            
-            <h2 id="conclusion">conclusion</h2>
-<p>결론은 보이는 것과 같이,</p>
-<ul>
-<li>② 번 혹은 ④ 번이 함수가 간결해 보인다. 이 중 처리속도가 ②번이 빠르다고 했으므로 ② 번이 나아 보이는 듯하나,</li>
-<li>회사에서 2019버전을 사용하고 있으니, 어쩔 수 없이 ④ 번을 사용해야한다.</li>
-</ul>
-<p>그래도 각 방식별로 사용법을 알아둬야, 나중에 사용할 수 있을 것 같으니, 알아두는 것이 좋겠다.</p>
+<h2 id="엑셀-전체시트-pdf로-출력하기">엑셀 전체시트 PDF로 출력하기</h2>
+<p>엑셀시트를 PDF로 저장할 경우가 많은데, 저장하는건.. 그냥 다른이름으로 저장하면 되고, 모든 시트를 페이지로 저장할때는 옵션 하나만 건드려 주면 끝이다.<br>
+그럼에도 불구하고, VBA로 단추를 하나 만들어주면 편하지 않을까 해서, 시작한 일인데, 의외로 좀 짜증나는 설정을 해줘야한다.</p>
 <p>끝.</p>
 
-          
-        
       
     </div>
 
