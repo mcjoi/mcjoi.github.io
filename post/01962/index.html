@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>windows - PDF에서 테이블 추출하기 | shaaaaallow dive</title>
+    <title>excel - 시트 숨기기/해제하기 컨트롤러 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/02999/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01962/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>windows - PDF에서 테이블 추출하기</h1>
+      <h1>excel - 시트 숨기기/해제하기 컨트롤러</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2019-12-02</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
               
               
-                <a class="chip chip--tag" href="/tag/pyhton/">#pyhton</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,62 +175,96 @@
       
       
       
-        <h2 id="상황">상황</h2>
-<p>PDF파일에서 테이블을 추출하기 위해 OCR을 사용하거나, CSV로 변환하는 등 많은 방법을 사용해 보았다.<br>
-하지만 테이블을 온전한 형태로 추출하는 것은 거의 불가능했고, 각각의 방법마다 뭔가 하나  빠진듯한 결과물이 나왔다.</p>
-<p class="text-box">✶ PDF의 테이블은 테이블 형태의 데이터가 아니라 텍스트 + 이미지(라인)이기 때문에 벌어지는 현상으로 추정된다.<br>
-✶ 현재까지 사용해본 방법중에서는 python의 camelot 패키지가 가장 우수한 결과를 보여주기 때문에 이를 활용한 추출 코드 예시를 남긴다.<br>
-✶ PDF 파일을 선택하면, 테이블이 있는 페이지에 대하여, 각 시트별로 테이블을 작성해준다.</p>
-<p><code>sample,py</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Tk
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> askopenfilename, asksaveasfilename
+        <h2 id="시트-숨기기해제하기">시트 숨기기/해제하기</h2>
+<p>여러명이 파일이 사용하다보면 필요에 따라 시트를 만들기도 하고, 숨기기도 하는데, 시트를 숨기기/해제하기는 영 귀찮고, 놓치기도 쉽다.<br>
+가끔 외부로 내보내는 파일에 숨기기가 되어있는지 모르고 보내는 ㅎㄷㄷ한 때도 있다.</p>
+<p>이를 방지하기 위해 간단한 숨기기/해제하기 컨트롤을 VBA로 만들어 보았다. 허접한 코드이지만, 좀 수정하면 괜찮아 질지 모른다.<br>
+사용법은 아래 동영상으로 올려뒀는데, 핵심은 2개의 사용자 버튼을 사용했다는 점이다.</p>
+<br>
+<div class="video-embed">
+  <div class="video-embed-inner">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/1xTLYjLZQOQ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<br>
+<br>
+<p>첫번째는 목록을 만드는 거고, 두번째는 정보가 업데이트 됐을때, 이를 갱신하는 것이다.<br>
+코드는 아래 있으니, 필요하신 분들은 가져다가 수정해서 쓰시면 되겠음.</p>
+<p><code>list.vb</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sheetVisibleOrNot</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Hide the main Tkinter window</span>
-</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> Tk()
-</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
+</span></span><span style="display:flex;"><span>Application.ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Select a PDF file</span>
-</span></span><span style="display:flex;"><span>pdf_file <span style="color:#f92672">=</span> askopenfilename(
-</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select PDF File&#34;</span>,
-</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF files&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
-</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> xlvallist(2) <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    xlvallist(1) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ON&#34;</span>
+</span></span><span style="display:flex;"><span>    xlvallist(2) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;OFF&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_file:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No PDF file selected.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> txt <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Extract tables from the PDF using Camelot</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># &#39;lattice&#39;: for tables with lines, &#39;stream&#39;: for tables without lines</span>
-</span></span><span style="display:flex;"><span>tables <span style="color:#f92672">=</span> camelot<span style="color:#f92672">.</span>read_pdf(pdf_file, pages<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>, flavor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lattice&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> MsgBox(<span style="color:#e6db74">&#34;A, B, C열이 지워집니다.&#34;</span> <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;계속하시려면 &#39;예(Y)&#39;를 클릭하세요.&#34;</span>, vbYesNo <span style="color:#f92672">+</span> vbExclamation, <span style="color:#e6db74">&#34;계속하실껀가요?&#34;</span>) <span style="color:#f92672">=</span> vbYes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        Range(<span style="color:#e6db74">&#34;a:c&#34;</span>).EntireColumn.Delete
+</span></span><span style="display:flex;"><span>        ActiveSheet.Range(<span style="color:#e6db74">&#34;a1&#34;</span>).Activate
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> tables<span style="color:#f92672">.</span>n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No tables found in the PDF.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> Worksheets.Count
+</span></span><span style="display:flex;"><span>            Cells(0 <span style="color:#f92672">+</span> i, 1) <span style="color:#f92672">=</span> Worksheets(i).Name
+</span></span><span style="display:flex;"><span>            txt <span style="color:#f92672">=</span> Worksheets(i).Name
+</span></span><span style="display:flex;"><span>            Cells(0 <span style="color:#f92672">+</span> i, 2).Activate
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Number of tables found: </span><span style="color:#e6db74">{</span>tables<span style="color:#f92672">.</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> Worksheets(i).visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                ActiveCell.Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ON&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>                ActiveCell.Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;OFF&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. Select the location to save the Excel file</span>
-</span></span><span style="display:flex;"><span>excel_file <span style="color:#f92672">=</span> asksaveasfilename(
-</span></span><span style="display:flex;"><span>    title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Save as Excel&#34;</span>,
-</span></span><span style="display:flex;"><span>    defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.xlsx&#34;</span>,
-</span></span><span style="display:flex;"><span>    filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;Excel files&#34;</span>, <span style="color:#e6db74">&#34;*.xlsx&#34;</span>)]
-</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>            Cells(0 <span style="color:#f92672">+</span> i, 3).Value <span style="color:#f92672">=</span> Chr(61) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;HYPERLINK(&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(35) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#39;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> txt <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#39;!A1&#34;&#34;,&#34;&#34;GO&#34;&#34;)&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> excel_file:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No Excel file selected.&#34;</span>)
-</span></span><span style="display:flex;"><span>    exit()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> ActiveCell.Validation
+</span></span><span style="display:flex;"><span>                .Delete
+</span></span><span style="display:flex;"><span>                .Add Type:<span style="color:#f92672">=</span>xlValidateList, AlertStyle:<span style="color:#f92672">=</span>xlValidAlertStop, <span style="color:#66d9ef">Operator</span>:<span style="color:#f92672">=</span>xlBetween, Formula1:<span style="color:#f92672">=</span>Join(xlvallist, <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. Save all extracted tables into an Excel file, each table in a separate sheet</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(excel_file, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, table <span style="color:#f92672">in</span> enumerate(tables):
-</span></span><span style="display:flex;"><span>        sheet_name <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Table_</span><span style="color:#e6db74">{</span>i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># Sheet name for each table</span>
-</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
+</span></span><span style="display:flex;"><span>    Range(<span style="color:#e6db74">&#34;a:a&#34;</span>).EntireColumn.AutoFit
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> ActiveCell
+</span></span><span style="display:flex;"><span>        .Offset(3, 0).Font.ColorIndex <span style="color:#f92672">=</span> 3
+</span></span><span style="display:flex;"><span>        .Offset(4, 0).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;*숨기기 상태의 시트로는 이동할 수 없습니다.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Application.ScreenUpdating <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
+<p><code>control.vb</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">controlVisibility</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> endrow <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ActiveSheet.Cells(1, 2).Select
+</span></span><span style="display:flex;"><span>endrow <span style="color:#f92672">=</span> Range(<span style="color:#e6db74">&#34;b1&#34;</span>).End(xlDown).Row
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> endrow
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Cells(i, 2).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ON&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        Worksheets(i).visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ElseIf</span> Cells(i, 2).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;OFF&#34;</span> <span style="color:#f92672">And</span> Cells(i, 1).Value <span style="color:#f92672">&lt;&gt;</span> ActiveSheet.Name <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        Worksheets(i).visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>: MsgBox <span style="color:#e6db74">&#34;This WorkSheet is Must Be Visible&#34;</span>
+</span></span><span style="display:flex;"><span>    Cells(i, 2).Value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ON&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<Br>
 <p>끝.</p>
 
       
@@ -266,53 +300,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
