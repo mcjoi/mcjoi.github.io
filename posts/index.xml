@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>excel - CHAR함수로 8자리 랜덤문자 생성하기</title>
+      <link>https://mcjoi.github.io/post/01963/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01963/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/MtKJlc8jNEc&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;엑셀-char함수로-8자리-랜덤문자-생성하기&#34;&gt;엑셀 CHAR함수로 8자리 랜덤문자 생성하기&lt;/h2&gt;&#xA;&lt;p&gt;CHAR함수를 쓸일은 많지 않다.office제목처럼 8자리 패스워드를 재발행할 때나 볼법한 랜덤문자를 만들지 않는다면 말이다.&lt;br&gt;&#xA;하지만 CHAR(10)으로 줄바꿈을 하거나 INDIRECT에 CHAR함수를 넣어주면.. 왠지 잘하는 것처럼 보인다고 할까&amp;hellip;?&lt;/p&gt;&#xA;&lt;p&gt;내가 쓰기 위해서라기 보다 남들이 해놓은걸 봤을때 모르면 안되니까. 알아두자&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>excel - 전체시트 PDF로 출력하기</title>
       <link>https://mcjoi.github.io/post/01964/</link>
       <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
