@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>VBA Userform 마우스 hover effect | shaaaaallow dive</title>
+    <title>excel - 함수에 있는 상수 변수를 채우기할때 1씩 늘리기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01991/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01958/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>VBA Userform 마우스 hover effect</h1>
+      <h1>excel - 함수에 있는 상수 변수를 채우기할때 1씩 늘리기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2026-01-27</span>
+          <span>2019-12-17</span>
           
         </div>
         <div class="post-meta-tags">
@@ -141,6 +141,11 @@
             
             
             
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
             
               
               
@@ -170,33 +175,26 @@
       
       
       
-        <h2 id="inspiration">inspiration</h2>
-<p>vba의 기반인 vb6가 기술지원이 종료된게 언제일까? 비개발자, 마케터의 레벨에서 업무에서 친숙하게 사용하는 거의 유일한 프로그래밍 언어가 수십년전 기술이라는건 참 아쉽다.</p>
-<p>지금 시점의 기술과 비교하여 뭔가를 해보자면 이가 빠지게 된 건 당연한것인지도 모르지만, 오늘은 object를 버튼으로 사용할때 마우스 hover효과를 내는 우회방법에 대해 시도해본다.</p>
-<p>macrotoolkit을 만들었는데 마우스 클릭 느낌이 없으니 참 심심하다. 사용상 전혀 문제는 없는데, 어차피 내 만족에 하는거니까..<br>
-사실, 아주 쉽게 될줄 알았는데 대단히 착각이었다. 오기가 생겨서 시도 했다는게 맞는 표현이다.</p>
-<Br>
-<br>
-<h2 id="result">result</h2>
-<p>버튼을 button 대신 label 컴포넌트로 처리했는데, 아이콘 이미지를 넣기 위함이었다. 이로인해 클릭이나 hover 효과가 먹지 않았다. button 컴포넌트를 쓰면 해결될일인가? 그것도 그닥 아름답지 않으니 해결책인지 잘 모르겠다.<br>
-여튼 현재는 label 위에 이미지가 올라간 형태가 되어 있다.</p>
-<p>click up, down 모션보다는 hover 효과를 내보기로한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01991/2025-07-29%2012%2040%2021.gif" alt="img"></p>
-<br>
-<Br>
-<p>mouse position을 detecting 해서 label 배경색을 바꾸고자 했으나, 아이콘이 png가 아닌 관계로 뭔가 지저분해진다.</p>
-<p class="text-box">→ 이미지를 default 와 hover 쌍으로 만든다.<br>
-→ 색을 다시 변경하려면 싹다 다시 뽑아야하니, 신중하게 골라야 한다.<br>
-→ 두 개 이미지를 겹쳐둔다.<br>
-→ 위에 hover를 visible False로 두고, 아래 default를 깐다.<br>
-→ 페이지 전체 백그라운드에 label 하나를 깔고, tranparent로 투명하게 만들어준다.<br>
-→ default에 mousemove 프로시저로, 오버시 hover의 visible을 True로 바꿔준다.<br>
-→ 마지막으로 투명 label에 mousemove 프로시저를 통해 hover의 visible을 다시 False로 바꿔준다.</p>
+        <div class="video-embed">
+  <div class="video-embed-inner">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/bryyyRf_hhY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<h2 id="엑셀-함수에-있는-상수-변수를-채우기할때-1씩-늘리기">엑셀 함수에 있는 상수 변수를 채우기할때 1씩 늘리기</h2>
+<p>엑셀함수에서는 임의로 리스트 형태같은 걸 사용하기 애매하기 때문에, 드래그 했을때, 상수 변수에 1부터 몇까지라는 조건을 붙이기가 애매하다. 이는 column() 혹은 row() 함수로 간단하게 해결이 가능하다.</p>
+<p>가끔 고수들의 문서에서 해당 내용을 보긴 했지만, 내 것으로 만드는데는 약간의 시간이 걸렸다.(별로 쓸일 없음)<br>
+실상 알고 보, 별거 없는 내용이긴 하다. (세상 모든 일이 그렇지.. 허허)</p>
+<p>계획에는 없었는데, (사실 원대한 계획같은건 없다..)<br>
+1년만에 발견한 어떤 분의 댓글에 이 내용이 있길래 적어본다.</p>
 <br>
 <br>
-<h2 id="conclusion">conclusion</h2>
-<p>나름 만족하는 결과이지만 위에 적은 것처럼 색을 바꾸려면 30개가 넘는 이미지를 전부 바꿔줘야한다는 점은 다소 아쉽다.<br>
-PNG 이미지를 사용할수 있다면 너무 간단한 일인데, 뭐하는 건가 싶다.</p>
 <p>끝.</p>
 
       
@@ -238,6 +236,11 @@ PNG 이미지를 사용할수 있다면 너무 간단한 일인데, 뭐하는 �
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
                 <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
@@ -274,11 +277,6 @@ PNG 이미지를 사용할수 있다면 너무 간단한 일인데, 뭐하는 �
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
                 <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/00995/">엑셀 - 함수 - numberstring(숫자 한글로 바꾸기)</a>
               </div>
             
           </div>
