@@ -384,7 +384,7 @@
       <link>https://mcjoi.github.io/post/01982/</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01982/</guid>
-      <description>&lt;h2 id=&#34;두-개-엑셀파일간-업데이트&#34;&gt;두 개 엑셀파일간 업데이트&lt;/h2&gt;&#xA;&lt;p&gt;가끔 문서를 돌리고 취합해야하는 일이 있다. 멍청한 구성원이 순서를 바꾸지만 않는다면, 쉽게 업데이트 코드를 쓸수 있을 것 같다.&lt;br&gt;&#xA;아래 코드는 1.XLSX / 2A.XLSX 두개의 파일에 대해 아래 조건대로 업데이트 한다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;1의 셀이 비어 있으면 2A에서 1로 값 복사&lt;/li&gt;&#xA;&lt;li&gt;1과 2A의 값이 다르면 2A의 값으로 1의 값을 대체. 단, 2A에 해당셀의 값이 없으면 복사하지 않음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;컴이 느려터진 관계로 가로/세로 20번 까지만 설정했다. 왜 오래걸리는지 모르겟다. 아시는분은 알려주시라.&lt;br&gt;&#xA;응용이 가능하겠지만. 시간 관계상 제외하고, 복사해올 참조 엑셀의 이름을 적는 식으로 만들었다.&lt;br&gt;&#xA;오늘도 새로운걸 시도하진 않았고, 아는 만큼만 하게 되더라는&amp;hellip;. ㅋㅋ&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;두-개-엑셀파일간-업데이트&#34;&gt;두 개 엑셀파일간 업데이트&lt;/h2&gt;&#xA;&lt;p&gt;가끔 문서를 돌리고 취합해야하는 일이 있다. 멍청한 구성원이 순서를 바꾸지만 않는다면, 쉽게 업데이트 코드를 쓸수 있을 것 같다.&lt;br&gt;&#xA;아래 코드는 1.XLSX / 2A.XLSX 두개의 파일에 대해 아래 조건대로 업데이트 한다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;1의 셀이 비어 있으면 2A에서 1로 값 복사&lt;/li&gt;&#xA;&lt;li&gt;1과 2A의 값이 다르면 2A의 값으로 1의 값을 대체. 단, 2A에 해당셀의 값이 없으면 복사하지 않음&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;컴이 느려터진 관계로 가로/세로 20번 까지만 설정했다. 왜 오래걸리는지 모르겟다. 아시는분은 알려주시라.&lt;br&gt;&#xA;응용이 가능하겠지만. 시간 관계상 제외하고, 복사해올 참조 엑셀의 이름을 적는 식으로 만들었다.&lt;br&gt;&#xA;오늘도 새로운걸 시도하진 않았고, 아는 만큼만 하게 되더라는&amp;hellip;. ㅋㅋ&lt;/p&gt;</description>
     </item>
     <item>
       <title>excel - 색칠된 셀의 행 삭제하기 또는 값 합산하기</title>
