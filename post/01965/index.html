@@ -189,7 +189,7 @@
 글로 설명하기는 힘들지만, 예를 들어 이 테이블을 가지고 2차 가공하여 추가 요약 테이블을 만들어야하는 경우, 큰 어려움이 발생한다. 이는 컬럼레이블이 &ldquo;월&quot;이라는 레이블 아래 값으로 들어가야 하는 놈들이 들어가 있기 때문이다.<br>
 (뭔말..? 유식하게 표현하지 못하겠다.😭)<br>
 이 때문에, 추가 요약 테이블을 만들 때 수식이 복잡해진다는 뜻이다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/01.png" alt="myimg"></p>
 <br>
 <br>
 <h2 id="열-피벗-해제하기---파워쿼리">열 피벗 해제하기 - 파워쿼리</h2>
@@ -197,22 +197,22 @@
 파워쿼리는 처음써보는 기능인데, 각종 DB를 불러오기 편하게 되어있는 듯 하다.</p>
 <p>아직 파워쿼리를 자유자재로 사용할만큼 실무단계에서의 데이터가 복잡하지는 않았기에, 대부분 위에 기술한 상황에서 전처리를 위한 도구로 사용하고 있다. 이는 딱 버튼 하나면 된다. 일단 해당 테이블(범위)을 파워쿼리로 불러온다.</p>
 <p>꽤 오래전에는 이 또한 별도 설치를 해줘야 했는데, 2019버전을 쓰니, 데이터 메뉴안에 들어와 있다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/02.png" alt="myimg"></p>
 <Br>
 <br>
 <p>불러온 화면은 아래와 같다. 각 컬럼(열)에 대한 데이터 포맷이 자동으로 지정이 되었다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/03.png" alt="myimg"></p>
 <br>
 <br>
 <p>뭔지 모를 버튼들이 엄청 많지만, 앞서 말한 것처럼, 버튼 하나만 사용할 것이다. 흩어져 있는 컬럼(1월, 2월, 3월)을 선택하고, 열 피벗 해제 버튼을 누르면 되는데, 옵션 중 선택한 열만 피벗 해제로 선택한다.</p>
 <p>결과는 아래와 같다. 달라진 점이 눈에 보일지 모르겠다.<br>
 피벗 테이블(요약 테이블) 형태의 값을 각 요인별로 분리하여, DB테이블로 만드는 과정? (아&hellip; 놔..) 이라고 해두자.<br>
 R에서는 reshape 패키지에서 이런 전처리를 진행하는 것으로 알고 있다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/04.png" alt="myimg"></p>
 <br>
 <br>
 <p>홈 메뉴에서 닫기 및 로드를 통해 다시 엑셀 화면으로 돌아오면 끝이다. 한결 수식을 사용하기 편하다는 것을 알 수 있고 원본 DB같은 느낌이 풀풀 풍긴다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/05.png" alt="myimg"></p>
 <br>
 <br>
 <p>2019버전에서 좀 달라진게 있나 했더니, 처리속도가 좀 빨라진것 같고, 뭐 비슷비슷한것 같음.</p>
@@ -224,7 +224,7 @@ R에서는 reshape 패키지에서 이런 전처리를 진행하는 것으로 �
 <p>그래도 그런 복잡한건 부담스러우니, 최소한의 액션으로 처리할 수 있는 방법을 찾아 기재한다.</p>
 <p>열 피벗 해제는 뭔가 하니, 이름처럼, 피벗테이블처럼 구성된 크로스탭 쿼리 결과에 대하여, 다시 원본 DB형태로 전처리 하는 작업이다.(뭔&hellip;소린가..)</p>
 <p>아래와 같이 이름과 소속이 있고, C, D컬럼에 날짜, 근무여부가 있다면, 예를들어 차트 X축에 날짜를 배치하기가 어렵게 된다. C, D열을 Unpivot 해서, A열에 날짜를, D열에 근무여부 1,0을 배치하려고 한다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/06.png" alt="myimg"></p>
 <br>
 <Br>
 <p>사용할 함수는 3가지이며, flatten으로 각 셀의 값을 연결하고, split으로 다시 나눠줄 것이다. split에서 구분자로 사용할 구분자를 나의 경우는 &quot; ________ &ldquo;로 넣었다. 해당 함수를 배열 함수로 처리하면 끝이다.</p>
@@ -246,7 +246,7 @@ R에서는 reshape 패키지에서 이런 전처리를 진행하는 것으로 �
 </span></span></code></pre></div><br>
 <br>
 <p>결과는 대략 아래 그램과 같다.</p>
-<p>myimg</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01965/07.png" alt="myimg"></p>
 <br>
 <Br>
 <p>Unpivot이 실행되어 생성되는 첫번째와 마지막 컬럼사이는 원본 데이터 열이 추가되 었을 경우 추가해도 되고 삭제해도 된다.</p>
