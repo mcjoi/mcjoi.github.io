@@ -188,6 +188,8 @@
 <Br>
 <p>이런 형태의 수식을 적어보는건 어떨까..?</p>
 <p class="text-box">=HYPERLINK(&quot;#&rsquo;&quot;&amp;&ldquo;Sheet2&rdquo;&amp;&quot;&rsquo;!A1&quot;,&ldquo;GO&rdquo;)</p>
+<br>
+<br>
 <p>특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/01.jpg" alt="myimg"></p>
 <Br>
@@ -199,11 +201,13 @@
 <p>이런식으로 변환하게 되면 아래와 같다. 하이퍼링크 함수이기 때문에 이런식으로, 미리 txt 변수를 만들어 주었다.</p>
 <p class="text-box">Dim txt As String<br>
 txt = Cells(2, 4).Value</p>
-<p>myimg<img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/02.jpg" alt="myimg"></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/02.jpg" alt="myimg"></p>
 <br>
 <br>
 <p>한줄로 쓰면 이런식이 되겠다.</p>
 <p class="text-box">Chr(61) &amp; &ldquo;HYPERLINK(&rdquo;&quot;&quot; &amp; Chr(35) &amp; &ldquo;&rsquo;&rdquo;&quot;&quot; &amp; Chr(38) &amp; &quot;&quot;&quot;&quot; &amp; txt &amp; &quot;&quot;&quot;&quot; &amp; Chr(38) &amp; &ldquo;&rdquo;&quot;&rsquo;!A1&quot;&quot;,&ldquo;&ldquo;GO&rdquo;&rdquo;)&quot;</p>
+<Br>
+<br>
 <p>원래 쌍따옴표때문에, 복잡한 수식인데, 더 복잡해 졌다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">test</span>()
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> txt <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
