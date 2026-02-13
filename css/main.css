@@ -875,6 +875,84 @@ ul li::marker {
   width: 100%;
 }
 
+.post-layout {
+  display: block;
+  width: 100%;
+}
+
+.post-toc {
+  position: fixed;
+  top: 120px;
+  left: calc(50% - 600px - 260px);
+  width: 240px;
+  z-index: 10;
+  padding: 14px 14px 16px;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #1b1b1b, #161616);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.post-toc-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: #202020;
+  color: #d7d7d7;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+
+.post-toc-toggle:hover {
+  background: #252525;
+}
+
+.post-toc-body {
+  margin-top: 10px;
+}
+
+.post-toc nav {
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.post-toc ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.post-toc li {
+  margin: 4px 0;
+}
+
+.post-toc a {
+  color: #b9c7e8;
+  text-decoration: none;
+}
+
+.post-toc a:hover {
+  color: #dbe7ff;
+}
+
+@media (max-width: 1400px) {
+  .post-layout {
+    display: block;
+  }
+
+  .post-toc {
+    display: none;
+  }
+}
+
 .related-posts {
   max-width: 980px;
   width: 100%;

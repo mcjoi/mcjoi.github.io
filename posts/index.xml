@@ -44,7 +44,7 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;vba의 기반인 vb6가 기술지원이 종료된게 언제일까? 비개발자, 마케터의 레벨에서 업무에서 친숙하게 사용하는 거의 유일한 프로그래밍 언어가 수십년전 기술이라는건 참 아쉽다.&lt;/p&gt;&#xA;&lt;p&gt;지금 시점의 기술과 비교하여 뭔가를 해보자면 이가 빠지게 된 건 당연한것인지도 모르지만, 오늘은 object를 버튼으로 사용할때 마우스 hover효과를 내는 우회방법에 대해 시도해본다.&lt;/p&gt;&#xA;&lt;p&gt;macrotoolkit을 만들었는데 마우스 클릭 느낌이 없으니 참 심심하다. 사용상 전혀 문제는 없는데, 어차피 내 만족에 하는거니까..&lt;br&gt;&#xA;사실, 아주 쉽게 될줄 알았는데 대단히 착각이었다. 오기가 생겨서 시도 했다는게 맞는 표현이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>엑셀 용량 비정상적으로 커졌을 때 줄이기</title>
+      <title>xls - 용량 비정상적으로 커졌을 때 줄이기</title>
       <link>https://mcjoi.github.io/post/00990/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00990/</guid>
@@ -350,6 +350,27 @@
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05887/</guid>
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 소수점자리가 모두 보이도록 만들기</title>
+      <link>https://mcjoi.github.io/post/01954/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01954/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/qiWzJ5T8d7o&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;소수점자리가-모두-보이도록-만들기&#34;&gt;소수점자리가 모두 보이도록 만들기&lt;/h2&gt;&#xA;&lt;p&gt;소수점이 있는 경우, 대부분 그냥 두번째 자리 정도에서 반올림하여 사용하지만, 아주 때로는 전체 자릿수가 어느정도 되는지 확인할 필요가 있다. 소수점 자리수를 설정하는 기능(아이콘)은 여러 셀이 있었을 때 일괄 적용이 되는 관계로, 다소 불편할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;영역을 지정하여, 전체 소수점 자리가 보이는 매크로를 아주 간단하게 만들수 있을 것 같았는데,&lt;br&gt;&#xA;생각보다, 생각을, 해야했다. ㅋㅋㅋ&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 소수점자리가 모두 보이도록 만들기</title>
+      <link>https://mcjoi.github.io/post/01955/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01955/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/qiWzJ5T8d7o&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;소수점자리가-모두-보이도록-만들기&#34;&gt;소수점자리가 모두 보이도록 만들기&lt;/h2&gt;&#xA;&lt;p&gt;소수점이 있는 경우, 대부분 그냥 두번째 자리 정도에서 반올림하여 사용하지만, 아주 때로는 전체 자릿수가 어느정도 되는지 확인할 필요가 있다. 소수점 자리수를 설정하는 기능(아이콘)은 여러 셀이 있었을 때 일괄 적용이 되는 관계로, 다소 불편할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;영역을 지정하여, 전체 소수점 자리가 보이는 매크로를 아주 간단하게 만들수 있을 것 같았는데,&lt;br&gt;&#xA;생각보다, 생각을, 해야했다. ㅋㅋㅋ&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 배열함수 안에서 와일드카드 문자 사용하기</title>
+      <link>https://mcjoi.github.io/post/01956/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01956/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/g9wcalBgw2E&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;sumif-와-sum배열함수&#34;&gt;sumif 와 sum배열함수&lt;/h2&gt;&#xA;&lt;p&gt;두 가지 함수 사용에 있어 차이는 뭐라고 생각이 들지 모르겠다.&lt;br&gt;&#xA;개인적인 생각은 sumif는 조건에 와일드카드문자(*)를 사용할 수 있다는 장점을 가지고, sum배열수식은 조건을 정의하기 위해 다른 함수를 사용할 수 있다는 장점을 가지는 정도겠다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;배열함수-내에서의-와일드카드문자&#34;&gt;배열함수 내에서의 와일드카드문자&lt;/h2&gt;&#xA;&lt;p&gt;배열함수 내에서, find함수를 사용해서 와일드카드문자(여기서는 *)를 대체해서 사용하는 방법이었다.&lt;/p&gt;&#xA;&lt;p&gt;아래 표에서, 입금은행이 &lt;code&gt;국민/기업은행 이면 &amp;quot;국민은행 또는 기업은행&amp;quot; 표시&lt;/code&gt;, &lt;code&gt;우리은행 이면 &amp;quot;우리은행&amp;quot; 으로 표시&lt;/code&gt;&lt;br&gt;&#xA;하려고 한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>xls - vba - 텍스트(입력키) 매크로</title>
