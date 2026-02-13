@@ -345,6 +345,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 사용자서식 - 숫자 표시형식에서 회계형식처럼 우측에 여백주기</title>
+      <link>https://mcjoi.github.io/post/01946/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01946/</guid>
+      <description>&lt;h2 id=&#34;숫자-표시형식에서-회계형식처럼-우측에-여백주기&#34;&gt;숫자 표시형식에서 회계형식처럼 우측에 여백주기&lt;/h2&gt;&#xA;&lt;p&gt;회계 형식을 선택하면, 우측정렬이 되지만, 우측에 여백이 하나 생긴다. (스페이스바 한번 누른 것처럼)&lt;br&gt;&#xA;숫자를 좀 더 보기 편하게 해준다. 하지만, 회계 형식은 가운데 정렬이 되지 않는다. 가운데 정렬을 위해서는 숫자 형식으로 바꿔줘야 할 필요가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01946/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;하고-싶은-것&#34;&gt;하고 싶은 것&lt;/h2&gt;&#xA;&lt;p&gt;가운데 정렬이 가능한 숫자 형식에서, 회계형식처럼 우측의 여백을 두어 예쁘게 만들고 싶다. 기본 숫자 형식에는 우측 여백이 아래 그림처럼 없다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01946/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;해야-하는-것&#34;&gt;해야 하는 것&lt;/h2&gt;&#xA;&lt;p&gt;표시형식을 달달 외우고 있다면, 이미 알고 있겠지만, 강제로 표시 형식에서 여백을 주는건 _-(언더바+대쉬) 이다.&lt;br&gt;&#xA;두번정도 적어주면 회계형식과 거의 비슷하게 된다. 다른건 눈치껏 쓰면 되지만, 이건 미리보기에도 표시하지 않아서, 알기 애매하다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 차트 서식 복사</title>
       <link>https://mcjoi.github.io/post/01949/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>

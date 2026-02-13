@@ -128,6 +128,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 사용자서식 - 숫자 표시형식에서 회계형식처럼 우측에 여백주기</title>
+      <link>https://mcjoi.github.io/post/01946/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01946/</guid>
+      <description>&lt;h2 id=&#34;숫자-표시형식에서-회계형식처럼-우측에-여백주기&#34;&gt;숫자 표시형식에서 회계형식처럼 우측에 여백주기&lt;/h2&gt;&#xA;&lt;p&gt;회계 형식을 선택하면, 우측정렬이 되지만, 우측에 여백이 하나 생긴다. (스페이스바 한번 누른 것처럼)&lt;br&gt;&#xA;숫자를 좀 더 보기 편하게 해준다. 하지만, 회계 형식은 가운데 정렬이 되지 않는다. 가운데 정렬을 위해서는 숫자 형식으로 바꿔줘야 할 필요가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01946/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;하고-싶은-것&#34;&gt;하고 싶은 것&lt;/h2&gt;&#xA;&lt;p&gt;가운데 정렬이 가능한 숫자 형식에서, 회계형식처럼 우측의 여백을 두어 예쁘게 만들고 싶다. 기본 숫자 형식에는 우측 여백이 아래 그림처럼 없다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01946/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;해야-하는-것&#34;&gt;해야 하는 것&lt;/h2&gt;&#xA;&lt;p&gt;표시형식을 달달 외우고 있다면, 이미 알고 있겠지만, 강제로 표시 형식에서 여백을 주는건 _-(언더바+대쉬) 이다.&lt;br&gt;&#xA;두번정도 적어주면 회계형식과 거의 비슷하게 된다. 다른건 눈치껏 쓰면 되지만, 이건 미리보기에도 표시하지 않아서, 알기 애매하다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 차트 서식 복사</title>
       <link>https://mcjoi.github.io/post/01949/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
