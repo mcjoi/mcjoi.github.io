@@ -422,6 +422,27 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 수식 에러의 근원. 복사와 자르기. 절대참조와 상대참조.</title>
+      <link>https://mcjoi.github.io/post/01951/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01951/</guid>
+      <description>&lt;h2 id=&#34;엑셀-수식에러의-근원-복사와-자르기-절대참조와-상대참조&#34;&gt;엑셀 수식에러의 근원. 복사와 자르기. 절대참조와 상대참조&lt;/h2&gt;&#xA;&lt;p&gt;수식에서 셀 참조를 할때, 절대참조와 상대참조가 있다는건 다 알고 있는 사실이다.&lt;br&gt;&#xA;드래그로 자동완성을 할것을, 고려할때는 이를 심각하게 생각하지만, 셀이나 열/행을 통째로 옮길 때는 잘 고려하지 않게 된다.&lt;/p&gt;&#xA;&lt;p&gt;아주 간단하지만, 모든실수의 근원, 예상은 가능하지만, 매번 혼란스러운 것. 고수들도 가끔 잊을 때가 있을 그것.&lt;/p&gt;&#xA;&lt;p&gt;셀 또는 열/행을 통째로 옮길 때, 수식이 어찌 되는지 간단한 샘플로 보자.&lt;br&gt;&#xA;N1과 N2로 구성된 표가 있다. 옆에는 N1열의 합계를 내는 수식이 있다고 하자.&lt;br&gt;&#xA;물론 상대참조로 되어있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 셀 텍스트의 일부에 색을 넣고 싶은데, 안들어갈 때</title>
+      <link>https://mcjoi.github.io/post/01952/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01952/</guid>
+      <description>&lt;h2 id=&#34;엑셀-텍스트에-색-넣기&#34;&gt;엑셀 텍스트에 색 넣기&lt;/h2&gt;&#xA;&lt;p&gt;의외로 엑셀 셀안에서 텍스트에 여러가지 색을 쓸 일이 종종 있다. 특히 줄 바꿈을 할때, 자주 쓰곤 한다.&lt;br&gt;&#xA;너무 쉬운 기능이라서, 한번도 동작 원리에 대해 생각해 본적은 없는데, 가끔 색이 안먹을 때가 있다.&lt;br&gt;&#xA;다들 한번씩 경험해 보지 않았는가?&lt;/p&gt;&#xA;&lt;p&gt;내가 찾은 답이 맞는지 모르겠지만, 결론만 말하면, 셀이 회계 형식으로 설정되어 있으면, 안된다.&lt;br&gt;&#xA;다른 거의 모든 셀 형식에서는 상관이 없는 듯하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01952/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;귀차니즘으로 모든 형식을 대입해보지는 않았다.ㅋㅋ&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 숨기기와 Subtotal 함수</title>
+      <link>https://mcjoi.github.io/post/01953/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01953/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/Sa0pZc5HYRU&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;엑셀-숨기기와-subtotal-함수&#34;&gt;엑셀 숨기기와 Subtotal 함수&lt;/h2&gt;&#xA;&lt;p&gt;의외로 실무에서 Subtotal 함수를 자주 사용하게 된다.&lt;/p&gt;&#xA;&lt;p&gt;Subtotal 함수는 대부분 자동필터와 사용하게 되는데, 숨기기를 병행할때는 사용법을 바꿔줘야한다.&lt;br&gt;&#xA;sum의 경우, 상수변수에 9와 109가 존재하는 이유이다.&lt;/p&gt;&#xA;&lt;p&gt;아주 간단하거지만, 모르면 모르는게 된다.🤪&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 소수점자리가 모두 보이도록 만들기</title>
       <link>https://mcjoi.github.io/post/01954/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
