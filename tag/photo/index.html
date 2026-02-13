@@ -391,20 +391,6 @@
     </script>
     <script>
       (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
-        });
-      })();
-    </script>
-    <script>
-      (function() {
         const fab = document.querySelector('.fab');
         const btn = document.querySelector('.fab-btn');
         const menu = document.querySelector('.fab-menu');

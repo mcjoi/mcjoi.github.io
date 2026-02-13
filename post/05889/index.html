@@ -168,31 +168,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#접이식-키보드-사용기">접이식 키보드 사용기</a></li>
-    <li><a href="#사용해본-제품들">사용해본 제품들</a>
-      <ul>
-        <li><a href="#pisnet-folder">PISNET FOLDER</a></li>
-        <li><a href="#x-folding-touch-pro">X-FOLDING TOUCH PRO</a></li>
-        <li><a href="#브랜드를-알-수-없는-폴더-키보드">브랜드를 알 수 없는 폴더 키보드</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -271,7 +247,6 @@
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -550,20 +525,6 @@
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

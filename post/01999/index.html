@@ -181,115 +181,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-is-it">What is it?</a>
-      <ul>
-        <li><a href="#엑셀">엑셀</a></li>
-        <li><a href="#파워포인트">파워포인트</a></li>
-      </ul>
-    </li>
-    <li><a href="#things-to-know">Things to Know</a></li>
-    <li><a href="#file-download--tutorial">File download &amp; tutorial</a></li>
-    <li><a href="#excel---scripts--tutorial">excel - Scripts &amp; Tutorial</a></li>
-    <li><a href="#cell-format-script">Cell format Script</a>
-      <ul>
-        <li><a href="#cell-outline-1--linegray">cell outline (1) : lineGray</a></li>
-        <li><a href="#cell-outline-2--lineblack">cell outline (2) : lineBlack</a></li>
-        <li><a href="#cell-outline-3--lineblackbold">cell outline (3) : lineBlackBold</a></li>
-        <li><a href="#colorfill">colorFill</a></li>
-        <li><a href="#seta4">setA4</a></li>
-        <li><a href="#colorpicker">colorpicker</a></li>
-        <li><a href="#copywidthheight">copyWidthHeight</a></li>
-      </ul>
-    </li>
-    <li><a href="#value-format-script">Value format Script</a>
-      <ul>
-        <li><a href="#number-format-1---formatnum_normal">Number format (1) - formatNum_normal</a></li>
-        <li><a href="#number-format-2---formatnum_thousand">Number format (2) - formatNum_thousand</a></li>
-        <li><a href="#number-format-3---formatnum_mil">Number format (3) - formatNum_mil</a></li>
-        <li><a href="#number-format-4---formatnum_date">Number format (4) - formatNum_date</a></li>
-        <li><a href="#delhyperlink">delHyperlink</a></li>
-        <li><a href="#delblank">delBlank</a></li>
-      </ul>
-    </li>
-    <li><a href="#function-script">Function Script</a>
-      <ul>
-        <li><a href="#savebysheetname">savebysheetname</a></li>
-        <li><a href="#coloredrowdel">coloredRowDel</a></li>
-        <li><a href="#handling-duplication-1---checkduplication">Handling Duplication (1) - checkDuplication</a></li>
-        <li><a href="#handling-duplication-2---removeduplicates">Handling Duplication (2) - removeDuplicates</a></li>
-        <li><a href="#clearfilter">clearFilter</a></li>
-        <li><a href="#fontset">fontset</a></li>
-      </ul>
-    </li>
-    <li><a href="#data-util-script">Data Util Script</a>
-      <ul>
-        <li><a href="#calculation-1---growthrate">Calculation (1) - growthRate</a></li>
-        <li><a href="#calculation-2---achievementrate">Calculation (2) - achievementRate</a></li>
-        <li><a href="#calculation-3---cagr">Calculation (3) - CAGR</a></li>
-        <li><a href="#wordfill">WordFill</a></li>
-        <li><a href="#alldecimals">allDecimals</a></li>
-        <li><a href="#upsidedown">upsidedown</a></li>
-        <li><a href="#inputrandomvalue">inputRandomValue</a></li>
-        <li><a href="#septext">sepText</a></li>
-        <li><a href="#handling-name-1---tabletoarray">Handling Name (1) - tableToArray</a></li>
-        <li><a href="#handling-name-2---shownamelist">Handling Name (2) - shownamelist</a></li>
-        <li><a href="#pivotrefresh">pivotRefresh</a></li>
-        <li><a href="#launchtextsplitter">LaunchTextSplitter</a></li>
-        <li><a href="#dietfilesize">dietFileSize</a></li>
-      </ul>
-    </li>
-    <li><a href="#version-history">Version History</a></li>
-    <li><a href="#powerponint-scripts">powerponint Scripts</a></li>
-    <li><a href="#script-table">Script-table</a>
-      <ul>
-        <li><a href="#make-table">Make Table</a></li>
-        <li><a href="#table-size">Table Size</a></li>
-        <li><a href="#delblank-1">delblank</a></li>
-      </ul>
-    </li>
-    <li><a href="#script-color">Script-color</a>
-      <ul>
-        <li><a href="#rgb_color">RGB_color</a></li>
-        <li><a href="#color_palette">Color_palette</a></li>
-      </ul>
-    </li>
-    <li><a href="#script-text">Script-text</a>
-      <ul>
-        <li><a href="#text-arrange">Text arrange</a></li>
-        <li><a href="#zeromargin">zeromargin</a></li>
-      </ul>
-    </li>
-    <li><a href="#script-slide">Script-slide</a>
-      <ul>
-        <li><a href="#jpg-export">jpg export</a></li>
-        <li><a href="#slide_resizes">slide_resizes</a></li>
-        <li><a href="#grouprelease">groupRelease</a></li>
-      </ul>
-    </li>
-    <li><a href="#script-shape">Script-shape</a>
-      <ul>
-        <li><a href="#align_bottom">align_bottom</a></li>
-        <li><a href="#align_right">align_right</a></li>
-        <li><a href="#guidebox">guidebox</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -640,7 +532,6 @@
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -919,20 +810,6 @@
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

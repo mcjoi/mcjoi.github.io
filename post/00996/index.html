@@ -166,37 +166,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#조건에-맞는-값찾기">조건에 맞는 값찾기</a>
-      <ul>
-        <li><a href="#index-match">index, match</a></li>
-        <li><a href="#vlookup과-match함수">VLOOKUP과 MATCH함수</a></li>
-      </ul>
-    </li>
-    <li><a href="#배열수식---조건에-맞는-영역-처리합-갯수-등">배열수식 - 조건에 맞는 영역 처리(합, 갯수 등)</a>
-      <ul>
-        <li><a href="#sumproduct-sum-배열">sumproduct, sum 배열</a></li>
-        <li><a href="#sum-배열에서-와일드카드-문자-사용">sum 배열에서 와일드카드 문자 사용</a></li>
-        <li><a href="#배열수식에서-영역참조-사용">배열수식에서 영역참조 사용</a></li>
-        <li><a href="#배열수식---영역참조---다중조건">배열수식 - 영역참조 - 다중조건</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -335,7 +305,6 @@ SUMIF 수식은 간단하다. 와일드카드문자를 &amp;로 연결해서 사
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -614,20 +583,6 @@ SUMIF 수식은 간단하다. 와일드카드문자를 &amp;로 연결해서 사
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

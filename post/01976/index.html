@@ -171,25 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#엑셀-함수로-뒤집기">엑셀 함수로 뒤집기</a></li>
-    <li><a href="#엑셀-vba로-뒤집기">엑셀 VBA로 뒤집기</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -280,7 +262,6 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -559,20 +540,6 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

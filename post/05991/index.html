@@ -166,33 +166,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#a7c2">A7C2</a></li>
-    <li><a href="#최소-셔터속도-설정">최소 셔터속도 설정</a></li>
-    <li><a href="#선명한-이미지-줌clear-image-zoom-초점">선명한 이미지 줌(Clear Image Zoom) 초점</a></li>
-    <li><a href="#배터리와-발열">배터리와 발열</a></li>
-    <li><a href="#전자-셔터">전자 셔터</a></li>
-    <li><a href="#플리커">플리커</a></li>
-    <li><a href="#동영상이미지-기능-분리">동영상/이미지 기능 분리</a></li>
-    <li><a href="#s-cinetone-creative-look">S-Cinetone, Creative Look</a></li>
-    <li><a href="#크롭-렌즈-사용">크롭 렌즈 사용</a></li>
-    <li><a href="#결론">결론</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -337,7 +311,6 @@
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -616,20 +589,6 @@
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

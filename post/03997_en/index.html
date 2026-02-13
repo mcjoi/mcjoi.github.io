@@ -171,30 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-is-it">What is it?</a></li>
-    <li><a href="#structure">Structure</a></li>
-    <li><a href="#package">Package</a></li>
-    <li><a href="#window-manager">window manager</a></li>
-    <li><a href="#flutter_acrylic">flutter_acrylic</a></li>
-    <li><a href="#system_tray">system_tray</a></li>
-    <li><a href="#result">Result</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -339,7 +316,6 @@ I&rsquo;ll need a settings page eventually.</p>
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -618,20 +594,6 @@ I&rsquo;ll need a settings page eventually.</p>
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

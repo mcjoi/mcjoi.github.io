@@ -171,28 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#sumif-와-sum배열함수">sumif 와 sum배열함수</a></li>
-    <li><a href="#배열함수-내에서의-와일드카드문자">배열함수 내에서의 와일드카드문자</a></li>
-    <li><a href="#영역참조-배열수식에서-사용">영역참조 배열수식에서 사용</a></li>
-    <li><a href="#다중조건-배열수식에서-사용">다중조건 배열수식에서 사용</a></li>
-    <li><a href="#복잡하지만-유용함">복잡하지만 유용함</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -327,7 +306,6 @@ F9 키를 통해 미리 결과를 확인해본다면, 적절하게 수식을 만
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -606,20 +584,6 @@ F9 키를 통해 미리 결과를 확인해본다면, 적절하게 수식을 만
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

@@ -166,26 +166,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#상황">상황</a></li>
-    <li><a href="#테이블-통째로-복사-개선">테이블 통째로 복사 개선</a></li>
-    <li><a href="#파일-연동링크-방법-개선">파일 연동(링크) 방법 개선</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -430,7 +411,6 @@ import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 �
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -709,20 +689,6 @@ import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 �
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

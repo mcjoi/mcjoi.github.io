@@ -168,33 +168,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#티스토리">티스토리</a></li>
-    <li><a href="#블로그-서비스">블로그 서비스</a></li>
-    <li><a href="#구조">구조</a>
-      <ul>
-        <li><a href="#hugo--github-pages">hugo + github pages</a></li>
-        <li><a href="#flutter-web--github-pages">flutter web + Github pages</a></li>
-      </ul>
-    </li>
-    <li><a href="#경과">경과</a></li>
-    <li><a href="#결론">결론</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -330,7 +304,6 @@ Github에서 제공하는 서비스. Markdown 언어로 작성을 하며, gitboo
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -609,20 +582,6 @@ Github에서 제공하는 서비스. Markdown 언어로 작성을 하며, gitboo
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

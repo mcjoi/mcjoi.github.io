@@ -171,32 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#색칠된-셀의-행-삭제하기">색칠된 셀의 행 삭제하기</a></li>
-    <li><a href="#보너스-짝수값이-들어-있는-셀-색칠하기">[보너스] 짝수값이 들어 있는 셀 색칠하기</a></li>
-    <li><a href="#색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</a></li>
-    <li><a href="#방법">방법</a>
-      <ul>
-        <li><a href="#case-1-sub-프로시저-사용">CASE #1. SUB 프로시저 사용</a></li>
-        <li><a href="#case-2-function-프로시저-사용">CASE #2. FUNCTION 프로시저 사용</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -364,7 +339,6 @@
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -643,20 +617,6 @@
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

@@ -171,31 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#inspiration">inspiration</a></li>
-    <li><a href="#two-scenarios">Two Scenarios</a></li>
-    <li><a href="#win32-and-ffi">Win32 and FFI</a></li>
-    <li><a href="#scenario-details">Scenario Details</a></li>
-    <li><a href="#packages-used">Packages Used</a></li>
-    <li><a href="#calling-the-dll">Calling the DLL</a></li>
-    <li><a href="#lottie-animation">Lottie Animation</a></li>
-    <li><a href="#result">Result</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -571,7 +547,6 @@ Should right-clicks have a separate animation?</p>
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -850,20 +825,6 @@ Should right-clicks have a separate animation?</p>
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

@@ -166,24 +166,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#병합된-셀-풀고-값-채우기if함수-활용">병합된 셀 풀고 값 채우기(IF함수 활용)</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -216,7 +199,6 @@ IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째�
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -495,20 +477,6 @@ IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째�
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

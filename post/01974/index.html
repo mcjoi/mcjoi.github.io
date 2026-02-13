@@ -171,31 +171,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#중복값-처리">중복값 처리</a></li>
-    <li><a href="#countif">COUNTIF</a></li>
-    <li><a href="#중복된-항목-제거">중복된 항목 제거</a></li>
-    <li><a href="#조건부-서식">조건부 서식</a></li>
-    <li><a href="#자작-매크로">자작 매크로</a></li>
-    <li><a href="#응용---중복값-없애고-텍스트-목록-가로로-이어붙이기">응용 - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</a></li>
-    <li><a href="#중복값-없애고-동적으로-값-등록하기">중복값 없애고 동적으로 값 등록하기</a></li>
-    <li><a href="#조건에-따라-텍스트-이어주기">조건에 따라 텍스트 이어주기</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -395,7 +371,6 @@ IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -674,20 +649,6 @@ IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

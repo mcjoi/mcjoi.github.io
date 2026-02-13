@@ -168,39 +168,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#셀-단위---계산처리표시-오류">셀 단위 - 계산/처리/표시 오류</a>
-      <ul>
-        <li><a href="#div0">#DIV/0!</a></li>
-        <li><a href="#value">#VALUE!</a></li>
-        <li><a href="#ref">#REF!</a></li>
-        <li><a href="#name">#NAME?</a></li>
-        <li><a href="#num">#NUM!</a></li>
-        <li><a href="#na">#N/A</a></li>
-        <li><a href="#null">#NULL!</a></li>
-      </ul>
-    </li>
-    <li><a href="#워크북-단위---순환참조">워크북 단위 - 순환참조</a>
-      <ul>
-        <li><a href="#순환참조-찾고-없애기">순환참조 찾고, 없애기</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -258,7 +226,6 @@
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -537,20 +504,6 @@
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

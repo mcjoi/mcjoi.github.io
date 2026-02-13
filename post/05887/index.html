@@ -168,26 +168,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#화이트밸런스-카드-자작-diy">화이트밸런스 카드 자작 DIY</a></li>
-    <li><a href="#그레이카드냐-화이트카드냐">그레이카드냐, 화이트카드냐</a></li>
-    <li><a href="#플래시스트로보-화이트밸런스">플래시(스트로보) 화이트밸런스</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -231,7 +212,6 @@ TT350 플래시는 순간 발광이라 일반 촬영에서는 잘 느껴지지 �
 
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -510,20 +490,6 @@ TT350 플래시는 순간 발광이라 일반 촬영에서는 잘 느껴지지 �
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

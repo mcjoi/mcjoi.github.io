@@ -166,28 +166,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#사용자정의-표시형식">사용자정의 표시형식</a></li>
-    <li><a href="#1-vba로-mdf-만들기">#1 VBA로 MDF 만들기</a></li>
-    <li><a href="#2-이름정의로-서식-지정하기">#2 이름정의로 서식 지정하기</a></li>
-    <li><a href="#3-이름정의의-한계-어쩔수-없이-사용해야하는-셀스타일">#3 이름정의의 한계, 어쩔수 없이 사용해야하는 셀스타일</a></li>
-    <li><a href="#conclusion">conclusion</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -490,7 +469,6 @@ TEXT 함수이기 때문에 CHAR(10)과 함께 두줄을 표기하고, 각 줄�
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -769,20 +747,6 @@ TEXT 함수이기 때문에 CHAR(10)과 함께 두줄을 표기하고, 각 줄�
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>

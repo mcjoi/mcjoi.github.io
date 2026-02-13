@@ -176,27 +176,7 @@
 
     </div>
 
-    <div class="post-layout">
-      
-      
-        <aside class="post-toc" aria-label="Table of contents">
-          <button class="post-toc-toggle" type="button" aria-expanded="false">
-            On this page
-          </button>
-          <div class="post-toc-body" hidden>
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#vba매크로">VBA(매크로)</a></li>
-    <li><a href="#추가-기능add-in">추가 기능(add-in)</a></li>
-    <li><a href="#엑셀">엑셀</a></li>
-    <li><a href="#파워포인트">파워포인트</a></li>
-  </ul>
-</nav>
-          </div>
-        </aside>
-      
-
-      <div class="post-content">
+    <div class="post-content">
         
         
         
@@ -295,7 +275,6 @@ powerpoint 추가기능으로 저장해둔 .ppam 파일을 호출한다.<br>
           
         
       </div>
-    </div>
 
     <div class="ad-slot">
       
@@ -574,20 +553,6 @@ powerpoint 추가기능으로 저장해둔 .ppam 파일을 호출한다.<br>
             e.stopPropagation();
             copyCode();
           });
-        });
-      })();
-    </script>
-    <script>
-      (function() {
-        const toc = document.querySelector('.post-toc');
-        if (!toc) return;
-        const toggle = toc.querySelector('.post-toc-toggle');
-        const body = toc.querySelector('.post-toc-body');
-        if (!toggle || !body) return;
-        toggle.addEventListener('click', () => {
-          const isOpen = toc.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          body.hidden = !isOpen;
         });
       })();
     </script>
