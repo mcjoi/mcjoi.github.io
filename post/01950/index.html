@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 피벗테이블 없이 동적인 리스트로 요약테이블 항목 만들기 | shaaaaallow dive</title>
+    <title>xls - 이름정의 - 전부 지우기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01967/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01950/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 피벗테이블 없이 동적인 리스트로 요약테이블 항목 만들기</h1>
+      <h1>xls - 이름정의 - 전부 지우기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2019-09-04</span>
+          <span>2020-12-18</span>
           
         </div>
         <div class="post-meta-tags">
@@ -175,83 +175,25 @@
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="피벗테이블-없이-동적인-리스트로-요약테이블-항목-만들기match-index-countif">피벗테이블 없이 동적인 리스트로 요약테이블 항목 만들기(match, index, countif)</h2>
-<p>배열함수로 VBA처럼 조건문을 활용해야는 경우가 많은데, 아무래도 생각을 좀 해야하는 관계로,<br>
-사용에 소극적이 될수 밖에 없다. 하지만, 한번 생각하고 서식에 두고두고 써먹을 수 있다면 의미가 있다고 생각한다.<br>
-지금 적는 글도 그와 다르지 않으니, 테이블에서 중복값을 없애고 새로운 요약테이블 항목을 만드는 작업이다.</p>
-<p>내 경우에는 이해는 해도 막상 자유자재로 응용을 할수 있을까란 생각이 들었다.<br>
-하지만, 아무렴어떤가.. 지금의 문제를 해결한게 중하지.. ㅋ<br>
-아래 그림의 A열과 같이, 중복값을 처리할 target area가 있다고 하자. 영역을 tarr2로 이름정의를 해두었다.<br>
-사용되는 함수와 내용을 차근차근 본다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01967/01.png" alt="myimg"></p>
-<Br>
-<Br>
-
-            
-          
-            
-              
-                <div class="ad-slot">
-                  
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-                </div>
-              
-              <h2 id="match">match</h2>
-<p>match 함수는 4개의 인자를 가진다.</p>
-<p class="text-box"><code>lookup_value</code> : 찾으려는 값<br>
-<code>lookup_array</code> : 찾으려는 값이 들어있을 것 같은 배열<br>
-<code>match_type</code> : 정확하게 일치하는 값을 찾을지에 대한 파라미터(0을 넣으면 정확하게 일치하는 값을 찾음)</p>
-<Br>
-<br>
-<p>중요한 점은 찾으려는 값이 첫번째로 등장하는 배열(lookup_array)상의 순서(index)를 반환한다는 점이다. 값이 아니라 순서를 반환한다는 것을 잊지 말아야 한다.</p>
-<p>아래 우측 테이블처럼, countif를 c열의 값을 위에서부터 차례대로 한행씩 확장되게 걸어두고, 같은 값이 존재하는지 여부를 확인하면, 현재는 아래 그림처럼 같은 값이 없으니, 전부 0을 반환할 것이다. match 함수에서는 해당 값이 0인 첫번째 순서가 true가 되므로, 결과가 1이 된 것이다.<br>
-(배열 수식 처리를 해줘야하는 것을 잊으면 안된다.)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01967/02.png" alt="myimg"></p>
-<Br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="index">index</h2>
-<p>index 함수로 반환된 순서 값을 값으로 변경하는 작업을 진행한다. tarr2 배열에서, match 함수로 불러들인 결과를 넣어주면 된다. F열 1번행에서는 결과가 1이었으므로, tarr2 배열에서의 첫번째 값인 5가 반환된다. F열 2번행부터는 위에 5가 생겼기 때문에, match함수의 결과가 H열 match2처럼 달라졌을음 알 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01967/03.png" alt="myimg"></p>
-<Br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="iferror">iferror</h2>
-<p>iferror 문으로 더 이상 추가할 값이 없을 때, 예외를 지정해주면 길고 긴 싸움이 끝난다.<br>
-예외가 나오기 전까지 자동 채우기를 해주면 된다. 애초에 넉넉하게 행을 확보해두고 작업하는 것이 좋다.</p>
-<p>myimg</p>
+          <h2 id="이름정의로-정의된-이름-지우기">이름정의로 정의된 이름 지우기</h2>
+<p>이름정의로 엉망징창이된 엑셀파일들을 한번쯤은 받아본 기억이 있을 것이다. 본인도 모르는 사이에 정의된 이름이 많다면, 한번에 지우기도 어렵고, 엄청난 에러의 씨앗이 될 것이다.</p>
+<p>VBA로 한번에 다 지우자. 아래처럼 이름정의가 된 파일이 있으면,</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/03.png" alt="myimg"></p>
 <br>
 <br>
+<p>ALT + F11 로 VBA창 띄우고, 내 문서를 프로젝트 창에서 선택하고 ALT → I → M 순서대로 입력<br>
+아래 있는 코드 복붙하고, F5 누른다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/02.png" alt="myimg"></p>
+<br>
+<br>
+<p>실행하면 다 지워진다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/01.png" alt="myimg"></p>
+<br>
+<br>
+<p>단, 본인이 이름정의를 활용한 수식을 사용하고 있다면, 수동으로 지워줘야 하겠다.<br>
+더 큰 재앙이 일어날 수 있다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 

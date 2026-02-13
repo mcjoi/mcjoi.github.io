@@ -100,13 +100,6 @@
       <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube-nocookie.com/embed/sLGsDbAlgUw&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;조건에-맞는-값찾기&#34;&gt;조건에 맞는 값찾기&lt;/h2&gt;&#xA;&lt;h3 id=&#34;index-match&#34;&gt;index, match&lt;/h3&gt;&#xA;&lt;p&gt;조건 값 찾기의 다양한 방법 중, index, match는 중요하다.&lt;br&gt;&#xA;xlookup이 나오기 전까지는 조건보다 좌측에 위치한 컬럼값을 찾는 경우, 거의 유일한 방법이기도 했다. 그 말은 지금은 그냥 xlookup 쓰면 된다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;예시를 보면, 아래의 그림 중 서울 지역의 학생수를 찾으려고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00996/00996_01.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;vlookup과-match함수&#34;&gt;VLOOKUP과 MATCH함수&lt;/h3&gt;&#xA;&lt;p&gt;MATCH함수로 조건2에 대한 열번호를 알아낸 다음, VLOOKUP의 열을 찾는다.&lt;br&gt;&#xA;MATCH함수는 사실 영역 내에서 값이 몇번째인지 나타내는 함수로, 만약 혼자 엑셀을 상식선에서 쓰고 있다면 죽었다 깨나도 써먹을 일이 없을 함수이기도 하다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - 사용자정의 숫자 서식 좀 편하게 설정하기</title>
-      <link>https://mcjoi.github.io/post/00991/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/00991/</guid>
-      <description>&lt;h2 id=&#34;사용자정의-표시형식&#34;&gt;사용자정의 표시형식&lt;/h2&gt;&#xA;&lt;p&gt;기존에는 몇가지 서식에 대하여, 매크로 버튼을 만들어 사용하고 있었다.&lt;br&gt;&#xA;불행하게도 이는 &lt;code&gt;TEXT&lt;/code&gt; 함수 안에 적용하기가 어려워&amp;hellip; 같은 셀 안에 두개의 서식을 사용하기가 어렵다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;+114&lt;br&gt;&#xA;(+2%)&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;TEXT&lt;/code&gt; 함수를 써서 간단하게 해결할 수 있기는 하지만, 매번 표시형식을 직접 적어주는 건 매우 귀찮은 일이다.&lt;br&gt;&#xA;이 문제를 해결하기 위해 몇 가지 방법을 고민해 보았다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;1-vba로-mdf-만들기&#34;&gt;#1 VBA로 MDF 만들기&lt;/h2&gt;&#xA;&lt;p&gt;자주 쓰는 서식을 몇가지 &lt;code&gt;MDF&lt;/code&gt; 로 저장해두고, 문자 값으로 반환하도록 하자.&lt;br&gt;&#xA;숫자를 천단위나, 백만단위 등으로 표기하거나, 퍼센트를 기재해주는 방식이다. 양수나 음수를 구분할수 있도록 적어뒀다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>xls = 배열수식 조건에서 엑셀 함수 조건 간단하게 처리하기 (isin)</title>
       <link>https://mcjoi.github.io/post/01992/</link>
       <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
@@ -133,6 +126,13 @@
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00999/</guid>
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 이름정의 - 전부 지우기</title>
+      <link>https://mcjoi.github.io/post/01950/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01950/</guid>
+      <description>&lt;h2 id=&#34;이름정의로-정의된-이름-지우기&#34;&gt;이름정의로 정의된 이름 지우기&lt;/h2&gt;&#xA;&lt;p&gt;이름정의로 엉망징창이된 엑셀파일들을 한번쯤은 받아본 기억이 있을 것이다. 본인도 모르는 사이에 정의된 이름이 많다면, 한번에 지우기도 어렵고, 엄청난 에러의 씨앗이 될 것이다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 한번에 다 지우자. 아래처럼 이름정의가 된 파일이 있으면,&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;ALT + F11 로 VBA창 띄우고, 내 문서를 프로젝트 창에서 선택하고 ALT → I → M 순서대로 입력&lt;br&gt;&#xA;아래 있는 코드 복붙하고, F5 누른다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;실행하면 다 지워진다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01950/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;단, 본인이 이름정의를 활용한 수식을 사용하고 있다면, 수동으로 지워줘야 하겠다.&lt;br&gt;&#xA;더 큰 재앙이 일어날 수 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>xls - 수식 에러의 근원. 복사와 자르기. 절대참조와 상대참조.</title>
