@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 데이터 연결 (편집) | shaaaaallow dive</title>
+    <title>ppt - 글상자 줄간격(spacing) 맞추기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00980/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01944/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 데이터 연결 (편집)</h1>
+      <h1>ppt - 글상자 줄간격(spacing) 맞추기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-29</span>
+          <span>2024-08-28</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
           
@@ -170,38 +175,241 @@
         
         
         
-          <h2 id="데이터-연결-편집">데이터 연결 편집</h2>
-<p>남들이 보내준 엑셀 파일을 열다 보면 흔히 볼수 있느 경고(에러?) 창 중 하나가 바로<br>
-아래 있는 업데이트 여부를 확인하는 창이 되겠다. 아무생각없이 나도모르는 사이 매번 업데이트를 누르게 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/1.jpg" alt="img"></p>
+          <h2 id="줄간격">줄간격</h2>
+<p>이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.</p>
+<ul class="text-box">
+<li>line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태</li>
+<li>paragraph : 문단으로 그냥 Enter 친 상태</li>
+</ul>
+<p>파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.</p>
+<p>개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.</p>
+<p>위에 적었 듯 파워포인트에는 문단 또는 줄간격을 맞추는 기능이 있는데, 이를 사용하는 것이 바람직한 방법이긴 할 것이다. 하지만, 창으로 뜨는 관계로 확인을 눌러 적용하기 전까지는 수치 변경에 대해서 즉각적인 확인이 불가능해서, 개인적으로는 별로 좋아하지는 않는 방법이지만, 일단은 알아두는 것이 좋을 것이다.</p>
+<p>창의 생김새는 아래와 같으나, 맨 하단에 있는 줄간격 조정 기능인 Spacing 만 사용해보자. 두개의 영역으로 구분되어 있으며, Before/After 기능으로 엔터를 쳤을때 구분이 지어지는 문단(Paragraph)의 간격을 조정하고, (Shift + Enter 를 치거나 줄이 길어져 하단으로 내려갈 때는 적용되지 않는다.) Line Spacing 기능으로 모든 간격을 조정하는 줄간격 기능으로 나누어진다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/01.png" alt="myimg"></p>
 <br>
 <br>
-<p>그럼,,, 빌어먹을 두번째 에러가 뜬다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/2.jpg" alt="img"></p>
+<p>아래 그림은 아무것도 설정하지 않은 상태이다. 줄간격이 빽빽해 보이므로 조정이 필요한 상황이다. 폰트마다 기본으로 주어지는 줄간격이 다르므로, 본인이 자주쓰는 폰트에 대한 이해가 필요하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/02.png" alt="myimg"></p>
 <br>
 <br>
-<p>연결 편집을 눌러보면 아래와 같은 문구가 뜬다.<br>
-연결이 되어있는 파일까지 나한테 줬을리는 없겠지.. 연결끊기를 누르면 깔끔하게 에러가 뜨지 않는다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/3.jpg" alt="img"></p>
+<p>일단 전체 줄간격을 일괄로 맞추기 위해, paragraph든 line이든 모든 행에 적용되는 Line spacing 기능을 통해 전체 간격을 정해준다. Exactly 옵션을 주고 18pt 값을 넣은 결과는 아래와 같다. Exactly 옵션은 절대값으로 간격을 준다는 뜻이므로, 폰트 사이즈가 변하면 매번 설정값을 바꿔줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/03.png" alt="myimg"></p>
 <br>
 <br>
-<p>알겠지만.<br>
-두개 파일을 연결시키는건 그냥 &lsquo;=&rsquo; 로 해주면 된다.<br>
-아래 파일은 통합문서1의 A4셀을 통합문서2의 A1셀과 연결한 상태이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/4.jpg" alt="img"></p>
+<p>이제 Enter로 구분된 paragraph만 별도의 줄간격 주기 위해 After값을 12pt로 주었다. 알겠지만, before값을 같이 주면 위아래 텍스트가 있는 경우, 합산이 된 만큼 떨어진다. After 값을 적용한 결과는 아래와 같다. 한결 보기 편해졌다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/04.png" alt="myimg"></p>
 <br>
 <br>
-<p>원본의 수치를 바꾸면 자동으로 업데이트가 된다. (자동으로 체크가 되어있는 경우)<br>
-연결 상태를 보려면 데이터 탭의 아래 버튼(연결편집)을 눌러주면 된다. 나는 잘 쓰지 않는 기능이라&hellip;. 버튼 위치 조차 생소하다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/5.jpg" alt="img"></p>
+<p>파워포인트에서는 글을 저렇게 적을 일이 많지는 않겠지만&hellip; 실시간으로 보면서 수정할 수 있는 기능이 있었으면 좋을 것 같다는 생각이 들었다.</p>
+<p>대충 떠오르는데로 만들어본 사용자 폼은 다음과 같다.</p>
+<ul class="text-box">
+<li>줄간격이 설정되어있지 않은 상태에서, 글상자를 선택하고 코드를 호출하면 위의 예시에서 사용했던 값이 자동 설정된다. (Spacing - 12pt, Line Spacing - Exactly 18pt)</li>
+<li>spin 버튼으로 Spacing 값과, Line Spacing 값을 1단위로 가감할 수 있다.</li>
+<li>userform 창을 닫으면 그대로 적용</li>
+<li>맨 아래 Reset &amp; Close 버튼을 누르면, 줄간격이 설정되지 않은 상태로 복원</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/05.gif" alt="myimg"></p>
 <br>
 <br>
-<p>연결편집에서 아래 처럼 상태를 확인할 수 있다. 왠지 앞으로도 끊기를 하는데만 사용할 것 같다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00980/6.jpg" alt="img"></p>
+<p>사용된 코드는 아래와 같다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_shp <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_after_textbox <span style="color:#f92672">As</span> TextBox
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_line_textbox <span style="color:#f92672">As</span> TextBox
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_para <span style="color:#f92672">As</span> ParagraphFormat2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_val_after <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_val_line <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UserForm_Initialize</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sp_initTextBox
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sp_after_textbox <span style="color:#f92672">=</span> TextBox1
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sp_line_textbox <span style="color:#f92672">=</span> TextBox2
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sp_para <span style="color:#f92672">=</span> sp_shp.TextFrame2.TextRange.ParagraphFormat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> sp_para
+</span></span><span style="display:flex;"><span>        .SpaceAfter <span style="color:#f92672">=</span> 12
+</span></span><span style="display:flex;"><span>        .LineRuleWithin <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        .SpaceWithin <span style="color:#f92672">=</span> 18
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_val_after <span style="color:#f92672">=</span> sp_para.SpaceAfter
+</span></span><span style="display:flex;"><span>    sp_val_line <span style="color:#f92672">=</span> sp_para.SpaceWithin
+</span></span><span style="display:flex;"><span>    sp_after_textbox <span style="color:#f92672">=</span> sp_val_after
+</span></span><span style="display:flex;"><span>    sp_line_textbox <span style="color:#f92672">=</span> sp_val_line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sp_initTextBox</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> sp_shp <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(1)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> <span style="color:#66d9ef">Not</span> (sp_shp.HasTextFrame) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;There is no TextFrame&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;Spacing spin button
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">after_spin_SpinUp</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_val_after <span style="color:#f92672">=</span> sp_val_after <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>    sp_para.SpaceAfter <span style="color:#f92672">=</span> sp_val_after
+</span></span><span style="display:flex;"><span>    sp_after_textbox.Text <span style="color:#f92672">=</span> sp_val_after
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">after_spin_SpinDown</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sp_val_after <span style="color:#f92672">&gt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        sp_val_after <span style="color:#f92672">=</span> sp_val_after <span style="color:#f92672">-</span> 1
+</span></span><span style="display:flex;"><span>        sp_para.SpaceAfter <span style="color:#f92672">=</span> sp_val_after
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Value must be above 1&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_after_textbox.Text <span style="color:#f92672">=</span> sp_val_after
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;Line Spacing spin button
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_spin_SpinUp</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_val_line <span style="color:#f92672">=</span> sp_val_line <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>    sp_para.SpaceWithin <span style="color:#f92672">=</span> sp_val_line
+</span></span><span style="display:flex;"><span>    sp_line_textbox.Text <span style="color:#f92672">=</span> sp_val_line
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_spin_SpinDown</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sp_val_line <span style="color:#f92672">&gt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        sp_val_line <span style="color:#f92672">=</span> sp_val_line <span style="color:#f92672">-</span> 1
+</span></span><span style="display:flex;"><span>        sp_para.SpaceWithin <span style="color:#f92672">=</span> sp_val_line
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Value must be above 1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    sp_line_textbox.Text <span style="color:#f92672">=</span> sp_val_line
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">CommandButton1_Click</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> sp_para
+</span></span><span style="display:flex;"><span>        .SpaceAfter <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>        .LineRuleWithin <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        .SpaceWithin <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    Unload <span style="color:#66d9ef">Me</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p>여러가지 기능을 넣어두려다가 일단 필요한 부분만 먼저 작성을 했다.<br>
+위의 코드를 이해할 필요는 없지만, 좀 재밌는 부분이 있다. 아래는 좀 디테일한 내용을 작성해보았다. 필요한 사람만 보길 바란다.</p>
+<p>각 항목별로 속성값이 두 개씩 있는데, Rule 적용 여부 Boolean 값과 이에대한 값을 가지는 속성이 있다.<br>
+희한한건 Before와 After는 LineRule의 용도를 모르겠다. 그래서 그냥 배제를 한다. 속성값을 False로 두자. Within 값을 False로 두는 경우, SpaceWithin값은 pt값이 들어가고, True로 둘 경우 배수가 된다.</p>
+<p>이를 활용하여 좀더 진보한 userform을 만들 수 있다. 텍스트 박스를 선택하여 refresh하고 유형을 변경할 수 있도록 해보았다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/06.gif" alt="myimg"></p>
 <br>
 <br>
-<p>회사 공용서버에 둘 경우, 각각 원본 소스를 관리하면 엄청 복잡해지고, 관리도 안되지만&hellip;.<br>
-회계팀 사람들은 자유자재로 쓰더라.</p>
+<p>급하게 생각한 코드는 아래와 같다. 필요한 부분이 있다면 잘라서 쓰면 될 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_shp <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_para <span style="color:#f92672">As</span> ParagraphFormat2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">UserForm_Initialize</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> dd:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sp_selbox
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sp_boxtext
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    TextBox1.Text <span style="color:#f92672">=</span> sp_para.SpaceAfter
+</span></span><span style="display:flex;"><span>    TextBox2.Text <span style="color:#f92672">=</span> sp_para.SpaceWithin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dd:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sp_selbox</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">Set</span> sp_shp <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(1)
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">Set</span> sp_para <span style="color:#f92672">=</span> sp_shp.TextFrame2.TextRange.ParagraphFormat
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">CommandButton3_Click</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_para.LineRuleWithin <span style="color:#f92672">=</span> <span style="color:#66d9ef">Not</span> sp_para.LineRuleWithin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sp_boxtext
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_para.SpaceWithin <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>    TextBox2.Text <span style="color:#f92672">=</span> sp_para.SpaceWithin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sp_boxtext</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sp_para.LineRuleWithin <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        TextBox3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;X lines&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>:
+</span></span><span style="display:flex;"><span>        TextBox3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Exactly&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;Spacing spin button
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_after_SpinUp</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_para.SpaceAfter <span style="color:#f92672">=</span> sp_para.SpaceAfter <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>    TextBox1.Text <span style="color:#f92672">=</span> sp_para.SpaceAfter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_after_SpinDown</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sp_para.SpaceAfter <span style="color:#f92672">&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        sp_para.SpaceAfter <span style="color:#f92672">=</span> sp_para.SpaceAfter <span style="color:#f92672">-</span> 1
+</span></span><span style="display:flex;"><span>        TextBox1.Text <span style="color:#f92672">=</span> sp_para.SpaceAfter
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Value must be above 0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;Line Spacing spin button
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_within_SpinUp</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sp_para.SpaceWithin <span style="color:#f92672">=</span> sp_para.SpaceWithin <span style="color:#f92672">+</span> 1
+</span></span><span style="display:flex;"><span>    TextBox2.Text <span style="color:#f92672">=</span> sp_para.SpaceWithin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">line_within_SpinDown</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sp_para.SpaceWithin <span style="color:#f92672">&gt;</span> 1 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        sp_para.SpaceWithin <span style="color:#f92672">=</span> sp_para.SpaceWithin <span style="color:#f92672">-</span> 1
+</span></span><span style="display:flex;"><span>        TextBox2.Text <span style="color:#f92672">=</span> sp_para.SpaceWithin
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Value must be above 1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;reset
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">CommandButton1_Click</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> UserForm_Initialize
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">CommandButton2_Click</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> sp_para
+</span></span><span style="display:flex;"><span>        .SpaceAfter <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>        .LineRuleWithin <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        .SpaceWithin <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>    Unload <span style="color:#66d9ef">Me</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><Br>
+<Br>
+<p>간만에 오랜만에 약간 생각이란걸 하는 코드를 만들어보았다.</p>
 <p>끝.</p>
 
         
