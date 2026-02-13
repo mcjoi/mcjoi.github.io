@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>windows - 확장자별 폴더생성, 이동 | shaaaaallow dive</title>
+    <title>excel - vba - 텍스트(입력키) 매크로 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/02998/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01957/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>windows - 확장자별 폴더생성, 이동</h1>
+      <h1>excel - vba - 텍스트(입력키) 매크로</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2019-12-30</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
               
               
-                <a class="chip chip--tag" href="/tag/pyhton/">#pyhton</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,288 +175,10 @@
       
       
       
-        
-        
-        
-          
-            
-          
-        
-          
-            
-            <h2 id="inspiration">inspiration</h2>
-<p>바탕화면이나, 영상/이미지가 섞여있는 카메라 촬영물 폴더를 정리하다보면, 한 폴더 안에 섞여 있는 여러 확장자들을 분리해낼 필요가 있다.</p>
-<br>
-<br>
-
-          
-        
-          
-            
-              <div class="ad-slot">
-                
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-              </div>
-            
-            <h2 id="execution---python">execution - python</h2>
-<p>폴더 안에 있는 확장자들을 확인해서 폴더를 생성하고, 각 파일을 해당하는 폴더 안으로 밀어넣는 기능을 코드로 짜두기로 한다. (사실상 큰 의미 없는 일이기도 하다.)</p>
-<p>파이썬 라이브러리 찾기 귀찮아서 노가다 수준으로 작업 진행.<br>
-룰은 mov, arw 파일만 폴더를 생성하여 옮겨준다. 필요하다면, 확장자 리스트를 변경하거나, 추가해주면 된다.</p>
-<p><code>sample.py</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> shutil
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 폴더선택</span>
-</span></span><span style="display:flex;"><span>root <span style="color:#f92672">=</span> tkinter<span style="color:#f92672">.</span>Tk()
-</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>withdraw()
-</span></span><span style="display:flex;"><span>dir_path <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askdirectory(
-</span></span><span style="display:flex;"><span>    parent<span style="color:#f92672">=</span>root, initialdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Please select a directory&#39;</span>)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">dir_path : &#34;</span>, dir_path)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 폴더내파일검사</span>
-</span></span><span style="display:flex;"><span>global_cache <span style="color:#f92672">=</span> {}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cached_listdir</span>(path):
-</span></span><span style="display:flex;"><span>    res <span style="color:#f92672">=</span> global_cache<span style="color:#f92672">.</span>get(path)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> res <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
-</span></span><span style="display:flex;"><span>        res <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(path)
-</span></span><span style="display:flex;"><span>        global_cache[path] <span style="color:#f92672">=</span> res
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> res
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moveFile</span>(ext, str):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 현재 파일 위치</span>
-</span></span><span style="display:flex;"><span>    filePath <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> item        
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 옮길 파일 위치</span>
-</span></span><span style="display:flex;"><span>    finalPath <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> str <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> item           
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isfile(filePath):
-</span></span><span style="display:flex;"><span>        shutil<span style="color:#f92672">.</span>move(filePath, finalPath)          
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:   
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 기본 폴더 생성</span>
-</span></span><span style="display:flex;"><span>    newdir <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;RAW&#34;</span>, <span style="color:#e6db74">&#34;MOV&#34;</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> nd <span style="color:#f92672">in</span> newdir :
-</span></span><span style="display:flex;"><span>        newtDir <span style="color:#f92672">=</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> nd
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>isdir(newtDir):
-</span></span><span style="display:flex;"><span>            os<span style="color:#f92672">.</span>mkdir(newtDir)   
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 각 기본 폴더에 옮겨질 확장자 리스트 정의</span>
-</span></span><span style="display:flex;"><span>    extList <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;RAW&#34;</span> : [<span style="color:#e6db74">&#34;arw&#34;</span>, <span style="color:#e6db74">&#34;nef&#34;</span>],
-</span></span><span style="display:flex;"><span>               <span style="color:#e6db74">&#34;MOV&#34;</span> : [<span style="color:#e6db74">&#34;mov&#34;</span>, <span style="color:#e6db74">&#34;mp4&#34;</span>],
-</span></span><span style="display:flex;"><span>               }     
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> cached_listdir(dir_path):       
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># RAW에 해당하는 확장자인 경우        </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> extItem <span style="color:#f92672">in</span> extList[<span style="color:#e6db74">&#34;RAW&#34;</span>] :
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>rpartition(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> extItem :
-</span></span><span style="display:flex;"><span>                moveFile(extItem, <span style="color:#e6db74">&#34;RAW&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># MOV에 해당하는 확장자인 경우</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> extItem <span style="color:#f92672">in</span> extList[<span style="color:#e6db74">&#34;MOV&#34;</span>] :
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>rpartition(<span style="color:#e6db74">&#34;.&#34;</span>)[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> extItem :
-</span></span><span style="display:flex;"><span>                moveFile(extItem, <span style="color:#e6db74">&#34;MOV&#34;</span>)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;complete&#34;</span>)  
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="execution---rust">execution - rust</h2>
-<p>러스트로 구현을 한다면 다음과 같이 되겠다.</p>
-<p>빌드 후 exe 파일을 실행하면, 폴더 선택창이 나오는데, 원하는 폴더를 선택하기만 하면 끝이다. 폴더는 무시되고, 파일은 확장자별로 이동이 된다.</p>
-<p><code>sample.rs</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// 주석 해제하면 콘솔 창 없이 실행됩니다 (Windows 전용 GUI 서브시스템).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// #![windows_subsystem = &#34;windows&#34;]
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> anyhow::{Context, Result};
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::{
-</span></span><span style="display:flex;"><span>    collections::HashMap,
-</span></span><span style="display:flex;"><span>    ffi::OsStr,
-</span></span><span style="display:flex;"><span>    fs,
-</span></span><span style="display:flex;"><span>    path::{Path, PathBuf},
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Err(e) <span style="color:#f92672">=</span> run() {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 문제가 생기면 메시지 박스로 알려줍니다.
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> _ <span style="color:#f92672">=</span> rfd::MessageDialog::new()
-</span></span><span style="display:flex;"><span>            .set_title(<span style="color:#e6db74">&#34;오류&#34;</span>)
-</span></span><span style="display:flex;"><span>            .set_description(<span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{e:#}</span><span style="color:#e6db74">&#34;</span>))
-</span></span><span style="display:flex;"><span>            .set_level(rfd::MessageLevel::Error)
-</span></span><span style="display:flex;"><span>            .show();
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 콘솔 빌드일 경우를 위해서도 에러 출력
-</span></span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">eprintln!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{e:#}</span><span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">run</span>() -&gt; Result<span style="color:#f92672">&lt;</span>()<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1) 폴더 선택 대화상자
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> maybe_dir <span style="color:#f92672">=</span> rfd::FileDialog::new()
-</span></span><span style="display:flex;"><span>        .set_title(<span style="color:#e6db74">&#34;정리할 폴더를 선택하세요&#34;</span>)
-</span></span><span style="display:flex;"><span>        .pick_folder();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> maybe_dir {
-</span></span><span style="display:flex;"><span>        Some(d) <span style="color:#f92672">=&gt;</span> d,
-</span></span><span style="display:flex;"><span>        None <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">return</span> Ok(()), <span style="color:#75715e">// 사용자가 취소
-</span></span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2) 선택한 폴더 내의 파일만 순회 (하위 폴더는 건드리지 않음)
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> moved: <span style="color:#66d9ef">usize</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> skipped: <span style="color:#66d9ef">usize</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> by_ext: <span style="color:#a6e22e">HashMap</span><span style="color:#f92672">&lt;</span>String, <span style="color:#66d9ef">usize</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> HashMap::new();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> entry <span style="color:#66d9ef">in</span> fs::read_dir(<span style="color:#f92672">&amp;</span>dir).with_context(<span style="color:#f92672">||</span> <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;폴더 접근 실패: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, dir.display()))<span style="color:#f92672">?</span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> entry <span style="color:#f92672">=</span> entry<span style="color:#f92672">?</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> path <span style="color:#f92672">=</span> entry.path();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 디렉터리는 스킵
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> meta <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> entry.metadata() {
-</span></span><span style="display:flex;"><span>            Ok(m) <span style="color:#f92672">=&gt;</span> m,
-</span></span><span style="display:flex;"><span>            Err(_) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>                skipped <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        };
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>meta.is_file() {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3) 확장자 추출 (없으면 &#34;no_extension&#34;)
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> ext <span style="color:#f92672">=</span> ext_key(path.as_path());
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 4) 대상 폴더 생성
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> target_dir <span style="color:#f92672">=</span> dir.join(<span style="color:#f92672">&amp;</span>ext);
-</span></span><span style="display:flex;"><span>        fs::create_dir_all(<span style="color:#f92672">&amp;</span>target_dir)
-</span></span><span style="display:flex;"><span>            .with_context(<span style="color:#f92672">||</span> <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;하위 폴더 생성 실패: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, target_dir.display()))<span style="color:#f92672">?</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 5) 파일 이동 (이름 충돌 시 _1, _2 …를 붙여 고유화)
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> file_name <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> path.file_name() {
-</span></span><span style="display:flex;"><span>            Some(n) <span style="color:#f92672">=&gt;</span> n.to_owned(),
-</span></span><span style="display:flex;"><span>            None <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>                skipped <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        };
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> target_path <span style="color:#f92672">=</span> target_dir.join(<span style="color:#f92672">&amp;</span>file_name);
-</span></span><span style="display:flex;"><span>        target_path <span style="color:#f92672">=</span> ensure_unique_path(<span style="color:#f92672">&amp;</span>target_path);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">match</span> fs::rename(<span style="color:#f92672">&amp;</span>path, <span style="color:#f92672">&amp;</span>target_path) {
-</span></span><span style="display:flex;"><span>            Ok(_) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>                moved <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span>by_ext.entry(ext).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            Err(_) <span style="color:#f92672">=&gt;</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 오류 종류와 무관하게 copy + remove 로 폴백
-</span></span></span><span style="display:flex;"><span>                fs::copy(<span style="color:#f92672">&amp;</span>path, <span style="color:#f92672">&amp;</span>target_path).with_context(<span style="color:#f92672">||</span> {
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">format!</span>(
-</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;파일 복사 실패: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> → </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>,
-</span></span><span style="display:flex;"><span>                        path.display(),
-</span></span><span style="display:flex;"><span>                        target_path.display()
-</span></span><span style="display:flex;"><span>                    )
-</span></span><span style="display:flex;"><span>                })<span style="color:#f92672">?</span>;
-</span></span><span style="display:flex;"><span>                fs::remove_file(<span style="color:#f92672">&amp;</span>path)
-</span></span><span style="display:flex;"><span>                    .with_context(<span style="color:#f92672">||</span> <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;원본 삭제 실패: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, path.display()))<span style="color:#f92672">?</span>;
-</span></span><span style="display:flex;"><span>                moved <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">*</span>by_ext.entry(ext).or_insert(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 6) 결과 요약 메시지
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> lines <span style="color:#f92672">=</span> <span style="color:#a6e22e">vec!</span>[
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;정리 대상: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, dir.display()),
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;이동한 파일: </span><span style="color:#e6db74">{moved}</span><span style="color:#e6db74">개&#34;</span>),
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;스킵: </span><span style="color:#e6db74">{skipped}</span><span style="color:#e6db74">개&#34;</span>),
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;</span>.into(),
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;확장자별 이동 결과:&#34;</span>.into(),
-</span></span><span style="display:flex;"><span>    ];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> by_ext.is_empty() {
-</span></span><span style="display:flex;"><span>        lines.push(<span style="color:#e6db74">&#34;- (이동된 파일 없음)&#34;</span>.into());
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> items: Vec<span style="color:#f92672">&lt;</span>_<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> by_ext.into_iter().collect();
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 보기 좋게 정렬 (개수 내림차순, 그다음 확장자)
-</span></span></span><span style="display:flex;"><span>        items.sort_by(<span style="color:#f92672">|</span>a, b<span style="color:#f92672">|</span> b.<span style="color:#ae81ff">1.</span>cmp(<span style="color:#f92672">&amp;</span>a.<span style="color:#ae81ff">1</span>).then_with(<span style="color:#f92672">||</span> a.<span style="color:#ae81ff">0.</span>cmp(<span style="color:#f92672">&amp;</span>b.<span style="color:#ae81ff">0</span>)));
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (ext, cnt) <span style="color:#66d9ef">in</span> items {
-</span></span><span style="display:flex;"><span>            lines.push(<span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;  • </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">개&#34;</span>, ext, cnt));
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> _ <span style="color:#f92672">=</span> rfd::MessageDialog::new()
-</span></span><span style="display:flex;"><span>        .set_title(<span style="color:#e6db74">&#34;정리 완료&#34;</span>)
-</span></span><span style="display:flex;"><span>        .set_description(lines.join(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>))
-</span></span><span style="display:flex;"><span>        .set_level(rfd::MessageLevel::Info)
-</span></span><span style="display:flex;"><span>        .show();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    Ok(())
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">/// 파일의 확장자를 소문자로 정규화하여 폴더명으로 사용할 키를 생성.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">/// 확장자가 없으면 &#34;no_extension&#34;을 반환.
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">ext_key</span>(path: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">Path</span>) -&gt; String {
-</span></span><span style="display:flex;"><span>    path.extension()
-</span></span><span style="display:flex;"><span>        .and_then(OsStr::to_str)
-</span></span><span style="display:flex;"><span>        .map(<span style="color:#f92672">|</span>s<span style="color:#f92672">|</span> s.trim_matches(<span style="color:#e6db74">&#39;.&#39;</span>).to_lowercase())
-</span></span><span style="display:flex;"><span>        .filter(<span style="color:#f92672">|</span>s<span style="color:#f92672">|</span> <span style="color:#f92672">!</span>s.is_empty())
-</span></span><span style="display:flex;"><span>        .unwrap_or_else(<span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;no_extension&#34;</span>.to_string())
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">/// 대상 경로가 이미 존재하면 뒤에 _1, _2…를 붙여서 충돌을 피함.
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">ensure_unique_path</span>(path: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">Path</span>) -&gt; <span style="color:#a6e22e">PathBuf</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>path.exists() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> path.to_path_buf();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> base <span style="color:#f92672">=</span> path.to_path_buf(); <span style="color:#75715e">// mut 제거
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> dir <span style="color:#f92672">=</span> base
-</span></span><span style="display:flex;"><span>        .parent()
-</span></span><span style="display:flex;"><span>        .map(<span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> p.to_path_buf())
-</span></span><span style="display:flex;"><span>        .unwrap_or_else(<span style="color:#f92672">||</span> PathBuf::from(<span style="color:#e6db74">&#34;.&#34;</span>));
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> stem <span style="color:#f92672">=</span> base
-</span></span><span style="display:flex;"><span>        .file_stem()
-</span></span><span style="display:flex;"><span>        .and_then(OsStr::to_str)
-</span></span><span style="display:flex;"><span>        .unwrap_or(<span style="color:#e6db74">&#34;file&#34;</span>)
-</span></span><span style="display:flex;"><span>        .to_string();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> ext <span style="color:#f92672">=</span> base.extension().and_then(OsStr::to_str);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> idx: <span style="color:#66d9ef">u32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">loop</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> candidate <span style="color:#f92672">=</span> dir.join(<span style="color:#a6e22e">format!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{stem}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{idx}</span><span style="color:#e6db74">&#34;</span>));
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(e) <span style="color:#f92672">=</span> ext {
-</span></span><span style="display:flex;"><span>            candidate.set_extension(e);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>candidate.exists() {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> candidate;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        idx <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<br>
-
-          
-        
-          
-            
-            <h2 id="execution---excel---vba">execution - excel - vba</h2>
-<p>생각만치 잘 되지 않았지만, 한번 해놓고 나면, 응용해서, 엑셀프로그램과 연동해서 쓸수 있다는 장점은 있다.<br>
-파일 리스트 시트를 만든다거나.. 블로그 글들을 여러개 참고 했는데, 메모를 해놓지 않아, 참조 경로를 나열할 수가 없다.<br>
-아쉬운 부분이지만, 혹시 이글을 보시는 분이 있다면 도움이 되길 바란다.</p>
-<br>
-<br>
-<div class="video-embed">
+        <div class="video-embed">
   <div class="video-embed-inner">
     <iframe
-      src="https://www.youtube-nocookie.com/embed/2r0TpxY3zKQ"
+      src="https://www.youtube-nocookie.com/embed/titHO02_7lI"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -466,126 +188,90 @@
 </div>
 
 <br>
-<br>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">makeFolderMoveFileToFolderByExt</span>()
+<Br>
+<h2 id="엑셀-텍스트입력키-매크로">엑셀 텍스트(입력키) 매크로</h2>
+<p>네이버의 검색순위를 조작할때, 작업을 한다고들 하는데, 매크로를 사용한다는건 공공연한 비밀이다.<br>
+비슷한 맥락으로 엑셀VBA로 키를 입력할 수 있는데, 엑셀 시트에 입력한 값을 던져줄 수 있다는 장점이 있다.</p>
+<p>이는 인터넷 브라우저에서도 쓸 수 있는데, 특히 같은 회사에서 나온 인터넷 익스플로러에 친화적인 것으로 보인다.<br>
+(불행히도 지금은 잘 쓰이지 않지만&hellip;)</p>
+<p>아무도 쓸일은 없겠지만, 사용된 코드를 메모해 두었다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">typeWriter</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> sht <span style="color:#f92672">As</span> Worksheet
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> strDir <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> strFile <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> fso
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> myFile
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> ext <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> extList() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> win
+</span></span><span style="display:flex;"><span>    win <span style="color:#f92672">=</span> Shell(<span style="color:#e6db74">&#34;c:\windows\notepad.exe&#34;</span>, vbNormalFocus)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> txt <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> count <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> txtArr() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 생성을 원하는 폴더리스트를 만들어줌 ==&gt; 요거만 수정해주면 됨
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> extList(4) <span style="color:#75715e">&#39;전체 확장자의 개수
-</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 확장자 리스트
-</span></span></span><span style="display:flex;"><span>    extList(1) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jpg&#34;</span>
-</span></span><span style="display:flex;"><span>    extList(2) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pdf&#34;</span>
-</span></span><span style="display:flex;"><span>    extList(3) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;png&#34;</span>
-</span></span><span style="display:flex;"><span>    extList(4) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pdfx&#34;</span>
+</span></span><span style="display:flex;"><span>    txt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;this is typeWriter effect Test&#34;</span>
+</span></span><span style="display:flex;"><span>    count <span style="color:#f92672">=</span> Len(txt)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> txtArr(count)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;---------------------------------------------------------
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sht <span style="color:#f92672">=</span> ActiveSheet
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 폴더 입력창에 표시할 멘트
-</span></span></span><span style="display:flex;"><span>    Msg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;검색할 폴더명을 입력하세요: &#34;</span> <span style="color:#f92672">&amp;</span> vbCr
-</span></span><span style="display:flex;"><span>    Msg <span style="color:#f92672">=</span> Msg <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;(예) c:\windows\&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> count
+</span></span><span style="display:flex;"><span>        txtArr(x) <span style="color:#f92672">=</span> Mid(txt, x, 1)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> (txtArr(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span>) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        SendKeys txtArr(x), <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 폴더 경로 설정
-</span></span></span><span style="display:flex;"><span>    strDir <span style="color:#f92672">=</span> Trim(InputBox(Msg))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">cr</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> win
+</span></span><span style="display:flex;"><span>    win <span style="color:#f92672">=</span> Shell(<span style="color:#e6db74">&#34;c:\windows\notepad.exe&#34;</span>, vbNormalFocus)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;폴더 경로 설정시 취소 선택
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> strDir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;[취소]를 선택하셨습니다&#34;</span>, , <span style="color:#e6db74">&#34;작업 취소&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 입력받은 폴더명에 \가 없을때 강제로 붙여줌
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Right(strDir, 1) <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;\&#34;</span> <span style="color:#66d9ef">Then</span> strDir <span style="color:#f92672">=</span> strDir <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\&#34;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;---------------------------------------------------------
-</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 원하는 폴더를 추가해줌
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;----------------
-</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;배열의 개수 계산
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    extListCount <span style="color:#f92672">=</span> UBound(extList) <span style="color:#f92672">-</span> LBound(extList)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">&#39;디렉토리가 없는 경우 만들어줌
-</span></span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> extListCount
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> Len(Dir(strDir <span style="color:#f92672">&amp;</span> extList(i), vbDirectory)) <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">Then</span> MkDir (strDir <span style="color:#f92672">&amp;</span> extList(i))
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">Next</span> i
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 선택한 폴더 안에 있는 파일 변수 지정 =&gt; 첫번째 파일이 지정됨
-</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 단순한 파일명임
-</span></span></span><span style="display:flex;"><span>    strFile <span style="color:#f92672">=</span> Dir(strDir)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> fso <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;Scripting.FileSystemObject&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> strFile <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;폴더에 파일이 없습니다.&#34;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Else</span>: <span style="color:#66d9ef">Set</span> myFile <span style="color:#f92672">=</span> fso.getfile(strDir <span style="color:#f92672">&amp;</span> strFile)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 첫번째 파일
-</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;ext = Right(strFile, 3)
-</span></span></span><span style="display:flex;"><span>    ext <span style="color:#f92672">=</span> findex(myFile)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;----------------
-</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 파일 이동
-</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;----------------
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> extListCount
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Case</span> ext
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Case</span> extList(i):
-</span></span><span style="display:flex;"><span>                myFile <span style="color:#f92672">=</span> fso.MoveFile(strDir <span style="color:#f92672">&amp;</span> strFile, strDir <span style="color:#f92672">&amp;</span> extList(i) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\&#34;</span> <span style="color:#f92672">&amp;</span> strFile)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Select</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 폴더 내에 있는 파일 순환 - 두번째 파일부터
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> strFile <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39; 다음 파일로 이동
-</span></span></span><span style="display:flex;"><span>        strFile <span style="color:#f92672">=</span> Dir()
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;ext = Right(strFile, 3)
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> strFile <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span> <span style="color:#66d9ef">GoTo</span> dd:
-</span></span><span style="display:flex;"><span>        myFile <span style="color:#f92672">=</span> fso.getfile(strDir <span style="color:#f92672">&amp;</span> strFile)
-</span></span><span style="display:flex;"><span>        ext <span style="color:#f92672">=</span> findex(myFile)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;----------------
-</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 파일 이동
-</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;----------------
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> extListCount
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Select</span> <span style="color:#66d9ef">Case</span> ext
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Case</span> extList(i):
-</span></span><span style="display:flex;"><span>                myFile <span style="color:#f92672">=</span> fso.MoveFile(strDir <span style="color:#f92672">&amp;</span> strFile, strDir <span style="color:#f92672">&amp;</span> extList(i) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;\&#34;</span> <span style="color:#f92672">&amp;</span> strFile)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Select</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">Next</span> i
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Loop</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dd:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>        SendKeys <span style="color:#e6db74">&#34;ID값 : &#34;</span> <span style="color:#f92672">+</span> Cells(2, 2).Value, <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>        SendKeys <span style="color:#e6db74">&#34;{ENTER}&#34;</span>, <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>        SendKeys <span style="color:#e6db74">&#34;PW값 : &#34;</span> <span style="color:#f92672">+</span> Cells(2, 3).Value, <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>        SendKeys <span style="color:#e6db74">&#34;{ENTER}&#34;</span>, <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        SendKeys <span style="color:#e6db74">&#34;끝!&#34;</span>, <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">findex</span>(<span style="color:#66d9ef">ByVal</span> x <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">sleep</span>()
+</span></span><span style="display:flex;"><span>    Application.Wait Now <span style="color:#f92672">+</span> TimeSerial(0, 0, 1)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    xcount <span style="color:#f92672">=</span> Len(x) <span style="color:#f92672">-</span> Len(Replace(x, <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>))
-</span></span><span style="display:flex;"><span>    k <span style="color:#f92672">=</span> Application.WorksheetFunction.Substitute(x, <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;@&#34;</span>, xcount)
-</span></span><span style="display:flex;"><span>    j <span style="color:#f92672">=</span> Application.WorksheetFunction.Find(<span style="color:#e6db74">&#34;@&#34;</span>, k)
-</span></span><span style="display:flex;"><span>    findex <span style="color:#f92672">=</span> Mid(k, j <span style="color:#f92672">+</span> 1)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">NaverLogin</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> mywindow
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> mywindow <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;InternetExplorer.Application&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Function</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> mywindow
+</span></span><span style="display:flex;"><span>        .Visible <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        .Navigate <span style="color:#e6db74">&#34;https://nid.naver.com/nidlogin.login&#34;</span>
+</span></span><span style="display:flex;"><span>        .Height <span style="color:#f92672">=</span> 1000
+</span></span><span style="display:flex;"><span>        .Width <span style="color:#f92672">=</span> 1000
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 대기방법 #1 : 4초 강제로 대기
+</span></span></span><span style="display:flex;"><span>         <span style="color:#75715e">&#39; Application.Wait Now + TimeSerial(0, 0, 4)
+</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39; 대기방법 #2
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Do</span> <span style="color:#66d9ef">While</span> mywindow.Busy
+</span></span><span style="display:flex;"><span>            DoEvents
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Loop</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> mypage <span style="color:#f92672">=</span> mywindow.document
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">With</span> mypage.all
+</span></span><span style="display:flex;"><span>        .Item(<span style="color:#e6db74">&#34;id&#34;</span>).Value <span style="color:#f92672">=</span> ActiveSheet.Cells(3, 2).Value
+</span></span><span style="display:flex;"><span>        .Item(<span style="color:#e6db74">&#34;pw&#34;</span>).Value <span style="color:#f92672">=</span> ActiveSheet.Cells(3, 3).Value
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Call</span> sleep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    SendKeys <span style="color:#e6db74">&#34;{ENTER}&#34;</span>, <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
-끝.
+<p>끝.</p>
 
-          
-        
       
     </div>
 
@@ -619,53 +305,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">excel - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">VBA Userform 마우스 hover effect</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">엑셀 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">엑셀 - 배열수식</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">엑셀 - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">파워포인트 - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">엑셀-파워포인트 VBA/매크로 사용하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">엑셀-파워포인트 테이블(표) 연동 관련</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <a href="/post/01999/">MacroToolkit - excel, powerpoint</a>
               </div>
             
           </div>
