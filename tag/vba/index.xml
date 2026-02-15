@@ -16,11 +16,11 @@
       <description>&lt;h2 id=&#34;사용자정의-표시형식&#34;&gt;사용자정의 표시형식&lt;/h2&gt;&#xA;&lt;p&gt;기존에는 몇가지 서식에 대하여, 매크로 버튼을 만들어 사용하고 있었다.&lt;br&gt;&#xA;불행하게도 이는 &lt;code&gt;TEXT&lt;/code&gt; 함수 안에 적용하기가 어려워&amp;hellip; 같은 셀 안에 두개의 서식을 사용하기가 어렵다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;+114&lt;br&gt;&#xA;(+2%)&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;TEXT&lt;/code&gt; 함수를 써서 간단하게 해결할 수 있기는 하지만, 매번 표시형식을 직접 적어주는 건 매우 귀찮은 일이다.&lt;br&gt;&#xA;이 문제를 해결하기 위해 몇 가지 방법을 고민해 보았다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;1-vba로-mdf-만들기&#34;&gt;#1 VBA로 MDF 만들기&lt;/h2&gt;&#xA;&lt;p&gt;자주 쓰는 서식을 몇가지 &lt;code&gt;MDF&lt;/code&gt; 로 저장해두고, 문자 값으로 반환하도록 하자.&lt;br&gt;&#xA;숫자를 천단위나, 백만단위 등으로 표기하거나, 퍼센트를 기재해주는 방식이다. 양수나 음수를 구분할수 있도록 적어뒀다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - VBA Userform 마우스 hover effect</title>
+      <title>xls - VBA Userform 만들기</title>
       <link>https://mcjoi.github.io/post/01991/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01991/</guid>
-      <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;vba의 기반인 vb6가 기술지원이 종료된게 언제일까? 비개발자, 마케터의 레벨에서 업무에서 친숙하게 사용하는 거의 유일한 프로그래밍 언어가 수십년전 기술이라는건 참 아쉽다.&lt;/p&gt;&#xA;&lt;p&gt;지금 시점의 기술과 비교하여 뭔가를 해보자면 이가 빠지게 된 건 당연한것인지도 모르지만, 오늘은 object를 버튼으로 사용할때 마우스 hover효과를 내는 우회방법에 대해 시도해본다.&lt;/p&gt;&#xA;&lt;p&gt;macrotoolkit을 만들었는데 마우스 클릭 느낌이 없으니 참 심심하다. 사용상 전혀 문제는 없는데, 어차피 내 만족에 하는거니까..&lt;br&gt;&#xA;사실, 아주 쉽게 될줄 알았는데 대단히 착각이었다. 오기가 생겨서 시도 했다는게 맞는 표현이다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;vba의 기반인 vb6가 기술지원이 종료된게 언제일까? 비개발자, 마케터의 레벨에서 업무에서 친숙하게 사용하는 거의 유일한 프로그래밍 언어가 수십년전 기술이라는건 참 아쉽다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;take-1&#34;&gt;take #1&lt;/h2&gt;&#xA;&lt;p&gt;USERFORM은 사용자가 입력하는 값을 받는 기능으로 사용하는데, 매크로 패널처럼 사용하고 싶다. 리본메뉴를 사용하는 편한방법이 있지만, 탭을 클릭하기가 너무 귀찮다. 인터넷을 몇시간 뒤적이다가, 아래처럼 패널을 완성했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01991/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;테스트를 한번 해보자. 개인적으로 리본메뉴에 넣는것보다는 사용하기 편한듯하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01991/02.gif&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;MOUSE HOVER 기능을 찾아 넣었더니, 마우스 좌표를 찾을때마다 껌뻑이는 관계로 빼고 사용하는 것이 좋겠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Project is unviewable - EvilClippy</title>
