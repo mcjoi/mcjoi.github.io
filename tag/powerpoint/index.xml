@@ -51,6 +51,20 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 무료 디자인 템플릿 몇가지</title>
+      <link>https://mcjoi.github.io/post/01939/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01939/</guid>
+      <description>&lt;h2 id=&#34;카카오-스타일-210902&#34;&gt;카카오 스타일 (210902)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 디자인은 여러가지 복합적인 고려사항이 필요하지만, 잘 못한다면, 잘된 남의 것을 따라해보는 것도 방법이다. 일반적으로 카달로그같은 제품소개서나, IR자료등이 대표적으로 디자인이 잘된 것들이다.&lt;/p&gt;&#xA;&lt;p&gt;카카오는 컬러아이덴티티가 뚜렷해서, 뭘 해도 카카오스럽다. 네이버의 그것과도 매우 비슷한 광고상품 소개서를 참고해본다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;http://naver.me/5oifCE6P&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;download&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;표준안인지는 모르겠으나, 세세한 부분까지 신경쓴 것이 보인다. 폰트사이징 등은, PDF 출력을 염두해 둔 것 같은 느낌으로,&lt;br&gt;&#xA;스크린을 통한 발표자료 등에서 왠만한 폰트로는 깨질것 같은 느낌이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;박스-220708&#34;&gt;박스 (220708)&lt;/h2&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;http://naver.me/IGGthJJz&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;download&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 분리된 느낌의 텍스트 컬러링</title>
+      <link>https://mcjoi.github.io/post/01940/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01940/</guid>
+      <description>&lt;h2 id=&#34;분리된-느낌의-텍스트-컬러링&#34;&gt;분리된 느낌의 텍스트 컬러링&lt;/h2&gt;&#xA;&lt;p&gt;텍스트에 배경색으로 분리된 느낌을 줘보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;텍스트를 일단 넣는다.&lt;br&gt;&#xA;배경과 텍스트를 그룹으로 묶고, 그림으로 저장한다.&lt;br&gt;&#xA;그림을 불러와서 텍스트를 하단에 배치한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;텍스트 옵션에 들어가서, 그라데이션 채우기롤 선택한다&lt;br&gt;&#xA;2개의 포인트만 남기고 지운다. 그라데이션 중지점을 두점을 일치하도록 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 맑은 고딕 폰트, 자간(문자간격) 적당히 줄이기</title>
       <link>https://mcjoi.github.io/post/01942/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>

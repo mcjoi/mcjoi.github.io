@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>android - Rust instead of c&#43;&#43; | shaaaaallow dive</title>
+    <title>ppt - 무료 디자인 템플릿 몇가지 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/03995_en/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01939/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>android - Rust instead of c&#43;&#43;</h1>
+      <h1>ppt - 무료 디자인 템플릿 몇가지</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-10-20</span>
+          <span>2021-09-03</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
               
             
           
@@ -184,9 +179,17 @@
           
             
               
-              <h2 id="rust-instead-of-c">Rust instead of c++</h2>
-<p>I made a simple example to use a Rust DLL from Flutter instead of C++.<br>
-It reads the mouse position on Windows.</p>
+              <h2 id="카카오-스타일-210902">카카오 스타일 (210902)</h2>
+<p>파워포인트 디자인은 여러가지 복합적인 고려사항이 필요하지만, 잘 못한다면, 잘된 남의 것을 따라해보는 것도 방법이다. 일반적으로 카달로그같은 제품소개서나, IR자료등이 대표적으로 디자인이 잘된 것들이다.</p>
+<p>카카오는 컬러아이덴티티가 뚜렷해서, 뭘 해도 카카오스럽다. 네이버의 그것과도 매우 비슷한 광고상품 소개서를 참고해본다.</p>
+<a class="btn-link" href="http://naver.me/5oifCE6P" target="_blank" rel="noopener noreferrer">download</a>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/01.png" alt="myimg"></p>
+<br>
+<br>
+<p>표준안인지는 모르겠으나, 세세한 부분까지 신경쓴 것이 보인다. 폰트사이징 등은, PDF 출력을 염두해 둔 것 같은 느낌으로,<br>
+스크린을 통한 발표자료 등에서 왠만한 폰트로는 깨질것 같은 느낌이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/02.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -194,56 +197,41 @@ It reads the mouse position on Windows.</p>
           
             
               
-              <h2 id="create-a-rust-project">Create a Rust project</h2>
-<p>Create a library project.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cargo new mousepos --lib // --bin (cargo run)
-</span></span><span style="display:flex;"><span>cd mousepos
-</span></span><span style="display:flex;"><span>// cargo build --release
-</span></span></code></pre></div><br>
+              <h2 id="박스-220708">박스 (220708)</h2>
+<a class="btn-link" href="http://naver.me/IGGthJJz" target="_blank" rel="noopener noreferrer">download</a>
 <br>
-<p>Build the mouse position code.<br>
-<code>Cargo.toml</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">package</span>]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;mousepos&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.1.0&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">edition</span> = <span style="color:#e6db74">&#34;2021&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">lib</span>]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">crate-type</span> = [<span style="color:#e6db74">&#34;cdylib&#34;</span>]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">dependencies</span>]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">windows</span> = { <span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.62.2&#34;</span>, <span style="color:#a6e22e">features</span> = [<span style="color:#e6db74">&#34;Win32_UI_WindowsAndMessaging&#34;</span>] }
-</span></span></code></pre></div><br>
-<p><code>lib.rs</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> windows::Win32::Foundation::<span style="color:#66d9ef">POINT</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> windows::Win32::<span style="color:#66d9ef">UI</span>::WindowsAndMessaging::GetCursorPos;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#[repr(C)]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> x: <span style="color:#66d9ef">i32</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> y: <span style="color:#66d9ef">i32</span>,
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#[no_mangle]</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">get_cursor_pos</span>(out: <span style="color:#f92672">*</span><span style="color:#66d9ef">mut</span> Point) -&gt; <span style="color:#66d9ef">u8</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> out.is_null() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsafe</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> p <span style="color:#f92672">=</span> <span style="color:#66d9ef">POINT</span> { x: <span style="color:#ae81ff">0</span>, y: <span style="color:#ae81ff">0</span> };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// windows 0.5x: GetCursorPos -&gt; Result&lt;(), Error&gt;
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> GetCursorPos(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> p <span style="color:#66d9ef">as</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">mut</span> <span style="color:#66d9ef">POINT</span>).is_ok() {
-</span></span><span style="display:flex;"><span>            (<span style="color:#f92672">*</span>out).x <span style="color:#f92672">=</span> p.x;
-</span></span><span style="display:flex;"><span>            (<span style="color:#f92672">*</span>out).y <span style="color:#f92672">=</span> p.y;
-</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<p>Build the DLL and copy the file somewhere safe.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/03.png" alt="myimg"></p>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="다크톤220831">다크톤(220831)</h2>
+<a class="btn-link" href="http://naver.me/5mgNJIvU" target="_blank" rel="noopener noreferrer">download</a>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/04.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/05.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/06.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/07.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/08.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/09.png" alt="myimg"></p>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="인포그래픽-스타일-그래프220901">인포그래픽 스타일 그래프(220901)</h2>
+<p>차트를 사용해서, 박스가 채워지는 스타일의 그래프를 그린다. 아쉽게도 차트 사이징이 변경되면, 많은 걸 변경해줘야한다. 가끔 한번씩만 사용하자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/10.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -265,130 +253,12 @@ It reads the mouse position on Windows.</p>
 
                 </div>
               
-              <h2 id="flutter-setup">Flutter setup</h2>
-<p>Load the DLL.<br>
-<code>mousepos_ffi.dart</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:ffi/ffi.dart&#39;</span> <span style="color:#66d9ef">as</span> ffi;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>base <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Point</span> <span style="color:#66d9ef">extends</span> Struct {
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>Int32()
-</span></span><span style="display:flex;"><span>  external <span style="color:#66d9ef">int</span> x;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>Int32()
-</span></span><span style="display:flex;"><span>  external <span style="color:#66d9ef">int</span> y;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> _GetCursorPosNative <span style="color:#f92672">=</span> Uint8 Function(Pointer<span style="color:#f92672">&lt;</span>Point<span style="color:#f92672">&gt;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> _GetCursorPosDart <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span> Function(Pointer<span style="color:#f92672">&lt;</span>Point<span style="color:#f92672">&gt;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MousePos</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> DynamicLibrary _lib;
-</span></span><span style="display:flex;"><span>  late <span style="color:#66d9ef">final</span> _GetCursorPosDart _getCursorPos;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  MousePos._(<span style="color:#66d9ef">this</span>._lib) {
-</span></span><span style="display:flex;"><span>    _getCursorPos <span style="color:#f92672">=</span> _lib
-</span></span><span style="display:flex;"><span>        .lookupFunction<span style="color:#f92672">&lt;</span>_GetCursorPosNative, _GetCursorPosDart<span style="color:#f92672">&gt;</span>(<span style="color:#e6db74">&#39;get_cursor_pos&#39;</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">static</span> MousePos load({<span style="color:#66d9ef">String</span><span style="color:#f92672">?</span> path}) {
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> lib <span style="color:#f92672">=</span> DynamicLibrary.open(path <span style="color:#f92672">??</span> <span style="color:#e6db74">&#39;mousepos.dll&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> MousePos._(lib);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  ({<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y})<span style="color:#f92672">?</span> getCursorPos() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> out <span style="color:#f92672">=</span> ffi.calloc<span style="color:#f92672">&lt;</span>Point<span style="color:#f92672">&gt;</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">final</span> ok <span style="color:#f92672">=</span> _getCursorPos(out);
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (ok <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (x: out.ref.x, y: out.ref.y);
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">finally</span> {
-</span></span><span style="display:flex;"><span>      ffi.calloc.free(out);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
+              <h2 id="명암효과-220907">명암효과 (220907)</h2>
+<p>꽤 많은 제안서나 기획서에서 명암을 사용한 도형들을 볼 수 있는데, 모든 오브제들을 동일하게 처리해줘야 해서 매우 빡센 작업임은 알고 있다. 하지만, 몇몇 디자인 템플릿에서 따다가 억지로 내용을 끼워 넣은 듯한 느낌이 있기 때문에, 나는 별로 좋아하지 않는다.</p>
+<p>그래도 심심해서 함 그려본다.</p>
+<a class="btn-link" href="http://naver.me/xI2Cne2v" target="_blank" rel="noopener noreferrer">download</a>
 <br>
-<p>Build the UI.<br>
-<code>main.dart</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:async&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/material.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;mousepos_ffi.dart&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
-</span></span><span style="display:flex;"><span>  runApp(<span style="color:#66d9ef">const</span> MyApp());
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyApp</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> MyApp({<span style="color:#66d9ef">super</span>.key});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">const</span> MaterialApp(
-</span></span><span style="display:flex;"><span>      debugShowCheckedModeBanner: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>      home: MousePosPage(),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MousePosPage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> MousePosPage({<span style="color:#66d9ef">super</span>.key});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  State<span style="color:#f92672">&lt;</span>MousePosPage<span style="color:#f92672">&gt;</span> createState() <span style="color:#f92672">=&gt;</span> _MousePosPageState();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_MousePosPageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>MousePosPage<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>  late <span style="color:#66d9ef">final</span> MousePos _mousePos;
-</span></span><span style="display:flex;"><span>  Timer<span style="color:#f92672">?</span> _timer;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> _text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;reading position...&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> initState() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>.initState();
-</span></span><span style="display:flex;"><span>    _mousePos <span style="color:#f92672">=</span> MousePos.load(); <span style="color:#75715e">// mousepos.dll
-</span></span></span><span style="display:flex;"><span>    _timer <span style="color:#f92672">=</span> Timer.periodic(<span style="color:#66d9ef">const</span> Duration(milliseconds: <span style="color:#ae81ff">33</span>), (_) {
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">final</span> p <span style="color:#f92672">=</span> _mousePos.getCursorPos();
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>mounted) <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>      setState(() {
-</span></span><span style="display:flex;"><span>        _text <span style="color:#f92672">=</span> p <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;fail to read&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;X: </span><span style="color:#e6db74">${</span>p.x<span style="color:#e6db74">}</span><span style="color:#e6db74"> , Y: </span><span style="color:#e6db74">${</span>p.y<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>;
-</span></span><span style="display:flex;"><span>      });
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> dispose() {
-</span></span><span style="display:flex;"><span>    _timer<span style="color:#f92672">?</span>.cancel();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>.dispose();
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Scaffold(
-</span></span><span style="display:flex;"><span>      appBar: AppBar(
-</span></span><span style="display:flex;"><span>        title: <span style="color:#66d9ef">const</span> Text(<span style="color:#e6db74">&#39;Position (Rust + Flutter)&#39;</span>),
-</span></span><span style="display:flex;"><span>        backgroundColor: Colors.grey,
-</span></span><span style="display:flex;"><span>      ),
-</span></span><span style="display:flex;"><span>      body: Center(child: Text(_text, style: <span style="color:#66d9ef">const</span> TextStyle(fontSize: <span style="color:#ae81ff">28</span>))),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="dll-location">DLL location</h2>
-<p class="text-box">build/windows/x64/runner/Debug<br>
-build/windows/x64/runner/Release</p>
-<p>Copy <code>mousepos.dll</code> into the folder next to the exe.<br>
-If the DLL is missing, the exe fails to load.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/11.png" alt="myimg"></p>
 <br>
 <br>
 
@@ -396,13 +266,66 @@ If the DLL is missing, the exe fails to load.</p>
           
             
               
-              <h2 id="result">Result</h2>
-<p>Compared to writing a C++ DLL, Rust felt less dependent on Visual Studio settings, and the code was much simpler.<br>
-Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03995/01.webp" alt="img"></p>
+              <h2 id="겨울-221114">겨울 (221114)</h2>
+<p>요즘 초등학생들은 계절 이름으로 수업을 한다하지? 그래서, 오늘은 겨울 컨셉의 파워포인트 디자인이다.</p>
+<a class="btn-link" href="http://naver.me/F0w7Rz0i" target="_blank" rel="noopener noreferrer">download</a>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/12.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/13.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/14.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/15.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/16.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/17.jpg" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/18.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>end.</p>
+
+            
+          
+            
+              
+              <h2 id="blob-221124">BLOB (221124)</h2>
+<p>인터넷 서칭을 하다가, blob 오브젝트를 생성해 주는 사이트를 보았다. 오브젝트들이 복잡하게 널려있는 파워포인트를 회사에서 만들일이 거의 없기 때문에, 연습삼아 시도해본다.</p>
+<p><a class="btn-link" href="http://naver.me/Frly57qG" target="_blank" rel="noopener noreferrer">download</a> <a class="btn-link" href="https://www.blobmaker.app/" target="_blank" rel="noopener noreferrer">blobmaker</a></p>
+<br>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/19.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/20.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/21.png" alt="myimg"></p>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="orange-230213">Orange (230213)</h2>
+<p>남의 회사소개서를 보다가.. 따라해보았다.</p>
+<a class="btn-link" href="http://naver.me/xw9NTmtQ" target="_blank" rel="noopener noreferrer">download</a>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/22.png" alt="myimg"></p>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="table-240326">table (240326)</h2>
+<p>adobe stock 사이트를 보다가 따라해 보았다.</p>
+<a class="btn-link" href="http://naver.me/xhKp9qdT" target="_blank" rel="noopener noreferrer">download</a>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/23.jpg" alt="myimg"></p>
+<br>
+<br>
 
             
           
@@ -439,53 +362,53 @@ Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
+                <span class="related-posts-date">2025-12-29</span>
+                <a href="/post/01996/">ppt - 파워포인트 테이블(표) 연동 관련</a>
               </div>
             
           </div>
