@@ -51,6 +51,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 맑은 고딕 폰트, 자간(문자간격) 적당히 줄이기</title>
+      <link>https://mcjoi.github.io/post/01942/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01942/</guid>
+      <description>&lt;h2 id=&#34;맑은-고딕&#34;&gt;맑은 고딕&lt;/h2&gt;&#xA;&lt;p&gt;맑은 고딕 폰트는 회사에서 가장 많이 사용되는 폰트이다. 예쁘지도 않고, 편하지도 않지만, 범용적으로 사용되는 이유는 단하나, 윈도우 기본 폰트이기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;공유를 위해 애써 PDF로 만들지 않아도 되니, 엄청난 장점이라 하겠지만, 일단, 다른 폰트에 비해 자간이 넓다.&lt;/p&gt;&#xA;&lt;p&gt;예전에 어디선가 맑은 고딕 폰트가 자간을 자유롭게 컨트롤해서 사용하는 글꼴이라는 글을 본적이 있는데, 사실인지 아닌지는 알 수 없다. 즉, 파워포인트에서 사용할 때, 폰트의 자간을 조절해서 사용할 필요가 있다는 것이다.&lt;/p&gt;&#xA;&lt;p&gt;방법은 아래와 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 차트 서식 복사</title>
       <link>https://mcjoi.github.io/post/01949/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
