@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 텍스트 앞뒤 바꾸기(뒤집기) | shaaaaallow dive</title>
+    <title>xls - 셀 스타일 한번에 삭제하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00974/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01943/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 텍스트 앞뒤 바꾸기(뒤집기)</h1>
+      <h1>xls - 셀 스타일 한번에 삭제하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-12-14</span>
+          <span>2021-05-18</span>
           
         </div>
         <div class="post-meta-tags">
@@ -170,92 +170,43 @@
         
         
         
-          <div class="video-embed">
-  <div class="video-embed-inner">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/P8EtSti7qU4"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
+          <h2 id="셀스타일-전부-삭제하기">셀스타일 전부 삭제하기</h2>
+<p>가끔 지저분하게 셀스타일이 설정되어 있는 문서가 있다. 지워보자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/01.png" alt="myimg"></p>
 <br>
 <br>
-<h2 id="텍스트-앞뒤-바꾸기뒤집기">텍스트 앞뒤 바꾸기(뒤집기)</h2>
-<p>얼마전에 순서대로 있는 셀들을 거꾸로 배치하는 방법을 올린적이 있다.</p>
-<p>VBA와 함수를 사용하는 방법을 모두 올렸었다.<br>
-이 꼼수 아닌 꼼수는 그 이후로 회사에서 정말 많이 써먹었었다.<br>
-너무 뿌듯한 순간이 아닐 수 없다.</p>
-<p>물론, 회사에서 아무도 알아주는 사람은 없다.<br>
-내가 발로하든 VBA를 쓰든, 결과가 맞으면 되니깐.</p>
-<p>각설하고, 위의 내용을 고민하던 중에,<br>
-한 셀에 있는 텍스트를 뒤집는 것도 비슷하지 않을까라는 생각이 들었다.<br>
-예를 들어 아래처럼 &lsquo;가나다라마바사&rsquo;가 있으면 거꾸로 &lsquo;사바마라다나가&rsquo;가 되도록 말이다.</p>
-<p>안되는게 이상한거겠지만, 나같은 초보에게는 쉬운 VBA는 없다.<br>
-그래도 한번 해보자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/1.png" alt="img"></p>
+<h3 id="vba로-지우기">VBA로 지우기</h3>
+<p>VBA로 지워도 되는데, 셀스타일 이름이 거지같이 되어있는 경우, 삭제도 되지 않는다. 매우 비추하는 방법이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/02.png" alt="myimg"></p>
 <br>
 <br>
-<p>보기 좋게 표를 그렸다, 그리고, C4셀에 앞뒤를 바꾸고 싶은 텍스트를 기입했다.<br>
-아래 뒤집기로 표시한 C5셀에 C4셀 내용을 뒤집어서 넣을 예정이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/2.png" alt="img"></p>
+<h3 id="xml파일-편집해서-지우기">XML파일 편집해서 지우기</h3>
+<p>이 방법이 가장 명쾌한 방법이다. XLSX파일이 압축파일이라는건 웬만하면 알고 있을 것이다. ZIP파일로 확장자를 바꾼다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/03.png" alt="myimg"></p>
 <br>
 <br>
-<p>내 머릿속으로 어렴풋이 그렸던 내용은 아래와 같다.</p>
-<ul class="text-box">
-<li>전체 글자의 수를 센다. (len)</li>
-<li>각 글자별로 총 글자수 대비 순번을 매긴다. (for loop)</li>
-<li>배열에 순번의 역순으로 글자를 입력한다.</li>
-<li>배열을 한개의 셀에 합쳐서 표시한다. (join)</li>
-</ul>
-<Br>
-<br>
-<p>그냥, 머릿속으로 생각만 해봤다.<br>
-제대로 될지는 코드를 쳐보면 알수 있을 것이다. 아래처럼 코드를 입력했다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/4.png" alt="img"></p>
+<p>압축을 풀고 XL폴더에 있는 STYLE 파일을 수정한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/04.png" alt="myimg"></p>
 <br>
 <br>
-<p>사실 실제로 되는지 안되는지는 별로 중요하지 않았다. 안될줄 알았으니까..</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Change_FromTo</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> cMyTxt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> N <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> X <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> aTXT() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;원글
-</span></span></span><span style="display:flex;"><span>myTxt <span style="color:#f92672">=</span> Range(<span style="color:#e6db74">&#34;c4&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;원글의 글자수
-</span></span></span><span style="display:flex;"><span>cMyTxt <span style="color:#f92672">=</span> Len(myTxt)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;카운터
-</span></span></span><span style="display:flex;"><span>X <span style="color:#f92672">=</span> 1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;순환문
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> N <span style="color:#f92672">=</span> cMyTxt <span style="color:#66d9ef">To</span> 1 <span style="color:#66d9ef">Step</span> <span style="color:#f92672">-</span>1
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> Preserve aTXT(cMyTxt)
-</span></span><span style="display:flex;"><span>    aTXT(X) <span style="color:#f92672">=</span> Mid(myTxt, N, 1)
-</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">=</span> X <span style="color:#f92672">+</span> 1
-</span></span><span style="display:flex;"><span>    Range(<span style="color:#e6db74">&#34;c5&#34;</span>) <span style="color:#f92672">=</span> Join(aTXT, <span style="color:#e6db74">&#34;&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> N
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>그런데, 놀랍게도 아래처럼 잘 됐다.<br>
-전혀 써먹을 일이 없겠지만, 그래도 다행이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/3.png" alt="img"></p>
+<p>메모장이나 코드편집기를 써서 XML 파일을 열어준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/05.png" alt="myimg"></p>
 <br>
 <br>
-<p>혹시나 해서 공백을 넣어봤다.<br>
-공백도 문자로 인식을 해서 적용이 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/5.png" alt="img"></p>
+<p>코드의 태그중 <CELLSTYLE> </CELLSTYLE>안에 있는 코드를 모두 지워준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/06.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/07.png" alt="myimg"></p>
 <br>
 <br>
-<p>잘하시는 분들이 보면 콧웃음을 치겠지만, 작은일에 뿌듯함을 느낀다면 이또한 기쁜 일이다.</p>
+<p>폴더를 다시 압축해주고, 확장자명을 XLSX로 변경해준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/08.png" alt="myimg"></p>
+<br>
+<br>
+<p>기본 셀스타일만 남고 모두 삭제되었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01943/09.png" alt="myimg"></p>
+<br>
+<br>
 <p>끝.</p>
 
         
