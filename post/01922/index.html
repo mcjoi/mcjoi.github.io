@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - _xlfn 에러, textjoin 함수 VBA로 대체 | shaaaaallow dive</title>
+    <title>xls - 이름정의로 링크를 달 때, 주의 해야 할 점 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01966/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01922/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - _xlfn 에러, textjoin 함수 VBA로 대체</h1>
+      <h1>xls - 이름정의로 링크를 달 때, 주의 해야 할 점</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2019-09-08</span>
+          <span>2022-07-27</span>
           
         </div>
         <div class="post-meta-tags">
@@ -141,11 +141,6 @@
             
             
             
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
-              
             
               
               
@@ -175,28 +170,39 @@
         
         
         
-          <h2 id="_xlfn-에러-textjoin-함수-vba로-대체해보기">_xlfn 에러, textjoin 함수 VBA로 대체해보기</h2>
-<p>_xlfn은 상위버전에서 신규 생성된 함수를 이하 버전에서 켰을 때 나오는 에러문구인데, 예를들어 textjoin함수가 있겠다. (2003 기준)<br>
-억울하고 원통하지만, 이하버전에서는 이 기능을 못쓰게 되니, VBA로 대체 해봐야한다.</p>
+          <h2 id="이름정의-링크">이름정의 링크</h2>
+<p>이름정의와 함께 링크를 달 때, 주의해야할 점은 바로 순서이다.</p>
+<p>→ 이름을 정의할 셀 또는 범위를 설정한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<div class="video-embed">
-  <div class="video-embed-inner">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/oK4zOO4VORE"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
+<p>→ 셀에 이름을 정의한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/02.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>특히 회사에서는 2016버전을 쓰는 곳이 별로 없을 것 같은데, 뭐,,, MS도 장사하는거니 탓할수는 없다.<br>
-약간 놀라운건 무료로 제공되는 안드로이드판 엑셀에도 이런 함수들이 적용이 되어있다는 점이다.<br>
-그냥&hellip; 로컬 프로그램을 업데이트 하는 과정이 복잡한걸로 이해한다.</p>
+<p>→ 링크를 걸 버튼셀 설정</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/03.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>→ 링크 삽입</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/04.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>→ 클릭하면 셀 이동</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/05.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>→ 정의된 이름을 수정하여 새로운 링크 대상을 찾을 수 있도록 이름 편집<br>
+바로 이 단계를 링크를 걸기 전에 먼저하면 안된다는 것이 이 글의 핵심. 링크 대상을 특정 열의 마지막 셀을 찾는 수식으로 변경했다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/06.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>→ 링크 수정 여부 확인<br>
+D열의 마지막 값이 들어있는 셀인 딸기가 링크 대상이 되었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/07.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>링크 먼저 걸지 않고, 수식을 수정하면, (4와 6단계가 바뀌면..) 해당 이름이 링크를 찾을 수 있는 곳에 보이지 않는다. 단순한데, 설명이 쉽지 않다.</p>
 <p>끝.</p>
 
         

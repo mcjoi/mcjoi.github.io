@@ -121,6 +121,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 이름정의로 링크를 달 때, 주의 해야 할 점</title>
+      <link>https://mcjoi.github.io/post/01922/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01922/</guid>
+      <description>&lt;h2 id=&#34;이름정의-링크&#34;&gt;이름정의 링크&lt;/h2&gt;&#xA;&lt;p&gt;이름정의와 함께 링크를 달 때, 주의해야할 점은 바로 순서이다.&lt;/p&gt;&#xA;&lt;p&gt;→ 이름을 정의할 셀 또는 범위를 설정한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;→ 셀에 이름을 정의한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;→ 링크를 걸 버튼셀 설정&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;→ 링크 삽입&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/04.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;→ 클릭하면 셀 이동&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01922/05.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;→ 정의된 이름을 수정하여 새로운 링크 대상을 찾을 수 있도록 이름 편집&lt;br&gt;&#xA;바로 이 단계를 링크를 걸기 전에 먼저하면 안된다는 것이 이 글의 핵심. 링크 대상을 특정 열의 마지막 셀을 찾는 수식으로 변경했다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 데이터 테이블 소계 넣기(SUBTOTAL, AGGREGATE)</title>
       <link>https://mcjoi.github.io/post/01925/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
