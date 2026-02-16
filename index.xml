@@ -436,6 +436,27 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 정의된 이름 편하게 확인하기</title>
+      <link>https://mcjoi.github.io/post/01910/</link>
+      <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01910/</guid>
+      <description>&lt;h2 id=&#34;이름정의로-정의된-이름-확인하기&#34;&gt;이름정의로 정의된 이름 확인하기&lt;/h2&gt;&#xA;&lt;p&gt;이름정의 기능은 잘쓰면 아주 유용하지만, 어설프게 사용한다면, 꼬여서 상당히 골치가 아파질 수 있는 기능이다. 정의된 이름 관련 리본 메뉴는 수식 탭에서 확인할 수 있다. 직관적으로 찾기 좀 애매한 위치에 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;정의된-이름-관리&#34;&gt;정의된 이름 관리&lt;/h2&gt;&#xA;&lt;p&gt;정의된 이름은 &amp;ldquo;수식에서 사용&amp;rdquo; 버튼을 통해 수식안에 넣을 수 있고, &amp;ldquo;이름관리자&amp;quot;에서 편집 혹은 삭제가 가능하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;또는, 주소창에서 등록된 이름을 확인, 이동할 수 있고,&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;F5키를 눌러 해당 영역으로 이동할 수도 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - A4사이즈로 시트 만들기</title>
+      <link>https://mcjoi.github.io/post/01911/</link>
+      <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01911/</guid>
+      <description>&lt;h2 id=&#34;워드로-엑셀-쓰기&#34;&gt;워드로 엑셀 쓰기&lt;/h2&gt;&#xA;&lt;p&gt;신나게 표를 만들고 나서, A4로 출력을 하려고 하면, 원치 않는 사이즈로 나올 때가 있다. %로 조정해서 사이즈를 맞출 수는 있지만, 그러다 보면 글씨가 작아지는 등 시행착오를 동반하게 된다.&lt;/p&gt;&#xA;&lt;p&gt;시작하자마자, 100% 비율의 A4 사이즈를 맞춘다면 좋을 것 같다. 특히 셀병합을 하기 위해서 적당히 작은 셀들로 구성이 되어 있으면 좋겠다.&lt;/p&gt;&#xA;&lt;p&gt;이를 위한 매크로를 짜서 실행하면 다음과 같이 설정된다.&lt;br&gt;&#xA;A열부터 좀 넉넉하게 Z열까지 열 너비를 적당히 줄이고, 용지 사이즈는 A4, 세로로 설정했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 줄바꿈으로 구분된 셀의 값 텍스트 나누기</title>
+      <link>https://mcjoi.github.io/post/01912/</link>
+      <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01912/</guid>
+      <description>&lt;h2 id=&#34;텍스트-나누기와-줄바꿈&#34;&gt;텍스트 나누기와 줄바꿈&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 한개의 셀 안에 텍스트가 줄바꿈(char(10))으로 들어있는 경우, 텍스트 나누기를 하는 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01912/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;데이터탭의 텍스트나누기 기능으로 간단하게 할 수 있는데, 방법이 친숙하지는 않다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01912/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;왜냐면, 마법사에서, 구분 기호로 나온게 탭, 세미콜론, 쉼표, 공백 뿐이기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01912/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;답은 기타에 있는데, 기타 체크박스를 찍고, 입력칸에서 Ctrl + Enter 를 쳐주면, 다음 페이지로 넘어가는데, 미리보기를 보면, 이미, 줄바꿈을 기준으로 텍스트가 나뉘어진 것을 알 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01912/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래 그림처럼 예쁘게 잘 나뉘어지는 것을 알 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 시트별로 따로 파일 저장하기</title>
       <link>https://mcjoi.github.io/post/01913/</link>
       <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
@@ -482,7 +503,7 @@
       <link>https://mcjoi.github.io/post/01919/</link>
       <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01919/</guid>
-      <description>&lt;h2 id=&#34;정렬&#34;&gt;정렬&lt;/h2&gt;&#xA;&lt;p&gt;매번 정렬을 할때마다 느끼는 거지만, 상당히 귀찮다. 그럼에도, 사용자 지정 목록 기능이 있어, 가끔 쓸만하다 싶다. 아직 모르는 분들을 위해 공유한다.&lt;br&gt;&#xA;&amp;lsquo;이름&amp;rsquo;열을 오름차순 정렬하면, 아래와 같이 된다.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;맨 우측 정렬 옵션에서, 사용자 지정 목록을 눌러주면, 아래와 같은 등록창이 나오고, 새 목록 추가를 통해, 새로운 규칙을 만들 수 있다. 아래 그림은 타자 치기 귀찮아서, 노란칠된 이름만 적은 것이다.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;h2 id=&#34;반만-적으면&#34;&gt;반만 적으면&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;적용을 하게 되면, 내가 적은 순서대로 정렬이 되고, 그 다음은 오름차순 정렬이 된다. 친절하게도, 목록을 한번 적으면, 내가 적은 순서의 반대 순서도 리스트에 나오게 된다. 단, 이때는, 나머지 것들이 내림차순으로 정렬이 되며, 내가 적은 내용들이 그 하위에 나오게 되므로 주의를 요한다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;정렬&#34;&gt;정렬&lt;/h2&gt;&#xA;&lt;p&gt;매번 정렬을 할때마다 느끼는 거지만, 상당히 귀찮다. 그럼에도, 사용자 지정 목록 기능이 있어, 가끔 쓸만하다 싶다. 아직 모르는 분들을 위해 공유한다.&lt;br&gt;&#xA;&amp;lsquo;이름&amp;rsquo;열을 오름차순 정렬하면, 아래와 같이 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01919/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;맨 우측 정렬 옵션에서, 사용자 지정 목록을 눌러주면, 아래와 같은 등록창이 나오고, 새 목록 추가를 통해, 새로운 규칙을 만들 수 있다. 아래 그림은 타자 치기 귀찮아서, 노란칠된 이름만 적은 것이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01919/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;반만-적으면&#34;&gt;반만 적으면&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;적용을 하게 되면, 내가 적은 순서대로 정렬이 되고, 그 다음은 오름차순 정렬이 된다. 친절하게도, 목록을 한번 적으면, 내가 적은 순서의 반대 순서도 리스트에 나오게 된다. 단, 이때는, 나머지 것들이 내림차순으로 정렬이 되며, 내가 적은 내용들이 그 하위에 나오게 되므로 주의를 요한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>xls - 텍스트 합치기(행 누적)</title>
