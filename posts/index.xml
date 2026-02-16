@@ -366,6 +366,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 동시에 같은 시트 띄우기</title>
+      <link>https://mcjoi.github.io/post/01931/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01931/</guid>
+      <description>&lt;h2 id=&#34;동시에-같은-시트-띄우기&#34;&gt;동시에 같은 시트 띄우기&lt;/h2&gt;&#xA;&lt;p&gt;같은 파일(워크북)에 워크시트가 여러개라면 시트를 이동하면서, 데이터를 비교거나 수정사항이 반영되었는지 확인하기 귀찮을 때가 있는데, 이를 해결할 수 있는 방법이다. 첫번째 시트가 데이터를 참조하는 요약, 두번째 시트가 데이터 원본이라고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01931/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01931/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;case1-요약-테이블이-복잡한-경우&#34;&gt;CASE1. 요약 테이블이 복잡한 경우&lt;/h3&gt;&#xA;&lt;p&gt;요약 페이지에 있는 테이블이 요약이 아니라, 메인 데이터에 준하게 복잡하다면, 둘 다 적당히 큰 창이 필요할 것이므로, 보기 옵션을 활용하는 것이 좋다.&lt;br&gt;&#xA;보기 메뉴의 창 탭에 새창 버튼을 눌러주면, 새로운 창이 뜨는데, 파일명:1, 파일명:2로 같은 파일에서 파생된 창임을 확인 할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 행 삽입 할때, 함수(영역참조)에 주는 영향</title>
       <link>https://mcjoi.github.io/post/01932/</link>
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>

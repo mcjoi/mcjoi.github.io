@@ -121,6 +121,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 동시에 같은 시트 띄우기</title>
+      <link>https://mcjoi.github.io/post/01931/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01931/</guid>
+      <description>&lt;h2 id=&#34;동시에-같은-시트-띄우기&#34;&gt;동시에 같은 시트 띄우기&lt;/h2&gt;&#xA;&lt;p&gt;같은 파일(워크북)에 워크시트가 여러개라면 시트를 이동하면서, 데이터를 비교거나 수정사항이 반영되었는지 확인하기 귀찮을 때가 있는데, 이를 해결할 수 있는 방법이다. 첫번째 시트가 데이터를 참조하는 요약, 두번째 시트가 데이터 원본이라고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01931/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01931/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;case1-요약-테이블이-복잡한-경우&#34;&gt;CASE1. 요약 테이블이 복잡한 경우&lt;/h3&gt;&#xA;&lt;p&gt;요약 페이지에 있는 테이블이 요약이 아니라, 메인 데이터에 준하게 복잡하다면, 둘 다 적당히 큰 창이 필요할 것이므로, 보기 옵션을 활용하는 것이 좋다.&lt;br&gt;&#xA;보기 메뉴의 창 탭에 새창 버튼을 눌러주면, 새로운 창이 뜨는데, 파일명:1, 파일명:2로 같은 파일에서 파생된 창임을 확인 할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 행 삽입 할때, 함수(영역참조)에 주는 영향</title>
       <link>https://mcjoi.github.io/post/01932/</link>
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
