@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 영역선택, 이름관리자를 VBA에서 사용 | shaaaaallow dive</title>
+    <title>xls - 문자와 숫자가 섞여있는 셀값에서 숫자만 추출하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01954/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01917/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 영역선택, 이름관리자를 VBA에서 사용</h1>
+      <h1>xls - 문자와 숫자가 섞여있는 셀값에서 숫자만 추출하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2021-04-16</span>
+          <span>2022-09-21</span>
           
         </div>
         <div class="post-meta-tags">
@@ -175,41 +175,73 @@
         
         
         
-          <h2 id="엑셀vba에서-영역선택-이름관리자를-vba에서-사용">엑셀VBA에서 영역선택, 이름관리자를 VBA에서 사용</h2>
-<p>1부터 16까지 16행의 값이 들어가 있다고 하자. VBA에서 해당 영역을 지정하는 방식을 알아본다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/01.png" alt="myimg"></p>
-<br>
-<br>
-<p>알고 있는 방법은 크게 3가지로,</p>
+          <h2 id="상당히-귀찮은-일">상당히 귀찮은 일</h2>
+<p>어느날 업무 메일을 받았는데, 이 딴식으로 글이 써있다고 치고, 위의 내용을 엑셀로 복사하면 상당히 귀찮은 일이 펼쳐진다.<br>
+복사를 하면 아래 그림과 같이 될 것이기 때문이다.</p>
 <ul class="text-box">
-<li>range로 영역을 지정하는 방법,</li>
-<li>currentRegion이나 usedrange를 활용하는 방법,</li>
-<li>워크시트의 이름관리자를 활용하는 방법이다.</li>
+<li>사과 30,000,000원</li>
+<li>딸기 20,000,000원</li>
+<li>과자 1,000,000원</li>
+<li>과자 비율 : 2%</li>
 </ul>
-<p>대충 영역 내 셀 개수를 세는 프로시저를 작성해보면 아래와 같고, 결과는 모두 16이 나올 것이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/02.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01917/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>이때, 셀이 하나 추가가 된다면, 어떻게 될까? 셀이 하나 추가되어도 기존 영역을 물고 있다면, 곤란하다고 할 수 있다.<br>
-3가지 방법 중 동적으로 작동하는 방식은 뭘까?</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/03.png" alt="myimg"></p>
+<h2 id="숫자만-빼서-사용하고-싶다">숫자만 빼서 사용하고 싶다.</h2>
+<p>반복적으로 사용할 수 있을 거 같으니, 가장 쉬운 방법으로 VBA를 짜본다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01917/02.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>약간 코드를 수정하고 실행해 보자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/04.png" alt="myimg"></p>
+<p>음. 원했던 기능까지는 잘된다. 제약사항은 다음과 같다.</p>
+<p class="text-box">[전제] 첫번째 나오는 숫자 배열만 인식<br>
+[전제] ,,+,-,%는 숫자로 인식<br>
+[전제] 비연속적이지 않은 숫자에서는 멈춘다.<br>
+[제한] (1.금액 : 3,000,000원) 숫자를 앞에 쓴 문장이라면 당연히 거기서 멈춘다. 1만 추출된다.<br>
+[제한] (- 3,000,000) 처럼 +또는-를 숫자와 한칸 띄어 썼다면 - 만 추출된다.(비연속)<br>
+[제한] (- 금액 : 3,000,000원) 처럼 -를 사용했다면, - 만 추출된다.(비연속)<br>
+[제한] (300만원) 처럼 단위가 글로 적혀 있어도, 그냥 숫자 &ldquo;300&quot;만 추출</p>
 <br>
 <br>
-<p>영역을 세팅해 놓는 range는 당연히, 그대로 16이고, <code>currentRegion</code> 이나, <code>usedrange</code> 는 값이 17로 변한 걸 알 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/05.png" alt="myimg"></p>
-<br>
-<br>
-<p>이름 정의를 사용한 것도 값이 17로 바뀌었지만, 당연히 워크시트의 이름관리자에서 영역을 수정해주었기 때문에 가능한 것이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/06.png" alt="myimg"></p>
-<br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/07.png" alt="myimg"></p>
-<br>
-<br>
-<p>아무래도 이름정의를 통하면, VBA와 워크시트가 따로 노는 일이 줄어들 것 같은 느낌적인 느낌이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">sepText</span>()
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;현재 셀의 값이 한글/영문/공백/숫자가 섞여 있을때, 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;첫 번째 숫자를 우측 셀에 반환합니다.
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;배열변수
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> mytxtarray() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;현재 셀
+</span></span></span><span style="display:flex;"><span>mytxt <span style="color:#f92672">=</span> ActiveCell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;현재 셀 값의 길이
+</span></span></span><span style="display:flex;"><span>mytxtlen <span style="color:#f92672">=</span> Len(mytxt)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;배열변수의 길이 설정
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">ReDim</span> mytxtarray(mytxtlen)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;첫번째 숫자 배열 이후에, 다른 문자가 나올경우 멈출 수 있는 카운터
+</span></span></span><span style="display:flex;"><span>counter <span style="color:#f92672">=</span> 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> mytxtlen
+</span></span><span style="display:flex;"><span>    mytxtarray(i) <span style="color:#f92672">=</span> Mid(mytxt, i, 1)  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> IsNumeric(mytxtarray(i)) <span style="color:#f92672">Or</span> mytxtarray(i) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">Or</span> mytxtarray(i) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">Or</span> mytxtarray(i) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">Or</span> mytxtarray(i) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;%&#34;</span> <span style="color:#f92672">Or</span> mytxtarray(i) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        ActiveCell.Offset(0, 1).Value <span style="color:#f92672">=</span> ActiveCell.Offset(0, 1).Value <span style="color:#f92672">&amp;</span> mytxtarray(i)
+</span></span><span style="display:flex;"><span>        counter <span style="color:#f92672">=</span> 3    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> counter <span style="color:#f92672">&lt;&gt;</span> 3 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            counter <span style="color:#f92672">=</span> 1
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>: <span style="color:#66d9ef">GoTo</span> dd:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dd:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<Br>
+<p>시간이 있으면, 좀 다듬어 보는 것도 좋겠다.</p>
 <p>끝.</p>
 
         

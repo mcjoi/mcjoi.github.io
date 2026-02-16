@@ -121,6 +121,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 문자와 숫자가 섞여있는 셀값에서 숫자만 추출하기</title>
+      <link>https://mcjoi.github.io/post/01917/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01917/</guid>
+      <description>&lt;h2 id=&#34;상당히-귀찮은-일&#34;&gt;상당히 귀찮은 일&lt;/h2&gt;&#xA;&lt;p&gt;어느날 업무 메일을 받았는데, 이 딴식으로 글이 써있다고 치고, 위의 내용을 엑셀로 복사하면 상당히 귀찮은 일이 펼쳐진다.&lt;br&gt;&#xA;복사를 하면 아래 그림과 같이 될 것이기 때문이다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;사과 30,000,000원&lt;/li&gt;&#xA;&lt;li&gt;딸기 20,000,000원&lt;/li&gt;&#xA;&lt;li&gt;과자 1,000,000원&lt;/li&gt;&#xA;&lt;li&gt;과자 비율 : 2%&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01917/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숫자만-빼서-사용하고-싶다&#34;&gt;숫자만 빼서 사용하고 싶다.&lt;/h2&gt;&#xA;&lt;p&gt;반복적으로 사용할 수 있을 거 같으니, 가장 쉬운 방법으로 VBA를 짜본다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01917/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;음. 원했던 기능까지는 잘된다. 제약사항은 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;[전제] 첫번째 나오는 숫자 배열만 인식&lt;br&gt;&#xA;[전제] ,,+,-,%는 숫자로 인식&lt;br&gt;&#xA;[전제] 비연속적이지 않은 숫자에서는 멈춘다.&lt;br&gt;&#xA;[제한] (1.금액 : 3,000,000원) 숫자를 앞에 쓴 문장이라면 당연히 거기서 멈춘다. 1만 추출된다.&lt;br&gt;&#xA;[제한] (- 3,000,000) 처럼 +또는-를 숫자와 한칸 띄어 썼다면 - 만 추출된다.(비연속)&lt;br&gt;&#xA;[제한] (- 금액 : 3,000,000원) 처럼 -를 사용했다면, - 만 추출된다.(비연속)&lt;br&gt;&#xA;[제한] (300만원) 처럼 단위가 글로 적혀 있어도, 그냥 숫자 &amp;ldquo;300&amp;quot;만 추출&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 셀 색상 복사해서 적용하기 - RGB 값 복사에서 해방되어 보자</title>
       <link>https://mcjoi.github.io/post/01918/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
