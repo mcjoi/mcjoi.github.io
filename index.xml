@@ -429,6 +429,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 빠른 채우기</title>
+      <link>https://mcjoi.github.io/post/01935/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01935/</guid>
+      <description>&lt;h2 id=&#34;빠른-채우기&#34;&gt;빠른 채우기&lt;/h2&gt;&#xA;&lt;p&gt;인공지능이라 할건 없지만, 의외로 아래와 같이 짜증나는 텍스트 자르기에 유의미한 기능이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;빠른 채우기를 사용해보자. 맨 첫 행은 채워줘야 패턴을 찾는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;같은 패턴을 가진 열(채우기를 할 열)을 선택하고,&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;리본메뉴의 홈 &amp;gt; 편집 &amp;gt; 채우기 드롭다운에서 빠른 채우기를 누르는 것으로 끝이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;값이 잘 들어간 것을 알 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;애석하게도 참조값이 바뀌어도, 결과값이 변하지는 않는다. 함수와 다른 점이라 하겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/category/01935/06.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;또한 참조값의 열 array에서 엑셀이 패턴을 찾지 못하면, 에러가 난다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 병합된 셀이 있을 때, 복사 붙여넣기</title>
       <link>https://mcjoi.github.io/post/01936/</link>
       <pubDate>Wed, 15 Dec 2021 00:00:00 +0000</pubDate>
