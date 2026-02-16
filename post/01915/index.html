@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 마지막셀 주소 찾기, 문제 있는 시트 찾기 | shaaaaallow dive</title>
+    <title>xls - 저장 시 글꼴 포함이 되지 않는 글꼴 삭제하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01983/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01915/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 마지막셀 주소 찾기, 문제 있는 시트 찾기</h1>
+      <h1>xls - 저장 시 글꼴 포함이 되지 않는 글꼴 삭제하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-17</span>
+          <span>2022-09-27</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
               
             
           
@@ -175,63 +170,29 @@
         
         
         
-          <h2 id="마지막셀-주소-찾기">마지막셀 주소 찾기</h2>
-<p>마지막 셀을 찾는 작업은 항상 중요한 것 같다. <code>CURRENTREGION</code>과 <code>USEDRANGE</code>, <code>END</code> 정도면 충분할까?<br>
-시트에 사용된 마지막 셀을 찾아봤다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/01.gif" alt="myimg"></p>
+          <h2 id="저장-시-글꼴-포함이-되지-않는-글꼴-삭제하기">저장 시 글꼴 포함이 되지 않는 글꼴 삭제하기</h2>
+<p>외부에서 받은 PPT 파일에 저장 시 글꼴 포함 옵션을 켜니 저장이 되지 않는다. (적어도) 내가 사용한 폰트는 아닌 것 같다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LastCellNum</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> sht <span style="color:#f92672">As</span> Worksheet
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastRow <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastColumn <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> sht <span style="color:#f92672">=</span> ThisWorkbook.Worksheets(<span style="color:#e6db74">&#34;Sheet1&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>LastRow <span style="color:#f92672">=</span> sht.UsedRange.Rows(sht.UsedRange.Rows.Count).Row
-</span></span><span style="display:flex;"><span>LastColumn <span style="color:#f92672">=</span> sht.UsedRange.Columns(sht.UsedRange.Columns.Count).Column
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>MsgBox <span style="color:#e6db74">&#34;마지막셀은 &#34;</span> <span style="color:#f92672">&amp;</span> LastRow <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째 행, &#34;</span> <span style="color:#f92672">&amp;</span> LastColumn <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째열 입니다.&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<h2 id="range-문제있는-시트-찾기">RANGE 문제있는 시트 찾기</h2>
-<p>엑셀 파일의 용량이 커지는 이유는 많겠지만, USEDRANGE가 잘못 설정되는 경우가 많다. 한마디로 말하면, CTRL이나 SHIFT 단축키 치다가 실수로 10만번째 행이 사용중인 영역으로 인식되는 경우라 하겠다.</p>
-<p>서너개의 시트로 구성된 파일이라면, 일일이 CTRL+END키로 USEDRANGE를 체크하면 되겠지만, 워크시트가 스무개가 넘어가면, 그 또한 일이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/001.png" alt="myimg"></p>
+<p>아마도 나에게 없어서 발생하는 에러인 듯 하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/02.png" alt="myimg"></p>
 <br>
 <br>
-<p>과거 USEDRANGE의 마지막 셀주소를 찾는 글을 쓴 적이 있는데, 아주 약간만 변형해서, 사용해 본다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/002.png" alt="myimg"></p>
+<p>글꼴 바꾸기 옵션에서 확인은 되는데, 일괄 바꾸기 기능으로 적용이 되지 않는다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/03.png" alt="myimg"></p>
 <br>
 <br>
-<p>왼쪽부터 SHEET INDEX, 마지막 셀의 ROW(행), COLUMN(열), SHEETNAME 순서로 나온다. 귀찮아서, HEAD는 안붙였다.<br>
-아래 예시에서 보면, Sheet1번의 마지막 행이 이상하다는 걸 알수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/003.png" alt="myimg"></p>
+<p>문서 속성을 보니, 계속 사용중인 것으로 나온다. 어떤 페이지에 어떤 식으로 사용된 것인지 알 수 없으니, 다른 방법으로 바꾸기를 해줘야 한다. 파일을 XML 파일로 저장한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/04.png" alt="myimg"></p>
 <br>
 <br>
-<p>물론, 용량이 커지는 이유가 이것 때문이라고 할수는 없지만, 가능성은 열어두자.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LastCellNumBySheet</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> sht <span style="color:#f92672">As</span> Worksheet
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastRow <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> LastColumn <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> Worksheets.Count
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> sht <span style="color:#f92672">=</span> ThisWorkbook.Worksheets(x)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Cells(x <span style="color:#f92672">+</span> 1, 4) <span style="color:#f92672">=</span> x
-</span></span><span style="display:flex;"><span>Cells(x <span style="color:#f92672">+</span> 1, 5) <span style="color:#f92672">=</span> sht.UsedRange.Rows(sht.UsedRange.Rows.Count).Row
-</span></span><span style="display:flex;"><span>Cells(x <span style="color:#f92672">+</span> 1, 6) <span style="color:#f92672">=</span> sht.UsedRange.Columns(sht.UsedRange.Columns.Count).Column
-</span></span><span style="display:flex;"><span>Cells(x <span style="color:#f92672">+</span> 1, 7) <span style="color:#f92672">=</span> sht.Name
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> x
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><p>이후에 차차 업그레이드를 해보자고.</p>
+<p>code Editor로 xml 파일을 실행해보면, JBold 폰트를 찾을 수 있으니, 원하는 폰트로 바꿔준다. 단, 폰트명은 정확하게 바꿔줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/05.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>저장을 하고 다시 pptx 파일로 변경해주면, 폰트가 변경되어 있음을 알 수 있고, 에러도 나지 않는다.<br>
+뭐&hellip; 특별한 건 없다.</p>
 <p>끝.</p>
 
         
