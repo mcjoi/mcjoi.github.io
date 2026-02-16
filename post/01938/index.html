@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록) | shaaaaallow dive</title>
+    <title>xls - 행 추가시 이름관리자/이름정의 반영하기(동적인 이름정의) | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00988/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01938/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 셀 값 드롭다운 메뉴 사용하기 - 데이터 유효성 검사(목록)</h1>
+      <h1>xls - 행 추가시 이름관리자/이름정의 반영하기(동적인 이름정의)</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-25</span>
+          <span>2021-11-16</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
               
             
           
@@ -170,66 +170,45 @@
         
         
         
-          <h2 id="드롭다운-메뉴-사용하기">드롭다운 메뉴 사용하기</h2>
-<p>엑셀에서도 웹에서처럼 입력되어야 하는 값이 정해져 있을 때나, 불필요한 값의 입력을 막기 위해 드롭다운 메뉴을 많이 활용하게 됩니다. 아래와 같이 과일명을 채울 때 드롭다운 메뉴를 활용한다고 가정해봅시다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/01.jpg" alt="img"></p>
+          <h2 id="이름정의">이름정의</h2>
+<p>이름정의 기능을 사용하고 있다면, 이미 초보자의 영역은 넘었다. 이미 알겠지만, 엑셀은 피벗테이블을 포함한 표형식의 DB형식의 모습과 그냥 범위로 나열되어 있는 형식의 데이터가 있다.</p>
+<p>아래와 같은 범위로 된 데이터가 있다. 데이터 표가 아니다. 이럴때, 흔히 표의 특정 영역을 지정하여, 이름정의를 한다.<br>
+B2:C20의 영역을 잡아서, 과일이름 영역이라 이름정의를 했다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>드롭다운 메뉴를 적용할 영을 드래그하여 선택합니다.<br>
-리본메뉴의 데이터 &gt; 데이터 유효성 검사를 선택합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/02.jpg" alt="img"></p>
+<p>정의된 이름(범위)을 사용해서 VLOOKUP 함수를 건다면 다음과 같다. 가장 일반적이지만, 오류의 가능성을 가진 형식이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/02.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>데이터 유효성 검사창에서 제한대상을 목록으로 설정합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/03.jpg" alt="img"></p>
+<p>오류가 발생하는 이유는 다음과 같이, 17번 이후에 18번 행(신규 행)이 추가되었을때, 이를 이름정의에서 동적으로 반영하지 못한다는 점이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/03.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>입력대상을 선택하는 방법은 두가지가 있습니다.<br>
-원본에 직접 입력하는 방법과 목록을 선택하는 방법이 있습니다.</p>
-<p>아래는 원본을 직업 입력하는 방법입니다.<br>
-종류가 몇가지 안될 때나, 문서에 해당 원본을 넣을 곳이 마땅치 않을 때 씁니다.<br>
-각 항목은 콤마(,)로 구분합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/04.jpg" alt="img"></p>
+<p>물론, 102번처럼, 이름정의가 사용된 범위의 중간에 행이 들어가게 된다면, 동적으로 반영된다. 아래 그림에서 과일이름영역확장의 중간신규값이 들어갔음에도 제대로 나오는 것을 확인할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/04.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>확인을 누르고 셀을 선택하면 드롭다운 메뉴가 생겼습니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/05.jpg" alt="img"></p>
+<p>이름정의를 할때, 다음과 같이 OFFSET으로 영역을 정해주면, 동적으로 값을 받을 수 있다. 방식은 OFFSET 함수의 범위를 설정할때, COUNTA로 행의 개수를 세어주고, 기준셀에서 HEIGHT값을 잡아주는 방식이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/05.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>입력했던 과일명이 나타납니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/06.jpg" alt="img"></p>
+<p>여기까지 이해를 했다면, 아래 처럼, WIDTH 값을 잡아주는 것도 이해가 갈 것이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/06.png" alt="myimg"></p>
 <br>
 <br>
-<p>목록 이외의 값을 입력할 경우, 입력값이 잘못되었다는 얼럿 창이 표시됩니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/07.jpg" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/08.jpg" alt="img"></p>
+<p>해당 영역을 통해 동일하게 VLOOKUP을 잡을 경우, 추가되는 행도 반영이 가능하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/07.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>다음은 목록을 선택하는 방법입니다.<br>
-목록선택 버튼을 클릭하면,</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/09.jpg" alt="img"></p>
+<p>사용상 치명적인 단점이자, 주의할 점은 아래와 같다.</p>
+<ul class="text-box">
+<li>영역 하단에 추가적인 내용을 기재하면 안된다. 영역이 확장된다.</li>
+<li>이름정의로 설정될 경우, 이름을 좌상단 ADDRESS창에서 직관적으로 확인 할 수 있는데, 이럴 경우 안보인다.</li>
+</ul>
 <br>
 <br>
-<p>목록선택 창이 뜹니다.<br>
-시트에서 원하는 영역을 선택합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/10.jpg" alt="img"></p>
-<br>
-<br>
-<p>확인을 누르면 됩니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/11.jpg" alt="img"></p>
-<br>
-<br>
-<p>동일하게 목록 값이 뜹니다.<br>
-단, 원본 데이터가 들어있는 셀이 삭제되면, 해당 드롭다운 메뉴에서도사라집니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/12.jpg" alt="img"></p>
-<br>
-<br>
-<p>가끔 공백을 넣어야할 경우에는 영역을 공백까지 잡고, 공백을 입력할 수 있도록 합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00988/13.jpg" alt="img"></p>
-<br>
-<br>
-<p>기타 옵션사항은 직접 만져보시면 쉽게 확인 할 수 있습니다.<br>
-한글판이니까요.</p>
+<p>필요한 경우, 사용해보도록 하자.</p>
 <p>끝.</p>
 
         
