@@ -37,11 +37,18 @@
       <description>&lt;h2 id=&#34;project-is-unviewable&#34;&gt;Project is unviewable&lt;/h2&gt;&#xA;&lt;p&gt;가끔 VBA add-in 코드를 확인하다보면, Project is unviewable이라고 메시지창이 뜨면서, 코드 확인이 불가능한 파일들이 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01993/01993_01.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;evilclippy&#34;&gt;EvilClippy&lt;/h2&gt;&#xA;&lt;p&gt;유료 프로그램으로 하는 것인줄 알고 있었는데, 구글링을 하다가, 설정하는 프로그램을 찾았다.&lt;br&gt;&#xA;해당 코드로 protection 이외에 코드 난독화가 가능한것으로 보인다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://github.com/outflanknl/EvilClippy&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;EvilClippy github&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;사용방법&#34;&gt;사용방법&lt;/h2&gt;&#xA;&lt;p&gt;readme 파일에 나와있는 것처럼, **C#**으로 구성된 코드를 다운받아서 &lt;strong&gt;Visual Studio&lt;/strong&gt;로 컴파일하면,&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mcs /reference:OpenMcdf.dll,Systehttp://m.IO.Compression.FileSystem.dll /out:EvilClippy.exe *.cs&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;Br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;EvilClippy.exe 파일이 생성되는데, 이 파일로 VBA파일을 변환하면 된다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EvilClippy.exe -u yourmacrofile.XXX&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;대략 아래와 같은 구성이 될 것이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - 배열수식</title>
+      <title>xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</title>
       <link>https://mcjoi.github.io/post/00993/</link>
       <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00993/</guid>
       <description>&lt;h2 id=&#34;배열array&#34;&gt;배열(array)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 초급과 중급을 나누는 기준은 배열수식을 아는지 모르는지에 있다고 확실히 말할 수 있다. 하지만, 알고 보면 어렵지 않으니, 아직 개념이 부족하다면, 확실히 해두고 갈 필요가 있다.&lt;/p&gt;&#xA;&lt;p&gt;배열은 일반적인 프로그래밍에서 list 혹은 array 라고 불리우며, 1차원 배열 {1,2,3,4} 또는 리스트 [x,x,x,x&amp;hellip;] 같은 여러 값의 묶음을 의미한다.&lt;br&gt;&#xA;그런데 이게 뭐 어떻단 말인가? 간단하게 sum 함수를 예로 들자.&lt;/p&gt;&#xA;&lt;p&gt;sum 함수의 인수는 단일 값들일 수 있고, 영역을 선택한 여러 값일 수 있다. 여기서 값들은 array로 묶이게 된다. 이후 sum이라는 연산을 수행하게 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</title>
+      <link>https://mcjoi.github.io/post/01934/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01934/</guid>
+      <description>&lt;h2 id=&#34;단계1-사용이유&#34;&gt;단계1. 사용이유&lt;/h2&gt;&#xA;&lt;p&gt;아래 &amp;lt;표1&amp;gt;과 같은 데이터 테이블이 있다고 하자. &amp;lt;표1&amp;gt;의 데이터를 &amp;lt;표2&amp;gt;로 요약해서, 각 과일의 판매량 합계를 기재할 예정이다. 과일별로 소팅을 해서 SUM함수를 걸거나, 피벗테이블을 만드는 방법 등이 있다. 배열수식은 어디까지나, 원본 데이터를 건드리지 않고, 요약표를 별도로 만들 때 사용하기 용이한 방법이다.&lt;br&gt;&#xA;*피벗테이블 대비 유연한 요약표 작성이 가능하고, 새로고침 과정이 필요없는 것도 장점이라 하겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01934/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&amp;lt;표2&amp;gt;에 아래와 같이 IF수식을 사용하였다. F3의 값이 C3와 같다면, 판매량을 반환하는 방식이다. 단일 셀값을 비교한다는 뜻이 되겠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ppt - 도형 잠그기(office2019)</title>

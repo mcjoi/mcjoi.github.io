@@ -93,11 +93,18 @@
       <description>&lt;h2 id=&#34;고정-영역-캡쳐를-위한-창-사이즈-설정&#34;&gt;고정 영역 캡쳐를 위한 창 사이즈 설정&lt;/h2&gt;&#xA;&lt;p&gt;화면 캡쳐를 신나게 받다 보면 동일한 크기의 화면을 여러번 받아야할 때가 있는데, 고정 캡쳐 영역을 정해두고 창 사이즈를 맞춰주면 해당 작업이 편해진다.&lt;/p&gt;&#xA;&lt;p&gt;어차피 윈도우즈의 기능이니, bat 파일과 powershell 코드를 사용한다.&lt;br&gt;&#xA;bat 파일을 실행하면, 현재 창이 떠있는 프로그램 리스트가 나오니, 원하는 창의 번호를 선택한다.&lt;/p&gt;&#xA;&lt;p&gt;이후 위치값과 창 사이즈를 설정한다. 그냥 엔터를 치면 디폴트 값 [대괄호 안의 값]이 정해지니, &lt;code&gt;.ps1&lt;/code&gt; 파일 안에서 디폴트 값을 수정해두는 것이 좋다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - 배열수식</title>
+      <title>xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</title>
       <link>https://mcjoi.github.io/post/00993/</link>
       <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00993/</guid>
       <description>&lt;h2 id=&#34;배열array&#34;&gt;배열(array)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 초급과 중급을 나누는 기준은 배열수식을 아는지 모르는지에 있다고 확실히 말할 수 있다. 하지만, 알고 보면 어렵지 않으니, 아직 개념이 부족하다면, 확실히 해두고 갈 필요가 있다.&lt;/p&gt;&#xA;&lt;p&gt;배열은 일반적인 프로그래밍에서 list 혹은 array 라고 불리우며, 1차원 배열 {1,2,3,4} 또는 리스트 [x,x,x,x&amp;hellip;] 같은 여러 값의 묶음을 의미한다.&lt;br&gt;&#xA;그런데 이게 뭐 어떻단 말인가? 간단하게 sum 함수를 예로 들자.&lt;/p&gt;&#xA;&lt;p&gt;sum 함수의 인수는 단일 값들일 수 있고, 영역을 선택한 여러 값일 수 있다. 여기서 값들은 array로 묶이게 된다. 이후 sum이라는 연산을 수행하게 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</title>
+      <link>https://mcjoi.github.io/post/01934/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01934/</guid>
+      <description>&lt;h2 id=&#34;단계1-사용이유&#34;&gt;단계1. 사용이유&lt;/h2&gt;&#xA;&lt;p&gt;아래 &amp;lt;표1&amp;gt;과 같은 데이터 테이블이 있다고 하자. &amp;lt;표1&amp;gt;의 데이터를 &amp;lt;표2&amp;gt;로 요약해서, 각 과일의 판매량 합계를 기재할 예정이다. 과일별로 소팅을 해서 SUM함수를 걸거나, 피벗테이블을 만드는 방법 등이 있다. 배열수식은 어디까지나, 원본 데이터를 건드리지 않고, 요약표를 별도로 만들 때 사용하기 용이한 방법이다.&lt;br&gt;&#xA;*피벗테이블 대비 유연한 요약표 작성이 가능하고, 새로고침 과정이 필요없는 것도 장점이라 하겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01934/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&amp;lt;표2&amp;gt;에 아래와 같이 IF수식을 사용하였다. F3의 값이 C3와 같다면, 판매량을 반환하는 방식이다. 단일 셀값을 비교한다는 뜻이 되겠다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>광각 렌즈와 일상 사진 그리고 후보정</title>
