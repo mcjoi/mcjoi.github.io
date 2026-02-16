@@ -121,6 +121,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 이름정의에서 배열 사용(VLOOKUP)</title>
+      <link>https://mcjoi.github.io/post/01930/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01930/</guid>
+      <description>&lt;h2 id=&#34;이름정의에서-배열-사용vlookup&#34;&gt;이름정의에서 배열 사용(VLOOKUP)&lt;/h2&gt;&#xA;&lt;p&gt;유효성 검사로 드랍다운 메뉴를 사용하는 때를 생각해 보자. 다른 값이 들어오는 것을 막을 때 주로 사용하지만, 특정값이 들어왔을때, VLOOKUP 함수를 사용하여, 다른 테이블을 참조한 값을 넣어줄 때, 많이 사용한다.&lt;/p&gt;&#xA;&lt;p&gt;주로 참조를 해야하는 값의 수가 적고, 자주 변하지 않는 경우에 사용하게 되는데, 이 과정이 귀찮으므로, 대안을 검토할 가치가 있다.&lt;/p&gt;&#xA;&lt;p&gt;아래 예시를 보자.&lt;br&gt;&#xA;학생 이름이 있고, 학점이 있다. 학점은 그 수가 많지 않으므로, 드랍다운 메뉴든 뭐든 처리를 한다고 치자. 옆 열에 기재된 영문 학점에 대해 4점 환산을 하고 싶다면, IF 함수를 쓰는 방법도 있고, 간이 참조 테이블을 만들어서, VLOOKUP처리를 하는 방법도 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 동시에 같은 시트 띄우기</title>
       <link>https://mcjoi.github.io/post/01931/</link>
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
