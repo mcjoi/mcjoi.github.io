@@ -121,6 +121,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 시트이름을 수식에서 사용하기(날짜 계산)</title>
+      <link>https://mcjoi.github.io/post/01929/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01929/</guid>
+      <description>&lt;h2 id=&#34;시트이름을-수식에서-사용하기날짜-계산&#34;&gt;시트이름을 수식에서 사용하기(날짜 계산)&lt;/h2&gt;&#xA;&lt;p&gt;회사에서 일을하다보면, 시트이름을 월로 해두고 동일한 양식을 복사해서 사용하는 경우가 왕왕 있다.&lt;br&gt;&#xA;이때, 시트이름에서 월데이터 정보를 얻어서, 시트 내에서 사용한다면, 유용할 수 있겠다는 생각을 해봤다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;시트이름-호출&#34;&gt;시트이름 호출&lt;/h2&gt;&#xA;&lt;p&gt;아래 수식을 복사한다면, 당신은 시트이름을 반환받을 수 있다.&lt;br&gt;&#xA;CELL 함수로 워크북 저장경로, 파일이름, 시트이름을 불러오고, FIND 함수로 시트이름의 시작을 찾아서,MID 함수로 발라내는 방식이다.&lt;br&gt;&#xA;아래 함수보다 복잡하지 않은 범용 사용법을 안다면 꼭 댓글을 부탁한다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=MID(CELL(&amp;ldquo;filename&amp;rdquo;,A1),FIND(&amp;quot;]&amp;quot;,CELL(&amp;ldquo;filename&amp;rdquo;,A1),1)+1,LEN(CELL(&amp;ldquo;filename&amp;rdquo;,A1)))&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여기서 사용된 B1셀 참조값은 시트 내 아무 값이어도 무방하다. 바뀌는 것이 보기 싫다면, $A$1으로 고정을 해두는 것도 나쁘지 않다. MID 함수의 마지막에 LEN함수로 길이를 정한 이유는 적어도 시트이름이 시트이름을 포함한 경로 전체보다는 작을 것이기 때문이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 이름정의에서 배열 사용(VLOOKUP)</title>
       <link>https://mcjoi.github.io/post/01930/</link>
       <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - vlookup, rank, dsum | shaaaaallow dive</title>
+    <title>xls - 시트이름을 수식에서 사용하기(날짜 계산) | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00997/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01929/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - vlookup, rank, dsum</h1>
+      <h1>xls - 시트이름을 수식에서 사용하기(날짜 계산)</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2022-04-22</span>
           
         </div>
         <div class="post-meta-tags">
@@ -170,94 +170,41 @@
         
         
         
-          <h2 id="vlookup">vlookup</h2>
-<p>아래 그림처럼 데이터 테이블이 있고, 찾고자 하는 기준이 있다면, 그 값을 찾아, 원하는 열의 값을 반환해주는 함수이다.</p>
-<p>표 중에서 사과의 가격을 찾고 싶다고 하자.<br>
-(값이 가로로 배치 되어 있으니, Vlookup(vertical)을 쓰고, 세로로 배치되어 있다면 Hlookup(horizontal)을 쓴다.)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_01.jpg" alt="img"></p>
+          <h2 id="시트이름을-수식에서-사용하기날짜-계산">시트이름을 수식에서 사용하기(날짜 계산)</h2>
+<p>회사에서 일을하다보면, 시트이름을 월로 해두고 동일한 양식을 복사해서 사용하는 경우가 왕왕 있다.<br>
+이때, 시트이름에서 월데이터 정보를 얻어서, 시트 내에서 사용한다면, 유용할 수 있겠다는 생각을 해봤다.</p>
+<h2 id="시트이름-호출">시트이름 호출</h2>
+<p>아래 수식을 복사한다면, 당신은 시트이름을 반환받을 수 있다.<br>
+CELL 함수로 워크북 저장경로, 파일이름, 시트이름을 불러오고, FIND 함수로 시트이름의 시작을 찾아서,MID 함수로 발라내는 방식이다.<br>
+아래 함수보다 복잡하지 않은 범용 사용법을 안다면 꼭 댓글을 부탁한다.</p>
+<p class="text-box">=MID(CELL(&ldquo;filename&rdquo;,A1),FIND(&quot;]&quot;,CELL(&ldquo;filename&rdquo;,A1),1)+1,LEN(CELL(&ldquo;filename&rdquo;,A1)))</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/01.webp" alt="myimg"></p>
 <br>
 <br>
-<p>찾을값이 들어갈 셀에서 <code>=Vlookup</code>을 쳐보자. 인수들이 나온다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_02.jpg" alt="img"></p>
+<p>여기서 사용된 B1셀 참조값은 시트 내 아무 값이어도 무방하다. 바뀌는 것이 보기 싫다면, $A$1으로 고정을 해두는 것도 나쁘지 않다. MID 함수의 마지막에 LEN함수로 길이를 정한 이유는 적어도 시트이름이 시트이름을 포함한 경로 전체보다는 작을 것이기 때문이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/02.webp" alt="myimg"></p>
 <br>
 <br>
-<p>인수는 총 4개로, 아래와 같이 구성된다.</p>
-<p class="text-box"><code>Lookup_value</code> → 찾을값(셀을 지정하거나, 값을 그냥 입력해도 된다)<br>
-<code>Table_array</code> → 값을 찾을 표(영역 또는 표이름, 이름정의)<br>
-<code>Col_index_num</code> → 표 안에서 몇 번째 열의 값을 반환할지(첫번째 열은 1)<br>
-<code>Range_lookup</code> → 정확하게 일치하는 값을 찾는다면 false, 유사한 값을 찾는다면, true 를 기입한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_03.jpg" alt="img"></p>
+<h2 id="마지막-날짜와-날짜수-확인">마지막 날짜와 날짜수 확인</h2>
+<p>연도와 월 값을 불러왔으니, 사용할 수 있는게 뭐가 있을까? 월마다 바뀌는 지표는 마지막 날짜이니, 30일인 달인지, 31일인 달인지, 28일인 달인지 아래와 같이 확인해보려고 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/03.webp" alt="myimg"></p>
 <br>
 <br>
-<p>찾을 값에 b3, 즉 사과의 열을 넣고, 표가 들어있는 영역을 두번째 인수에 넣는다.<br>
-만약 자동채우기로 값을 찾을수 있는 경우를 대비해서, 절대참조로 기입하는 것이 좋다.<br>
-표의 제목셀은 포함하지 않고 영역을 선택한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_04.jpg" alt="img"></p>
+<p>위에 불러진 연도와 월 값을 이용해서, 순차적으로 적용한 수식은 아래와 같다.</p>
+<p>시작일 같은 경우는, 위에서 얻어낸 월 정보 202203에서, LEFT 함수로 좌측 4개 텍스트를 DATE함수의 YEAR, MID 함수로 DATE함수의 MONTH 값을 넣어주고, DATE함수의 DAY에는 1을 넣어주었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/04.webp" alt="myimg"></p>
 <br>
 <br>
-<p>가격이 표에서 두번째 열에 있으니 2를 입력한다. 값은 정확히 일치한 값만 찾기 위해 false를 넣는다.(또는 0)</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_05.jpg" alt="img"></p>
+<p>마지막날은 동일한 수식에, EOMONTH 함수로 마지막날을 구해주었다. 특별한 건 없다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/05.webp" alt="myimg"></p>
 <br>
 <br>
-<p>값이 반환됐다. 매우 주의해야 할 점은 중복되는 값이 있다면, 첫번째 값을 반환한다는 것이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_06.jpg" alt="img"></p>
+<p>날짜수는 엄청 복잡해 보이지만, 위에 만들어놓은 마지막일에서 시작일을 빼고, +1 해준 값이다. 물론, 마지막 날짜를 구한 것에서 DAY 값만 빼낸 것과 동일하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/06.webp" alt="myimg"></p>
 <br>
 <br>
-<h2 id="rank">rank</h2>
-<p>rank 함수는 순서를 매길 때 사용되는 함수이다.<br>
-아래처럼 등수를 매길 일이 있다고 치자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_07.jpg" alt="img"></p>
-<br>
-<br>
-<p>RANK함수의 인수는 총 3개이며, 순위를 환산할 숫자, 전체 배열, 그리고, 내림차순/오름차순 옵션이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_08.jpg" alt="img"></p>
-<br>
-<br>
-<p>등수를 기재할 셀 위에서 등수를 산출할 숫자 또는 셀주소를 입력하고, 참조 영역을 넣는다. 그리고, 오름차순/내림차순 옵션을 설정한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_09.jpg" alt="img"></p>
-<br>
-<br>
-<p>0번이 내림차순이고, 입력 안하면 내림차순으로 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_10.jpg" alt="img"></p>
-<br>
-<br>
-<p>전체 등수를 산출해야하므로 참조 영역은 절대참조로 하고, 자동입력을 하면 등수가 매겨진다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_11.jpg" alt="img"></p>
-<br>
-<br>
-<h2 id="dsum">dsum</h2>
-<p>아래 그림처럼 데이터베이스가 있다.<br>
-이 중에 이름이 &ldquo;가&quot;이고, 배열1 열의 값이 3을 넘는 행의 배열1 값들의 합을 구해야 한다 하자.<br>
-일단 조건표가 필요하다, 고급필터의 조건을 입력하는 것처럼 조건표를 만들자.<br>
-이름이 &ldquo;가&rdquo; 배열1이 &gt;3 이 되겠다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_12.jpg" alt="img"></p>
-<br>
-<br>
-<p>조건표를 만들었으면,답이 들어갈 셀에서 DSUM 함수를 치자. 세 개의 변수 입력을 해야한다.<br>
-왼쪽부터 아래 순서대로 넣는다.</p>
-<p class="text-box">• 데이터 베이스<br>
-• 필드<br>
-• 조건</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_13.jpg" alt="img"></p>
-<br>
-<br>
-<p>VLOOKUP하고 다르게 데이터 베이스이므로 1행의 라벨 부분까지 넣어줘야, 조건과 매칭을 시킬 수 있다. 그 말인 즉, 조건표에도 라벨 부분과 이름을 통일해야 한다는 뜻이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_14.jpg" alt="img"></p>
-<br>
-<br>
-<p>합을 원하는 열, C1을 두번째 변수에 넣고, 라벨을 포함한 조건 표를 마지막으로 선택해주면 끝이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_15.jpg" alt="img"></p>
-<br>
-<br>
-<p>만약 이름이 가이고, 배열1이 3을 넘는 배열2의 값을 더한다면, 아래처럼 변수를 넣으면 되겠다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_16.jpg" alt="img"></p>
-<br>
-<br>
-<p>답은 6이 될것이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00997/00997_17.jpg" alt="img"></p>
-<br>
-<br>
-<p>아무리 이 기능이 좋아도, 조건표 그리기 귀찮아서 잘 안쓰게 된다는&hellip;</p>
+<p>다음부터는 시트이름의 규칙이 동일하다면, 수식을 그냥 복사해서 쓸수 있다. 하지만 명심해야 할 것은 윈도우 저장경로를 이용하기 때문에 온라인 엑셀에서는 되지 않는다는 것.(CELL함수 자체가 없음)</p>
 <p>끝.</p>
 
         
