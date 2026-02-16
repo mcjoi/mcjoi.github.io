@@ -366,6 +366,27 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 텍스트 상자 세로 중간 맞지 않을 때</title>
+      <link>https://mcjoi.github.io/post/01923/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01923/</guid>
+      <description>&lt;h2 id=&#34;텍스트-상자-센터&#34;&gt;텍스트 상자 센터&lt;/h2&gt;&#xA;&lt;p&gt;텍스트 상자를 열심히 복사하다 보면, (특히 남이 만들어 놓은 문서) 아래 그림처럼 세로 중간이 맞지 않을 때가 있다.&lt;br&gt;&#xA;텍스트 상자 기준으로 정렬이 진행되므로 중간이 맞지 않으면 상당히 신경이 쓰이게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01923/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;텍스트-상자의-여백&#34;&gt;텍스트 상자의 여백&lt;/h2&gt;&#xA;&lt;p&gt;첫번째로 확인해야할 것은 텍스트 상자의 여백(PADDING)이다. 위/아래 값이 맞지 않는다면, 위든 아래든 치우친 텍스트 상자가 된다.&lt;br&gt;&#xA;이번 경우에는 해당이 없는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01923/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;두번째는 단락 설정에서 줄간격 설정을 확인 하는 것이다. 기본 값은 1줄이나 다른 값이 들어와 있는 경우가 있다. 이번에는 줄 간격때문에 중간이 맞지 않았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 자주 쓰는 색 컬러팔레트</title>
+      <link>https://mcjoi.github.io/post/01924/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01924/</guid>
+      <description>&lt;h2 id=&#34;파워포인트의-색&#34;&gt;파워포인트의 색&lt;/h2&gt;&#xA;&lt;p&gt;색을 고르는 일은 몹시 어려운 일이다. 이색 저색 써보는 것도 방법이지만, 실상 회사에서 사용하는 색은 주로 CI색을 사용하기 때문에, 몇가지 자주쓰는 색을 박아놓고 쓰는 것도 나쁘지 않다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;슬라이드-마스터-팔레트&#34;&gt;슬라이드 마스터 팔레트&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트에 피커기능이 생긴 이후로, 마스터에 박스로 팔레트를 만들어 놓고 쓰는 사람이 꽤 보인다. 그럼 처음 켰을 때, 마스터에 내가 자주쓰는 색 팔레트를 만들어 놓는 버튼을 해두면 어떨까?&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;h2 id=&#34;생각보다-귀찮다&#34;&gt;생각보다&amp;hellip; 귀찮다.&lt;/h2&gt;&#xA;&lt;p&gt;아쉽게도 파워포인트 VBA는 엑셀만큼 나이스 하지 않으므로, 최소한의 기능으로 생각을 한다.&lt;br&gt;&#xA;새문서를 켜고, 버튼을 누르면, 8개 작은 박스에 주황/파랑 그라데이션이 들어간 팔레트를 만들어준다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 데이터 테이블 소계 넣기(SUBTOTAL, AGGREGATE)</title>
+      <link>https://mcjoi.github.io/post/01925/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01925/</guid>
+      <description>&lt;h2 id=&#34;데이터-테이블-소계-넣기subtotal-aggregate&#34;&gt;데이터 테이블 소계 넣기(SUBTOTAL, AGGREGATE)&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 간단한 테이블이 있다. 총 합계에 당신이 사용할 수식은?&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;① &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- =D28+D25+D23&lt;br&gt;&#xA;② &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- =SUM(D20:D28) / 2&lt;br&gt;&#xA;③ &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- =SUBTOTAL(9,D20:D28)&lt;br&gt;&#xA;④ &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- =AGGREGATE(9,0,D20:D28)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;①은 위의 표에서 대리점이 늘어날 경우, 즉 행이 증가할때, 추가된 소계 셀을 추가로 기재해줘야 한다는 단점이 있다.&lt;br&gt;&#xA;②는 실무에서 자주 보이는 영리한 수식이지만, 아래 그림과 같이 값들과 소계 1:1 대응을 벗어나는 값이 들어오는 경우에 문제가 될 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;③ SUBTOTAL 함수는 이름처럼 소계를 위한 함수이다. 중요한 점은 합산 영역안에 포함된 SUBTOTAL 함수를 무시한다는 것이다. 고로 위의 소계 부분은 전부 무시된다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 조건에 맞는 값이 여러개일때 n번째 값 찾기</title>
       <link>https://mcjoi.github.io/post/01926/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
