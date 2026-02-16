@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 자동필터(숫자필터로 상위 30% 찾기) | shaaaaallow dive</title>
+    <title>xls - 매크로 단축키 먹이기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00984/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01916/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 자동필터(숫자필터로 상위 30% 찾기)</h1>
+      <h1>xls - 매크로 단축키 먹이기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-28</span>
+          <span>2022-09-27</span>
           
         </div>
         <div class="post-meta-tags">
@@ -141,6 +141,11 @@
             
             
             
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
             
               
               
@@ -170,41 +175,37 @@
         
         
         
-          <h2 id="숫자필터로-상위-30-찾기">숫자필터로 상위 30% 찾기</h2>
-<p>자동필터는 엑셀에 있어 빼놓을 수 없는 기능이지만, 의외로 자주 쓰지는 않는다.<br>
-특히 감추기 이후에 활용도가 매우 떨어지는 점은 나만&hellip;. 그런가.</p>
-<p>솔직히 자동 필터 중 숫자 필터가 있다는 점은 나의 경우는 좀 뒤늦게 알았다. 이건 좀 유용하다.</p>
-<p>이번에는 여러가지 숫자가 있을 때 상위 30%를 고르는 필터를 사용해보자. 아래와 같이 점수가 있다고 치자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/1.jpg" alt="img"></p>
+          <h2 id="매크로-단축키-먹이기">매크로 단축키 먹이기</h2>
+<p>아래 그림과 같이 매크로를 모아둔, 폼을 만들었다.<br>
+그 역시도 귀찮으므로, 해당 폼을 오픈하면, 맨 위의 세가지 줄치기 매크로에 대하여, 단축키를 할당하려고 한다.<br>
+폼이 호출됐을 때만 단축키가 활성화되므로 충돌을 크게 신경쓰지는 않았다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01916/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>자동필터를 선택한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/2.jpg" alt="img"></p>
+<p>코드는 아래와 같으며, 단축키는 부호로 설정할 수 있다. F1~F12 같은 특수키는 {} 안에 넣어줘야한다. 예를 들면, shift + alt + 1 은 1번 매크로(lineGray)가 실행된다.</p>
+<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">showMenu</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 사용자폼 호출
+</span></span></span><span style="display:flex;"><span>    MyMacros.Show
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 단축키 설정
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; % : shift
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; ^ : control
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; + : alt
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;Application.OnKey &#34;{F3}&#34;, &#34;lineGray&#34;    
+</span></span></span><span style="display:flex;"><span>    Application.OnKey <span style="color:#e6db74">&#34;%+1&#34;</span>, <span style="color:#e6db74">&#34;lineGray&#34;</span>
+</span></span><span style="display:flex;"><span>    Application.OnKey <span style="color:#e6db74">&#34;%+2&#34;</span>, <span style="color:#e6db74">&#34;lineBlack&#34;</span>
+</span></span><span style="display:flex;"><span>    Application.OnKey <span style="color:#e6db74">&#34;%+3&#34;</span>, <span style="color:#e6db74">&#34;lineBlackBold&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><Br>
+<br>
+<p>자세한 내용은 아래 페이지에 너~~~무 잘 나와있다.</p>
+<a class="btn-link" href="https://learn.microsoft.com/en-us/office/vba/api/excel.application.onkey" target="_blank" rel="noopener noreferrer">onkey method</a>
 <br>
 <br>
-<p>자동필터가 붙었다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/3.jpg" alt="img"></p>
-<br>
-<br>
-<p>중간부분에 숫자 필터가 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/4.jpg" alt="img"></p>
-<br>
-<br>
-<p>상위 10 이라고 되어 있는 메뉴를 선택한다.<br>
-나머지는 한글이라 대충 메뉴만 보고 이해가 가는데, 상위 10&hellip; 음&hellip; 이건 잘 안누르게 되서 몰랐던거 같다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/5.jpg" alt="img"></p>
-<br>
-<br>
-<p>상위 30으로, %를 고른다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/6.jpg" alt="img"></p>
-<br>
-<br>
-<p>아주 심플하게 상위 30% 필터가 적용되었다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00984/7.jpg" alt="img"></p>
-<br>
-<br>
-<p>아주 쉬운 기능이지만 모르면 나처럼 사용이 불가능하다.<br>
-뭐든 눌러보는게 중요하다</p>
 <p>끝.</p>
 
         
