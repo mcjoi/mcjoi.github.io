@@ -150,6 +150,13 @@
     </item>
     <item>
       <title>xls - 날짜 평일만 표시하여 연속 데이터 채우기</title>
+      <link>https://mcjoi.github.io/post/01927/</link>
+      <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01927/</guid>
+      <description>&lt;h2 id=&#34;조건에-맞는-문자값-찾기&#34;&gt;조건에 맞는 문자값 찾기&lt;/h2&gt;&#xA;&lt;p&gt;값을 찾을 때, 찾고자 하는 값이 문자값이고, 행과 열 조건이 하나씩 있을 때, INDEX 함수와 MATCH 함수를 사용할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;MATCH 함수를 통해 찾고자 하는 값이 해당 배열(행/열)에서 몇번째 순서에 위치하는지 찾는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;INDEX함수에 MATCH함수로 찾은 값을 변수로 사용해서, 최종적으로 찾을 값을 반환받는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;다중-조건에-맞는-문자값-찾기&#34;&gt;다중 조건에 맞는 문자값 찾기&lt;/h2&gt;&#xA;&lt;p&gt;그럼, 행과 열의 조건이 하나 이상이라면 어떻게 처리할 것인가?&lt;br&gt;&#xA;우선 행 조건이 두개인 경우이다.&lt;/p&gt;&#xA;&lt;p&gt;아래 그림과 같이 A열에 중복되는 값들이 있고, 행 조건이 A열에서는 3, B열에서는 F로 주어졌다. 답은 &amp;ldquo;타&amp;quot;로, 기존의 &amp;ldquo;하&amp;quot;와 달라졌음을 알 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 날짜 평일만 표시하여 연속 데이터 채우기</title>
       <link>https://mcjoi.github.io/post/01928/</link>
       <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01928/</guid>

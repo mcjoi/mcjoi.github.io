@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>야외 플래시(스트로브) 촬영 시 TTL 측광 오류 | shaaaaallow dive</title>
+    <title>xls - 날짜 평일만 표시하여 연속 데이터 채우기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/05885/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01927/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,14 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>야외 플래시(스트로브) 촬영 시 TTL 측광 오류</h1>
+      <h1>xls - 날짜 평일만 표시하여 연속 데이터 채우기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2023-09-12</span>
-          
-            <span>updated : 2025-11-21</span>
+          <span>2022-05-12</span>
           
         </div>
         <div class="post-meta-tags">
@@ -146,7 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/gear/">#gear</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -172,70 +170,46 @@
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="상황">상황</h2>
-<p>야외에서 플래시를 사용하는 이유는 태양광 등 강한 광원 아래에서 피사체에 원하는 그림자를 만들거나, 없애거나, 때로는 부족한 광량을 보완하기 위함이다.</p>
-<p>이런 상황이라면 일반적으로 피사체보다 배경의 밝기가 훨씬 밝은 경우가 많을 수밖에 없다.</p>
+          <h2 id="조건에-맞는-문자값-찾기">조건에 맞는 문자값 찾기</h2>
+<p>값을 찾을 때, 찾고자 하는 값이 문자값이고, 행과 열 조건이 하나씩 있을 때, INDEX 함수와 MATCH 함수를 사용할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/01.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-                <div class="ad-slot">
-                  
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-                </div>
-              
-              <h2 id="ttl">TTL</h2>
-<p><code>through the lens</code> 라는 이름처럼 TTL은 카메라를 통해 들어온 빛을 기준으로 자동으로 플래시의 밝기를 결정하는 방식이다.<br>
-여기서 문제가 되는 점은 측광 방식의 특성이다.</p>
-<p class="text-box">✶ TTL 측광 방식은 멀티 패턴 측광이라면 특히 예전에 문제였던 ‘밝은 배경’으로 인해 플래시가 발광량을 줄여버리는 경우가 많다.</p>
-<p class="text-box">✶ 직광이 아닌 바운스 방식으로 촬영한다고 해도, 실제 발광 후 반사되어 들어오는 광량을 기준으로 판단하기 때문에 피사체에 도달하는 빛의 양이 부족해질 수 있다. 거기에 고속 동조까지 사용하고 있다면 광량은 더더욱 부족해진다.</p>
-<p class="text-box">✶ TTL로 야외 촬영을 하다 보면 ‘생각보다 어둡다’라는 느낌을 받을 수밖에 없다고 느꼈다. (물론, 실내라든지 어두운 환경이라면 무거운 장비를 들고 다닐 필요 없이 결과물은 매우 좋다.)</p>
+<p>MATCH 함수를 통해 찾고자 하는 값이 해당 배열(행/열)에서 몇번째 순서에 위치하는지 찾는다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/02.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="수동">수동</h2>
-<p>수동으로 광량을 조절하는 것은 상당히 귀찮은 작업이지만, 야외 촬영을 주 목적으로 플래시를 사용한다면 선택이 아니라 필수라고 생각한다. 개인적으로 사용하는 TT350은 애초에 발광량이 강한 플래시는 아니기 때문에, 여기에 기재된 ‘고속 동조’ + ‘TTL’까지 함께 사용하면 이게 과연 발광을 하는 건지 확인이 안 될 때가 많다. (심리적인 효과뿐인 느낌이다.)</p>
+<p>INDEX함수에 MATCH함수로 찾은 값을 변수로 사용해서, 최종적으로 찾을 값을 반환받는다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/03.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="결론">결론</h2>
-<p>개인적으로 플래시는 가지고 다닐 거라면 결국 수동으로 발광량을 조절하는 게 맞다고 생각한다.<br>
-처음엔 귀찮고 안 쓸 것 같았지만, 막상 익숙해지고 나니 이제는 수동방식만 사용한다.</p>
+<h2 id="다중-조건에-맞는-문자값-찾기">다중 조건에 맞는 문자값 찾기</h2>
+<p>그럼, 행과 열의 조건이 하나 이상이라면 어떻게 처리할 것인가?<br>
+우선 행 조건이 두개인 경우이다.</p>
+<p>아래 그림과 같이 A열에 중복되는 값들이 있고, 행 조건이 A열에서는 3, B열에서는 F로 주어졌다. 답은 &ldquo;타&quot;로, 기존의 &ldquo;하&quot;와 달라졌음을 알 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/04.png" alt="myimg"></p>
+<br>
+<br>
+<p>추가된 행 조건을 처리하는 방법은 아래와 같다.<br>
+행 조건을 처리하는 MATCH 함수 안에서 찾을 배열에 INDEX함수로 새로운 배열을 생성해 주는데, 두가지 조건을 <em>로 연결해 준다.<br>
+뒤에 붙는 ROW와 COL변수는 비워두되 마지막에 ,는 찍어줘야 한다.<br>
+INDEX((조건)</em>(조건),)<br>
+그럼 신규로 {0,0,0,1,0,0,0}과 같이 배열이 생성되고, 이에 대해 MATCH 함수에서 첫번째 1값(TRUE)의 위치를 반환하게 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/05.png" alt="myimg"></p>
+<br>
+<br>
+<p>나머지 조건이 하나 있는 열조건의 MATCH 함수와 최종 INDEX 함수는 기존과 동일하다.</p>
+<p>그럼 열조건까지 두개가 된다면 어떨까.<br>
+열 조건에 대한 처리를 담당하는 MATCH함수에 위와 동일하게 INDEX함수로 조건에 맞는 배열을 생성해주고, TRUE값의 위치를 확인하여 반환해주도록 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/06.png" alt="myimg"></p>
+<br>
+<br>
+<p>INDEX함수 안에 한꺼번에 쓴다면 다음과 같이 되겠다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01927/07.png" alt="myimg"></p>
 <br>
 <br>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
@@ -269,53 +243,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-03</span>
-                <a href="/post/05884/">시그마 65mm or 삼양 75mm</a>
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-03</span>
-                <a href="/post/05883/">윈도우11 멀티태스킹 창조절 기능 끄기</a>
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-28</span>
-                <a href="/post/05998/">블로그 이사(티스토리 → ?)</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-06</span>
-                <a href="/post/05993/">원하는 사이즈로 윈도우(창) 크기 조절</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/05994/">광각 렌즈와 일상 사진 그리고 후보정</a>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/05995/">카카오스토리 데이터 백업</a>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2025-12-31</span>
-                <a href="/post/05997/">소니 4세대 카메라(A7C2) 리모컨</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-14</span>
-                <a href="/post/05999/">빌트록스 air 시리즈 사용기 (15,20,25,50)</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-11-21</span>
-                <a href="/post/05889/">몇 가지 접이식 키보드 사용기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-11-21</span>
-                <a href="/post/05886/">조명 트리거(x-2t, x3)</a>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
           </div>
