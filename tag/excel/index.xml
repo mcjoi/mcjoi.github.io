@@ -114,6 +114,20 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 특정 날짜의 주차 계산, 주차별 시작날짜/마지막날짜 계산</title>
+      <link>https://mcjoi.github.io/post/01937/</link>
+      <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01937/</guid>
+      <description>&lt;p&gt;날짜 계산은 엄청 귀찮으므로, 자주 안 쓰는건 그냥 적어두자.&lt;br&gt;&#xA;다른 블로그 찾다가 발견해서 적어놨던건데, 어디서 봤는지는 까먹었다.&lt;/p&gt;&#xA;&lt;p&gt;주차를 먼저 계산해본다. 월요일부터 주차를 계산하는게 일반적이니 마지막에 2를 적는다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=WEEKNUM(DATE(연,월,일),2)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01937/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;거꾸로 주차를 기준으로 해당주차에 대한 시작 날짜(월요일)과 마지막날짜(일요일)를 알고 싶으면,&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;&lt;strong&gt;시작 날짜는&lt;/strong&gt;&lt;br&gt;&#xA;=MAX(DATE(연,1,1),DATE(연,1,1)-WEEKDAY(DATE(연,1,1),2)+(주차-1)*7+1)&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;&lt;strong&gt;마지막 날짜는&lt;/strong&gt;&lt;br&gt;&#xA;=MIN(DATE(연+1,1,0),DATE(연,1,1)-WEEKDAY(DATE(연,1,1),2)+주차*7)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01937/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;깊게 생각하면 머리 아프다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 행 추가시 이름관리자/이름정의 반영하기(동적인 이름정의)</title>
+      <link>https://mcjoi.github.io/post/01938/</link>
+      <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01938/</guid>
+      <description>&lt;h2 id=&#34;이름정의&#34;&gt;이름정의&lt;/h2&gt;&#xA;&lt;p&gt;이름정의 기능을 사용하고 있다면, 이미 초보자의 영역은 넘었다. 이미 알겠지만, 엑셀은 피벗테이블을 포함한 표형식의 DB형식의 모습과 그냥 범위로 나열되어 있는 형식의 데이터가 있다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같은 범위로 된 데이터가 있다. 데이터 표가 아니다. 이럴때, 흔히 표의 특정 영역을 지정하여, 이름정의를 한다.&lt;br&gt;&#xA;B2:C20의 영역을 잡아서, 과일이름 영역이라 이름정의를 했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;정의된 이름(범위)을 사용해서 VLOOKUP 함수를 건다면 다음과 같다. 가장 일반적이지만, 오류의 가능성을 가진 형식이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;오류가 발생하는 이유는 다음과 같이, 17번 이후에 18번 행(신규 행)이 추가되었을때, 이를 이름정의에서 동적으로 반영하지 못한다는 점이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 병합된셀 순번(인덱스넘버) 넣기</title>
       <link>https://mcjoi.github.io/post/01941/</link>
       <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>

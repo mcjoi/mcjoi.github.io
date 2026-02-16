@@ -429,6 +429,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 특정 날짜의 주차 계산, 주차별 시작날짜/마지막날짜 계산</title>
+      <link>https://mcjoi.github.io/post/01937/</link>
+      <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01937/</guid>
+      <description>&lt;p&gt;날짜 계산은 엄청 귀찮으므로, 자주 안 쓰는건 그냥 적어두자.&lt;br&gt;&#xA;다른 블로그 찾다가 발견해서 적어놨던건데, 어디서 봤는지는 까먹었다.&lt;/p&gt;&#xA;&lt;p&gt;주차를 먼저 계산해본다. 월요일부터 주차를 계산하는게 일반적이니 마지막에 2를 적는다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=WEEKNUM(DATE(연,월,일),2)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01937/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;거꾸로 주차를 기준으로 해당주차에 대한 시작 날짜(월요일)과 마지막날짜(일요일)를 알고 싶으면,&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;&lt;strong&gt;시작 날짜는&lt;/strong&gt;&lt;br&gt;&#xA;=MAX(DATE(연,1,1),DATE(연,1,1)-WEEKDAY(DATE(연,1,1),2)+(주차-1)*7+1)&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;&lt;strong&gt;마지막 날짜는&lt;/strong&gt;&lt;br&gt;&#xA;=MIN(DATE(연+1,1,0),DATE(연,1,1)-WEEKDAY(DATE(연,1,1),2)+주차*7)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01937/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;깊게 생각하면 머리 아프다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 행 추가시 이름관리자/이름정의 반영하기(동적인 이름정의)</title>
       <link>https://mcjoi.github.io/post/01938/</link>
       <pubDate>Tue, 16 Nov 2021 00:00:00 +0000</pubDate>
