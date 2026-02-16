@@ -149,6 +149,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 조건에 맞는 값이 여러개일때 n번째 값 찾기</title>
+      <link>https://mcjoi.github.io/post/01926/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01926/</guid>
+      <description>&lt;h2 id=&#34;small-함수&#34;&gt;SMALL 함수&lt;/h2&gt;&#xA;&lt;p&gt;SMALL 함수를 처음 봤을 때, 사용하는 사람이 있었을까 싶었지만, 배열 순서를 확인할 때, 사용하는 함수라고 봐도 무방할 것 같다. 예를 들어, 조건의 결과가 &lt;code&gt;{TRUE;FALSE;TRUE;FALSE;TRUE;FALSE}&lt;/code&gt; 로 뱉어졌다면, 이를 숫자로 바꿔주면 &lt;code&gt;{1;FALSE;1;FALSE;1;FALSE}&lt;/code&gt; 이 될 것이고, 여기에 순서를 먹이면, &lt;code&gt;{1;FALSE;3;FALSE;5;FALSE}&lt;/code&gt; 이런식이 될 것이다. 이 때, 두번째 작은 값을 찾는다고 하면 3이 되므로, 반환할 배열에서 3번째 인덱스 값을 받아오면 될 것이다.&lt;/p&gt;&#xA;&lt;p&gt;뭔.. 헛소린가 하면&amp;hellip;.&lt;br&gt;&#xA;차량열에 대한 조건을 코나로 주고 배열 처리를 하면 아래와 같은 배열값이 생긴다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 날짜 평일만 표시하여 연속 데이터 채우기</title>
       <link>https://mcjoi.github.io/post/01927/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
