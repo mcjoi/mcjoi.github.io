@@ -436,6 +436,20 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 시트별로 따로 파일 저장하기</title>
+      <link>https://mcjoi.github.io/post/01913/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01913/</guid>
+      <description>&lt;h2 id=&#34;엑셀-시트별로-따로-파일-저장하기&#34;&gt;엑셀 시트별로 따로 파일 저장하기&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 시트를 따로 파일로 저장해야 하는 일은 뭐가 있을까? 청구서를 한개의 파일로 관리하다가, 업체별로 뿌린다거나, 각 팀별로 자료를 전달할때? 아직까지는 원하는 만큼 파일을 복사해두고, 파일을 하나하나씩 까서, 시트를 지웠던 것으로 기억한다. 하나씩 파일을 열고 시트를 지우다보면 내가 뭘 지웠는지, 어디까지 지웠는지, 뭘 남겼는지 혼란스러울 때도 있긴하다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;전제사항&#34;&gt;전제사항&lt;/h2&gt;&#xA;&lt;p&gt;당연한 이야기지만, 다른 시트에서 데이터를 참조하고 있다면, 시트를 분리하는 순간, 엉망징창이 될 것이니, 이때는 쓰지 않도록 한다.(원본 파일을 참조하게 된다.)&lt;br&gt;&#xA;원본파일의 시트 이름이 Sheet1 처럼 기본적으로 주어지는 이름이라서, 새로 생성되는 파일과 이름이 같게 된다면, Sheet1(2)처럼 엑셀이 알아서 바꿔준다.(신박하게도..)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 엑셀VBA 1004 런타임 오류</title>
+      <link>https://mcjoi.github.io/post/01914/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01914/</guid>
+      <description>&lt;h2 id=&#34;1004-오류라니&#34;&gt;1004 오류라니&lt;/h2&gt;&#xA;&lt;p&gt;엑셀 VBA, 매크로 기능을 잘 사용하다가, &amp;lsquo;1004&amp;rsquo; 런타임 오류를 만났다면, 보안 센터에서 매크로 정책을 확인하기 마련이다. 하지만, 어제까지 잘 쓰고 있는 것이 말썽이라면, 나와 같은 케이스일지 모른다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01914/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이유는 어이없게도, 같은 프로시저 이름이 있는 경우, 이런 에러를 내뱉는다. 이런일이 벌어질 수 있음에 놀란다. 내가 열심히 모듈을 여러개 만들고 헤깔릴 정도로 뭔가를 했다는 뜻이니까&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01914/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여튼 중복되는 프로시저 이름을 바꾸거나, 지우면 땡이다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 매크로 단축키 먹이기</title>
       <link>https://mcjoi.github.io/post/01916/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
