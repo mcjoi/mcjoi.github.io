@@ -366,11 +366,11 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>ppt - 불러온 이미지 투명도 조정</title>
+      <title>ppt - 컬러 조절창(RGBO)</title>
       <link>https://mcjoi.github.io/post/01906/</link>
-      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01906/</guid>
-      <description>&lt;h2 id=&#34;불러온-이미지-투명도-조정&#34;&gt;불러온 이미지 투명도 조정&lt;/h2&gt;&#xA;&lt;p&gt;흔히 드래그 앤 드랍으로 이미지를 불러옴. 드래그 앤 드랍으로 이미지를 불러올 경우, 투명도 조정이 되지 않음&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;같은 크기의 rectangle 삽입. 비율이 다르면 다른 비율대로 찌그러져서 들어가니, 비슷한 모양으로 맞추는 것이 핵심.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;좌측의 이미지를 복사한 상태에서 우측의 박스의 채우기 옵션에서 그림 또는 질감 채우기를 선택하고, 클립보드 클릭&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;윤곽선을 지워주고, 활성화된 투명도 옵션으로 투명도 조정&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;간결하게 글을 적으면 좋다고 해서, 몇자 안적었더니, 잘 설명이 됐는지 모르겠음.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;컬러-조절창rgbo&#34;&gt;컬러 조절창(RGBO)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트에서 도형의 컬러값을 RGB로 조정하고 싶을 때, 도형서식이나, 다른 채우기색 기능으로 확인 할때가 많은데, 과정이 영 귀찮다. 파워포인트 VBA는 참으로 귀찮은데, 그래도 꾹 참고 USERFORM을 만들어 본다.&lt;/p&gt;&#xA;&lt;p&gt;도형이 하나 있다. 파란색의 RGB 값을 알고 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;도형을 선택하고, USERFORM을 실행시키면, 위에서부터 RGB 맨 마지막에 Opacity 값이 나타난다. 보이는 것처럼, 좌우 버튼으로 값을 조정하면, 도형에 반영되도록 했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;다른 색상을 고른 뒤 refresh 버튼을 누르면, RGB값이 업데이트 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ppt - 불러온 이미지 투명도 조정</title>
