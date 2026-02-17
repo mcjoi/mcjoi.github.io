@@ -51,6 +51,20 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 불러온 이미지 투명도 조정</title>
+      <link>https://mcjoi.github.io/post/01906/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01906/</guid>
+      <description>&lt;h2 id=&#34;불러온-이미지-투명도-조정&#34;&gt;불러온 이미지 투명도 조정&lt;/h2&gt;&#xA;&lt;p&gt;흔히 드래그 앤 드랍으로 이미지를 불러옴. 드래그 앤 드랍으로 이미지를 불러올 경우, 투명도 조정이 되지 않음&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;같은 크기의 rectangle 삽입. 비율이 다르면 다른 비율대로 찌그러져서 들어가니, 비슷한 모양으로 맞추는 것이 핵심.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;좌측의 이미지를 복사한 상태에서 우측의 박스의 채우기 옵션에서 그림 또는 질감 채우기를 선택하고, 클립보드 클릭&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;윤곽선을 지워주고, 활성화된 투명도 옵션으로 투명도 조정&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;간결하게 글을 적으면 좋다고 해서, 몇자 안적었더니, 잘 설명이 됐는지 모르겠음.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 불러온 이미지 투명도 조정</title>
+      <link>https://mcjoi.github.io/post/01907/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01907/</guid>
+      <description>&lt;h2 id=&#34;불러온-이미지-투명도-조정&#34;&gt;불러온 이미지 투명도 조정&lt;/h2&gt;&#xA;&lt;p&gt;흔히 드래그 앤 드랍으로 이미지를 불러옴. 드래그 앤 드랍으로 이미지를 불러올 경우, 투명도 조정이 되지 않음&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;같은 크기의 rectangle 삽입. 비율이 다르면 다른 비율대로 찌그러져서 들어가니, 비슷한 모양으로 맞추는 것이 핵심.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;좌측의 이미지를 복사한 상태에서 우측의 박스의 채우기 옵션에서 그림 또는 질감 채우기를 선택하고, 클립보드 클릭&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;윤곽선을 지워주고, 활성화된 투명도 옵션으로 투명도 조정&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/04.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;간결하게 글을 적으면 좋다고 해서, 몇자 안적었더니, 잘 설명이 됐는지 모르겠음.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 시트별로 따로 파일 저장하기</title>
       <link>https://mcjoi.github.io/post/01913/</link>
       <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>

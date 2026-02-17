@@ -149,6 +149,34 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 불러온 이미지 투명도 조정</title>
+      <link>https://mcjoi.github.io/post/01906/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01906/</guid>
+      <description>&lt;h2 id=&#34;불러온-이미지-투명도-조정&#34;&gt;불러온 이미지 투명도 조정&lt;/h2&gt;&#xA;&lt;p&gt;흔히 드래그 앤 드랍으로 이미지를 불러옴. 드래그 앤 드랍으로 이미지를 불러올 경우, 투명도 조정이 되지 않음&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;같은 크기의 rectangle 삽입. 비율이 다르면 다른 비율대로 찌그러져서 들어가니, 비슷한 모양으로 맞추는 것이 핵심.&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;좌측의 이미지를 복사한 상태에서 우측의 박스의 채우기 옵션에서 그림 또는 질감 채우기를 선택하고, 클립보드 클릭&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;윤곽선을 지워주고, 활성화된 투명도 옵션으로 투명도 조정&lt;/p&gt;&#xA;&lt;p&gt;myimg&lt;/p&gt;&#xA;&lt;p&gt;간결하게 글을 적으면 좋다고 해서, 몇자 안적었더니, 잘 설명이 됐는지 모르겠음.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 불러온 이미지 투명도 조정</title>
+      <link>https://mcjoi.github.io/post/01907/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01907/</guid>
+      <description>&lt;h2 id=&#34;불러온-이미지-투명도-조정&#34;&gt;불러온 이미지 투명도 조정&lt;/h2&gt;&#xA;&lt;p&gt;흔히 드래그 앤 드랍으로 이미지를 불러옴. 드래그 앤 드랍으로 이미지를 불러올 경우, 투명도 조정이 되지 않음&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;같은 크기의 rectangle 삽입. 비율이 다르면 다른 비율대로 찌그러져서 들어가니, 비슷한 모양으로 맞추는 것이 핵심.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;좌측의 이미지를 복사한 상태에서 우측의 박스의 채우기 옵션에서 그림 또는 질감 채우기를 선택하고, 클립보드 클릭&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;윤곽선을 지워주고, 활성화된 투명도 옵션으로 투명도 조정&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01907/04.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;간결하게 글을 적으면 좋다고 해서, 몇자 안적었더니, 잘 설명이 됐는지 모르겠음.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 점수 구간별 등급, vlookup의 range_lookup 옵션으로 쉽게 설정하기</title>
+      <link>https://mcjoi.github.io/post/01909/</link>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01909/</guid>
+      <description>&lt;h2 id=&#34;점수-구간별-등급-vlookup의-range_lookup-옵션으로-쉽게-설정하기&#34;&gt;점수 구간별 등급, vlookup의 range_lookup 옵션으로 쉽게 설정하기&lt;/h2&gt;&#xA;&lt;p&gt;점수나 포인트 구간이 있을 때, vlookup으로 해당 점수에 대한 구간을 구하는 방법을 알아본다. 어렴풋이는 알아도 쓸때마다 좀 해깔려서 정리를 해둔다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같은 기준 테이블이 있다. 60점 미만은 과락, 80점 미만은 보통, 100점 미만은 우수, 100점은 최우수인 기준이 있다고 하자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01909/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;vlookup에서 참조할 테이블로 기준을 다시 정리했다. 여기서 아주아주아주 중요한 점은 점수가 오름차순으로 정렬되어있어야 한다는 점이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01909/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;vlookup함수를 적용한다. 대부분의 경우에서 마지막 lookup_range 변수에 false값을 넣는데, 구간을 찾을 것이기 때문에 TRUE 값을 넣어준다. 그럼, 순차적인 구간으로 처리가 된다. 해당 변수는 optional 이기 때문에, 생략을 할 경우, 기본적으로 TRUE값이 들어간다. 즉, 생략해도 무방하지만, 왠만하면 기재해주는 것이 좋다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 참조표(테이블)을 이름정의에 사용하기 위한 배열로 변환</title>
+      <link>https://mcjoi.github.io/post/01908/</link>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01908/</guid>
+      <description>&lt;h2 id=&#34;참조표테이블을-이름정의에-사용하기-위한-배열로-변환&#34;&gt;참조표(테이블)을 이름정의에 사용하기 위한 배열로 변환&lt;/h2&gt;&#xA;&lt;p&gt;얼마 전에, 이름정의에 배열로 참조표(테이블)을 넣어서, 사용하는 방법에 대한 글을 적은 적이 있다. 한번 해놓으면 편하게 사용할 수 있지만, 단점은 아무래도, 따옴표와 컴마, 그리고 세미콜론까지 입력이 용이하지 않은 창에 수기로 타자를 치기가 어렵다는 점이겠다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 간단하게 테이블을 배열 텍스트로 변환하는 코드이다.&lt;br&gt;&#xA;테이블 영역을 선택하면 txt파일이 생기고, 이를 클립보드에 복사하는 과정까지이다. 구지 txt파일을 생성하지 않아도 되지만, 변환과정에서 생기는 오류 등을 확인하기 위한 LOG라고 보면 되겠다. 문제가 없다면 구지 파일을 켜지 않아도 되고, 기본적으로 &amp;ldquo;문서&amp;rdquo; 폴더에 저장된다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 정의된 이름 편하게 확인하기</title>
       <link>https://mcjoi.github.io/post/01910/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>

@@ -58,6 +58,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 참조표(테이블)을 이름정의에 사용하기 위한 배열로 변환</title>
+      <link>https://mcjoi.github.io/post/01908/</link>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01908/</guid>
+      <description>&lt;h2 id=&#34;참조표테이블을-이름정의에-사용하기-위한-배열로-변환&#34;&gt;참조표(테이블)을 이름정의에 사용하기 위한 배열로 변환&lt;/h2&gt;&#xA;&lt;p&gt;얼마 전에, 이름정의에 배열로 참조표(테이블)을 넣어서, 사용하는 방법에 대한 글을 적은 적이 있다. 한번 해놓으면 편하게 사용할 수 있지만, 단점은 아무래도, 따옴표와 컴마, 그리고 세미콜론까지 입력이 용이하지 않은 창에 수기로 타자를 치기가 어렵다는 점이겠다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 간단하게 테이블을 배열 텍스트로 변환하는 코드이다.&lt;br&gt;&#xA;테이블 영역을 선택하면 txt파일이 생기고, 이를 클립보드에 복사하는 과정까지이다. 구지 txt파일을 생성하지 않아도 되지만, 변환과정에서 생기는 오류 등을 확인하기 위한 LOG라고 보면 되겠다. 문제가 없다면 구지 파일을 켜지 않아도 되고, 기본적으로 &amp;ldquo;문서&amp;rdquo; 폴더에 저장된다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 정의된 이름 편하게 확인하기</title>
       <link>https://mcjoi.github.io/post/01910/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
