@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>ppt - 표/셀 사이즈(높이/너비) 조절 유저폼 | shaaaaallow dive</title>
+    <title>ppt - 엑셀 표(테이블) 복사할때 띄어쓰기(공백) 문제 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01905/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01895/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>ppt - 표/셀 사이즈(높이/너비) 조절 유저폼</h1>
+      <h1>ppt - 엑셀 표(테이블) 복사할때 띄어쓰기(공백) 문제</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2022-11-24</span>
+          <span>2023-03-04</span>
           
         </div>
         <div class="post-meta-tags">
@@ -175,14 +175,63 @@
         
         
         
-          <h2 id="표셀-사이즈높이너비-조절-유저폼">표/셀 사이즈(높이/너비) 조절 유저폼</h2>
-<p>파워포인트를 잘하고 못하고는 디자인적인 영역을 제외하면, 디테일에 있다는 생각이 든다. 그러다보니 언제부터인지는 모르겠는데, 높이나 너비를 숫자로 치게 되는 일도 많아진다.<br>
-문제는 그 메뉴까지의 거리가 생각보다 멀다. 그리하여.. 수고를 좀 덜어내기 위해, 표의 행/열에 대해서, 사이즈를 맞출 수 있는 유저폼을 만들어보았다.</p>
-<p>버튼을 누르면 선택영역 혹은 표 전체의 사이즈가 조정되고, 글씨를 클릭하면 선택영역 혹은 표 전체가 같은 수치로 (evenly) 조정된다.</p>
-<p>실용성은 글쎄?</p>
-<ul>
-<li>1번 셀이 좀 빠르게 적용되는 것 같은데, 사용성이 검증된 이후 수정예정</li>
-</ul>
+          <h2 id="엑셀표를-파워포인트에-붙일-때-공백없애기">엑셀표를 파워포인트에 붙일 때 공백없애기</h2>
+<p>아래와 같이 회계 형식으로 되어 있는, 엑셀의 표를 파워포인트에 붙일 때는, 항상 멈칫하게 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/01.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>왜냐&hellip;.. 원치 않는 공백들이 생겨날 것을 알고 있기 때문이다. 상당히 귀찮은 녀석이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/02.png" alt="myimg"></p>
+<br>
+<br>
+<p>해결책은 간단하다. 표 안에서 셀을 전체 선택(ctrl+a)한 다음, 바꾸기(ctrl+h)로 공백(스페이스바 한번) 하나를 넣어 모두 바꾸기 해주면 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/03.png" alt="myimg"></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/04.png" alt="myimg"></p>
+<br>
+<br>
+<p>이 정도로 끝나는 문제라면 글을 남기지 않았으리라&hellip;.<br>
+경험많고 눈치가 빠른 사람이라면, 순간 알아냈겠지만, 여전히 알 수 없는 공백 문자가 남아서 숨어있다. 저 공백은, 왜 생기는지 잘 모르겠는데, 단순히 공백(&quot; &ldquo;)도 아니라서, 바꾸기도 안된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/05.png" alt="myimg"></p>
+<br>
+<br>
+<p>물론 해당 공백 자체를 복사해서 바꾸기를 한번 더 해 주는 방법도 있다.<br>
+하지만, 보다 스마트한 업무 처리를 하는 것처럼 보이기 위해, 아래와 같은 코드를 만들어 보았다.<br>
+정말&hellip; 별건 없고, 띄어쓰기와, 위에 남아있는 이상한 띄어쓰기, 줄바꿈이 들어가 있으면 순차적으로 없애는(바꿔준.. replace) 코드이다.</p>
+<p>즉, 그냥&hellip; 문제가 되는 문자열에 대하여, 바꾸기를 한번씩 해준 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">delBlank</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shp <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> j <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shps <span style="color:#f92672">In</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> shp <span style="color:#f92672">=</span> shps
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> shps
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;There is no table!&#34;</span>, vbExclamation
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">GoTo</span> DD:
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> shp.HasTable <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> shp.Table.Rows.Count
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> j <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> shp.Table.Columns.Count
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">With</span> shp.Table.Rows.Item(i).Cells(j).Shape.TextFrame.TextRange
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">If</span> IsNumeric(.Text) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                    .Text <span style="color:#f92672">=</span> Replace(shp.Table.Rows.Item(i).Cells(j).Shape.TextFrame.TextRange.Text, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                    .Text <span style="color:#f92672">=</span> Replace(shp.Table.Rows.Item(i).Cells(j).Shape.TextFrame.TextRange.Text, <span style="color:#e6db74">&#34;　&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                    .Text <span style="color:#f92672">=</span> Replace(shp.Table.Rows.Item(i).Cells(j).Shape.TextFrame.TextRange.Text, vbCr, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> j
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>DD:
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<Br>
+<p><code>IsNumeric method</code>로 숫자 여부를 확인하여, 숫자에만 적용하는 방식으로 수정하였다.</p>
 <p>끝.</p>
 
         

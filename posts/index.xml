@@ -366,6 +366,20 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 엑셀 표(테이블) 복사할때 띄어쓰기(공백) 문제</title>
+      <link>https://mcjoi.github.io/post/01895/</link>
+      <pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01895/</guid>
+      <description>&lt;h2 id=&#34;엑셀표를-파워포인트에-붙일-때-공백없애기&#34;&gt;엑셀표를 파워포인트에 붙일 때 공백없애기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 회계 형식으로 되어 있는, 엑셀의 표를 파워포인트에 붙일 때는, 항상 멈칫하게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;왜냐&amp;hellip;.. 원치 않는 공백들이 생겨날 것을 알고 있기 때문이다. 상당히 귀찮은 녀석이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;해결책은 간단하다. 표 안에서 셀을 전체 선택(ctrl+a)한 다음, 바꾸기(ctrl+h)로 공백(스페이스바 한번) 하나를 넣어 모두 바꾸기 해주면 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01895/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이 정도로 끝나는 문제라면 글을 남기지 않았으리라&amp;hellip;.&lt;br&gt;&#xA;경험많고 눈치가 빠른 사람이라면, 순간 알아냈겠지만, 여전히 알 수 없는 공백 문자가 남아서 숨어있다. 저 공백은, 왜 생기는지 잘 모르겠는데, 단순히 공백(&amp;quot; &amp;ldquo;)도 아니라서, 바꾸기도 안된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 구글시트 - 웹페이지 내용 가져오기(IMPORTXML, IMPORTHTML)</title>
+      <link>https://mcjoi.github.io/post/01896/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01896/</guid>
+      <description>&lt;h2 id=&#34;구글시트---웹페이지-내용-가져오기importxml-importhtml&#34;&gt;구글시트 - 웹페이지 내용 가져오기(IMPORTXML, IMPORTHTML)&lt;/h2&gt;&#xA;&lt;p&gt;Google Sheets는 온라인에서 구동되므로, 웹에서 데이터를 참조하는 부분이 가능하다. 설치 프로그램이라고 해서 안될 건 없지만.. 대표적으로 IMPORTXML, IMPORTHTML 등의 함수가 존재하고, 사용법은 아래와 같다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;importxml-예시--롯데마트-휴점일-확인&#34;&gt;IMPORTXML 예시 : 롯데마트 휴점일 확인&lt;/h2&gt;&#xA;&lt;p&gt;롯데마트 휴점일 페이지는 테이블로 되어있으므로, 알아내야하는 것은 두가지,&lt;br&gt;&#xA;1)테이블의 페이지가 전환될떄 파라미터가 주소에 반영되는 방식&lt;br&gt;&#xA;2)테이블에 따른 점포명과 휴점일의 열/행에 대한 HTML 구성&lt;/p&gt;&#xA;&lt;p&gt;테이블 페이지를 하나씩 넘겨보면, 단순히 페이지 번호를 파라미터로 넘겨주는 방식임을 알 수 있다. 이번에는 14페이지까지 존재하는 것을 확인 할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 파워포인트로 벡터 그림 그리기</title>
       <link>https://mcjoi.github.io/post/01897/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
