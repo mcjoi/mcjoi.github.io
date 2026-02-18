@@ -58,6 +58,34 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 원하는 페이지 jpg로 바로 내보내기(이미지 저장)</title>
+      <link>https://mcjoi.github.io/post/01899/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01899/</guid>
+      <description>&lt;h2 id=&#34;지금-이미지-파일로-바로-당장&#34;&gt;지금 이미지 파일로.. 바로.. 당장..&lt;/h2&gt;&#xA;&lt;p&gt;필요할 때 사용할만한 매크로를 만들어봤다. 이런 경우가 흔치는 않지만, 예를 들어, 특정한 페이지를 수정을 했다고 했을 때, 문서를 다 보내기는 그렇고, 일정 부분만 스크린 샷 잡기도 애매할 때 써먹을만 할 것이다.&lt;/p&gt;&#xA;&lt;p&gt;매크로를 실행하고, 페이지 번호를 넣으면 해당 페이지가 이미지로 전환되도록 설계하였다.&lt;br&gt;&#xA;저장 위치는 PPT 파일이 위치한 곳과 동일하게 저장되도록 했으며, 여러 페이지를 동시에 변환할 때는 그냥 JPG로 내보내기 하는 기능이 있기 때문에 구지 따로 넣지 않았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>엑셀, 파워포인트 리본메뉴 작업시 아이콘(FACEID)</title>
+      <link>https://mcjoi.github.io/post/01898/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01898/</guid>
+      <description>&lt;h2 id=&#34;추가기능-작성-시&#34;&gt;추가기능 작성 시&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;매크로를 열심히 만들고, 리본메뉴에 등록할 때, 아이콘이 필요하다.&lt;br&gt;&#xA;이 때, FACE ID 값으로 아이콘을 불러오는데, 아이콘 값을 모르면, 아무 숫자나 넣어볼 수 밖에 없다.&lt;/p&gt;&#xA;&lt;p&gt;아래 사이트에서 FACE ID 값을 확인할 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://bettersolutions.com/vba/ribbon/face-ids-2003.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;faceid icon images&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;언제 없어질지 모르므로, 나도 하나 카피본을 가지고 있어야겠다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 셀 값(텍스트) 배열로 만들기</title>
+      <link>https://mcjoi.github.io/post/01900/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01900/</guid>
+      <description>&lt;h2 id=&#34;날짜간-차이-표시datediff&#34;&gt;날짜간 차이 표시(datediff)&lt;/h2&gt;&#xA;&lt;p&gt;첫번째 날짜 : 오늘날짜&lt;br&gt;&#xA;두번째 날짜 : 원하는 날짜&lt;br&gt;&#xA;첫번째 날짜와 두번째 날짜의 차이를 구하고 싶다면 아래와 같은 수식을 작성할 수 있다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;datediff_func&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; date1 &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Date&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; date2 &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Date&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    date1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Now &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;now&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    date2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; #1&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;15&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;2023# &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;end date of service&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Debug.Print DateDiff(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;d&amp;#34;&lt;/span&gt;, date1, date2)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DateDiff의 첫번째 argument는 interval로서, 아래와 같은 옵션이 있고, 쌍따옴표를 써서, String type으로 기재를 해줘야 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01900/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;더 구체적인 설명은 아래 도움말을 참고할 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 셀 행/열 너비/높이 복사하기</title>
+      <link>https://mcjoi.github.io/post/01902/</link>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01902/</guid>
+      <description>&lt;h2 id=&#34;셀-행열-너비높이-복사하기&#34;&gt;셀 행/열 너비/높이 복사하기&lt;/h2&gt;&#xA;&lt;p&gt;표를 이리 저리 복사를 하다보면, 셀의 너비와 높이가 엉망이 될때가 있다. 적어도 너비는 복사할때 옵션 중에 선택하는 항목이 있다고 하지만, 높이는 그때 그때, 높이를 확인해서 바꿔줘야 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;단순하게, 선택영역의 높이와 너비 값을 동일하게 복사해주면 좋겠다 싶었다. 단, 두개의 영역을 선택해야하는데, 원본과 대상이다. 이 또한 귀찮다고 하면 할 말은 없다. 일단 원본 테이블 영역을 복사한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;다음, 대상영역을 선택해준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여러가지 선택옵션이 있으면 더 귀찮아지기 때문에, 여기까지만 했다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 날짜에 따라 테이블 색 변경하기 / WBS 서식 만들기</title>
       <link>https://mcjoi.github.io/post/01903/</link>
       <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
