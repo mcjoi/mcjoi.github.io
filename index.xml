@@ -436,6 +436,13 @@
       <description>&lt;h2 id=&#34;화이트밸런스-카드-자작-diy&#34;&gt;화이트밸런스 카드 자작 DIY&lt;/h2&gt;&#xA;&lt;p&gt;거의 모든 상황에서 AWB 기능을 사용한다. 있어도 굳이 꺼내 쓰지 않는 기능이 화이트밸런스이다. 하지만 화이트밸런스를 정확히 맞춰야하는 상황이라는 게 막상 생각보다 많다.&lt;/p&gt;&#xA;&lt;p&gt;알리에서 찾아보니 그레이카드 + 화이트카드 세트가 4천원 정도에 판매되고 있었다.&lt;br&gt;&#xA;금액이 문제라기보다는 기다리는 시간이 아깝고, 배송이 늦어질 가능성도 있어서 커뮤니티 글들을 찾아보니 프린터로 출력해서 쓰거나 종이를 잘라 쓰는 경우도 많아 보여 DIY로 만들어 보기로 했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그레이카드냐-화이트카드냐&#34;&gt;그레이카드냐, 화이트카드냐&lt;/h2&gt;&#xA;&lt;p&gt;18% 그레이 컬러는 인터넷에서 이미지로 쉽게 찾을 수 있다. 출력해서 쓰면 되는데, 문제는 프린터다.&lt;br&gt;&#xA;잉크 코팅이든 토너 코팅이든 코팅층이 생기면 빛 반사가 달라진다. 종이가 생각보다 밝아 보이거나, 어둡게 변하는 경우가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 세부정보를 나타내는 표시 그리기</title>
+      <link>https://mcjoi.github.io/post/01893/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01893/</guid>
+      <description>&lt;h2 id=&#34;세부정보를-나타내는-표시-그리기&#34;&gt;세부정보를 나타내는 표시 그리기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이, 파란 표시가 된 표의 세부 정보를 나타내는 표를 그리기 위하여, 아래와 같이 그라데이션 박스 처리를 했다. 뭔가 성의가 있어보이지 않는가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사다리꼴을 넣고, 90도 회전을 해준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;원하는 색상으로 그라데이션을 넣어준다. 단순 표식이기 때문에, 너무 화려하지 않도록 넣는다.&lt;br&gt;&#xA;위치를 잡아준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이때 파란 박스로부터 파생된 느낌을 주기 위하여, 없어지게 되는데, 우측버튼 &amp;gt; 점편집을 눌러준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;시작 점들을 재배치하여 파란박스로 시작한다는 느낌을 준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;그럼&amp;hellip; 완성이 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 원형 화살표 도식만들기</title>
       <link>https://mcjoi.github.io/post/01894/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>

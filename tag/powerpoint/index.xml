@@ -51,6 +51,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 세부정보를 나타내는 표시 그리기</title>
+      <link>https://mcjoi.github.io/post/01893/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01893/</guid>
+      <description>&lt;h2 id=&#34;세부정보를-나타내는-표시-그리기&#34;&gt;세부정보를 나타내는 표시 그리기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이, 파란 표시가 된 표의 세부 정보를 나타내는 표를 그리기 위하여, 아래와 같이 그라데이션 박스 처리를 했다. 뭔가 성의가 있어보이지 않는가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사다리꼴을 넣고, 90도 회전을 해준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;원하는 색상으로 그라데이션을 넣어준다. 단순 표식이기 때문에, 너무 화려하지 않도록 넣는다.&lt;br&gt;&#xA;위치를 잡아준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이때 파란 박스로부터 파생된 느낌을 주기 위하여, 없어지게 되는데, 우측버튼 &amp;gt; 점편집을 눌러준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;시작 점들을 재배치하여 파란박스로 시작한다는 느낌을 준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;그럼&amp;hellip; 완성이 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 원형 화살표 도식만들기</title>
       <link>https://mcjoi.github.io/post/01894/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
