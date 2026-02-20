@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 텍스트 글자별로 나누기 | shaaaaallow dive</title>
+    <title>xls - 테이블(표) 영역 선택해서, 이름정의로 사용하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01979/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01880/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 텍스트 글자별로 나누기</h1>
+      <h1>xls - 테이블(표) 영역 선택해서, 이름정의로 사용하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-17</span>
+          <span>2023-08-03</span>
           
         </div>
         <div class="post-meta-tags">
@@ -175,80 +175,60 @@
         
         
         
-          <h2 id="텍스트-글자별로-나누기엑셀">텍스트 글자별로 나누기(엑셀)</h2>
-<p>잘 쓰지 않는 기능이지만 가끔 텍스트 파일을 불러올 떄 요긴하게 쓸 수 있으니, 한번 알아보자.<br>
-아래와 같이 셀 안에 텍스트가 들어있다고 치자. 각각의 스펠을 나누어 순서대로 셀 안에 담을 예정이다. 데이터 메뉴에서 데이터도구&gt;텍스트 나누기 버튼을 누른다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/1.jpg" alt="myimg"></p>
+          <h2 id="테이블표-영역-선택해서-이름정의로-사용하기">테이블(표) 영역 선택해서, 이름정의로 사용하기</h2>
+<p>데이터 시트의 경우, 영역(range)으로 사용하는 것보다 테이블(표)로 사용하는 경우 장점이 있다.<br>
+첫번째는 최하단에 데이터를 추가했을때 연결되는 수식에서 동적으로 추가된다는 것이고,<br>
+두번째는 데이터가 좀 늘어나면, 엑셀이 힘겨워하는 경우를 심심치 않게 볼 수 있는데, 이를 좀 더 완화할 수 있을 것이라는 기대감이 있다. 즉, 확실치가 않다.</p>
+<p>각설하고, 주어진 상황은 아래와 같다.<br>
+데이터 시트가 있고, 이를 배열 함수로 요약하는 시트가 여러장 있었다. 나 역시도 귀찮아서, 테이블 대신 주로 영역으로 사용하고 있었는데, 어느순간, 계산 중이라는 프로그래스바가 생긴다.</p>
+<p>테이블(표) 내에서 원하는 영역을 선택하는 것을 Structed references 이라고 하나보다. 범용적으로 쓰는 말인지 모르겠는데, 이를 몰라서, 일반적으로 검색을 하니, 전부 영역 선택에 관련한 내용이 나온다. 결국 웹에서 검색을 포기하고, ChatGPT와 영어로 씨름하다가 원하는 답을 찾았다. 가끔 테이블에 참조를 할때 보았던 수식(?)이 어렴풋이 기억난다.</p>
+<p class="text-box">[#All] : Refers to the entire table, including header and data rows.<br>
+[#Headers] : Refers to the header row the table.<br>
+[#Data] : Refers to the data rows of the table, excluding the header row.<br>
+[@] : Refers to the current row in the table (used indide table formulas).<br>
+[Column Name] : Refers to a specific column by its header name.  _replace &ldquo;Column Name&rdquo; with the actual name of the column.<br>
+[[#This Row], [Column Name]] : Refers to a specific cell in the current row for the  specified column. [[#Totals], [Column Name]] : Refers to the total row of a table.  _if a total row is enabled.</p>
+<br>
+<Br>
+<p>자 이제 해보는 거다.<br>
+워크북에서 처음 테이블을 생성하면 기본적으로 주어지는 이름은 Table1 이다. 변경은 가능하지만, 귀찮으니, 두자.</p>
+<p>Table1[#All]전체 선택 , 그냥 Table1 이라고만 해도 된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/01.png" alt="myimg"></p>
 <br>
 <br>
-<p>텍스트 마법사가 뜬다.<br>
-한글로 나오는 안내에 따라 클릭하기만 하면 된다.<br>
-일단 이번 경우는 특정한 구분기호로 분리된 케이스(구분기호로 저장된 파일)이 아니기 떄문에 너비가 일정함으로 선택한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/2.jpg" alt="myimg"></p>
+<p>Table1[#Headers]테이블 헤더 전체 선택<br>
+Table1[[#Headers],[1월]:[2월]]테이블 헤더만 선택, 필드명으로 영역을 한정 지어 줄 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/02.png" alt="myimg"></p>
 <br>
 <br>
-<p>구분선을 통해 나누고자 하는 부분을 체킹해준다.<br>
-설명도 매우 자세하다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/2-1.jpg" alt="myimg"></p>
+<p>Table1[[#Data],[2월]:[4월]]테이블 데이터만 선택, 필드명으로 영역을 한정 지어 줄 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/03.png" alt="myimg"></p>
 <br>
 <br>
-<p>옮기고 싶은 열을 선택해준다. 나는 a1셀을 선택했다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/2-2.jpg" alt="myimg"></p>
+<p>예시는 여기까지만 하고, Structed references로 손쉽게 영역을 선택할 수 있음을 확인했다. 이제, 이를 이름정의로 등록해보자. 아래와 같이 입력하면, 이름정의가 잘 됨을 알 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/04.png" alt="myimg"></p>
 <br>
 <br>
-<p>A1셀로부터 우측으로 각각의 텍스트가 분리되어 셀에 입력된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/3.jpg" alt="myimg"></p>
+<p>간단하게 배열수식으로 확인을 해보면, 아래와 같다. 과일 조건엘에 대하여, 동일하게 테이블 참조를 사용하였는데, 수식이 좀 길어지니, 마찬가지로, 이름정의를 해두는 것이 나을 것 같다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/05.png" alt="myimg"></p>
 <br>
 <br>
-<p>만약 열방향으로 놓고 싶으면, 행/열 바꾸기로 넣어주면 된다. 셀을 고르고, 복사한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/4.jpg" alt="myimg"></p>
+<p>자 이제 마지막이다.<br>
+현재 2월~4월로 한정되어 있는 값에 대해서, 내가 원하는 영역을 수시로 바꿔서 확인할 수 있을까?<br>
+정의된 이름 _2월_4월에 대하여, 현재는 아래와 같은 수식이 설정되어있는데, 아래 값에서, 2월과 4월을 참조값으로 변경해주면 될 것이다.</p>
+<p class="text-box">=Table1[[#Data],[2월]:[4월]]</p>
+<Br>
+<br>
+<p>시작월과 종료월에 대한 조건 값을 입력할 수 있는 셀을 만들고, indirect 함수를 사용하여, 아래와 같이 영역을 다시설정해 주면 어떨까?</p>
+<p class="text-box">=indirect(&ldquo;Table1[[#Data],[&rdquo; &amp; Sheet2!$H$11 &amp; &ldquo;]:[&rdquo; &amp; Sheet2!$H$12 &amp; &ldquo;]]&rdquo;)</p>
+<Br>
+<br>
+<p>마찬가지로 복숭아의 2~3월 값이 합산되어 잘 들어가는 것을 확인할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/06.png" alt="myimg"></p>
 <br>
 <br>
-<p>원하는 셀을 선택하고, 선택하여 붙여넣기 &gt; 행열 바꿈을 체크한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/5.jpg" alt="myimg"></p>
-<br>
-<br>
-<p>A4셀부터 아래쪽으로 텍스트가 복사됐다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/6.jpg" alt="myimg"></p>
-<br>
-<br>
-<p>이건 여기까지.</p>
-<br>
-<br>
-<h2 id="텍스트-글자별로-나누기vba">텍스트 글자별로 나누기(VBA)</h2>
-<p>엑셀 기본기능에 텍스트 나누기 기능이 있다. 실무에서 아직 쓴적은 없지만, 강력한 기능인것 같아, 코드로 짜봤다.<br>
-매크로로 녹화해서 봤더니, ARRAY로 프로그래밍되서, 나의 실력으로는 커스터마이징이 어려울 거 같아, FOR NEXT로 노가다. ..<br>
-ROW와 COLUMN이 동시에 되도록 했다. 사실. AUTOFIT 기능이 더 흥미롭다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01979/01.gif" alt="myimg"></p>
-<br>
-<br>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">txt_separation</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> k <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> text_Len <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> myTXT <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> N <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>k <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;텍스트입력&#34;</span>)
-</span></span><span style="display:flex;"><span>text_Len <span style="color:#f92672">=</span> Len(k)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> N <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> text_Len
-</span></span><span style="display:flex;"><span>    myTXT <span style="color:#f92672">=</span> Mid(k, N, 1)
-</span></span><span style="display:flex;"><span>    Cells(1, N).Value <span style="color:#f92672">=</span> myTXT
-</span></span><span style="display:flex;"><span>    Cells(N, 1).Value <span style="color:#f92672">=</span> myTXT
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> N
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ActiveWindow.DisplayGridlines <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> Cells
-</span></span><span style="display:flex;"><span>    .EntireColumn.AutoFit
-</span></span><span style="display:flex;"><span>    .EntireRow.AutoFit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>단독으로 쓰일 일은 없겠지만, 시간되면 업데이트.</p>
+<p>두서없이 적었지만, 오늘은 여기까지. 연산속도가 빨라지는지는, 실무에 적용해보고 추가로 적기로 한다.</p>
+<p>위의 글을 적은 이후, 몇 시간이 지나, 몇개의 관리 파일에 적용을 해 보았지만, 속도는 개선되지 않았다. 아니 오히려 느려진듯 한건 내 느낌인가? 서두에 적은 내용 중 두번째는 빼는걸로 하자.</p>
 <p>끝.</p>
 
         

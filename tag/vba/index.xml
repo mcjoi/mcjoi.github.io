@@ -58,6 +58,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 테이블(표) 영역 선택해서, 이름정의로 사용하기</title>
+      <link>https://mcjoi.github.io/post/01880/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01880/</guid>
+      <description>&lt;h2 id=&#34;테이블표-영역-선택해서-이름정의로-사용하기&#34;&gt;테이블(표) 영역 선택해서, 이름정의로 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;데이터 시트의 경우, 영역(range)으로 사용하는 것보다 테이블(표)로 사용하는 경우 장점이 있다.&lt;br&gt;&#xA;첫번째는 최하단에 데이터를 추가했을때 연결되는 수식에서 동적으로 추가된다는 것이고,&lt;br&gt;&#xA;두번째는 데이터가 좀 늘어나면, 엑셀이 힘겨워하는 경우를 심심치 않게 볼 수 있는데, 이를 좀 더 완화할 수 있을 것이라는 기대감이 있다. 즉, 확실치가 않다.&lt;/p&gt;&#xA;&lt;p&gt;각설하고, 주어진 상황은 아래와 같다.&lt;br&gt;&#xA;데이터 시트가 있고, 이를 배열 함수로 요약하는 시트가 여러장 있었다. 나 역시도 귀찮아서, 테이블 대신 주로 영역으로 사용하고 있었는데, 어느순간, 계산 중이라는 프로그래스바가 생긴다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</title>
       <link>https://mcjoi.github.io/post/01881/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
