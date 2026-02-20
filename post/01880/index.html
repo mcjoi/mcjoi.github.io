@@ -182,17 +182,20 @@
 <p>각설하고, 주어진 상황은 아래와 같다.<br>
 데이터 시트가 있고, 이를 배열 함수로 요약하는 시트가 여러장 있었다. 나 역시도 귀찮아서, 테이블 대신 주로 영역으로 사용하고 있었는데, 어느순간, 계산 중이라는 프로그래스바가 생긴다.</p>
 <p>테이블(표) 내에서 원하는 영역을 선택하는 것을 Structed references 이라고 하나보다. 범용적으로 쓰는 말인지 모르겠는데, 이를 몰라서, 일반적으로 검색을 하니, 전부 영역 선택에 관련한 내용이 나온다. 결국 웹에서 검색을 포기하고, ChatGPT와 영어로 씨름하다가 원하는 답을 찾았다. 가끔 테이블에 참조를 할때 보았던 수식(?)이 어렴풋이 기억난다.</p>
-<p class="text-box">[#All] : Refers to the entire table, including header and data rows.<br>
-[#Headers] : Refers to the header row the table.<br>
-[#Data] : Refers to the data rows of the table, excluding the header row.<br>
-[@] : Refers to the current row in the table (used indide table formulas).<br>
-[Column Name] : Refers to a specific column by its header name.  _replace &ldquo;Column Name&rdquo; with the actual name of the column.<br>
-[[#This Row], [Column Name]] : Refers to a specific cell in the current row for the  specified column. [[#Totals], [Column Name]] : Refers to the total row of a table.  _if a total row is enabled.</p>
+<p class="text-box"><strong>[#All]</strong> : Refers to the entire table, including header and data rows.<br>
+<strong>[#Headers]</strong> : Refers to the header row the table.<br>
+<strong>[#Data]</strong> : Refers to the data rows of the table, excluding the header row.<br>
+<strong>[@]</strong> : Refers to the current row in the table (used indide table formulas).<br>
+<strong>[Column Name]</strong> : Refers to a specific column by its header name.  _replace &ldquo;Column Name&rdquo; with the actual name of the column.<br>
+<strong>[[#This Row], [Column Name]]</strong> : Refers to a specific cell in the current row for the  specified column.<br>
+<strong>[[#Totals], [Column Name]]</strong> : Refers to the total row of a table.  _if a total row is enabled.</p>
 <br>
 <Br>
 <p>자 이제 해보는 거다.<br>
 워크북에서 처음 테이블을 생성하면 기본적으로 주어지는 이름은 Table1 이다. 변경은 가능하지만, 귀찮으니, 두자.</p>
-<p>Table1[#All]전체 선택 , 그냥 Table1 이라고만 해도 된다.</p>
+<p>전체 선택 , 그냥 Table1 이라고만 해도 된다.</p>
+<p class="text-box">Table1[#All]</p>
+<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/01.png" alt="myimg"></p>
 <br>
 <br>
