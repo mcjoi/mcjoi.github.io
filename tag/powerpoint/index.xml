@@ -51,6 +51,20 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - pixel을 cm로 바꾸기, 4:3 / 16:9 화면 비율 맞추기</title>
+      <link>https://mcjoi.github.io/post/01891/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01891/</guid>
+      <description>&lt;h2 id=&#34;파워포인트-슬라이드-크기-설정&#34;&gt;파워포인트 슬라이드 크기 설정&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 사용시 대부분 preset을 사용하지만, 가끔 웹에서 사용하기 위해 슬라이드 크기를 조정하려고 하면, 너비와 높이를 cm 단위로 설정해야 함을 알 수 있다. 그럼, 1px은 과연, 몇 cm인가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01891/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;pixcel-to-cm&#34;&gt;pixcel to cm&lt;/h2&gt;&#xA;&lt;p&gt;아래 사이트에서 쉽게 그 내용을 확인할 수 있으며, 1pixel은 0.0264583333 cm 임을 알수 있다. 화면 dpi가 영향을 주지 않을까 싶기는 하지만, 그런 옵션은 나와 있지 않다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.unitconverters.net/typography-converter.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;pixcel to cm&lt;/a&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;티스토리-블로그용-이미지-만들기&#34;&gt;티스토리 블로그용 이미지 만들기&lt;/h2&gt;&#xA;&lt;p&gt;내 블로그에서 설정하고 있는 가로 사이즈가 820px 이므로, 4:3 비율을 대충 맞추기 위해서, 822 x 615 사이즈에 맞게 가로 21.749cm x 16.272cm 사이즈로 설정하였다.&lt;br&gt;&#xA;4:3 비율을 맞추려면, 가로사이즈 * 3 / 4를, 16:9 비율을 맞추려면, 가로사이즈 * 16 / 9를 세로 사이즈로 설정해주면 되겠다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 체크표시/박스 텍스트 쉽게 만들기(UNICODE)</title>
+      <link>https://mcjoi.github.io/post/01890/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01890/</guid>
+      <description>&lt;h2 id=&#34;ㅁ--한자가-전부가-아니었다&#34;&gt;ㅁ + 한자가 전부가 아니었다.&lt;/h2&gt;&#xA;&lt;p&gt;얼마전 적었던 이모지 관련 글에서처럼, OS 차원에서 지원하는 특수문자는 ㅁ + 한자로 적을 수 있는게 전부는 아닌 모양이다.&lt;br&gt;&#xA;보고서 작성시에 의외로 체크표시를 텍스트로 활용해야하는 경우가 많은데, ㅁ + 한자에 나오는 특수문자는 이게 없어서 참 아쉬웠던 차에 아래 사이트에서 해당 유니코드를 발견하게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.alt-codes.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cehck Mark Symbols&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;사용방법&#34;&gt;사용방법&lt;/h2&gt;&#xA;&lt;p&gt;가장 쉬운 방법은 그냥 복사해서 사용하는 것이고, 해당 글의 내용처럼, ALT + X를 사용해서 변환하는 방법도 있다고 하는데, 워드에서는 잘 되는데, 파워포인트에서는 잘 되지 않아, 버렸다. 그냥 클립보드에 고정해서 사용하거나 복사해서 사용하기로 했다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 세부정보를 나타내는 표시 그리기</title>
       <link>https://mcjoi.github.io/post/01893/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
