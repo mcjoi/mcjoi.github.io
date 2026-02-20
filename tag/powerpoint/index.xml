@@ -51,6 +51,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬</title>
+      <link>https://mcjoi.github.io/post/01869/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01869/</guid>
+      <description>&lt;h2 id=&#34;도형-위치-정렬하기---기준-도형의-밑으로-붙여서-정렬&#34;&gt;도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬&lt;/h2&gt;&#xA;&lt;p&gt;문서작업을 하다보면 도형들을 딱 붙여서 작업을 해야할 때가 있는데, 오피스 2003인가 부터 SNAP 기능이 있어, 꽤 편해졌지만 도형들이 아주 많아지는 경우, SNAP 가이드라인이 미친듯이 많이 나오게 되는 관계로 그 또한 어려워진다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같이 도형들이 산개해 있다고 치자. 빨간 도형을 기준으로 아래에 딱 붙여서 도형을 정렬하고자 한다면, 왼쪽 정렬을 한 뒤에, SNAP으로 하나씩 조정을 해줘야 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;최종 모양은 이런식이 될 것이다. 그런데, 손으로 하다보면, 삑사리가 나는 경우가 있고, 도형에 외곽선(STROKE)가 쳐져 있는 경우는 외곽선의 굵기인 1px 정도 어긋나는 경우가 자주 발생한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 텍스트박스 여백(margin) 없애기</title>
       <link>https://mcjoi.github.io/post/01870/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>

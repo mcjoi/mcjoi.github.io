@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - VBA로 .txt 파일 생성하기 | shaaaaallow dive</title>
+    <title>ppt - 도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01977/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01869/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - VBA로 .txt 파일 생성하기</h1>
+      <h1>ppt - 도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-11-17</span>
+          <span>2024-05-10</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
               
             
               
               
-                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
           
@@ -175,67 +175,137 @@
         
         
         
-          <h2 id="vba로-txt-파일-생성하기">VBA로 .txt 파일 생성하기</h2>
-<p>별로 필요없는 기능이지만, 윈도우 외부 프로그램을 컨트롤하는 기능이 있다는 사실까지만 알고싶었다.<br>
-음.. 이 이상은 너무 복잡해서 잘 모르겠다</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01977/01.gif" alt="myimg"></p>
+          <h2 id="도형-위치-정렬하기---기준-도형의-밑으로-붙여서-정렬">도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬</h2>
+<p>문서작업을 하다보면 도형들을 딱 붙여서 작업을 해야할 때가 있는데, 오피스 2003인가 부터 SNAP 기능이 있어, 꽤 편해졌지만 도형들이 아주 많아지는 경우, SNAP 가이드라인이 미친듯이 많이 나오게 되는 관계로 그 또한 어려워진다.</p>
+<p>아래와 같이 도형들이 산개해 있다고 치자. 빨간 도형을 기준으로 아래에 딱 붙여서 도형을 정렬하고자 한다면, 왼쪽 정렬을 한 뒤에, SNAP으로 하나씩 조정을 해줘야 한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Createtextfile</span>()
+<p>최종 모양은 이런식이 될 것이다. 그런데, 손으로 하다보면, 삑사리가 나는 경우가 있고, 도형에 외곽선(STROKE)가 쳐져 있는 경우는 외곽선의 굵기인 1px 정도 어긋나는 경우가 자주 발생한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/02.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>자주 사용할 일은 없지만, 예를 들어 아래와 같이 타이틀을 위한 도형을 만드는 경우, 사용이 필요하다. 나의 경우는 꽤나 자주 이런 형태를 사용하기 때문에, 코드를 만들어본다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/03.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>룰은 간단하다. 첫번째 선택하는 도형이 기준이 되고, 이후 도형들은 기준의 밑으로 따라 붙는다. 개수는 상관이 없도록 한다. 개발새발 작성한 코드는 아래와 같다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shape_align_bottom</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> TF <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> standardshape <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> shapename()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;만들기
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> TF <span style="color:#f92672">=</span> CreateObject(<span style="color:#e6db74">&#34;scripting.filesystemobject&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> TFT <span style="color:#f92672">=</span> TF.Createtextfile(<span style="color:#e6db74">&#34;c:\test.txt&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;내용넣기
-</span></span></span><span style="display:flex;"><span>TFT.WriteLine <span style="color:#e6db74">&#34;this is just test file&#34;</span> <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;afs&#34;</span>
-</span></span><span style="display:flex;"><span>TFT.WriteLine <span style="color:#e6db74">&#34;this is 2nd line of test file&#34;</span>
-</span></span><span style="display:flex;"><span>TFT.WriteLine ActiveSheet.Name
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;selected shape name array
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> Preserve shapename(ActiveWindow.Selection.ShapeRange.Count)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;닫기
-</span></span></span><span style="display:flex;"><span>TFT.Close
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> TF <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> TFT <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;selected shape name array count
+</span></span></span><span style="display:flex;"><span>    arrcount <span style="color:#f92672">=</span> UBound(shapename) <span style="color:#f92672">-</span> LBound(shapename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> shapename(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                shapename(x) <span style="color:#f92672">=</span> shp.Name
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;size
+</span></span></span><span style="display:flex;"><span>standardshape_height <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).Height
+</span></span><span style="display:flex;"><span>standardshape_width <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).Width
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;position
+</span></span></span><span style="display:flex;"><span>standardshape_left <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).left
+</span></span><span style="display:flex;"><span>standardshape_top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> y <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>    ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">=</span> standardshape_top <span style="color:#f92672">+</span> standardshape_height
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> y <span style="color:#f92672">&gt;</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        accheight <span style="color:#f92672">=</span> accheight <span style="color:#f92672">+</span> ActiveWindow.Selection.ShapeRange(shapename(y <span style="color:#f92672">-</span> 1)).Height
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">+</span> accheight
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    ActiveWindow.Selection.ShapeRange(shapename(y)).left <span style="color:#f92672">=</span> standardshape_left
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><br>
+<Br>
+<p>구현된 화면은 아래와 같다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/04.gif" alt="myimg"></p>
+<br>
+<br>
+<h2 id="코드-업데이트">코드 업데이트</h2>
+<p>안타깝게도 아래 그림처럼, 이름이 동일한 shape들이 있으면 에러가 나는 현상이 있다. 파워포인트 안에서 shape의 이름이 중복인 경우가 많다는 것을 처음 알게 되었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01869/05.png" alt="myimg"></p>
+<br>
+<br>
+<p>아래와 같이 코드를 수정해 주었다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_bottom</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> standardshape <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> shapename()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> shapenameOrigin()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> ActiveWindow.Selection.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> selectShapes <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;selected shape name array
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> Preserve shapename(selectShapes.Count)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> Preserve shapenameOrigin(selectShapes.Count)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39;selected shape name array count
+</span></span></span><span style="display:flex;"><span>    arrcount <span style="color:#f92672">=</span> UBound(shapename) <span style="color:#f92672">-</span> LBound(shapename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>        shapenameOrigin(x) <span style="color:#f92672">=</span> selectShapes(x).Name
+</span></span><span style="display:flex;"><span>        selectShapes(x).Name <span style="color:#f92672">=</span> selectShapes(x).Name <span style="color:#f92672">&amp;</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> shp <span style="color:#f92672">In</span> selectShapes
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> shapename(x) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                shapename(x) <span style="color:#f92672">=</span> shp.Name
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">For</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> shp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>    MsgBox <span style="color:#e6db74">&#34;There is no shape currently selected!&#34;</span>, vbExclamation, <span style="color:#e6db74">&#34;No Shape Found&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;size
+</span></span></span><span style="display:flex;"><span>standardshape_height <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).Height
+</span></span><span style="display:flex;"><span>standardshape_width <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).Width
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;position
+</span></span></span><span style="display:flex;"><span>standardshape_left <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).left
+</span></span><span style="display:flex;"><span>standardshape_top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(1)).top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> y <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>    ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">=</span> standardshape_top <span style="color:#f92672">+</span> standardshape_height    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> y <span style="color:#f92672">&gt;</span> 2 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        culumheight <span style="color:#f92672">=</span> culumheight <span style="color:#f92672">+</span> ActiveWindow.Selection.ShapeRange(shapename(y <span style="color:#f92672">-</span> 1)).Height
+</span></span><span style="display:flex;"><span>        ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">=</span> ActiveWindow.Selection.ShapeRange(shapename(y)).top <span style="color:#f92672">+</span> culumheight
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>    
+</span></span><span style="display:flex;"><span>    ActiveWindow.Selection.ShapeRange(shapename(y)).left <span style="color:#f92672">=</span> standardshape_left    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> arrcount
+</span></span><span style="display:flex;"><span>    selectShapes(x).Name <span style="color:#f92672">=</span> shapenameOrigin(x)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> x
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
-<h2 id="filesystemobject-객체-메소드">FileSystemObject 객체 메소드</h2>
-<p>다른 블로그에서 퍼왔는데 어디였는지 까먹었다. 출처를 넣고 싶었지만, 어쩔 수 없다</p>
-<p class="text-box"><strong>드라이브 관련</strong><br>
-<code>DriveExists</code> : 지정한 드라이브 존재 여부 True, False 반환<br>
-<code>GetDrive</code> : 지정한 경로에 있는 드라이브 해당하는 Drive 객체 반환<br>
-<code>GetDirveName</code> : 지정한 경로의 드라이브 이름을 포함하는 문자열 반환</p>
-<Br>
-<p class="text-box"><strong>폴더 관련</strong><br>
-<code>BuildPath</code> : 기존 경로에 이름을 추가한다.<br>
-<code>CopyFolder</code> : 폴더를 현재 위치에서 다른 위치로 이동<br>
-<code>CreateFolder</code> : 폴더 생성<br>
-<code>DeleteFolder</code> : 지정한 폴더와 그 내용 삭제<br>
-<code>FolderExists</code> : 지정한 폴더 존재 여부 True, False 반환<br>
-<code>GetAbsolutePathName</code> : 절대경로<br>
-<code>GetFolder</code> : 지정된 경로에 있는 폴더에 해당하는 Folder객체 반환<br>
-<code>GetParentFolderName</code> : 지정한 경로에 있는 마지막 파일이나 폴더의 상위 폴더 포함하는 문자열 반환<br>
-<code>GetSpecialFolder</code> : 지정한 특수 폴더 반환(Windows, system, temp 폴더)<br>
-<code>GetTempName</code> : 임시파일이나 폴더이름 반환<br>
-<code>MoveFolder</code> : 폴더 위치 이동</p>
-<br>
-<p class="text-box"><strong>파일 관련</strong><br>
-<code>CreateTextFile</code> : 지정한 이름으로 파일 생성, TextStream 객체 반환<br>
-<code>OpenTextFile</code> : 지정한 파일을 열고, 읽고 쓰고 추가하는데 사용할 수 있는 TextStream 객체 반환<br>
-<code>CopyFile</code> : 하나 이상의 파일을 현재 위치에서 다른 위치로 복사<br>
-<code>MoveFile</code> : 파일 위치 이동<br>
-<code>DeleteFile</code> : 지정한 파일 삭제<br>
-<code>FileExists</code> : 지정한 파일 존재 여부 True, False 반환<br>
-<code>GetFile</code> : 지정된 경로에 있는 파일에 해당하는 File객체 반환<br>
-<code>GetFileName</code> : 지정한 경로에서 드라이브 내역이 아닌 마지막 파일 이름이나 폴더 반환<br>
-<code>GetBaseName</code> : 파일명만 반환<br>
-<code>GetExtensionName</code> : 확장명 포함하는 문자열 반환</p>
-<br>
-<br>
-<p>마이크로소프트 도움말 사이트에 가면 아주 자세히 나와있다.</p>
 <p>끝.</p>
 
         
