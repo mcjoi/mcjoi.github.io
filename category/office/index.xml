@@ -149,6 +149,20 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 엑셀/파워포인트2019 실행취소(Undo) 횟수 조정하기</title>
+      <link>https://mcjoi.github.io/post/01877/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01877/</guid>
+      <description>&lt;h2 id=&#34;엑셀2019-실행취소undo-횟수-조정하기&#34;&gt;엑셀2019 실행취소(Undo) 횟수 조정하기&lt;/h2&gt;&#xA;&lt;p&gt;복사(ctrl + c), 붙여넣기(ctrl + v) 만큼이나 자주 쓰는 단축키가 실행취소(ctrl + z)가 아닐까?&lt;br&gt;&#xA;하지만, 누구나 한번쯤 실행취소를 연타하다가, 멈춰서 당황한 기억이 있지 않는가? 분명 이전 버전에서는 옵션에 실행취소 횟수를 정하는 내용이 있었던 것으로 기억하는데, 2019버전에서는 안보인다. 나만 안보이는건지는 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;레지스트리-수정&#34;&gt;레지스트리 수정&lt;/h2&gt;&#xA;&lt;p&gt;cmd 창을 열어 regedit를 쳐서, 레지스트리 편집기를 열어준다.&lt;br&gt;&#xA;오피스2019 버전의 경우, 상단 주소창에, 아래 주소를 입력하면, 엑셀 레지스트리의 option폴더로 이동할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Excel\Options&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - Sheet와 WorkSheet type의 다른점</title>
+      <link>https://mcjoi.github.io/post/01878/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01878/</guid>
+      <description>&lt;h2 id=&#34;sheet와-worksheet-type의-다른점&#34;&gt;Sheet와 WorkSheet type의 다른점&lt;/h2&gt;&#xA;&lt;p&gt;변수를 선언하다보면, type 중 Sheet와 WorkSheet가 뭐가 다른지 싶다. 살짝 구글링을 해본 결과를 기술해 두자면,&lt;br&gt;&#xA;Sheet는 WorkSheet를 포함한다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;Sheet &amp;gt; WorkSheet&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;Sheet를 구성하는 타입은 WorkSheet 외에도 더 있다. 단, 현재는 다 없어진(?)거나 다름없고, ChartSheet 아니면 WorkSheet만 남았다고 생각해도 무방하다 한다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;WorkSheet : the sheet with the gridlines and cells&lt;br&gt;&#xA;Chart : the sheet which contains a single chart&lt;br&gt;&#xA;DialogSheet : deprecated&lt;br&gt;&#xA;Macro sheets : deprecated&lt;br&gt;&#xA;International Macro sheet : deprecated&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 자동필터 전체 한방에 해제하기</title>
       <link>https://mcjoi.github.io/post/01879/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
