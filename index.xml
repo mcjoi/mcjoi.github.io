@@ -594,7 +594,7 @@
       <link>https://mcjoi.github.io/post/01896/</link>
       <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01896/</guid>
-      <description>&lt;h2 id=&#34;구글시트---웹페이지-내용-가져오기importxml-importhtml&#34;&gt;구글시트 - 웹페이지 내용 가져오기(IMPORTXML, IMPORTHTML)&lt;/h2&gt;&#xA;&lt;p&gt;Google Sheets는 온라인에서 구동되므로, 웹에서 데이터를 참조하는 부분이 가능하다. 설치 프로그램이라고 해서 안될 건 없지만.. 대표적으로 IMPORTXML, IMPORTHTML 등의 함수가 존재하고, 사용법은 아래와 같다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;importxml-예시--롯데마트-휴점일-확인&#34;&gt;IMPORTXML 예시 : 롯데마트 휴점일 확인&lt;/h2&gt;&#xA;&lt;p&gt;롯데마트 휴점일 페이지는 테이블로 되어있으므로, 알아내야하는 것은 두가지,&lt;br&gt;&#xA;1)테이블의 페이지가 전환될떄 파라미터가 주소에 반영되는 방식&lt;br&gt;&#xA;2)테이블에 따른 점포명과 휴점일의 열/행에 대한 HTML 구성&lt;/p&gt;&#xA;&lt;p&gt;테이블 페이지를 하나씩 넘겨보면, 단순히 페이지 번호를 파라미터로 넘겨주는 방식임을 알 수 있다. 이번에는 14페이지까지 존재하는 것을 확인 할 수 있다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;구글시트---웹페이지-내용-가져오기importxml-importhtml&#34;&gt;구글시트 - 웹페이지 내용 가져오기(IMPORTXML, IMPORTHTML)&lt;/h2&gt;&#xA;&lt;p&gt;Google Sheets는 온라인에서 구동되므로, 웹에서 데이터를 참조하는 부분이 가능하다. 설치 프로그램이라고 해서 안될 건 없지만.. 대표적으로 IMPORTXML, IMPORTHTML 등의 함수가 존재하고, 사용법은 아래와 같다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;importxml-예시--롯데마트-휴점일-확인&#34;&gt;IMPORTXML 예시 : 롯데마트 휴점일 확인&lt;/h2&gt;&#xA;&lt;p&gt;롯데마트 휴점일 페이지는 테이블로 되어있으므로, 알아내야하는 것은 두가지,&lt;/p&gt;&#xA;&lt;ol class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;테이블의 페이지가 전환될떄 파라미터가 주소에 반영되는 방식&lt;/li&gt;&#xA;&lt;li&gt;테이블에 따른 점포명과 휴점일의 열/행에 대한 HTML 구성&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;테이블 페이지를 하나씩 넘겨보면, 단순히 페이지 번호를 파라미터로 넘겨주는 방식임을 알 수 있다. 이번에는 14페이지까지 존재하는 것을 확인 할 수 있다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ppt - 파워포인트로 벡터 그림 그리기</title>
