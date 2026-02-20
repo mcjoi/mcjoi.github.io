@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>ppt - 자주 쓰는 색 컬러팔레트 | shaaaaallow dive</title>
+    <title>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01924/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01881/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>ppt - 자주 쓰는 색 컬러팔레트</h1>
+      <h1>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2022-07-04</span>
+          <span>2023-07-20</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
               
               
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,68 +175,41 @@
         
         
         
-          <h2 id="파워포인트의-색">파워포인트의 색</h2>
-<p>색을 고르는 일은 몹시 어려운 일이다. 이색 저색 써보는 것도 방법이지만, 실상 회사에서 사용하는 색은 주로 CI색을 사용하기 때문에, 몇가지 자주쓰는 색을 박아놓고 쓰는 것도 나쁘지 않다.</p>
-<h2 id="슬라이드-마스터-팔레트">슬라이드 마스터 팔레트</h2>
-<p>파워포인트에 피커기능이 생긴 이후로, 마스터에 박스로 팔레트를 만들어 놓고 쓰는 사람이 꽤 보인다. 그럼 처음 켰을 때, 마스터에 내가 자주쓰는 색 팔레트를 만들어 놓는 버튼을 해두면 어떨까?</p>
-<p>myimg</p>
-<h2 id="생각보다-귀찮다">생각보다&hellip; 귀찮다.</h2>
-<p>아쉽게도 파워포인트 VBA는 엑셀만큼 나이스 하지 않으므로, 최소한의 기능으로 생각을 한다.<br>
-새문서를 켜고, 버튼을 누르면, 8개 작은 박스에 주황/파랑 그라데이션이 들어간 팔레트를 만들어준다.</p>
-<p>myimg</p>
-<p>만들기 전에는 많은 걸 생각했지만, 코딩실력의 한계는 자동으로 기능의 간소화로 이어진다.<br>
-colorIndex를 지원하지 않으..(맞나?)므로, 필요한 컬러에서 RGB를 강제로 조정하는 꼼수를 쓴다&hellip; 나름 애썼다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">pal</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> mySlideMaster <span style="color:#f92672">As</span> Master
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> left <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> top <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> size <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> colarrRed(8) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> colarrGreen(8) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> colarrBlue(8) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> mySlideMaster <span style="color:#f92672">=</span> Application.ActivePresentation.SlideMaster
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>size <span style="color:#f92672">=</span> 20
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> c <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> 8    
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;blue color        
-</span></span></span><span style="display:flex;"><span>        colarrRed(c) <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>10
-</span></span><span style="display:flex;"><span>        colarrGreen(c) <span style="color:#f92672">=</span> 51
-</span></span><span style="display:flex;"><span>        colarrBlue(c) <span style="color:#f92672">=</span> 72    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        top <span style="color:#f92672">=</span> 30 <span style="color:#f92672">*</span> (c <span style="color:#f92672">-</span> 1) <span style="color:#f92672">+</span> 10
-</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>25
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        colarrRed(c) <span style="color:#f92672">=</span> colarrRed(c) <span style="color:#f92672">+</span> (10 <span style="color:#f92672">*</span> c)
-</span></span><span style="display:flex;"><span>        colarrGreen(c) <span style="color:#f92672">=</span> colarrGreen(c) <span style="color:#f92672">+</span> (15 <span style="color:#f92672">*</span> c)
-</span></span><span style="display:flex;"><span>        colarrBlue(c) <span style="color:#f92672">=</span> colarrBlue(c) <span style="color:#f92672">+</span> (35 <span style="color:#f92672">*</span> c)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=</span>left, top:<span style="color:#f92672">=</span>top, Width:<span style="color:#f92672">=</span>size, Height:<span style="color:#f92672">=</span>size)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(colarrRed(c), colarrGreen(c), colarrBlue(c))
-</span></span><span style="display:flex;"><span>            .Line.Visible <span style="color:#f92672">=</span> msoFalse
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>        
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&#39;red color
-</span></span></span><span style="display:flex;"><span>        colarrRed(c) <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>9
-</span></span><span style="display:flex;"><span>        colarrGreen(c) <span style="color:#f92672">=</span> 26
-</span></span><span style="display:flex;"><span>        colarrBlue(c) <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>6        
-</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>50           
-</span></span><span style="display:flex;"><span>        colarrRed(c) <span style="color:#f92672">=</span> colarrRed(c) <span style="color:#f92672">+</span> (35 <span style="color:#f92672">*</span> c)
-</span></span><span style="display:flex;"><span>        colarrGreen(c) <span style="color:#f92672">=</span> colarrGreen(c) <span style="color:#f92672">+</span> (13 <span style="color:#f92672">*</span> c)
-</span></span><span style="display:flex;"><span>        colarrBlue(c) <span style="color:#f92672">=</span> colarrBlue(c) <span style="color:#f92672">+</span> (6 <span style="color:#f92672">*</span> c)       
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> mySlideMaster.Shapes.AddShape(Type:<span style="color:#f92672">=</span>msoShapeRectangle, left:<span style="color:#f92672">=</span>left, top:<span style="color:#f92672">=</span>top, Width:<span style="color:#f92672">=</span>size, Height:<span style="color:#f92672">=</span>size)
-</span></span><span style="display:flex;"><span>            .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(colarrRed(c), colarrGreen(c), colarrBlue(c))
-</span></span><span style="display:flex;"><span>            .Line.Visible <span style="color:#f92672">=</span> msoFalse
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> c
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><p>끝.</p>
+          <h2 id="배열수식-테이블-슬라이스---동적인-합계-영역-설정">배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</h2>
+<p>좀.. 딥한 내용이기는하지만, 단순하게 적어본다. 아래와 같은 테이블이 있을때, 원하는 과일에 대한 조건을 주고, (여기서는 이름으로만 처리), 월별 생산량을 구하는 수식을 짠다고 하면, 최초에 세팅한 합계영역이 계산되어 나올 것이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/01.png" alt="myimg"></p>
+<br>
+<br>
+<p>아래 그림처럼, &ldquo;수량&quot;이라는 이름으로 정의를 해놓았다면, 보라색 영역이 변경되지 않는다는 말이다. &ldquo;수량&quot;이라는 영역을 슬라이스처럼 동적으로 만들 수 있을까? 일단 생각나는데로 해본다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/02.png" alt="myimg"></p>
+<br>
+<br>
+<p>월에 따라, 열문자가 변경되어야 하므로 이를 참조할 테이블을 하나 만든다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/03.png" alt="myimg"></p>
+<br>
+<br>
+<p>1월부터 12월까지, 해당하는 열문자를 기재해줬다. 그냥 놔두면 흉하니까, 나는 &ldquo;열번호&quot;라는 이름으로 이름정의를 해둘 생각이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/04.png" alt="myimg"></p>
+<br>
+<br>
+<p>이제 본격적으로 슬라이서를 만들어보자.<br>
+집계 시작월은 4월, 종료월은 5월로 설정을 한다면, 위에 만들어놓은 열번호 이름정의를 활용하여, 아래와 같이 열번호를 열문자로 변환하는 vlookup함수를 사용한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/05.png" alt="myimg"></p>
+<br>
+<br>
+<p>이제 다 왔다. 아래 그림에서 원하는 영역은 $E$2:$F$5 이므로, E열과 F열을 동적으로 만들기 위해 함수를 끼워 넣어서, 수식을 텍스트로 작성해주고, INDIRECT 함수로 감싸준다.</p>
+<p class="text-box">=INDIRECT(&quot;$&quot;&amp;VLOOKUP($B$24,열번호,2,FALSE)&amp;&quot;$2:$&quot;&amp;VLOOKUP($B$25,열번호,2,FALSE)&amp;&quot;$5&rdquo;)</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/06.png" alt="myimg"></p>
+<br>
+<br>
+<p>새로 참조할 수량2 이름정의를 생성해 주고, 해당 수식을 넣어준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/07.png" alt="myimg"></p>
+<br>
+<br>
+<p>자, 이제 시작월과 종료월의 수치를 변경하면, 합산 수치도 변경이 된다.<br>
+INDIRECT 함수 대신 EVALUATE 함수를 사용해도 되지만, 반드시 매크로문서로 저장해야하므로, 무시한다.</p>
+<p>끝.</p>
 
         
       </div>

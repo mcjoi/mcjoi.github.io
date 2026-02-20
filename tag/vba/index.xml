@@ -58,6 +58,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</title>
+      <link>https://mcjoi.github.io/post/01881/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01881/</guid>
+      <description>&lt;h2 id=&#34;배열수식-테이블-슬라이스---동적인-합계-영역-설정&#34;&gt;배열수식 테이블 슬라이스 - 동적인 합계 영역 설정&lt;/h2&gt;&#xA;&lt;p&gt;좀.. 딥한 내용이기는하지만, 단순하게 적어본다. 아래와 같은 테이블이 있을때, 원하는 과일에 대한 조건을 주고, (여기서는 이름으로만 처리), 월별 생산량을 구하는 수식을 짠다고 하면, 최초에 세팅한 합계영역이 계산되어 나올 것이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래 그림처럼, &amp;ldquo;수량&amp;quot;이라는 이름으로 정의를 해놓았다면, 보라색 영역이 변경되지 않는다는 말이다. &amp;ldquo;수량&amp;quot;이라는 영역을 슬라이스처럼 동적으로 만들 수 있을까? 일단 생각나는데로 해본다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01881/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;월에 따라, 열문자가 변경되어야 하므로 이를 참조할 테이블을 하나 만든다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 중복값을 제외한 갯수 세기</title>
       <link>https://mcjoi.github.io/post/01882/</link>
       <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
