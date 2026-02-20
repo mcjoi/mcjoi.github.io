@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>ppt - 동일한 너비의 도형으로 페이지 분할하기 | shaaaaallow dive</title>
+    <title>xls - 한글엑셀을 영문엑셀로 변환하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01990/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01888/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>ppt - 동일한 너비의 도형으로 페이지 분할하기</h1>
+      <h1>xls - 한글엑셀을 영문엑셀로 변환하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-02-24</span>
+          <span>2023-04-12</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,67 +170,29 @@
         
         
         
-          <h2 id="inspiration">inspiration</h2>
-<p>파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.<br>
-예를 들면 아래와 같이 말이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp" alt="myimg"></p>
+          <h2 id="영문-버전이-아쉬울-때도">영문 버전이 아쉬울 때도.</h2>
+<p>영어로된 튜토리얼을 보거나, VBA프로그래밍시 한글로는 아는데, 영어로는 콘트롤이나 기능의 이름을 모를 때, 차라리 잠시 영문으로 바꿨으면 하는 때가 있다.</p>
 <br>
 <br>
-<h2 id="execution">execution</h2>
-<p>사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.</p>
-<p>요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp" alt="myimg"></p>
+<h2 id="한글엑셀을-영문엑셀로-변환하기">한글엑셀을 영문엑셀로 변환하기</h2>
+<p>사용자 친화적인 마이크로소프트 답게, 옵션에 간단하게 변경 가능할것처럼 보이지만,<br>
+추가 기능이 복잡하기로 둘째가라면 서러운, 마이크로소프트 답게, 뭘 또 설치를 하고 난리쳐야 하는 듯하다.</p>
+<p>옵션에 들어가서 언어를 선택하는데, 없으면 언어팩 링크를 클릭한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01888/01.png" alt="myimg"></p>
 <br>
 <br>
-<p>사용된 코드는 아래와 같다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">AddGuidesAsRectangles</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slide <span style="color:#f92672">As</span> slide
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> guideRect <span style="color:#f92672">As</span> Shape
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> divisions <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slideWidth <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> slideHeight <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> gap <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> spacing <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> leftMargin <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 사용자로부터 등분할 숫자 입력 받기
-</span></span></span><span style="display:flex;"><span>    divisions <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;몇 등분할까요?&#34;</span>, <span style="color:#e6db74">&#34;가이드라인 등분 설정&#34;</span>, 3)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 입력된 숫자가 1보다 작은 경우 처리
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> divisions <span style="color:#f92672">&lt;</span> 1 <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;등분할 숫자는 1 이상이어야 합니다.&#34;</span>, vbExclamation
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 현재 슬라이드 가져오기
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> slide <span style="color:#f92672">=</span> ActivePresentation.Slides(1) <span style="color:#75715e">&#39; 첫 번째 슬라이드
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 슬라이드의 너비와 높이 가져오기
-</span></span></span><span style="display:flex;"><span>    slideWidth <span style="color:#f92672">=</span> slide.Master.Width
-</span></span><span style="display:flex;"><span>    slideHeight <span style="color:#f92672">=</span> slide.Master.Height
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 여백과 간격 설정
-</span></span></span><span style="display:flex;"><span>    leftMargin <span style="color:#f92672">=</span> 30
-</span></span><span style="display:flex;"><span>    spacing <span style="color:#f92672">=</span> 10    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 각 도형의 너비 계산
-</span></span></span><span style="display:flex;"><span>    gap <span style="color:#f92672">=</span> (slideWidth <span style="color:#f92672">-</span> leftMargin <span style="color:#f92672">*</span> 2 <span style="color:#f92672">-</span> (divisions <span style="color:#f92672">-</span> 1) <span style="color:#f92672">*</span> spacing) <span style="color:#f92672">/</span> divisions
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&#39; 가이드라인 추가 (직사각형)
-</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">To</span> divisions <span style="color:#f92672">-</span> 1
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Set</span> guideRect <span style="color:#f92672">=</span> slide.Shapes.AddShape(msoShapeRectangle, leftMargin <span style="color:#f92672">+</span> (gap <span style="color:#f92672">+</span> spacing) <span style="color:#f92672">*</span> i, 0, gap, slideHeight)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> guideRect
-</span></span><span style="display:flex;"><span>            .Fill.ForeColor.RGB <span style="color:#f92672">=</span> RGB(255, 0, 0) <span style="color:#75715e">&#39; 빨간색
-</span></span></span><span style="display:flex;"><span>            .Fill.Transparency <span style="color:#f92672">=</span> 0.5 <span style="color:#75715e">&#39; 반투명
-</span></span></span><span style="display:flex;"><span>            .Line.Visible <span style="color:#f92672">=</span> msoFalse <span style="color:#75715e">&#39; 선 숨기기
-</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
+<p>언어팩을 버전에 맞게 설치한다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01888/02.png" alt="myimg"></p>
 <br>
-<h2 id="conclusion">conclusion</h2>
-<p>주석까지 깔끔하게, 이제 취미로 하던 VBA 만들던 것도 그만둘때가 됐나보다.</p>
+<br>
+<p>설치에는 엄청나게 오랜 시간이 걸린다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01888/03.png" alt="myimg"></p>
+<br>
+<br>
+<p>자 이제 영어가 되었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01888/04.png" alt="myimg"></p>
+<br>
+<br>
 <p>끝.</p>
 
         
