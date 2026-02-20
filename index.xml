@@ -352,6 +352,13 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</title>
+      <link>https://mcjoi.github.io/post/01860/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01860/</guid>
+      <description>&lt;h2 id=&#34;사용자-정의-셀서식-조건-1미만--1초과는--로-표기하기&#34;&gt;사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기&lt;/h2&gt;&#xA;&lt;p&gt;보고서를 작성하다보면, 1% 미만 값으로 인해 소숫점을 따로 꺼내지 않는 이상 +0%, -0%의 값들이 나오기 마련인데, 상당히 보기에 지저분하다. 그래서 엑셀 사용자 정의 셀서식에 조건을 적용하여, 0%를 포함한 1%와 -1%의 값들은 &amp;ldquo;-&amp;rdquo; 표기를 해본다. 셀서식에서는 조건이 3개까지만 걸리니, 주의해야한다. 그렇지 않으면 조건부 서식을 사용해야한다.&lt;/p&gt;&#xA;&lt;p&gt;셀서식 조건은 아래와 같이 걸어주면 된다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;[&amp;gt;=0.01]+0%;[Red][&amp;lt;=-0.01]-0%;-&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래 그림을 보면 성장률은 실제 0.2%인데, &amp;ldquo;-&amp;rdquo; 처리된것을 알 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01860/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>everland</title>
       <link>https://mcjoi.github.io/gallery/landscape/l_003/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>

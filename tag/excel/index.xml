@@ -114,6 +114,13 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</title>
+      <link>https://mcjoi.github.io/post/01860/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01860/</guid>
+      <description>&lt;h2 id=&#34;사용자-정의-셀서식-조건-1미만--1초과는--로-표기하기&#34;&gt;사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기&lt;/h2&gt;&#xA;&lt;p&gt;보고서를 작성하다보면, 1% 미만 값으로 인해 소숫점을 따로 꺼내지 않는 이상 +0%, -0%의 값들이 나오기 마련인데, 상당히 보기에 지저분하다. 그래서 엑셀 사용자 정의 셀서식에 조건을 적용하여, 0%를 포함한 1%와 -1%의 값들은 &amp;ldquo;-&amp;rdquo; 표기를 해본다. 셀서식에서는 조건이 3개까지만 걸리니, 주의해야한다. 그렇지 않으면 조건부 서식을 사용해야한다.&lt;/p&gt;&#xA;&lt;p&gt;셀서식 조건은 아래와 같이 걸어주면 된다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;[&amp;gt;=0.01]+0%;[Red][&amp;lt;=-0.01]-0%;-&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래 그림을 보면 성장률은 실제 0.2%인데, &amp;ldquo;-&amp;rdquo; 처리된것을 알 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01860/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - Evaluate를 활용한 수식 복사(copy formula)</title>
       <link>https://mcjoi.github.io/post/01862/</link>
       <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>

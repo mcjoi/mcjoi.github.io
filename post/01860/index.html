@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>ppt - 두 개 이상의 사이즈 발표자료 합치기(가로 타입) | shaaaaallow dive</title>
+    <title>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01865/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01860/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>ppt - 두 개 이상의 사이즈 발표자료 합치기(가로 타입)</h1>
+      <h1>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2024-08-08</span>
+          <span>2025-02-06</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,38 +170,21 @@
         
         
         
-          <h2 id="발표-자료를-취합할-때">발표 자료를 취합할 때,</h2>
-<p>동일한 template를 배포하지 않는 이상 정말 자유로운 형태의 내용이 도착하는 것을 쉽게 경험할 수 있다. 언제부터인가 파워포인트의 새로만들기 이후 생성되는 문서의 기본사이즈가 16:9이고, 출력을 위해 A4사이즈에 맞춰 문서 작업하는 사람도 있고, 구 버전의 파워포인트에서 표준이었던 4:3 비율을 지키고 있는 사람도 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/01.png" alt="myimg"></p>
+          <h2 id="사용자-정의-셀서식-조건-1미만--1초과는--로-표기하기">사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</h2>
+<p>보고서를 작성하다보면, 1% 미만 값으로 인해 소숫점을 따로 꺼내지 않는 이상 +0%, -0%의 값들이 나오기 마련인데, 상당히 보기에 지저분하다. 그래서 엑셀 사용자 정의 셀서식에 조건을 적용하여, 0%를 포함한 1%와 -1%의 값들은 &ldquo;-&rdquo; 표기를 해본다. 셀서식에서는 조건이 3개까지만 걸리니, 주의해야한다. 그렇지 않으면 조건부 서식을 사용해야한다.</p>
+<p>셀서식 조건은 아래와 같이 걸어주면 된다.</p>
+<p class="text-box">[&gt;=0.01]+0%;[Red][&lt;=-0.01]-0%;-</p>
 <br>
 <br>
-<h2 id="가로--세로-사이즈-혼용">가로 + 세로 사이즈 혼용</h2>
-<p>일단, 가로(landscape)와 세로(portrait)사이즈가 혼용이 되어있다면 두 문서를 연결하는 방법은 없다. 세로 사이즈의 문서를 발표에 사용하겠다는 생각은 프로젝터 등의 여건을 생각했을 때, 맞지가 않다. 그래서인지 모르겠지만 단일 파워포인트 파일에서 연결할 수 있는 기술적인 방법은 없다. 급한데로 넘어갈 페이지에 하이퍼링크를 달아서 세로로 된 파일을 불러내는 것이 최선이다. 마이크로소프트 포럼에도 해결방법으로 그것을 제시하고 있다. 생각보다 두개의 파일을 하이퍼링크로 연결했을 때 매끄럽게 넘어갈 수 있기는 하다.<br>
-가로 슬라이드에서 세로 슬라이드로 넘어가기 위한 도형을 만들고 파일을 선택해주고, 하이퍼링크를 걸어준다. 물론, 세로슬라이드의 마지막에 다시 돌아오는 버튼을 반드시 달아줘야한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/02.png" alt="myimg"></p>
+<p>아래 그림을 보면 성장률은 실제 0.2%인데, &ldquo;-&rdquo; 처리된것을 알 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01860/01.png" alt="myimg"></p>
 <br>
 <br>
-<p>이외에 가로파일과 세로파일을 각각 pdf로 변환한 뒤 머징하는 방법이 있기는 하지만 ppt파일이 아닌게 되므로 논외로 하기로 하자.</p>
+<p>사실, 소숫점 첫째자리정도까지는 살려주는 경우가 많기 때문에, 둘째 자리부터 커트를 하고 싶다면</p>
+<p class="text-box">[&gt;=0.001]+0.0%;[Red][&lt;=-0.001]-0.0%;-</p>
 <br>
 <br>
-<h2 id="다수의-가로-사이즈-단일-파일로-처리">다수의 (가로) 사이즈 단일 파일로 처리</h2>
-<p>취합을 위해 작성된 슬라이드가 여러 종류(16:9, 4:3 혼용)인 경우, 한개의 파일로 복사를 하다보면 사이징의 문제가 생긴다. 임의로 자료를 수정할 수 없는 경우 난감한 경우가 펼쳐진다. 이때 아래 방법을 사용할 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/03.png" alt="myimg"></p>
-<br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/04.png" alt="myimg"></p>
-<br>
-<br>
-<p>페이지마다 작업을 해줘도 되고, 슬라이드마스터에서 해당 슬라이드를 만들어서 적용을 해도 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/05.png" alt="myimg"></p>
-<br>
-<br>
-<p>발표시에는 배경이 어차피 검은색으로 나오기 때문에, 큰 이질감 없이, 두 개이상의 사이즈를 가지는 문서들을 한개의 파일로 만들어 무난하게 발표를 진행할 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/06.png" alt="myimg"></p>
-<br>
-<br>
-<p>4:3 비율로 제작된 문서를 강제로 16:9로 변환하는 경우 레이아웃이 엉망이 되는 것을 방지할 수 있다는 장점이 있다.</p>
-<br>
-<br>
+<p>이런식으로 변경해주면 된다.</p>
 <p>끝.</p>
 
         
