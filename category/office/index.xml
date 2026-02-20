@@ -156,6 +156,13 @@
       <description>&lt;h2 id=&#34;텍스트단어-수-세기&#34;&gt;텍스트(단어) 수 세기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이 대상 텍스트들이 엉망징창으로 적혀 있는 테이블이 있을 때, 찾고싶은 텍스트(여기서는 과일)이 있다. 찾는 과일의 이름이 몇번이나 들어갔는지 찾아 보자. 당연히 여러가지 방법이 있지만, (내가) 주로 쓰는 방법 한가지만 적어본다.&lt;br&gt;&#xA;우선 3번행에 대해서만, 하나씩 풀어서 생각해 보면, 다음과 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01884/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p class=&#34;text-box&#34;&gt;ⓐ A3 셀의 전체 글자수는 11이다. &lt;code&gt;=LEN(A3)&lt;/code&gt;&lt;br&gt;&#xA;ⓑ A3 셀에서 &amp;lsquo;찾는과일&amp;rsquo;(B3) 셀의 텍스트를 제외한 글자수는 9이다. &lt;code&gt;=LEN(SUBSTITUTE(A3,B3,&amp;quot;&amp;quot;))&lt;/code&gt;&lt;br&gt;&#xA;ⓐ 에서 ⓑ를 빼주면, 2이고, 이는 &amp;lsquo;찾는과일&amp;rsquo;의 텍스트가 포함된 만큼의 글자수이다. &lt;code&gt;=C3-D3&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 피벗테이블 자동 업데이트(refresh)</title>
+      <link>https://mcjoi.github.io/post/01883/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01883/</guid>
+      <description>&lt;h2 id=&#34;피벗테이블-업데이트&#34;&gt;피벗테이블 업데이트&lt;/h2&gt;&#xA;&lt;p&gt;피벗테이블은 데이터 테이블이 업데이트 될때마다, 수동으로 업데이트를 해줘야 한다. 귀찮기는 한데.. 죽어도 못쓸 정도는 아니지만, 생각난 김에, 간단한 스크립트 하나를 짜보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01883/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;1---worksheet-change-코드-활용&#34;&gt;#1 - worksheet change 코드 활용&lt;/h2&gt;&#xA;&lt;p&gt;엑셀VBA에서 기본으로 제공되는 기능 중, 시트가 업데이트될 경우, 동작을 설정할 수 있다. data라는 데이터테이블을 기반으로 Sheet2, Sheet3 피벗테이블 시트가 있다고 하면, data 시트에서 컨텍스트 메뉴(마우스 우버튼)를 호출하면, 코드보기(View Code) 메뉴가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01883/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;클릭하면 data 시트의 코드창으로 이동하게 되는데, 역기서 아래 코드를 입력해주면 된다. 또는 IDE 상단의 드롭다운 메뉴를 통해 Worksheet / Change에 대한 sub 프로시저를 생성하고, 원하는 코드를 입력해도 된다. 값이 업데이트 되는 경우, 모든 시트의 피벗테이블이 업데이트 된다.&lt;br&gt;&#xA;시트가 조금이라도 업데이트 되면 무조건 전체 피벗테이블이 업데이트되므로, 시트가 많거나 데이터 수정량이 많아지는 경우, 느려지다가, 어느 수준을 넘어서게 되면 에러가 날 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 엑셀VBA에서 정규식 사용하기 연습</title>
       <link>https://mcjoi.github.io/post/01885/</link>
       <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>

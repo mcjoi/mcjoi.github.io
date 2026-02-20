@@ -58,6 +58,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 피벗테이블 자동 업데이트(refresh)</title>
+      <link>https://mcjoi.github.io/post/01883/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01883/</guid>
+      <description>&lt;h2 id=&#34;피벗테이블-업데이트&#34;&gt;피벗테이블 업데이트&lt;/h2&gt;&#xA;&lt;p&gt;피벗테이블은 데이터 테이블이 업데이트 될때마다, 수동으로 업데이트를 해줘야 한다. 귀찮기는 한데.. 죽어도 못쓸 정도는 아니지만, 생각난 김에, 간단한 스크립트 하나를 짜보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01883/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;1---worksheet-change-코드-활용&#34;&gt;#1 - worksheet change 코드 활용&lt;/h2&gt;&#xA;&lt;p&gt;엑셀VBA에서 기본으로 제공되는 기능 중, 시트가 업데이트될 경우, 동작을 설정할 수 있다. data라는 데이터테이블을 기반으로 Sheet2, Sheet3 피벗테이블 시트가 있다고 하면, data 시트에서 컨텍스트 메뉴(마우스 우버튼)를 호출하면, 코드보기(View Code) 메뉴가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01883/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;클릭하면 data 시트의 코드창으로 이동하게 되는데, 역기서 아래 코드를 입력해주면 된다. 또는 IDE 상단의 드롭다운 메뉴를 통해 Worksheet / Change에 대한 sub 프로시저를 생성하고, 원하는 코드를 입력해도 된다. 값이 업데이트 되는 경우, 모든 시트의 피벗테이블이 업데이트 된다.&lt;br&gt;&#xA;시트가 조금이라도 업데이트 되면 무조건 전체 피벗테이블이 업데이트되므로, 시트가 많거나 데이터 수정량이 많아지는 경우, 느려지다가, 어느 수준을 넘어서게 되면 에러가 날 수 있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 엑셀VBA에서 정규식 사용하기 연습</title>
       <link>https://mcjoi.github.io/post/01885/</link>
       <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
