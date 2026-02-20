@@ -324,6 +324,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 두 개 이상의 사이즈 발표자료 합치기(가로 타입)</title>
+      <link>https://mcjoi.github.io/post/01865/</link>
+      <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01865/</guid>
+      <description>&lt;h2 id=&#34;발표-자료를-취합할-때&#34;&gt;발표 자료를 취합할 때,&lt;/h2&gt;&#xA;&lt;p&gt;동일한 template를 배포하지 않는 이상 정말 자유로운 형태의 내용이 도착하는 것을 쉽게 경험할 수 있다. 언제부터인가 파워포인트의 새로만들기 이후 생성되는 문서의 기본사이즈가 16:9이고, 출력을 위해 A4사이즈에 맞춰 문서 작업하는 사람도 있고, 구 버전의 파워포인트에서 표준이었던 4:3 비율을 지키고 있는 사람도 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;가로--세로-사이즈-혼용&#34;&gt;가로 + 세로 사이즈 혼용&lt;/h2&gt;&#xA;&lt;p&gt;일단, 가로(landscape)와 세로(portrait)사이즈가 혼용이 되어있다면 두 문서를 연결하는 방법은 없다. 세로 사이즈의 문서를 발표에 사용하겠다는 생각은 프로젝터 등의 여건을 생각했을 때, 맞지가 않다. 그래서인지 모르겠지만 단일 파워포인트 파일에서 연결할 수 있는 기술적인 방법은 없다. 급한데로 넘어갈 페이지에 하이퍼링크를 달아서 세로로 된 파일을 불러내는 것이 최선이다. 마이크로소프트 포럼에도 해결방법으로 그것을 제시하고 있다. 생각보다 두개의 파일을 하이퍼링크로 연결했을 때 매끄럽게 넘어갈 수 있기는 하다.&lt;br&gt;&#xA;가로 슬라이드에서 세로 슬라이드로 넘어가기 위한 도형을 만들고 파일을 선택해주고, 하이퍼링크를 걸어준다. 물론, 세로슬라이드의 마지막에 다시 돌아오는 버튼을 반드시 달아줘야한다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 도형 우측 끝으로 다른 도형 정렬하기</title>
       <link>https://mcjoi.github.io/post/01866/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
