@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 텍스트 앞뒤 바꾸기(뒤집기) | shaaaaallow dive</title>
+    <title>ppt - 도형 우측 끝으로 다른 도형 정렬하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/00974/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01866/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 텍스트 앞뒤 바꾸기(뒤집기)</h1>
+      <h1>ppt - 도형 우측 끝으로 다른 도형 정렬하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2016-12-14</span>
+          <span>2024-07-12</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
           
@@ -170,93 +175,64 @@
         
         
         
-          <div class="video-embed">
-  <div class="video-embed-inner">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/P8EtSti7qU4"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
+          <h2 id="도형-우측-끝으로-다른-도형정렬하기">도형 우측 끝으로 다른 도형정렬하기</h2>
+<p>파워포인트의 꽃은 정렬이다. 아무리 가이드 안내선이 있다고 해도, 로지텍의 마우스를 쓴다고 하더라도, 1px 단위로 도형들을 맞추다 보면 현타가 올 것이기 때문이다. 이에 MS에서는 충분히 많은 정렬(align) 옵션을 가지고 있지만, 아무리 기다려도 추가해주지 않는 정렬 옵션은 바로 도형의 오른쪽 끝 부분에 다음 도형을 맞추는 기능이다.</p>
 <br>
 <br>
-<h2 id="텍스트-앞뒤-바꾸기뒤집기">텍스트 앞뒤 바꾸기(뒤집기)</h2>
-<p>얼마전에 순서대로 있는 셀들을 거꾸로 배치하는 방법을 올린적이 있다.</p>
-<p>VBA와 함수를 사용하는 방법을 모두 올렸었다.<br>
-이 꼼수 아닌 꼼수는 그 이후로 회사에서 정말 많이 써먹었었다.<br>
-너무 뿌듯한 순간이 아닐 수 없다.</p>
-<p>물론, 회사에서 아무도 알아주는 사람은 없다.<br>
-내가 발로하든 VBA를 쓰든, 결과가 맞으면 되니깐.</p>
-<p>각설하고, 위의 내용을 고민하던 중에,<br>
-한 셀에 있는 텍스트를 뒤집는 것도 비슷하지 않을까라는 생각이 들었다.<br>
-예를 들어 아래처럼 &lsquo;가나다라마바사&rsquo;가 있으면 거꾸로 &lsquo;사바마라다나가&rsquo;가 되도록 말이다.</p>
-<p>안되는게 이상한거겠지만, 나같은 초보에게는 쉬운 VBA는 없다.<br>
-그래도 한번 해보자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/1.png" alt="img"></p>
+<h2 id="파워포인트vba">파워포인트VBA</h2>
+<p>는 매번 글에 적지만, 레퍼런스를 찾기가 어렵다. 하지만, 이제는 상관없다. ChatGPT라는 노예가 생겼으니, VBA만큼 오래된 역사를 가지고, 변화가 없던 언어라면 그 무엇이든 노예가 찾아내 줄 것이기 때문이다.</p>
+<p>하고자 하는 바는 다음과 같다. 두개의 도형(shape)이 아래 이미지처럼 흩어져 있다고 치자. 두 개의 사각형(rectangle)에서 1번 사각형의 우측 끝부분에 2번 사각형을 정렬하고 싶다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>보기 좋게 표를 그렸다, 그리고, C4셀에 앞뒤를 바꾸고 싶은 텍스트를 기입했다.<br>
-아래 뒤집기로 표시한 C5셀에 C4셀 내용을 뒤집어서 넣을 예정이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/2.png" alt="img"></p>
+<p>그냥 마우스로 안내선이 나올때까지 옮긴다? 맞다. 이런 큼지만한 도형을 옮길때는 그 방법이 최선이고 가장 정확하고 가장 빠르다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/02.jpg" alt="myimg"></p>
 <br>
 <br>
-<p>내 머릿속으로 어렴풋이 그렸던 내용은 아래와 같다.</p>
-<ul class="text-box">
-<li>전체 글자의 수를 센다. (len)</li>
-<li>각 글자별로 총 글자수 대비 순번을 매긴다. (for loop)</li>
-<li>배열에 순번의 역순으로 글자를 입력한다.</li>
-<li>배열을 한개의 셀에 합쳐서 표시한다. (join)</li>
-</ul>
+<p>하지만, 도형(shape)의 위치 값이 소수점 단위에 있다거나, 외곽선 때문이거나, 크기가 너무 작거나 한 경우, 아래 이미지에서처럼 가이드라인에 맞춘것이 확실함에도, 확대를 해보면, 1px 정도 차이가 나는 것을 확인 할 수 있다. (정확한 이유는 나도 모른다.) 이 미세한 차이는 슬라이드를 보는 배율에 따라서, 안보일 가능성도 높다. 하지만 분명히 틀어져 있음은 확실하다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/03.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>매크로로 수치를 맞춰주면 위와 동일한 도형 정렬을 아래 이미지와 같이 조정할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/04.jpg" alt="myimg"></p>
+<br>
+<br>
+<p>이런 쫌스런 짓을 누가할지는 나도 알 수 없다.</p>
+<br>
 <Br>
-<br>
-<p>그냥, 머릿속으로 생각만 해봤다.<br>
-제대로 될지는 코드를 쳐보면 알수 있을 것이다. 아래처럼 코드를 입력했다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/4.png" alt="img"></p>
-<br>
-<br>
-<p>사실 실제로 되는지 안되는지는 별로 중요하지 않았다. 안될줄 알았으니까..</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Change_FromTo</span>()
+<h2 id="vba코드">VBA코드</h2>
+<p>사용된 코드는 다음과 같다. 반드시 2개 이상의 도형을 선택해야 하며, 위치값에 대하여 기준이 될 도형을 첫 번째로 선택해야 한다. 선택한 도형이 그룹인 경우 1개의 도형으로 인식을 한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_right</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> selectedShape <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> secondShape <span style="color:#f92672">As</span> Shape
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeLeftInPoints <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Dim</span> shapeLeftInCentimeters <span style="color:#f92672">As</span> <span style="color:#66d9ef">Single</span>   
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> cMyTxt <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> N <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> X <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> aTXT() <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Set</span> sel <span style="color:#f92672">=</span> ActiveWindow.Selection    
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;원글
-</span></span></span><span style="display:flex;"><span>myTxt <span style="color:#f92672">=</span> Range(<span style="color:#e6db74">&#34;c4&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;원글의 글자수
-</span></span></span><span style="display:flex;"><span>cMyTxt <span style="color:#f92672">=</span> Len(myTxt)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;카운터
-</span></span></span><span style="display:flex;"><span>X <span style="color:#f92672">=</span> 1
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;순환문
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> N <span style="color:#f92672">=</span> cMyTxt <span style="color:#66d9ef">To</span> 1 <span style="color:#66d9ef">Step</span> <span style="color:#f92672">-</span>1
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> Preserve aTXT(cMyTxt)
-</span></span><span style="display:flex;"><span>    aTXT(X) <span style="color:#f92672">=</span> Mid(myTxt, N, 1)
-</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">=</span> X <span style="color:#f92672">+</span> 1
-</span></span><span style="display:flex;"><span>    Range(<span style="color:#e6db74">&#34;c5&#34;</span>) <span style="color:#f92672">=</span> Join(aTXT, <span style="color:#e6db74">&#34;&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> N
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> sel.Type <span style="color:#f92672">=</span> ppSelectionShapes <span style="color:#66d9ef">Then</span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> sel.ShapeRange.Count <span style="color:#f92672">&gt;=</span> 2 <span style="color:#66d9ef">Then</span>        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Set</span> selectedShape <span style="color:#f92672">=</span> sel.ShapeRange(1)                        
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 2 <span style="color:#66d9ef">To</span> sel.ShapeRange.Count
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Set</span> secondShape <span style="color:#f92672">=</span> sel.ShapeRange(i)            
+</span></span><span style="display:flex;"><span>                shapeLeftInPoints <span style="color:#f92672">=</span> selectedShape.left
+</span></span><span style="display:flex;"><span>                shapeWidthInPoints <span style="color:#f92672">=</span> selectedShape.Width                        
+</span></span><span style="display:flex;"><span>                secondShape.left <span style="color:#f92672">=</span> shapeLeftInPoints <span style="color:#f92672">+</span> shapeWidthInPoints            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Next</span> i        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>            MsgBox <span style="color:#e6db74">&#34;Please select over 2 shapes&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Please select shapes.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
-<p>그런데, 놀랍게도 아래처럼 잘 됐다.<br>
-전혀 써먹을 일이 없겠지만, 그래도 다행이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/3.png" alt="img"></p>
+<p>결과물은 대략 아래 그림 정도가 될 것이다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/05.gif" alt="myimg"></p>
 <br>
 <br>
-<p>혹시나 해서 공백을 넣어봤다.<br>
-공백도 문자로 인식을 해서 적용이 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00974/5.png" alt="img"></p>
-<br>
-<br>
-<p>잘하시는 분들이 보면 콧웃음을 치겠지만, 작은일에 뿌듯함을 느낀다면 이또한 기쁜 일이다.</p>
-<p>끝.</p>
+<p>이상. 끝.</p>
 
         
       </div>
