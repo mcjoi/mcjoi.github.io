@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>android - 영단어 플래시 카드 &#43; papago | shaaaaallow dive</title>
+    <title>xls - 엑셀VBA에서 정규식 사용하기 연습 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/03994/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01885/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>android - 영단어 플래시 카드 &#43; papago</h1>
+      <h1>xls - 엑셀VBA에서 정규식 사용하기 연습</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2026-01-27</span>
+          <span>2023-05-23</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
+              
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -170,273 +175,169 @@
         
         
         
-          <h2 id="inspiration">inspiration</h2>
-<p>초, 중, 고 과정의 영단어를 교육부 홈페이지에서 찾아보니.. 3000천여개가 되는 것 같다.<br>
-간단한 플래시 카드를 만들어 본다.</p>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="엑셀vba에서-정규식-사용하기-연습">엑셀VBA에서 정규식 사용하기 연습</h2>
+<p>입력폼에서 정규식을 사용하면 코드를 간결하게 만들수 있다. 고 하지만, 음 귀찮다. 간단한 것부터 해보자.<br>
+먼저 VBE 편집기의 도구 &gt; 참조 &gt; Microsoft VBScript Regular Expressions 를 활성화 시키자.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01885/01.png" alt="myimg"></p>
 <br>
 <br>
-<h2 id="execution">execution</h2>
-<p>영단어가 나오고, pass, del, hint 버튼이 있다.<br>
-✶ 계속 외워야할 필요가 있는 단어는 두고, <code>pass</code>를 누르면 다음 단어로 변경,<br>
-✶ 외운 단어는 <code>del</code>을 누르면 리스트에 삭제, 삭제된 단어는 별도 페이지에서 관리,<br>
-✶ <code>hint</code> 버튼을 누르면, 해당단어에 대한 papago 해석 페이지가 하단 웹뷰로 노출.</p>
-<p class="text-box">papago의 해석은 별로이지만, 하단에 사전 기능과 듣기 기능이 있으므로, 정확한 해석과 발음을 보기에 나쁘지 않다. 따로 사전 부분만 api로 떼어오려고 했는데, api 서비스가 종료되었다고 한다.</p>
+<p>정규식 object를 생성해야한다. 여기서는 re1이라는 이름으로 정규식 object를 생성했다.</p>
+<p class="text-box">Set re1 = New RegExp</p>
 <br>
 <br>
-<p>→ 사용된 패키지는 <code>webview_flutter</code>, <code>shared_preference</code> 이다.<br>
-→ 영단어가 추가되지 않는다는 전제로 별도 DB작업은 하지 않았으며,<br>
-→ 마음같아서는 인터넷 연결없이 실행되도록 하고 싶었는데, 역량의 한계이다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/material.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:webview_flutter/webview_flutter.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:shared_preferences/shared_preferences.dart&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:math&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;word.dart&#39;</span>; <span style="color:#75715e">// 여기에 wordslist가 정의되어 있어야 합니다.
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
-</span></span><span style="display:flex;"><span>  WidgetsFlutterBinding.ensureInitialized(); <span style="color:#75715e">// WebView 초기화
-</span></span></span><span style="display:flex;"><span>  runApp(MyApp());
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyApp</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> MaterialApp(
-</span></span><span style="display:flex;"><span>      title: <span style="color:#e6db74">&#39;영단어 퀴즈&#39;</span>,
-</span></span><span style="display:flex;"><span>      theme: ThemeData.dark(),
-</span></span><span style="display:flex;"><span>      debugShowCheckedModeBanner: <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>      home: WordQuizPage(),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WordQuizPage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  _WordQuizPageState createState() <span style="color:#f92672">=&gt;</span> _WordQuizPageState();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_WordQuizPageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>WordQuizPage<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> wordlistcount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> currentIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> showHint <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>  late <span style="color:#66d9ef">final</span> WebViewController _controller;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> words <span style="color:#f92672">=</span> [];
-</span></span><span style="display:flex;"><span>  List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> del_words <span style="color:#f92672">=</span> [];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Future<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">void</span><span style="color:#f92672">&gt;</span> _loadList() <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> prefs <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> SharedPreferences.getInstance();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> newWords <span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span>        prefs.getStringList(<span style="color:#e6db74">&#39;wordslist&#39;</span>) <span style="color:#f92672">??</span> List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span>.from(wordslist);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> newDelWords <span style="color:#f92672">=</span> prefs.getStringList(<span style="color:#e6db74">&#39;del_wordslist&#39;</span>) <span style="color:#f92672">??</span> [];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> currentWord <span style="color:#f92672">=</span> words.isNotEmpty <span style="color:#f92672">?</span> words[currentIndex] <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    setState(() {
-</span></span><span style="display:flex;"><span>      words <span style="color:#f92672">=</span> newWords;
-</span></span><span style="display:flex;"><span>      del_words <span style="color:#f92672">=</span> newDelWords;
-</span></span><span style="display:flex;"><span>      wordlistcount <span style="color:#f92672">=</span> words.length;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (currentWord <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> words.contains(currentWord)) {
-</span></span><span style="display:flex;"><span>        currentIndex <span style="color:#f92672">=</span> words.indexOf(currentWord); <span style="color:#75715e">// 현재 단어 유지
-</span></span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        currentIndex <span style="color:#f92672">=</span> words.isNotEmpty <span style="color:#f92672">?</span> Random().nextInt(words.length) <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Future<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">void</span><span style="color:#f92672">&gt;</span> _listChange(<span style="color:#66d9ef">int</span> idx) <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> prefs <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> SharedPreferences.getInstance();
-</span></span><span style="display:flex;"><span>    setState(() {
-</span></span><span style="display:flex;"><span>      del_words.add(words[idx]);
-</span></span><span style="display:flex;"><span>      words.removeAt(idx);
-</span></span><span style="display:flex;"><span>      wordlistcount <span style="color:#f92672">=</span> words.length;
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> prefs.setStringList(<span style="color:#e6db74">&#39;wordslist&#39;</span>, words);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> prefs.setStringList(<span style="color:#e6db74">&#39;del_wordslist&#39;</span>, del_words);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (words.isNotEmpty) {
-</span></span><span style="display:flex;"><span>      setState(() {
-</span></span><span style="display:flex;"><span>        currentIndex <span style="color:#f92672">=</span> Random().nextInt(wordlistcount);
-</span></span><span style="display:flex;"><span>        showHint <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>      });
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>      setState(() {
-</span></span><span style="display:flex;"><span>        currentIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>        showHint <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>      });
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> initState() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>.initState();
-</span></span><span style="display:flex;"><span>    _loadList();
-</span></span><span style="display:flex;"><span>    _controller <span style="color:#f92672">=</span> WebViewController()
-</span></span><span style="display:flex;"><span>      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-</span></span><span style="display:flex;"><span>      ..loadRequest(Uri.parse(<span style="color:#e6db74">&#39;https://papago.naver.com&#39;</span>));
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> _showHint() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (words.isEmpty) <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> word <span style="color:#f92672">=</span> words[currentIndex];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://papago.naver.com/?sk=auto&amp;tk=en&amp;st=</span><span style="color:#e6db74">$</span>word<span style="color:#e6db74">&#39;</span>;
-</span></span><span style="display:flex;"><span>    _controller.loadRequest(Uri.parse(url));
-</span></span><span style="display:flex;"><span>    setState(() <span style="color:#f92672">=&gt;</span> showHint <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> _nextWord() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (words.isEmpty) <span style="color:#66d9ef">return</span>;
-</span></span><span style="display:flex;"><span>    setState(() {
-</span></span><span style="display:flex;"><span>      currentIndex <span style="color:#f92672">=</span> Random().nextInt(words.length);
-</span></span><span style="display:flex;"><span>      showHint <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> currentWord <span style="color:#f92672">=</span> words.isNotEmpty <span style="color:#f92672">?</span> words[currentIndex] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;단어 없음&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Scaffold(
-</span></span><span style="display:flex;"><span>      appBar: AppBar(
-</span></span><span style="display:flex;"><span>        title: Row(
-</span></span><span style="display:flex;"><span>          children: [
-</span></span><span style="display:flex;"><span>            Text(<span style="color:#e6db74">&#39;? 영단어 퀴즈&#39;</span>),
-</span></span><span style="display:flex;"><span>            SizedBox(width: <span style="color:#ae81ff">12</span>),
-</span></span><span style="display:flex;"><span>            Text(
-</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#39;(</span><span style="color:#e6db74">${</span>words.length<span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span>wordslist.length<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#39;</span>,
-</span></span><span style="display:flex;"><span>              style: TextStyle(fontSize: <span style="color:#ae81ff">16</span>, color: Colors.grey[<span style="color:#ae81ff">300</span>]),
-</span></span><span style="display:flex;"><span>            ),
-</span></span><span style="display:flex;"><span>          ],
-</span></span><span style="display:flex;"><span>        ),
-</span></span><span style="display:flex;"><span>        actions: [
-</span></span><span style="display:flex;"><span>          IconButton(
-</span></span><span style="display:flex;"><span>            onPressed: () <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>              Navigator.push(
-</span></span><span style="display:flex;"><span>                context,
-</span></span><span style="display:flex;"><span>                MaterialPageRoute(
-</span></span><span style="display:flex;"><span>                  builder: (context) <span style="color:#f92672">=&gt;</span> DelWords(dataList: del_words),
-</span></span><span style="display:flex;"><span>                ),
-</span></span><span style="display:flex;"><span>              );
-</span></span><span style="display:flex;"><span>              _loadList();
-</span></span><span style="display:flex;"><span>            },
-</span></span><span style="display:flex;"><span>            icon: Icon(Icons.list_alt),
-</span></span><span style="display:flex;"><span>          ),
-</span></span><span style="display:flex;"><span>        ],
-</span></span><span style="display:flex;"><span>      ),
-</span></span><span style="display:flex;"><span>      body: Column(
-</span></span><span style="display:flex;"><span>        children: [
-</span></span><span style="display:flex;"><span>          SizedBox(height: <span style="color:#ae81ff">30</span>),
-</span></span><span style="display:flex;"><span>          Center(
-</span></span><span style="display:flex;"><span>            child: Text(
-</span></span><span style="display:flex;"><span>              currentWord,
-</span></span><span style="display:flex;"><span>              style: TextStyle(fontSize: <span style="color:#ae81ff">48</span>, fontWeight: FontWeight.bold),
-</span></span><span style="display:flex;"><span>            ),
-</span></span><span style="display:flex;"><span>          ),
-</span></span><span style="display:flex;"><span>          SizedBox(height: <span style="color:#ae81ff">10</span>),
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (words.isNotEmpty)
-</span></span><span style="display:flex;"><span>            Row(
-</span></span><span style="display:flex;"><span>              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-</span></span><span style="display:flex;"><span>              children: [
-</span></span><span style="display:flex;"><span>                ElevatedButton(onPressed: _nextWord, child: Text(<span style="color:#e6db74">&#39;PASS&#39;</span>)),
-</span></span><span style="display:flex;"><span>                ElevatedButton(
-</span></span><span style="display:flex;"><span>                  onPressed: () <span style="color:#f92672">=&gt;</span> _listChange(currentIndex),
-</span></span><span style="display:flex;"><span>                  child: Text(<span style="color:#e6db74">&#39;DEL&#39;</span>),
-</span></span><span style="display:flex;"><span>                ),
-</span></span><span style="display:flex;"><span>                ElevatedButton(onPressed: _showHint, child: Text(<span style="color:#e6db74">&#39;HINT&#39;</span>)),
-</span></span><span style="display:flex;"><span>              ],
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>            Padding(
-</span></span><span style="display:flex;"><span>              padding: <span style="color:#66d9ef">const</span> EdgeInsets.all(<span style="color:#ae81ff">20.0</span>),
-</span></span><span style="display:flex;"><span>              child: Text(<span style="color:#e6db74">&#39;? 모든 단어를 완료했습니다!&#39;</span>, style: TextStyle(fontSize: <span style="color:#ae81ff">20</span>)),
-</span></span><span style="display:flex;"><span>            ),
-</span></span><span style="display:flex;"><span>          Divider(color: Colors.white, thickness: <span style="color:#ae81ff">0.5</span>),
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (showHint <span style="color:#f92672">&amp;&amp;</span> words.isNotEmpty)
-</span></span><span style="display:flex;"><span>            Expanded(child: WebViewWidget(controller: _controller)),
-</span></span><span style="display:flex;"><span>        ],
-</span></span><span style="display:flex;"><span>      ),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DelWords</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> dataList;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> DelWords({<span style="color:#66d9ef">super</span>.key, <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">this</span>.dataList});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  State<span style="color:#f92672">&lt;</span>DelWords<span style="color:#f92672">&gt;</span> createState() <span style="color:#f92672">=&gt;</span> _DelWordsState();
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_DelWordsState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>DelWords<span style="color:#f92672">&gt;</span> {
-</span></span><span style="display:flex;"><span>  late List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> delWords;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> initState() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>.initState();
-</span></span><span style="display:flex;"><span>    delWords <span style="color:#f92672">=</span> List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span>.from(widget.dataList); <span style="color:#75715e">// 복사본 생성
-</span></span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Future<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">void</span><span style="color:#f92672">&gt;</span> _restoreWord(<span style="color:#66d9ef">String</span> word) <span style="color:#66d9ef">async</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> prefs <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> SharedPreferences.getInstance();
-</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> words <span style="color:#f92672">=</span> prefs.getStringList(<span style="color:#e6db74">&#39;wordslist&#39;</span>) <span style="color:#f92672">??</span> [];
-</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> deleted <span style="color:#f92672">=</span> prefs.getStringList(<span style="color:#e6db74">&#39;del_wordslist&#39;</span>) <span style="color:#f92672">??</span> [];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (deleted.contains(word)) {
-</span></span><span style="display:flex;"><span>      deleted.remove(word);
-</span></span><span style="display:flex;"><span>      words.add(word);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> prefs.setStringList(<span style="color:#e6db74">&#39;wordslist&#39;</span>, words);
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> prefs.setStringList(<span style="color:#e6db74">&#39;del_wordslist&#39;</span>, deleted);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      setState(() {
-</span></span><span style="display:flex;"><span>        delWords.remove(word); <span style="color:#75715e">// UI에서 제거
-</span></span></span><span style="display:flex;"><span>      });
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
-</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Scaffold(
-</span></span><span style="display:flex;"><span>      appBar: AppBar(title: Text(<span style="color:#e6db74">&#39;삭제된 단어 목록&#39;</span>)),
-</span></span><span style="display:flex;"><span>      body: delWords.isEmpty
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">?</span> Center(child: Text(<span style="color:#e6db74">&#39;삭제된 단어가 없습니다.&#39;</span>))
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">:</span> ListView.builder(
-</span></span><span style="display:flex;"><span>              itemCount: delWords.length,
-</span></span><span style="display:flex;"><span>              itemBuilder: (context, index) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">final</span> word <span style="color:#f92672">=</span> delWords[index];
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> ListTile(
-</span></span><span style="display:flex;"><span>                  title: Text(word),
-</span></span><span style="display:flex;"><span>                  trailing: IconButton(
-</span></span><span style="display:flex;"><span>                    icon: Icon(Icons.restore),
-</span></span><span style="display:flex;"><span>                    onPressed: () <span style="color:#f92672">=&gt;</span> _restoreWord(word),
-</span></span><span style="display:flex;"><span>                  ),
-</span></span><span style="display:flex;"><span>                );
-</span></span><span style="display:flex;"><span>              },
-</span></span><span style="display:flex;"><span>            ),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
+<p>생성된 re1 object 안에 pattern과 옵션을 설정한다.</p>
+<p class="text-box">Pattern : 검색할 문자열의 패턴을 정해주는 필수항목<br>
+IgnoreCase : 검색할 문자열에서 대/소문자 구분 - true인 경우, 무시<br>
+Global : 패턴과 일치하는 전체항목을 찾을지, 첫번째 항목만 찾을지 결정 - true인 경우, 모든 항목 검색<br>
+MultiLine : True인 경우, 줄바꿈을 무시하고 전체 서치</p>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="패턴-구문">패턴 구문</h2>
+<p>아래와 같이 설정한 경우, 공백 전체를 검색하게 된다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">With</span> re1
+</span></span><span style="display:flex;"><span>    .Pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\s&#34;</span>
+</span></span><span style="display:flex;"><span>    .Global <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">with</span>
 </span></span></code></pre></div><br>
 <br>
-<p>영어 단어 리스트는 <code>words.dart</code> 파일에 <code>wordslist</code> 변수로 넣어줘야 한다.<br>
-<code>[pjt]\android\app\src\main\AndroidManifest.xml</code> 안에 인터넷 사용 권한 permission을 넣어주는 것을 잊지 말아야 한다.</p>
-<p class="text-box">&lt;uses-permission android:name=&ldquo;android.permission.INTERNET&rdquo; /&gt;</p>
-<br>
-<br>
-<p>이유는 모르겠는데, 최근 ndk 버전을 지정하라는 에러가 계속 뜨니,<br>
-<code>[pjt]\android\app\build.gradle.kts</code> 파일안에 ndk 버전을 에러문구와 같이 적어버린다. 나중에 무슨 문제가 생길지는 모른다.</p>
-<p class="text-box">ndkVersion = &ldquo;27.0.12077973&rdquo;</p>
-<br>
-<br>
-<p>대략 이런 모습이 되겠다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03994/01.webp" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03994/02.webp" alt="img"></p>
-<br>
-<br>
-<h2 id="conclusion">conclusion</h2>
-<p>내가 사용자가 아니기 때문에, 예상되는 불편한 점을 예상할 수는 없다.<br>
-시간이 될 때, 조금씩 업데이트를 해보자.</p>
-<p>끝.</p>
 
+            
+          
+            
+              
+                <div class="ad-slot">
+                  
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="9665871796"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                </div>
+              
+              <h2 id="test">test</h2>
+<p>아래 코드로 공백 여부를 확인해 본다.<br>
+re1을 정규식 Object로 만들면,  아래 메쏘드 중 하나를 실행할 수 있다.</p>
+<p class="text-box">Execute : 패턴을 실행하며 결과값을 객체에 담는다. 하나씩 값을 꺼낼 수 있다.<br>
+Replace : 패턴에 일치하는 값을 검색해서 인수로 입력한 값으로 대체한다.<br>
+Test : 패턴을 찾아서 일치하는 것이 있는지 결과값을 리턴 한다.</p>
+<br>
+<br>
+<p>이를 대상 텍스트에 적용해보면, 아래와 같이 공백 포함 여부를 확인할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">regTest1</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; 테스트 대상 텍스트
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> string1 <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>string1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my name is Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> re1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">New</span> RegExp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; re1 : 공백이 있는지 확인
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> re1 
+</span></span><span style="display:flex;"><span>    .Pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\s&#34;</span>
+</span></span><span style="display:flex;"><span>    .Global <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">with</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39;re1 - test method 사용 예시
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> re1.Test(string1) <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>    Debug.Print string1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; - 공백확인 : yes&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Else</span>
+</span></span><span style="display:flex;"><span>    Debug.Print string1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; - 공백확인 : no&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; Log&gt;&gt; my name is Hello World - 공백확인 : yes
+</span></span></span></code></pre></div><br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="replace">replace</h2>
+<p>replace 메쏘드를 통해 패턴과 일치하는 내용을 일괄 변경할 수 있다.<br>
+아래 코드는 특정 텍스트를 replace 하는 예시이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">rg2</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> originalText <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> replaceText <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> re2 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> re2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">New</span> RegExp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> re2
+</span></span><span style="display:flex;"><span>    .Pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the number is &#34;</span>
+</span></span><span style="display:flex;"><span>    .Global <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>originalText <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the number is 010-0000-0000&#34;</span>
+</span></span><span style="display:flex;"><span>replaceText <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my phone number is &#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Debug.Print re2.Replace(originalText, replaceText)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; my phone number is 010-0000-0000
+</span></span></span></code></pre></div>
+            
+          
+            
+              
+              <h2 id="execute">execute</h2>
+<p>execute를 통해 새로운 객체에 결과값을 받아서 호출할 수 있다.<br>
+아래 코드는 숫자를 골라낸 예시이며, String 타입으로 받아오게된다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">rg3</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> originalText <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>originalText <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;the number is 010-1234-4567&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> re3 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Object</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> re3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">New</span> RegExp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">With</span> re3
+</span></span><span style="display:flex;"><span>    .Pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[^\D]+&#34;</span>
+</span></span><span style="display:flex;"><span>    .Global <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> re3Result <span style="color:#f92672">=</span> re3.Execute(originalText)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">For</span> i <span style="color:#f92672">=</span> 0 <span style="color:#66d9ef">To</span> re3Result.Count <span style="color:#f92672">-</span> 1
+</span></span><span style="display:flex;"><span>    Debug.Print re3Result(i)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 010
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 1234
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 5678
+</span></span></span></code></pre></div><Br>
+<Br>
+<p>아씨&hellip; 귀찮아..</p>
+<p>여기까지만 하자. 끝.</p>
+
+            
+          
         
       </div>
 
@@ -470,53 +371,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
           </div>
