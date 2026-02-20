@@ -394,6 +394,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 글머리 기호(bullets) 자간 조정</title>
+      <link>https://mcjoi.github.io/post/01864/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01864/</guid>
+      <description>&lt;h2 id=&#34;글머리-기호bullets-자간-조정&#34;&gt;글머리 기호(bullets) 자간 조정&lt;/h2&gt;&#xA;&lt;p&gt;리스트의 위계(hierarchy)를 잡기 위해 글머리 기호를 사용하곤 하는데, 워드에서는 흔히 사용하는 기능이지만, 파워포인트에서 이를 사용하는 경우는 대학때 교수님들의 성의없는 파워포인트 자료외엔 거의 본적이 없다. 아무래도, 글머리 기호를 자유자재로 입력하고 사용하기는 쉽지가 않다는 이유때문일 것이다.&lt;/p&gt;&#xA;&lt;p&gt;기본으로 주어지는 값(기호)은 제한적이지만, 기호를 추가할 수 있으며, 가지고 있는 그럼을 활용할 수도 있다. 기호를 사용하는 경우, 색상정도는 변경 할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01864/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아무 대충 좌측과 같은 그림이 될 것이다. 색상 정도는 바꿀 수 있지만, 뭔가 하전하고 심심하다. 그럼을 넣는다면 우측과 같은 그림이 될 것이고, 한결 나아 보인다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 두 개 이상의 사이즈 발표자료 합치기(가로 타입)</title>
       <link>https://mcjoi.github.io/post/01865/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
