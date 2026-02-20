@@ -114,6 +114,20 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - Evaluate를 활용한 수식 복사(copy formula)</title>
+      <link>https://mcjoi.github.io/post/01862/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01862/</guid>
+      <description>&lt;h2 id=&#34;evaluate를-활용한-수식-복사copy-formula&#34;&gt;Evaluate를 활용한 수식 복사(copy formula)&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같은 표가 있을 때, total 열을 반복적으로 복사를 해야하는 상황&amp;hellip;..(예시가 적절하지는 않은 것 같다&amp;hellip;)이 있다면, total을 산출하는 수식을 복사한다면 편할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;일반적으로는 열을 옮겨서(잘라내기, cut) 수식을 유지하겠지만, 아주 간헐적으로 해당 내용을 그대로 사용하고 싶다면, 수식을 따로 text형태로 일일이 복사해줘야하는데, 이를 대신해줄만한 사용자 함수를 add-in으로 등록해 두면 사용할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01862/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;예시에서는 간단한 수식이지만, 가령 배열수식같이 복잡하다는 가정을 해보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01862/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래 그림처럼, 사용자 함수를 통해 수식을 열 복사시 사용할 수 있다.&lt;br&gt;&#xA;아래 그림에서 fxCopyFormula는 사용자 함수이다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 요약 테이블 만들기 심화(query함수)</title>
+      <link>https://mcjoi.github.io/post/01863/</link>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01863/</guid>
+      <description>&lt;h2 id=&#34;구글시트---요약-테이블-만들기&#34;&gt;구글시트 - 요약 테이블 만들기&lt;/h2&gt;&#xA;&lt;p&gt;다음과 같은 테이블이 있을때, 피벗테이블을 만들 수 있지만, 쿼리 함수를 통해 간단하게 요약 테이블 구성이 가능하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;첫 셀에서, 다음과 같은 쿼리함수를 실행한 결과이다. 결과값은 엑셀의 고급함수와 비슷하다고 할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=QUERY(Table1,&lt;br&gt;&#xA;&amp;ldquo;Select&lt;br&gt;&#xA;Col3, Col4&lt;br&gt;&#xA;where Col2 = &amp;lsquo;야채&amp;rsquo;&lt;br&gt;&#xA;&amp;ldquo;)&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;함수 내에서는 sql 문을 사용하게 된다. Table1에서, 3번째, 4번째 열을 불러오는데, 조건은 2번째 열이 야채인 경우이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여기서 살짝 짜증나는 부분이 생기는데, Table1에 새로운 열을 추가하는 경우이다. 애초에 sql문을 String 값으로 작성해놨기 때문에, 참조 테이블 변화에 대해서 동적으로 작동하지 않는다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 구글시트 - 다른 파일의 데이터 참조하기(query, importrange)</title>
       <link>https://mcjoi.github.io/post/01868/</link>
       <pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate>
