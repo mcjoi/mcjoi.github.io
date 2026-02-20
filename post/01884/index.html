@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>ppt - 원형 화살표 도식만들기 | shaaaaallow dive</title>
+    <title>xls - 텍스트(단어) 수 세기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01894/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01884/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>ppt - 원형 화살표 도식만들기</h1>
+      <h1>xls - 텍스트(단어) 수 세기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2023-03-13</span>
+          <span>2023-06-14</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,7 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -170,38 +170,32 @@
         
         
         
-          <h2 id="원형-화살표-도식만들기">원형 화살표 도식만들기</h2>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/01.png" alt="myimg"></p>
+          <h2 id="텍스트단어-수-세기">텍스트(단어) 수 세기</h2>
+<p>아래와 같이 대상 텍스트들이 엉망징창으로 적혀 있는 테이블이 있을 때, 찾고싶은 텍스트(여기서는 과일)이 있다. 찾는 과일의 이름이 몇번이나 들어갔는지 찾아 보자. 당연히 여러가지 방법이 있지만, (내가) 주로 쓰는 방법 한가지만 적어본다.<br>
+우선 3번행에 대해서만, 하나씩 풀어서 생각해 보면, 다음과 같다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01884/01.png" alt="myimg"></p>
 <br>
 <br>
-<p>가이드 라인을 기준으로 정사각형 모양에, 원을 4개 배치해줍니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/02.png" alt="myimg"></p>
+<p class="text-box">ⓐ A3 셀의 전체 글자수는 11이다. <code>=LEN(A3)</code><br>
+ⓑ A3 셀에서 &lsquo;찾는과일&rsquo;(B3) 셀의 텍스트를 제외한 글자수는 9이다. <code>=LEN(SUBSTITUTE(A3,B3,&quot;&quot;))</code><br>
+ⓐ 에서 ⓑ를 빼주면, 2이고, 이는 &lsquo;찾는과일&rsquo;의 텍스트가 포함된 만큼의 글자수이다. <code>=C3-D3</code></p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01884/02.png" alt="myimg"></p>
 <br>
 <br>
-<p>기본 도형에서 원호를 선택해줍니다. 원으로 해도 되지만 좀 더 쉬운 방법을 사용합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/03.png" alt="myimg"></p>
+<p>대상텍스트에서 찾는 과일의 글자수를 찾는과일 이름의 글자수로 나눠주면, 찾는 과일 수가 나오게 된다.</p>
+<p class="text-box">=E3/LEN(B3)</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01884/03.png" alt="myimg"></p>
 <br>
 <br>
-<p>정사각형 크기에 맞춰 원호를 그려주면 1/4 크기의 원호가 생성됩니다. 눈치가 빠르다면 다음 스탭은 그냥 하실 수 있을 것입니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/04.png" alt="myimg"></p>
+<p>이제 대상텍스트 열 전체에 대하여, 해당 수식을 붙여서 쓰면 아래와 같다.</p>
+<p class="text-box">=SUMPRODUCT(LEN($A$3:$A$6)-LEN(SUBSTITUTE($A$3:$A$6,C2,&quot;&quot;)))/LEN(C2)</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01884/04.png" alt="myimg"></p>
 <br>
 <br>
-<p>노란색 핸들을 적당히 원의 크기에 맞추어 줄여주고, 필요하다면 화살표를 넣어줍니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/05.png" alt="myimg"></p>
-<br>
-<br>
-<p>원호를 4개 복사해서 동일한 작업을 반복해 줍니다. 이 때 원호는 모두 동일한 위치에 위치합니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/06.png" alt="myimg"></p>
-<br>
-<br>
-<p>이제 원의 디자인을 해주면 끝입니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/07.png" alt="myimg"></p>
-<br>
-<br>
-<p>아래 그림처럼 원호와 원을 회전시켜 원하는 방향에 맞춰 사용할 수 있습니다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/08.png" alt="myimg"></p>
-<br>
-<br>
+<p>별건 없지만, 처음 생각할때 곰곰히 생각할 필요는 있다.</p>
 <p>끝.</p>
 
         
