@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>flutter - Google API key 감추기 | shaaaaallow dive</title>
+    <title>xls - 자동필터 전체 한방에 해제하기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/03999/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01879/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>flutter - Google API key 감추기</h1>
+      <h1>xls - 자동필터 전체 한방에 해제하기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-12-22</span>
+          <span>2023-08-07</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,12 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
+                <a class="chip chip--tag" href="/tag/vba/">#vba</a>
               
             
               
               
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
               
             
           
@@ -175,42 +175,29 @@
         
         
         
-          <h2 id="보안-문제">보안 문제</h2>
-<p>개인적으로 DB를 사용하기 부담이 되는 경우가 많아 <code>Google Sheets API</code>를 자주 사용하곤 하는데, 최근 웹퍼블리싱을 하는 경우, 개발자 모드에서 나의 <code>API key</code>가 그대로 노출이 된다는 사실을 알게 되었다.</p>
-<p>알게 되서 다행이다 라는 생각보다는&hellip; 아놔 귀찮다&hellip; 라는 생각이 먼저 드는건 왜일까..</p>
+          <h2 id="자동필터-전체-한방에-해제하기">자동필터 전체 한방에 해제하기</h2>
+<p>자동필터를 푸는 단축키는 ALT → A → C 이다. 사실 오피스 프로그램의 연속으로 키를 누르는 단축키는 몇년이 지나도 익숙해 지지 않는다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01879/01.jpg" alt="myimg"></p>
 <br>
 <br>
-<h2 id="env">.env</h2>
-<p>뭐 대단한 정보를 가지고 있거나, 처리하지는 않겠지만, 그래도 몰랐으면 모를까.. 이미 알게 되었었으니, 그 중 가장 간단한 방법을 선택하여 처리를 해본다.</p>
-<p>이게 맞는지 모르겠지만, <code>.env</code> 파일을 생성하고, 플러터의 <code>dot_env</code> 패키지를 사용해서 파일을 읽으면 끝이다. 정상작동까지는 확인했지만, 보안이란게 그렇지 않은가?</p>
-<p>완벽한 방법은 없다.</p>
-<br>
-<br>
-<h2 id="env-파일-구성">.env 파일 구성</h2>
-<p>의외의 어려움은 .env 파일을 구성할 때 나타났는데, <code>API key</code> 에는 <code>\n</code>을 처리해야하는 부분이 있는데, <code>json</code> 구성과 <code>.env</code> 파일 구성은 chatGPT에게 템플릿을 만들어 달라고 하는 것이 여러모로 안전하다.</p>
-<p><code>.dart file</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> cremap <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;type&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;project_id&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;project_id&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;private_key_id&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;private_key_id&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;private_key&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;private_key&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;client_email&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;client_email&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;client_id&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;client_id&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;auth_uri&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;auth_uri&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;token_uri&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;token_uri&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;auth_provider_x509_cert_url&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;auth_provider_x509_cert_url&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;client_x509_cert_url&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;client_x509_cert_url&#34;</span>),
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;universe_domain&#34;</span><span style="color:#f92672">:</span> dotenv.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;universe_domain&#34;</span>)
-</span></span><span style="display:flex;"><span>};
+<p>VBA로 버튼을 만들어 두면 나름 편하게 써먹을 수 있다. 특히, 여러 열에서 필터를 걸어놨을 때 유용하다. 물론, 리본메뉴를 찾아 누르는 과정과 크게 다르지 않을지 모른다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">clearFilter</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> cremapJson <span style="color:#f92672">=</span> jsonEncode(cremap);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">final</span> gsheets <span style="color:#f92672">=</span> GSheets(cremapJson);
-</span></span></code></pre></div><p><code>.env file</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>type <span style="color:#f92672">=</span> service_account
-</span></span><span style="display:flex;"><span>private_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-----BEGIN PRIVATE KEY-----</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">MI</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&#39; [with Table] Does not work where active cell is out of Tables.
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>    ActiveSheet.ShowAllData
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> Err_Check
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Err_Check:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Err.Number <span style="color:#f92672">&lt;&gt;</span> 0 <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;오류번호 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Number <span style="color:#f92672">&amp;</span> vbCr <span style="color:#f92672">&amp;</span> _
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;오류내용 : &#34;</span> <span style="color:#f92672">&amp;</span> Err.Description, vbCritical, <span style="color:#e6db74">&#34;오류&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <br>
-<p>딱히 특별한 것은 없다.</p>
+<p>자동필터를 자주 사용한다면 한번 고려해볼법하다.</p>
 <p>끝.</p>
 
         
@@ -246,53 +233,53 @@
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-10-20</span>
-                <a href="/post/03995_en/">android - Rust instead of c&#43;&#43;</a>
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
           </div>
