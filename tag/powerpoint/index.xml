@@ -51,6 +51,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - ppt파일에 포함된 이미지 최적화 추출</title>
+      <link>https://mcjoi.github.io/post/01886/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01886/</guid>
+      <description>&lt;h2 id=&#34;ppt파일에-포함된-이미지&#34;&gt;ppt파일에 포함된 이미지&lt;/h2&gt;&#xA;&lt;p&gt;는 원본 그대로 살려내는 것이 불가능하다. 간단한 테스트를 해보자, 아래와 같은 속성을 가진 이미지가 있다. 약 10MB정도. 6000x4000 사이즈이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;ppt 안에 복사/붙여넣기를 한다. 사이즈는 당연히 ppt 문서 사이즈로 붙게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그냥-복사붙여넣기&#34;&gt;그냥 복사/붙여넣기&lt;/h2&gt;&#xA;&lt;p&gt;해당 이미지를 복사/붙여넣기로 이미지 프로그램에 붙여넣기를 해보면, 1688x1125 사이즈로 이미 변한 걸 알 수 있다. 문서 사이즈가 반영된 듯하다. 화질에도 열화가 있을 것으로 예상된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그림으로-저장&#34;&gt;그림으로 저장&lt;/h2&gt;&#xA;&lt;p&gt;흔히 사용하는 방법인 마우스 우클릭의 context menu에 있는 그림으로 저장 기능으로 저장해본다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - pixel을 cm로 바꾸기, 4:3 / 16:9 화면 비율 맞추기</title>
       <link>https://mcjoi.github.io/post/01891/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
