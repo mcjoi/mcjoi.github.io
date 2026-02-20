@@ -114,6 +114,13 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 구글시트 - 다른 파일의 데이터 참조하기(query, importrange)</title>
+      <link>https://mcjoi.github.io/post/01868/</link>
+      <pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01868/</guid>
+      <description>&lt;h2 id=&#34;구글시트---다른-파일의-데이터-참조하기query-importrange&#34;&gt;구글시트 - 다른 파일의 데이터 참조하기(query, importrange)&lt;/h2&gt;&#xA;&lt;p&gt;구글시트는 기본적으로 구글 드라이브에 모든 파일이 저장되어있다. 다른 파일이나 영역을 참조해서 데이터를 불러올때는 어떻게 해야할까?&lt;/p&gt;&#xA;&lt;p&gt;인원현황4, 인원현황5 두 개의 파일(워크북)을 구글 드라이브에서 생성했다고 가정을 하자. 인원현황4 파일에서 인원현황5의 특정 영역이나, 테이블을 참조해서 사용하고자 한다. 가장 먼저 해야할 일을 파일의 경로(url)을 알아야 할 것이다.&lt;br&gt;&#xA;기본적으로 워크북을 켜면 수정(edit)모드에 있고, 아래와 같은 주소가 브라우저에 표기가 될 것이다.&lt;br&gt;&#xA;/edit 이전 url이 해당 문서의 경로(url) 되시겠다.&lt;br&gt;&#xA;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0&#34;&gt;https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0&lt;/a&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;다른 워크북에서의 영역 참조시 importrange 함수를 사용할 수 있다. 구글 시트의 또 다른 강점인 실시간 example을 보면 아주 친절하게 나와있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 범위 안에 빈 행이 있을 때, 모든 값 자동필터 걸기</title>
       <link>https://mcjoi.github.io/post/01871/</link>
       <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>

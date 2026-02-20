@@ -324,6 +324,13 @@
       <description>&lt;h2 id=&#34;줄간격&#34;&gt;줄간격&lt;/h2&gt;&#xA;&lt;p&gt;이와 관련된 용어나 단어가 많은데, 그냥 내맘대로 정의하고 적었음을 미리 밝힌다. 파워포인트의 글 상자에서 행간의 줄간격을 여느 워드프로그램처럼 두가지 유형이 있다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;line : 글 상자의 끝까지 와서, 다음 줄로 내려갔거나, Shift + Enter를 친 상태&lt;/li&gt;&#xA;&lt;li&gt;paragraph : 문단으로 그냥 Enter 친 상태&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;파워포인트는 워드프로그램처럼 공간이 정형화되어있지 않아서, 이에 대한 다양한 방법이 있을 수 있다. 글상자를 마치 문단처럼 배치를 할 수도 있고, 글상자 안에서 줄간격을 설정해줄 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;개인적으로는 Enter를 두번 친 다음 빈공간의 폰트크기를 조절해서 사용하는 방법을 선호한다. 그 이유는 폰트크기를 늘렸다 줄였다 하면서, 직관적으로 줄간격이 적당한지 바로 확인이 가능하기 때문이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 구글시트 - 다른 파일의 데이터 참조하기(query, importrange)</title>
+      <link>https://mcjoi.github.io/post/01868/</link>
+      <pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01868/</guid>
+      <description>&lt;h2 id=&#34;구글시트---다른-파일의-데이터-참조하기query-importrange&#34;&gt;구글시트 - 다른 파일의 데이터 참조하기(query, importrange)&lt;/h2&gt;&#xA;&lt;p&gt;구글시트는 기본적으로 구글 드라이브에 모든 파일이 저장되어있다. 다른 파일이나 영역을 참조해서 데이터를 불러올때는 어떻게 해야할까?&lt;/p&gt;&#xA;&lt;p&gt;인원현황4, 인원현황5 두 개의 파일(워크북)을 구글 드라이브에서 생성했다고 가정을 하자. 인원현황4 파일에서 인원현황5의 특정 영역이나, 테이블을 참조해서 사용하고자 한다. 가장 먼저 해야할 일을 파일의 경로(url)을 알아야 할 것이다.&lt;br&gt;&#xA;기본적으로 워크북을 켜면 수정(edit)모드에 있고, 아래와 같은 주소가 브라우저에 표기가 될 것이다.&lt;br&gt;&#xA;/edit 이전 url이 해당 문서의 경로(url) 되시겠다.&lt;br&gt;&#xA;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0&#34;&gt;https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0&lt;/a&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;다른 워크북에서의 영역 참조시 importrange 함수를 사용할 수 있다. 구글 시트의 또 다른 강점인 실시간 example을 보면 아주 친절하게 나와있다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 도형 위치 정렬하기 - 기준 도형의 밑으로 붙여서 정렬</title>
       <link>https://mcjoi.github.io/post/01869/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
