@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>flutter - Exif Frame | shaaaaallow dive</title>
+    <title>ppt - 이미지 최적화 - webp 불러오기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/03996_en/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01861/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -128,12 +128,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>flutter - Exif Frame</h1>
+      <h1>ppt - 이미지 최적화 - webp 불러오기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2025-10-20</span>
+          <span>2025-01-20</span>
           
         </div>
         <div class="post-meta-tags">
@@ -144,12 +144,7 @@
             
               
               
-                <a class="chip chip--tag" href="/tag/windows/">#windows</a>
-              
-            
-              
-              
-                <a class="chip chip--tag" href="/tag/flutter/">#flutter</a>
+                <a class="chip chip--tag" href="/tag/powerpoint/">#powerpoint</a>
               
             
           
@@ -175,71 +170,24 @@
         
         
         
-          <h2 id="exif-information">Exif information</h2>
-<p>If you&rsquo;ve ever tried to print EXIF info onto photos, you&rsquo;ve probably seen this service.</p>
-<a class="btn-link" href="https://exif-frame.yuru.cam/" target="_blank" rel="noopener noreferrer">exif-frame</a>
-<p>The workflow is simple and the output quality is great.<br>
-Even if you don&rsquo;t know the site, you&rsquo;ve likely seen similar results.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/01.webp" alt="img"></p>
+          <h2 id="이미지-최적화---webp-불러오기">이미지 최적화 - webp 불러오기</h2>
+<p>무심결에 파워포인트에 이미지를 넣다보면 7~80메가가 넘나드는 경우는 다반사이다. 파워포인트는 용지사이즈에 따라서 일부 압축을 하지만 왠만한 크기의 원본 이미지를 가지고 있게 되고, 강제 압축을 했을때, 어마어마하게 이미지 퀄리티가 떨어지는 것을 볼 수 있다.</p>
+<p>차세대 이미지 파일인 webp를 사용하면 좀 나아질까?</p>
+<p>webp 방식과 jpg 원본을 각각 배경이미지로 사용한 상태이다. 대충 봐도 알겠지만, 퀄리티 차이는 나지만, 어마무시한 차이는 아님을 알 수 있다.</p>
+<p align="center"><code> 왼쪽이 원본 jpg, 우측이 webp </code></p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01861/01.webp" alt="myimg"></p>
 <br>
 <br>
-<p>You can tell they paid a lot of attention to layout.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/02.webp" alt="img"></p>
+<p>용량을 보면 아래와 같이 다소 차이는 나지만, 이 또한 어마무시한 차이는 아니고, 작다면 작고, 크다면 크다 할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01861/02.webp" alt="myimg"></p>
 <br>
 <br>
-<h2 id="flutter-migration">Flutter migration</h2>
-<p>I made a Flutter app inspired by it, keeping only the info I wanted.<br>
-I realized how many details a service like this actually needs.<br>
-It&rsquo;s not perfect, but I can always customize it later.<br>
-Camera brand logos are? annoying.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/03.png" alt="img"></p>
+<p>webp파일을 불러오는 방식은 최신의 파워포인트는 잘 모르겠는데, 2019 기준으로 insert(삽입) &gt; pictures(사진? 그림?) 한 다음에, 모든 파일을 선택해줘야 webp 확장자를 가진 파일이 보인다. 절대로 드래그&amp;드랍으로 이미지를 넣으면 안된다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01861/03.webp" alt="myimg"></p>
 <br>
 <br>
-<p>I forced sizes to fit my blog style, and adjusted text to work for both landscape and portrait.<br>
-Good enough for me.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/04.png" alt="img"></p>
-<br>
-<br>
-<p>For portrait photos, I fixed the width to 500px.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/05.png" alt="img"></p>
-<br>
-<br>
-<p>Text felt a bit large, so I reduced letter spacing and font size by 1pt.<br>
-It looks better now.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/06.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/07.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/08.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/09.png" alt="img"></p>
-<br>
-<br>
-<p>Testing an action cam. I could parse ACTION4 as the device name,<br>
-But the fields differ, and the captured date seems off. I&rsquo;ll check later.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/10.png" alt="img"></p>
-<br>
-<br>
-<p>Tried forcing a Nikon logo too. It doesn&rsquo;t look as good as Sony, obviously.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/11.png" alt="img"></p>
-<br>
-<br>
-<p>And a smartphone test. How long will I keep the Galaxy S9?</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/12.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/13.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/14.png" alt="img"></p>
-<br>
-<br>
-<p>The program is as simple as possible? no fancy UI.</p>
-<p class="text-box">✶ Select the exiftool path and an image folder on the left.<br>
-✶ Pick an image to preview, choose a format, then export.<br>
-✶ I wanted webp support, but the image package still can&rsquo;t handle webp cleanly.<br>
-✶I considered running cwebp separately, but stopped because I can&rsquo;t fix webp color shifts yet.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/15.webp" alt="img"></p>
-<br>
-<br>
-<p>It&rsquo;s a bit pointless since I only have one lens left?<br>
-That&rsquo;s it for today&rsquo;s digging.</p>
-<p>Download here:</p>
-<a class="btn-link" href="https://github.com/mcjoi/_dev_factory/tree/main/diy_exif" target="_blank" rel="noopener noreferrer">exif_frame</a>
-<p>end.</p>
+<p>인코딩과 불러오기 때문에 다소 귀찮음은 발생하지만, 용량을 줄일 필요가 있다면 고려해볼만 하다.</p>
+<p>끝.</p>
 
         
       </div>
@@ -274,53 +222,53 @@ That&rsquo;s it for today&rsquo;s digging.</p>
           <div class="related-posts-items">
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/03994/">android - 영단어 플래시 카드 &#43; papago</a>
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
               </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/02996/">windows - 오피스 파일 열지않고 pdf로 변환하기</a>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999/">flutter - Google API key 감추기</a>
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03999_en/">flutter - Hiding Google API keys</a>
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997_en/">windows - Desktop Shortcut</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03998_en/">windows - Mouse Click Animation</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02999/">windows - PDF에서 테이블 추출하기</a>
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02997/">windows - Webp 변환 유틸</a>
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
               <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/03997/">windows - 바탕화면 바로가기 모음</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-22</span>
-                <a href="/post/02998/">windows - 확장자별 폴더생성, 이동</a>
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
           </div>
