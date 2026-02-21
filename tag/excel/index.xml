@@ -114,6 +114,13 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 텍스트(항목/내용) 분리하기(텍스트 슬라이싱)</title>
+      <link>https://mcjoi.github.io/post/01859/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01859/</guid>
+      <description>&lt;h2 id=&#34;텍스트항목내용-분리하기텍스트-슬라이싱&#34;&gt;텍스트(항목/내용) 분리하기(텍스트 슬라이싱)&lt;/h2&gt;&#xA;&lt;p&gt;테이블이 아래와 같이, 항목과 내용이 같은 셀에 들어 있을 때,&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래처럼 분리하는 방법을 생각해 보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;위의 예시같은 비교적 정상적으로 분리되어있는 케이스는 많지 않기 때문에, 실제 다양한 방법으로 전처리를 진행해야하지만, 본 글은 예시이므로, 비교적 가장 쉽게 접근할 수 있는 방법을 사용해 본다.&lt;/p&gt;&#xA;&lt;p&gt;위의 샘플에서는 왼쪽에서 시작되어, 스페이스가 두번 이상 떨어진 곳 이전까지, 분리를 해주면 된다. 아래 수식으로 간단하게 처리할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;대상 : ExifTool Version Number         : 13.12&lt;br&gt;&#xA;=LEFT([대상셀],SEARCH(&amp;quot;  &amp;quot;,[대상셀])-1)&lt;br&gt;&#xA;결과 : ExifTool Version Number&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</title>
       <link>https://mcjoi.github.io/post/01860/</link>
       <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>

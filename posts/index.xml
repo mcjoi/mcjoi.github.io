@@ -310,11 +310,32 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ppt - 리본메뉴 XML로 만들기 - 오피스2019</title>
+      <link>https://mcjoi.github.io/post/01857/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01857/</guid>
+      <description>&lt;h2 id=&#34;리본메뉴-xml로-만들기---오피스2019&#34;&gt;리본메뉴 XML로 만들기 - 오피스2019&lt;/h2&gt;&#xA;&lt;p&gt;리본메뉴는 VBA로도 충분히 만들 수 있는데, 내가 발견한 문제는 다음과 같다. 당연히 실력이 있는 누군가에게는 해결책이 있을 것이다. 단지 코드를 복잡하게 늘리고 싶지 않다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;탭의 이름이 무조건 추가기능(add-in)이다.&lt;/li&gt;&#xA;&lt;li&gt;그룹이 &amp;lsquo;Menu Commands&amp;rsquo; 하나로 고정이다.&lt;/li&gt;&#xA;&lt;li&gt;아이콘을 FaceId 중에 골라서 선택해야한다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;바꿔 말하면, 위의 문제가 아니라면, 그냥 써도 무방하다는 뜻이다. 사실 사용상 전혀 문제가 되지 않을 문제들이다.&lt;br&gt;&#xA;내가 사용한 방법은 auto_open() 과 auto_close() 프로시저를 사용해 아래와 같이 입력한 것이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 동일한 너비의 도형으로 페이지 분할하기</title>
       <link>https://mcjoi.github.io/post/01990/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01990/</guid>
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 아이콘으로 SVG 파일 사용하기</title>
+      <link>https://mcjoi.github.io/post/01858/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01858/</guid>
+      <description>&lt;h2 id=&#34;아이콘으로-svg-파일-사용하기&#34;&gt;아이콘으로 SVG 파일 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;적어도 2019버전의 파워포인트에서는 벡터를 일부 사용은 가능한데, 일러스트레이터처럼 자유자재로 그리는 것은 어렵고, 온라인에서 받은 소스를 가지고 원하는 정도의 편집은 가능해보인다.&lt;/p&gt;&#xA;&lt;p&gt;무료 SVG 아이콘을 다운받는 사이트는 워낙 많이 있으니, 특별히 거론하지는 않기로 한다.&lt;br&gt;&#xA;SVG 파일을 받았다면, 파워포인트로 드래그앤드랍을 해주면 끝이다&amp;hellip;&amp;hellip;. 가 아니고, 이제부터 시작이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;픽토그램을 문서에서 사용할때, 색을 변경하는 것은 상당히 귀찮은 일인데, SVG 파일의 장점은 컬러 변경이 자유롭다는 것에 있다. 불러온 파일을 &lt;code&gt;그룹해제&lt;/code&gt;해준다. 경고창이 뜨면 yes를 골라주고, 다시한번 그룹해제를 해주면 아래와 같이 분리가 가능하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 텍스트(항목/내용) 분리하기(텍스트 슬라이싱)</title>
+      <link>https://mcjoi.github.io/post/01859/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01859/</guid>
+      <description>&lt;h2 id=&#34;텍스트항목내용-분리하기텍스트-슬라이싱&#34;&gt;텍스트(항목/내용) 분리하기(텍스트 슬라이싱)&lt;/h2&gt;&#xA;&lt;p&gt;테이블이 아래와 같이, 항목과 내용이 같은 셀에 들어 있을 때,&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아래처럼 분리하는 방법을 생각해 보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;위의 예시같은 비교적 정상적으로 분리되어있는 케이스는 많지 않기 때문에, 실제 다양한 방법으로 전처리를 진행해야하지만, 본 글은 예시이므로, 비교적 가장 쉽게 접근할 수 있는 방법을 사용해 본다.&lt;/p&gt;&#xA;&lt;p&gt;위의 샘플에서는 왼쪽에서 시작되어, 스페이스가 두번 이상 떨어진 곳 이전까지, 분리를 해주면 된다. 아래 수식으로 간단하게 처리할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;대상 : ExifTool Version Number         : 13.12&lt;br&gt;&#xA;=LEFT([대상셀],SEARCH(&amp;quot;  &amp;quot;,[대상셀])-1)&lt;br&gt;&#xA;결과 : ExifTool Version Number&lt;/p&gt;</description>
     </item>
     <item>
       <title>xls - 사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기</title>
