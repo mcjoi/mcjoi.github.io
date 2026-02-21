@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outlook on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/outlook/</link>
+    <description>Recent content in Outlook on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 12 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/outlook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>outlook - eml 파일 아웃룩으로 IMPORT 하기</title>
+      <link>https://mcjoi.github.io/post/01854/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01854/</guid>
+      <description>&lt;h2 id=&#34;eml-파일-아웃룩으로-import-하기&#34;&gt;eml 파일 아웃룩으로 IMPORT 하기&lt;/h2&gt;&#xA;&lt;p&gt;다수의 메일을 백업할 때, &lt;code&gt;.eml&lt;/code&gt;파일로 저장이 되면, 일일이 노가다로 넣는 수밖에 없다. (고 알고 있다. 애초에 아웃룩 설정을 잘 했어야 하는데..) 수고를 덜기 위해 구글을 뒤적이다가 관련 outlook 스크립트를 찾게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.howto-outlook.com/howto/import-eml-files.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Importing eml-files&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;대략 내용을 보면, &lt;code&gt;.eml&lt;/code&gt;파일을 순차적으로 오픈해서 저장하는 과정을 스크립트로 해놓았을 뿐, 다른 무언가가 있어 보이지는 않는다. 따라서, 일일이 오픈하는 시간이 다소 소요된다. 디바이스마다 &lt;code&gt;.eml&lt;/code&gt;파일이 열리는 속도가 다르므로, 때에 따라 코드내의 &lt;code&gt;sleep&lt;/code&gt; 값을 적정하게 맞춰주라고 적혀있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
