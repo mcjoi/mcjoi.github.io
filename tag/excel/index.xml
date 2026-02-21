@@ -205,6 +205,13 @@
       <description>&lt;h2 id=&#34;테이블표-영역-선택해서-이름정의로-사용하기&#34;&gt;테이블(표) 영역 선택해서, 이름정의로 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;데이터 시트의 경우, 영역(range)으로 사용하는 것보다 테이블(표)로 사용하는 경우 장점이 있다.&lt;br&gt;&#xA;첫번째는 최하단에 데이터를 추가했을때 연결되는 수식에서 동적으로 추가된다는 것이고,&lt;br&gt;&#xA;두번째는 데이터가 좀 늘어나면, 엑셀이 힘겨워하는 경우를 심심치 않게 볼 수 있는데, 이를 좀 더 완화할 수 있을 것이라는 기대감이 있다. 즉, 확실치가 않다.&lt;/p&gt;&#xA;&lt;p&gt;각설하고, 주어진 상황은 아래와 같다.&lt;br&gt;&#xA;데이터 시트가 있고, 이를 배열 함수로 요약하는 시트가 여러장 있었다. 나 역시도 귀찮아서, 테이블 대신 주로 영역으로 사용하고 있었는데, 어느순간, 계산 중이라는 프로그래스바가 생긴다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</title>
+      <link>https://mcjoi.github.io/post/01852/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01852/</guid>
+      <description>&lt;h2 id=&#34;중복값-없애고-텍스트-목록-가로로-이어붙이기&#34;&gt;중복값 없애고, 텍스트 목록 가로로 이어붙이기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같은 테이블이 있을때, 우측의 테이블에 차종을 하나, 브랜드 이름을 현대/기아&amp;hellip;. 이런식으로 나열을 하고 싶다. 차종은 추가될때 마다 자동으로 들어가게 하고 싶다. 당신의 선택은 무엇인가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01852/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;중복값-없애고-동적으로-값-등록하기&#34;&gt;중복값 없애고 동적으로 값 등록하기&lt;/h2&gt;&#xA;&lt;p&gt;편하긴 한데, 잘 안쓰게 되는 방법이긴 하다. 원리는 간단한데, 이미 등록된 행들에 같은 값이 있으면, 스킵을 하고, 처음 나오는 값을 등록하는 것이다. COUNTIF 함수에서 찾는 대상을 동적으로 설정하는게 핵심이다. 표 사이에 새로운 값이 들어와도 처리가 가능하다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</title>
       <link>https://mcjoi.github.io/post/01881/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>

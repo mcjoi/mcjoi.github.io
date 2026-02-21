@@ -534,6 +534,13 @@
       <description>&lt;h2 id=&#34;sheets로-이미지-url의-exif-정보-얻어내기&#34;&gt;sheets로 이미지 URL의 EXIF 정보 얻어내기&lt;/h2&gt;&#xA;&lt;p&gt;아래 그림처럼 플러터에서 이미지를 띄워주고, 하단에 EXIF 정보를 표기하고 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01853/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;DB를 Sheets에 저장했다. 즉, 이미지는 별도의 웹에 올려져 있고, 이미지 경로만 있는 셈이다.&lt;/p&gt;&#xA;&lt;p&gt;EXIF 정보를 보기하는 방법은 두가지로, 플러터에서 이미지를 호출, bytecode로 변환, EXIF 정보추출하는 방법과 Sheets에서 미리 EXIF 정보를 추출 각 컬럼에 정보를 기재하는 방식이다.&lt;/p&gt;&#xA;&lt;p&gt;플러터에서 추출하는 첫번째 방법은 이미지를 호출하는 것과 맞물려서, 퍼포먼스에 악영향을 줄 것이기 때문에 배제가 되었다. 두번째 방법은 Sheets의 appscript를 활용하여, EXIF 정보를 받아오는 방식으로 사전에 한번만 해놓으면 DB에 값이 들어가기 때문에, 플러터 앱 구동 시점에 무리가 전혀 없을 것이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</title>
+      <link>https://mcjoi.github.io/post/01852/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01852/</guid>
+      <description>&lt;h2 id=&#34;중복값-없애고-텍스트-목록-가로로-이어붙이기&#34;&gt;중복값 없애고, 텍스트 목록 가로로 이어붙이기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같은 테이블이 있을때, 우측의 테이블에 차종을 하나, 브랜드 이름을 현대/기아&amp;hellip;. 이런식으로 나열을 하고 싶다. 차종은 추가될때 마다 자동으로 들어가게 하고 싶다. 당신의 선택은 무엇인가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01852/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;중복값-없애고-동적으로-값-등록하기&#34;&gt;중복값 없애고 동적으로 값 등록하기&lt;/h2&gt;&#xA;&lt;p&gt;편하긴 한데, 잘 안쓰게 되는 방법이긴 하다. 원리는 간단한데, 이미 등록된 행들에 같은 값이 있으면, 스킵을 하고, 처음 나오는 값을 등록하는 것이다. COUNTIF 함수에서 찾는 대상을 동적으로 설정하는게 핵심이다. 표 사이에 새로운 값이 들어와도 처리가 가능하다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</title>
       <link>https://mcjoi.github.io/post/01881/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>

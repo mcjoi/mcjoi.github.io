@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>마파두부 | shaaaaallow dive</title>
+    <title>xls - 중복값 없애고, 텍스트 목록 가로로 이어붙이기 | shaaaaallow dive</title>
     <meta name="description" content="shaaaaallow dive" />
-    <link rel="canonical" href="https://mcjoi.github.io/gallery/food/f_002/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01852/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -132,15 +132,25 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>마파두부</h1>
+      <h1>xls - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2026-01-18</span>
+          <span>2023-07-24</span>
           
         </div>
         <div class="post-meta-tags">
+          
+            
+            
+            
+            
+              
+              
+                <a class="chip chip--tag" href="/tag/excel/">#excel</a>
+              
+            
           
         </div>
       </div>
@@ -164,7 +174,29 @@
         
         
         
-          
+          <h2 id="중복값-없애고-텍스트-목록-가로로-이어붙이기">중복값 없애고, 텍스트 목록 가로로 이어붙이기</h2>
+<p>아래와 같은 테이블이 있을때, 우측의 테이블에 차종을 하나, 브랜드 이름을 현대/기아&hellip;. 이런식으로 나열을 하고 싶다. 차종은 추가될때 마다 자동으로 들어가게 하고 싶다. 당신의 선택은 무엇인가?</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01852/01.png" alt="myimg"></p>
+<br>
+<br>
+<h2 id="중복값-없애고-동적으로-값-등록하기">중복값 없애고 동적으로 값 등록하기</h2>
+<p>편하긴 한데, 잘 안쓰게 되는 방법이긴 하다. 원리는 간단한데, 이미 등록된 행들에 같은 값이 있으면, 스킵을 하고, 처음 나오는 값을 등록하는 것이다. COUNTIF 함수에서 찾는 대상을 동적으로 설정하는게 핵심이다. 표 사이에 새로운 값이 들어와도 처리가 가능하다.</p>
+<p>IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면, &ldquo;-&rdquo; 처리해준다. 실제로는 #N/A 에러가 뜰것이다.</p>
+<p class="text-box">{=IFERROR(INDEX($B$3:$B$15,MATCH(0,COUNTIF($E$2:E2,$B$3:$B$15),0)),&quot;-&quot;)}</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01852/02.png" alt="myimg"></p>
+<br>
+<br>
+<h2 id="조건에-따라-텍스트-이어주기">조건에 따라 텍스트 이어주기</h2>
+<p>TEXTJOIN함수에서 TEXT부분에 IF문으로 조건을 걸어주고, 배열수식 처리를 해주면 된다.</p>
+<p class="text-box">{=TEXTJOIN(&quot;/&quot;,TRUE,IF($B$3:$B$15=K3,$C$3:$C$15,&quot;&quot;))}</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01852/03.png" alt="myimg"></p>
+<br>
+<br>
+<p>자주 쓰지 않아서, 기억은 가물가물하지만, 언젠가는 유용하게 써먹을 날이 오겠지.</p>
+<p>끝.</p>
+
         
       </div>
 
@@ -183,6 +215,73 @@
     </div>
 
     
+    
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-14</span>
+                <a href="/post/00991/">xls - 사용자정의 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
+              </div>
+            
+          </div>
+        </section>
+      
     
 
   </article>
