@@ -904,5 +904,12 @@
       <guid>https://mcjoi.github.io/post/00989/</guid>
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;엑셀 최상단에 있는 기능 모음. 그것의 정식 명칭은 &lt;code&gt;quick access toolbar&lt;/code&gt; 이다.&lt;br&gt;&#xA;단축키로 지정되지 않은 몇몇 기능들을 올려두면 매우 편하게 사용할수 있는데,&lt;br&gt;&#xA;해당 기능은 아이콘 순서대로 &lt;code&gt;alt + 1&lt;/code&gt; , &lt;code&gt;alt + 2&lt;/code&gt; &amp;hellip;. 단축키를 사용할 수 있다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;엑셀 리본메뉴 기능 중에서 아마 가장 많이 사용되는 버튼 중에 하나가 셀 병합 기능(병합하고 가운데 맞춤)이 아닐까 한다.&lt;/p&gt;&#xA;&lt;p&gt;왜냐면&amp;hellip; 단축키가 없기 때문이다.&lt;br&gt;&#xA;쓸때마다 마우스를 쓰기에도 홈탭으로 이동하는건 매우 귀찮은 일이고, 위치도 상당히 애매하다 ㅋㅋㅋ&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>xls - 짜증나는 엑셀 첫 화면 서식보기 시작화면 보기 기능 없애기</title>
+      <link>https://mcjoi.github.io/post/01856/</link>
+      <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01856/</guid>
+      <description>&lt;h2 id=&#34;짜증나는-엑셀-첫-화면-서식보기-시작화면-보기-기능-없애기&#34;&gt;짜증나는 엑셀 첫 화면 서식보기 시작화면 보기 기능 없애기&lt;/h2&gt;&#xA;&lt;p&gt;2013으로 바뀌면서 가장 적응하기 힘든 기능은 엑셀을 처음 켰을때 나타나는 서식 고르기 화면이다.&lt;/p&gt;&#xA;&lt;p&gt;몇개 켜보면 엄청난 내공에 놀랄 수 있다.&lt;br&gt;&#xA;MVP님들이 만들었을 것으로 예상되는 좋은 서식들이 가득하나 한번도 쓴적 없다.&lt;/p&gt;&#xA;&lt;p&gt;많은 분들이 이거 없애는거 모르는 거 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01856/1.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;없애자. 파일 &amp;gt; 옵션 메뉴를 클릭한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01856/2.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;맨 아래&lt;br&gt;&#xA;&amp;lsquo;이 응용프로그램을 시작할 때 시작화면 표시&amp;rsquo;&lt;br&gt;&#xA;옵션 체크박스를 해제한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01856/3.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;안나온다.&lt;br&gt;&#xA;가뜩이나 로딩 오래 걸리는데,&lt;br&gt;&#xA;1클릭이라도 건너뛰자.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
