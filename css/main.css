@@ -8,9 +8,7 @@
 
 @font-face {
   font-family: "Hack";
-  src: url("/fonts/Hack.woff2") format("woff2"),
-    url("/fonts/Hack.woff") format("woff"),
-    url("/fonts/Hack.ttf") format("truetype");
+  src: url("/fonts/Hack.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
