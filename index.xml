@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>xls - 사용자정의 셀스타일 편하게 설정하기</title>
+      <title>xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</title>
       <link>https://mcjoi.github.io/post/00991/</link>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00991/</guid>
-      <description>&lt;h2 id=&#34;사용자정의-표시형식&#34;&gt;사용자정의 표시형식&lt;/h2&gt;&#xA;&lt;p&gt;기존에는 몇가지 서식에 대하여, 매크로 버튼을 만들어 사용하고 있었다.&lt;br&gt;&#xA;불행하게도 이는 &lt;code&gt;TEXT&lt;/code&gt; 함수 안에 적용하기가 어려워&amp;hellip; 같은 셀 안에 두개의 서식을 사용하기가 어렵다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;+114&lt;br&gt;&#xA;(+2%)&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;TEXT&lt;/code&gt; 함수를 써서 간단하게 해결할 수 있기는 하지만, 매번 표시형식을 직접 적어주는 건 매우 귀찮은 일이다.&lt;br&gt;&#xA;이 문제를 해결하기 위해 몇 가지 방법을 고민해 보았다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;1-vba로-mdf-만들기&#34;&gt;#1 VBA로 MDF 만들기&lt;/h2&gt;&#xA;&lt;p&gt;자주 쓰는 서식을 몇가지 &lt;code&gt;MDF&lt;/code&gt; 로 저장해두고, 문자 값으로 반환하도록 하자.&lt;br&gt;&#xA;숫자를 천단위나, 백만단위 등으로 표기하거나, 퍼센트를 기재해주는 방식이다. 양수나 음수를 구분할수 있도록 적어뒀다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;셀서식-표시형식-셀스타일&#34;&gt;셀서식, 표시형식, 셀스타일&lt;/h2&gt;&#xA;&lt;p&gt;결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀서식(cell format, format cells)&lt;/li&gt;&#xA;&lt;li&gt;표시형식(number format)&lt;/li&gt;&#xA;&lt;li&gt;사용자정의 표시형식(custom number format)&lt;/li&gt;&#xA;&lt;li&gt;셀스타일(cell style)&lt;br&gt;&#xA; &lt;br&gt;&#xA;Cell Format (셀서식)&lt;br&gt;&#xA;├─ Number Format (표시형식)&lt;br&gt;&#xA;│    └─ Custom Number Format (사용자정의 표시형식)&lt;br&gt;&#xA;├─ Font&lt;br&gt;&#xA;├─ Border&lt;br&gt;&#xA;├─ Fill&lt;br&gt;&#xA;├─ Alignment&lt;br&gt;&#xA;└─ Protection&lt;br&gt;&#xA;Cell Styles (셀스타일)&lt;br&gt;&#xA;└─ Custom Cell Styles (사용자정의 셀스타일)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>빠바 치킨랩</title>
