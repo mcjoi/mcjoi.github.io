@@ -9,18 +9,18 @@
     <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/category/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>시그마 65mm or 삼양 75mm</title>
-      <link>https://mcjoi.github.io/post/05884/</link>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/05884/</guid>
-      <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두가지 중 나에게 맞는 화각은 무엇인가? 알수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>윈도우11 멀티태스킹 창조절 기능 끄기</title>
       <link>https://mcjoi.github.io/post/05883/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05883/</guid>
       <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;원래 있었는지, 업데이트에 새로 반영이 되었는지,창을 끌고 다닐때마다, 윈도우11 상단에 있는 멀티태스킹 바가 내려와서 상당히 귀찮다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;설정변경&#34;&gt;설정변경&lt;/h2&gt;&#xA;&lt;p&gt;윈도우 옵션에서 아래 기능을 off 해주면 해당 기능이 작동하지 않는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05883/01.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05883/02.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>적당한 화각이란..?(시그마 65mm vs 삼양 75mm)</title>
+      <link>https://mcjoi.github.io/post/05884/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05884/</guid>
+      <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두 가지 중 나에게 맞는 화각은 무엇인가? 알 수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>원하는 사이즈로 윈도우(창) 크기 조절</title>
@@ -51,7 +51,7 @@
       <description>&lt;h2 id=&#34;카메라-리모컨&#34;&gt;카메라 리모컨&lt;/h2&gt;&#xA;&lt;p&gt;액션캠이든 카메라이든 있어도 잘 쓰지 않는 액세서리 중 대표적인 것이 리모컨이 아닐까 싶다. 이게 참 이상한게 없으면 좀 또 그래..&lt;/p&gt;&#xA;&lt;p&gt;DSLR에서는 IR방식의 리모컨이 대부분이었고, 가격도 비교적 저렴해서 부담 없이 사용할 수 있었다. 하지만 미러리스로 넘어오면서 블루투스 방식으로 변경되었고, 연결 방식의 변화만큼 불편함도 함께 늘어났다.&lt;/p&gt;&#xA;&lt;p&gt;블루투스 연결 방식 특성상 연결까지 시간이 걸리고, 카메라에 리모컨을 따로 등록해야 하는 점도 상당히 번거롭다.그런데도 계속 이 방식으로 유지되는 이유는 잘 모르겠다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;jjc&#34;&gt;JJC&lt;/h2&gt;&#xA;&lt;p&gt;3세대 바디(A6100)를 사용할 때는 JJC 리모컨을 별문제 없이 사용했었다. 하지만 4세대 바디(A7C2)로 변경하니 리모컨 페어링이 제대로 되지 않았다. CR2032 배터리를 교체하는 비용까지 감수하면서 JJC 공식 페이지에서 관련 없는 질문까지 찾아보던 중, 이게 단순 불량이 아니라 세대 호환성 문제라는 걸 깨닫게 되었다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>블로그 이사(티스토리 → ?)</title>
+      <title>티스토리 블로그 이사에 적합한 서비스</title>
       <link>https://mcjoi.github.io/post/05998/</link>
       <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05998/</guid>

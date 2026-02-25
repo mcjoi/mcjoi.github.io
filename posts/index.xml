@@ -16,18 +16,18 @@
       <description>&lt;h2 id=&#34;셀서식-표시형식-셀스타일&#34;&gt;셀서식, 표시형식, 셀스타일&lt;/h2&gt;&#xA;&lt;p&gt;결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀서식(cell format, format cells)&lt;/li&gt;&#xA;&lt;li&gt;표시형식(number format)&lt;/li&gt;&#xA;&lt;li&gt;사용자정의 표시형식(custom number format)&lt;/li&gt;&#xA;&lt;li&gt;셀스타일(cell style)&lt;br&gt;&#xA; &lt;br&gt;&#xA;Cell Format (셀서식)&lt;br&gt;&#xA;├─ Number Format (표시형식)&lt;br&gt;&#xA;│    └─ Custom Number Format (사용자정의 표시형식)&lt;br&gt;&#xA;├─ Font&lt;br&gt;&#xA;├─ Border&lt;br&gt;&#xA;├─ Fill&lt;br&gt;&#xA;├─ Alignment&lt;br&gt;&#xA;└─ Protection&lt;br&gt;&#xA;Cell Styles (셀스타일)&lt;br&gt;&#xA;└─ Custom Cell Styles (사용자정의 셀스타일)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>시그마 65mm or 삼양 75mm</title>
-      <link>https://mcjoi.github.io/post/05884/</link>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/05884/</guid>
-      <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두가지 중 나에게 맞는 화각은 무엇인가? 알수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>윈도우11 멀티태스킹 창조절 기능 끄기</title>
       <link>https://mcjoi.github.io/post/05883/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05883/</guid>
       <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;원래 있었는지, 업데이트에 새로 반영이 되었는지,창을 끌고 다닐때마다, 윈도우11 상단에 있는 멀티태스킹 바가 내려와서 상당히 귀찮다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;설정변경&#34;&gt;설정변경&lt;/h2&gt;&#xA;&lt;p&gt;윈도우 옵션에서 아래 기능을 off 해주면 해당 기능이 작동하지 않는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05883/01.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05883/02.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>적당한 화각이란..?(시그마 65mm vs 삼양 75mm)</title>
+      <link>https://mcjoi.github.io/post/05884/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05884/</guid>
+      <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두 가지 중 나에게 맞는 화각은 무엇인가? 알 수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>android - 영단어 플래시 카드 &#43; papago</title>
@@ -128,7 +128,7 @@
       <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 특정영역을 카피해서 파워포인트에 붙이기를 하면, 일반 표 형태로 엑셀이 달라붙어서 서식을 다시 지정해줘야하고,&lt;br&gt;&#xA;import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 같아진다.&lt;/p&gt;&#xA;&lt;p&gt;그래서 다들 본인들 편한 방식으로 엑셀과 파워포인트간 테이블 연동을 처리 하고 있을 것이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;테이블-통째로-복사-개선&#34;&gt;테이블 통째로 복사 개선&lt;/h2&gt;&#xA;&lt;p&gt;생각할 수 있는 첫번째 방법은 파워포인트에서 만든 테이블 양식을 엑셀에다 붙이고, 데이터 작업을 해서, 데이터만 다시 복사하는 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;테이블 양식을 고스란히 유지한다는 점에서 손이 덜가긴 하지만, 아쉽게도 엑셀에는 파워포인트 테이블 셀에서의 &lt;code&gt;margin&lt;/code&gt; 값이 없다. &lt;code&gt;margin&lt;/code&gt; 값 정보가 없으니, 0,0,0,0 으로 변한다. (숫자의 경우, 대부분 끝쪽에 아주 보기 싫게 붙는다.)&lt;/p&gt;</description>
     </item>
     <item>
-      <title>블로그 이사(티스토리 → ?)</title>
+      <title>티스토리 블로그 이사에 적합한 서비스</title>
       <link>https://mcjoi.github.io/post/05998/</link>
       <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05998/</guid>
