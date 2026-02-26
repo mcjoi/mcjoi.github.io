@@ -36,5 +36,12 @@
       <guid>https://mcjoi.github.io/post/00992/</guid>
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>xls - 컴마(,)로 분리된 텍스트셀에서 n번째 항목 찾기 (ver2019이하)</title>
+      <link>https://mcjoi.github.io/post/01849/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01849/</guid>
+      <description>&lt;h2 id=&#34;컴마로-분리된-텍스트셀에서-n번째-항목-찾기-ver2019이하&#34;&gt;컴마(,)로 분리된 텍스트셀에서 n번째 항목 찾기 (ver2019이하)&lt;/h2&gt;&#xA;&lt;p&gt;아래 그림처럼 컴마(,)로 분리된 텍스트셀이 있다면, 이를 발라내기 위한 방법은 무궁무진할텐데&amp;hellip; 희한하게도 손에 익지를 않아서 기재해둔다.&lt;/p&gt;&#xA;&lt;p&gt;방법은 사실 꼼수에 가까운 방법인데, 두번째 값을 가지고 온다고 치자. (N=2)&lt;br&gt;&#xA;일단 컴마를 SUBSTITUTE 함수를 사용해서 넉넉한 공백으로 채워준다.(여기서는 100개의 공백)&lt;br&gt;&#xA;그럼 두번째 텍스트가 나오기 전까지 CLOVA X (NAVER)는 공백까지 115개의 문자를 사용한다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;CLOVA X (NAVER) : 1~115&lt;/li&gt;&#xA;&lt;li&gt;Gemini (Google) : 116~230&lt;/li&gt;&#xA;&lt;li&gt;ChatGPT (OpenAI) : 231~249&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;MID 함수로 시작은 (N-1)*100+1 으로 101을 만들어 주고, 길이는 100으로 한다.&lt;br&gt;&#xA;여기서는 N이 2(두번째)였으니, 101~200까지를 불러오게 될 것이다. 그럼 위의 순서에서 보듯 &amp;ldquo;공백16칸 + 텍스트15칸 + 공백69칸&amp;quot;이 남게 될 것이다. 이때 두번째 항목인 Gemini (Google) 가 포함되게 된다.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powerpoint - Intermediate on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/powerpoint---intermediate/</link>
+    <description>Recent content in Powerpoint - Intermediate on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/powerpoint---intermediate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ppt - 자동 고침(AutoCorrect) 기능을 이용한 특수 기호 입력</title>
+      <link>https://mcjoi.github.io/post/01850/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01850/</guid>
+      <description>&lt;h2 id=&#34;자동-고침autocorrect-기능을-이용한-특수-기호-입력&#34;&gt;자동 고침(AutoCorrect) 기능을 이용한 특수 기호 입력&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트는 워드나 매한가지 프로그램이기 때문에, 윈도우즈에서 제공하는 특수기호를 사용하는 경우가 많다. ㅁ + 한자는 꽤나 편한 입력방식이긴 하지만, 그마저도 귀찮다면, AutoCorrection을 사용할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01850/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;파워포인트 옵션에 가면, 두번째 메뉴(Proofing, 한글로는 &amp;lsquo;검증&amp;rsquo;일까?) 에 AutoCorrect Option이 있다. 나의 경우, 텍스트가 원치 않게 변경되는 것을 방지하기 위해 기능을 꺼두기도 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01850/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;옵션창은 매우 간단하다. Replace text as you type 항목에서 원하는 타이핑을 쳤을 떄, With 값에 적힌 값으로 변하도록 할 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
