@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 셀 행/열 너비/높이 복사하기 | shaaaaallow dive</title>
-    <meta name="description" content="xls - 셀 행/열 너비/높이 복사하기" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01902/" />
+    <title>Excel - Inermediate | shaaaaallow dive</title>
+    <meta name="description" content="Excel - Inermediate" />
+    <link rel="canonical" href="https://mcjoi.github.io/tag/excel---inermediate/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -154,183 +154,55 @@
     </aside>
     <main class="page">
       
-  <article class="post">
-    <header class="post-header">
-      <h1>xls - 셀 행/열 너비/높이 복사하기</h1>
-      <div class="post-meta">
-        
-        
-        <div class="post-meta-date">
-          <span>2022-12-06</span>
-          
-        </div>
-        <div class="post-meta-tags">
-          
-            
-              <a class="chip chip--tag" href="/tag/vba/">#Vba</a>
-            
-              <a class="chip chip--tag" href="/tag/excel---intermediate/">#Excel - Intermediate</a>
-            
-          
-        </div>
-      </div>
-    </header>
-
-    <div class="ad-slot">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-
-    <div class="post-content">
-        
-        
-        
-          <h2 id="셀-행열-너비높이-복사하기">셀 행/열 너비/높이 복사하기</h2>
-<p>표를 이리 저리 복사를 하다보면, 셀의 너비와 높이가 엉망이 될때가 있다. 적어도 너비는 복사할때 옵션 중에 선택하는 항목이 있다고 하지만, 높이는 그때 그때, 높이를 확인해서 바꿔줘야 한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/01.png" alt="myimg"></p>
-<br>
-<br>
-<p>단순하게, 선택영역의 높이와 너비 값을 동일하게 복사해주면 좋겠다 싶었다. 단, 두개의 영역을 선택해야하는데, 원본과 대상이다. 이 또한 귀찮다고 하면 할 말은 없다. 일단 원본 테이블 영역을 복사한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/02.png" alt="myimg"></p>
-<br>
-<br>
-<p>다음, 대상영역을 선택해준다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/03.png" alt="myimg"></p>
-<br>
-<br>
-<p>여러가지 선택옵션이 있으면 더 귀찮아지기 때문에, 여기까지만 했다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/04.png" alt="myimg"></p>
-<br>
-<br>
-<p>막상 사용자 폼 버튼에 등록하려고 하니, 귀찮음이 엄습한다. 몇개 몰아서 한꺼번에 해야겠다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">copyWidthHeight</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> rArea <span style="color:#f92672">As</span> Range
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> tArea <span style="color:#f92672">As</span> Range
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> dd:
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> rArea <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;복사할 영역을 선택하세요.&#34;</span>, , , , , , , 8)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Set</span> tArea <span style="color:#f92672">=</span> Application.InputBox(<span style="color:#e6db74">&#34;대상 영역을 선택하세요.&#34;</span>, , , , , , , 8)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">If</span> rArea.Count <span style="color:#f92672">=</span> tArea.Count <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">For</span> idx <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> tArea.Count
-</span></span><span style="display:flex;"><span>        refwidth <span style="color:#f92672">=</span> rArea(idx).ColumnWidth
-</span></span><span style="display:flex;"><span>        refheight <span style="color:#f92672">=</span> rArea(idx).RowHeight
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">With</span> tArea(idx)
-</span></span><span style="display:flex;"><span>          .RowHeight <span style="color:#f92672">=</span> refheight
-</span></span><span style="display:flex;"><span>          .ColumnWidth <span style="color:#f92672">=</span> refwidth
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> idx
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Else</span>: MsgBox (<span style="color:#e6db74">&#34;복사된 영역과 대상 영역의 크기가 다릅니다.&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dd:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<Br>
-<p>끝.</p>
-
-        
-      </div>
-
-    <div class="ad-slot">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="9665871796"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-
+  <section class="grid">
     
     
       
-      
-      
-      
-      
-      
-      
-      
-        <section class="related-posts">
-          <h3>Related Posts</h3>
-          <div class="related-divider" aria-hidden="true"></div>
-          <div class="related-posts-items">
+      <article class="post-card">
+        
+        <a class="thumb" href="/post/01929/"
+           style="background-image: url('https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/00_img/06_office.webp');"></a>
+        <div class="post-body">
+          <h3 class="post-title"><a href="/post/01929/">xls - 시트이름을 수식에서 사용하기(날짜 계산)</a></h3>
+          <div class="post-meta">
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-23</span>
-                <a href="/post/00991/">xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</a>
-              </div>
+              <a class="chip chip--tag" href="/category/office/">office</a>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-05</span>
-                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
-              </div>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/01991/">xls - VBA Userform 만들기</a>
-              </div>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-08</span>
-                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-02</span>
-                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-31</span>
-                <a href="/post/01995/">VBA/매크로 사용하기</a>
-              </div>
+            <span>2022-04-22</span>
             
           </div>
-        </section>
-      
+        </div>
+      </article>
     
+  </section>
 
-  </article>
+  <div class="more-wrap">
+    <button class="more-btn" type="button">More</button>
+  </div>
+
+  <script>
+    (function() {
+      const revealCount = 9;
+      const cards = Array.from(document.querySelectorAll('.post-card'));
+      const moreBtn = document.querySelector('.more-btn');
+      if (!moreBtn || cards.length <= revealCount) {
+        if (moreBtn) moreBtn.style.display = 'none';
+        return;
+      }
+      let visible = revealCount;
+      cards.forEach((card, idx) => {
+        if (idx >= revealCount) card.classList.add('hidden');
+      });
+      moreBtn.addEventListener('click', () => {
+        const next = cards.slice(visible, visible + revealCount);
+        next.forEach(card => card.classList.remove('hidden'));
+        visible += next.length;
+        if (visible >= cards.length) moreBtn.style.display = 'none';
+      });
+    })();
+  </script>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>

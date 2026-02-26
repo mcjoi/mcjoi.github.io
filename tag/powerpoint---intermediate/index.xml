@@ -71,5 +71,33 @@
       <guid>https://mcjoi.github.io/post/01899/</guid>
       <description>&lt;h2 id=&#34;지금-이미지-파일로-바로-당장&#34;&gt;지금 이미지 파일로.. 바로.. 당장..&lt;/h2&gt;&#xA;&lt;p&gt;필요할 때 사용할만한 매크로를 만들어봤다. 이런 경우가 흔치는 않지만, 예를 들어, 특정한 페이지를 수정을 했다고 했을 때, 문서를 다 보내기는 그렇고, 일정 부분만 스크린 샷 잡기도 애매할 때 써먹을만 할 것이다.&lt;/p&gt;&#xA;&lt;p&gt;매크로를 실행하고, 페이지 번호를 넣으면 해당 페이지가 이미지로 전환되도록 설계하였다.&lt;br&gt;&#xA;저장 위치는 PPT 파일이 위치한 곳과 동일하게 저장되도록 했으며, 여러 페이지를 동시에 변환할 때는 그냥 JPG로 내보내기 하는 기능이 있기 때문에 구지 따로 넣지 않았다.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>ppt - 표/셀 사이즈(높이/너비) 조절 유저폼</title>
+      <link>https://mcjoi.github.io/post/01905/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01905/</guid>
+      <description>&lt;h2 id=&#34;표셀-사이즈높이너비-조절-유저폼&#34;&gt;표/셀 사이즈(높이/너비) 조절 유저폼&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 잘하고 못하고는 디자인적인 영역을 제외하면, 디테일에 있다는 생각이 든다. 그러다보니 언제부터인지는 모르겠는데, 높이나 너비를 숫자로 치게 되는 일도 많아진다.&lt;br&gt;&#xA;문제는 그 메뉴까지의 거리가 생각보다 멀다. 그리하여.. 수고를 좀 덜어내기 위해, 표의 행/열에 대해서, 사이즈를 맞출 수 있는 유저폼을 만들어보았다.&lt;/p&gt;&#xA;&lt;p&gt;버튼을 누르면 선택영역 혹은 표 전체의 사이즈가 조정되고, 글씨를 클릭하면 선택영역 혹은 표 전체가 같은 수치로 (evenly) 조정된다.&lt;/p&gt;&#xA;&lt;p&gt;실용성은 글쎄?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;1번 셀이 좀 빠르게 적용되는 것 같은데, 사용성이 검증된 이후 수정예정&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 컬러 조절창(RGBO)</title>
+      <link>https://mcjoi.github.io/post/01906/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01906/</guid>
+      <description>&lt;h2 id=&#34;컬러-조절창rgbo&#34;&gt;컬러 조절창(RGBO)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트에서 도형의 컬러값을 RGB로 조정하고 싶을 때, 도형서식이나, 다른 채우기색 기능으로 확인 할때가 많은데, 과정이 영 귀찮다. 파워포인트 VBA는 참으로 귀찮은데, 그래도 꾹 참고 USERFORM을 만들어 본다.&lt;/p&gt;&#xA;&lt;p&gt;도형이 하나 있다. 파란색의 RGB 값을 알고 싶다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;도형을 선택하고, USERFORM을 실행시키면, 위에서부터 RGB 맨 마지막에 Opacity 값이 나타난다. 보이는 것처럼, 좌우 버튼으로 값을 조정하면, 도형에 반영되도록 했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;다른 색상을 고른 뒤 refresh 버튼을 누르면, RGB값이 업데이트 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01906/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 저장 시 글꼴 포함이 되지 않는 글꼴 삭제하기</title>
+      <link>https://mcjoi.github.io/post/01915/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01915/</guid>
+      <description>&lt;h2 id=&#34;저장-시-글꼴-포함이-되지-않는-글꼴-삭제하기&#34;&gt;저장 시 글꼴 포함이 되지 않는 글꼴 삭제하기&lt;/h2&gt;&#xA;&lt;p&gt;외부에서 받은 PPT 파일에 저장 시 글꼴 포함 옵션을 켜니 저장이 되지 않는다. (적어도) 내가 사용한 폰트는 아닌 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;아마도 나에게 없어서 발생하는 에러인 듯 하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;글꼴 바꾸기 옵션에서 확인은 되는데, 일괄 바꾸기 기능으로 적용이 되지 않는다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01915/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;문서 속성을 보니, 계속 사용중인 것으로 나온다. 어떤 페이지에 어떤 식으로 사용된 것인지 알 수 없으니, 다른 방법으로 바꾸기를 해줘야 한다. 파일을 XML 파일로 저장한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 자주 쓰는 색 컬러팔레트</title>
+      <link>https://mcjoi.github.io/post/01924/</link>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01924/</guid>
+      <description>&lt;h2 id=&#34;파워포인트의-색&#34;&gt;파워포인트의 색&lt;/h2&gt;&#xA;&lt;p&gt;색을 고르는 일은 몹시 어려운 일이다. 이색 저색 써보는 것도 방법이지만, 실상 회사에서 사용하는 색은 주로 CI색을 사용하기 때문에, 몇가지 자주쓰는 색을 박아놓고 쓰는 것도 나쁘지 않다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;슬라이드-마스터-팔레트&#34;&gt;슬라이드 마스터 팔레트&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트에 피커기능이 생긴 이후로, 마스터에 박스로 팔레트를 만들어 놓고 쓰는 사람이 꽤 보인다. 그럼 처음 켰을 때, 마스터에 내가 자주쓰는 색 팔레트를 만들어 놓는 버튼을 해두면 어떨까?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;생각보다-귀찮다&#34;&gt;생각보다&amp;hellip; 귀찮다.&lt;/h2&gt;&#xA;&lt;p&gt;아쉽게도 파워포인트 VBA는 엑셀만큼 나이스 하지 않으므로, 최소한의 기능으로 생각을 한다.&lt;br&gt;&#xA;새문서를 켜고, 버튼을 누르면, 8개 작은 박스에 주황/파랑 그라데이션이 들어간 팔레트를 만들어준다.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
