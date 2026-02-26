@@ -107,6 +107,13 @@
       <description>&lt;h2 id=&#34;셀-행열-너비높이-복사하기&#34;&gt;셀 행/열 너비/높이 복사하기&lt;/h2&gt;&#xA;&lt;p&gt;표를 이리 저리 복사를 하다보면, 셀의 너비와 높이가 엉망이 될때가 있다. 적어도 너비는 복사할때 옵션 중에 선택하는 항목이 있다고 하지만, 높이는 그때 그때, 높이를 확인해서 바꿔줘야 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;단순하게, 선택영역의 높이와 너비 값을 동일하게 복사해주면 좋겠다 싶었다. 단, 두개의 영역을 선택해야하는데, 원본과 대상이다. 이 또한 귀찮다고 하면 할 말은 없다. 일단 원본 테이블 영역을 복사한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;다음, 대상영역을 선택해준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01902/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여러가지 선택옵션이 있으면 더 귀찮아지기 때문에, 여기까지만 했다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>xls - 날짜에 따라 테이블 색 변경하기 / WBS 서식 만들기</title>
+      <link>https://mcjoi.github.io/post/01903/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01903/</guid>
+      <description>&lt;h2 id=&#34;날짜-수식은-괴롭다&#34;&gt;날짜 수식은 괴롭다&lt;/h2&gt;&#xA;&lt;p&gt;엑셀이든 DB든 날짜를 계산하는 작업은 짜증나는 작업이다. 사무직이라면 반드시 한번은 보게되는 WBS, 프로젝트 관리 툴이 엄청나게 많아졌지만, 아직 WBS는 역시 엑셀이다. WBS를 여러번 만들다보면 날짜 수식을 잘하게 되는 날이 올것이다.&lt;/p&gt;&#xA;&lt;p&gt;흔해 빠진 WBS 모양은 아래와 같을 것이다. 시작일과 종료일을 기준으로 기간을 적고, 일자대로 색을 칠해야한다.&lt;br&gt;&#xA;두가지 짜증나는 작업이 동반되는 것을 예상할 수 있다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;시작일과 종료일 사이 기간에 해당하는 날짜별에 색칠을 해야한다.&lt;/li&gt;&#xA;&lt;li&gt;칠해준 기간에서 주말을 빼줘야하고, 공휴일도 빼줘야한다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;아래 그림은 대략 완성된 이미지이다. 주말은 회색처리를 했으며, 친절하게 오늘 날짜에는 빨간색 하일라이트도 넣어줬다. 살짝 애매한건 공휴일이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 마지막으로 저장한 사람과 시간 셀에 저장하기</title>
       <link>https://mcjoi.github.io/post/01855/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
