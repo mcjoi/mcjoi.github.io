@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel - Intemediate on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/excel---intemediate/</link>
+    <description>Recent content in Excel - Intemediate on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/excel---intemediate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - 셀 값(텍스트) 배열로 만들기</title>
+      <link>https://mcjoi.github.io/post/01901/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01901/</guid>
+      <description>&lt;h2 id=&#34;셀-값텍스트-배열로-만들기&#34;&gt;셀 값(텍스트) 배열로 만들기&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 배열은 대부분 영역(RANGE)을 기준으로 생각하는 것이 일반적이다. 문득 한개의 셀 안에 들어있는 텍스트 값에 대해서 배열로 만들 수 있을까 궁금해졌다. 이는 일반적인 코딩에서는 리스트화 시키는 것이 일반적인데, 엑셀에서는 문자열 나누기라는 초강력한 기능이 있기 때문에 잘 사용되지는 않는 듯하다.&lt;/p&gt;&#xA;&lt;p&gt;각설하고 아래 수식들을 이해해 보자.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;셀-안의-글자텍스트-길이&#34;&gt;셀 안의 글자(텍스트) 길이&lt;/h2&gt;&#xA;&lt;p&gt;대상텍스트를 아래 주소라고 하자. 해당 값을 영역 &amp;ldquo;대상텍스트&amp;quot;로 설정하고, 글자 길이를 세어보자. LEN 함수를 사용하면, 결과는 17로 띄어쓰기를 포함하여 총 17자라는 것을 알 수 있다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

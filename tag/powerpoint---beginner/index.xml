@@ -6,8 +6,78 @@
     <description>Recent content in Powerpoint - Beginner on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 29 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tag/powerpoint---beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ppt - 아이콘으로 SVG 파일 사용하기</title>
+      <link>https://mcjoi.github.io/post/01858/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01858/</guid>
+      <description>&lt;h2 id=&#34;아이콘으로-svg-파일-사용하기&#34;&gt;아이콘으로 SVG 파일 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;적어도 2019버전의 파워포인트에서는 벡터를 일부 사용은 가능한데, 일러스트레이터처럼 자유자재로 그리는 것은 어렵고, 온라인에서 받은 소스를 가지고 원하는 정도의 편집은 가능해보인다.&lt;/p&gt;&#xA;&lt;p&gt;무료 SVG 아이콘을 다운받는 사이트는 워낙 많이 있으니, 특별히 거론하지는 않기로 한다.&lt;br&gt;&#xA;SVG 파일을 받았다면, 파워포인트로 드래그앤드랍을 해주면 끝이다&amp;hellip;&amp;hellip;. 가 아니고, 이제부터 시작이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;픽토그램을 문서에서 사용할때, 색을 변경하는 것은 상당히 귀찮은 일인데, SVG 파일의 장점은 컬러 변경이 자유롭다는 것에 있다. 불러온 파일을 &lt;code&gt;그룹해제&lt;/code&gt;해준다. 경고창이 뜨면 yes를 골라주고, 다시한번 그룹해제를 해주면 아래와 같이 분리가 가능하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 이미지 최적화 - webp 불러오기</title>
+      <link>https://mcjoi.github.io/post/01861/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01861/</guid>
+      <description>&lt;h2 id=&#34;이미지-최적화---webp-불러오기&#34;&gt;이미지 최적화 - webp 불러오기&lt;/h2&gt;&#xA;&lt;p&gt;무심결에 파워포인트에 이미지를 넣다보면 7~80메가가 넘나드는 경우는 다반사이다. 파워포인트는 용지사이즈에 따라서 일부 압축을 하지만 왠만한 크기의 원본 이미지를 가지고 있게 되고, 강제 압축을 했을때, 어마어마하게 이미지 퀄리티가 떨어지는 것을 볼 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;차세대 이미지 파일인 webp를 사용하면 좀 나아질까?&lt;/p&gt;&#xA;&lt;p&gt;webp 방식과 jpg 원본을 각각 배경이미지로 사용한 상태이다. 대충 봐도 알겠지만, 퀄리티 차이는 나지만, 어마무시한 차이는 아님을 알 수 있다.&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&lt;code&gt; 왼쪽이 원본 jpg, 우측이 webp &lt;/code&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01861/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 두 개 이상의 사이즈 발표자료 합치기(가로 타입)</title>
+      <link>https://mcjoi.github.io/post/01865/</link>
+      <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01865/</guid>
+      <description>&lt;h2 id=&#34;발표-자료를-취합할-때&#34;&gt;발표 자료를 취합할 때,&lt;/h2&gt;&#xA;&lt;p&gt;동일한 template를 배포하지 않는 이상 정말 자유로운 형태의 내용이 도착하는 것을 쉽게 경험할 수 있다. 언제부터인가 파워포인트의 새로만들기 이후 생성되는 문서의 기본사이즈가 16:9이고, 출력을 위해 A4사이즈에 맞춰 문서 작업하는 사람도 있고, 구 버전의 파워포인트에서 표준이었던 4:3 비율을 지키고 있는 사람도 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;가로--세로-사이즈-혼용&#34;&gt;가로 + 세로 사이즈 혼용&lt;/h2&gt;&#xA;&lt;p&gt;일단, 가로(landscape)와 세로(portrait)사이즈가 혼용이 되어있다면 두 문서를 연결하는 방법은 없다. 세로 사이즈의 문서를 발표에 사용하겠다는 생각은 프로젝터 등의 여건을 생각했을 때, 맞지가 않다. 그래서인지 모르겠지만 단일 파워포인트 파일에서 연결할 수 있는 기술적인 방법은 없다. 급한데로 넘어갈 페이지에 하이퍼링크를 달아서 세로로 된 파일을 불러내는 것이 최선이다. 마이크로소프트 포럼에도 해결방법으로 그것을 제시하고 있다. 생각보다 두개의 파일을 하이퍼링크로 연결했을 때 매끄럽게 넘어갈 수 있기는 하다.&lt;br&gt;&#xA;가로 슬라이드에서 세로 슬라이드로 넘어가기 위한 도형을 만들고 파일을 선택해주고, 하이퍼링크를 걸어준다. 물론, 세로슬라이드의 마지막에 다시 돌아오는 버튼을 반드시 달아줘야한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 텍스트박스 여백(margin) 없애기</title>
+      <link>https://mcjoi.github.io/post/01870/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01870/</guid>
+      <description>&lt;h2 id=&#34;텍스트박스-여백margin-없애기&#34;&gt;텍스트박스 여백(margin) 없애기&lt;/h2&gt;&#xA;&lt;p&gt;텍스트박스의 여백의 기본값은 좌우 0.25cm, 위아래 0.13cm인데, 대부분의 경우, 그대로 두는 것이 좋다.&lt;br&gt;&#xA;하지만, 아래 그림의 박스처럼, 약간의 공간이 부족해서, 텍스트의 줄이 밀리는 경우가 있는데, 여백값을 조정해주면 원하는 결과를 얻을 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;또, 텍스트박스의 줄을 맞출 때, 여백이 있다면, 시작점을 맞추기 애매한 경우가 있어, 아예 0으로 만드는 간단한 VBA를 짜본다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01870/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;코드는 아래와 같이 최대한 간단하게 짜보았다. 되기만 하면 되는거 아닌가. 테이블 분기를 두었으니, 테이블에서도 사용이 가능하다.&lt;br&gt;&#xA;단일 오브젝트에 대해서만 처리가 가능하니 주의 해야한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 도식 그릴 때, 선 시작점 연결</title>
+      <link>https://mcjoi.github.io/post/01872/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01872/</guid>
+      <description>&lt;h2 id=&#34;도식-그릴-때-선-시작점-연결&#34;&gt;도식 그릴 때, 선 시작점 연결&lt;/h2&gt;&#xA;&lt;p&gt;어떤 도식을 그릴 때, 꺽인선은 굉장히 편리함을 준다. 특히 아래와 같이 위계가 있는 경우, 각 센터를 맞춰주는데 굉장히 편하다. 2003인가 언제부터인가 새로들어온 기능인데, 그 전에는 일일이 노가다로 맞춰줘야 했던 끔찍한 기억이 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01872/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;하지만, 보고서를 작성하다보면 어쩔수 없이 상위 도형의 센터에서 벗어난 곳을 기준으로 시작 포인트를 잡아야 하는 경우가 있는데, 이 경우, 시작점이 흐트러진 만큼 다소 귀찮은 작업이 필요하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01872/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이 때, 아무 도형이나 추가를 해서, null object의 역할을 하도록 해보자. 아래 그림처럼, 박스를 처서 센터를 각 꺽인선의 시작점을 이 도형과 맞춰주고,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - ppt파일에 포함된 이미지 최적화 추출</title>
+      <link>https://mcjoi.github.io/post/01886/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01886/</guid>
+      <description>&lt;h2 id=&#34;ppt파일에-포함된-이미지&#34;&gt;ppt파일에 포함된 이미지&lt;/h2&gt;&#xA;&lt;p&gt;는 원본 그대로 살려내는 것이 불가능하다. 간단한 테스트를 해보자, 아래와 같은 속성을 가진 이미지가 있다. 약 10MB정도. 6000x4000 사이즈이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;ppt 안에 복사/붙여넣기를 한다. 사이즈는 당연히 ppt 문서 사이즈로 붙게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그냥-복사붙여넣기&#34;&gt;그냥 복사/붙여넣기&lt;/h2&gt;&#xA;&lt;p&gt;해당 이미지를 복사/붙여넣기로 이미지 프로그램에 붙여넣기를 해보면, 1688x1125 사이즈로 이미 변한 걸 알 수 있다. 문서 사이즈가 반영된 듯하다. 화질에도 열화가 있을 것으로 예상된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01886/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;그림으로-저장&#34;&gt;그림으로 저장&lt;/h2&gt;&#xA;&lt;p&gt;흔히 사용하는 방법인 마우스 우클릭의 context menu에 있는 그림으로 저장 기능으로 저장해본다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - pixel을 cm로 바꾸기, 4:3 / 16:9 화면 비율 맞추기</title>
+      <link>https://mcjoi.github.io/post/01891/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01891/</guid>
+      <description>&lt;h2 id=&#34;파워포인트-슬라이드-크기-설정&#34;&gt;파워포인트 슬라이드 크기 설정&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 사용시 대부분 preset을 사용하지만, 가끔 웹에서 사용하기 위해 슬라이드 크기를 조정하려고 하면, 너비와 높이를 cm 단위로 설정해야 함을 알 수 있다. 그럼, 1px은 과연, 몇 cm인가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01891/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;pixcel-to-cm&#34;&gt;pixcel to cm&lt;/h2&gt;&#xA;&lt;p&gt;아래 사이트에서 쉽게 그 내용을 확인할 수 있으며, 1pixel은 0.0264583333 cm 임을 알수 있다. 화면 dpi가 영향을 주지 않을까 싶기는 하지만, 그런 옵션은 나와 있지 않다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.unitconverters.net/typography-converter.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;pixcel to cm&lt;/a&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;티스토리-블로그용-이미지-만들기&#34;&gt;티스토리 블로그용 이미지 만들기&lt;/h2&gt;&#xA;&lt;p&gt;내 블로그에서 설정하고 있는 가로 사이즈가 820px 이므로, 4:3 비율을 대충 맞추기 위해서, 822 x 615 사이즈에 맞게 가로 21.749cm x 16.272cm 사이즈로 설정하였다.&lt;br&gt;&#xA;4:3 비율을 맞추려면, 가로사이즈 * 3 / 4를, 16:9 비율을 맞추려면, 가로사이즈 * 16 / 9를 세로 사이즈로 설정해주면 되겠다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 체크표시/박스 텍스트 쉽게 만들기(UNICODE)</title>
+      <link>https://mcjoi.github.io/post/01890/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01890/</guid>
+      <description>&lt;h2 id=&#34;ㅁ--한자가-전부가-아니었다&#34;&gt;ㅁ + 한자가 전부가 아니었다.&lt;/h2&gt;&#xA;&lt;p&gt;얼마전 적었던 이모지 관련 글에서처럼, OS 차원에서 지원하는 특수문자는 ㅁ + 한자로 적을 수 있는게 전부는 아닌 모양이다.&lt;br&gt;&#xA;보고서 작성시에 의외로 체크표시를 텍스트로 활용해야하는 경우가 많은데, ㅁ + 한자에 나오는 특수문자는 이게 없어서 참 아쉬웠던 차에 아래 사이트에서 해당 유니코드를 발견하게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.alt-codes.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cehck Mark Symbols&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;사용방법&#34;&gt;사용방법&lt;/h2&gt;&#xA;&lt;p&gt;가장 쉬운 방법은 그냥 복사해서 사용하는 것이고, 해당 글의 내용처럼, ALT + X를 사용해서 변환하는 방법도 있다고 하는데, 워드에서는 잘 되는데, 파워포인트에서는 잘 되지 않아, 버렸다. 그냥 클립보드에 고정해서 사용하거나 복사해서 사용하기로 했다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 세부정보를 나타내는 표시 그리기</title>
+      <link>https://mcjoi.github.io/post/01893/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01893/</guid>
+      <description>&lt;h2 id=&#34;세부정보를-나타내는-표시-그리기&#34;&gt;세부정보를 나타내는 표시 그리기&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같이, 파란 표시가 된 표의 세부 정보를 나타내는 표를 그리기 위하여, 아래와 같이 그라데이션 박스 처리를 했다. 뭔가 성의가 있어보이지 않는가?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사다리꼴을 넣고, 90도 회전을 해준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;원하는 색상으로 그라데이션을 넣어준다. 단순 표식이기 때문에, 너무 화려하지 않도록 넣는다.&lt;br&gt;&#xA;위치를 잡아준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이때 파란 박스로부터 파생된 느낌을 주기 위하여, 없어지게 되는데, 우측버튼 &amp;gt; 점편집을 눌러준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;시작 점들을 재배치하여 파란박스로 시작한다는 느낌을 준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01893/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;그럼&amp;hellip; 완성이 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 원형 화살표 도식만들기</title>
+      <link>https://mcjoi.github.io/post/01894/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01894/</guid>
+      <description>&lt;h2 id=&#34;원형-화살표-도식만들기&#34;&gt;원형 화살표 도식만들기&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;가이드 라인을 기준으로 정사각형 모양에, 원을 4개 배치해줍니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;기본 도형에서 원호를 선택해줍니다. 원으로 해도 되지만 좀 더 쉬운 방법을 사용합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;정사각형 크기에 맞춰 원호를 그려주면 1/4 크기의 원호가 생성됩니다. 눈치가 빠르다면 다음 스탭은 그냥 하실 수 있을 것입니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;노란색 핸들을 적당히 원의 크기에 맞추어 줄여주고, 필요하다면 화살표를 넣어줍니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;원호를 4개 복사해서 동일한 작업을 반복해 줍니다. 이 때 원호는 모두 동일한 위치에 위치합니다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ppt - 발표시 글자 선명하게 보기(텍스트 테두리)</title>
       <link>https://mcjoi.github.io/post/00983/</link>
