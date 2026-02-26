@@ -58,6 +58,13 @@
       <description>&lt;h2 id=&#34;크롭-렌즈&#34;&gt;크롭 렌즈&lt;/h2&gt;&#xA;&lt;p&gt;일반적으로 이미지서클이 작은 크롭렌즈들은 풀프레임에서 사용하기 딱 짜증나는 정도로 이미지서클이 노출되는데, 그럼에도 불구하고 비정상적으로 이미지서클이 커서, 풀프레임에서도 사용할만 하다는데, 그 중에 나의 최애 렌즈인 시그마 56mm가 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05990/05990_10.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;그럼, 시그마 56mm가 쓸만한 수준이 아니라면, 아래 랭크의 렌즈들은 볼 필요도 없기 때문에, 테스트를 해 보는 것이 어느정도 가치가 있다고 하겠다.&lt;/p&gt;&#xA;&lt;p&gt;조리개를 조일수록, 이미지 서클의 모양이 선명하게 나오므로, 최대 개방 값을 유지하여 촬영을 해본다.&lt;br&gt;&#xA;글로 설명하는 것은 의미가 없으므로, 예제 사진으로 모든 설명을 대체한다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>고독스 플래시 트리거 사용기(x-2t, x3)</title>
+      <link>https://mcjoi.github.io/post/05886/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05886/</guid>
+      <description>&lt;h2 id=&#34;고독스-x2t-동조기&#34;&gt;고독스 X2T 동조기&lt;/h2&gt;&#xA;&lt;p&gt;가족을 찍어주기 용도로 가볍게 들고 다니는 미니 사이즈의 TT350을 사용하고 있던 중, 궁금해졌던 고독스 동조기 X2T를 써봤다.&lt;br&gt;&#xA;알리에서 대략 3.5만 원 정도였던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/05.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/06.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;일단 외형부터 보면, 소니 A6100에 물려 쓰기엔 상당히 비율이 안 맞는 인상이다.&lt;br&gt;&#xA;외장 배터리를 쓰는 것도 아니고, 무게나 크기가 무색하게 빈약해 보이는 건 발열 관리 때문인지 뭔지 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/07.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사진으로 보면 어떤지 모르겠지만, 만듦새나 마감은 딱 가격대에 맞는 느낌이고, 장난감 같은 인상이다.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>몇 가지 접이식 키보드 사용기</title>
       <link>https://mcjoi.github.io/post/05889/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
@@ -70,13 +77,6 @@
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05885/</guid>
       <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;야외에서 플래시를 사용하는 이유는 태양광 등 강한 광원 아래에서 피사체에 원하는 그림자를 만들거나, 없애거나, 때로는 부족한 광량을 보완하기 위함이다.&lt;/p&gt;&#xA;&lt;p&gt;이런 상황이라면 일반적으로 피사체보다 배경의 밝기가 훨씬 밝은 경우가 많을 수밖에 없다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;ttl&#34;&gt;TTL&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;through the lens&lt;/code&gt; 라는 이름처럼 TTL은 카메라를 통해 들어온 빛을 기준으로 자동으로 플래시의 밝기를 결정하는 방식이다.&lt;br&gt;&#xA;여기서 문제가 되는 점은 측광 방식의 특성이다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ TTL 측광 방식은 멀티 패턴 측광이라면 특히 예전에 문제였던 ‘밝은 배경’으로 인해 플래시가 발광량을 줄여버리는 경우가 많다.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>조명 트리거(x-2t, x3)</title>
-      <link>https://mcjoi.github.io/post/05886/</link>
-      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/05886/</guid>
-      <description>&lt;h2 id=&#34;고독스-x2t-동조기&#34;&gt;고독스 X2T 동조기&lt;/h2&gt;&#xA;&lt;p&gt;가족을 찍어주기 용도로 가볍게 들고 다니는 미니 사이즈의 TT350을 사용하고 있던 중, 궁금해졌던 고독스 동조기 X2T를 써봤다.&lt;br&gt;&#xA;알리에서 대략 3.5만 원 정도였던 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/05.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/06.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;일단 외형부터 보면, 소니 A6100에 물려 쓰기엔 상당히 비율이 안 맞는 인상이다.&lt;br&gt;&#xA;외장 배터리를 쓰는 것도 아니고, 무게나 크기가 무색하게 빈약해 보이는 건 발열 관리 때문인지 뭔지 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05886/07.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사진으로 보면 어떤지 모르겠지만, 만듦새나 마감은 딱 가격대에 맞는 느낌이고, 장난감 같은 인상이다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>플래시(godox tt350, Desiontal F02)</title>

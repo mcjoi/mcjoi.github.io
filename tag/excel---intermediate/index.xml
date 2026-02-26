@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel - Intermediate on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/excel---intermediate/</link>
+    <description>Recent content in Excel - Intermediate on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 05 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/excel---intermediate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</title>
+      <link>https://mcjoi.github.io/post/00993/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00993/</guid>
+      <description>&lt;h2 id=&#34;배열array&#34;&gt;배열(array)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 초급과 중급을 나누는 기준은 배열수식을 아는지 모르는지에 있다고 확실히 말할 수 있다. 하지만, 알고 보면 어렵지 않으니, 아직 개념이 부족하다면, 확실히 해두고 갈 필요가 있다.&lt;/p&gt;&#xA;&lt;p&gt;배열은 일반적인 프로그래밍에서 list 혹은 array 라고 불리우며, 1차원 배열 {1,2,3,4} 또는 리스트 [x,x,x,x&amp;hellip;] 같은 여러 값의 묶음을 의미한다.&lt;br&gt;&#xA;그런데 이게 뭐 어떻단 말인가? 간단하게 sum 함수를 예로 들자.&lt;/p&gt;&#xA;&lt;p&gt;sum 함수의 인수는 단일 값들일 수 있고, 영역을 선택한 여러 값일 수 있다. 여기서 값들은 array로 묶이게 된다. 이후 sum이라는 연산을 수행하게 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 조건값 찾기, 배열수식</title>
+      <link>https://mcjoi.github.io/post/00996/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00996/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube.com/embed/sLGsDbAlgUw&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script type=&#34;application/ld+json&#34;&gt;{&#34;@context&#34;:&#34;https://schema.org&#34;,&#34;@type&#34;:&#34;VideoObject&#34;,&#34;description&#34;:&#34;[남들다아는 엑셀] 데이터표에서 조건에 맞는 값 찾기&#34;,&#34;embedUrl&#34;:&#34;https://www.youtube.com/embed/sLGsDbAlgUw&#34;,&#34;name&#34;:&#34;[남들다아는 엑셀] 데이터표에서 조건에 맞는 값 찾기&#34;,&#34;thumbnailUrl&#34;:[&#34;https://i.ytimg.com/vi/sLGsDbAlgUw/hqdefault.jpg&#34;],&#34;uploadDate&#34;:&#34;2025-12-22T00:00:00+00:00&#34;,&#34;url&#34;:&#34;https://www.youtube.com/watch?v=sLGsDbAlgUw&#34;}&lt;/script&gt;&#xA;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;조건에-맞는-값찾기&#34;&gt;조건에 맞는 값찾기&lt;/h2&gt;&#xA;&lt;h3 id=&#34;index-match&#34;&gt;index, match&lt;/h3&gt;&#xA;&lt;p&gt;조건 값 찾기의 다양한 방법 중, index, match는 중요하다.&lt;br&gt;&#xA;xlookup이 나오기 전까지는 조건보다 좌측에 위치한 컬럼값을 찾는 경우, 거의 유일한 방법이기도 했다. 그 말은 지금은 그냥 xlookup 쓰면 된다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;예시를 보면, 아래의 그림 중 서울 지역의 학생수를 찾으려고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00996/00996_01.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;vlookup과-match함수&#34;&gt;VLOOKUP과 MATCH함수&lt;/h3&gt;&#xA;&lt;p&gt;MATCH함수로 조건2에 대한 열번호를 알아낸 다음, VLOOKUP의 열을 찾는다.&lt;br&gt;&#xA;MATCH함수는 사실 영역 내에서 값이 몇번째인지 나타내는 함수로, 만약 혼자 엑셀을 상식선에서 쓰고 있다면 죽었다 깨나도 써먹을 일이 없을 함수이기도 하다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls - 특정 문자가 포함된 SUMIF함수</title>
+      <link>https://mcjoi.github.io/post/00986/</link>
+      <pubDate>Fri, 25 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00986/</guid>
+      <description>&lt;h2 id=&#34;특정-문자가-포함된-sumif함수&#34;&gt;특정 문자가 포함된 SUMIF함수&lt;/h2&gt;&#xA;&lt;p&gt;SUMIF 함수 사용법을 자세하게 보자.&lt;br&gt;&#xA;아래와 같이 비용과 이익이 비고 부분에 함께 들어가 있다고 치자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/1.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;SUMIF 함수를 통해 비용이 들어간 항목과 이익이 들어간 항목을 나누어 계산해 보자&lt;/p&gt;&#xA;&lt;p&gt;우선 연간 비용은&lt;br&gt;&#xA;&lt;code&gt;=SUMIF(B3:B8,&amp;quot;*&amp;quot;&amp;amp;&amp;quot;비용&amp;quot;,C3:C8)&lt;/code&gt;&lt;br&gt;&#xA;로 계산할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;비용이 공통텍스트 조건에 비용 앞에는 아무글자나 있어도 상관없음을 &amp;ldquo;*&amp;quot;&amp;amp;로 표기해주자&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/2.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;마찬가지로 연간 이익은&lt;br&gt;&#xA;&lt;code&gt;=SUMIF(B3:B8,&amp;quot;*&amp;quot;&amp;amp;&amp;quot;이익&amp;quot;,C3:C8)&lt;/code&gt;&lt;br&gt;&#xA;로 계산할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;방법은 동일하다&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00986/3.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;앞뒤로 변경되는 텍스트가 있다면,&lt;br&gt;&#xA;아래처럼 처리하자.&lt;br&gt;&#xA;여기에선 월비를 넣으니 연간비용과 답이 동일해졌다.&lt;br&gt;&#xA;&lt;code&gt;=SUMIF(B3:B8,&amp;quot;*&amp;quot;&amp;amp;&amp;quot;월비&amp;quot;&amp;amp;&amp;quot;*&amp;quot;,C3:C8)&lt;/code&gt;&lt;br&gt;&#xA;&amp;ldquo;&lt;em&gt;&amp;rdquo;&amp;amp;&amp;ldquo;월비&amp;rdquo;&amp;amp;&amp;rdquo;&lt;/em&gt;&amp;quot;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

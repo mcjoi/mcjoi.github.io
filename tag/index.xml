@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Excel</title>
-      <link>https://mcjoi.github.io/tag/excel/</link>
+      <title>Excel - Advanced</title>
+      <link>https://mcjoi.github.io/tag/excel---advanced/</link>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/tag/excel/</guid>
+      <guid>https://mcjoi.github.io/tag/excel---advanced/</guid>
       <description></description>
     </item>
     <item>
@@ -37,6 +37,13 @@
       <description></description>
     </item>
     <item>
+      <title>Excel</title>
+      <link>https://mcjoi.github.io/tag/excel/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/excel/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Flutter</title>
       <link>https://mcjoi.github.io/tag/flutter/</link>
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
@@ -58,6 +65,13 @@
       <description></description>
     </item>
     <item>
+      <title>Excel - Intermediate</title>
+      <link>https://mcjoi.github.io/tag/excel---intermediate/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/excel---intermediate/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Photo</title>
       <link>https://mcjoi.github.io/tag/photo/</link>
       <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
@@ -76,6 +90,13 @@
       <link>https://mcjoi.github.io/tag/camera/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/tag/camera/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Excel - Beginner</title>
+      <link>https://mcjoi.github.io/tag/excel---beginner/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/excel---beginner/</guid>
       <description></description>
     </item>
     <item>
@@ -118,6 +139,20 @@
       <link>https://mcjoi.github.io/tag/outlook/</link>
       <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/tag/outlook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Excel - Biginner</title>
+      <link>https://mcjoi.github.io/tag/excel---biginner/</link>
+      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/excel---biginner/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powerpoint - Beginner</title>
+      <link>https://mcjoi.github.io/tag/powerpoint---beginner/</link>
+      <pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tag/powerpoint---beginner/</guid>
       <description></description>
     </item>
   </channel>

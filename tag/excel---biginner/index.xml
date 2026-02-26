@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel - Biginner on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/excel---biginner/</link>
+    <description>Recent content in Excel - Biginner on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 14 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/excel---biginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - 텍스트 앞뒤 바꾸기(뒤집기)</title>
+      <link>https://mcjoi.github.io/post/00974/</link>
+      <pubDate>Wed, 14 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/00974/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube.com/embed/P8EtSti7qU4&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script type=&#34;application/ld+json&#34;&gt;{&#34;@context&#34;:&#34;https://schema.org&#34;,&#34;@type&#34;:&#34;VideoObject&#34;,&#34;description&#34;:&#34;[남들다아는 엑셀] 셀(문자) 텍스트 앞뒤 뒤집기(함수+VBA)&#34;,&#34;embedUrl&#34;:&#34;https://www.youtube.com/embed/P8EtSti7qU4&#34;,&#34;name&#34;:&#34;[남들다아는 엑셀] 셀(문자) 텍스트 앞뒤 뒤집기(함수+VBA)&#34;,&#34;thumbnailUrl&#34;:[&#34;https://i.ytimg.com/vi/P8EtSti7qU4/hqdefault.jpg&#34;],&#34;uploadDate&#34;:&#34;2016-12-14T00:00:00+00:00&#34;,&#34;url&#34;:&#34;https://www.youtube.com/watch?v=P8EtSti7qU4&#34;}&lt;/script&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;텍스트-앞뒤-바꾸기뒤집기&#34;&gt;텍스트 앞뒤 바꾸기(뒤집기)&lt;/h2&gt;&#xA;&lt;p&gt;얼마전에 순서대로 있는 셀들을 거꾸로 배치하는 방법을 올린적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;VBA와 함수를 사용하는 방법을 모두 올렸었다.&lt;br&gt;&#xA;이 꼼수 아닌 꼼수는 그 이후로 회사에서 정말 많이 써먹었었다.&lt;br&gt;&#xA;너무 뿌듯한 순간이 아닐 수 없다.&lt;/p&gt;&#xA;&lt;p&gt;물론, 회사에서 아무도 알아주는 사람은 없다.&lt;br&gt;&#xA;내가 발로하든 VBA를 쓰든, 결과가 맞으면 되니깐.&lt;/p&gt;&#xA;&lt;p&gt;각설하고, 위의 내용을 고민하던 중에,&lt;br&gt;&#xA;한 셀에 있는 텍스트를 뒤집는 것도 비슷하지 않을까라는 생각이 들었다.&lt;br&gt;&#xA;예를 들어 아래처럼 &amp;lsquo;가나다라마바사&amp;rsquo;가 있으면 거꾸로 &amp;lsquo;사바마라다나가&amp;rsquo;가 되도록 말이다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
