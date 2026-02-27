@@ -107,6 +107,13 @@
       <description>&lt;h2 id=&#34;원형-화살표-도식만들기&#34;&gt;원형 화살표 도식만들기&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;가이드 라인을 기준으로 정사각형 모양에, 원을 4개 배치해줍니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;기본 도형에서 원호를 선택해줍니다. 원으로 해도 되지만 좀 더 쉬운 방법을 사용합니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;정사각형 크기에 맞춰 원호를 그려주면 1/4 크기의 원호가 생성됩니다. 눈치가 빠르다면 다음 스탭은 그냥 하실 수 있을 것입니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/04.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;노란색 핸들을 적당히 원의 크기에 맞추어 줄여주고, 필요하다면 화살표를 넣어줍니다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01894/05.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;원호를 4개 복사해서 동일한 작업을 반복해 줍니다. 이 때 원호는 모두 동일한 위치에 위치합니다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>엑셀, 파워포인트 리본메뉴 작업시 아이콘(FACEID)</title>
+      <link>https://mcjoi.github.io/post/01898/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01898/</guid>
+      <description>&lt;h2 id=&#34;추가기능-작성-시&#34;&gt;추가기능 작성 시&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;매크로를 열심히 만들고, 리본메뉴에 등록할 때, 아이콘이 필요하다.&lt;br&gt;&#xA;이 때, FACE ID 값으로 아이콘을 불러오는데, 아이콘 값을 모르면, 아무 숫자나 넣어볼 수 밖에 없다.&lt;/p&gt;&#xA;&lt;p&gt;아래 사이트에서 FACE ID 값을 확인할 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://bettersolutions.com/vba/ribbon/face-ids-2003.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;faceid icon images&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;언제 없어질지 모르므로, 나도 하나 카피본을 가지고 있어야겠다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ppt - 직접만든 매크로를 버튼 리본 메뉴에 넣기</title>
       <link>https://mcjoi.github.io/post/01904/</link>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>

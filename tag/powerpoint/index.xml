@@ -15,12 +15,5 @@
       <guid>https://mcjoi.github.io/post/01877/</guid>
       <description>&lt;h2 id=&#34;엑셀2019-실행취소undo-횟수-조정하기&#34;&gt;엑셀2019 실행취소(Undo) 횟수 조정하기&lt;/h2&gt;&#xA;&lt;p&gt;복사(ctrl + c), 붙여넣기(ctrl + v) 만큼이나 자주 쓰는 단축키가 실행취소(ctrl + z)가 아닐까?&lt;br&gt;&#xA;하지만, 누구나 한번쯤 실행취소를 연타하다가, 멈춰서 당황한 기억이 있지 않는가? 분명 이전 버전에서는 옵션에 실행취소 횟수를 정하는 내용이 있었던 것으로 기억하는데, 2019버전에서는 안보인다. 나만 안보이는건지는 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;레지스트리-수정&#34;&gt;레지스트리 수정&lt;/h2&gt;&#xA;&lt;p&gt;cmd 창을 열어 regedit를 쳐서, 레지스트리 편집기를 열어준다.&lt;br&gt;&#xA;오피스2019 버전의 경우, 상단 주소창에, 아래 주소를 입력하면, 엑셀 레지스트리의 option폴더로 이동할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Excel\Options&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>엑셀, 파워포인트 리본메뉴 작업시 아이콘(FACEID)</title>
-      <link>https://mcjoi.github.io/post/01898/</link>
-      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/01898/</guid>
-      <description>&lt;h2 id=&#34;추가기능-작성-시&#34;&gt;추가기능 작성 시&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;매크로를 열심히 만들고, 리본메뉴에 등록할 때, 아이콘이 필요하다.&lt;br&gt;&#xA;이 때, FACE ID 값으로 아이콘을 불러오는데, 아이콘 값을 모르면, 아무 숫자나 넣어볼 수 밖에 없다.&lt;/p&gt;&#xA;&lt;p&gt;아래 사이트에서 FACE ID 값을 확인할 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://bettersolutions.com/vba/ribbon/face-ids-2003.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;faceid icon images&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;언제 없어질지 모르므로, 나도 하나 카피본을 가지고 있어야겠다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
