@@ -352,14 +352,7 @@
       <description>&lt;h2 id=&#34;엑셀-수식에러의-근원-복사와-자르기-절대참조와-상대참조&#34;&gt;엑셀 수식에러의 근원. 복사와 자르기. 절대참조와 상대참조&lt;/h2&gt;&#xA;&lt;p&gt;수식에서 셀 참조를 할때, 절대참조와 상대참조가 있다는건 다 알고 있는 사실이다.&lt;br&gt;&#xA;드래그로 자동완성을 할것을, 고려할때는 이를 심각하게 생각하지만, 셀이나 열/행을 통째로 옮길 때는 잘 고려하지 않게 된다.&lt;/p&gt;&#xA;&lt;p&gt;아주 간단하지만, 모든실수의 근원, 예상은 가능하지만, 매번 혼란스러운 것. 고수들도 가끔 잊을 때가 있을 그것.&lt;/p&gt;&#xA;&lt;p&gt;셀 또는 열/행을 통째로 옮길 때, 수식이 어찌 되는지 간단한 샘플로 보자.&lt;br&gt;&#xA;N1과 N2로 구성된 표가 있다. 옆에는 N1열의 합계를 내는 수식이 있다고 하자.&lt;br&gt;&#xA;물론 상대참조로 되어있다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - 셀 텍스트의 일부에 색을 넣고 싶은데, 안들어갈 때</title>
-      <link>https://mcjoi.github.io/post/01952/</link>
-      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/01952/</guid>
-      <description>&lt;h2 id=&#34;엑셀-텍스트에-색-넣기&#34;&gt;엑셀 텍스트에 색 넣기&lt;/h2&gt;&#xA;&lt;p&gt;의외로 엑셀 셀안에서 텍스트에 여러가지 색을 쓸 일이 종종 있다. 특히 줄 바꿈을 할때, 자주 쓰곤 한다.&lt;br&gt;&#xA;너무 쉬운 기능이라서, 한번도 동작 원리에 대해 생각해 본적은 없는데, 가끔 색이 안먹을 때가 있다.&lt;br&gt;&#xA;다들 한번씩 경험해 보지 않았는가?&lt;/p&gt;&#xA;&lt;p&gt;내가 찾은 답이 맞는지 모르겠지만, 결론만 말하면, 셀이 회계 형식으로 설정되어 있으면, 안된다.&lt;br&gt;&#xA;다른 거의 모든 셀 형식에서는 상관이 없는 듯하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01952/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;귀차니즘으로 모든 형식을 대입해보지는 않았다.ㅋㅋ&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>xls - 숨기기와 Subtotal 함수</title>
+      <title>xls - 숨기기/필터 그리고 Subtotal 함수</title>
       <link>https://mcjoi.github.io/post/01953/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01953/</guid>

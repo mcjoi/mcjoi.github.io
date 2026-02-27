@@ -6,8 +6,36 @@
     <description>Recent content in Powerpoint - Beginner on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tag/powerpoint---beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VBA/매크로 사용하기</title>
+      <link>https://mcjoi.github.io/post/01995/</link>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01995/</guid>
+      <description>&lt;h2 id=&#34;vba매크로&#34;&gt;VBA(매크로)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀과 파워포인트의 기능은 수십년간 쌓여온 노하우에 의해 축적된 기술의 총집합이라 할 수 있다. 감히 누가 여기에 이견을 달 수 있을까? 하지만, 너무 많은 기능들은 오히려 접근성을 떨어뜨리는 원인이 되니, 가끔은 자주쓰는 기능을 입맛에 맞게 VBA(매크로)로 구성해 둔다면, 혼란에서 벗어날 수 있다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;추가-기능add-in&#34;&gt;추가 기능(add-in)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀이든 파워포인트든 VBA 코드가 포함된 파일(.xlsm, .pptm)로 저장할 수 있지만, 새로 파일을 만들었을 때 해당 기능을 사용할 수 없고, 문서를 주고 받는 경우, 상당한 거부감이 들 수밖에 없다. 그래서 일반적으로 프로그램 실행시 백그라운드에서 자동으로 동작하는 추가기능(add-in) 형태로 구성을 하게 된다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 파워포인트 테이블(표) 연동 관련</title>
+      <link>https://mcjoi.github.io/post/01996/</link>
+      <pubDate>Mon, 29 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01996/</guid>
+      <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 특정영역을 카피해서 파워포인트에 붙이기를 하면, 일반 표 형태로 엑셀이 달라붙어서 서식을 다시 지정해줘야하고,&lt;br&gt;&#xA;import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 같아진다.&lt;/p&gt;&#xA;&lt;p&gt;그래서 다들 본인들 편한 방식으로 엑셀과 파워포인트간 테이블 연동을 처리 하고 있을 것이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;테이블-통째로-복사-개선&#34;&gt;테이블 통째로 복사 개선&lt;/h2&gt;&#xA;&lt;p&gt;생각할 수 있는 첫번째 방법은 파워포인트에서 만든 테이블 양식을 엑셀에다 붙이고, 데이터 작업을 해서, 데이터만 다시 복사하는 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;테이블 양식을 고스란히 유지한다는 점에서 손이 덜가긴 하지만, 아쉽게도 엑셀에는 파워포인트 테이블 셀에서의 &lt;code&gt;margin&lt;/code&gt; 값이 없다. &lt;code&gt;margin&lt;/code&gt; 값 정보가 없으니, 0,0,0,0 으로 변한다. (숫자의 경우, 대부분 끝쪽에 아주 보기 싫게 붙는다.)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacroToolkit - excel, powerpoint</title>
+      <link>https://mcjoi.github.io/post/01999/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01999/</guid>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;회사생활을 하면서 수집하거나 직접 만든 매크로들 중에 가장 빈번히 사용하거나 유용한 기능을 모아두었다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;엑셀&#34;&gt;엑셀&lt;/h3&gt;&#xA;&lt;p&gt;excel add-in userform (.xla)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_1.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;파워포인트&#34;&gt;파워포인트&lt;/h3&gt;&#xA;&lt;p&gt;powerpoint add-in (.ppam)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_2.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;things-to-know&#34;&gt;Things to Know&lt;/h2&gt;&#xA;&lt;p&gt;몇가지 미리 알아야할 사항은 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ 엑셀은 VBA 사용 이후 UNDO(ctrl + z)가 적용되지 않는다. 따라서, 기능이 익숙해지지 않았다면 사용전에 엑셀 파일을 다른이름으로 저장하고 사용하는 것을 추천한다.&lt;br&gt;&#xA;✶ 모든 상황에 대한 예외 처리가 되어있지는 않기 때문에, 정해진 조건 내에서 사용하지 않을 경우, 에러가 날 수 있다.&lt;br&gt;&#xA;✶ 매크로 기본 언어 및 설명이 영어로 되어있는데, 발로적은 영어라 정확하지 않을 수 있다.&lt;br&gt;&#xA;✶ PC에 해가 될 수 있는 그 어떤 코드도 포함되어있지 않다.&lt;br&gt;&#xA;✶ VBA 코드에는 암호가 걸려있다. 큰 의미는 없다.&lt;br&gt;&#xA;✶ 개인적으로 필요한 기능을 모아두었을 뿐, 상황에 따라 추가로 필요한 기능이 있다면 &amp;lsquo;chaGPT&amp;rsquo;와 함께 직접 만들어 보는 것을 추천한다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 동일한 너비의 도형으로 페이지 분할하기</title>
+      <link>https://mcjoi.github.io/post/01990/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01990/</guid>
+      <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 사용하다보면 도식을 사용할 일이 많은데, 페이지에 원하는 수많큼 동일한 도형을 배치해야 하는 경우가 있다.&lt;br&gt;&#xA;예를 들면 아래와 같이 말이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;사이즈를 적당히 맞추려면, 적잖이 귀찮은 작업이 될 수도 있어, 가이드 도형을 만들 수 있는 VBA를 짜볼까 하다가, 그냥 chatGPT에게 요청했더니 아주 소름끼치게 만들어 냈다.&lt;/p&gt;&#xA;&lt;p&gt;요구사항은 좌우 여백 30px을 주고, 도형 사이엔 10px의 여백을 줄 것이라고 했더니, 색도 반투명으로 넣고, 아주 소름끼치도록 완벽하게 해줬다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01990/02.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;사용된 코드는 아래와 같다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ppt - 아이콘으로 SVG 파일 사용하기</title>
       <link>https://mcjoi.github.io/post/01858/</link>
@@ -98,6 +126,48 @@
       <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01923/</guid>
       <description>&lt;h2 id=&#34;텍스트-상자-센터&#34;&gt;텍스트 상자 센터&lt;/h2&gt;&#xA;&lt;p&gt;텍스트 상자를 열심히 복사하다 보면, (특히 남이 만들어 놓은 문서) 아래 그림처럼 세로 중간이 맞지 않을 때가 있다.&lt;br&gt;&#xA;텍스트 상자 기준으로 정렬이 진행되므로 중간이 맞지 않으면 상당히 신경이 쓰이게 된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01923/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;텍스트-상자의-여백&#34;&gt;텍스트 상자의 여백&lt;/h2&gt;&#xA;&lt;p&gt;첫번째로 확인해야할 것은 텍스트 상자의 여백(PADDING)이다. 위/아래 값이 맞지 않는다면, 위든 아래든 치우친 텍스트 상자가 된다. 이번 경우에는 해당이 없는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01923/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;두번째는 단락 설정에서 줄간격 설정을 확인 하는 것이다. 기본 값은 1줄이나 다른 값이 들어와 있는 경우가 있다. 이번에는 줄 간격때문에 중간이 맞지 않았다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 자작 디자인 템플릿 몇가지</title>
+      <link>https://mcjoi.github.io/post/01939/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01939/</guid>
+      <description>&lt;h2 id=&#34;카카오-스타일-210902&#34;&gt;카카오 스타일 (210902)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 디자인은 여러가지 복합적인 고려사항이 필요하지만, 잘 못한다면, 잘된 남의 것을 따라해보는 것도 방법이다. 일반적으로 카달로그같은 제품소개서나, IR자료등이 대표적으로 디자인이 잘된 것들이다.&lt;/p&gt;&#xA;&lt;p&gt;카카오는 컬러아이덴티티가 뚜렷해서, 뭘 해도 카카오스럽다. 네이버의 그것과도 매우 비슷한 광고상품 소개서를 참고해본다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;http://naver.me/5oifCE6P&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;download&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;표준안인지는 모르겠으나, 세세한 부분까지 신경쓴 것이 보인다. 폰트사이징 등은, PDF 출력을 염두해 둔 것 같은 느낌으로,&lt;br&gt;&#xA;스크린을 통한 발표자료 등에서 왠만한 폰트로는 깨질것 같은 느낌이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;박스-220708&#34;&gt;박스 (220708)&lt;/h2&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;http://naver.me/IGGthJJz&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;download&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01939/03.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 분리된 느낌의 텍스트 컬러링</title>
+      <link>https://mcjoi.github.io/post/01940/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01940/</guid>
+      <description>&lt;h2 id=&#34;분리된-느낌의-텍스트-컬러링&#34;&gt;분리된 느낌의 텍스트 컬러링&lt;/h2&gt;&#xA;&lt;p&gt;텍스트에 배경색으로 분리된 느낌을 줘보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;텍스트를 일단 넣는다.&lt;br&gt;&#xA;배경과 텍스트를 그룹으로 묶고, 그림으로 저장한다.&lt;br&gt;&#xA;그림을 불러와서 텍스트를 하단에 배치한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;텍스트 옵션에 들어가서, 그라데이션 채우기롤 선택한다&lt;br&gt;&#xA;2개의 포인트만 남기고 지운다. 그라데이션 중지점을 두점을 일치하도록 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01940/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 맑은 고딕 폰트, 자간(문자간격) 적당히 줄이기</title>
+      <link>https://mcjoi.github.io/post/01942/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01942/</guid>
+      <description>&lt;h2 id=&#34;맑은-고딕&#34;&gt;맑은 고딕&lt;/h2&gt;&#xA;&lt;p&gt;맑은 고딕 폰트는 회사에서 가장 많이 사용되는 폰트이다. 예쁘지도 않고, 편하지도 않지만, 범용적으로 사용되는 이유는 단하나, 윈도우 기본 폰트이기 때문이다.&lt;/p&gt;&#xA;&lt;p&gt;공유를 위해 애써 PDF로 만들지 않아도 되니, 엄청난 장점이라 하겠지만, 일단, 다른 폰트에 비해 자간이 넓다.&lt;/p&gt;&#xA;&lt;p&gt;예전에 어디선가 맑은 고딕 폰트가 자간을 자유롭게 컨트롤해서 사용하는 글꼴이라는 글을 본적이 있는데, 사실인지 아닌지는 알 수 없다. 즉, 파워포인트에서 사용할 때, 폰트의 자간을 조절해서 사용할 필요가 있다는 것이다.&lt;/p&gt;&#xA;&lt;p&gt;방법은 아래와 같다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 차트 서식 복사</title>
+      <link>https://mcjoi.github.io/post/01949/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01949/</guid>
+      <description>&lt;h2 id=&#34;파워포인트-차트-서식-복사하기&#34;&gt;파워포인트 차트 서식 복사하기&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트의 차트는 컨트롤하기가 비교적 수월하다. 엑셀의 그것을 복사했을때보다, 파워포인트 자체의 것을 이용하는 것이 개인적으로는 편하다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;차트-서식&#34;&gt;차트 서식&lt;/h2&gt;&#xA;&lt;p&gt;꽤 오랜동안 모르고 지냈던 것인데, 글상자나 도형의 서식은 편하게 복사를 해서 썼는데, 차트 서식은 복사할 생각을 별로 하지 않았던 것 같다. 그래서 두개의 차트를 동일한 형식을 만들때는, 복사를 해서 썼다.&lt;/p&gt;&#xA;&lt;p&gt;분명 리본메뉴에 차트스타일과 레이아웃 preset 값들이 있는걸 보면, 사용자 설정이 가능할 것이라는 건 생각을 안한걸까 못한걸까?&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;실습&#34;&gt;실습&lt;/h2&gt;&#xA;&lt;p&gt;서식이 다른 두개의 차트가 있다. 차트1의 서식을 차트2에 적용해보자.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 막대그래프 계열바 커스터마이징</title>
+      <link>https://mcjoi.github.io/post/01970/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01970/</guid>
+      <description>&lt;h2 id=&#34;막대그래프-커스터마이징&#34;&gt;막대그래프 커스터마이징&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트 그래프는 사용하기 편하게 되어있다.&lt;br&gt;&#xA;엑셀보다 다루기가 편하고 간편하게 되어있다. 그래서인지 파워포인트를 쓴지 10여년만에, 이런 기능이 있다는걸 알았다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01970/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;알고 있다고? 난 몰랐다.&lt;br&gt;&#xA;아래 그림처럼, 그림을 그리고, 하나씩 찍은다음 그림복사 &amp;gt; 계열 그래프를 찍고 붙여넣기 하면, 위의 그림처럼 완성된다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01970/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;인포그래픽처럼, 이미지도 가능하다는 뜻이다.&lt;br&gt;&#xA;놀랍지 않은가? 안놀랍다면, 별수없다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ppt - 텍스트 서식 한꺼번에 적용하기(볼드, 이탤릭)</title>
+      <link>https://mcjoi.github.io/post/01973/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01973/</guid>
+      <description>&lt;div class=&#34;video-embed&#34;&gt;&#xA;  &lt;div class=&#34;video-embed-inner&#34;&gt;&#xA;    &lt;iframe&#xA;      src=&#34;https://www.youtube.com/embed/EWFtcruNgbA&#34;&#xA;      title=&#34;YouTube video player&#34;&#xA;      frameborder=&#34;0&#34;&#xA;      allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34;&#xA;      allowfullscreen&gt;&#xA;    &lt;/iframe&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;script type=&#34;application/ld+json&#34;&gt;{&#34;@context&#34;:&#34;https://schema.org&#34;,&#34;@type&#34;:&#34;VideoObject&#34;,&#34;description&#34;:&#34;[남들다아는 파워포인트] 그룹 한방에 풀기(해제하기) / VBA&#34;,&#34;embedUrl&#34;:&#34;https://www.youtube.com/embed/EWFtcruNgbA&#34;,&#34;name&#34;:&#34;[남들다아는 파워포인트] 그룹 한방에 풀기(해제하기) / VBA&#34;,&#34;thumbnailUrl&#34;:[&#34;https://i.ytimg.com/vi/EWFtcruNgbA/hqdefault.jpg&#34;],&#34;uploadDate&#34;:&#34;2017-04-11T00:00:00+00:00&#34;,&#34;url&#34;:&#34;https://www.youtube.com/watch?v=EWFtcruNgbA&#34;}&lt;/script&gt;&#xA;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;파워포인트ppt-텍스트-서식-한꺼번에-적용하기볼드-이탤릭&#34;&gt;파워포인트(ppt) 텍스트 서식 한꺼번에 적용하기(볼드, 이탤릭)&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트를 쓰다보면, 100장이 넘는 문서에 폰트나 텍스트 서식을 한꺼번에 바꾸려면,암담할 때가 있다.&lt;br&gt;&#xA;폰트 바꾸기 기능은 있지만, 서식을 일괄로 바꾸는 기능은 아직 없는 것 같다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 한번 해보자.&lt;/p&gt;&#xA;&lt;p&gt;그냥 샘플로, 2개의 슬라이드를 준비했다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;1번은 그냥 텍스트 박스.&lt;/li&gt;&#xA;&lt;li&gt;2번은 표안에 있는 텍스트.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01973/03.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01973/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;구조는 아래와 같다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ppt - 발표시 글자 선명하게 보기(텍스트 테두리)</title>

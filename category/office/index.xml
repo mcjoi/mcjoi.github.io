@@ -751,7 +751,7 @@
       <description>&lt;h2 id=&#34;이름정의&#34;&gt;이름정의&lt;/h2&gt;&#xA;&lt;p&gt;이름정의 기능을 사용하고 있다면, 이미 초보자의 영역은 넘었다. 이미 알겠지만, 엑셀은 피벗테이블을 포함한 표형식의 DB형식의 모습과 그냥 범위로 나열되어 있는 형식의 데이터가 있다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같은 범위로 된 데이터가 있다. 데이터 표가 아니다. 이럴때, 흔히 표의 특정 영역을 지정하여, 이름정의를 한다.&lt;br&gt;&#xA;B2:C20의 영역을 잡아서, 과일이름 영역이라 이름정의를 했다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;정의된 이름(범위)을 사용해서 VLOOKUP 함수를 건다면 다음과 같다. 가장 일반적이지만, 오류의 가능성을 가진 형식이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;오류가 발생하는 이유는 다음과 같이, 17번 이후에 18번 행(신규 행)이 추가되었을때, 이를 이름정의에서 동적으로 반영하지 못한다는 점이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>ppt - 무료 디자인 템플릿 몇가지</title>
+      <title>ppt - 자작 디자인 템플릿 몇가지</title>
       <link>https://mcjoi.github.io/post/01939/</link>
       <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01939/</guid>
@@ -835,7 +835,7 @@
       <description>&lt;h2 id=&#34;엑셀-텍스트에-색-넣기&#34;&gt;엑셀 텍스트에 색 넣기&lt;/h2&gt;&#xA;&lt;p&gt;의외로 엑셀 셀안에서 텍스트에 여러가지 색을 쓸 일이 종종 있다. 특히 줄 바꿈을 할때, 자주 쓰곤 한다.&lt;br&gt;&#xA;너무 쉬운 기능이라서, 한번도 동작 원리에 대해 생각해 본적은 없는데, 가끔 색이 안먹을 때가 있다.&lt;br&gt;&#xA;다들 한번씩 경험해 보지 않았는가?&lt;/p&gt;&#xA;&lt;p&gt;내가 찾은 답이 맞는지 모르겠지만, 결론만 말하면, 셀이 회계 형식으로 설정되어 있으면, 안된다.&lt;br&gt;&#xA;다른 거의 모든 셀 형식에서는 상관이 없는 듯하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01952/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;귀차니즘으로 모든 형식을 대입해보지는 않았다.ㅋㅋ&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xls - 숨기기와 Subtotal 함수</title>
+      <title>xls - 숨기기/필터 그리고 Subtotal 함수</title>
       <link>https://mcjoi.github.io/post/01953/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01953/</guid>
