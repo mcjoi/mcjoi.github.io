@@ -793,7 +793,7 @@ ul li::marker {
 
 .image-overlay-exif {
   position: absolute;
-  right: 18px;
+  left: 18px;
   bottom: 18px;
   z-index: 1;
   padding: 8px 10px;
