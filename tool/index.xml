@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tool/</link>
+    <description>Recent content in Tools on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EXIF Resize Tool</title>
+      <link>https://mcjoi.github.io/tool/exif/</link>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/tool/exif/</guid>
+      <description>&lt;p&gt;포스트 영역 기준(기본 980px)으로 이미지를 리사이징합니다. EXIF 표시를 켜면 이미지 하단에 검은 영역을 추가해 정보를 표시합니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
