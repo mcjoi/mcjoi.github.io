@@ -420,7 +420,7 @@ ul li::marker {
 }
 
 .fab--tools {
-  right: calc(30px + 72px);
+  bottom: calc(30px + 72px + env(safe-area-inset-bottom));
 }
 
 .fab-btn {
@@ -462,31 +462,20 @@ ul li::marker {
 
 .fab-menu {
   position: absolute;
-  right: 0;
-  bottom: 64px;
+  right: 64px;
+  bottom: 6px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.fab--tools .fab-menu {
-  right: 64px;
-  bottom: 6px;
-  flex-direction: row;
   transform: translateX(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .fab.open .fab-menu {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
-}
-
-.fab--tools.open .fab-menu {
   transform: translateX(0);
 }
 
