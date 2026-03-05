@@ -428,7 +428,7 @@ VBE 창에서는 아무 변화가 없다.</p>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
-    <div class="fab">
+    <div class="fab fab--quick">
       <button class="fab-btn" type="button" aria-label="Open quick links" aria-expanded="false">
         <span class="fab-preview" aria-hidden="true">
           <img src="/icon/youtube.svg" alt="" />
@@ -438,19 +438,28 @@ VBE 창에서는 아무 변화가 없다.</p>
         </span>
       </button>
       <div class="fab-menu" aria-hidden="true">
-        <a class="fab-item" href="https://www.youtube.com/channel/UCuHWXrgMa5vkGVNseVu03JQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <a class="fab-item" href="https://www.youtube.com/channel/UCuHWXrgMa5vkGVNseVu03JQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" data-tooltip="YouTube">
           <img src="/icon/youtube.svg" alt="" />
         </a>
-        <a class="fab-item" href="https://www.instagram.com/mcjoi80/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a class="fab-item" href="https://www.instagram.com/mcjoi80/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-tooltip="Instagram">
           <img src="/icon/instagram.svg" alt="" />
         </a>
-        <a class="fab-item" href="https://sunnybong.tistory.com/" target="_blank" rel="noopener noreferrer" aria-label="Tistory">
+        <a class="fab-item" href="https://sunnybong.tistory.com/" target="_blank" rel="noopener noreferrer" aria-label="Tistory" data-tooltip="Tistory">
           <img src="/icon/tistory.svg" alt="" />
         </a>
-        <a class="fab-item" href="/gallery/" aria-label="Gallery">
+        <a class="fab-item" href="/gallery/" aria-label="Gallery" data-tooltip="Gallery">
           <img src="/icon/gallery.svg" alt="" />
         </a>
-        <a class="fab-item" href="/tool/exif/" aria-label="EXIF Tool">
+      </div>
+    </div>
+    <div class="fab fab--tools">
+      <button class="fab-btn" type="button" aria-label="Open tools" aria-expanded="false">
+        <span class="fab-preview fab-preview--single" aria-hidden="true">
+          <img src="/icon/exif.svg" alt="" />
+        </span>
+      </button>
+      <div class="fab-menu" aria-hidden="true">
+        <a class="fab-item" href="/tool/exif/" aria-label="EXIF Tool" data-tooltip="EXIF Tool">
           <img src="/icon/exif.svg" alt="" />
         </a>
       </div>
@@ -625,36 +634,47 @@ VBE 창에서는 아무 변화가 없다.</p>
     </script>
     <script>
       (function() {
-        const fab = document.querySelector('.fab');
-        const btn = document.querySelector('.fab-btn');
-        const menu = document.querySelector('.fab-menu');
-        if (!fab || !btn || !menu) return;
+        const fabs = Array.from(document.querySelectorAll('.fab'));
+        if (fabs.length === 0) return;
 
-        const open = () => {
-          fab.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          menu.setAttribute('aria-hidden', 'false');
-        };
-        const close = () => {
+        const closeFab = (fab) => {
+          const btn = fab.querySelector('.fab-btn');
+          const menu = fab.querySelector('.fab-menu');
           fab.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          menu.setAttribute('aria-hidden', 'true');
+          btn?.setAttribute('aria-expanded', 'false');
+          menu?.setAttribute('aria-hidden', 'true');
         };
 
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (fab.classList.contains('open')) {
-            close();
-          } else {
-            open();
-          }
+        const openFab = (fab) => {
+          const btn = fab.querySelector('.fab-btn');
+          const menu = fab.querySelector('.fab-menu');
+          fab.classList.add('open');
+          btn?.setAttribute('aria-expanded', 'true');
+          menu?.setAttribute('aria-hidden', 'false');
+        };
+
+        fabs.forEach((fab) => {
+          const btn = fab.querySelector('.fab-btn');
+          const menu = fab.querySelector('.fab-menu');
+          if (!btn || !menu) return;
+
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = fab.classList.contains('open');
+            fabs.forEach((item) => closeFab(item));
+            if (!isOpen) openFab(fab);
+          });
         });
 
         document.addEventListener('click', (e) => {
-          if (!fab.contains(e.target)) close();
+          fabs.forEach((fab) => {
+            if (!fab.contains(e.target)) closeFab(fab);
+          });
         });
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') close();
+          if (e.key === 'Escape') {
+            fabs.forEach((fab) => closeFab(fab));
+          }
         });
       })();
     </script>

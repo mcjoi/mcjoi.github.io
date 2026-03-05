@@ -419,6 +419,10 @@ ul li::marker {
   z-index: 40;
 }
 
+.fab--tools {
+  right: calc(30px + 72px);
+}
+
 .fab-btn {
   width: 56px;
   height: 56px;
@@ -437,6 +441,12 @@ ul li::marker {
   grid-template-columns: repeat(2, 12px);
   grid-template-rows: repeat(2, 12px);
   gap: 6px;
+}
+
+.fab-preview--single {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fab-preview img {
@@ -463,10 +473,21 @@ ul li::marker {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.fab--tools .fab-menu {
+  right: 64px;
+  bottom: 6px;
+  flex-direction: row;
+  transform: translateX(10px);
+}
+
 .fab.open .fab-menu {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.fab--tools.open .fab-menu {
+  transform: translateX(0);
 }
 
 .fab-item {
@@ -479,12 +500,48 @@ ul li::marker {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
+  position: relative;
 }
 
 .fab-item img {
   width: 18px;
   height: 18px;
   filter: brightness(0) invert(1);
+}
+
+.fab-item[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #121212;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.fab-item[data-tooltip]::before {
+  content: "";
+  position: absolute;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #121212 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.fab-item[data-tooltip]:hover::after,
+.fab-item[data-tooltip]:hover::before {
+  opacity: 1;
 }
 
 .bottom-appbar {
