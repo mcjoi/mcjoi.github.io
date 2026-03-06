@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project - Webp Convertor on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/project---webp-convertor/</link>
+    <description>Recent content in Project - Webp Convertor on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/project---webp-convertor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows - Webp 변환 유틸</title>
+      <link>https://mcjoi.github.io/post/02997/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/02997/</guid>
+      <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;블로그 최적화를 위해서, webp 포맷을 자주 사용한다. 그런데, 매번 온라인상에서 이미지를 올려서 변환하기도, 포토샵을 사용하기도 좀 그렇다.&lt;/p&gt;&#xA;&lt;p&gt;구글 dev 사이트에서 변환 프로그램을 다운받았는데, 매번 cmd를 입력해줘야 하는 방식이다.&lt;br&gt;&#xA;이 또한 귀찮으니, 파이썬으로 간단한 프로그램을 짜본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;execution&#34;&gt;execution&lt;/h2&gt;&#xA;&lt;p&gt;프로그램 위치는 아래와 같이 구성하고, 당연히 python 실행은 윈도우즈 path에 걸어서 어디서든 동작하게 만들어 둔다. 샘플코드는 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;아래 코드가 저장된 python.py 파일&lt;br&gt;&#xA;└─ ─ ─ ─ ─ ─ libwebp-1.4.0-windows-x64 폴더&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;바탕화면이든 어디든 batch 파일을 써서, 해당 python 프로그램이 실행될 수 있도록 해주면 끝이다.&lt;br&gt;&#xA;단, 본인의 python에 아래 패키지들이 사전에 install 되어있어야 한다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

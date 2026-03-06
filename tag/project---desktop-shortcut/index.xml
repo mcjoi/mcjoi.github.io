@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project - Desktop Shortcut on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/project---desktop-shortcut/</link>
+    <description>Recent content in Project - Desktop Shortcut on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/project---desktop-shortcut/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows - Desktop Shortcut</title>
+      <link>https://mcjoi.github.io/post/03997_en/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/03997_en/</guid>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;I was tired of digging for folders and files, so I made a shortcut app.&lt;br&gt;&#xA;You can do this with Windows shortcuts or tools like Rainmeter, but they&amp;rsquo;re too broad for my use.&lt;br&gt;&#xA;So I rebuilt it with Flutter desktop.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;&#xA;&lt;p&gt;Goal: a floating panel with program launches, site shortcuts, and folder shortcuts.&lt;br&gt;&#xA;Windows shortcuts are enough, but mine kept disappearing when I cleaned the desktop.&lt;br&gt;&#xA;So I made this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>windows - 바탕화면 바로가기 모음</title>
+      <link>https://mcjoi.github.io/post/03997/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/03997/</guid>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;폴더나, 파일을 매번 찾기 귀찮으니, 바로가기를 만들었다.&lt;br&gt;&#xA;desktop 꾸미기 앱(Rainmeter 등)을 이용한다면 더 멋진 UI를 설계할 수 있으나, 내가 원하는 사용범위보다 훨씬 광범위한 기능을 제공하는 관계로, flutter desktop을 통해 다시 만들게 되었다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;structure&#34;&gt;Structure&lt;/h2&gt;&#xA;&lt;p&gt;화면에 프로그램 실행, 특정 사이트 바로가기, 폴더 바로가기 등의 플로팅 창을 만드는 것이 목표이다.&lt;br&gt;&#xA;이는 윈도우즈의 바로가기만 써도 충분히 구현이 가능하지만, 바탕화면을 정리하면서 바로가기 파일들이 자주 사라지기 때문에 만들게 되었다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ 프로그램에 입력창같은 기능은 귀찮으니까, 제외를 하고, 같이 딸려있는 &lt;code&gt;json&lt;/code&gt; 파일을 수정하는 형태로 구성한다.&lt;br&gt;&#xA;✶ 가로 사이즈는 고정이며, 세로 사이즈는 북마크 수량에 따라 자동으로 조정이 됐으면 한다.&lt;br&gt;&#xA;✶ 이미지만 있으면 뭔지 까먹으니까, 마우스를 아이콘에 오버했을때, 내용을 확인할 수 있는 텍스트가 Hover 효과로 나타난다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

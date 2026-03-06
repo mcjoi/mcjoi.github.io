@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project - Mouse Click Animation on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/project---mouse-click-animation/</link>
+    <description>Recent content in Project - Mouse Click Animation on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 22 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/project---mouse-click-animation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows - Mouse Click Animation</title>
+      <link>https://mcjoi.github.io/post/03998_en/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/03998_en/</guid>
+      <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;Adding mouse click or touch motion in a Flutter app is no big deal. But what about apps running on Windows 10. If you can use Lottie animations, you could turn boring click motions into something that feels like a macOS app.&lt;/p&gt;&#xA;&lt;p&gt;Windows has a long history, but since Vista, I haven&amp;rsquo;t really come across programs or open-source projects that deal with click animations. Sure, it&amp;rsquo;s mostly a trivial feature, but the built-in Windows functionality is just terrible.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
