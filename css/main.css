@@ -593,6 +593,62 @@ ul li::marker {
   gap: 8px;
 }
 
+.drawer-tag-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer-tag-group {
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  background: #1b1b1b;
+  padding: 8px 10px;
+}
+
+.drawer-tag-title {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.drawer-tag-title::-webkit-details-marker {
+  display: none;
+}
+
+.drawer-tag-title::after {
+  content: "▾";
+  float: right;
+  color: #8f8f8f;
+}
+
+.drawer-tag-group[open] .drawer-tag-title::after {
+  transform: rotate(180deg);
+}
+
+.drawer-tag-links {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.drawer-tag-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: #1f1f1f;
+  color: #d8d8d8;
+  font-size: 12px;
+}
+
+.drawer-tag-link:hover {
+  background: #2a2a2a;
+}
+
 .appbar-title {
   font-family: "ShadowsIntoLight", "IBMPlexSansKR-Regular",
     "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;

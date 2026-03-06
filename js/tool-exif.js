@@ -1476,7 +1476,8 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
 
   // <stdin>
   (() => {
-    const DEFAULT_WIDTH = 980;
+    const POST_MAX_WIDTH = 980;
+    const DEFAULT_WIDTH = 702;
     const dropzone = document.getElementById("tool-dropzone");
     const input = document.getElementById("tool-input");
     const pickBtn = document.getElementById("tool-pick");
@@ -1547,7 +1548,7 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
       <td><input type="checkbox" class="tool-row-check" /></td>
       <td class="tool-filename">${entry.file.name}</td>
       <td class="tool-original">\uC6D0\uBCF8 \uD06C\uAE30 \uD655\uC778 \uC911...</td>
-      <td><input class="tool-width-input" type="number" min="200" max="4000" step="10" value="${DEFAULT_WIDTH}" /></td>
+      <td><input class="tool-width-input" type="number" min="200" max="${POST_MAX_WIDTH}" step="10" value="${DEFAULT_WIDTH}" /></td>
       <td><input class="tool-exif-input" type="checkbox" /></td>
       <td class="tool-result">-</td>
       <td class="tool-status">\uB300\uAE30</td>
@@ -1596,7 +1597,7 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
       if (!row) return { width: DEFAULT_WIDTH, exif: false };
       const widthInput = row.querySelector(".tool-width-input");
       const exifInput = row.querySelector(".tool-exif-input");
-      const width = Math.max(200, Number(widthInput?.value) || DEFAULT_WIDTH);
+      const width = Math.min(POST_MAX_WIDTH, Math.max(200, Number(widthInput?.value) || DEFAULT_WIDTH));
       const exif = !!exifInput?.checked;
       return { width, exif };
     };
@@ -1638,7 +1639,7 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
         return;
       }
       const settings = readRowSettings(entry);
-      const targetWidth = Math.min(settings.width, entry.width);
+      const targetWidth = Math.min(settings.width, entry.width, POST_MAX_WIDTH);
       const scale = targetWidth / entry.width;
       const targetHeight = Math.round(entry.height * scale);
       entry.exifEnabled = settings.exif;
@@ -1675,7 +1676,7 @@ this.ifd0Offset: ${this.ifd0Offset}, file.byteLength: ${e2.byteLength}`), e2.tif
       canvas.height = targetHeight + barHeight;
       ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
       if (settings.exif && exifText) {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.85)";
+        ctx.fillStyle = "rgb(31, 31, 31)";
         ctx.fillRect(0, targetHeight, targetWidth, barHeight);
         ctx.fillStyle = "#eaeaea";
         ctx.textBaseline = "top";
