@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 날짜에 따라 테이블 색 변경하기 / WBS 서식 만들기 | shaaaaallow dive</title>
-    <meta name="description" content="날짜 수식은 괴롭다 엑셀이든 DB든 날짜를 계산하는 작업은 짜증나는 작업이다. 사무직이라면 반드시 한번은 보게되는 WBS, 프로젝트 관리 툴이 엄청나게 많아졌지만, 아직 WBS는 역시 엑셀이다. WBS를 여러번 만들다보면 날짜 수식을 잘하게 되는 날이 올것이다.
-흔해 빠진 WBS 모양은 아래와 같을 것이다. 시작일과 종료일을 기준으로 기간을 적고, 일자대로 색을 칠해야한다.
-두가지 짜증나는 작업이 동반되는 것을 예상할 수 있다.
-시작일과 종료일 사이 기간에 해당하는 날짜별에 색칠을 해야한다. 칠해준 기간에서 주말을 빼줘야하고, 공휴일도 빼줘야한다. 아래 그림은 대략 완성된 이미지이다. 주말은 회색처리를 했으며, 친절하게 오늘 날짜에는 빨간색 하일라이트도 넣어줬다. 살짝 애매한건 공휴일이다.
-" />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01903/" />
+    <title>Android | shaaaaallow dive</title>
+    <meta name="description" content="Android" />
+    <link rel="canonical" href="https://mcjoi.github.io/tag/android/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -585,233 +581,55 @@
     </aside>
     <main class="page">
       
-  <article class="post">
-    <header class="post-header">
-      <h1>xls - 날짜에 따라 테이블 색 변경하기 / WBS 서식 만들기</h1>
-      <div class="post-meta">
-        
-        
-        <div class="post-meta-date">
-          <span>2022-12-05</span>
-          
-        </div>
-        <div class="post-meta-tags">
-          
-            
-              <a class="chip chip--tag" href="/tag/excel---intermediate/">#Excel - Intermediate</a>
-            
-          
-        </div>
-      </div>
-    </header>
-
-    <div class="ad-slot ad-slot--body">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="6643349525"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-
-    <div class="post-content">
-        
-        
-        
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="날짜-수식은-괴롭다">날짜 수식은 괴롭다</h2>
-<p>엑셀이든 DB든 날짜를 계산하는 작업은 짜증나는 작업이다. 사무직이라면 반드시 한번은 보게되는 WBS, 프로젝트 관리 툴이 엄청나게 많아졌지만, 아직 WBS는 역시 엑셀이다. WBS를 여러번 만들다보면 날짜 수식을 잘하게 되는 날이 올것이다.</p>
-<p>흔해 빠진 WBS 모양은 아래와 같을 것이다. 시작일과 종료일을 기준으로 기간을 적고, 일자대로 색을 칠해야한다.<br>
-두가지 짜증나는 작업이 동반되는 것을 예상할 수 있다.</p>
-<ul>
-<li>시작일과 종료일 사이 기간에 해당하는 날짜별에 색칠을 해야한다.</li>
-<li>칠해준 기간에서 주말을 빼줘야하고, 공휴일도 빼줘야한다.</li>
-</ul>
-<p>아래 그림은 대략 완성된 이미지이다. 주말은 회색처리를 했으며, 친절하게 오늘 날짜에는 빨간색 하일라이트도 넣어줬다. 살짝 애매한건 공휴일이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/01.jpg" alt="myimg"></p>
-<br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="기간-내-날짜-색칠">기간 내 날짜 색칠</h2>
-<p>각 셀에 시작일과 종료일 사이에 있는지 여부를 1, 0로 기재해주고, 이에 따라 조건부 서식을 입혀주면 된다.<br>
-내가 사용한 과정은 아래와 같다. 날짜 행과 시작일, 종료일 열에 이름정의를 해주고, 아래 수식을 입력해 주면 끝이다.</p>
-<p class="text-box">=IF(AND(일자&gt;=시작일, 일자&lt;=종료일),1,0)</p>
-<Br>
-<br>
-<p>팁은 영역 참조시 날짜 행과 시작일/종료일 열에 대한 절대참조를 붙이다가 실수할 수 있으니, 이름정의를 사용하라는 것이다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/02.jpg" alt="myimg"></p>
-<br>
-<br>
-<p>조건부 서식으로 셀 값이 1과 0일때, 색을 지정해 준다. 이때, 1, 0이 보이지 않도록 텍스트 색상도 바꿔준다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/03.png" alt="myimg"></p>
-<br>
-<br>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="6643349525"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-                </div>
-              
-              <h2 id="주말-처리">주말 처리</h2>
-<p>날짜가 토요일 또는 일요일이라면, 조건부 서식으로 회색칠을 해준다.<br>
-아래와 같은 수식으로 처리가 가능하다.</p>
-<p class="text-box">=OR(WEEKDAY(F$10)=1,WEEKDAY(F$10)=7)</p>
-<br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/04.png" alt="myimg"></p>
-<br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="오늘-날짜-하일라이트">오늘 날짜 하일라이트</h2>
-<p>뭐&hellip; 거의 WBS에서는 무쓸모하겠지만, 오늘날짜에 해당하면 빨간색 처리를 추가로 해주었다.</p>
-<p class="text-box">=F$10=TODAY()</p>
-<br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/05.png" alt="myimg"></p>
-<br>
-<br>
-
-            
-          
-            
-              
-              <h2 id="공휴일-처리">공휴일 처리</h2>
-<p>이제 공휴일 처리이다. 깔끔하게 셀안에서 처리할 수도 있겠지만? 매번 바뀔 수 있으니, 별도 행을 추가 해 주었다. 나중에 이는 숨김처리 하는 것이 좋겠다. 공휴일 리스트의 테이블에서 공휴일을 0과 1처리해주었다.</p>
-<p class="text-box">{=SUM(IF(F16 = 공휴일, 1))}</p>
-<br>
-<br>
-<p>마지막으로 period 열에서, 아래 수식으로 공휴일을 차감해주면 길고 긴 작업이 끝이다.</p>
-<p class="text-box">=NETWORKDAYS(C18,D18,공휴일)</p>
-<br>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/06.jpg" alt="myimg"></p>
-<br>
-<br>
-<p>역시 글로보면 확 와닿지는 않게 되는 것 같다.</p>
-<p>끝.</p>
-
-            
-          
-        
-      </div>
-
-    <div class="ad-slot ad-slot--footer">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="2162488542"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
-
+  <section class="grid">
     
     
       
-      
-      
-      
-      
-      
-      
-      
-      
-        <section class="related-posts">
-          <h3>Related Posts</h3>
-          <div class="related-divider" aria-hidden="true"></div>
-          <div class="related-posts-items">
+      <article class="post-card">
+        
+        <a class="thumb" href="/post/03994/" aria-label="android - 수능수준 초/중/고 영단어 플래시 카드 &#43; papago"
+           style="background-image: url('/img/03_flutter_480.jpg');"></a>
+        <div class="post-body">
+          <h3 class="post-title"><a href="/post/03994/">android - 수능수준 초/중/고 영단어 플래시 카드 &#43; papago</a></h3>
+          <div class="post-meta">
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-23</span>
-                <a href="/post/00991/">xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</a>
-              </div>
+              <a class="chip chip--tag" href="/category/dev/">dev</a>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-02-05</span>
-                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
-              </div>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/01991/">xls - VBA Userform 만들기</a>
-              </div>
             
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-27</span>
-                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-08</span>
-                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-05</span>
-                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-01-02</span>
-                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
-              </div>
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2025-12-31</span>
-                <a href="/post/01995/">VBA/매크로 사용하기</a>
-              </div>
+            <span>2026-01-27</span>
             
           </div>
-        </section>
-      
+        </div>
+      </article>
     
+  </section>
 
-  </article>
+  <div class="more-wrap">
+    <button class="more-btn" type="button">More</button>
+  </div>
+
+  <script>
+    (function() {
+      const revealCount = 9;
+      const cards = Array.from(document.querySelectorAll('.post-card'));
+      const moreBtn = document.querySelector('.more-btn');
+      if (!moreBtn || cards.length <= revealCount) {
+        if (moreBtn) moreBtn.style.display = 'none';
+        return;
+      }
+      let visible = revealCount;
+      cards.forEach((card, idx) => {
+        if (idx >= revealCount) card.classList.add('hidden');
+      });
+      moreBtn.addEventListener('click', () => {
+        const next = cards.slice(visible, visible + revealCount);
+        next.forEach(card => card.classList.remove('hidden'));
+        visible += next.length;
+        if (visible >= cards.length) moreBtn.style.display = 'none';
+      });
+    })();
+  </script>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
