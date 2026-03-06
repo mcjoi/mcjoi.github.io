@@ -23,13 +23,6 @@
       <description>&lt;h2 id=&#34;vba매크로&#34;&gt;VBA(매크로)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀과 파워포인트의 기능은 수십년간 쌓여온 노하우에 의해 축적된 기술의 총집합이라 할 수 있다. 감히 누가 여기에 이견을 달 수 있을까? 하지만, 너무 많은 기능들은 오히려 접근성을 떨어뜨리는 원인이 되니, 가끔은 자주쓰는 기능을 입맛에 맞게 VBA(매크로)로 구성해 둔다면, 혼란에서 벗어날 수 있다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;추가-기능add-in&#34;&gt;추가 기능(add-in)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀이든 파워포인트든 VBA 코드가 포함된 파일(.xlsm, .pptm)로 저장할 수 있지만, 새로 파일을 만들었을 때 해당 기능을 사용할 수 없고, 문서를 주고 받는 경우, 상당한 거부감이 들 수밖에 없다. 그래서 일반적으로 프로그램 실행시 백그라운드에서 자동으로 동작하는 추가기능(add-in) 형태로 구성을 하게 된다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>MacroToolkit - excel, powerpoint</title>
-      <link>https://mcjoi.github.io/post/01999/</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/01999/</guid>
-      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;회사생활을 하면서 수집하거나 직접 만든 매크로들 중에 가장 빈번히 사용하거나 유용한 기능을 모아두었다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;엑셀&#34;&gt;엑셀&lt;/h3&gt;&#xA;&lt;p&gt;excel add-in userform (.xla)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_1.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;파워포인트&#34;&gt;파워포인트&lt;/h3&gt;&#xA;&lt;p&gt;powerpoint add-in (.ppam)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_2.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;things-to-know&#34;&gt;Things to Know&lt;/h2&gt;&#xA;&lt;p&gt;몇가지 미리 알아야할 사항은 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ 엑셀은 VBA 사용 이후 UNDO(ctrl + z)가 적용되지 않는다. 따라서, 기능이 익숙해지지 않았다면 사용전에 엑셀 파일을 다른이름으로 저장하고 사용하는 것을 추천한다.&lt;br&gt;&#xA;✶ 모든 상황에 대한 예외 처리가 되어있지는 않기 때문에, 정해진 조건 내에서 사용하지 않을 경우, 에러가 날 수 있다.&lt;br&gt;&#xA;✶ 매크로 기본 언어 및 설명이 영어로 되어있는데, 발로적은 영어라 정확하지 않을 수 있다.&lt;br&gt;&#xA;✶ PC에 해가 될 수 있는 그 어떤 코드도 포함되어있지 않다.&lt;br&gt;&#xA;✶ VBA 코드에는 암호가 걸려있다. 큰 의미는 없다.&lt;br&gt;&#xA;✶ 개인적으로 필요한 기능을 모아두었을 뿐, 상황에 따라 추가로 필요한 기능이 있다면 &amp;lsquo;chaGPT&amp;rsquo;와 함께 직접 만들어 보는 것을 추천한다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>xls - numberstring(숫자 한글로 바꾸기)</title>
       <link>https://mcjoi.github.io/post/00995/</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>

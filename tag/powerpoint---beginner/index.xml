@@ -23,13 +23,6 @@
       <description>&lt;h2 id=&#34;상황&#34;&gt;상황&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 특정영역을 카피해서 파워포인트에 붙이기를 하면, 일반 표 형태로 엑셀이 달라붙어서 서식을 다시 지정해줘야하고,&lt;br&gt;&#xA;import로 엑셀을 임베딩시키면 위치나 디자인을 잡기가 그지 같아진다.&lt;/p&gt;&#xA;&lt;p&gt;그래서 다들 본인들 편한 방식으로 엑셀과 파워포인트간 테이블 연동을 처리 하고 있을 것이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;테이블-통째로-복사-개선&#34;&gt;테이블 통째로 복사 개선&lt;/h2&gt;&#xA;&lt;p&gt;생각할 수 있는 첫번째 방법은 파워포인트에서 만든 테이블 양식을 엑셀에다 붙이고, 데이터 작업을 해서, 데이터만 다시 복사하는 방법이다.&lt;/p&gt;&#xA;&lt;p&gt;테이블 양식을 고스란히 유지한다는 점에서 손이 덜가긴 하지만, 아쉽게도 엑셀에는 파워포인트 테이블 셀에서의 &lt;code&gt;margin&lt;/code&gt; 값이 없다. &lt;code&gt;margin&lt;/code&gt; 값 정보가 없으니, 0,0,0,0 으로 변한다. (숫자의 경우, 대부분 끝쪽에 아주 보기 싫게 붙는다.)&lt;/p&gt;</description>
     </item>
     <item>
-      <title>MacroToolkit - excel, powerpoint</title>
-      <link>https://mcjoi.github.io/post/01999/</link>
-      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/post/01999/</guid>
-      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;회사생활을 하면서 수집하거나 직접 만든 매크로들 중에 가장 빈번히 사용하거나 유용한 기능을 모아두었다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;엑셀&#34;&gt;엑셀&lt;/h3&gt;&#xA;&lt;p&gt;excel add-in userform (.xla)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_1.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;파워포인트&#34;&gt;파워포인트&lt;/h3&gt;&#xA;&lt;p&gt;powerpoint add-in (.ppam)&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01999/01999_macrotoolkit_2.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;things-to-know&#34;&gt;Things to Know&lt;/h2&gt;&#xA;&lt;p&gt;몇가지 미리 알아야할 사항은 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ 엑셀은 VBA 사용 이후 UNDO(ctrl + z)가 적용되지 않는다. 따라서, 기능이 익숙해지지 않았다면 사용전에 엑셀 파일을 다른이름으로 저장하고 사용하는 것을 추천한다.&lt;br&gt;&#xA;✶ 모든 상황에 대한 예외 처리가 되어있지는 않기 때문에, 정해진 조건 내에서 사용하지 않을 경우, 에러가 날 수 있다.&lt;br&gt;&#xA;✶ 매크로 기본 언어 및 설명이 영어로 되어있는데, 발로적은 영어라 정확하지 않을 수 있다.&lt;br&gt;&#xA;✶ PC에 해가 될 수 있는 그 어떤 코드도 포함되어있지 않다.&lt;br&gt;&#xA;✶ VBA 코드에는 암호가 걸려있다. 큰 의미는 없다.&lt;br&gt;&#xA;✶ 개인적으로 필요한 기능을 모아두었을 뿐, 상황에 따라 추가로 필요한 기능이 있다면 &amp;lsquo;chaGPT&amp;rsquo;와 함께 직접 만들어 보는 것을 추천한다.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>ppt - 동일한 너비의 도형으로 페이지 분할하기</title>
       <link>https://mcjoi.github.io/post/01990/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
@@ -70,6 +63,13 @@
       <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01872/</guid>
       <description>&lt;h2 id=&#34;도식-그릴-때-선-시작점-연결&#34;&gt;도식 그릴 때, 선 시작점 연결&lt;/h2&gt;&#xA;&lt;p&gt;어떤 도식을 그릴 때, 꺽인선은 굉장히 편리함을 준다. 특히 아래와 같이 위계가 있는 경우, 각 센터를 맞춰주는데 굉장히 편하다. 2003인가 언제부터인가 새로들어온 기능인데, 그 전에는 일일이 노가다로 맞춰줘야 했던 끔찍한 기억이 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01872/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;하지만, 보고서를 작성하다보면 어쩔수 없이 상위 도형의 센터에서 벗어난 곳을 기준으로 시작 포인트를 잡아야 하는 경우가 있는데, 이 경우, 시작점이 흐트러진 만큼 다소 귀찮은 작업이 필요하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01872/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;이 때, 아무 도형이나 추가를 해서, null object의 역할을 하도록 해보자. 아래 그림처럼, 박스를 처서 센터를 각 꺽인선의 시작점을 이 도형과 맞춰주고,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xls/ppt - 엑셀/파워포인트2019 실행취소(Undo) 횟수 조정하기</title>
+      <link>https://mcjoi.github.io/post/01877/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01877/</guid>
+      <description>&lt;h2 id=&#34;엑셀2019-실행취소undo-횟수-조정하기&#34;&gt;엑셀2019 실행취소(Undo) 횟수 조정하기&lt;/h2&gt;&#xA;&lt;p&gt;복사(ctrl + c), 붙여넣기(ctrl + v) 만큼이나 자주 쓰는 단축키가 실행취소(ctrl + z)가 아닐까?&lt;br&gt;&#xA;하지만, 누구나 한번쯤 실행취소를 연타하다가, 멈춰서 당황한 기억이 있지 않는가? 분명 이전 버전에서는 옵션에 실행취소 횟수를 정하는 내용이 있었던 것으로 기억하는데, 2019버전에서는 안보인다. 나만 안보이는건지는 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;레지스트리-수정&#34;&gt;레지스트리 수정&lt;/h2&gt;&#xA;&lt;p&gt;cmd 창을 열어 regedit를 쳐서, 레지스트리 편집기를 열어준다.&lt;br&gt;&#xA;오피스2019 버전의 경우, 상단 주소창에, 아래 주소를 입력하면, 엑셀 레지스트리의 option폴더로 이동할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Excel\Options&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ppt - ppt파일에 포함된 이미지 최적화 추출</title>
