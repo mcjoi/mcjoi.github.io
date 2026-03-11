@@ -6,8 +6,15 @@
     <description>Recent content in Excel - Beginner on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/tag/excel---beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - indirect 함수로 동적 요약 테이블 만들기</title>
+      <link>https://mcjoi.github.io/post/01848/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01848/</guid>
+      <description>&lt;h2 id=&#34;테이블&#34;&gt;테이블&lt;/h2&gt;&#xA;&lt;p&gt;테이블은 영역에 비해서 사용하기가 수월한 편이지만, 자주 두고 사용하지 않는 데이터의 경우, 구지 테이블로 만들지 않는 경우가 많은데, 사용성과 오류방지 차원에서 가능하다면 테이블을 사용해야 한다.&lt;/p&gt;&#xA;&lt;p&gt;아래와 같이 mtcars 데이터를 ctrl + t 단축키로 테이블로 만들어 준다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01848/01.webp&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;동적-조건&#34;&gt;동적 조건&lt;/h2&gt;&#xA;&lt;p&gt;구현하고자 하는 바는 아래와 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;[model] 컬럼에 &amp;ldquo;Mazda&amp;rdquo; 키워드가 포함되는 경우,&lt;br&gt;&#xA;[model] 열부터 [am] 열까지 숫자 값에 대한 합계와 개수를 추출한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;선택할 열에 대해서는 값을 입력하면 동적으로 적용될 수 있도록 상단에 컬럼명을 입력할 수 있는 공간을 두었다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>xls - VBA Userform 만들기</title>
       <link>https://mcjoi.github.io/post/01991/</link>

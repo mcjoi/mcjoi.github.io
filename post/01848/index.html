@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>sheets - 다른 파일의 데이터 참조하기(query, importrange) | shaaaaallow dive</title>
-    <meta name="description" content="구글시트 - 다른 파일의 데이터 참조하기(query, importrange) 구글시트는 기본적으로 구글 드라이브에 모든 파일이 저장되어있다. 다른 파일이나 영역을 참조해서 데이터를 불러올때는 어떻게 해야할까?
-인원현황4, 인원현황5 두 개의 파일(워크북)을 구글 드라이브에서 생성했다고 가정을 하자. 인원현황4 파일에서 인원현황5의 특정 영역이나, 테이블을 참조해서 사용하고자 한다. 가장 먼저 해야할 일을 파일의 경로(url)을 알아야 할 것이다.
-기본적으로 워크북을 켜면 수정(edit)모드에 있고, 아래와 같은 주소가 브라우저에 표기가 될 것이다.
-/edit 이전 url이 해당 문서의 경로(url) 되시겠다.
-https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0
-다른 워크북에서의 영역 참조시 importrange 함수를 사용할 수 있다. 구글 시트의 또 다른 강점인 실시간 example을 보면 아주 친절하게 나와있다.
+    <title>xls - indirect 함수로 동적 요약 테이블 만들기 | shaaaaallow dive</title>
+    <meta name="description" content="테이블 테이블은 영역에 비해서 사용하기가 수월한 편이지만, 자주 두고 사용하지 않는 데이터의 경우, 구지 테이블로 만들지 않는 경우가 많은데, 사용성과 오류방지 차원에서 가능하다면 테이블을 사용해야 한다.
+아래와 같이 mtcars 데이터를 ctrl &#43; t 단축키로 테이블로 만들어 준다.
+동적 조건 구현하고자 하는 바는 아래와 같다.
+[model] 컬럼에 &ldquo;Mazda&rdquo; 키워드가 포함되는 경우,
+[model] 열부터 [am] 열까지 숫자 값에 대한 합계와 개수를 추출한다.
+선택할 열에 대해서는 값을 입력하면 동적으로 적용될 수 있도록 상단에 컬럼명을 입력할 수 있는 공간을 두었다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01868/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01848/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -589,18 +589,18 @@ https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPT
       
   <article class="post">
     <header class="post-header">
-      <h1>sheets - 다른 파일의 데이터 참조하기(query, importrange)</h1>
+      <h1>xls - indirect 함수로 동적 요약 테이블 만들기</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2024-06-17</span>
+          <span>2026-03-11</span>
           
         </div>
         <div class="post-meta-tags">
           
             
-              <a class="chip chip--tag" href="/tag/sheets/">#Sheets</a>
+              <a class="chip chip--tag" href="/tag/excel---beginner/">#Excel - Beginner</a>
             
           
         </div>
@@ -625,50 +625,41 @@ https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPT
         
         
         
-          <h2 id="구글시트---다른-파일의-데이터-참조하기query-importrange">구글시트 - 다른 파일의 데이터 참조하기(query, importrange)</h2>
-<p>구글시트는 기본적으로 구글 드라이브에 모든 파일이 저장되어있다. 다른 파일이나 영역을 참조해서 데이터를 불러올때는 어떻게 해야할까?</p>
-<p>인원현황4, 인원현황5 두 개의 파일(워크북)을 구글 드라이브에서 생성했다고 가정을 하자. 인원현황4 파일에서 인원현황5의 특정 영역이나, 테이블을 참조해서 사용하고자 한다. 가장 먼저 해야할 일을 파일의 경로(url)을 알아야 할 것이다.<br>
-기본적으로 워크북을 켜면 수정(edit)모드에 있고, 아래와 같은 주소가 브라우저에 표기가 될 것이다.<br>
-/edit 이전 url이 해당 문서의 경로(url) 되시겠다.<br>
-<a href="https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0">https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPTQHs/edit?gid=0#gid=0</a></p>
-<br>
-<Br>
-<p>다른 워크북에서의 영역 참조시 importrange 함수를 사용할 수 있다. 구글 시트의 또 다른 강점인 실시간 example을 보면 아주 친절하게 나와있다.</p>
-<p class="text-box">IMPORTRANGE(spreadsheet_url, range_string)<br>
-→ spreadsheet_url : 위에서 알아낸 주소, 문자(string) 값으로 처리 - &quot; &quot; 안에 기재<br>
-→ range_string : 참조할 영역의 주소값, 문자(string)값으로 처리 - &quot; &quot; 안에 기재</p>
+          <h2 id="테이블">테이블</h2>
+<p>테이블은 영역에 비해서 사용하기가 수월한 편이지만, 자주 두고 사용하지 않는 데이터의 경우, 구지 테이블로 만들지 않는 경우가 많은데, 사용성과 오류방지 차원에서 가능하다면 테이블을 사용해야 한다.</p>
+<p>아래와 같이 mtcars 데이터를 ctrl + t 단축키로 테이블로 만들어 준다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01848/01.webp" alt="myimg"></p>
 <br>
 <br>
-<p>나의 경우, 인원현황4 시트의 임의에 셀에 시트의 주소값을 넣어놓았다. 해당 내용을 호출하게 되면, 참조에러(#REF!)가 뜨는데, 마우스를 오버하면, 권한을 승인할 것인지, 팝업창이 뜨는데, Allow access를 클릭하여 승인해준다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/01.png" alt="myimg"></p>
+<br>
+<h2 id="동적-조건">동적 조건</h2>
+<p>구현하고자 하는 바는 아래와 같다.</p>
+<p class="text-box">[model] 컬럼에 &ldquo;Mazda&rdquo; 키워드가 포함되는 경우,<br>
+[model] 열부터 [am] 열까지 숫자 값에 대한 합계와 개수를 추출한다.</p>
 <br>
 <br>
-<p>권한 승인이 확인되면, 아래와 같이 값이 불러와 진다. 일단 테스트로 Sheet1 의 a1셀만 참조해보았다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/02.png" alt="myimg"></p>
+<br>
+<p>선택할 열에 대해서는 값을 입력하면 동적으로 적용될 수 있도록 상단에 컬럼명을 입력할 수 있는 공간을 두었다.</p>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01848/02.webp" alt="myimg"></p>
 <br>
 <br>
-<p>인원현황5 파일(워크북)의 특정영역을 통째로 참조한다면 별 문제가 없지만, 일부만 가공을 해서 가지고 온다면, query 함수를 사용할 수있다. 예를 들어 아래 인원현황5 시트에서 소속이 &lsquo;서울대&rsquo; 아니면 &lsquo;경기대&rsquo;인 경우만 값을 호출하고 싶다고 하자.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/03.png" alt="myimg"></p>
+<br>
+<h2 id="indirect-함수-사용">indirect 함수 사용</h2>
+<p>테이블에서 테이블 컬럼을 불러오는 방식은 Table1[컬럼1] 이고, 복수의 컬럼을 호출하는 것은 Table1[[컬럼1]:[컬럼x]] 가 된다.</p>
+<p>따라서, 컬럼명을 변수로 호출하기 위해 아래와 같이 수식을 넣어주면 된다. if 조건은 Mazda 가 포함된 행을 찾는 조건, 합계 영역은 indirect로 지정된 영역이 된다.</p>
+<p class="text-box">=SUM(<br>
+IF(<br>
+(ISNUMBER(FIND(&ldquo;Mazda&rdquo;,Table1[model]))),<br>
+INDIRECT(&ldquo;Table1[[&rdquo; &amp; <strong>O1</strong> &amp; &ldquo;]:[&rdquo; &amp; <strong>O2</strong> &amp; &ldquo;]]&rdquo;)<br>
+)<br>
+)</p>
+<br>
+<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01848/03.webp" alt="myimg"></p>
 <br>
 <br>
-<p>sql문을 query 함수에 쳐주면 된다. select * 문을 통해 모든 column을 참조한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/04.png" alt="myimg"></p>
 <br>
-<br>
-<p>where 문을 사용하여, 조건을 기재해준다. 조건열은 호출되는 테이블을 기준으로 Col1, Col2 로 기재를 한다. sql문을 작성하기 시작할때, 큰따옴표(&quot;&quot;)를 이미 사용했으므로, 조건에 텍스트를 작성할때 큰따옴표(&quot;&quot;) 대신 작은따옴표(&rsquo;&rsquo;)를 사용한다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/05.png" alt="myimg"></p>
-<br>
-<br>
-<p>두개의 조건을 연결할 때는 or 조건을 사용한다. 맨 마지막 header 옵션을 통해 header를 표시할지 말지를 결정한다. 결과물은 아래와 같다. sql 관련해서는 구체적으로 적기에 내 지식이 부족하다. 수많은 레퍼런스들이 있으므로 참고해서 작성하면 된다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/06.png" alt="myimg"></p>
-<br>
-<br>
-<p>여러개의 시트가 동일한 sql 조건을 가지는 경우, 다수의 시트를 참조하는데 사용할 수 있다. importrange함수를 여러번 사용하는데, importrange함수를 {중괄호}로 묶어서 배열처리를 해주고, importrange 함수가 끝날때마다 세미콜론(;)을 붙여주는데, 맨 마지막 importrange함수에서는 제외를 시켜야한다.<br>
-인원현황5, 인원현황6에서 서울대/경기대 데이터만 호출한 결과는 다음과 같다.</p>
-<p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01868/07.png" alt="myimg"></p>
-<br>
-<br>
-<p>막연한 생각으로는 시트를 배분하여 데이터를 취합할 때 강력한 기능을 할 것 생각이 된다.</p>
+<p>이름 정의도 좋은 방법이지만, 테이블 헤더를 사용하면, 구지 그럴 필요가 없고, 특히 헤더에 월(1월, 2월 등)이 들어있는 피벗 테이블에서 연속된 월 범위를 지정하기 편하다.</p>
+<p>필터나 쿼리 등의 신규 함수를 쓰면, 더 나아질런지 모르지만, 아직 365를 쓰지 않아서 모르겠다.</p>
 <p>끝.</p>
 
         
@@ -703,11 +694,6 @@ https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPT
           <h3>Related Posts</h3>
           <div class="related-divider" aria-hidden="true"></div>
           <div class="related-posts-items">
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-03-11</span>
-                <a href="/post/01848/">xls - indirect 함수로 동적 요약 테이블 만들기</a>
-              </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-02-23</span>
@@ -752,6 +738,11 @@ https://docs.google.com/spreadsheets/d/1gwY9LsvkfDbxH5AEsHO5bL2A5cm1GKijeIEzvpPT
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-02</span>
                 <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/01995/">VBA/매크로 사용하기</a>
               </div>
             
           </div>
