@@ -1082,7 +1082,7 @@ ul li::marker {
 .post-content h2,
 .post-content h3 {
   margin: 0 0 16px;
-  color: #AE2A45;
+  color: #FBCFD0;
 }
 
 .post-content h2 {
@@ -1108,7 +1108,7 @@ ul li::marker {
   transform: translateY(-50%);
   width: 4px;
   height: 0.9em;
-  background: linear-gradient(180deg, #ffffff, #8a8a8a);
+  background: #FBCFD0;
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: none;
