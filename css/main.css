@@ -1082,6 +1082,7 @@ ul li::marker {
 .post-content h2,
 .post-content h3 {
   margin: 0 0 16px;
+  color: #AE2A45;
 }
 
 .post-content h2 {
@@ -1120,7 +1121,7 @@ ul li::marker {
   background: linear-gradient(180deg, #222222, #1d1d1d);
   border: 1px solid #2a2a2a;
   border-radius: 10px;
-  color: var(--muted);
+  color: #AE2A45;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
@@ -1165,6 +1166,11 @@ ul li::marker {
 
 .post-content a {
   color: #9cc7ff;
+}
+
+.post-content {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .post-content pre,
@@ -1269,6 +1275,10 @@ ul li::marker {
   white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: anywhere;
+}
+
+.post-content .highlight code > span {
+  display: inline !important;
 }
 
 .post-content code {
