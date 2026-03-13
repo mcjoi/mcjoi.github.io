@@ -793,6 +793,13 @@
       <description>&lt;h2 id=&#34;참조표테이블을-이름정의에-사용하기-위한-배열로-변환&#34;&gt;참조표(테이블)을 이름정의에 사용하기 위한 배열로 변환&lt;/h2&gt;&#xA;&lt;p&gt;얼마 전에, 이름정의에 배열로 참조표(테이블)을 넣어서, 사용하는 방법에 대한 글을 적은 적이 있다. 한번 해놓으면 편하게 사용할 수 있지만, 단점은 아무래도, 따옴표와 컴마, 그리고 세미콜론까지 입력이 용이하지 않은 창에 수기로 타자를 치기가 어렵다는 점이겠다.&lt;/p&gt;&#xA;&lt;p&gt;VBA로 간단하게 테이블을 배열 텍스트로 변환하는 코드이다.&lt;br&gt;&#xA;테이블 영역을 선택하면 txt파일이 생기고, 이를 클립보드에 복사하는 과정까지이다. 구지 txt파일을 생성하지 않아도 되지만, 변환과정에서 생기는 오류 등을 확인하기 위한 LOG라고 보면 되겠다. 문제가 없다면 구지 파일을 켜지 않아도 되고, 기본적으로 &amp;ldquo;문서&amp;rdquo; 폴더에 저장된다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>스티커 메모, 취소선 단축키</title>
+      <link>https://mcjoi.github.io/post/05876/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/05876/</guid>
+      <description>&lt;h2 id=&#34;스티커-메모&#34;&gt;스티커 메모&lt;/h2&gt;&#xA;&lt;p&gt;다들 사용할지 안할지 모르겠지만, 스티커 메모는 사무실에서 사용하기 최선의 프로그램이라 할 수 있다. 다들 알겠지만, 기능 단축키는 다른 워드 프로그램들과 비슷하다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;&lt;code&gt;ctrl + B&lt;/code&gt; : Bold&lt;br&gt;&#xA;&lt;code&gt;ctrl + I&lt;/code&gt; : Italic&lt;br&gt;&#xA;&lt;code&gt;ctrl + U&lt;/code&gt; : Underline&lt;br&gt;&#xA;&lt;code&gt;ctrl + T&lt;/code&gt; : 취소선&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;다 약자인데, 취소선은 뭘까? Strikethrough는 S인데,, 답은. T이다&amp;hellip;. 음&amp;hellip; 이유는 모른다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>xls - 정의된 이름 편하게 확인하기</title>
       <link>https://mcjoi.github.io/post/01910/</link>
       <pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate>
