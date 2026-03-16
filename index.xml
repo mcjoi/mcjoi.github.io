@@ -6,8 +6,15 @@
     <description>Recent content in Home on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - 엑셀 2019버전 이후 적용된 함수 리스트</title>
+      <link>https://mcjoi.github.io/post/01847/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/01847/</guid>
+      <description>&lt;h2 id=&#34;엑셀-2019버전-이후&#34;&gt;엑셀 2019버전 이후&lt;/h2&gt;&#xA;&lt;p&gt;회사에서 2019버전의 오피스를 사용하고 싶다면, 새로운 함수를 볼일도, 쓸일도 없다. 아니, 사용한다면 다른 이와의 협업에 중대한 오류를 일으키는 원인이 된다.&lt;/p&gt;&#xA;&lt;p&gt;하지만, 뭐가 있는지 정도는 알아야하겠다 싶어, ai에 문의. 아래와 같은 리스트를 얻을 수 있었다. 주욱 훑어 보니 배열을 사용하는 것에 있어, 직관성과 사용성을 높이는 함수들과, 고급 데이터 분석을 위한 함수들이 추가되었음을 알 수 있는데, 초보자에게는 별 의미 없어 보이고, 중수이상에게 의미가 있어 보인다. 점점 헤비해지는 듯한 느낌인데, 사무용 PC에서 연산 속도는 괜찮을지 의문이 먼저 든다. 차라리 라이트 유저 대상의 기본적인 기능을 강화하거나 처리속도를 최적화하는 쪽으로 발전을 하는 것이었으면 어떨까..&lt;/p&gt;</description>
+    </item>
     <item>
       <title>콜드슈 마운트 악세사리의 사이즈 문제</title>
       <link>https://mcjoi.github.io/post/05874/</link>

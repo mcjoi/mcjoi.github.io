@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>xls - 셀 이동 이벤트(VBA) - SELECTION_CHANGE EVENT | shaaaaallow dive</title>
-    <meta name="description" content="엑셀 셀 이동 이벤트(VBA) : SELECTION_CHANGE EVENT VBA가 뭔지 모르던 때 우연히 봤던 블로그 글에서,FOR/IF 문 챕터에 셀 이동 이벤트로 색이 칠해지는 매크로를 보고,신기하다고 생각했던 기억이 있다. 거의 이것때문에, 이거저거 코드 짜는 것에 대한 걸 취미로 스터디 하게 된 것 같다.
-신박하기는 하나, 실무에서 사용할 일은 별로 없을 듯.그래도 이거 하나만 알아도 대부분의 코드에서 응용해서 사용이 가능하다.
+    <title>xls - 엑셀 2019버전 이후 적용된 함수 리스트 | shaaaaallow dive</title>
+    <meta name="description" content="엑셀 2019버전 이후 회사에서 2019버전의 오피스를 사용하고 싶다면, 새로운 함수를 볼일도, 쓸일도 없다. 아니, 사용한다면 다른 이와의 협업에 중대한 오류를 일으키는 원인이 된다.
+하지만, 뭐가 있는지 정도는 알아야하겠다 싶어, ai에 문의. 아래와 같은 리스트를 얻을 수 있었다. 주욱 훑어 보니 배열을 사용하는 것에 있어, 직관성과 사용성을 높이는 함수들과, 고급 데이터 분석을 위한 함수들이 추가되었음을 알 수 있는데, 초보자에게는 별 의미 없어 보이고, 중수이상에게 의미가 있어 보인다. 점점 헤비해지는 듯한 느낌인데, 사무용 PC에서 연산 속도는 괜찮을지 의문이 먼저 든다. 차라리 라이트 유저 대상의 기본적인 기능을 강화하거나 처리속도를 최적화하는 쪽으로 발전을 하는 것이었으면 어떨까..
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01959/" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01847/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -585,12 +585,12 @@
       
   <article class="post">
     <header class="post-header">
-      <h1>xls - 셀 이동 이벤트(VBA) - SELECTION_CHANGE EVENT</h1>
+      <h1>xls - 엑셀 2019버전 이후 적용된 함수 리스트</h1>
       <div class="post-meta">
         
         
         <div class="post-meta-date">
-          <span>2019-12-17</span>
+          <span>2026-03-16</span>
           
         </div>
         <div class="post-meta-tags">
@@ -621,52 +621,263 @@
         
         
         
-          <h2 id="엑셀-셀-이동-이벤트vba--selection_change-event">엑셀 셀 이동 이벤트(VBA) : SELECTION_CHANGE EVENT</h2>
-<p>VBA가 뭔지 모르던 때 우연히 봤던 블로그 글에서,FOR/IF 문 챕터에 셀 이동 이벤트로 색이 칠해지는 매크로를 보고,신기하다고 생각했던 기억이 있다. 거의 이것때문에, 이거저거 코드 짜는 것에 대한 걸 취미로 스터디 하게 된 것 같다.</p>
-<div class="video-embed">
-  <div class="video-embed-inner">
-    <iframe
-      src="https://www.youtube.com/embed/6Tb1dhiRMt4"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","description":"[남들다아는 엑셀]  셀 이동 이벤트(VBA) : SELECTION_CHANGE EVENT","embedUrl":"https://www.youtube.com/embed/6Tb1dhiRMt4","name":"[남들다아는 엑셀]  셀 이동 이벤트(VBA) : SELECTION_CHANGE EVENT","thumbnailUrl":["https://i.ytimg.com/vi/6Tb1dhiRMt4/hqdefault.jpg"],"uploadDate":"2019-12-17T00:00:00+00:00","url":"https://www.youtube.com/watch?v=6Tb1dhiRMt4"}</script>
-
+          <h2 id="엑셀-2019버전-이후">엑셀 2019버전 이후</h2>
+<p>회사에서 2019버전의 오피스를 사용하고 싶다면, 새로운 함수를 볼일도, 쓸일도 없다. 아니, 사용한다면 다른 이와의 협업에 중대한 오류를 일으키는 원인이 된다.</p>
+<p>하지만, 뭐가 있는지 정도는 알아야하겠다 싶어, ai에 문의. 아래와 같은 리스트를 얻을 수 있었다. 주욱 훑어 보니 배열을 사용하는 것에 있어, 직관성과 사용성을 높이는 함수들과, 고급 데이터 분석을 위한 함수들이 추가되었음을 알 수 있는데, 초보자에게는 별 의미 없어 보이고, 중수이상에게 의미가 있어 보인다. 점점 헤비해지는 듯한 느낌인데, 사무용 PC에서 연산 속도는 괜찮을지 의문이 먼저 든다. 차라리 라이트 유저 대상의 기본적인 기능을 강화하거나 처리속도를 최적화하는 쪽으로 발전을 하는 것이었으면 어떨까..</p>
+<p>리스트를 하나씩 살펴보면 다음과 같다.</p>
 <br>
 <br>
-<p>신박하기는 하나, 실무에서 사용할 일은 별로 없을 듯.그래도 이거 하나만 알아도 대부분의 코드에서 응용해서 사용이 가능하다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">Worksheet_SelectionChange</span>(<span style="color:#66d9ef">ByVal</span> Target <span style="color:#f92672">As</span> Range)    
-</span></span><span style="display:flex;"><span>    rngCount <span style="color:#f92672">=</span> Target.Count    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> x <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> rngCount
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> IsNumeric(Target(x).Value) <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#f92672">And</span> Target(x).Value <span style="color:#f92672">&gt;</span> 0 <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>               Target(x).Value <span style="color:#f92672">=</span> Target(x).Value <span style="color:#f92672">+</span> 1                
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&#39;색변경
-</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Call</span> cCOLOR(Target, x)                
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">Else</span>
-</span></span><span style="display:flex;"><span>                Target(x).Value <span style="color:#f92672">=</span> 1
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&#39;색변경
-</span></span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">Call</span> cCOLOR(Target, x)               
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> x
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">cCOLOR</span>(<span style="color:#66d9ef">ByVal</span> Target <span style="color:#f92672">As</span> Range, <span style="color:#66d9ef">ByVal</span> x <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">If</span> Target(x).Value <span style="color:#f92672">&lt;=</span> 55 <span style="color:#66d9ef">Then</span>
-</span></span><span style="display:flex;"><span>        Target(x).Interior.ColorIndex <span style="color:#f92672">=</span> Target(x).Value
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Else</span>
-</span></span><span style="display:flex;"><span>        Target(x).Interior.ColorIndex <span style="color:#f92672">=</span> Target(x).Value <span style="color:#f92672">-</span> (55 <span style="color:#f92672">*</span> Application.WorksheetFunction.RoundDown(Target(x).Value <span style="color:#f92672">/</span> 55, 0))
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><Br>
 <br>
+<h3 id="동적-배열-dynamic-array-관련-함수">동적 배열 (Dynamic Array) 관련 함수</h3>
+<p>UNIQUE 나 RANDARRAY는 VBA로 만들어 사용하고 있었는데, 기본 함수로 지정된 걸 보니 내가 영 쓸모없는 짓을 하고 있던 건 아닌가보다.</p>
+<br>
+<br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>FILTER</td>
+          <td>조건에 맞는 데이터만 필터</td>
+      </tr>
+      <tr>
+          <td>SORT</td>
+          <td>데이터 정렬</td>
+      </tr>
+      <tr>
+          <td>SORTBY</td>
+          <td>기준 열을 이용한 정렬</td>
+      </tr>
+      <tr>
+          <td>UNIQUE</td>
+          <td>중복 제거</td>
+      </tr>
+      <tr>
+          <td>SEQUENCE</td>
+          <td>숫자 배열 생성</td>
+      </tr>
+      <tr>
+          <td>RANDARRAY</td>
+          <td>랜덤 숫자 배열 생성</td>
+      </tr>
+  </tbody>
+</table>
+<Br>
+<br>
+<Br>
+<h3 id="조회-함수-lookup">조회 함수 (Lookup)</h3>
+<p>XLOOKUP 역시 VBA로 대체해서 사용하고 있었는데, 개선이 필요한 부분이기는 했다.</p>
+<br>
+<Br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>XLOOKUP</td>
+          <td>범용 조회 함수</td>
+      </tr>
+      <tr>
+          <td>XMATCH</td>
+          <td>MATCH 개선 버전</td>
+      </tr>
+  </tbody>
+</table>
+<Br>
+<Br>
+<Br>
+<h3 id="텍스트-처리-함수-text-functions">텍스트 처리 함수 (Text Functions)</h3>
+<p>위와 마찬가지로 VBA등으로 어찌저찌 해서 사용을 하고 있던 부분이기는 하다. 여기까지는 특별할 건 없어 보인다.</p>
+<br>
+<br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>TEXTJOIN</td>
+          <td>여러 문자열 결합</td>
+      </tr>
+      <tr>
+          <td>CONCAT</td>
+          <td>문자열 결합</td>
+      </tr>
+      <tr>
+          <td>TEXTSPLIT</td>
+          <td>텍스트 분리</td>
+      </tr>
+      <tr>
+          <td>TEXTBEFORE</td>
+          <td>특정 문자 이전 텍스트</td>
+      </tr>
+      <tr>
+          <td>TEXTAFTER</td>
+          <td>특정 문자 이후 텍스트</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<Br>
+<h3 id="배열-처리--데이터-조작-함수">배열 처리 / 데이터 조작 함수</h3>
+<p>사실 설명만 보고는 무슨 기능인지는 잘 모르겠는데, WRAPROWS/COLS 는 배열을 행이나 열로 뿌리는 기능을 함수로 구현해 둔 듯 하다. 구글시트에서는 해당 값이 기본적용되는 것 같기는 했는데, 여튼 함수로 쓴다면 좀 더 직관적일수는 있겠다.</p>
+<br>
+<Br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>TAKE</td>
+          <td>배열 앞부분 가져오기</td>
+      </tr>
+      <tr>
+          <td>DROP</td>
+          <td>배열 일부 제거</td>
+      </tr>
+      <tr>
+          <td>CHOOSECOLS</td>
+          <td>특정 열 선택</td>
+      </tr>
+      <tr>
+          <td>CHOOSEROWS</td>
+          <td>특정 행 선택</td>
+      </tr>
+      <tr>
+          <td>EXPAND</td>
+          <td>배열 확장</td>
+      </tr>
+      <tr>
+          <td>WRAPROWS</td>
+          <td>배열을 행으로 정렬</td>
+      </tr>
+      <tr>
+          <td>WRAPCOLS</td>
+          <td>배열을 열로 정렬</td>
+      </tr>
+      <tr>
+          <td>TOROW</td>
+          <td>배열을 1행으로 변환</td>
+      </tr>
+      <tr>
+          <td>TOCOL</td>
+          <td>배열을 1열로 변환</td>
+      </tr>
+      <tr>
+          <td>HSTACK</td>
+          <td>가로 결합</td>
+      </tr>
+      <tr>
+          <td>VSTACK</td>
+          <td>세로 결합</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<Br>
+<h3 id="고급-계산--프로그래밍-함수">고급 계산 / 프로그래밍 함수</h3>
+<p>파이썬이나, 자바스크립트의 예약어 같은 함수들이 등장하는 걸 보니, 건드릴일 없겠다 싶기는 하다.</p>
+<br>
+<br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>LET</td>
+          <td>변수 선언</td>
+      </tr>
+      <tr>
+          <td>LAMBDA</td>
+          <td>사용자 정의 함수</td>
+      </tr>
+      <tr>
+          <td>MAP</td>
+          <td>배열 반복</td>
+      </tr>
+      <tr>
+          <td>REDUCE</td>
+          <td>누적 계산</td>
+      </tr>
+      <tr>
+          <td>SCAN</td>
+          <td>누적 결과 배열</td>
+      </tr>
+      <tr>
+          <td>MAKEARRAY</td>
+          <td>배열 생성</td>
+      </tr>
+      <tr>
+          <td>BYROW</td>
+          <td>행별 계산</td>
+      </tr>
+      <tr>
+          <td>BYCOL</td>
+          <td>열별 계산</td>
+      </tr>
+      <tr>
+          <td>ISOMITTED</td>
+          <td>LAMBDA 인자 체크</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<Br>
+<h3 id="기타">기타</h3>
+<p>IFS는 IF문을 줄일 수 있는 것인지 궁금하기는 하다.</p>
+<br>
+<Br>
+<table>
+  <thead>
+      <tr>
+          <th>FUNCTION</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SWITCH</td>
+          <td>조건 분기</td>
+      </tr>
+      <tr>
+          <td>IFS</td>
+          <td>여러 조건 처리</td>
+      </tr>
+      <tr>
+          <td>MAXIFS</td>
+          <td>조건 최대값</td>
+      </tr>
+      <tr>
+          <td>MINIFS</td>
+          <td>조건 최소값</td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<Br>
+<Br>
+<p>지금으로부터 수년전의 예상대로 이제는 엑셀이나 프로그래밍이나 경계가 모호해지고 있는데, 당시 마케터였던 나에게는 절실히 필요한 기능들이 많이 적용된 모습을 보니, 아쉽기는 하다. 사실 단순히 함수를 익히거나 사용하는 것은 큰 의미가 없어져 버린 나이가 되었기 때문이다.</p>
 <p>끝.</p>
 
         
@@ -701,11 +912,6 @@
           <h3>Related Posts</h3>
           <div class="related-divider" aria-hidden="true"></div>
           <div class="related-posts-items">
-            
-              <div class="related-posts-item">
-                <span class="related-posts-date">2026-03-16</span>
-                <a href="/post/01847/">xls - 엑셀 2019버전 이후 적용된 함수 리스트</a>
-              </div>
             
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-03-11</span>
@@ -750,6 +956,11 @@
               <div class="related-posts-item">
                 <span class="related-posts-date">2026-01-05</span>
                 <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-02</span>
+                <a href="/post/01994/">ppt - 도형 잠그기(office2019)</a>
               </div>
             
           </div>
