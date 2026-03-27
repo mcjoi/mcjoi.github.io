@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mcjoi.github.io/sitemap.xml
+Sitemap: https://mcjoi.github.io/sitemap-new.xml
