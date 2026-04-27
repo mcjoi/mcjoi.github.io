@@ -749,6 +749,93 @@ ul li::marker {
   cursor: pointer;
 }
 
+/* Gallery password gate (client-side) */
+.gallery-protected {
+  display: none;
+}
+
+html.gallery-unlocked .gallery-protected {
+  display: block;
+}
+
+html.gallery-unlocked .gallery-gate {
+  display: none;
+}
+
+.gallery-gate {
+  padding: 42px 18px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-gate-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--surface-2);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 18px 18px 16px;
+}
+
+.gallery-gate-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 2px 0 6px;
+}
+
+.gallery-gate-desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.gallery-gate-form {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-gate-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.gallery-gate-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--outline);
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.gallery-gate-input:focus {
+  outline: none;
+  border-color: #3b6cff;
+  box-shadow: 0 0 0 3px rgba(59, 108, 255, 0.15);
+}
+
+.gallery-gate-btn {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2f364f;
+  background: #1f242f;
+  color: #cdd4f5;
+  cursor: pointer;
+}
+
+.gallery-gate-btn:hover {
+  background: #243245;
+  color: #e0efff;
+}
+
+.gallery-gate-error {
+  min-height: 18px;
+  font-size: 12px;
+  color: #ffb4b4;
+}
+
 .post-body {
   padding: 12px 14px 14px;
   display: flex;

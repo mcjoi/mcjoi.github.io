@@ -10,9 +10,9 @@
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cherry blossom</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_007/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_007/</link>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_007/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_007/</guid>
       <description></description>
     </item>
     <item>
@@ -38,9 +38,9 @@
     </item>
     <item>
       <title>paju - ilovedonggas</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_006/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_006/</link>
       <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_006/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_006/</guid>
       <description></description>
     </item>
     <item>
@@ -107,13 +107,6 @@
       <description>&lt;h2 id=&#34;셀서식-표시형식-셀스타일&#34;&gt;셀서식, 표시형식, 셀스타일&lt;/h2&gt;&#xA;&lt;p&gt;결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀서식(cell format, format cells)&lt;/li&gt;&#xA;&lt;li&gt;표시형식(number format)&lt;/li&gt;&#xA;&lt;li&gt;사용자정의 표시형식(custom number format)&lt;/li&gt;&#xA;&lt;li&gt;셀스타일(cell style)&lt;br&gt;&#xA; &lt;br&gt;&#xA;Cell Format (셀서식)&lt;br&gt;&#xA;├─ Number Format (표시형식)&lt;br&gt;&#xA;│    └─ Custom Number Format (사용자정의 표시형식)&lt;br&gt;&#xA;├─ Font&lt;br&gt;&#xA;├─ Border&lt;br&gt;&#xA;├─ Fill&lt;br&gt;&#xA;├─ Alignment&lt;br&gt;&#xA;└─ Protection&lt;br&gt;&#xA;Cell Styles (셀스타일)&lt;br&gt;&#xA;└─ Custom Cell Styles (사용자정의 셀스타일)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>빠바 치킨랩</title>
-      <link>https://mcjoi.github.io/gallery/food/f_005/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/food/f_005/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>윈도우11 멀티태스킹 창조절 기능 끄기</title>
       <link>https://mcjoi.github.io/post/05883/</link>
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
@@ -154,20 +147,6 @@
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00990/</guid>
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;엑셀용량이 비정상적으로 커진 파일들을 의외로 자주 보게된다. 몇가지 이유가 있겠지만 일반화 시키기는 어렵다.&lt;br&gt;&#xA;일반적인 상황에서는 아래 글에서 도움을 받을 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.oppadu.com/%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;엑셀 파일 크기 줄이기, 모든 해결방법 총정리 - 오빠두 엑셀&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;불행히도 위의 경우가 모든 것이 아닌데, 용량이 늘어나서 로딩 속도가 길어지는 것도 문제지만, 관리상 짜증나는 경우는 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ cell style이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 이름관리자에서 선언된 이름이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 원치 않는 사용영역(UsedRange)이 설정된 경우&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>연어덮밥</title>
-      <link>https://mcjoi.github.io/gallery/food/f_001/</link>
-      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/food/f_001/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>마파두부</title>
-      <link>https://mcjoi.github.io/gallery/food/f_002/</link>
-      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/food/f_002/</guid>
-      <description></description>
     </item>
     <item>
       <title>Project is unviewable - EvilClippy</title>
@@ -401,20 +380,6 @@
       <description>&lt;h2 id=&#34;exif-information&#34;&gt;Exif information&lt;/h2&gt;&#xA;&lt;p&gt;Exif 정보를 사진에 넣어 표시를 하려고 해본 사람이라면 오픈 서비스로 운영되는 아래 사이트를 본 적이 있을 것이다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://exif-frame.yuru.cam/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;exif-frame&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;간결한 사용법과 높은 퀄리티의 결과물을 쉽게 얻을 수 있다.&lt;br&gt;&#xA;서비스 사이트를 본 적은 없더라도 결과물을 본 적은 있을 것이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/01.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;결과물을 보면 레이아웃에 아주 많이 신경을 썼음을 알수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/02.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;flutter-migration&#34;&gt;flutter migration&lt;/h2&gt;&#xA;&lt;p&gt;이를 참고해서, 내 맘에 드는 정보만 넣는 플러터 앱을 짜봤다. 생각보다 많은 부분을 생각해야하는 서비스임을 확인했다.&lt;br&gt;&#xA;다소 부족한 점은 있지만, 언제든 커스터마이징 할 수 있으니, 크게 신경쓰지 않았다.&lt;br&gt;&#xA;특히, 카메라 브랜드에 따라 로고가 바뀌는 부분은.. 음 귀찮다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>양장피</title>
-      <link>https://mcjoi.github.io/gallery/food/f_003/</link>
-      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/food/f_003/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>마파두부</title>
-      <link>https://mcjoi.github.io/gallery/food/f_004/</link>
-      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/food/f_004/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>A7C2 늦은 구매 후기, 그리고 리뷰로는 다 알지 못한 사실</title>
       <link>https://mcjoi.github.io/post/05991/</link>
       <pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate>
@@ -479,23 +444,23 @@
     </item>
     <item>
       <title>everland</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_003/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_003/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_003/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_003/</guid>
       <description></description>
     </item>
     <item>
       <title>pangyo - macchiatea</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_004/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_004/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_004/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_004/</guid>
       <description></description>
     </item>
     <item>
       <title>pangyo - macchiatea</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_005/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_005/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_005/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_005/</guid>
       <description></description>
     </item>
     <item>
@@ -528,16 +493,16 @@
     </item>
     <item>
       <title>everland</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_001/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_001/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_001/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_001/</guid>
       <description></description>
     </item>
     <item>
       <title>pangyo - sky</title>
-      <link>https://mcjoi.github.io/gallery/landscape/l_002/</link>
+      <link>https://mcjoi.github.io/gallery/etc/e_002/</link>
       <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/landscape/l_002/</guid>
+      <guid>https://mcjoi.github.io/gallery/etc/e_002/</guid>
       <description></description>
     </item>
     <item>
@@ -1508,9 +1473,9 @@
     </item>
     <item>
       <title>self-made album</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_001/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2016/f_2016_001/</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_001/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2016/f_2016_001/</guid>
       <description></description>
     </item>
     <item>
@@ -1648,65 +1613,65 @@
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_002/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_001/</link>
       <pubDate>Fri, 29 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_002/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_001/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_003/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_002/</link>
       <pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_003/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_002/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_010/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_009/</link>
       <pubDate>Sat, 16 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_010/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_009/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_004/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_003/</link>
       <pubDate>Sat, 14 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_004/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_003/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_005/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_004/</link>
       <pubDate>Sat, 14 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_005/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_004/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_006/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_005/</link>
       <pubDate>Fri, 30 May 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_006/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_005/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_007/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_006/</link>
       <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_007/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_006/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_008/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_007/</link>
       <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_008/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_007/</guid>
       <description></description>
     </item>
     <item>
       <title>2014</title>
-      <link>https://mcjoi.github.io/gallery/portrait/p_009/</link>
+      <link>https://mcjoi.github.io/gallery/fam/2014/f_2014_008/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/portrait/p_009/</guid>
+      <guid>https://mcjoi.github.io/gallery/fam/2014/f_2014_008/</guid>
       <description></description>
     </item>
   </channel>

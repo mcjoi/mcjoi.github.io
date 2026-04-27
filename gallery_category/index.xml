@@ -9,31 +9,24 @@
     <lastBuildDate>Mon, 13 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/gallery_category/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Landscape</title>
-      <link>https://mcjoi.github.io/gallery_category/landscape/</link>
+      <title>Etc</title>
+      <link>https://mcjoi.github.io/gallery_category/etc/</link>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery_category/landscape/</guid>
+      <guid>https://mcjoi.github.io/gallery_category/etc/</guid>
       <description></description>
     </item>
     <item>
-      <title>Food</title>
-      <link>https://mcjoi.github.io/gallery_category/food/</link>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery_category/food/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Portrait_2016</title>
-      <link>https://mcjoi.github.io/gallery_category/portrait_2016/</link>
+      <title>Fam_2016</title>
+      <link>https://mcjoi.github.io/gallery_category/fam_2016/</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery_category/portrait_2016/</guid>
+      <guid>https://mcjoi.github.io/gallery_category/fam_2016/</guid>
       <description></description>
     </item>
     <item>
-      <title>Portrait_2014</title>
-      <link>https://mcjoi.github.io/gallery_category/portrait_2014/</link>
+      <title>Fam_2014</title>
+      <link>https://mcjoi.github.io/gallery_category/fam_2014/</link>
       <pubDate>Fri, 29 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery_category/portrait_2014/</guid>
+      <guid>https://mcjoi.github.io/gallery_category/fam_2014/</guid>
       <description></description>
     </item>
   </channel>
