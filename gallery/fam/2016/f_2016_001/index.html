@@ -628,6 +628,10 @@
     
     const PASS = '9680';
     const KEY = 'gallery_gate_ok_v1';
+    const FAIL_KEY = 'gallery_gate_fail_v1';
+    const MAX_FAILS = 3;
+    
+    const REDIRECT_TO = '/';
 
     const html = document.documentElement;
     const gate = document.querySelector('[data-gallery-gate]');
@@ -637,6 +641,7 @@
 
     const setUnlocked = () => {
       try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      try { sessionStorage.removeItem(FAIL_KEY); } catch (e) {}
       html.classList.add('gallery-unlocked');
       gate?.setAttribute('aria-hidden', 'true');
     };
@@ -666,13 +671,24 @@
         setUnlocked();
         return;
       }
+      let fails = 0;
+      try { fails = parseInt(sessionStorage.getItem(FAIL_KEY) || '0', 10) || 0; } catch (e) {}
+      fails += 1;
+      try { sessionStorage.setItem(FAIL_KEY, String(fails)); } catch (e) {}
+
+      if (fails >= MAX_FAILS) {
+        if (error) error.textContent = '비밀번호를 3번 틀렸습니다. 메인 화면으로 이동합니다.';
+        
+        setTimeout(() => { window.location.href = REDIRECT_TO; }, 300);
+        return;
+      }
+
       if (error) error.textContent = '비밀번호가 올바르지 않습니다. 접근할 수 없습니다.';
       input.value = '';
       input.focus();
     });
   })();
 </script>
-
 
   <div class="gallery-protected">
     <article class="post">
