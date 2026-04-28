@@ -759,16 +759,19 @@ ul li::marker {
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: rgba(0, 0, 0, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #1f242f; /* match .chip--tag */
+  border: 1px solid #2f364f; /* match .chip--tag */
+  color: #cdd4f5; /* match .chip--tag */
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
-.gallery-video-badge img {
+.gallery-video-badge::before {
+  content: "";
   width: 16px;
   height: 16px;
-  color: #fff;
-  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.35));
+  background: currentColor;
+  -webkit-mask: url("/icon/video.svg") no-repeat center / contain;
+  mask: url("/icon/video.svg") no-repeat center / contain;
 }
 
 /* Gallery password gate (client-side) */
