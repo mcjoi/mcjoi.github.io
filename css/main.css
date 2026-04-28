@@ -1010,6 +1010,14 @@ html.gallery-unlocked .gallery-gate {
   display: none;
 }
 
+.image-overlay.video-mode .image-overlay-video {
+  display: block;
+}
+
+.image-overlay.video-mode .image-overlay-img {
+  display: none;
+}
+
 .image-overlay.video-mode .image-overlay-exif {
   display: none;
 }
