@@ -836,6 +836,22 @@ html.gallery-unlocked .gallery-gate {
   color: #ffb4b4;
 }
 
+.gallery-video {
+  display: flex;
+  justify-content: center;
+  margin: 14px 0 18px;
+}
+
+.gallery-video-embed {
+  width: min(1280px, 100%);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+ 
 .post-body {
   padding: 12px 14px 14px;
   display: flex;
@@ -978,6 +994,24 @@ html.gallery-unlocked .gallery-gate {
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.image-overlay-video {
+  position: relative;
+  z-index: 1;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  width: min(1280px, 92vw);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 80vh;
+  background: #000;
+  display: none;
+}
+
+.image-overlay.video-mode .image-overlay-exif {
+  display: none;
 }
 
 .image-overlay-exif {
