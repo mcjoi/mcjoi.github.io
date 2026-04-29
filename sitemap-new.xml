@@ -10,11 +10,6 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mcjoi.github.io/post/05868/</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://mcjoi.github.io/post/05869/</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>daily</changefreq>
@@ -81,6 +76,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mcjoi.github.io/post/03994/</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/02995/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
