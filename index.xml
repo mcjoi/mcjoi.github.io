@@ -1129,6 +1129,13 @@
       <description>&lt;h2 id=&#34;삼양-24mm-f28&#34;&gt;삼양 24mm F2.8&lt;/h2&gt;&#xA;&lt;p&gt;굉장히 작은 렌즈이다. 게다가 풀프레임 렌즈이다. 그 뿐이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/life/05877/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;크롭-바디에-풀프레임-렌즈를-사용&#34;&gt;크롭 바디에, 풀프레임 렌즈를 사용&lt;/h2&gt;&#xA;&lt;p&gt;필자는 해당 렌즈를 크롭바디에 사용했었다. 화질이 안좋은 주변부를 잘라내기 때문에 화질이 좋아질까?&lt;br&gt;&#xA;온라인상의 의견은 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;·국내 커뮤니티 : 고가의 장비를 사용하는 자가 많은 곳이다. 화질이 구리다는 평이 지배적이다.&lt;br&gt;&#xA;·국내 리뷰 : 뛰어나지는 않지만, 그냥 쓸만한 정도라는 모호한 평이 많다.&lt;br&gt;&#xA;·해외 리뷰 : 중앙부의 화질은 좋다는 평이 대다수이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;p&gt;크롭에서 쓰면 36mm 정도.. 심도는 F4.2가 된다. 범용화각이 되지만, 얕은 심도는 바이바이인 셈이다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2021</title>
+      <link>https://mcjoi.github.io/gallery/fam/2021/f_2021_001-copy/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2021/f_2021_001-copy/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>ppt - 자작 디자인 템플릿 몇가지</title>
       <link>https://mcjoi.github.io/post/01939/</link>
       <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
@@ -1169,6 +1176,13 @@
       <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01954/</guid>
       <description>&lt;h2 id=&#34;엑셀vba에서-영역선택-이름관리자를-vba에서-사용&#34;&gt;엑셀VBA에서 영역선택, 이름관리자를 VBA에서 사용&lt;/h2&gt;&#xA;&lt;p&gt;1부터 16까지 16행의 값이 들어가 있다고 하자. VBA에서 해당 영역을 지정하는 방식을 알아본다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;알고 있는 방법은 크게 3가지로,&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;range로 영역을 지정하는 방법,&lt;/li&gt;&#xA;&lt;li&gt;currentRegion이나 usedrange를 활용하는 방법,&lt;/li&gt;&#xA;&lt;li&gt;워크시트의 이름관리자를 활용하는 방법이다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;대충 영역 내 셀 개수를 세는 프로시저를 작성해보면 아래와 같고, 결과는 모두 16이 나올 것이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;이때, 셀이 하나 추가가 된다면, 어떻게 될까? 셀이 하나 추가되어도 기존 영역을 물고 있다면, 곤란하다고 할 수 있다.&lt;br&gt;&#xA;3가지 방법 중 동적으로 작동하는 방식은 뭘까?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2021</title>
+      <link>https://mcjoi.github.io/gallery/fam/2021/f_2021_001/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2021/f_2021_001/</guid>
+      <description></description>
     </item>
     <item>
       <title>sheets - 엑셀에서 구글시트로 데이터 값 복사할때 소수점 처리</title>
