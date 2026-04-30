@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Project - Mouse Click Animation | shaaaaallow dive</title>
-    <meta name="description" content="Project - Mouse Click Animation" />
-    <link rel="canonical" href="https://mcjoi.github.io/tag/project---mouse-click-animation/" />
+    <title>클립보드에 복사한 이미지 jpg로 만들기 | shaaaaallow dive</title>
+    <meta name="description" content="이미지 캡쳐 이미지 캡쳐는 다양한 방법이 있겠지만,
+개인적으로 윈도우 자체에서 제공하는 win &#43; shift &#43; s 를 사용한 클립보드 복사를 많이 사용한다.
+대부분 오피스 파일에 붙여넣기를 하지만, 바로 jpg로 만들고 싶을 때가 있다.
+클립보드 클립보드에 저장된 이미지를 저장하려면 그림판 등의 프로그램을 켜야하는데 귀찮으니,
+그냥 아래와 같은 메모장으로 bat 파일을 하나 만들어 두면, 간단히 처리가 가능하다.
+@echo off powershell -NoProfile -ExecutionPolicy Bypass ^ Add-Type -AssemblyName System.Windows.Forms; ^ Add-Type -AssemblyName System.Drawing; ^ $img = [Windows.Forms.Clipboard]::GetImage(); ^ if ($img -ne $null) { ^ $path = \&#34;$env:USERPROFILE\Desktop\clipboard_$(Get-Date -Format &#39;yyyyMMdd_HHmmss&#39;).jpg\&#34;; ^ $img.Save($path, [System.Drawing.Imaging.ImageFormat]::Jpeg); ^ Write-Output \&#34;Saved to $path\&#34;; ^ } else { ^ Write-Output \&#34;No image in clipboard\&#34;; ^ } pause 뭐 딱히 특별한 것은 없다.
+" />
+    <link rel="canonical" href="https://mcjoi.github.io/post/01846/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -602,55 +608,165 @@
     </aside>
     <main class="page">
       
-  <section class="grid">
+  <article class="post">
+    <header class="post-header">
+      <h1>클립보드에 복사한 이미지 jpg로 만들기</h1>
+      <div class="post-meta">
+        
+        
+        <div class="post-meta-date">
+          <span>2026-04-30</span>
+          
+        </div>
+        <div class="post-meta-tags">
+          
+            
+              <a class="chip chip--tag" href="/tag/windows/">#Windows</a>
+            
+          
+        </div>
+      </div>
+    </header>
+
+    <div class="ad-slot ad-slot--body">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="6643349525"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
+    <div class="post-content">
+        
+        
+        
+          <h2 id="이미지-캡쳐">이미지 캡쳐</h2>
+<p>이미지 캡쳐는 다양한 방법이 있겠지만,<br>
+개인적으로 윈도우 자체에서 제공하는 win + shift + s 를 사용한 클립보드 복사를 많이 사용한다.<br>
+대부분 오피스 파일에 붙여넣기를 하지만, 바로 jpg로 만들고 싶을 때가 있다.</p>
+<br>
+<br>
+<br>
+<h2 id="클립보드">클립보드</h2>
+<p>클립보드에 저장된 이미지를 저장하려면 그림판 등의 프로그램을 켜야하는데 귀찮으니,<br>
+그냥 아래와 같은 메모장으로 bat 파일을 하나 만들어 두면, 간단히 처리가 가능하다.</p>
+<br>
+<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@echo off
+</span></span><span style="display:flex;"><span>powershell -NoProfile -ExecutionPolicy Bypass ^
+</span></span><span style="display:flex;"><span>Add-Type -AssemblyName System.Windows.Forms; ^
+</span></span><span style="display:flex;"><span>Add-Type -AssemblyName System.Drawing; ^
+</span></span><span style="display:flex;"><span>$img <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>Windows.Forms.Clipboard<span style="color:#f92672">]</span>::GetImage<span style="color:#f92672">()</span>; ^
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>$img -ne $null<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> ^
+</span></span><span style="display:flex;"><span>    $path <span style="color:#f92672">=</span> <span style="color:#ae81ff">\&#34;</span>$env:USERPROFILE<span style="color:#ae81ff">\D</span>esktop<span style="color:#ae81ff">\c</span>lipboard_<span style="color:#66d9ef">$(</span>Get-Date -Format <span style="color:#e6db74">&#39;yyyyMMdd_HHmmss&#39;</span><span style="color:#66d9ef">)</span>.jpg<span style="color:#ae81ff">\&#34;</span>; ^
+</span></span><span style="display:flex;"><span>    $img.Save<span style="color:#f92672">(</span>$path, <span style="color:#f92672">[</span>System.Drawing.Imaging.ImageFormat<span style="color:#f92672">]</span>::Jpeg<span style="color:#f92672">)</span>; ^
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#ae81ff">\&#34;</span>Saved to $path<span style="color:#ae81ff">\&#34;</span>; ^
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span> ^
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#ae81ff">\&#34;</span>No image in clipboard<span style="color:#ae81ff">\&#34;</span>; ^
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>pause
+</span></span></code></pre></div><br>
+<br>
+<Br>
+<p>뭐 딱히 특별한 것은 없다.</p>
+<Br>
+<p>끝.</p>
+
+        
+      </div>
+
+    <div class="ad-slot ad-slot--footer">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="2162488542"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
     
     
       
-      <article class="post-card">
-        
-        <a class="thumb" href="/post/03998_en/" aria-label="windows - Mouse Click Animation"
-           style="background-image: url('/img/03_flutter_480.jpg');"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/post/03998_en/">windows - Mouse Click Animation</a></h3>
-          <div class="post-meta">
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
             
-              <a class="chip chip--tag" href="/category/dev/">dev</a>
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-16</span>
+                <a href="/post/01847/">xls - 엑셀 2019버전 이후 적용된 함수 리스트</a>
+              </div>
             
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-11</span>
+                <a href="/post/01848/">xls - indirect 함수로 동적 요약 테이블 만들기</a>
+              </div>
             
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-23</span>
+                <a href="/post/00991/">xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</a>
+              </div>
             
-            <span>2025-12-22</span>
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00998/">xls - 셀 값 오류와 순환참조 에러</a>
+              </div>
             
           </div>
-        </div>
-      </article>
+        </section>
+      
     
-  </section>
 
-  <div class="more-wrap">
-    <button class="more-btn" type="button">More</button>
-  </div>
-
-  <script>
-    (function() {
-      const revealCount = 9;
-      const cards = Array.from(document.querySelectorAll('.post-card'));
-      const moreBtn = document.querySelector('.more-btn');
-      if (!moreBtn || cards.length <= revealCount) {
-        if (moreBtn) moreBtn.style.display = 'none';
-        return;
-      }
-      let visible = revealCount;
-      cards.forEach((card, idx) => {
-        if (idx >= revealCount) card.classList.add('hidden');
-      });
-      moreBtn.addEventListener('click', () => {
-        const next = cards.slice(visible, visible + revealCount);
-        next.forEach(card => card.classList.remove('hidden'));
-        visible += next.length;
-        if (visible >= cards.length) moreBtn.style.display = 'none';
-      });
-    })();
-  </script>
+  </article>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
