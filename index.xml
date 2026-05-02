@@ -16,6 +16,13 @@
       <description>&lt;h2 id=&#34;이미지-캡쳐&#34;&gt;이미지 캡쳐&lt;/h2&gt;&#xA;&lt;p&gt;이미지 캡쳐는 다양한 방법이 있겠지만,&lt;br&gt;&#xA;개인적으로 윈도우 자체에서 제공하는 win + shift + s 를 사용한 클립보드 복사를 많이 사용한다.&lt;br&gt;&#xA;대부분 오피스 파일에 붙여넣기를 하지만, 바로 jpg로 만들고 싶을 때가 있다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;클립보드&#34;&gt;클립보드&lt;/h2&gt;&#xA;&lt;p&gt;클립보드에 저장된 이미지를 저장하려면 그림판 등의 프로그램을 켜야하는데 귀찮으니,&lt;br&gt;&#xA;그냥 아래와 같은 메모장으로 bat 파일을 하나 만들어 두면, 간단히 처리가 가능하다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@echo off&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;powershell -NoProfile -ExecutionPolicy Bypass ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Add-Type -AssemblyName System.Windows.Forms; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Add-Type -AssemblyName System.Drawing; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$img &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Windows.Forms.Clipboard&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;::GetImage&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$img -ne $null&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;$env:USERPROFILE&lt;span style=&#34;color:#ae81ff&#34;&gt;\D&lt;/span&gt;esktop&lt;span style=&#34;color:#ae81ff&#34;&gt;\c&lt;/span&gt;lipboard_&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;Get-Date -Format &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;yyyyMMdd_HHmmss&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;.jpg&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $img.Save&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$path, &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;System.Drawing.Imaging.ImageFormat&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;::Jpeg&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Write-Output &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;Saved to $path&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Write-Output &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;No image in clipboard&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pause&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;뭐 딱히 특별한 것은 없다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_009/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_009/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>cherry blossom</title>
       <link>https://mcjoi.github.io/gallery/etc/e_007/</link>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
@@ -28,6 +35,13 @@
       <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05869/</guid>
       <description>&lt;h2 id=&#34;액션캠-매각&#34;&gt;액션캠 매각&lt;/h2&gt;&#xA;&lt;p&gt;고프로도 그렇고 DJI 액션시리즈도 그렇고, 기술이 발전하는 단계의 전자기기는 애석하게도 가치가 하루가 다르게 떨어진다. 액션4를 구매한지 2년이 채 지나지 않았지만, 그 동안 DJI 자체적인 출고가 인하, 프로모션으로 인해 중고가는 2~30% 정도 추락을 했다.&lt;/p&gt;&#xA;&lt;p&gt;매각을 염두에 두고 있다면, 절대 사지 말아야 할 품목임에는 틀림없다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;남은-악세서리&#34;&gt;남은 악세서리&lt;/h2&gt;&#xA;&lt;p&gt;액션캠은 원래 악세사리 지옥이 아니던가. 여러 악세사리를 포함하여, 적당한 가격에 올렸더니, 연락이 오지 않는다. 방법은 둘 중 하나다.&lt;/p&gt;&#xA;&lt;p&gt;악세사리를 다 포함해서, 이에 대한 값을 매기지 않던가,&lt;br&gt;&#xA;악세사리를 다 뺀 가격을 책정하던가.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_008/</link>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_008/</guid>
+      <description></description>
     </item>
     <item>
       <title>안드로이드 태블릿(갤럭시탭) 활용기</title>
@@ -107,11 +121,39 @@
       <description>&lt;p&gt;포스트 영역 기준(기본 980px)으로 이미지를 리사이징합니다. EXIF 표시를 켜면 이미지 하단에 검은 영역을 추가해 정보를 표시합니다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_007/</link>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_007/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</title>
       <link>https://mcjoi.github.io/post/00991/</link>
       <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00991/</guid>
       <description>&lt;h2 id=&#34;셀서식-표시형식-셀스타일&#34;&gt;셀서식, 표시형식, 셀스타일&lt;/h2&gt;&#xA;&lt;p&gt;결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀서식(cell format, format cells)&lt;/li&gt;&#xA;&lt;li&gt;표시형식(number format)&lt;/li&gt;&#xA;&lt;li&gt;사용자정의 표시형식(custom number format)&lt;/li&gt;&#xA;&lt;li&gt;셀스타일(cell style)&lt;br&gt;&#xA; &lt;br&gt;&#xA;Cell Format (셀서식)&lt;br&gt;&#xA;├─ Number Format (표시형식)&lt;br&gt;&#xA;│    └─ Custom Number Format (사용자정의 표시형식)&lt;br&gt;&#xA;├─ Font&lt;br&gt;&#xA;├─ Border&lt;br&gt;&#xA;├─ Fill&lt;br&gt;&#xA;├─ Alignment&lt;br&gt;&#xA;└─ Protection&lt;br&gt;&#xA;Cell Styles (셀스타일)&lt;br&gt;&#xA;└─ Custom Cell Styles (사용자정의 셀스타일)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_006/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_006/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_004/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_004/</guid>
+      <description></description>
     </item>
     <item>
       <title>윈도우11 멀티태스킹 창조절 기능 끄기</title>
@@ -126,6 +168,13 @@
       <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/05884/</guid>
       <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두 가지 중 나에게 맞는 화각은 무엇인가? 알 수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_003/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_003/</guid>
+      <description></description>
     </item>
     <item>
       <title>android - 수능수준 초/중/고 영단어 플래시 카드 &#43; papago</title>
@@ -161,6 +210,20 @@
       <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/00990/</guid>
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;엑셀용량이 비정상적으로 커진 파일들을 의외로 자주 보게된다. 몇가지 이유가 있겠지만 일반화 시키기는 어렵다.&lt;br&gt;&#xA;일반적인 상황에서는 아래 글에서 도움을 받을 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.oppadu.com/%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;엑셀 파일 크기 줄이기, 모든 해결방법 총정리 - 오빠두 엑셀&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;불행히도 위의 경우가 모든 것이 아닌데, 용량이 늘어나서 로딩 속도가 길어지는 것도 문제지만, 관리상 짜증나는 경우는 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ cell style이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 이름관리자에서 선언된 이름이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 원치 않는 사용영역(UsedRange)이 설정된 경우&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_002/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_002/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2026</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_001/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_001/</guid>
+      <description></description>
     </item>
     <item>
       <title>Project is unviewable - EvilClippy</title>
