@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <title>Gallery_category | shaaaaallow dive</title>
-    <meta name="description" content="Gallery_category" />
-    <link rel="canonical" href="https://mcjoi.github.io/gallery_category/" />
+    <title>2023 | shaaaaallow dive</title>
+    <meta name="description" content="2023" />
+    <link rel="canonical" href="https://mcjoi.github.io/gallery/fam/2023/f_2023_014/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -602,99 +602,123 @@
     </aside>
     <main class="page">
       
-  <section class="grid">
+  <div class="gallery-gate" data-gallery-gate>
+  <div class="gallery-gate-card">
+    <div class="gallery-gate-title">Gallery</div>
+    <div class="gallery-gate-desc">/gallery/ 콘텐츠는 비밀번호가 필요합니다.</div>
+    <form class="gallery-gate-form" data-gallery-gate-form>
+      <label class="gallery-gate-label" for="gallery-gate-pass">비밀번호</label>
+      <input
+        id="gallery-gate-pass"
+        class="gallery-gate-input"
+        type="password"
+        inputmode="numeric"
+        autocomplete="current-password"
+        placeholder="비밀번호 입력"
+        required
+      />
+      <button class="gallery-gate-btn" type="submit">확인</button>
+      <div class="gallery-gate-error" data-gallery-gate-error role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function() {
     
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/etc/" aria-label="Etc"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/etc/">Etc</a></h3>
-          <div class="post-meta">
-            <span>8 posts</span>
+    const PASS = '9680';
+    const KEY = 'gallery_gate_ok_v1';
+    const FAIL_KEY = 'gallery_gate_fail_v1';
+    const MAX_FAILS = 3;
+    
+    const REDIRECT_TO = '/';
+
+    const html = document.documentElement;
+    const gate = document.querySelector('[data-gallery-gate]');
+    const form = document.querySelector('[data-gallery-gate-form]');
+    const input = document.getElementById('gallery-gate-pass');
+    const error = document.querySelector('[data-gallery-gate-error]');
+
+    const setUnlocked = () => {
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      try { sessionStorage.removeItem(FAIL_KEY); } catch (e) {}
+      html.classList.add('gallery-unlocked');
+      gate?.setAttribute('aria-hidden', 'true');
+    };
+
+    const setLocked = () => {
+      html.classList.remove('gallery-unlocked');
+      gate?.setAttribute('aria-hidden', 'false');
+    };
+
+    let ok = false;
+    try { ok = localStorage.getItem(KEY) === '1'; } catch (e) {}
+
+    if (ok) {
+      setUnlocked();
+      return;
+    }
+
+    setLocked();
+    if (input) input.focus();
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!input) return;
+      const val = (input.value || '').trim();
+      if (val === PASS) {
+        if (error) error.textContent = '';
+        setUnlocked();
+        return;
+      }
+      let fails = 0;
+      try { fails = parseInt(sessionStorage.getItem(FAIL_KEY) || '0', 10) || 0; } catch (e) {}
+      fails += 1;
+      try { sessionStorage.setItem(FAIL_KEY, String(fails)); } catch (e) {}
+
+      if (fails >= MAX_FAILS) {
+        if (error) error.textContent = '비밀번호를 3번 틀렸습니다. 메인 화면으로 이동합니다.';
+        
+        setTimeout(() => { window.location.href = REDIRECT_TO; }, 300);
+        return;
+      }
+
+      if (error) error.textContent = '비밀번호가 올바르지 않습니다. 접근할 수 없습니다.';
+      input.value = '';
+      input.focus();
+    });
+  })();
+</script>
+
+  <div class="gallery-protected">
+    <article class="post">
+      <header class="post-header">
+        <h1>2023</h1>
+        <div class="post-meta">
+          
+            <a class="chip chip--tag" href="/gallery_category/fam_2023/">fam_2023</a>
+          
+          
+          
+          <div class="post-meta-date">
+            <span>2023-12-17</span>
+            
           </div>
         </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2014/" aria-label="Fam_2014"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2014/">Fam_2014</a></h3>
-          <div class="post-meta">
-            <span>9 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2015/" aria-label="Fam_2015"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2015/">Fam_2015</a></h3>
-          <div class="post-meta">
-            <span>2 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2016/" aria-label="Fam_2016"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2016/">Fam_2016</a></h3>
-          <div class="post-meta">
-            <span>1 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2019/" aria-label="Fam_2019"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2019/">Fam_2019</a></h3>
-          <div class="post-meta">
-            <span>1 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2020/" aria-label="Fam_2020"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2020/">Fam_2020</a></h3>
-          <div class="post-meta">
-            <span>5 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2021/" aria-label="Fam_2021"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2021/">Fam_2021</a></h3>
-          <div class="post-meta">
-            <span>2 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2022/" aria-label="Fam_2022"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2022/">Fam_2022</a></h3>
-          <div class="post-meta">
-            <span>9 posts</span>
-          </div>
-        </div>
-      </article>
-    
-      <article class="post-card">
-        <a class="thumb" href="/gallery_category/fam_2023/" aria-label="Fam_2023"></a>
-        <div class="post-body">
-          <h3 class="post-title"><a href="/gallery_category/fam_2023/">Fam_2023</a></h3>
-          <div class="post-meta">
-            <span>16 posts</span>
-          </div>
-        </div>
-      </article>
-    
-  </section>
+      </header>
+
+      <div class="post-content">
+        
+          
+            <p>
+              <img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/zz_gallery/fam/2023/2023-12-17%2016-16-16%20DSC04607-Edit.jpg" alt="2023" loading="lazy" />
+            </p>
+          
+        
+        
+      </div>
+    </article>
+  </div>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>

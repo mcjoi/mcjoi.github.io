@@ -597,6 +597,13 @@
       <description>&lt;h2 id=&#34;보이는-영역만-복사&#34;&gt;보이는 영역만 복사&lt;/h2&gt;&#xA;&lt;p&gt;행이 숨겨지는 이유는 다음과 같다.&lt;br&gt;&#xA;→ 필터&lt;br&gt;&#xA;→ 숨기기 또는 데이터 그룹 - 닫기&lt;/p&gt;&#xA;&lt;p&gt;특정 영역을 복사(ctrl + c) 했을 때, 숨겨진 영역을 제외하고 싶다면, 아래 방법을 써야한다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;필터&#34;&gt;필터&lt;/h2&gt;&#xA;&lt;p&gt;그냥 복사 → 붙여넣기 하면 된다. 자동으로 보이는 셀만 복사 된다.&lt;br&gt;&#xA;눈썰미가 있다면 확인했겠지만, 복사했을때, 행들 사이에 점선이 보인다면 숨겨진 영역이 제외되었다는 뜻이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00999/00999_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;숨기기-또는-데이터-그룹---닫기&#34;&gt;숨기기 또는 데이터 그룹 - 닫기&lt;/h2&gt;&#xA;&lt;p&gt;두 개 케이스는 처리방법이 동일하다. 일단 영역을 선택한다. 회색 박스가 쳐진다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_016/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_016/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>xls - 빠른 실행 도구모음에 원치 않는 아이콘이 계속 생길 때</title>
       <link>https://mcjoi.github.io/post/01851/</link>
       <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
@@ -604,11 +611,60 @@
       <description>&lt;h2 id=&#34;빠른-실행-도구모음에-원치-않는-아이콘이-계속-생길-때&#34;&gt;빠른 실행 도구모음에 원치 않는 아이콘이 계속 생길 때,&lt;/h2&gt;&#xA;&lt;p&gt;빠른 실행 도구모음(QAT, quick access toolbar)을 분명 커스텀 기능으로 채워뒀었는데,&lt;br&gt;&#xA;저장, undo, redo, touch 기능 아이콘이 계속 생긴다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01851/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;여러가지 방법을 사용해봤는데, 계속 앞의 저 네가지 아이콘이 초기화 되길래, 엑셀 사용이래 한번도 해보지 않은 업데이트라는 것을 해봤더니, 정상화 된다. 오피스 업데이트는 계정 메뉴에 들어가면 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01851/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;엑셀 뿐 아니라, 워드 등도 같은 문제가 발생했음을 확인할 수 있었다. 업데이트 이후에는 아래 그림처럼 정상화 된다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_013/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_013/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_014/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_014/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_015/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_015/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>xls - VBA에디터(VBE)를 VSCODE로 사용하기(XLWINGS)</title>
       <link>https://mcjoi.github.io/post/01874/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01874/</guid>
       <description>&lt;h2 id=&#34;엑셀의-vbe는-별로다&#34;&gt;엑셀의 VBE는 별로다.&lt;/h2&gt;&#xA;&lt;p&gt;VSCODE로 사용할 수 있다면&amp;hellip; 득과 실이 있겠지만, 아무래도 득이 더 크지 않을까?&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;xlwings&#34;&gt;XLWINGS&lt;/h2&gt;&#xA;&lt;p&gt;XLWINGS는 파이썬 패키지이다. 엑셀과 파이썬을 연계해주는 많은 파이썬 패키지들이 있지만,&lt;br&gt;&#xA;파이썬으로 엑셀파일을 컨트롤하는 프로그래밍을 하는 것이 아니라, VB를 사용하고, 그냥 IDE만 변경해준다는 개념이 XLWINGS에 있길래 시도해봤다. 사실 다른 툴들은 시도해 보지도 않았다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.xlwings.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;xlwings.org&lt;/a&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;#1. 엑셀을 설치(?)&lt;br&gt;&#xA;#2. 파이썬을 설치&lt;br&gt;&#xA;#3. VSCODE 설치&lt;br&gt;&#xA;VSCODE 설정(파이썬sdk설정, vba snippet extension 등)은.. 알아서 하시리라 믿고&amp;hellip;&lt;br&gt;&#xA;#4. 파이썬 패키지 설치(PYWIN32, XLWINGS, WATCHGOD)&lt;br&gt;&#xA;pywin32패키지는 설치 후, 파이썬 SDK 경로의 Scripts 폴더에 생기는 pywin32_postinstall.py 를  관리자 모드에서 실행해 줘야 한다. dll 파일을 windows/sysyem32에 복사하는 것 이외에, 레지스트리도 등록이 되고, 뭔 이상한 프로그램을 설치하는데.. 뭔지 정확하게 모르겠다.&lt;br&gt;&#xA;#5. (VBA가 포함된)엑셀 파일 작성/저장&lt;br&gt;&#xA;#6. 파일이 저장된 폴더를 VSCODE에서 열고, XLWINGS 실행&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_012/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_012/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_011/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_011/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_009/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_009/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_010/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_010/</guid>
+      <description></description>
     </item>
     <item>
       <title>xls - 다중 조건에 따라 카테고리별 합계(부분합) 구하기</title>
@@ -665,6 +721,20 @@
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01877/</guid>
       <description>&lt;h2 id=&#34;엑셀2019-실행취소undo-횟수-조정하기&#34;&gt;엑셀2019 실행취소(Undo) 횟수 조정하기&lt;/h2&gt;&#xA;&lt;p&gt;복사(ctrl + c), 붙여넣기(ctrl + v) 만큼이나 자주 쓰는 단축키가 실행취소(ctrl + z)가 아닐까?&lt;br&gt;&#xA;하지만, 누구나 한번쯤 실행취소를 연타하다가, 멈춰서 당황한 기억이 있지 않는가? 분명 이전 버전에서는 옵션에 실행취소 횟수를 정하는 내용이 있었던 것으로 기억하는데, 2019버전에서는 안보인다. 나만 안보이는건지는 모르겠다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;레지스트리-수정&#34;&gt;레지스트리 수정&lt;/h2&gt;&#xA;&lt;p&gt;cmd 창을 열어 regedit를 쳐서, 레지스트리 편집기를 열어준다.&lt;br&gt;&#xA;오피스2019 버전의 경우, 상단 주소창에, 아래 주소를 입력하면, 엑셀 레지스트리의 option폴더로 이동할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Excel\Options&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_008/</link>
+      <pubDate>Sun, 03 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_008/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_007/</link>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_007/</guid>
+      <description></description>
     </item>
     <item>
       <title>xls - Sheet와 WorkSheet type의 다른점</title>
@@ -737,6 +807,27 @@
       <description>&lt;h2 id=&#34;eml-파일-아웃룩으로-import-하기&#34;&gt;eml 파일 아웃룩으로 IMPORT 하기&lt;/h2&gt;&#xA;&lt;p&gt;다수의 메일을 백업할 때, &lt;code&gt;.eml&lt;/code&gt;파일로 저장이 되면, 일일이 노가다로 넣는 수밖에 없다. (고 알고 있다. 애초에 아웃룩 설정을 잘 했어야 하는데..) 수고를 덜기 위해 구글을 뒤적이다가 관련 outlook 스크립트를 찾게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.howto-outlook.com/howto/import-eml-files.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Importing eml-files&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;대략 내용을 보면, &lt;code&gt;.eml&lt;/code&gt;파일을 순차적으로 오픈해서 저장하는 과정을 스크립트로 해놓았을 뿐, 다른 무언가가 있어 보이지는 않는다. 따라서, 일일이 오픈하는 시간이 다소 소요된다. 디바이스마다 &lt;code&gt;.eml&lt;/code&gt;파일이 열리는 속도가 다르므로, 때에 따라 코드내의 &lt;code&gt;sleep&lt;/code&gt; 값을 적정하게 맞춰주라고 적혀있다.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_005/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_005/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_006/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_006/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_004/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_004/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>xls - 엑셀VBA에서 정규식 사용하기 연습</title>
       <link>https://mcjoi.github.io/post/01885/</link>
       <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
@@ -756,6 +847,20 @@
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01887/</guid>
       <description>&lt;h2 id=&#34;array-안에-찾는-값이-있는지-확인contain&#34;&gt;ARRAY 안에 찾는 값이 있는지 확인(contain)&lt;/h2&gt;&#xA;&lt;p&gt;엑셀VBA ARRAY가 CONTAINS 메쏘드를 가지고 있는지 확실하지 않다. 시도해 봤는데, 잘 되지 않아, 대안을 찾았다.&lt;br&gt;&#xA;코드는 다음과 같으며, if 이하를 참고하면 된다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arrTest&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Dim&lt;/span&gt; mArr(3)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mArr(0) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mArr(1) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mArr(2) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mArr(3) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 4&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;targetNo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt; UBound(Filter(mArr, targetNo)) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;1 &lt;span style=&#34;color:#66d9ef&#34;&gt;Then&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MsgBox &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;is in array&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;Else&lt;/span&gt;: MsgBox &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;is not in array&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;&lt;code&gt;msgbox 결과 : is in array&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;특별할 건 하나도 없다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_003/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_002/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_002/</guid>
+      <description></description>
     </item>
     <item>
       <title>xls - 한글엑셀을 영문엑셀로 변환하기</title>
@@ -840,6 +945,13 @@
       <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01898/</guid>
       <description>&lt;h2 id=&#34;추가기능-작성-시&#34;&gt;추가기능 작성 시&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;매크로를 열심히 만들고, 리본메뉴에 등록할 때, 아이콘이 필요하다.&lt;br&gt;&#xA;이 때, FACE ID 값으로 아이콘을 불러오는데, 아이콘 값을 모르면, 아무 숫자나 넣어볼 수 밖에 없다.&lt;/p&gt;&#xA;&lt;p&gt;아래 사이트에서 FACE ID 값을 확인할 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://bettersolutions.com/vba/ribbon/face-ids-2003.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;faceid icon images&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;언제 없어질지 모르므로, 나도 하나 카피본을 가지고 있어야겠다.&lt;/p&gt;&#xA;&lt;p&gt;끝.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023</title>
+      <link>https://mcjoi.github.io/gallery/fam/2023/f_2023_001/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2023/f_2023_001/</guid>
+      <description></description>
     </item>
     <item>
       <title>xls - 날짜간 차이 표시(datediff)</title>
