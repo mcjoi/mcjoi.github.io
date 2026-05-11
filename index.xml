@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2026 NH팜랜드</title>
+      <title>NH팜랜드</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_011/</link>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_011/</guid>
@@ -23,7 +23,7 @@
       <description>&lt;h2 id=&#34;이유&#34;&gt;이유&lt;/h2&gt;&#xA;&lt;p&gt;여러 장비를 사고 팔면서 본의 아니게 지켜온 철칙 한가지는 같은 제품을 다시 사지 않는 것이다.&lt;br&gt;&#xA;세상은 넓고 장비는 많다. 팔았던 것이 다소 아쉬울지언정, 많은 고민을 통해 매각을 한 만큼 새로운 경험을 할 필요가 있기 때문이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;h2 id=&#34;니콘-f-바디&#34;&gt;니콘 F 바디&lt;/h2&gt;&#xA;&lt;p&gt;D40 DX&lt;br&gt;&#xA;D5300 DX&lt;br&gt;&#xA;D750 FF&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;니콘-f-렌즈&#34;&gt;니콘 F 렌즈&lt;/h2&gt;&#xA;&lt;p&gt;니콘 DX 35mm F1.8&lt;br&gt;&#xA;니콘 FF AF 35mm F2.0D&lt;br&gt;&#xA;니콘 FF AF-S 35mm F1.8&lt;br&gt;&#xA;니콘 DX AF-S 18-55mm F3.5-5.6G VR&lt;br&gt;&#xA;니콘 DX AF-P 18-55mm F3.5-5.6G VR&lt;br&gt;&#xA;니콘 FF AF-S 24-85mm F3.5-4.5 nonVR&lt;br&gt;&#xA;니콘 FF AF-S 24-85mm F3.5-4.5 VR&lt;br&gt;&#xA;니콘 FF 28-150mm 3.5-4.5D Macro&lt;br&gt;&#xA;탐론 45mm F1.8 VC&lt;br&gt;&#xA;탐론 70-300mm F4-5.6 VC&lt;br&gt;&#xA;시그마 70-300mm F4-5.6 VC&lt;br&gt;&#xA;삼양 85mm F1.4 MF&lt;br&gt;&#xA;삼양 135mm F2.0 MF&lt;br&gt;&#xA;용누오 100mm F2.0&lt;br&gt;&#xA;용누오 50mm F1.8&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>CAFE - ABOGOGA</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_010/</link>
       <pubDate>Sun, 03 May 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_010/</guid>
@@ -37,7 +37,7 @@
       <description>&lt;h2 id=&#34;이미지-캡쳐&#34;&gt;이미지 캡쳐&lt;/h2&gt;&#xA;&lt;p&gt;이미지 캡쳐는 다양한 방법이 있겠지만,&lt;br&gt;&#xA;개인적으로 윈도우 자체에서 제공하는 win + shift + s 를 사용한 클립보드 복사를 많이 사용한다.&lt;br&gt;&#xA;대부분 오피스 파일에 붙여넣기를 하지만, 바로 jpg로 만들고 싶을 때가 있다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;클립보드&#34;&gt;클립보드&lt;/h2&gt;&#xA;&lt;p&gt;클립보드에 저장된 이미지를 저장하려면 그림판 등의 프로그램을 켜야하는데 귀찮으니,&lt;br&gt;&#xA;그냥 아래와 같은 메모장으로 bat 파일을 하나 만들어 두면, 간단히 처리가 가능하다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@echo off&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;powershell -NoProfile -ExecutionPolicy Bypass ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Add-Type -AssemblyName System.Windows.Forms; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Add-Type -AssemblyName System.Drawing; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$img &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Windows.Forms.Clipboard&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;::GetImage&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$img -ne $null&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;$env:USERPROFILE&lt;span style=&#34;color:#ae81ff&#34;&gt;\D&lt;/span&gt;esktop&lt;span style=&#34;color:#ae81ff&#34;&gt;\c&lt;/span&gt;lipboard_&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;Get-Date -Format &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;yyyyMMdd_HHmmss&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;.jpg&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $img.Save&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$path, &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;System.Drawing.Imaging.ImageFormat&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;::Jpeg&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Write-Output &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;Saved to $path&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Write-Output &lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;No image in clipboard&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#34;&lt;/span&gt;; ^&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pause&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;p&gt;뭐 딱히 특별한 것은 없다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>SEOUL LAND</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_009/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_009/</guid>
@@ -58,7 +58,7 @@
       <description>&lt;h2 id=&#34;액션캠-매각&#34;&gt;액션캠 매각&lt;/h2&gt;&#xA;&lt;p&gt;고프로도 그렇고 DJI 액션시리즈도 그렇고, 기술이 발전하는 단계의 전자기기는 애석하게도 가치가 하루가 다르게 떨어진다. 액션4를 구매한지 2년이 채 지나지 않았지만, 그 동안 DJI 자체적인 출고가 인하, 프로모션으로 인해 중고가는 2~30% 정도 추락을 했다.&lt;/p&gt;&#xA;&lt;p&gt;매각을 염두에 두고 있다면, 절대 사지 말아야 할 품목임에는 틀림없다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;남은-악세서리&#34;&gt;남은 악세서리&lt;/h2&gt;&#xA;&lt;p&gt;액션캠은 원래 악세사리 지옥이 아니던가. 여러 악세사리를 포함하여, 적당한 가격에 올렸더니, 연락이 오지 않는다. 방법은 둘 중 하나다.&lt;/p&gt;&#xA;&lt;p&gt;악세사리를 다 포함해서, 이에 대한 값을 매기지 않던가,&lt;br&gt;&#xA;악세사리를 다 뺀 가격을 책정하던가.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>시흥 과학고 부지</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_008/</link>
       <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_008/</guid>
@@ -142,7 +142,7 @@
       <description>&lt;p&gt;포스트 영역 기준(기본 980px)으로 이미지를 리사이징합니다. EXIF 표시를 켜면 이미지 하단에 검은 영역을 추가해 정보를 표시합니다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>CAFE - ZATURA</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_007/</link>
       <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_007/</guid>
@@ -156,21 +156,21 @@
       <description>&lt;h2 id=&#34;셀서식-표시형식-셀스타일&#34;&gt;셀서식, 표시형식, 셀스타일&lt;/h2&gt;&#xA;&lt;p&gt;결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;셀서식(cell format, format cells)&lt;/li&gt;&#xA;&lt;li&gt;표시형식(number format)&lt;/li&gt;&#xA;&lt;li&gt;사용자정의 표시형식(custom number format)&lt;/li&gt;&#xA;&lt;li&gt;셀스타일(cell style)&lt;br&gt;&#xA; &lt;br&gt;&#xA;Cell Format (셀서식)&lt;br&gt;&#xA;├─ Number Format (표시형식)&lt;br&gt;&#xA;│    └─ Custom Number Format (사용자정의 표시형식)&lt;br&gt;&#xA;├─ Font&lt;br&gt;&#xA;├─ Border&lt;br&gt;&#xA;├─ Fill&lt;br&gt;&#xA;├─ Alignment&lt;br&gt;&#xA;└─ Protection&lt;br&gt;&#xA;Cell Styles (셀스타일)&lt;br&gt;&#xA;└─ Custom Cell Styles (사용자정의 셀스타일)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
-      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</link>
-      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2026</title>
+      <title>ESCAPE ROOM in 홍대입구</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_006/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_006/</guid>
       <description></description>
     </item>
     <item>
-      <title>2026</title>
+      <title>홍대입구</title>
+      <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_005/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HOME</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_004/</link>
       <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_004/</guid>
@@ -191,7 +191,7 @@
       <description>&lt;h2 id=&#34;50mm-or-85mm&#34;&gt;50mm or 85mm&lt;/h2&gt;&#xA;&lt;p&gt;50mm는 적당하지만 심도표현이 다소 부족하고, 85mm는 심도표현은 좋지만 피사체와의 거리가 너무 멀다. 중도의 화각은 65mm와 75mm정도이다. 두 가지 중 나에게 맞는 화각은 무엇인가? 알 수 있는 방법은 없다. 써보는 수밖에.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;삼양-75mm&#34;&gt;삼양 75mm&lt;/h2&gt;&#xA;&lt;p&gt;삼양의 75mm. 가볍고, 나쁘지 않은 화질. 그런데 정말 외형이 못생겼고, 무슨 이유인지는 모르지만, 안정적이지가 않다. 사실 삼양의 다른 렌즈(24mm F2.8)를 썼을때도 뭔가 안정적이지 못한 느낌을 받은 적이 있다.&lt;/p&gt;&#xA;&lt;p&gt;이제는 시그마 65mm라는 칼을 빼들어야할 때가 된 건가.. 비싼데&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>LOTTE MART - SHIHEUNG</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_003/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_003/</guid>
@@ -233,14 +233,14 @@
       <description>&lt;h2 id=&#34;inspiration&#34;&gt;inspiration&lt;/h2&gt;&#xA;&lt;p&gt;엑셀용량이 비정상적으로 커진 파일들을 의외로 자주 보게된다. 몇가지 이유가 있겠지만 일반화 시키기는 어렵다.&lt;br&gt;&#xA;일반적인 상황에서는 아래 글에서 도움을 받을 수 있다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.oppadu.com/%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;엑셀 파일 크기 줄이기, 모든 해결방법 총정리 - 오빠두 엑셀&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;불행히도 위의 경우가 모든 것이 아닌데, 용량이 늘어나서 로딩 속도가 길어지는 것도 문제지만, 관리상 짜증나는 경우는 다음과 같다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;✶ cell style이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 이름관리자에서 선언된 이름이 몇 백개 되는 경우&lt;br&gt;&#xA;✶ 원치 않는 사용영역(UsedRange)이 설정된 경우&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2026</title>
+      <title>신전떡볶이</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_002/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_002/</guid>
       <description></description>
     </item>
     <item>
-      <title>2026</title>
+      <title>상처만 남긴 피부과 - REAL YOU</title>
       <link>https://mcjoi.github.io/gallery/fam/2026/f_2026_001/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2026/f_2026_001/</guid>
@@ -436,7 +436,7 @@
       <description>&lt;h2 id=&#34;qcy&#34;&gt;QCY&lt;/h2&gt;&#xA;&lt;p&gt;이어폰은 인생에서 어떤 의미인가?&lt;br&gt;&#xA;꽤나 오래동안 대중교통생활을 해온 나에게 이어폰은 여러가지 의미가 있다.&lt;/p&gt;&#xA;&lt;p&gt;1000원짜리부터 수십만원대까지 여러 이어폰을 사용해오던 나에게 그것들은 항상 소모품이었고, 가격만큼 값어치를 해왔지만,&lt;/p&gt;&#xA;&lt;p&gt;QCY는 모든 고정관념을 바꿔놨다. 적어도 내 고정관념 속 가격에 대한 값어치 그 이상을 해줬다.&lt;br&gt;&#xA;음악을 들을 나이가 훌쩍 지나버린 나에게는 이제 음질은 크게 중요하지 않기 때문이 13 anc 모델에 이어, 이번에도 가성비 모델을 구매했다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;qcy-melobuds-neo&#34;&gt;QCY Melobuds neo&lt;/h2&gt;&#xA;&lt;p&gt;넘버링은 31번이고, 제품명은 어딘가 따라 베낀 듯한 melobuds neo이다.&lt;br&gt;&#xA;노란색 브랜드 컬러 박스는 적용되지 않았다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>집 앞</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_011/</link>
       <pubDate>Fri, 07 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_011/</guid>
@@ -485,7 +485,7 @@
       <description>&lt;h2 id=&#34;exif-information&#34;&gt;Exif information&lt;/h2&gt;&#xA;&lt;p&gt;Exif 정보를 사진에 넣어 표시를 하려고 해본 사람이라면 오픈 서비스로 운영되는 아래 사이트를 본 적이 있을 것이다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://exif-frame.yuru.cam/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;exif-frame&lt;/a&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;간결한 사용법과 높은 퀄리티의 결과물을 쉽게 얻을 수 있다.&lt;br&gt;&#xA;서비스 사이트를 본 적은 없더라도 결과물을 본 적은 있을 것이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/01.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;결과물을 보면 레이아웃에 아주 많이 신경을 썼음을 알수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03996/02.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h2 id=&#34;flutter-migration&#34;&gt;flutter migration&lt;/h2&gt;&#xA;&lt;p&gt;이를 참고해서, 내 맘에 드는 정보만 넣는 플러터 앱을 짜봤다. 생각보다 많은 부분을 생각해야하는 서비스임을 확인했다.&lt;br&gt;&#xA;다소 부족한 점은 있지만, 언제든 커스터마이징 할 수 있으니, 크게 신경쓰지 않았다.&lt;br&gt;&#xA;특히, 카메라 브랜드에 따라 로고가 바뀌는 부분은.. 음 귀찮다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>범박동 - 스피치학원 앞</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_010/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_010/</guid>
@@ -513,7 +513,7 @@
       <description>&lt;h2 id=&#34;주요-함수의-처리속도&#34;&gt;주요 함수의 처리속도&lt;/h2&gt;&#xA;&lt;p&gt;데이터 행이 늘어나고 수식이 많아지니, 처리속도가 현저히 느려짐을 느낀다.&lt;br&gt;&#xA;배열수식과 같은 역할을 할 수 있는 함수들의 처리속도에 대하여 chatGPT에게 질문을 해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;실망스러운-dsum&#34;&gt;실망스러운 DSUM&lt;/h2&gt;&#xA;&lt;p&gt;뭔가 있어 보이는 함수명 때문에 가장 큰 기대를 했지만, 아쉽게도 성능은 그렇지 못한가보다.&lt;br&gt;&#xA;조건영역에 대한 문자열을 해석하는 시간이 더 소요된다고 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00992/00992_1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;의외로-sumifs&#34;&gt;의외로 sumifs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;{sum(if()}&lt;/code&gt; 배열수식을 &lt;code&gt;sumproduct&lt;/code&gt; 로 변경해서 직접 테스트한적이 있었는데, 거의 차이가 없었다.&lt;br&gt;&#xA;조건이 많았는지 뭔지는 모르겠지만, 의외로 sumifs 함수가 가장 빠르다고 하니&amp;hellip;..&lt;br&gt;&#xA;다시 테스트해볼까 하다가, 엄두가 안나서 멈춰있다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>HOTEL - SHILLA</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_009/</link>
       <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_009/</guid>
@@ -527,21 +527,21 @@
       <description>&lt;h2 id=&#34;컴마로-분리된-텍스트셀에서-n번째-항목-찾기-ver2019이하&#34;&gt;컴마(,)로 분리된 텍스트셀에서 n번째 항목 찾기 (ver2019이하)&lt;/h2&gt;&#xA;&lt;p&gt;아래 그림처럼 컴마(,)로 분리된 텍스트셀이 있다면, 이를 발라내기 위한 방법은 무궁무진할텐데&amp;hellip; 희한하게도 손에 익지를 않아서 기재해둔다.&lt;/p&gt;&#xA;&lt;p&gt;방법은 사실 꼼수에 가까운 방법인데, 두번째 값을 가지고 온다고 치자. (N=2)&lt;br&gt;&#xA;일단 컴마를 SUBSTITUTE 함수를 사용해서 넉넉한 공백으로 채워준다.(여기서는 100개의 공백)&lt;br&gt;&#xA;그럼 두번째 텍스트가 나오기 전까지 CLOVA X (NAVER)는 공백까지 115개의 문자를 사용한다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;CLOVA X (NAVER) : 1~115&lt;/li&gt;&#xA;&lt;li&gt;Gemini (Google) : 116~230&lt;/li&gt;&#xA;&lt;li&gt;ChatGPT (OpenAI) : 231~249&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;MID 함수로 시작은 (N-1)*100+1 으로 101을 만들어 주고, 길이는 100으로 한다.&lt;br&gt;&#xA;여기서는 N이 2(두번째)였으니, 101~200까지를 불러오게 될 것이다. 그럼 위의 순서에서 보듯 &amp;ldquo;공백16칸 + 텍스트15칸 + 공백69칸&amp;quot;이 남게 될 것이다. 이때 두번째 항목인 Gemini (Google) 가 포함되게 된다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>은행동 - 도미노 피자 앞</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_008/</link>
       <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_008/</guid>
       <description></description>
     </item>
     <item>
-      <title>2025</title>
+      <title>화담숲</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_007/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_007/</guid>
       <description></description>
     </item>
     <item>
-      <title>2025</title>
+      <title>화담숲</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_012/</link>
       <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_012/</guid>
@@ -555,7 +555,7 @@
       <description>&lt;h2 id=&#34;리본메뉴-xml로-만들기---오피스2019&#34;&gt;리본메뉴 XML로 만들기 - 오피스2019&lt;/h2&gt;&#xA;&lt;p&gt;리본메뉴는 VBA로도 충분히 만들 수 있는데, 내가 발견한 문제는 다음과 같다. 당연히 실력이 있는 누군가에게는 해결책이 있을 것이다. 단지 코드를 복잡하게 늘리고 싶지 않다.&lt;/p&gt;&#xA;&lt;ul class=&#34;text-box&#34;&gt;&#xA;&lt;li&gt;탭의 이름이 무조건 추가기능(add-in)이다.&lt;/li&gt;&#xA;&lt;li&gt;그룹이 &amp;lsquo;Menu Commands&amp;rsquo; 하나로 고정이다.&lt;/li&gt;&#xA;&lt;li&gt;아이콘을 FaceId 중에 골라서 선택해야한다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;바꿔 말하면, 위의 문제가 아니라면, 그냥 써도 무방하다는 뜻이다. 사실 사용상 전혀 문제가 되지 않을 문제들이다.&lt;br&gt;&#xA;내가 사용한 방법은 auto_open() 과 auto_close() 프로시저를 사용해 아래와 같이 입력한 것이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>상동 홈플러스</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_006/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_006/</guid>
@@ -590,38 +590,10 @@
       <description>&lt;h2 id=&#34;사용자-정의-셀서식-조건-1미만--1초과는--로-표기하기&#34;&gt;사용자 정의 셀서식 조건, 1%미만 -1%초과는 -로 표기하기&lt;/h2&gt;&#xA;&lt;p&gt;보고서를 작성하다보면, 1% 미만 값으로 인해 소숫점을 따로 꺼내지 않는 이상 +0%, -0%의 값들이 나오기 마련인데, 상당히 보기에 지저분하다. 그래서 엑셀 사용자 정의 셀서식에 조건을 적용하여, 0%를 포함한 1%와 -1%의 값들은 &amp;ldquo;-&amp;rdquo; 표기를 해본다. 셀서식에서는 조건이 3개까지만 걸리니, 주의해야한다. 그렇지 않으면 조건부 서식을 사용해야한다.&lt;/p&gt;&#xA;&lt;p&gt;셀서식 조건은 아래와 같이 걸어주면 된다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;[&amp;gt;=0.01]+0%;[Red][&amp;lt;=-0.01]-0%;-&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;아래 그림을 보면 성장률은 실제 0.2%인데, &amp;ldquo;-&amp;rdquo; 처리된것을 알 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01860/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2025</title>
+      <title>중동 이마트</title>
       <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_005/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_005/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025</title>
-      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_001/</link>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_001/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025</title>
-      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_002/</link>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_002/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025</title>
-      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_003/</link>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_003/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>2025</title>
-      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_004/</link>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_004/</guid>
       <description></description>
     </item>
     <item>
@@ -629,6 +601,34 @@
       <link>https://mcjoi.github.io/gallery/etc/e_003/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/etc/e_003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVERLAND</title>
+      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_001/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_001/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVERLAND</title>
+      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_002/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_002/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVERLAND</title>
+      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_003/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVERLAND</title>
+      <link>https://mcjoi.github.io/gallery/fam/2025/f_2025_004/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/fam/2025/f_2025_004/</guid>
       <description></description>
     </item>
     <item>
@@ -660,14 +660,14 @@
       <description>&lt;h2 id=&#34;자동-고침autocorrect-기능을-이용한-특수-기호-입력&#34;&gt;자동 고침(AutoCorrect) 기능을 이용한 특수 기호 입력&lt;/h2&gt;&#xA;&lt;p&gt;파워포인트는 워드나 매한가지 프로그램이기 때문에, 윈도우즈에서 제공하는 특수기호를 사용하는 경우가 많다. ㅁ + 한자는 꽤나 편한 입력방식이긴 하지만, 그마저도 귀찮다면, AutoCorrection을 사용할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01850/01.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;파워포인트 옵션에 가면, 두번째 메뉴(Proofing, 한글로는 &amp;lsquo;검증&amp;rsquo;일까?) 에 AutoCorrect Option이 있다. 나의 경우, 텍스트가 원치 않게 변경되는 것을 방지하기 위해 기능을 꺼두기도 한다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01850/02.jpg&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;옵션창은 매우 간단하다. Replace text as you type 항목에서 원하는 타이핑을 쳤을 떄, With 값에 적힌 값으로 변하도록 할 수 있다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2024</title>
+      <title>CAFE - 강화도 바닷</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_014/</link>
       <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_014/</guid>
       <description></description>
     </item>
     <item>
-      <title>2024</title>
+      <title>CAFE - 스타벅스 명동</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_013/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_013/</guid>
@@ -681,7 +681,7 @@
       <description>&lt;h2 id=&#34;evaluate를-활용한-수식-복사copy-formula&#34;&gt;Evaluate를 활용한 수식 복사(copy formula)&lt;/h2&gt;&#xA;&lt;p&gt;아래와 같은 표가 있을 때, total 열을 반복적으로 복사를 해야하는 상황&amp;hellip;..(예시가 적절하지는 않은 것 같다&amp;hellip;)이 있다면, total을 산출하는 수식을 복사한다면 편할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;일반적으로는 열을 옮겨서(잘라내기, cut) 수식을 유지하겠지만, 아주 간헐적으로 해당 내용을 그대로 사용하고 싶다면, 수식을 따로 text형태로 일일이 복사해줘야하는데, 이를 대신해줄만한 사용자 함수를 add-in으로 등록해 두면 사용할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01862/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;예시에서는 간단한 수식이지만, 가령 배열수식같이 복잡하다는 가정을 해보자.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01862/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;아래 그림처럼, 사용자 함수를 통해 수식을 열 복사시 사용할 수 있다.&lt;br&gt;&#xA;아래 그림에서 fxCopyFormula는 사용자 함수이다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2024</title>
+      <title>금광호수</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_012/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_012/</guid>
