@@ -695,38 +695,38 @@
       <description>&lt;h2 id=&#34;구글시트---요약-테이블-만들기&#34;&gt;구글시트 - 요약 테이블 만들기&lt;/h2&gt;&#xA;&lt;p&gt;다음과 같은 테이블이 있을때, 피벗테이블을 만들 수 있지만, 쿼리 함수를 통해 간단하게 요약 테이블 구성이 가능하다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;첫 셀에서, 다음과 같은 쿼리함수를 실행한 결과이다. 결과값은 엑셀의 고급함수와 비슷하다고 할 수 있다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;=QUERY(Table1,&lt;br&gt;&#xA;&amp;ldquo;Select&lt;br&gt;&#xA;Col3, Col4&lt;br&gt;&#xA;where Col2 = &amp;lsquo;야채&amp;rsquo;&lt;br&gt;&#xA;&amp;ldquo;)&lt;/p&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;함수 내에서는 sql 문을 사용하게 된다. Table1에서, 3번째, 4번째 열을 불러오는데, 조건은 2번째 열이 야채인 경우이다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/02.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;p&gt;여기서 살짝 짜증나는 부분이 생기는데, Table1에 새로운 열을 추가하는 경우이다. 애초에 sql문을 String 값으로 작성해놨기 때문에, 참조 테이블 변화에 대해서 동적으로 작동하지 않는다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2024</title>
+      <title>everland</title>
+      <link>https://mcjoi.github.io/gallery/etc/e_001/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/gallery/etc/e_001/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EVERLAND</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_008/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_008/</guid>
       <description></description>
     </item>
     <item>
-      <title>2024</title>
+      <title>EVERLAND</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_009/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_009/</guid>
       <description></description>
     </item>
     <item>
-      <title>2024</title>
+      <title>EVERLAND</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_010/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_010/</guid>
       <description></description>
     </item>
     <item>
-      <title>2024</title>
+      <title>EVERLAND</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_011/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_011/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>everland</title>
-      <link>https://mcjoi.github.io/gallery/etc/e_001/</link>
-      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcjoi.github.io/gallery/etc/e_001/</guid>
       <description></description>
     </item>
     <item>
@@ -758,7 +758,7 @@
       <description>&lt;h2 id=&#34;발표-자료를-취합할-때&#34;&gt;발표 자료를 취합할 때,&lt;/h2&gt;&#xA;&lt;p&gt;동일한 template를 배포하지 않는 이상 정말 자유로운 형태의 내용이 도착하는 것을 쉽게 경험할 수 있다. 언제부터인가 파워포인트의 새로만들기 이후 생성되는 문서의 기본사이즈가 16:9이고, 출력을 위해 A4사이즈에 맞춰 문서 작업하는 사람도 있고, 구 버전의 파워포인트에서 표준이었던 4:3 비율을 지키고 있는 사람도 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01865/01.png&#34; alt=&#34;myimg&#34;&gt;&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;가로--세로-사이즈-혼용&#34;&gt;가로 + 세로 사이즈 혼용&lt;/h2&gt;&#xA;&lt;p&gt;일단, 가로(landscape)와 세로(portrait)사이즈가 혼용이 되어있다면 두 문서를 연결하는 방법은 없다. 세로 사이즈의 문서를 발표에 사용하겠다는 생각은 프로젝터 등의 여건을 생각했을 때, 맞지가 않다. 그래서인지 모르겠지만 단일 파워포인트 파일에서 연결할 수 있는 기술적인 방법은 없다. 급한데로 넘어갈 페이지에 하이퍼링크를 달아서 세로로 된 파일을 불러내는 것이 최선이다. 마이크로소프트 포럼에도 해결방법으로 그것을 제시하고 있다. 생각보다 두개의 파일을 하이퍼링크로 연결했을 때 매끄럽게 넘어갈 수 있기는 하다.&lt;br&gt;&#xA;가로 슬라이드에서 세로 슬라이드로 넘어가기 위한 도형을 만들고 파일을 선택해주고, 하이퍼링크를 걸어준다. 물론, 세로슬라이드의 마지막에 다시 돌아오는 버튼을 반드시 달아줘야한다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>2024</title>
+      <title>STARFIELD - GOYANG</title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_007/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_007/</guid>
@@ -786,7 +786,7 @@
       <description></description>
     </item>
     <item>
-      <title>2024</title>
+      <title>JEJU - </title>
       <link>https://mcjoi.github.io/gallery/fam/2024/f_2024_006/</link>
       <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/gallery/fam/2024/f_2024_006/</guid>
