@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project - LLM on shaaaaallow dive</title>
+    <link>https://mcjoi.github.io/tag/project---llm/</link>
+    <description>Recent content in Project - LLM on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcjoi.github.io/tag/project---llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>qwen - from scratch</title>
+      <link>https://mcjoi.github.io/post/02994y/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/02994y/</guid>
+      <description>&lt;h2 id=&#34;open-source&#34;&gt;open source&lt;/h2&gt;&#xA;&lt;p&gt;_돈도 없고 하니, 집에 open source LLM을 설치해본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xD;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://qwen.ai&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;qwen official website&lt;/a&gt;&#xA;&lt;Br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;</description>
+    </item>
+  </channel>
+</rss>
