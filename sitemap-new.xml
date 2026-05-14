@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
     <loc>https://mcjoi.github.io/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mcjoi.github.io/posts/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mcjoi.github.io/post/02994/</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -91,11 +96,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mcjoi.github.io/post/02995/</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mcjoi.github.io/post/02994/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
