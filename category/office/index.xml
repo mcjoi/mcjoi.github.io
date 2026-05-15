@@ -447,7 +447,7 @@
       <link>https://mcjoi.github.io/post/01890/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mcjoi.github.io/post/01890/</guid>
-      <description>&lt;h2 id=&#34;ㅁ--한자가-전부가-아니었다&#34;&gt;ㅁ + 한자가 전부가 아니었다.&lt;/h2&gt;&#xA;&lt;p&gt;얼마전 적었던 이모지 관련 글에서처럼, OS 차원에서 지원하는 특수문자는 ㅁ + 한자로 적을 수 있는게 전부는 아닌 모양이다.&lt;br&gt;&#xA;보고서 작성시에 의외로 체크표시를 텍스트로 활용해야하는 경우가 많은데, ㅁ + 한자에 나오는 특수문자는 이게 없어서 참 아쉬웠던 차에 아래 사이트에서 해당 유니코드를 발견하게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.alt-codes.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cehck Mark Symbols&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;h2 id=&#34;사용방법&#34;&gt;사용방법&lt;/h2&gt;&#xA;&lt;p&gt;가장 쉬운 방법은 그냥 복사해서 사용하는 것이고, 해당 글의 내용처럼, ALT + X를 사용해서 변환하는 방법도 있다고 하는데, 워드에서는 잘 되는데, 파워포인트에서는 잘 되지 않아, 버렸다. 그냥 클립보드에 고정해서 사용하거나 복사해서 사용하기로 했다.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ㅁ--한자가-전부가-아니었다&#34;&gt;ㅁ + 한자가 전부가 아니었다.&lt;/h2&gt;&#xA;&lt;p&gt;얼마전 적었던 이모지 관련 글에서처럼, OS 차원에서 지원하는 특수문자는 ㅁ + 한자로 적을 수 있는게 전부는 아닌 모양이다.&lt;br&gt;&#xA;보고서 작성시에 의외로 체크표시를 텍스트로 활용해야하는 경우가 많은데, ㅁ + 한자에 나오는 특수문자는 이게 없어서 참 아쉬웠던 차에 아래 사이트에서 해당 유니코드를 발견하게 되었다.&lt;/p&gt;&#xA;&lt;a class=&#34;btn-link&#34; href=&#34;https://www.alt-codes.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Cehck Mark Symbols&lt;/a&gt;&#xA;&lt;br&gt;&#xA;&lt;Br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;사용방법&#34;&gt;사용방법&lt;/h2&gt;&#xA;&lt;p&gt;가장 쉬운 방법은 그냥 복사해서 사용하는 것이고, 해당 글의 내용처럼, ALT + X를 사용해서 변환하는 방법도 있다고 하는데, 워드에서는 잘 되는데, 파워포인트에서는 잘 되지 않아, 버렸다. 그냥 클립보드에 고정해서 사용하거나 복사해서 사용하기로 했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>xls - variable, sub, function의 private, public 범위</title>
