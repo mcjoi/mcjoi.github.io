@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sunnybong.xyz/sitemap-new.xml
-Sitemap: https://sunnybong.xyz/sitemap.xml
