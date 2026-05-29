@@ -10,7 +10,7 @@
 execution-1 텍스트 영역을 선택 하고, 매크로 실행, 원하는 문자를 입력 해당 영역의 우측셀에 해당 문자 이후 자동 복사 Sub kk() Dim targetRange As Range Dim c As Range Dim myWord As String Dim pos As Long Dim cellText As String &#39; Verify whether a valid cell range is selected If TypeName(Selection) &lt;&gt; &#34;Range&#34; Then MsgBox &#34;Please select a valid cell range before proceeding.&#34; Exit Sub End If Set targetRange = Selection &#39; Request input text from the user myWord = InputBox(&#34;Please enter the character or text to be used as a reference.&#34;) &#39; Check for empty input If myWord = &#34;&#34; Then MsgBox &#34;No input was provided. The process has been terminated.&#34; Exit Sub End If &#39; Process each selected cell For Each c In targetRange cellText = CStr(c.Value) &#39; Determine whether the input text exists in the cell pos = InStr(1, cellText, myWord) If pos = 0 Then MsgBox &#34;The specified text does not exist in the selected cell.&#34; &amp; vbCrLf &amp; _ &#34;Cell address: &#34; &amp; c.Address Exit Sub End If &#39; Return the text following the first occurrence to the right-hand cell c.Offset(0, 1).Value = Mid(cellText, pos &#43; Len(myWord)) Next c MsgBox &#34;The operation has been completed successfully.&#34; End Sub execution-2 뭔가 부족하지 않은가? 몇가지 옵션을 준다.
 aaa-bbb-ccc 처럼 어떤 기호 또는 문자로 텍스트가 구분이 될 때, 원하는 영역의 값을 함수로 귀찮게 작성하지 말고, 추출을 하고 싶다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01988/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01988/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

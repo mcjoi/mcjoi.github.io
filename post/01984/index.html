@@ -10,7 +10,7 @@
 당연히 바꾸기(컨트롤 H)로 가능하지만 코드로 해야한다.
 Sub del_blank() Dim myRNG As Range Dim k as integer If MsgBox(&#34;수식 다 날아갑니다&#34;, vbExclamation &#43; vbYesNo) = vbNo Then GoTo dd End If On Error Resume Next Application.DisplayAlerts = False Set myRNG = Application.InputBox(&#34;공백없앨 영역선택&#34;, , , , , , , 8) Application.DisplayAlerts = True On Error GoTo 0 If myRNG Is Nothing Then MsgBox &#34;범위를 선택하지 않아, 종료합니다&#34; GoTo dd End If For k = 1 To myRNG.Count myRNG(k) = WorksheetFunction.Trim(myRNG(k)) myRNG(k) = Replace(myRNG(k), &#34; &#34;, &#34;&#34;) Next k dd: End Sub v2 개선 버전 치명적인 결함이 발견되었으니, 엑셀에서 입력한 데이터가 아니라, 웹에서 가져온 데이터에서 여백이 있을 경우, 공백이 지워지지 않는다는 점이다. 아래와 같이 수정을 해보았다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01984/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01984/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

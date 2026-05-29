@@ -10,7 +10,7 @@
 사용한 코드는 아래와 같다. 최적화된 코드라기보다는 기능의 구현에 초점을 맞춘 코드이다.
 Sub slide_resizes() Dim pptPres As Object Set pptPres = ActivePresentation customWidth = InputBox(&#34;Input Width Value (Double)&#34;) customHeight = InputBox(&#34;Input Height Value (Double)&#34;) customWidth = ConvertCmToPoint(ConvertPxToCm(customWidth)) customHeight = ConvertCmToPoint(ConvertPxToCm(customHeight)) pptPres.PageSetup.SlideWidth = customWidth pptPres.PageSetup.SlideHeight = customHeight Set pptPres = Nothing End Sub Function ConvertCmToPoint(ByVal cm As Double) As Double ConvertCmToPoint = cm * 28.34646 End Function Function ConvertPxToCm(ByVal px As Double) As Double ConvertPxToCm = px * 0.0264583333 End Function Function ConvertPointToCm(ByVal pnt As Double) As Double ConvertPointToCm = pnt * 0.03527778 End Function 끝.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01867/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01867/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

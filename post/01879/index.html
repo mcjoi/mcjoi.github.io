@@ -9,7 +9,7 @@
 VBA로 버튼을 만들어 두면 나름 편하게 써먹을 수 있다. 특히, 여러 열에서 필터를 걸어놨을 때 유용하다. 물론, 리본메뉴를 찾아 누르는 과정과 크게 다르지 않을지 모른다.
 Sub clearFilter() &#39; [with Table] Does not work where active cell is out of Tables. On Error Resume Next ActiveSheet.ShowAllData On Error GoTo Err_Check Err_Check: If Err.Number &lt;&gt; 0 Then MsgBox &#34;오류번호 : &#34; &amp; Err.Number &amp; vbCr &amp; _ &#34;오류내용 : &#34; &amp; Err.Description, vbCritical, &#34;오류&#34; End If End Sub 자동필터를 자주 사용한다면 한번 고려해볼법하다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01879/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01879/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

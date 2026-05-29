@@ -17,7 +17,7 @@
 단, 조건부 서식에서 설정된 색은 먹히지 않는다!!!! Sub row_del_COLOR() Dim myRNG As Range Dim i As Integer Dim CmyRNG As Integer On Error Resume Next Application.DisplayAlerts = False Set myRNG = Application.InputBox(&#34;영역&#34;, , , , , , , 8) Application.DisplayAlerts = True CmyRNG = myRNG.Count For i = CmyRNG To 1 Step -1 If myRNG(i).Interior.ColorIndex &lt;&gt; -4142 Then myRNG(i).EntireRow.Select Selection.Delete End If Next On Error Resume Next Application.DisplayAlerts = False myRNG(1).Activate Application.DisplayAlerts = True End Sub [보너스] 짝수값이 들어 있는 셀 색칠하기 특정 영역에서 값이 짝수이면, 회색을 칠하고, 우측셀에 &#43;1 한 값을 넣어본다.
 아무 의미는 없다. 어느새 mod 함수를 까먹고 있었다는 사실을 알아냈다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01978/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01978/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

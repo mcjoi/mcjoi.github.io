@@ -9,7 +9,7 @@
 시트에 사용된 마지막 셀을 찾아봤다.
 Sub LastCellNum() Dim sht As Worksheet Dim LastRow As Integer Dim LastColumn As Integer Set sht = ThisWorkbook.Worksheets(&#34;Sheet1&#34;) LastRow = sht.UsedRange.Rows(sht.UsedRange.Rows.Count).Row LastColumn = sht.UsedRange.Columns(sht.UsedRange.Columns.Count).Column MsgBox &#34;마지막셀은 &#34; &amp; LastRow &amp; &#34;번째 행, &#34; &amp; LastColumn &amp; &#34;번째열 입니다.&#34; End Sub RANGE 문제있는 시트 찾기 엑셀 파일의 용량이 커지는 이유는 많겠지만, USEDRANGE가 잘못 설정되는 경우가 많다. 한마디로 말하면, CTRL이나 SHIFT 단축키 치다가 실수로 10만번째 행이 사용중인 영역으로 인식되는 경우라 하겠다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01983/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01983/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     

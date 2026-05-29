@@ -12,7 +12,7 @@
 그냥 아래와 같은 메모장으로 bat 파일을 하나 만들어 두면, 간단히 처리가 가능하다.
 @echo off powershell -NoProfile -ExecutionPolicy Bypass ^ Add-Type -AssemblyName System.Windows.Forms; ^ Add-Type -AssemblyName System.Drawing; ^ $img = [Windows.Forms.Clipboard]::GetImage(); ^ if ($img -ne $null) { ^ $path = \&#34;$env:USERPROFILE\Desktop\clipboard_$(Get-Date -Format &#39;yyyyMMdd_HHmmss&#39;).jpg\&#34;; ^ $img.Save($path, [System.Drawing.Imaging.ImageFormat]::Jpeg); ^ Write-Output \&#34;Saved to $path\&#34;; ^ } else { ^ Write-Output \&#34;No image in clipboard\&#34;; ^ } pause 뭐 딱히 특별한 것은 없다.
 " />
-    <link rel="canonical" href="https://mcjoi.github.io/post/01846/" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01846/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
