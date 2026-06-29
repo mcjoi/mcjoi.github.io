@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
     <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>김포아라뱃길 | shaaaaallow dive</title>
-    <meta name="description" content="김포아라뱃길" />
-    <link rel="canonical" href="https://sunnybong.xyz/gallery/fam/2021/f_2021_002/" />
+    <title>xls - 엑셀 초보 탈출을 위한 5가지 포인트 | shaaaaallow dive</title>
+    <meta name="description" content="저장 데이터는 셋 중 하나 엑셀의 셀에 입력하고 저장되는 데이터 형식은 3가지 밖에 없다.
+_수식
+_숫자
+_문자
+모든 셀의 표시되는 형태(표시형식)는 위의 데이터 형식을 가지고, 포맷팅 된 값이다.
+예를 들어, 2,000 이라는 회계 형식은 실제 2000이며, 회계 형식(표시형식, 셀형식)이라는 포맷팅으로 포장되어 있다고 생각하면 된다.
+데이터 시트와 요약 시트의 분리 엑셀로 DB와 요약 두개 모두의 목적으로 사용한다면, 두개 시트는 분리해야한다.
+특히 DB 시트는 피벗테이블로 생성되는 크로스탭 쿼리의 모양이 아니어야 한다.
+즉, 한개의 컬럼에 한가지 종류의 데이터만 있는 것이 나중에 요약 시트를 피벗테이블로 구성하든, 배열함수로 구성하든 두세번 작업하는 것을 막을 수 있다.
+" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/01845/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -624,123 +633,219 @@
     </aside>
     <main class="page">
       
-  <div class="gallery-gate" data-gallery-gate>
-  <div class="gallery-gate-card">
-    <div class="gallery-gate-title">Gallery</div>
-    <div class="gallery-gate-desc">/gallery/ 콘텐츠는 비밀번호가 필요합니다.</div>
-    <form class="gallery-gate-form" data-gallery-gate-form>
-      <label class="gallery-gate-label" for="gallery-gate-pass">비밀번호</label>
-      <input
-        id="gallery-gate-pass"
-        class="gallery-gate-input"
-        type="password"
-        inputmode="numeric"
-        autocomplete="current-password"
-        placeholder="비밀번호 입력"
-        required
-      />
-      <button class="gallery-gate-btn" type="submit">확인</button>
-      <div class="gallery-gate-error" data-gallery-gate-error role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-
-<script>
-  (function() {
-    
-    const PASS = '9680';
-    const KEY = 'gallery_gate_ok_v1';
-    const FAIL_KEY = 'gallery_gate_fail_v1';
-    const MAX_FAILS = 3;
-    
-    const REDIRECT_TO = '/';
-
-    const html = document.documentElement;
-    const gate = document.querySelector('[data-gallery-gate]');
-    const form = document.querySelector('[data-gallery-gate-form]');
-    const input = document.getElementById('gallery-gate-pass');
-    const error = document.querySelector('[data-gallery-gate-error]');
-
-    const setUnlocked = () => {
-      try { localStorage.setItem(KEY, '1'); } catch (e) {}
-      try { sessionStorage.removeItem(FAIL_KEY); } catch (e) {}
-      html.classList.add('gallery-unlocked');
-      gate?.setAttribute('aria-hidden', 'true');
-    };
-
-    const setLocked = () => {
-      html.classList.remove('gallery-unlocked');
-      gate?.setAttribute('aria-hidden', 'false');
-    };
-
-    let ok = false;
-    try { ok = localStorage.getItem(KEY) === '1'; } catch (e) {}
-
-    if (ok) {
-      setUnlocked();
-      return;
-    }
-
-    setLocked();
-    if (input) input.focus();
-
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!input) return;
-      const val = (input.value || '').trim();
-      if (val === PASS) {
-        if (error) error.textContent = '';
-        setUnlocked();
-        return;
-      }
-      let fails = 0;
-      try { fails = parseInt(sessionStorage.getItem(FAIL_KEY) || '0', 10) || 0; } catch (e) {}
-      fails += 1;
-      try { sessionStorage.setItem(FAIL_KEY, String(fails)); } catch (e) {}
-
-      if (fails >= MAX_FAILS) {
-        if (error) error.textContent = '비밀번호를 3번 틀렸습니다. 메인 화면으로 이동합니다.';
+  <article class="post">
+    <header class="post-header">
+      <h1>xls - 엑셀 초보 탈출을 위한 5가지 포인트</h1>
+      <div class="post-meta">
         
-        setTimeout(() => { window.location.href = REDIRECT_TO; }, 300);
-        return;
-      }
+        
+        <div class="post-meta-date">
+          <span>2026-06-29</span>
+          
+        </div>
+        <div class="post-meta-tags">
+          
+            
+              <a class="chip chip--tag" href="/tag/excel---beginner/">#Excel - Beginner</a>
+            
+          
+        </div>
+      </div>
+    </header>
 
-      if (error) error.textContent = '비밀번호가 올바르지 않습니다. 접근할 수 없습니다.';
-      input.value = '';
-      input.focus();
-    });
-  })();
+    <div class="ad-slot ad-slot--body">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="6643349525"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <div class="gallery-protected">
-    <article class="post">
-      <header class="post-header">
-        <h1>김포아라뱃길</h1>
-        <div class="post-meta">
-          
-            <a class="chip chip--tag" href="/gallery_category/fam_2021/">fam_2021</a>
-          
-          
-          
-          <div class="post-meta-date">
-            <span>2021-09-22</span>
-            
-          </div>
-        </div>
-      </header>
+    </div>
 
-      <div class="post-content">
+    <div class="post-content">
+        
+        
         
           
-            <p>
-              <img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/zz_gallery/fam/2021/02_20210922.jpg" alt="김포아라뱃길" loading="lazy" />
-            </p>
           
-        
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="저장-데이터는-셋-중-하나">저장 데이터는 셋 중 하나</h2>
+<p>엑셀의 셀에 입력하고 저장되는 데이터 형식은 3가지 밖에 없다.</p>
+<p class="text-box">_수식<br>
+_숫자<br>
+_문자</p>
+<p>모든 셀의 표시되는 형태(표시형식)는 위의 데이터 형식을 가지고, 포맷팅 된 값이다.</p>
+<p>예를 들어, 2,000 이라는 회계 형식은 실제 2000이며, 회계 형식(표시형식, 셀형식)이라는 포맷팅으로 포장되어 있다고 생각하면 된다.</p>
+<br>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="데이터-시트와-요약-시트의-분리">데이터 시트와 요약 시트의 분리</h2>
+<p>엑셀로 <code>DB</code>와 <code>요약</code> 두개 모두의 목적으로 사용한다면, 두개 시트는 분리해야한다.</p>
+<p>특히 <code>DB</code> 시트는 피벗테이블로 생성되는 크로스탭 쿼리의 모양이 아니어야 한다.</p>
+<p>즉, 한개의 컬럼에 한가지 종류의 데이터만 있는 것이 나중에 <code>요약</code> 시트를 피벗테이블로 구성하든, 배열함수로 구성하든 두세번 작업하는 것을 막을 수 있다.</p>
+<p>또한 <code>DB</code> 시트에 각 컬럼간 수식(소계 등 포함)을 걸지 않도록 하는 것이 추천되고,<br>
+이왕이면, range 보다는 table 형태로 시트를 관리하는 습관을 들이도록 한다.</p>
+<br>
+<br>
+<br>
+
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="6643349525"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                </div>
+              
+              <h2 id="배열-함수">배열 함수</h2>
+<p>AI로 인해 특별히 함수를 암기할 필요는 없어졌지만, 배열함수 정도는 익혀주는 것이 좋다.<br>
+sumifs, sumproduct, sum(if()), sum(filter()) 든, 본인의 입맛에 맞는 배열함수 하나정도는 자유자재로 사용할 수 있는 것이 좋다.</p>
+<br>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="피벗테이블">피벗테이블</h2>
+<p><code>요약</code> 시트는 필요에 따라 자유롭게 구성이 가능하지만, 가능하면, 피벗테이블을 참조하는 일이 없도록 하는 것이 좋다.</p>
+<br>
+<br>
+<br>
+
+            
+          
+            
+              
+              <h2 id="매크로">매크로</h2>
+<p>자주 쓰고 반복되는 기능에 대해서, AI의 도움을 받아 매크로로 구성해 둔다면, 속도를 올릴 수 있다.</p>
+<br>
+<br>
+<br>
+<p>적어도 위의 사항을 준수하여 원하는 워크북을 구성한다면, 이제 당신은 중급자로서 역할을 할 수 있게 되었을 것이다.</p>
+<br>
+<br>
+<br>
+<p>끝.</p>
+
+            
+          
         
       </div>
-    </article>
-  </div>
+
+    <div class="ad-slot ad-slot--footer">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="2162488542"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-04-30</span>
+                <a href="/post/01846/">윈도우즈 - 클립보드에 복사한 이미지 jpg로 만들기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-16</span>
+                <a href="/post/01847/">xls - 엑셀 2019버전 이후 적용된 함수 리스트</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-11</span>
+                <a href="/post/01848/">xls - indirect 함수로 동적 요약 테이블 만들기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-23</span>
+                <a href="/post/00991/">xls - 사용자정의 셀서식, 셀스타일 편하게 설정하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-05</span>
+                <a href="/post/01988/">xls - 특정문자 기준으로 텍스트 추출하기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/01991/">xls - VBA Userform 만들기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-27</span>
+                <a href="/post/00990/">xls - 용량 비정상적으로 커졌을 때 줄이기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-08</span>
+                <a href="/post/01993/">Project is unviewable - EvilClippy</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/00993/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 1</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-01-05</span>
+                <a href="/post/01934/">xls - 배열수식(ARRAY_FORMULA)의 이해 / 2</a>
+              </div>
+            
+          </div>
+        </section>
+      
+    
+
+  </article>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>

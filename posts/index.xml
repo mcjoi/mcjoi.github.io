@@ -6,8 +6,15 @@
     <description>Recent content in Posts on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 09 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sunnybong.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xls - 엑셀 초보 탈출을 위한 5가지 포인트</title>
+      <link>https://sunnybong.xyz/post/01845/</link>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://sunnybong.xyz/post/01845/</guid>
+      <description>&lt;h2 id=&#34;저장-데이터는-셋-중-하나&#34;&gt;저장 데이터는 셋 중 하나&lt;/h2&gt;&#xA;&lt;p&gt;엑셀의 셀에 입력하고 저장되는 데이터 형식은 3가지 밖에 없다.&lt;/p&gt;&#xA;&lt;p class=&#34;text-box&#34;&gt;_수식&lt;br&gt;&#xA;_숫자&lt;br&gt;&#xA;_문자&lt;/p&gt;&#xA;&lt;p&gt;모든 셀의 표시되는 형태(표시형식)는 위의 데이터 형식을 가지고, 포맷팅 된 값이다.&lt;/p&gt;&#xA;&lt;p&gt;예를 들어, 2,000 이라는 회계 형식은 실제 2000이며, 회계 형식(표시형식, 셀형식)이라는 포맷팅으로 포장되어 있다고 생각하면 된다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;데이터-시트와-요약-시트의-분리&#34;&gt;데이터 시트와 요약 시트의 분리&lt;/h2&gt;&#xA;&lt;p&gt;엑셀로 &lt;code&gt;DB&lt;/code&gt;와 &lt;code&gt;요약&lt;/code&gt; 두개 모두의 목적으로 사용한다면, 두개 시트는 분리해야한다.&lt;/p&gt;&#xA;&lt;p&gt;특히 &lt;code&gt;DB&lt;/code&gt; 시트는 피벗테이블로 생성되는 크로스탭 쿼리의 모양이 아니어야 한다.&lt;/p&gt;&#xA;&lt;p&gt;즉, 한개의 컬럼에 한가지 종류의 데이터만 있는 것이 나중에 &lt;code&gt;요약&lt;/code&gt; 시트를 피벗테이블로 구성하든, 배열함수로 구성하든 두세번 작업하는 것을 막을 수 있다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>참고 버티고 인내하지 말아야하는 직장 생활</title>
       <link>https://sunnybong.xyz/post/05867/</link>
