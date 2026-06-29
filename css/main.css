@@ -1213,7 +1213,12 @@ html.gallery-unlocked .gallery-gate {
 .post-content p,
 .post-content ul,
 .post-content ol {
-  margin: 0 0 16px;
+  margin: 0 0 22px;
+}
+
+.post-content h2 + p,
+.post-content h3 + p {
+  margin-top: 0;
 }
 
 .post-content ul {
