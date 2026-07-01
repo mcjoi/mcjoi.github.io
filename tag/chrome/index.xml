@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on shaaaaallow dive</title>
+    <link>https://sunnybong.xyz/tag/chrome/</link>
+    <description>Recent content in Chrome on shaaaaallow dive</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sunnybong.xyz/tag/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome Extension 만들기</title>
+      <link>https://sunnybong.xyz/post/01844/</link>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://sunnybong.xyz/post/01844/</guid>
+      <description>&lt;h2 id=&#34;ai-그리고-chrome-extension&#34;&gt;AI 그리고 Chrome Extension&lt;/h2&gt;&#xA;&lt;p&gt;AI 덕분에 그간 js 기반의 무언가를 하기 껄끄러웠었는데, 이제는 5분컷 작업이 되었다. js를 활용한다면 하고 싶었던 것 중 단연 1위였던 chrome extension을 셀프로 만들어 본다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;실행-방법&#34;&gt;실행 방법&lt;/h2&gt;&#xA;&lt;p&gt;실행방법은 Chrome 주소 창에서 &lt;code&gt;chrome://extensions&lt;/code&gt; 를 입력해서, 우상단에 있는 개발자 모드를 활성화시키고, 만들어둔 폴더를 좌상단 &lt;code&gt;압축해제된 확장 프로그램 로드&lt;/code&gt; 버튼을 통해서 호출하기만 하면 되는 손쉬운 과정이다.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;페이지에-있는-테이블-복사하기&#34;&gt;페이지에 있는 테이블 복사하기&lt;/h2&gt;&#xA;&lt;p&gt;테이블을 엑셀로 붙일때, 매번 드래그를 해다가 붙이는 과정을 회사에서 종종 하곤하는데, 이를 만들어보기로 한다. 문제를 어렵게 생각할 필요도 없이, ChatGPT가 이를 만들어내는데까지 3분도 채 걸리지 않은 것 같다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
