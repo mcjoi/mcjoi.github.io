@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
     <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>반달마을 | shaaaaallow dive</title>
-    <meta name="description" content="반달마을" />
-    <link rel="canonical" href="https://sunnybong.xyz/gallery/fam/2014/f_2014_003/" />
+    <title>빌트록스 28mm F4.5 or 26mm F2.8 검토 | shaaaaallow dive</title>
+    <meta name="description" content="단순검토 시그마 65mm 원렌즈로 생활한지 꽤 오랜 시간이 지났다. 원렌즈로 보낸 시간 중 가장 길지 않나 싶다. 선예도나 밝기는 매우 마음에 들지만, 50mm부터는 실내 촬영 등에서 화각의 답답함을 느끼기 마련이다.
+zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 안하는 배터리 충전을 다른 종류의 것을 추가해서 하기는 매우 부담이 된다.
+에라 모르겠다 싶어, 빌트록스 28mm F4.5 렌즈를 사서, 가볍게 들고 다닐까 생각하던 찰라에 26mm 루머를 발견했다. 이번달에 나온다고 했는데, 가격이 무려 $299 라서 멈칫한다. 시그마 65mm 구매 가격보다 높다니.. 주 사용 렌즈보다 비싼 서브렌즈는 솔직히 부담이다.
+" />
+    <link rel="canonical" href="https://sunnybong.xyz/post/05866/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/css/main.css" />
     
@@ -631,123 +634,153 @@
     </aside>
     <main class="page">
       
-  <div class="gallery-gate" data-gallery-gate>
-  <div class="gallery-gate-card">
-    <div class="gallery-gate-title">Gallery</div>
-    <div class="gallery-gate-desc">/gallery/ 콘텐츠는 비밀번호가 필요합니다.</div>
-    <form class="gallery-gate-form" data-gallery-gate-form>
-      <label class="gallery-gate-label" for="gallery-gate-pass">비밀번호</label>
-      <input
-        id="gallery-gate-pass"
-        class="gallery-gate-input"
-        type="password"
-        inputmode="numeric"
-        autocomplete="current-password"
-        placeholder="비밀번호 입력"
-        required
-      />
-      <button class="gallery-gate-btn" type="submit">확인</button>
-      <div class="gallery-gate-error" data-gallery-gate-error role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-
-<script>
-  (function() {
-    
-    const PASS = '9680';
-    const KEY = 'gallery_gate_ok_v1';
-    const FAIL_KEY = 'gallery_gate_fail_v1';
-    const MAX_FAILS = 3;
-    
-    const REDIRECT_TO = '/';
-
-    const html = document.documentElement;
-    const gate = document.querySelector('[data-gallery-gate]');
-    const form = document.querySelector('[data-gallery-gate-form]');
-    const input = document.getElementById('gallery-gate-pass');
-    const error = document.querySelector('[data-gallery-gate-error]');
-
-    const setUnlocked = () => {
-      try { localStorage.setItem(KEY, '1'); } catch (e) {}
-      try { sessionStorage.removeItem(FAIL_KEY); } catch (e) {}
-      html.classList.add('gallery-unlocked');
-      gate?.setAttribute('aria-hidden', 'true');
-    };
-
-    const setLocked = () => {
-      html.classList.remove('gallery-unlocked');
-      gate?.setAttribute('aria-hidden', 'false');
-    };
-
-    let ok = false;
-    try { ok = localStorage.getItem(KEY) === '1'; } catch (e) {}
-
-    if (ok) {
-      setUnlocked();
-      return;
-    }
-
-    setLocked();
-    if (input) input.focus();
-
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!input) return;
-      const val = (input.value || '').trim();
-      if (val === PASS) {
-        if (error) error.textContent = '';
-        setUnlocked();
-        return;
-      }
-      let fails = 0;
-      try { fails = parseInt(sessionStorage.getItem(FAIL_KEY) || '0', 10) || 0; } catch (e) {}
-      fails += 1;
-      try { sessionStorage.setItem(FAIL_KEY, String(fails)); } catch (e) {}
-
-      if (fails >= MAX_FAILS) {
-        if (error) error.textContent = '비밀번호를 3번 틀렸습니다. 메인 화면으로 이동합니다.';
+  <article class="post">
+    <header class="post-header">
+      <h1>빌트록스 28mm F4.5 or 26mm F2.8 검토</h1>
+      <div class="post-meta">
         
-        setTimeout(() => { window.location.href = REDIRECT_TO; }, 300);
-        return;
-      }
+        
+        <div class="post-meta-date">
+          <span>2026-07-09</span>
+          
+        </div>
+        <div class="post-meta-tags">
+          
+            
+              <a class="chip chip--tag" href="/tag/lens/">#Lens</a>
+            
+          
+        </div>
+      </div>
+    </header>
 
-      if (error) error.textContent = '비밀번호가 올바르지 않습니다. 접근할 수 없습니다.';
-      input.value = '';
-      input.focus();
-    });
-  })();
+    <div class="ad-slot ad-slot--body">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="6643349525"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <div class="gallery-protected">
-    <article class="post">
-      <header class="post-header">
-        <h1>반달마을</h1>
-        <div class="post-meta">
-          
-            <a class="chip chip--tag" href="/gallery_category/fam_2014/">fam_2014</a>
-          
-          
-          
-          <div class="post-meta-date">
-            <span>2014-06-14</span>
-            
-          </div>
-        </div>
-      </header>
+    </div>
 
-      <div class="post-content">
+    <div class="post-content">
         
-          
-            <p>
-              <img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/zz_gallery/fam/2014/2014_03.jpg" alt="반달마을" loading="lazy" />
-            </p>
-          
         
+        
+          <h2 id="단순검토">단순검토</h2>
+<p>시그마 65mm 원렌즈로 생활한지 꽤 오랜 시간이 지났다. 원렌즈로 보낸 시간 중 가장 길지 않나 싶다. 선예도나 밝기는 매우 마음에 들지만, 50mm부터는 실내 촬영 등에서 화각의 답답함을 느끼기 마련이다.</p>
+<p>zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 안하는 배터리 충전을 다른 종류의 것을 추가해서 하기는 매우 부담이 된다.</p>
+<p>에라 모르겠다 싶어, 빌트록스 28mm F4.5 렌즈를 사서, 가볍게 들고 다닐까 생각하던 찰라에 26mm 루머를 발견했다. 이번달에 나온다고 했는데, 가격이 무려 $299 라서 멈칫한다. 시그마 65mm 구매 가격보다 높다니.. 주 사용 렌즈보다 비싼 서브렌즈는 솔직히 부담이다.</p>
+<br>
+<br>
+<br>
+<h2 id="viltrox-28mm">viltrox 28mm</h2>
+<p>아직까지 취합한 빌트록스 28mm 렌즈의 정보이다. 작업 크기와 맞바꾼 trade-off 중심이다.</p>
+<p class="text-box">진정한 고정 조리개다.<br>
+광원을 마주봤을때, 플레어와 고스트가 생긴다.<br>
+중앙부 화질만 괜찮고, 주변부는 개떡같다. 거기에 주변부 비네팅까지 심하다.<br>
+동영상 af가 개떡같다.</p>
+<p>중고가 기준 7~8만원 선인 렌즈에 큰걸 바라지는 않았지만, 개인적으로는 뿌옇게 찍히는 사진을 몹시도 싫어하기 때문에, 살짝 걱정이 된다. 예전 작은 크기때문에 구매했던 삼양 24mm F2.8 렌즈도 굉장히 실망스러웠었는데, 그 보다 더 작은 이 녀석은 더 안좋을 것이라는 예상이 되기는 한다.</p>
+<p>하지만, 어찌되었든 구해서 사용해보는 방법밖에.. 상상으로는 방법이 없다. 샘플이든 유튜브 리뷰든 아무것도 신뢰가 가지 않는다.</p>
+<br>
+<br>
+<br>
+<p>끝.</p>
+
         
       </div>
-    </article>
-  </div>
+
+    <div class="ad-slot ad-slot--footer">
+      
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7362089186642274"
+     data-ad-slot="2162488542"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </div>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <section class="related-posts">
+          <h3>Related Posts</h3>
+          <div class="related-divider" aria-hidden="true"></div>
+          <div class="related-posts-items">
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-05-11</span>
+                <a href="/post/05991/">A7C2 늦은 구매 후기, 그리고 리뷰로는 다 알지 못한 사실</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-05-06</span>
+                <a href="/post/05868/">사용해본 카메라, 렌즈의 기억 (니콘, 소니, DJI)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-04-09</span>
+                <a href="/post/05869/">액션캠(DJI 액션4) 매각 후 마그네틱 마운트 활용</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-04-02</span>
+                <a href="/post/05870/">안드로이드 태블릿(갤럭시탭) 활용기</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-04-02</span>
+                <a href="/post/05871/">액션캠으로 사진찍기 (dji 액션2, 액션4)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-23</span>
+                <a href="/post/05872/">카메라 렌즈알의 스크래치(기스)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-15</span>
+                <a href="/post/05874/">콜드슈 마운트 악세사리의 사이즈 문제</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-03-10</span>
+                <a href="/post/05878/">카메라 렌즈 스킨 붙이기(시그마 65mm F2)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2026-02-23</span>
+                <a href="/post/05884/">적당한 화각이란..?(시그마 65mm vs 삼양 75mm)</a>
+              </div>
+            
+              <div class="related-posts-item">
+                <span class="related-posts-date">2025-12-31</span>
+                <a href="/post/05997/">소니 4세대 카메라(A7C2) 리모컨</a>
+              </div>
+            
+          </div>
+        </section>
+      
+    
+
+  </article>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>

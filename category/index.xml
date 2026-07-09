@@ -6,8 +6,15 @@
     <description>Recent content in Category on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sunnybong.xyz/category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gear</title>
+      <link>https://sunnybong.xyz/category/gear/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://sunnybong.xyz/category/gear/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Office</title>
       <link>https://sunnybong.xyz/category/office/</link>
@@ -27,13 +34,6 @@
       <link>https://sunnybong.xyz/category/dev/</link>
       <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
       <guid>https://sunnybong.xyz/category/dev/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gear</title>
-      <link>https://sunnybong.xyz/category/gear/</link>
-      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://sunnybong.xyz/category/gear/</guid>
       <description></description>
     </item>
   </channel>
