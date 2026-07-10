@@ -20,8 +20,8 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
     <script>
       (function() {
         try {
-          const theme = localStorage.getItem('theme');
-          if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+          const theme = localStorage.getItem('theme') || 'dark';
+          if (theme !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
         } catch (err) {}
       })();
     </script>
@@ -59,7 +59,7 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
         </div>
         <a class="appbar-title" href="/">shaaaaallow dive</a>
         <div class="appbar-right">
-          <button class="theme-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <button class="theme-btn" type="button" aria-label="Switch to light theme" aria-pressed="true">
             <span class="theme-icon" aria-hidden="true"></span>
           </button>
           <button class="search-btn" type="button" aria-label="Search">
@@ -919,9 +919,9 @@ OFFSET 함수는 특정 셀로부터 X열만큼, Y행만큼 떨어진 곳의 값
           button.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
         };
 
-        let savedTheme = 'light';
+        let savedTheme = 'dark';
         try {
-          savedTheme = localStorage.getItem('theme') || 'light';
+          savedTheme = localStorage.getItem('theme') || 'dark';
         } catch (err) {}
 
         applyTheme(savedTheme);

@@ -18,8 +18,8 @@ IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째�
     <script>
       (function() {
         try {
-          const theme = localStorage.getItem('theme');
-          if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+          const theme = localStorage.getItem('theme') || 'dark';
+          if (theme !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
         } catch (err) {}
       })();
     </script>
@@ -57,7 +57,7 @@ IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째�
         </div>
         <a class="appbar-title" href="/">shaaaaallow dive</a>
         <div class="appbar-right">
-          <button class="theme-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <button class="theme-btn" type="button" aria-label="Switch to light theme" aria-pressed="true">
             <span class="theme-icon" aria-hidden="true"></span>
           </button>
           <button class="search-btn" type="button" aria-label="Search">
@@ -858,9 +858,9 @@ IF(만약 왼쪽 옆의 병합된 셀중에 내 옆에 있는 셀이 첫번째�
           button.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
         };
 
-        let savedTheme = 'light';
+        let savedTheme = 'dark';
         try {
-          savedTheme = localStorage.getItem('theme') || 'light';
+          savedTheme = localStorage.getItem('theme') || 'dark';
         } catch (err) {}
 
         applyTheme(savedTheme);

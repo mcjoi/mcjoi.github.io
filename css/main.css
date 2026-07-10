@@ -166,7 +166,8 @@ ul li::marker {
   align-items: center;
 }
 
-.search-btn {
+.search-btn,
+.theme-btn {
   width: 36px;
   height: 36px;
   border: 1px solid #2a2a2a;
@@ -178,7 +179,8 @@ ul li::marker {
   cursor: pointer;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.theme-btn:hover {
   background: #2a2a2a;
 }
 
@@ -1773,16 +1775,6 @@ html.gallery-unlocked .gallery-gate {
 .tool-btn:hover,
 .tool-download:hover {
   background: var(--surface-3);
-}
-
-.theme-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .theme-icon {
