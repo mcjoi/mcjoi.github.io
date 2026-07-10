@@ -1742,7 +1742,7 @@ html.gallery-unlocked .gallery-gate {
 .fab-btn,
 .fab-item,
 .bottom-appbar-item {
-  border-color: var(--outline);
+  border-color: var(--line-gray-muted);
   background: var(--surface-2);
   color: var(--text);
 }
@@ -1828,7 +1828,7 @@ html.gallery-unlocked .gallery-gate {
 .code-block-body,
 .video-embed-inner {
   background: var(--surface-3) !important;
-  border-color: var(--outline);
+  border-color: var(--line-gray-muted);
   color: var(--text);
 }
 
@@ -1882,6 +1882,10 @@ thead th,
   background: var(--chip-bg);
   border-color: var(--chip-border);
   color: var(--chip-text);
+}
+
+.gallery-gate-btn {
+  border-color: var(--line-gray-muted);
 }
 
 .chip {
