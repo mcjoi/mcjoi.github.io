@@ -34,6 +34,7 @@
   --accent: #5968b2;
   --outline: #d9dde4;
   --line-gray: #c9c9c9;
+  --line-gray-muted: color-mix(in srgb, var(--line-gray) 50%, transparent);
   --appbar-bg: rgba(255, 255, 255, 0.94);
   --overlay: rgba(15, 23, 42, 0.38);
   --icon: #202124;
@@ -67,6 +68,7 @@ html[data-theme="dark"] {
   --accent: #8a91b5;
   --outline: #2a2e44;
   --line-gray: #5a5a5a;
+  --line-gray-muted: color-mix(in srgb, var(--line-gray) 50%, transparent);
   --appbar-bg: #1f1f1f;
   --overlay: rgba(0, 0, 0, 0.6);
   --icon: #f2f2f2;
@@ -787,7 +789,7 @@ ul li::marker {
   background: var(--surface-2);
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--line-gray);
+  border: 1px solid var(--line-gray-muted);
   display: flex;
   flex-direction: column;
 }
@@ -800,7 +802,7 @@ ul li::marker {
   background: var(--surface-3);
   background-size: cover;
   background-position: center;
-  border-bottom: 1px solid var(--line-gray);
+  border-bottom: 1px solid var(--line-gray-muted);
 }
 
 .gallery-thumb {
@@ -1195,7 +1197,7 @@ html.gallery-unlocked .gallery-gate {
   flex-wrap: wrap;
   gap: 8px;
   padding-bottom: 18px;
-  border-bottom: 1px solid #5a5a5a;
+  border-bottom: 1px solid var(--line-gray-muted);
   width: 100%;
 }
 
@@ -1742,7 +1744,7 @@ html.gallery-unlocked .gallery-gate {
 }
 
 .appbar {
-  border-bottom-color: var(--line-gray);
+  border-bottom-color: var(--line-gray-muted);
 }
 
 .appbar {
@@ -1840,7 +1842,11 @@ html[data-theme="dark"] .theme-icon {
 }
 
 .post-card {
-  border-color: var(--line-gray);
+  border-color: var(--line-gray-muted);
+}
+
+.post-meta-tags {
+  border-bottom-color: var(--line-gray-muted);
 }
 
 .search-input,
@@ -1884,15 +1890,14 @@ thead th,
 
 .thumb {
   background-color: var(--surface-3);
-  border-bottom-color: var(--line-gray);
+  border-bottom-color: var(--line-gray-muted);
 }
 
 .search-item-excerpt,
 .search-empty,
 .tool-hint,
 .tool-status,
-.drawer-tag-title::after,
-.post-content .text-box cite {
+.drawer-tag-title::after {
   color: var(--muted);
 }
 
@@ -1958,8 +1963,12 @@ thead th,
 
 .post-content .text-box {
   background: var(--surface-2);
-  border-color: var(--outline);
-  color: var(--muted);
+  border-color: var(--line-gray-muted);
+  color: #ffffff;
+}
+
+.post-content .text-box cite {
+  color: #ffffff;
 }
 
 .post-content a {
