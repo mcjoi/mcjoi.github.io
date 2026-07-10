@@ -1506,6 +1506,9 @@ html.gallery-unlocked .gallery-gate {
   background: #212121;
   display: inline-block;
   padding: 1px 4px;
+  padding-inline: 4px;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
   border-radius: 4px;
 }
 
