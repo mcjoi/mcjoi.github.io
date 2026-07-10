@@ -1803,6 +1803,10 @@ html.gallery-unlocked .gallery-gate {
   border-color: var(--outline);
 }
 
+.code-block {
+  border-color: var(--line-gray-muted);
+}
+
 .post-card {
   border-color: var(--line-gray-muted);
 }
@@ -1842,6 +1846,10 @@ td,
 .tool-table th,
 .tool-table td {
   border-color: var(--outline);
+}
+
+.code-block-header {
+  border-bottom-color: var(--line-gray-muted);
 }
 
 thead th,
