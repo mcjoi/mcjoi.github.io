@@ -1124,6 +1124,18 @@ html.gallery-unlocked .gallery-gate {
   background: var(--bg);
 }
 
+.ad-slot iframe {
+  background: var(--bg) !important;
+}
+
+.ad-slot:has(.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none;
+}
+
+.ad-slot .adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
+
 @media (max-width: 640px) {
   .ad-slot {
     width: 250px;
