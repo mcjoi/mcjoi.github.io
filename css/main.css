@@ -23,40 +23,6 @@
 }
 
 :root {
-  color-scheme: light;
-  --bg: #ffffff;
-  --card-text-bg: #f7f7f4;
-  --surface: #ffffff;
-  --surface-2: #ffffff;
-  --surface-3: #f0f1f3;
-  --text: #202124;
-  --muted: #666f7a;
-  --accent: #5968b2;
-  --outline: #d9dde4;
-  --line-gray: #c9c9c9;
-  --line-gray-muted: color-mix(in srgb, var(--line-gray) 50%, transparent);
-  --appbar-bg: rgba(255, 255, 255, 0.94);
-  --overlay: rgba(15, 23, 42, 0.38);
-  --icon: #202124;
-  --icon-filter: none;
-  --shadow: rgba(15, 23, 42, 0.14);
-  --shadow-strong: rgba(15, 23, 42, 0.22);
-  --heading-accent: #b9505f;
-  --chip-bg: color-mix(in srgb, var(--heading-accent) 10%, transparent);
-  --chip-text: var(--heading-accent);
-  --chip-border: color-mix(in srgb, var(--heading-accent) 38%, transparent);
-  --category-bg: var(--chip-bg);
-  --category-text: var(--heading-accent);
-  --category-border: var(--chip-border);
-  --tag-bg: var(--chip-bg);
-  --tag-text: var(--heading-accent);
-  --tag-border: var(--chip-border);
-  --link: #1b68b3;
-  --code-bg: #f1f3f5;
-  --danger: #b4233a;
-}
-
-html[data-theme="dark"] {
   color-scheme: dark;
   --bg: #181818;
   --card-text-bg: #1f1f1f;
@@ -170,8 +136,7 @@ ul li::marker {
   align-items: center;
 }
 
-.search-btn,
-.theme-btn {
+.search-btn {
   width: 36px;
   height: 36px;
   border: 1px solid #2a2a2a;
@@ -183,8 +148,7 @@ ul li::marker {
   cursor: pointer;
 }
 
-.search-btn:hover,
-.theme-btn:hover {
+.search-btn:hover {
   background: #2a2a2a;
 }
 
@@ -1148,6 +1112,7 @@ html.gallery-unlocked .gallery-gate {
   width: 728px;
   height: 90px;
   max-width: 100%;
+  background: var(--bg);
 }
 
 .ad-slot .adsbygoogle {
@@ -1156,6 +1121,7 @@ html.gallery-unlocked .gallery-gate {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
+  background: var(--bg);
 }
 
 @media (max-width: 640px) {
@@ -1757,7 +1723,6 @@ html.gallery-unlocked .gallery-gate {
 
 .menu-btn,
 .search-btn,
-.theme-btn,
 .drawer-close,
 .search-close,
 .code-block-toggle,
@@ -1772,7 +1737,6 @@ html.gallery-unlocked .gallery-gate {
 
 .menu-btn:hover,
 .search-btn:hover,
-.theme-btn:hover,
 .drawer-close:hover,
 .search-close:hover,
 .code-block-toggle:hover,
@@ -1784,20 +1748,6 @@ html.gallery-unlocked .gallery-gate {
 .tool-btn:hover,
 .tool-download:hover {
   background: var(--surface-3);
-}
-
-.theme-icon {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: var(--icon);
-  box-shadow: inset -6px -4px 0 var(--surface-2);
-  display: block;
-}
-
-html[data-theme="dark"] .theme-icon {
-  box-shadow: 0 0 0 2px var(--icon), 0 0 0 5px transparent;
-  background: transparent;
 }
 
 .menu-icon,

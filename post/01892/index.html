@@ -18,14 +18,6 @@ sub, function 아무것도 붙이지 않으면, public으로 동작하는데, pr
 " />
     <link rel="canonical" href="https://sunnybong.xyz/post/01892/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script>
-      (function() {
-        try {
-          const theme = localStorage.getItem('theme') || 'dark';
-          if (theme !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
-        } catch (err) {}
-      })();
-    </script>
     <link rel="stylesheet" href="/css/main.css" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
@@ -60,9 +52,6 @@ sub, function 아무것도 붙이지 않으면, public으로 동작하는데, pr
         </div>
         <a class="appbar-title" href="/">shaaaaallow dive</a>
         <div class="appbar-right">
-          <button class="theme-btn" type="button" aria-label="Switch to light theme" aria-pressed="true">
-            <span class="theme-icon" aria-hidden="true"></span>
-          </button>
           <button class="search-btn" type="button" aria-label="Search">
             <span class="search-icon"></span>
           </button>
@@ -865,39 +854,6 @@ sub 외부 public 변수(전역변수) : 범위 - 동일 file</p>
         </a>
       </div>
     </div>
-    <script>
-      (function() {
-        const button = document.querySelector('.theme-btn');
-        if (!button) return;
-
-        const root = document.documentElement;
-        const applyTheme = (theme) => {
-          const isDark = theme === 'dark';
-          if (isDark) {
-            root.setAttribute('data-theme', 'dark');
-          } else {
-            root.removeAttribute('data-theme');
-          }
-          button.setAttribute('aria-pressed', String(isDark));
-          button.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-        };
-
-        let savedTheme = 'dark';
-        try {
-          savedTheme = localStorage.getItem('theme') || 'dark';
-        } catch (err) {}
-
-        applyTheme(savedTheme);
-
-        button.addEventListener('click', () => {
-          const nextTheme = root.hasAttribute('data-theme') ? 'light' : 'dark';
-          applyTheme(nextTheme);
-          try {
-            localStorage.setItem('theme', nextTheme);
-          } catch (err) {}
-        });
-      })();
-    </script>
     <script>
       (function() {
         const body = document.body;
