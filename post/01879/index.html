@@ -12,6 +12,14 @@ Sub clearFilter() &#39; [with Table] Does not work where active cell is out of T
 " />
     <link rel="canonical" href="https://sunnybong.xyz/post/01879/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+      (function() {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        } catch (err) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/css/main.css" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
@@ -46,6 +54,9 @@ Sub clearFilter() &#39; [with Table] Does not work where active cell is out of T
         </div>
         <a class="appbar-title" href="/">shaaaaallow dive</a>
         <div class="appbar-right">
+          <button class="theme-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+          </button>
           <button class="search-btn" type="button" aria-label="Search">
             <span class="search-icon"></span>
           </button>
@@ -825,6 +836,39 @@ Sub clearFilter() &#39; [with Table] Does not work where active cell is out of T
         </a>
       </div>
     </div>
+    <script>
+      (function() {
+        const button = document.querySelector('.theme-btn');
+        if (!button) return;
+
+        const root = document.documentElement;
+        const applyTheme = (theme) => {
+          const isDark = theme === 'dark';
+          if (isDark) {
+            root.setAttribute('data-theme', 'dark');
+          } else {
+            root.removeAttribute('data-theme');
+          }
+          button.setAttribute('aria-pressed', String(isDark));
+          button.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        };
+
+        let savedTheme = 'light';
+        try {
+          savedTheme = localStorage.getItem('theme') || 'light';
+        } catch (err) {}
+
+        applyTheme(savedTheme);
+
+        button.addEventListener('click', () => {
+          const nextTheme = root.hasAttribute('data-theme') ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          try {
+            localStorage.setItem('theme', nextTheme);
+          } catch (err) {}
+        });
+      })();
+    </script>
     <script>
       (function() {
         const body = document.body;

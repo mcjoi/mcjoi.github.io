@@ -12,6 +12,14 @@ zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 
 " />
     <link rel="canonical" href="https://sunnybong.xyz/post/05866/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+      (function() {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        } catch (err) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/css/main.css" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
@@ -46,6 +54,9 @@ zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 
         </div>
         <a class="appbar-title" href="/">shaaaaallow dive</a>
         <div class="appbar-right">
+          <button class="theme-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true"></span>
+          </button>
           <button class="search-btn" type="button" aria-label="Search">
             <span class="search-icon"></span>
           </button>
@@ -685,6 +696,8 @@ zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 
 광원을 마주봤을때, 플레어와 고스트가 생긴다.<br>
 중앙부 화질만 괜찮고, 주변부는 개떡같다. 거기에 주변부 비네팅까지 심하다.<br>
 동영상 af가 개떡같다.</p>
+<br>
+<br>
 <p>중고가 기준 7~8만원 선인 렌즈에 큰걸 바라지는 않았지만, 개인적으로는 뿌옇게 찍히는 사진을 몹시도 싫어하기 때문에, 살짝 걱정이 된다. 예전 작은 크기때문에 구매했던 삼양 24mm F2.8 렌즈도 굉장히 실망스러웠었는데, 그 보다 더 작은 이 녀석은 더 안좋을 것이라는 예상이 되기는 한다.</p>
 <p>하지만, 어찌되었든 구해서 사용해보는 방법밖에.. 상상으로는 방법이 없다. 샘플이든 유튜브 리뷰든 아무것도 신뢰가 가지 않는다.</p>
 <br>
@@ -820,6 +833,39 @@ zv-1f를 추가로 들여서 사용할까 생각도 해봤지만, 지금도 잘 
         </a>
       </div>
     </div>
+    <script>
+      (function() {
+        const button = document.querySelector('.theme-btn');
+        if (!button) return;
+
+        const root = document.documentElement;
+        const applyTheme = (theme) => {
+          const isDark = theme === 'dark';
+          if (isDark) {
+            root.setAttribute('data-theme', 'dark');
+          } else {
+            root.removeAttribute('data-theme');
+          }
+          button.setAttribute('aria-pressed', String(isDark));
+          button.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        };
+
+        let savedTheme = 'light';
+        try {
+          savedTheme = localStorage.getItem('theme') || 'light';
+        } catch (err) {}
+
+        applyTheme(savedTheme);
+
+        button.addEventListener('click', () => {
+          const nextTheme = root.hasAttribute('data-theme') ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          try {
+            localStorage.setItem('theme', nextTheme);
+          } catch (err) {}
+        });
+      })();
+    </script>
     <script>
       (function() {
         const body = document.body;
