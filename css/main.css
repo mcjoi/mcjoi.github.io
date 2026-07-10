@@ -1512,6 +1512,17 @@ html.gallery-unlocked .gallery-gate {
   border-radius: 4px;
 }
 
+.post-content code:not([class]),
+.post-content p > code,
+.post-content li > code,
+.post-content td > code {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  padding-inline: 4px !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .post-content img {
   max-width: 100%;
   border-radius: 10px;
