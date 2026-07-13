@@ -14,7 +14,7 @@
 " />
     <link rel="canonical" href="https://sunnybong.xyz/post/01932/" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783668329" />
+    <link rel="stylesheet" href="/css/main.css?v=1783943381" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -35,8 +35,6 @@
     </script>
 
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-            crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="appbar">
@@ -636,6 +634,7 @@
     </aside>
     <main class="page">
       
+  
   <article class="post">
     <header class="post-header">
       <h1>xls - 행 삽입 할때, 함수(영역참조)에 주는 영향</h1>
@@ -656,45 +655,19 @@
       </div>
     </header>
 
-    <div class="ad-slot ad-slot--body">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="6643349525"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
+    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="행-삽입-할때-함수영역참조에-주는-영향">행 삽입 할때, 함수(영역참조)에 주는 영향</h2>
+          <h2 id="행-삽입-할때-함수영역참조에-주는-영향">행 삽입 할때, 함수(영역참조)에 주는 영향</h2>
 <p>함수의 변수값이 영역을 넣는다고 했을 때, 아래 예시처럼 vlookup 함수의 table_array 변수를 잡고, 원본 테이블에 행 추가를 하면, 영역이 틀어질때가 있으므로 주의하는 것이 좋다.<br>
 어떤 때 틀어지게 되는지 살펴보자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01932/01.webp" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="참조영역의-첫-행에-추가">참조영역의 첫 행에 추가</h2>
+<h2 id="참조영역의-첫-행에-추가">참조영역의 첫 행에 추가</h2>
 <p>영역참조의 첫 행 위에 행을 추가하게 되면, 해당 행은 영역에서 제외된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01932/02.webp" alt="myimg"></p>
 <br>
@@ -703,46 +676,17 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01932/03.webp" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="6643349525"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-                </div>
-              
-              <h2 id="참조-영역의-중간에-추가">참조 영역의 중간에 추가</h2>
+<h2 id="참조-영역의-중간에-추가">참조 영역의 중간에 추가</h2>
 <p>영역참조 중간에 행을 추가하게 되면, 해당 행은 영역에 포함된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01932/04.webp" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="참조-영역의-마지막에-추가">참조 영역의 마지막에 추가</h2>
+<h2 id="참조-영역의-마지막에-추가">참조 영역의 마지막에 추가</h2>
 <p>영역참조 마지막에 행을 추가하게 되면, 해당 행은 영역에서 제외된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01932/05.webp" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="정리">정리</h2>
+<h2 id="정리">정리</h2>
 <p>행 추가시 기본적으로 선택한 행의 위쪽에 행이 삽입되게 되는데, 시작행과 마지막행일 경우, 참조영역에서 제외가 된다. 중간에 넣을때는 무방하다. 이는 이름정의된 영역에 행을 추가할 때도 마찬가지이다.</p>
 <p>이를 보완할 수 있는 방법으로는 참조영역을 잡을 때, 아래 그림처럼 행 전체를 잡아주는 방법이 있지만, 시트 정리를 깔끔하게 할 자신이 없다면, 크게 추천되지는 않는다.<br>
 아니면, 영역을 표로 변환해서 관리하는 방법도 있으나, 귀찮다.</p>
@@ -752,24 +696,10 @@
 <p>삑사리가 안났는지, 자주 확인하는 방법을 추천한다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    <div class="ad-slot ad-slot--footer">
-      
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7362089186642274"
-     data-ad-slot="2162488542"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-    </div>
+    
 
     
     
