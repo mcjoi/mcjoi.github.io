@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>flutter - Rust를 c&#43;&#43; 대신 사용하기 | shaaaaallow dive</title>
-    <meta name="description" content="C&#43;&#43; ↔ Rust 간단한 예제를 만들어서 C&#43;&#43; 대신 Rust로 만든 DLL을 Flutter에서 사용해본다.
-윈도우즈에서 마우스 좌표를 얻어오는 간단한 예제이다.
-Rust 프로젝트 생성 프로젝트를 library 타입으로 생성한다.
-cargo new mousepos --lib // --bin (cargo run) cd mousepos // cargo build --release 마우스 좌표를 얻어오는 코드 구성
-Cargo.toml
-[package] name = &#34;mousepos&#34; version = &#34;0.1.0&#34; edition = &#34;2021&#34; [lib] crate-type = [&#34;cdylib&#34;] [dependencies] windows = { version = &#34;0.62.2&#34;, features = [&#34;Win32_UI_WindowsAndMessaging&#34;] } lib.rs
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>flutter - Rust를 c&#43;&#43; 대신 사용하기 | shaaaaallow dive</title>
+    <meta name="description" content="C&#43;&#43; ↔ Rust 간단한 예제를 만들어서 C&#43;&#43; 대신 Rust로 만든 DLL을 Flutter에서 사용해본다. 윈도우즈에서 마우스 좌표를 얻어오는 간단한 예제이다. Rust 프로젝트 생성 프로젝트를 library 타입으로 생성한다. cargo new mousepos --lib // …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/03995/" />
+    <meta property="og:title" content="flutter - Rust를 c&#43;&#43; 대신 사용하기 | shaaaaallow dive" />
+    <meta property="og:description" content="C&#43;&#43; ↔ Rust 간단한 예제를 만들어서 C&#43;&#43; 대신 Rust로 만든 DLL을 Flutter에서 사용해본다. 윈도우즈에서 마우스 좌표를 얻어오는 간단한 예제이다. Rust 프로젝트 생성 프로젝트를 library 타입으로 생성한다. cargo new mousepos --lib // …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/03995/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943383" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006239" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -35,6 +33,10 @@ Cargo.toml
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,17 +661,47 @@ Cargo.toml
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
         
         
-          <h2 id="c--rust">C++ ↔ Rust</h2>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="c--rust">C++ ↔ Rust</h2>
 <p>간단한 예제를 만들어서 C++ 대신 Rust로 만든 DLL을 Flutter에서 사용해본다.<br>
 윈도우즈에서 마우스 좌표를 얻어오는 간단한 예제이다.</p>
 <br>
 <br>
-<h2 id="rust-프로젝트-생성">Rust 프로젝트 생성</h2>
+
+            
+          
+            
+              
+              <h2 id="rust-프로젝트-생성">Rust 프로젝트 생성</h2>
 <p>프로젝트를 library 타입으로 생성한다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cargo new mousepos --lib // --bin (cargo run)
 </span></span><span style="display:flex;"><span>cd mousepos
@@ -720,7 +752,28 @@ Cargo.toml
 </span></span></code></pre></div><p>DLL 파일을 빌드한다. 파일을 복사해 둔다.</p>
 <br>
 <br>
-<h2 id="flutter-구성">Flutter 구성</h2>
+
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+                </div>
+              
+              <h2 id="flutter-구성">Flutter 구성</h2>
 <p>DLL 파일을 불러온다.</p>
 <p><code>mousepos_ffi.dart</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
@@ -834,23 +887,51 @@ Cargo.toml
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
 <br>
-<h2 id="dll-파일-저장-위치">DLL 파일 저장 위치</h2>
+
+            
+          
+            
+              
+              <h2 id="dll-파일-저장-위치">DLL 파일 저장 위치</h2>
 <p class="text-box">build/windows/x64/runner/Debug<br>
 build/windows/x64/runner/Release</p>
 <p>위 폴더에 mousepos.dll을 복사하면 exe 실행 시 정상적으로 로딩된다.<br>
 DLL 파일이 없으면 exe 실행 시 로딩 오류가 발생한다.</p>
 <br>
 <br>
-<h2 id="결과물">결과물</h2>
+
+            
+          
+            
+              
+              <h2 id="결과물">결과물</h2>
 <p>C++로 직접 작성하는 것보다 Visual Studio 설정에 덜 의존적이고, Rust 쪽 코드가 훨씬 간결해서 개인적으로는 사용하기 좋았다. 어디까지 활용할 수 있을지 모르겠다..(rust나 c++이나 어려운건 매한가지다.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03995/01.webp" alt="img"></p>
 <br>
 <br>
 <p>끝.</p>
 
+            
+          
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     

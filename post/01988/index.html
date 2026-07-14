@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>xls - 특정문자 기준으로 텍스트 추출하기 | shaaaaallow dive</title>
-    <meta name="description" content="inspiration 텍스트를 정렬하고 짜르고 붙이는 건 노가다가 빠른지 코드를 짜놓는게 좋은지 판단이 서지 않을 때가 많다.
-문득, 셀 안의 텍스트 중 한 단어를 고르면, 그 단어 뒤만 남게 되는 코드를 짜보고 싶었다.
-execution-1 텍스트 영역을 선택 하고, 매크로 실행, 원하는 문자를 입력 해당 영역의 우측셀에 해당 문자 이후 자동 복사 Sub kk() Dim targetRange As Range Dim c As Range Dim myWord As String Dim pos As Long Dim cellText As String &#39; Verify whether a valid cell range is selected If TypeName(Selection) &lt;&gt; &#34;Range&#34; Then MsgBox &#34;Please select a valid cell range before proceeding.&#34; Exit Sub End If Set targetRange = Selection &#39; Request input text from the user myWord = InputBox(&#34;Please enter the character or text to be used as a reference.&#34;) &#39; Check for empty input If myWord = &#34;&#34; Then MsgBox &#34;No input was provided. The process has been terminated.&#34; Exit Sub End If &#39; Process each selected cell For Each c In targetRange cellText = CStr(c.Value) &#39; Determine whether the input text exists in the cell pos = InStr(1, cellText, myWord) If pos = 0 Then MsgBox &#34;The specified text does not exist in the selected cell.&#34; &amp; vbCrLf &amp; _ &#34;Cell address: &#34; &amp; c.Address Exit Sub End If &#39; Return the text following the first occurrence to the right-hand cell c.Offset(0, 1).Value = Mid(cellText, pos &#43; Len(myWord)) Next c MsgBox &#34;The operation has been completed successfully.&#34; End Sub execution-2 뭔가 부족하지 않은가? 몇가지 옵션을 준다.
-aaa-bbb-ccc 처럼 어떤 기호 또는 문자로 텍스트가 구분이 될 때, 원하는 영역의 값을 함수로 귀찮게 작성하지 말고, 추출을 하고 싶다.
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>xls - 특정문자 기준으로 텍스트 추출하기 | shaaaaallow dive</title>
+    <meta name="description" content="inspiration 텍스트를 정렬하고 짜르고 붙이는 건 노가다가 빠른지 코드를 짜놓는게 좋은지 판단이 서지 않을 때가 많다. 문득, 셀 안의 텍스트 중 한 단어를 고르면, 그 단어 뒤만 남게 되는 코드를 짜보고 싶었다. execution-1 텍스트 영역을 선택 하고, 매크로 실행, 원 …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/01988/" />
+    <meta property="og:title" content="xls - 특정문자 기준으로 텍스트 추출하기 | shaaaaallow dive" />
+    <meta property="og:description" content="inspiration 텍스트를 정렬하고 짜르고 붙이는 건 노가다가 빠른지 코드를 짜놓는게 좋은지 판단이 서지 않을 때가 많다. 문득, 셀 안의 텍스트 중 한 단어를 고르면, 그 단어 뒤만 남게 되는 코드를 짜보고 싶었다. execution-1 텍스트 영역을 선택 하고, 매크로 실행, 원 …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/01988/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943382" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006239" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -33,6 +33,10 @@ aaa-bbb-ccc 처럼 어떤 기호 또는 문자로 텍스트가 구분이 될 때
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -657,6 +661,22 @@ aaa-bbb-ccc 처럼 어떤 기호 또는 문자로 텍스트가 구분이 될 때
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
@@ -1044,6 +1064,22 @@ aaa-bbb-ccc 처럼 어떤 기호 또는 문자로 텍스트가 구분이 될 때
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     

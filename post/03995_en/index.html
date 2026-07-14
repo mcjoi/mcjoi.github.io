@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>android - Rust instead of c&#43;&#43; | shaaaaallow dive</title>
-    <meta name="description" content="Rust instead of c&#43;&#43; I made a simple example to use a Rust DLL from Flutter instead of C&#43;&#43;.
-It reads the mouse position on Windows.
-Create a Rust project Create a library project.
-cargo new mousepos --lib // --bin (cargo run) cd mousepos // cargo build --release Build the mouse position code.
-Cargo.toml
-[package] name = &#34;mousepos&#34; version = &#34;0.1.0&#34; edition = &#34;2021&#34; [lib] crate-type = [&#34;cdylib&#34;] [dependencies] windows = { version = &#34;0.62.2&#34;, features = [&#34;Win32_UI_WindowsAndMessaging&#34;] } lib.rs
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>android - Rust instead of c&#43;&#43; | shaaaaallow dive</title>
+    <meta name="description" content="Rust instead of c&#43;&#43; I made a simple example to use a Rust DLL from Flutter instead of C&#43;&#43;. It reads the mouse position on Windows. Create a Rust project Create …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/03995_en/" />
+    <meta property="og:title" content="android - Rust instead of c&#43;&#43; | shaaaaallow dive" />
+    <meta property="og:description" content="Rust instead of c&#43;&#43; I made a simple example to use a Rust DLL from Flutter instead of C&#43;&#43;. It reads the mouse position on Windows. Create a Rust project Create …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/03995_en/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943383" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006239" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -35,6 +33,10 @@ Cargo.toml
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,17 +661,47 @@ Cargo.toml
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
         
         
-          <h2 id="rust-instead-of-c">Rust instead of c++</h2>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="rust-instead-of-c">Rust instead of c++</h2>
 <p>I made a simple example to use a Rust DLL from Flutter instead of C++.<br>
 It reads the mouse position on Windows.</p>
 <br>
 <br>
-<h2 id="create-a-rust-project">Create a Rust project</h2>
+
+            
+          
+            
+              
+              <h2 id="create-a-rust-project">Create a Rust project</h2>
 <p>Create a library project.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cargo new mousepos --lib // --bin (cargo run)
 </span></span><span style="display:flex;"><span>cd mousepos
@@ -721,7 +753,28 @@ It reads the mouse position on Windows.</p>
 <p>Build the DLL and copy the file somewhere safe.</p>
 <br>
 <br>
-<h2 id="flutter-setup">Flutter setup</h2>
+
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+                </div>
+              
+              <h2 id="flutter-setup">Flutter setup</h2>
 <p>Load the DLL.</p>
 <p><code>mousepos_ffi.dart</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
@@ -835,14 +888,24 @@ It reads the mouse position on Windows.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
 <br>
-<h2 id="dll-location">DLL location</h2>
+
+            
+          
+            
+              
+              <h2 id="dll-location">DLL location</h2>
 <p class="text-box">build/windows/x64/runner/Debug<br>
 build/windows/x64/runner/Release</p>
 <p>Copy <code>mousepos.dll</code> into the folder next to the exe.<br>
 If the DLL is missing, the exe fails to load.</p>
 <br>
 <br>
-<h2 id="result">Result</h2>
+
+            
+          
+            
+              
+              <h2 id="result">Result</h2>
 <p>Compared to writing a C++ DLL, Rust felt less dependent on Visual Studio settings, and the code was much simpler.<br>
 Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03995/01.webp" alt="img"></p>
@@ -850,9 +913,27 @@ Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
 <br>
 <p>end.</p>
 
+            
+          
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     

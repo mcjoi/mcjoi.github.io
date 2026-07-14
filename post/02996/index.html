@@ -4,18 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>windows - 오피스 파일 열지않고 pdf로 변환하기 | shaaaaallow dive</title>
-    <meta name="description" content="inspiration 워드파일을 pdf로 만드려면, 워드파일을 열고, 다른이름으로 저장, pdf로 저장하면 끝날일이다.
-하지만 여러개의 파일을 한꺼번에 바꾸자니, 그 또한 귀찮은 일이다.
-execution 파이썬으로 충분히 가능할 것 같으니, exe파일을 만들어서, 일괄변경을 해보자.
-sample.py
-import os import tkinter as tk from tkinter import filedialog, messagebox import comtypes.client import traceback def convert_word_to_pdf(file_path): file_path = os.path.abspath(file_path) pdf_path = os.path.splitext(file_path)[0] &#43; &#34;.pdf&#34; word = comtypes.client.CreateObject(&#34;Word.Application&#34;) word.Visible = False try: doc = word.Documents.Open(file_path) doc.SaveAs(pdf_path, FileFormat=17) # 17 = PDF doc.Close() return True, pdf_path except Exception as e: err_msg = f&#34;Word 변환 오류: {str(e)}\n{traceback.format_exc()}&#34; return False, err_msg finally: word.Quit() def convert_ppt_to_pdf(file_path): file_path = os.path.abspath(file_path) pdf_path = os.path.splitext(file_path)[0] &#43; &#34;.pdf&#34; ppt = comtypes.client.CreateObject(&#34;PowerPoint.Application&#34;) ppt.Visible = True # PowerPoint는 False 불가, True로 설정 try: presentation = ppt.Presentations.Open(file_path, WithWindow=False) presentation.SaveAs(pdf_path, 32) # 32 = PDF presentation.Close() return True, pdf_path except Exception as e: err_msg = f&#34;PPT 변환 오류: {str(e)}\n{traceback.format_exc()}&#34; return False, err_msg finally: ppt.Quit() def convert_excel_to_pdf(file_path): file_path = os.path.abspath(file_path) pdf_path = os.path.splitext(file_path)[0] &#43; &#34;.pdf&#34; excel = comtypes.client.CreateObject(&#34;Excel.Application&#34;) excel.Visible = False try: workbook = excel.Workbooks.Open(file_path) workbook.ExportAsFixedFormat(0, pdf_path) # 0 = PDF workbook.Close(False) return True, pdf_path except Exception as e: err_msg = f&#34;Excel 변환 오류: {str(e)}\n{traceback.format_exc()}&#34; return False, err_msg finally: excel.Quit() def main(): root = tk.Tk() root.withdraw() file_paths = filedialog.askopenfilenames( title=&#34;Office 문서 선택&#34;, filetypes=[ (&#34;Office Files&#34;, &#34;*.doc *.docx *.ppt *.pptx *.xls *.xlsx&#34;), (&#34;All Files&#34;, &#34;*.*&#34;) ] ) if not file_paths: messagebox.showinfo(&#34;취소됨&#34;, &#34;파일 선택이 취소되었습니다.&#34;) return success_list = [] fail_list = [] for file_path in file_paths: ext = os.path.splitext(file_path)[1].lower() if ext in [&#34;.doc&#34;, &#34;.docx&#34;]: success, result = convert_word_to_pdf(file_path) elif ext in [&#34;.ppt&#34;, &#34;.pptx&#34;]: success, result = convert_ppt_to_pdf(file_path) elif ext in [&#34;.xls&#34;, &#34;.xlsx&#34;]: success, result = convert_excel_to_pdf(file_path) else: success = False result = &#34;지원하지 않는 파일 형식&#34; if success: success_list.append(result) else: fail_list.append(f&#34;{os.path.basename(file_path)}: {result}&#34;) msg = &#34;&#34; if success_list: msg &#43;= &#34;✅ 변환 성공:\n&#34; &#43; &#34;\n&#34;.join(success_list) &#43; &#34;\n\n&#34; if fail_list: msg &#43;= &#34;❌ 변환 실패:\n&#34; &#43; &#34;\n&#34;.join(fail_list) if msg: messagebox.showinfo(&#34;변환 결과&#34;, msg) if __name__ == &#34;__main__&#34;: main() conclusion 제목에 &lsquo;파일을 열지 않고&rsquo; 라고 적었으나&hellip;
-아쉽게도, 파워포인트는 열린다음에 진행이 되고, 속도가 마치.. 켠다음 하는 것과 크게 다르지 않으니&hellip; 이건 좋다고 할수도, 아쉽다고 하기도 애매하다.
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>windows - 오피스 파일 열지않고 pdf로 변환하기 | shaaaaallow dive</title>
+    <meta name="description" content="inspiration 워드파일을 pdf로 만드려면, 워드파일을 열고, 다른이름으로 저장, pdf로 저장하면 끝날일이다. 하지만 여러개의 파일을 한꺼번에 바꾸자니, 그 또한 귀찮은 일이다. execution 파이썬으로 충분히 가능할 것 같으니, exe파일을 만들어서, 일괄변경을 해보자. …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/02996/" />
+    <meta property="og:title" content="windows - 오피스 파일 열지않고 pdf로 변환하기 | shaaaaallow dive" />
+    <meta property="og:description" content="inspiration 워드파일을 pdf로 만드려면, 워드파일을 열고, 다른이름으로 저장, pdf로 저장하면 끝날일이다. 하지만 여러개의 파일을 한꺼번에 바꾸자니, 그 또한 귀찮은 일이다. execution 파이썬으로 충분히 가능할 것 같으니, exe파일을 만들어서, 일괄변경을 해보자. …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/02996/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943382" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006239" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -35,6 +33,10 @@ import os import tkinter as tk from tkinter import filedialog, messagebox import
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,6 +661,22 @@ import os import tkinter as tk from tkinter import filedialog, messagebox import
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
@@ -789,6 +807,22 @@ import os import tkinter as tk from tkinter import filedialog, messagebox import
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     

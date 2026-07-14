@@ -4,23 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>xls - 색칠된 셀의 행 삭제하기 또는 값 합산하기 | shaaaaallow dive</title>
-    <meta name="description" content="색칠된 셀의 행 삭제하기 문서를 검토하다 보면 특정 조건에 따라 셀에 색을 칠하는 경우가 많다.
-노가다이든, 조건부 서식이든..
-그 다음이 문제다.
-색 구분 해놓은걸 처리를 해야할 경우,
-다시 일일이 선택해서 뭔가를 해야하는 경우가 많다.
-대부분의 경우, 선택한걸 삭제하는 경우가 많으므로, 삭제하는 코드로 짯다.
-간단하다.
-선택 영역 내에서 기본 설정색(마치 흰색으로 보이는 아무것도 없는 색)이 아니면 행을 지우게 해놨다
-의외로 유용하다.
-단, 조건부 서식에서 설정된 색은 먹히지 않는다!!!! Sub row_del_COLOR() Dim myRNG As Range Dim i As Integer Dim CmyRNG As Integer On Error Resume Next Application.DisplayAlerts = False Set myRNG = Application.InputBox(&#34;영역&#34;, , , , , , , 8) Application.DisplayAlerts = True CmyRNG = myRNG.Count For i = CmyRNG To 1 Step -1 If myRNG(i).Interior.ColorIndex &lt;&gt; -4142 Then myRNG(i).EntireRow.Select Selection.Delete End If Next On Error Resume Next Application.DisplayAlerts = False myRNG(1).Activate Application.DisplayAlerts = True End Sub [보너스] 짝수값이 들어 있는 셀 색칠하기 특정 영역에서 값이 짝수이면, 회색을 칠하고, 우측셀에 &#43;1 한 값을 넣어본다.
-아무 의미는 없다. 어느새 mod 함수를 까먹고 있었다는 사실을 알아냈다.
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>xls - 색칠된 셀의 행 삭제하기 또는 값 합산하기 | shaaaaallow dive</title>
+    <meta name="description" content="색칠된 셀의 행 삭제하기 문서를 검토하다 보면 특정 조건에 따라 셀에 색을 칠하는 경우가 많다. 노가다이든, 조건부 서식이든.. 그 다음이 문제다. 색 구분 해놓은걸 처리를 해야할 경우, 다시 일일이 선택해서 뭔가를 해야하는 경우가 많다. 대부분의 경우, 선택한걸 삭제하는 경우가 많으므 …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/01978/" />
+    <meta property="og:title" content="xls - 색칠된 셀의 행 삭제하기 또는 값 합산하기 | shaaaaallow dive" />
+    <meta property="og:description" content="색칠된 셀의 행 삭제하기 문서를 검토하다 보면 특정 조건에 따라 셀에 색을 칠하는 경우가 많다. 노가다이든, 조건부 서식이든.. 그 다음이 문제다. 색 구분 해놓은걸 처리를 해야할 경우, 다시 일일이 선택해서 뭔가를 해야하는 경우가 많다. 대부분의 경우, 선택한걸 삭제하는 경우가 많으므 …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/01978/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943382" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006238" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -40,6 +33,10 @@
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -662,12 +659,37 @@
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
         
         
-          <h2 id="색칠된-셀의-행-삭제하기">색칠된 셀의 행 삭제하기</h2>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="색칠된-셀의-행-삭제하기">색칠된 셀의 행 삭제하기</h2>
 <p>문서를 검토하다 보면 특정 조건에 따라 셀에 색을 칠하는 경우가 많다.<br>
 노가다이든, 조건부 서식이든..</p>
 <p>그 다음이 문제다.<br>
@@ -709,7 +731,28 @@
 </span></span><span style="display:flex;"><span>Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><h2 id="보너스-짝수값이-들어-있는-셀-색칠하기">[보너스] 짝수값이 들어 있는 셀 색칠하기</h2>
+</span></span></code></pre></div>
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+                </div>
+              
+              <h2 id="보너스-짝수값이-들어-있는-셀-색칠하기">[보너스] 짝수값이 들어 있는 셀 색칠하기</h2>
 <p>특정 영역에서 값이 짝수이면, 회색을 칠하고, 우측셀에 +1 한 값을 넣어본다.<br>
 아무 의미는 없다. 어느새 mod 함수를 까먹고 있었다는 사실을 알아냈다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01978/01.gif" alt="myimg"></p>
@@ -731,14 +774,24 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span></code></pre></div><br>
 <Br>
-<h2 id="색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</h2>
+
+            
+          
+            
+              
+              <h2 id="색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</h2>
 <p>특정 조건에 대하여 셀 색을 칠하는 것은 조건부 서식으로 되는데,<br>
 색이 칠해진 셀에 대하여, 합계를 구하는 방법이 묘연하다.</p>
 <p>배열수식으로 간단하게 만들어질 줄 알았는데, VBA를 사용해야하는 것 같다.<br>
 없으면 만들어야지 뭐..</p>
 <br>
 <br>
-<h2 id="방법">방법</h2>
+
+            
+          
+            
+              
+              <h2 id="방법">방법</h2>
 <p>다들 아는 것이겠지만, VBA 프로시저 중, 일반적으로 사용하는 SUB프로시저를 만들기엔 변수가 좀 많다. FUNCTION 프로시저로 UDF를 만들어서 사용하는 게 나을 것 같다.</p>
 <p>그래도 뭐가 나을지 모르니, 둘 다 해보자.</p>
  <br>
@@ -789,9 +842,27 @@
 <p>조건부 서식에서의 색상만 인식했어도 좋았을텐데, 참 아쉽다.</p>
 <p>끝.</p>
 
+            
+          
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     

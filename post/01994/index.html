@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
-    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" />
-    <title>ppt - 도형 잠그기(office2019) | shaaaaallow dive</title>
-    <meta name="description" content="도형 잠그기 오피스365에는 도형 잠그기 기능이 있어 배경 등으로 사용된 박스, 이미지가 선택되지 않도록 할 수 있다. 애석하게도 오피스2019버전에는 도형 잠그기 기능이 없는데.. 우회하는 방법으로 비슷하게 사용은 할 수 있다.
-VBA코드 VBA사용 코드를 모르는 경우, 아래 글을 참고한다.
-VBA사용법 vba에 표준 모듈 2개와 클래스 모듈 1개를 만든다. 클래스 모듈의 이름을 clsPPTEvent 로 한다.
-module #1
-&#39;proc module Option Explicit &#39; 선택된 도형에 잠금 태그 추가 Sub MarkSelectedShapesAsLocked() Dim Sel As Selection Dim shp As Shape Set Sel = ActiveWindow.Selection If Sel.Type = ppSelectionShapes Then For Each shp In Sel.ShapeRange shp.Tags.Add &#34;LOCKED&#34;, &#34;1&#34; Next shp MsgBox &#34;선택된 도형에 LOCKED 태그를 달았습니다.&#34; Else MsgBox &#34;도형을 선택한 상태에서 실행하세요.&#34; End If End Sub Sub UnlockLockedShapesOnCurrentSlide() Dim sld As Slide Dim shp As Shape &#39; 현재 창에서 보고 있는 슬라이드 Set sld = ActiveWindow.View.Slide For Each shp In sld.Shapes If shp.Tags(&#34;LOCKED&#34;) = &#34;1&#34; Then shp.Tags.Delete &#34;LOCKED&#34; End If Next shp MsgBox &#34;현재 슬라이드의 잠금(LOCKED 태그)을 모두 해제했습니다.&#34; End Sub Sub UnlockAllLockedShapes() Dim sld As Slide Dim shp As Shape For Each sld In ActivePresentation.Slides For Each shp In sld.Shapes If shp.Tags(&#34;LOCKED&#34;) = &#34;1&#34; Then shp.Tags.Delete &#34;LOCKED&#34; End If Next shp Next sld MsgBox &#34;프레젠테이션의 모든 잠금(LOCKED 태그)을 해제했습니다.&#34; End Sub module #2
-" />
+    <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>ppt - 도형 잠그기(office2019) | shaaaaallow dive</title>
+    <meta name="description" content="도형 잠그기 오피스365에는 도형 잠그기 기능이 있어 배경 등으로 사용된 박스, 이미지가 선택되지 않도록 할 수 있다. 애석하게도 오피스2019버전에는 도형 잠그기 기능이 없는데.. 우회하는 방법으로 비슷하게 사용은 할 수 있다. VBA코드 VBA사용 코드를 모르는 경우, 아래 글을 참 …" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/01994/" />
+    <meta property="og:title" content="ppt - 도형 잠그기(office2019) | shaaaaallow dive" />
+    <meta property="og:description" content="도형 잠그기 오피스365에는 도형 잠그기 기능이 있어 배경 등으로 사용된 박스, 이미지가 선택되지 않도록 할 수 있다. 애석하게도 오피스2019버전에는 도형 잠그기 기능이 없는데.. 우회하는 방법으로 비슷하게 사용은 할 수 있다. VBA코드 VBA사용 코드를 모르는 경우, 아래 글을 참 …" />
+    <meta property="og:url" content="https://sunnybong.xyz/post/01994/" />
+    <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1783943382" />
+    <link rel="stylesheet" href="/css/main.css?v=1784006239" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -34,6 +33,10 @@ module #1
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -656,6 +659,22 @@ module #1
     </header>
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
@@ -767,6 +786,22 @@ module #1
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     
