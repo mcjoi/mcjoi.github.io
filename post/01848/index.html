@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01848/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784023650" />
+    <link rel="stylesheet" href="/css/main.css?v=1784023812" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -33,10 +33,6 @@
       }
     </script>
 
-    
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,76 +655,25 @@
     </header>
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="데이터-슬라이싱">데이터 슬라이싱</h2>
+          <h2 id="데이터-슬라이싱">데이터 슬라이싱</h2>
 <p>이전에 indirect 함수를 사용한 테이블 데이터 슬라이싱 글을 적은 적이 있다. 이번 글은 이를 좀 보완한 글이 되겠다.</p>
 <a class="btn-link" href="/post/01881/" target="_blank" rel="noopener noreferrer">xls - 배열수식 테이블 슬라이스 - 동적인 합계 영역 설정</a>
 <br>
 <br>
 <Br>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="테이블">테이블</h2>
+<h2 id="테이블">테이블</h2>
 <p>테이블은 영역에 비해서 사용하기가 수월한 편이지만, 자주 두고 사용하지 않는 데이터의 경우, 구지 테이블로 만들지 않는 경우가 많은데, 사용성과 오류방지 차원에서 가능하다면 테이블을 사용해야 한다.</p>
 <p>아래와 같이 mtcars 데이터를 ctrl + t 단축키로 테이블로 만들어 준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01848/01.webp" alt="myimg"></p>
 <br>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="동적-조건">동적 조건</h2>
+<h2 id="동적-조건">동적 조건</h2>
 <p>구현하고자 하는 바는 아래와 같다.</p>
 <p class="text-box">[model] 컬럼에 &ldquo;Mazda&rdquo; 키워드가 포함되는 경우,<br>
 [model] 열부터 [am] 열까지 숫자 값에 대한 합계와 개수를 추출한다.</p>
@@ -740,12 +685,7 @@
 <br>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="indirect-함수-사용">indirect 함수 사용</h2>
+<h2 id="indirect-함수-사용">indirect 함수 사용</h2>
 <p>테이블에서 테이블 컬럼을 호출하는 방식은 <code>Table1[컬럼1]</code> 이고,<br>
 복수의 컬럼을 호출하는 것은 <code>Table1[[컬럼1]:[컬럼x]]</code> 가 된다.</p>
 <p>따라서, 컬럼명을 변수로 호출하기 위해 아래와 같이 수식을 넣어주면 된다. if 조건은 Mazda 가 포함된 행을 찾는 조건, 합계 영역은 indirect로 지정된 영역이 된다.</p>
@@ -764,27 +704,9 @@ INDIRECT(&ldquo;Table1[[&rdquo; &amp; <strong>O1</strong> &amp; &ldquo;]:[&rdquo
 <p>필터나 쿼리 등의 신규 함수를 쓰면, 더 나아질런지 모르지만, 아직 365를 쓰지 않아서 모르겠다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     

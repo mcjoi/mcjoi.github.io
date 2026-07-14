@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01903/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784023651" />
+    <link rel="stylesheet" href="/css/main.css?v=1784023814" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -33,10 +33,6 @@
       }
     </script>
 
-    
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,37 +655,12 @@
     </header>
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="날짜-수식은-괴롭다">날짜 수식은 괴롭다</h2>
+          <h2 id="날짜-수식은-괴롭다">날짜 수식은 괴롭다</h2>
 <p>엑셀이든 DB든 날짜를 계산하는 작업은 짜증나는 작업이다. 사무직이라면 반드시 한번은 보게되는 WBS, 프로젝트 관리 툴이 엄청나게 많아졌지만, 아직 WBS는 역시 엑셀이다. WBS를 여러번 만들다보면 날짜 수식을 잘하게 되는 날이 올것이다.</p>
 <p>흔해 빠진 WBS 모양은 아래와 같을 것이다. 시작일과 종료일을 기준으로 기간을 적고, 일자대로 색을 칠해야한다.<br>
 두가지 짜증나는 작업이 동반되는 것을 예상할 수 있다.</p>
@@ -701,12 +672,7 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/01.jpg" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="기간-내-날짜-색칠">기간 내 날짜 색칠</h2>
+<h2 id="기간-내-날짜-색칠">기간 내 날짜 색칠</h2>
 <p>각 셀에 시작일과 종료일 사이에 있는지 여부를 1, 0로 기재해주고, 이에 따라 조건부 서식을 입혀주면 된다.<br>
 내가 사용한 과정은 아래와 같다. 날짜 행과 시작일, 종료일 열에 이름정의를 해주고, 아래 수식을 입력해 주면 끝이다.</p>
 <p class="text-box">=IF(AND(일자&gt;=시작일, 일자&lt;=종료일),1,0)</p>
@@ -720,28 +686,7 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/03.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="주말-처리">주말 처리</h2>
+<h2 id="주말-처리">주말 처리</h2>
 <p>날짜가 토요일 또는 일요일이라면, 조건부 서식으로 회색칠을 해준다.<br>
 아래와 같은 수식으로 처리가 가능하다.</p>
 <p class="text-box">=OR(WEEKDAY(F$10)=1,WEEKDAY(F$10)=7)</p>
@@ -749,24 +694,14 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/04.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="오늘-날짜-하일라이트">오늘 날짜 하일라이트</h2>
+<h2 id="오늘-날짜-하일라이트">오늘 날짜 하일라이트</h2>
 <p>뭐&hellip; 거의 WBS에서는 무쓸모하겠지만, 오늘날짜에 해당하면 빨간색 처리를 추가로 해주었다.</p>
 <p class="text-box">=F$10=TODAY()</p>
 <br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01903/05.png" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="공휴일-처리">공휴일 처리</h2>
+<h2 id="공휴일-처리">공휴일 처리</h2>
 <p>이제 공휴일 처리이다. 깔끔하게 셀안에서 처리할 수도 있겠지만? 매번 바뀔 수 있으니, 별도 행을 추가 해 주었다. 나중에 이는 숨김처리 하는 것이 좋겠다. 공휴일 리스트의 테이블에서 공휴일을 0과 1처리해주었다.</p>
 <p class="text-box">{=SUM(IF(F16 = 공휴일, 1))}</p>
 <br>
@@ -780,27 +715,9 @@
 <p>역시 글로보면 확 와닿지는 않게 되는 것 같다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     

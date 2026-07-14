@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01956/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784023652" />
+    <link rel="stylesheet" href="/css/main.css?v=1784023814" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -33,10 +33,6 @@
       }
     </script>
 
-    
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -659,32 +655,12 @@
     </header>
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              <div class="video-embed">
+          <div class="video-embed">
   <div class="video-embed-inner">
     <iframe
       src="https://www.youtube.com/embed/g9wcalBgw2E"
@@ -699,22 +675,12 @@
 
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="sumif-와-sum배열함수">sumif 와 sum배열함수</h2>
+<h2 id="sumif-와-sum배열함수">sumif 와 sum배열함수</h2>
 <p>두 가지 함수 사용에 있어 차이는 뭐라고 생각이 들지 모르겠다.<br>
 개인적인 생각은 sumif는 조건에 와일드카드문자(*)를 사용할 수 있다는 장점을 가지고, sum배열수식은 조건을 정의하기 위해 다른 함수를 사용할 수 있다는 장점을 가지는 정도겠다.</p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="배열함수-내에서의-와일드카드문자">배열함수 내에서의 와일드카드문자</h2>
+<h2 id="배열함수-내에서의-와일드카드문자">배열함수 내에서의 와일드카드문자</h2>
 <p>배열함수 내에서, find함수를 사용해서 와일드카드문자(여기서는 *)를 대체해서 사용하는 방법이었다.</p>
 <p>아래 표에서, 입금은행이 <code>국민/기업은행 이면 &quot;국민은행 또는 기업은행&quot; 표시</code>, <code>우리은행 이면 &quot;우리은행&quot; 으로 표시</code><br>
 하려고 한다.</p>
@@ -726,28 +692,7 @@
 <p>사용된 수식을 보면 입금은행 셀에서 &ldquo;국민&rdquo; 또는 &ldquo;기업&rdquo; 문자열을 FIND 함수로 찾고, 이를 COUNT 함수로 에러가 아닌값을 숫자로 변환, 결과가 0일 경우(같은 값이 없을 경우)IF 함수에서 FALSE 값인 &ldquo;우리은행&quot;을 반환하고, 결과가 1 이상일 경우(같은 값이 있을 경우),IF 함수의 TRUE 값을 반환하게 된다.</p>
 <Br>
 <br>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="영역참조-배열수식에서-사용">영역참조 배열수식에서 사용</h2>
+<h2 id="영역참조-배열수식에서-사용">영역참조 배열수식에서 사용</h2>
 <p>위에서는 단일 셀값에 대한 처리였다면,<br>
 일반적인 배열함수에 이를 적용하는 방식은 여러가지가 있을 수 있지만, 여기서 사용한 방법은 FIND 함수에서 찾아진 에러 값을ISERROR 함수로 TRUE로 처리하는 방법이다.</p>
 <p>위의 표를 아래 요약 테이블로 정리를 하려고 한다. 요약 테이블 맨 왼쪽에 있는 입금은행 열을 기준으로 값을 찾아야 한다고 하자.</p>
@@ -773,12 +718,7 @@
 <li>FIND에서 발생한 에러(#VALUE)는 ISERROR 함수에 의해 TRUE가 되고, 숫자 값은 FALSE가 된다.</li>
 <li>NOT으로 TRUE와 FALSE를 서로 바꿔준다.</li>
 </ul>
-
-            
-          
-            
-              
-              <h2 id="다중조건-배열수식에서-사용">다중조건 배열수식에서 사용</h2>
+<h2 id="다중조건-배열수식에서-사용">다중조건 배열수식에서 사용</h2>
 <p>위의 경우라면, 구지, 복잡한 함수들을 동원해서 수식을 작성할 필요가 없다.<br>
 아래와 같은 경우는 어떨까?</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01956/06.jpg" alt="myimg"></p>
@@ -798,39 +738,16 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01956/08.jpg" alt="myimg"></p>
 <br>
 <br>
-
-            
-          
-            
-              
-              <h2 id="복잡하지만-유용함">복잡하지만 유용함</h2>
+<h2 id="복잡하지만-유용함">복잡하지만 유용함</h2>
 <p>수식은 복잡해졌지만, 다중 조건을 처리하는 sumifs 함수 대비해서 더 강력한 수식을 만들 수 있다.<br>
 이 정도 배열수식을 컨트롤할 수 있다면, 다른 배열수식이 등장했을때, 무리없이 처리가 가능할 것이다.<br>
 F9 키를 통해 미리 결과를 확인해본다면, 적절하게 수식을 만들어 갈 수 있을 것이다.</p>
 <p>긴 글보다는 영상으로 보시는게 나을수도 있지만, 좀 지루할 수 있다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     
