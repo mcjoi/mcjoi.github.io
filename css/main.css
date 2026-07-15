@@ -727,7 +727,8 @@ ul li::marker {
 }
 
 .now-preview {
-  padding-top: 16px;
+  padding-top: 50px;
+  padding-bottom: 28px;
 }
 
 .now-preview-head {
@@ -772,6 +773,10 @@ ul li::marker {
 }
 
 .now-item:first-child {
+  border-top: 0;
+}
+
+.now-list--preview .now-item {
   border-top: 0;
 }
 
@@ -825,6 +830,10 @@ ul li::marker {
 
 .appbar + .page .grid {
   margin-top: 20px;
+}
+
+.now-preview + .grid {
+  padding-top: 56px;
 }
 
 @media (min-width: 860px) {
