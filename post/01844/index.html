@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
     <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>Chrome Extension 만들기 | shaaaaallow dive</title>
-    <meta name="description" content="AI 그리고 Chrome Extension 그간 js 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다. js를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 chrome extension을 셀프로 만들어 본다. 실행 방법 실행방법은 Chrome 주소 창에 …" />
+    <meta name="description" content="AI 그리고 Chrome Extension 그간 js 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다. js를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 chrome extension을 셀프로 만들어 본다. 실행 방법 Chrome 브라우저 주소 창에서 …" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sunnybong.xyz/post/01844/" />
     <meta property="og:title" content="Chrome Extension 만들기 | shaaaaallow dive" />
-    <meta property="og:description" content="AI 그리고 Chrome Extension 그간 js 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다. js를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 chrome extension을 셀프로 만들어 본다. 실행 방법 실행방법은 Chrome 주소 창에 …" />
+    <meta property="og:description" content="AI 그리고 Chrome Extension 그간 js 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다. js를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 chrome extension을 셀프로 만들어 본다. 실행 방법 Chrome 브라우저 주소 창에서 …" />
     <meta property="og:url" content="https://sunnybong.xyz/post/01844/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784091575" />
+    <link rel="stylesheet" href="/css/main.css?v=1784091996" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -661,19 +661,17 @@
         
         
           <h2 id="ai-그리고-chrome-extension">AI 그리고 Chrome Extension</h2>
-<p>그간 <code>js</code> 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다.<br>
-<code>js</code>를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 <code>chrome extension</code>을 셀프로 만들어 본다.</p>
+<p>그간 <code>js</code> 기반의 무언가를 하기 껄끄러웠었는데, 이제는 AI덕분에 5분컷 작업이 되었다. <code>js</code>를 활용할 수 있다면 가장 먼저 해보고 싶었던 작업인 <code>chrome extension</code>을 셀프로 만들어 본다.</p>
 <br>
 <br>
 <br>
 <h3 id="실행-방법">실행 방법</h3>
-<p>실행방법은 Chrome 주소 창에서 <code>chrome://extensions</code> 를 입력해서, 우상단에 있는 개발자 모드를 활성화시키고, 만들어둔 폴더를 좌상단 <code>압축해제된 확장 프로그램 로드</code> 버튼을 통해서 호출하기만 하면 되는 손쉬운 과정이다.</p>
+<p>Chrome 브라우저 주소 창에서 <code>chrome://extensions</code> 를 입력한다. 우상단에 보이는 개발자 모드를 활성화시킨다. 좌상단 <code>압축해제된 확장 프로그램 로드</code> 버튼을 클릭하면 폴더 선택 창이 나온다. 미리 만들어둔 프로그램의 폴더를 선택한다. 이제 익스텐션에 등록이 된다. 이제 등록된 프로그램을 활성화하면 끝이다.</p>
 <br>
 <br>
 <br>
-<h3 id="페이지에-있는-테이블-복사하기">페이지에 있는 테이블 복사하기</h3>
-<p>테이블을 엑셀로 붙일때, 매번 드래그를 해다가 붙이는 과정을 회사에서 종종 하곤하는데, 이를 만들어보기로 한다. 문제를 어렵게 생각할 필요도 없이, ChatGPT가 이를 만들어내는데까지 3분도 채 걸리지 않은 것 같다.<br>
-작동은 아주 잘 된다.</p>
+<h3 id="예제-1-웹페이지-테이블-클립보드로-복사하기">예제 #1 웹페이지 테이블 클립보드로 복사하기</h3>
+<p>웹페이지에 있는 테이블을 엑셀로 붙일때, 매번 드래그를 해다가 붙이는 과정을 회사에서 종종 하곤하는데, 이 작업을 편하게 할 수 있는 프로그램을 만들어보기로 한다. 프롬프팅의 문제이긴 하지만, ChatGPT가 이를 만들어내는데까지 3분도 채 걸리지 않은 것 같다. 작동도 아주 잘 된다.</p>
 <p>구성은 다음과 같다.</p>
 <p class="text-box">table-area-copy/<br>
 ├── manifest.json<br>
@@ -683,6 +681,7 @@
 <br>
 <br>
 <br>
+<p>생성된 코드는 다음과 같다.</p>
 <p><code>manifest.json</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">3</span>,
@@ -700,8 +699,6 @@
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
-<br>
-<br>
 <p><code>popup.html</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ko&#34;</span>&gt;
@@ -791,8 +788,6 @@
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
 </span></span></code></pre></div><br>
-<br>
-<br>
 <p><code>popup.js</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;start-button&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">messageElement</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;message&#34;</span>);
@@ -829,8 +824,6 @@
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><br>
-<br>
-<br>
 <p><code>content.js</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>(() =&gt; {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">INSTANCE_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;__smartAreaCopyInstance&#34;</span>;
@@ -1764,8 +1757,8 @@
 </span></span></code></pre></div><br>
 <br>
 <br>
-<h3 id="새로운-탭-실행시-to-do-list--메모-노출">새로운 탭 실행시 to-do list / 메모 노출</h3>
-<p>새 탭에 단순히 링크 몇개만 있는 공간이 아까워서, 기능을 좀 추가 해봤다. 아래와 같은 모양이 된다.</p>
+<h3 id="예제-2-새탭-실행시-to-do-list--메모-노출">예제 #2 새탭 실행시 to-do list / 메모 노출</h3>
+<p>새 탭에 단순히 링크 몇개만 있는 공간이 아까워서, 기능을 좀 추가 해봤다.아래와 같은 모양이 된다.</p>
 <br>
 <br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01844/01.jpg" alt="myimg"></p>
