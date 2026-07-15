@@ -719,6 +719,96 @@ ul li::marker {
   font-size: 14px;
 }
 
+.now-preview,
+.now-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px 0;
+}
+
+.now-preview {
+  padding-top: 16px;
+}
+
+.now-preview-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.now-preview-head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-accent);
+}
+
+.now-preview-head a {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.now-preview-head a:hover,
+.now-text a:hover {
+  color: var(--link);
+}
+
+.now-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line-gray-muted);
+  border-bottom: 1px solid var(--line-gray-muted);
+}
+
+.now-item {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-gray-muted);
+}
+
+.now-item:first-child {
+  border-top: 0;
+}
+
+.now-item time {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.now-text {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.now-text a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.now-page {
+  padding-bottom: 54px;
+}
+
+.now-page .now-list {
+  max-width: 980px;
+}
+
+.now-empty {
+  margin: 0;
+  padding: 18px 0;
+  color: var(--muted);
+}
+
 .grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -1979,6 +2069,11 @@ thead th,
   .appbar-inner {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .now-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .appbar-left {

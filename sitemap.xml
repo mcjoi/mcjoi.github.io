@@ -1139,5 +1139,9 @@
     <lastmod>2016-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+  </url><url>
+    <loc>https://sunnybong.xyz/now/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
