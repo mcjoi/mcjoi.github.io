@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01882/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,46 +664,26 @@
 <p>생각해보니&hellip;. 중복값을 제외한 리스트를 뽑기만 했지&hellip; 중복값을 빼고, 범위에서의 갯수를 세는 경우는 흔치 않았다. 신박한게 떠오르지 않아&hellip;. 대충 찾아보니, 좀 생각을 해야 하는 것으로 보인다.</p>
 <p>아래와 같은 범위가 있다. 보는 것처럼, 총 19개 unique값은 [3, 4, 5] 3가지 이다. 대상 영역은 [범위]로 이름정의를 해두었다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01882/01.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="sumproduct-countif">SUMPRODUCT, COUNTIF</h2>
 <p>일반적으로 사용되는 수식은 아래와 같다.</p>
 <p class="text-box">=SUMPRODUCT(1/COUNTIF(범위,범위))</p>
-<br>
-<Br>
 <p>하나씩 뜯어보면&hellip; 범위안에서 동일한 값을 찾아주는 COUNTIF 수식의 결과값은 아래와 같이 결과가 적용된다.</p>
 <p class="text-box">=SUMPRODUCT(1/{15;15;15;3;3;1;15;15;15;15;3;15;15;15;15;15;15;15;15})</p>
-<br>
-<Br>
 <p>전체 갯수를 모두 합한 값이 결국 1이 되어야 하므로, 각 갯수를 (1/각 갯수)로 만들어 준다음 SUMPRODUCT 함수로 더해주면, 각 값들의 합은 1이 되게 된다.</p>
 <p class="text-box">=SUMPRODUCT({1/15;1/15;1/15;1/3;1/3;1;1/15;1/15;1/15;1/15;1/3;1/15;1/15;1/15;1/15;1/15;1/15;1/15;1/15})</p>
-<br>
-<Br>
 <p>[4] 값을 예로 들어보면, 3번이 나오므로 1/3 + 1/3 + 1/3이 되어, 결국 1만 남고 이들을 더하면, 중복되지 않은 값들의 갯수가 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01882/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>이와 함께, 범위에 공백이 있는 경우, 아래 수식을 통해 공백값이 0처리되는 것을 방지(1/0은 에러가 된다.)하여, 에러를 막을 수 있다.</p>
 <p class="text-box">=SUMPRODUCT(1/COUNTIF(범위,범위&amp;&quot;&quot;))</p>
-<br>
-<Br>
 <p>또한 위의 경우, 공백을 유일한 값으로 처리하게 되는데, 공백값을 제외시키려면, 아래와 같이 수식을 조정해줘야 한다.</p>
 <p class="text-box">=SUMPRODUCT((범위&lt;&gt;&quot;&quot;)/COUNTIF(범위,범위&amp;&quot;&quot;))</p>
-<br>
-<Br>
 <p>아래 그림처럼 공백이 발생했을 경우, 아래 그림처럼 결과값이 달라진다는 것을 알 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01882/03.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="sum-if-frequency">SUM, IF, FREQUENCY</h2>
 <p>곰곰히 생각해 보니, 좀 헤깔린데, FREQUENCY 수식을 쓰면 좀 나아지지 않을까 싶었다.</p>
 <p class="text-box">=SUM(IF(FREQUENCY(범위,범위)&gt;=1,1))</p>
-<br>
-<Br>
 <p>FREQUENCY는 애초에 빈도수를 나타내므로, 값이 1보다 크면, 1로 변환해주는 배열수식만으로도 충분하다. 아래 그림에서 보는 것처럼, 해당 수식 또한 공백을 유일한 값으로 포함시키지 않는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01882/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>뭔가 알고 있는 듯 한데, 자세히 모르는 것이라 적어둔다.</p>
 <p>끝.</p>
 

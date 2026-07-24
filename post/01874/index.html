@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01874/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,16 +663,11 @@
           <h2 id="엑셀의-vbe는-별로다">엑셀의 VBE는 별로다.</h2>
 <p>VSCODE로 사용할 수 있다면&hellip; 득과 실이 있겠지만, 아무래도 득이 더 크지 않을까?</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/01.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="xlwings">XLWINGS</h2>
 <p>XLWINGS는 파이썬 패키지이다. 엑셀과 파이썬을 연계해주는 많은 파이썬 패키지들이 있지만,<br>
 파이썬으로 엑셀파일을 컨트롤하는 프로그래밍을 하는 것이 아니라, VB를 사용하고, 그냥 IDE만 변경해준다는 개념이 XLWINGS에 있길래 시도해봤다. 사실 다른 툴들은 시도해 보지도 않았다.</p>
 <a class="btn-link" href="https://www.xlwings.org/" target="_blank" rel="noopener noreferrer">xlwings.org</a>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/02.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="설치">설치</h2>
 <p class="text-box">#1. 엑셀을 설치(?)<br>
 #2. 파이썬을 설치<br>
@@ -686,27 +681,15 @@ pywin32패키지는 설치 후, 파이썬 SDK 경로의 Scripts 폴더에 생기
 <p>파이썬 터미널에서, 아래 명령어를 사용한다. 동기화의 방향(import/export)이, 내 예상과 반대라서 당황했다..<br>
 엑셀매크로 파일 불러오기/코드 동기화(파일은 해당하지 않음)</p>
 <p class="text-box">xlwings vba edit -f 파일명.xlsm</p>
-<Br>
-<br>
 <p>동기화 : VSCODE → 엑셀(파일을 포함한 동기화)</p>
 <p class="text-box">xlwings vba import -f 파일명.xlsm</p>
-<Br>
-<br>
 <p>눈치껏 봐서 알겠지만, VSCODE에서 파일을 생성할 경우에는, Attribute VB_Name = &ldquo;모듈 이름&rdquo; 을 선언해 줘야한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>동기화 : 엑셀 → VSCODE(파일을 포함한 동기화)</p>
 <p class="text-box">xlwings vba export -f 파일명.xlsm</p>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/04.png" alt="myimg"></p>
-<br>
-<br>
 <p class="text-box">#7. VSCODE에서 코드 작성, 저장시, VBE UPDATE</p>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01874/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>얼마전 파이썬하고, FLUTTER를 전부 외장 SSD로 SDK이전작업을 했는데, 망할놈의 PYWIN32가 포터블 파이썬에서는 잘 작동을 안하더라(NO MODULE&hellip; 어쩌고 에러).<br>
 덕분에 새로 파이썬을 설치하는 수고로움이 있었지만, 그래도.. 뭐 되니까..</p>
 <p>끝.</p>

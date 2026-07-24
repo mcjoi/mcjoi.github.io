@@ -1517,13 +1517,19 @@ html.gallery-unlocked .gallery-gate {
 .post-content .highlight {
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 0 108px;
+  margin: 0;
+}
+
+.post-content .highlight + :not(h2),
+.post-content > pre + :not(h2),
+.post-content .code-block + :not(h2) {
+  margin-top: 108px;
 }
 
 .code-block {
   border: 1px solid #2a2a2a;
   border-radius: 10px;
-  margin: 0 0 16px;
+  margin: 0;
   background: #1b1b1b;
 }
 

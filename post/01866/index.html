@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01866/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -662,29 +662,17 @@
         
           <h2 id="도형-우측-끝으로-다른-도형정렬하기">도형 우측 끝으로 다른 도형정렬하기</h2>
 <p>파워포인트의 꽃은 정렬이다. 아무리 가이드 안내선이 있다고 해도, 로지텍의 마우스를 쓴다고 하더라도, 1px 단위로 도형들을 맞추다 보면 현타가 올 것이기 때문이다. 이에 MS에서는 충분히 많은 정렬(align) 옵션을 가지고 있지만, 아무리 기다려도 추가해주지 않는 정렬 옵션은 바로 도형의 오른쪽 끝 부분에 다음 도형을 맞추는 기능이다.</p>
-<br>
-<br>
 <h2 id="파워포인트vba">파워포인트VBA</h2>
 <p>는 매번 글에 적지만, 레퍼런스를 찾기가 어렵다. 하지만, 이제는 상관없다. ChatGPT라는 노예가 생겼으니, VBA만큼 오래된 역사를 가지고, 변화가 없던 언어라면 그 무엇이든 노예가 찾아내 줄 것이기 때문이다.</p>
 <p>하고자 하는 바는 다음과 같다. 두개의 도형(shape)이 아래 이미지처럼 흩어져 있다고 치자. 두 개의 사각형(rectangle)에서 1번 사각형의 우측 끝부분에 2번 사각형을 정렬하고 싶다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>그냥 마우스로 안내선이 나올때까지 옮긴다? 맞다. 이런 큼지만한 도형을 옮길때는 그 방법이 최선이고 가장 정확하고 가장 빠르다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>하지만, 도형(shape)의 위치 값이 소수점 단위에 있다거나, 외곽선 때문이거나, 크기가 너무 작거나 한 경우, 아래 이미지에서처럼 가이드라인에 맞춘것이 확실함에도, 확대를 해보면, 1px 정도 차이가 나는 것을 확인 할 수 있다. (정확한 이유는 나도 모른다.) 이 미세한 차이는 슬라이드를 보는 배율에 따라서, 안보일 가능성도 높다. 하지만 분명히 틀어져 있음은 확실하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>매크로로 수치를 맞춰주면 위와 동일한 도형 정렬을 아래 이미지와 같이 조정할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/04.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>이런 쫌스런 짓을 누가할지는 나도 알 수 없다.</p>
-<br>
-<Br>
 <h2 id="vba코드">VBA코드</h2>
 <p>사용된 코드는 다음과 같다. 반드시 2개 이상의 도형을 선택해야 하며, 위치값에 대하여 기준이 될 도형을 첫 번째로 선택해야 한다. 선택한 도형이 그룹인 경우 1개의 도형으로 인식을 한다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">shapealign_right</span>()
@@ -711,12 +699,8 @@
 </span></span><span style="display:flex;"><span>        MsgBox <span style="color:#e6db74">&#34;Please select shapes.&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>결과물은 대략 아래 그림 정도가 될 것이다.</p>
+</span></span></code></pre></div><p>결과물은 대략 아래 그림 정도가 될 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01866/05.gif" alt="myimg"></p>
-<br>
-<br>
 <p>이상. 끝.</p>
 
         

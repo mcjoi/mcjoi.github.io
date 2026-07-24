@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01849/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -670,15 +670,11 @@
 <li>Gemini (Google) : 116~230</li>
 <li>ChatGPT (OpenAI) : 231~249</li>
 </ul>
-<br>
-<br>
 <p>MID 함수로 시작은 (N-1)*100+1 으로 101을 만들어 주고, 길이는 100으로 한다.<br>
 여기서는 N이 2(두번째)였으니, 101~200까지를 불러오게 될 것이다. 그럼 위의 순서에서 보듯 &ldquo;공백16칸 + 텍스트15칸 + 공백69칸&quot;이 남게 될 것이다. 이때 두번째 항목인 Gemini (Google) 가 포함되게 된다.</p>
 <p>마찬가지로 N=3을 넣게되면, 201~300까지 불러오니, 세번째 항목이 포함될 것이다.<br>
 이 다음은 공백을 TRIM으로 없애고, 에러처리를 해주면 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01849/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>물론, 각 텍스트의 길이가 100자를 넘나드는 경우, 100으로 설정된 값을 조정할 필요가 있고, 항목이 많은 경우, 언젠간 숫자가 틀어지게 될 것이다. 그럴땐 그냥 text to columns 를 사용하자.</p>
 <p>초반에도 기술했지만, 참 손에 익지 않는다.</p>
 <p>끝.</p>

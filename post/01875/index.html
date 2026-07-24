@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01875/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,20 +664,12 @@
 <p>합계를 내야할 대상의 조건이 동일할때, 맨 처음 값에 대해서만 합계를 구하고 싶다. subtotal을 사용하면 간단하겠지만, 다른 방법을 생각해보자.<br>
 아래와 같은 표가 있다. 표를 수정할 수 없고, 피벗테이블을 사용하지 않을 때 사용할 수 있다. (거의 사용한 적은 없다.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01875/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래와 같이, 두개의 조건(차종, 브랜드)이 변경되는 행에만 countifs 함수를 통해 ok 텍스트를 넣도록 할 수 있다.</p>
 <p class="text-box">=IF(COUNTIFS($B$3:B3,B3,$C$3:C3,C3)=1,&ldquo;ok&rdquo;,&quot;&quot;)</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01875/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>ok가 표기된 행에 대하여, 대수의 합계를 구해보자</p>
 <p class="text-box">=IF(COUNTIFS($B$3:B3,B3,$C$3:C3,C3)=1,SUMIFS($F$3:$F$15,$B$3:$B$15,B3,$C$3:$C$15,C3),&quot;&quot;)</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01875/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>핵심은 조건이 변하는 행에 blank 값이 들어오도록 하는 것이며, sumifs가 아니라 countifs를 통해서 개수를 세는데 사용할 수도 있다.</p>
 <p>끝.</p>
 

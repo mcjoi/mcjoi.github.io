@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01860/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,16 +664,10 @@
 <p>보고서를 작성하다보면, 1% 미만 값으로 인해 소숫점을 따로 꺼내지 않는 이상 +0%, -0%의 값들이 나오기 마련인데, 상당히 보기에 지저분하다. 그래서 엑셀 사용자 정의 셀서식에 조건을 적용하여, 0%를 포함한 1%와 -1%의 값들은 &ldquo;-&rdquo; 표기를 해본다. 셀서식에서는 조건이 3개까지만 걸리니, 주의해야한다. 그렇지 않으면 조건부 서식을 사용해야한다.</p>
 <p>셀서식 조건은 아래와 같이 걸어주면 된다.</p>
 <p class="text-box">[&gt;=0.01]+0%;[Red][&lt;=-0.01]-0%;-</p>
-<br>
-<br>
 <p>아래 그림을 보면 성장률은 실제 0.2%인데, &ldquo;-&rdquo; 처리된것을 알 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01860/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>사실, 소숫점 첫째자리정도까지는 살려주는 경우가 많기 때문에, 둘째 자리부터 커트를 하고 싶다면</p>
 <p class="text-box">[&gt;=0.001]+0.0%;[Red][&lt;=-0.001]-0.0%;-</p>
-<br>
-<br>
 <p>이런식으로 변경해주면 된다.</p>
 <p>끝.</p>
 

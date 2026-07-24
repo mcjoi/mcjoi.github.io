@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01877/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -666,46 +666,27 @@
 <p>복사(ctrl + c), 붙여넣기(ctrl + v) 만큼이나 자주 쓰는 단축키가 실행취소(ctrl + z)가 아닐까?<br>
 하지만, 누구나 한번쯤 실행취소를 연타하다가, 멈춰서 당황한 기억이 있지 않는가? 분명 이전 버전에서는 옵션에 실행취소 횟수를 정하는 내용이 있었던 것으로 기억하는데, 2019버전에서는 안보인다. 나만 안보이는건지는 모르겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/01.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="레지스트리-수정">레지스트리 수정</h2>
 <p>cmd 창을 열어 regedit를 쳐서, 레지스트리 편집기를 열어준다.<br>
 오피스2019 버전의 경우, 상단 주소창에, 아래 주소를 입력하면, 엑셀 레지스트리의 option폴더로 이동할 수 있다.</p>
 <p class="text-box">컴퓨터\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Excel\Options</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>위 이미지에 보이는 것처럼, UndoHistory라는 값을 생성해 줄 것인데,<br>
 빈 공간 마우스 우버튼 &gt; 새로만들기 &gt; DWORD(32비트) 를 만들어 주고, 이름을 UndoHistory로 바꾸고, 단위는 10진수로, 값은 원하는 Undo 횟수를 넣어주면 된다. 나의 경우, 회사 노트북 성능을 고려하여, 300정도로 타협을 봤다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/03.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="확인-불가">확인 불가</h2>
 <p>앞서 말한것처럼, 옵션에서 해당 내용이 없기 때문에, 값을 추가했지만, 엑셀 그 어느곳에서도 확인은 불가능하다. 어쩔수 없이 직접 눌러봐야 확인이 가능하다.<br>
 아래와 같이 300개의 값을 입력한다. 중간에 잘못누른것까지 포함하면, 대략 305개 정도 액션이 진행되었을 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>ctrl + z를 연타해본다. 드디어, 엑셀의 실행취소 기본값으로 알고 있는 100번째를 넘어 101번째가 되었는데, 실행취소가 되는걸로 봐서 레지스트리 수정을 했던 게 뭔가 동작을 하고 있기는 한것으로 보인다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>계속 실행취소를 해본다. 다 없어지고, 6번지 지워지면서 멈췄다. 300번이 지정된 것이 맞는 것으로 확인되었다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>왜 옵션에서 설정부분이 사라졌는지는 알 수 없지만, 하드하게 엑셀을 사용하는 사람에게는 꼭 필요한 기능일 수 있겠다.</p>
-<br>
-<Br>
 <hr>
-<Br>
-<Br>
 <h2 id="파워포인트2019-실행취소undo-횟수-조정하기">파워포인트2019 실행취소(Undo) 횟수 조정하기</h2>
 <p>다행인지 불행인지, 파워포인트는 아직 실행취소 횟수를 조정하는 옵션이 살아있는데.. 기본은 10번인가 20번밖에 안되니, 조정이 필요하다. 최대 횟수는 150회이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01877/07.png" alt="myimg"></p>
-<br>
-<br>
 <p>옵션에 있는 내용이므로</p>
 <p>끝.</p>
 

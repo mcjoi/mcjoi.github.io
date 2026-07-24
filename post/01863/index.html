@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01863/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,50 +663,32 @@
           <h2 id="구글시트---요약-테이블-만들기">구글시트 - 요약 테이블 만들기</h2>
 <p>다음과 같은 테이블이 있을때, 피벗테이블을 만들 수 있지만, 쿼리 함수를 통해 간단하게 요약 테이블 구성이 가능하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>첫 셀에서, 다음과 같은 쿼리함수를 실행한 결과이다. 결과값은 엑셀의 고급함수와 비슷하다고 할 수 있다.</p>
 <p class="text-box">=QUERY(Table1,<br>
 &ldquo;Select<br>
 Col3, Col4<br>
 where Col2 = &lsquo;야채&rsquo;<br>
 &ldquo;)</p>
-<Br>
-<br>
 <p>함수 내에서는 sql 문을 사용하게 된다. Table1에서, 3번째, 4번째 열을 불러오는데, 조건은 2번째 열이 야채인 경우이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>여기서 살짝 짜증나는 부분이 생기는데, Table1에 새로운 열을 추가하는 경우이다. 애초에 sql문을 String 값으로 작성해놨기 때문에, 참조 테이블 변화에 대해서 동적으로 작동하지 않는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>물론, 이때는 간단하게 Col3, Col4 열에 대해서, &ldquo;이름&rdquo;, &ldquo;수량&quot;을 match 함수로 열번호로 선택하여 적용할 수 있다.</p>
 <p class="text-box">=QUERY(Table1,<br>
 &ldquo;Select<br>
 Col&rdquo;&amp;match(&ldquo;이름&rdquo;,$A$1:$E$1,0)&amp;&rdquo;, Col&rdquo;&amp;match(&ldquo;수량&rdquo;,$A$1:$E$1,0)&amp;&rdquo;<br>
 where Col&quot;&amp;match(&ldquo;유형&rdquo;,$A$1:$E$1,0)&amp;&quot; = &lsquo;야채&rsquo;<br>
 &ldquo;)</p>
-<br>
-<br>
 <p>Col + 열번호로 대상열이 정해지므로, 열번호 부분을 match함수에서 얻어지는 결과값으로 처리한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>테이블의 컬럼역시 절대참조로 걸려있기는 하지만, 이름정의를 통해서 보다 이해하기 쉽게 작성이 가능하다.</p>
 <p class="text-box">=QUERY(Table1,<br>
 &ldquo;Select<br>
 Col&rdquo;&amp;match(&ldquo;이름&rdquo;,Table1_headers,0)&amp;&rdquo;, Col&quot;&amp;match(&ldquo;수량&rdquo;,Table1_headers,0)&amp;&quot;<br>
 where Col&quot;&amp;match(&ldquo;유형&rdquo;,Table1_headers,0)&amp;&quot; = &lsquo;야채&rsquo;<br>
 &ldquo;)</p>
-<br>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01863/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>불행하게도 엑셀에서의 테이블처럼, 헤더만 불러오는 Table[#headers] 옵션이 작동하지 않는다. Table[#all] 옵션만이 존재한다. 다른 방법이 있는데, 내가 못찾은 걸 수도 있다.</p>
-<br>
-<br>
 <h2 id="텍스트-sql-컨트롤">텍스트 sql 컨트롤</h2>
 <p>sql문이 텍스트 안에 들어있다 보니, 텍스트 값을 기재하거나, 참조값을 넣을 때, 짜증을 유발하는 요소가 될 수 있다.</p>
 <p class="text-box">ⓐ 단순 텍스트값 : 작은 따옴표를 사용한다.<br>
@@ -717,8 +699,6 @@ where Col&quot;&amp;match(&ldquo;유형&rdquo;,Table1_headers,0)&amp;&quot; = &l
  <br>
 ⓒ 텍스트가 아닌 참조값(number 형식 등) : 작은 따옴표와 &amp; 를 이용한다.<br>
 &ldquo;Select Col1 where Col2 = &rsquo; &quot; &amp; A1 &amp; &quot; &rsquo; &quot;</p>
-<br>
-<br>
 <p>다행히도 구글 시트에서는 에러각 날것 같으면 빨간줄이 표시되니 천천히 하는 방법이 최선이다.</p>
 <p>끝.</p>
 

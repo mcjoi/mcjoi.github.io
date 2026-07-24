@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01885/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885190" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,35 +664,25 @@
 <p>입력폼에서 정규식을 사용하면 코드를 간결하게 만들수 있다. 고 하지만, 음 귀찮다. 간단한 것부터 해보자.<br>
 먼저 VBE 편집기의 도구 &gt; 참조 &gt; Microsoft VBScript Regular Expressions 를 활성화 시키자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01885/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>정규식 object를 생성해야한다. 여기서는 re1이라는 이름으로 정규식 object를 생성했다.</p>
 <p class="text-box">Set re1 = New RegExp</p>
-<br>
-<br>
 <p>생성된 re1 object 안에 pattern과 옵션을 설정한다.</p>
 <p class="text-box">Pattern : 검색할 문자열의 패턴을 정해주는 필수항목<br>
 IgnoreCase : 검색할 문자열에서 대/소문자 구분 - true인 경우, 무시<br>
 Global : 패턴과 일치하는 전체항목을 찾을지, 첫번째 항목만 찾을지 결정 - true인 경우, 모든 항목 검색<br>
 MultiLine : True인 경우, 줄바꿈을 무시하고 전체 서치</p>
-<br>
-<br>
 <h2 id="패턴-구문">패턴 구문</h2>
 <p>아래와 같이 설정한 경우, 공백 전체를 검색하게 된다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">With</span> re1
 </span></span><span style="display:flex;"><span>    .Pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\s&#34;</span>
 </span></span><span style="display:flex;"><span>    .Global <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span> <span style="color:#66d9ef">with</span>
-</span></span></code></pre></div><br>
-<br>
-<h2 id="test">test</h2>
+</span></span></code></pre></div><h2 id="test">test</h2>
 <p>아래 코드로 공백 여부를 확인해 본다.<br>
 re1을 정규식 Object로 만들면,  아래 메쏘드 중 하나를 실행할 수 있다.</p>
 <p class="text-box">Execute : 패턴을 실행하며 결과값을 객체에 담는다. 하나씩 값을 꺼낼 수 있다.<br>
 Replace : 패턴에 일치하는 값을 검색해서 인수로 입력한 값으로 대체한다.<br>
 Test : 패턴을 찾아서 일치하는 것이 있는지 결과값을 리턴 한다.</p>
-<br>
-<br>
 <p>이를 대상 텍스트에 적용해보면, 아래와 같이 공백 포함 여부를 확인할 수 있다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">regTest1</span>()
 </span></span><span style="display:flex;"><span>
@@ -719,9 +709,7 @@ Test : 패턴을 찾아서 일치하는 것이 있는지 결과값을 리턴 한
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; Log&gt;&gt; my name is Hello World - 공백확인 : yes
-</span></span></span></code></pre></div><br>
-<br>
-<h2 id="replace">replace</h2>
+</span></span></span></code></pre></div><h2 id="replace">replace</h2>
 <p>replace 메쏘드를 통해 패턴과 일치하는 내용을 일괄 변경할 수 있다.<br>
 아래 코드는 특정 텍스트를 replace 하는 예시이다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">rg2</span>()
@@ -773,9 +761,7 @@ Test : 패턴을 찾아서 일치하는 것이 있는지 결과값을 리턴 한
 </span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 010
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 1234
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">&#39; log&gt;&gt; 5678
-</span></span></span></code></pre></div><Br>
-<Br>
-<p>아씨&hellip; 귀찮아..</p>
+</span></span></span></code></pre></div><p>아씨&hellip; 귀찮아..</p>
 <p>여기까지만 하자. 끝.</p>
 
         

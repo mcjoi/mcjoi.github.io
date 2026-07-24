@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01859/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,23 +663,15 @@
           <h2 id="텍스트항목내용-분리하기텍스트-슬라이싱">텍스트(항목/내용) 분리하기(텍스트 슬라이싱)</h2>
 <p>테이블이 아래와 같이, 항목과 내용이 같은 셀에 들어 있을 때,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래처럼 분리하는 방법을 생각해 보자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>위의 예시같은 비교적 정상적으로 분리되어있는 케이스는 많지 않기 때문에, 실제 다양한 방법으로 전처리를 진행해야하지만, 본 글은 예시이므로, 비교적 가장 쉽게 접근할 수 있는 방법을 사용해 본다.</p>
 <p>위의 샘플에서는 왼쪽에서 시작되어, 스페이스가 두번 이상 떨어진 곳 이전까지, 분리를 해주면 된다. 아래 수식으로 간단하게 처리할 수 있다.</p>
 <p class="text-box">대상 : ExifTool Version Number         : 13.12<br>
 =LEFT([대상셀],SEARCH(&quot;  &quot;,[대상셀])-1)<br>
 결과 : ExifTool Version Number</p>
-<br>
-<br>
 <p>left함수는 지정된 값까지 반환하기 때문에, search 함수의 결과값 24에 -1을 넣어서, 여백 하나를 지워줘야한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>샘플에서 확인할 수 있는 규칙은 콜론(:)을 기준으로 스페이스 1개 이후에 값이 시작된다는 것이다.</p>
 <p class="text-box">대상 : ExifTool Version Number         : 13.12<br>
 우선 위와 마찬가지로, search 함수로 기준이 될 콜론의 위치를 찾아준다. 여기서는 33이다.<br>
@@ -687,16 +679,10 @@
  <br>
 콜론 뒤로 스페이스 한개가 있으니, +2를 해서 시작점의 위치를 정정해준다.<br>
 <code>=SEARCH(&quot;:&quot;,[대상셀]) +2</code></p>
-<br>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01859/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>시작점을 알았으니, 중간값을 찾아오는 mid 함수로 발라낼 시작점과 시작점으로부터 몇글자를 가져올지 찾아주면 된다. 그런데, 여러 셀에 해당 함수를 적용해야하니, 끝부분에서 발라낼 글자수가 전부 다르다. 이는 len함수를 통해 전체 글자수를 계산하고 시작점까지의 글자수를 빼주면, 나머지 글자수가 될 것이니 걱정할 것 없다. 여기까지 하면, 아래 수식이 완성되었을 것이다.</p>
 <p class="text-box">=MID([대상셀],SEARCH(&quot;:&quot;,[대상셀])+2,LEN([대상셀])-SEARCH(&quot;:&quot;, [대상셀] )+2)<br>
 결과 : 13.12</p>
-<br>
-<br>
 <p>물론, 원본데이터에 추가적인 변화가 있다면&hellip; 꾹 참고 하거나, 버려버리거나를 빠른 시간 내에 판단을 하는 것이 좋다. 수식을 만들기 전에 열을 복사해서 ctrl + h로 특정한 규칙을 제외(여백이 의미가 없다면 싹다 날려버리거나..)하거나 생성하는 것도 방법이고, 두개 열을 할당해서 two-step으로 작업을 하는것도 방법이다.</p>
 <p>끝.</p>
 

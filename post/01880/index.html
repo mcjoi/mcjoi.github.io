@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01880/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -674,54 +674,31 @@
 <strong>[Column Name]</strong> : Refers to a specific column by its header name.  _replace &ldquo;Column Name&rdquo; with the actual name of the column.<br>
 <strong>[[#This Row], [Column Name]]</strong> : Refers to a specific cell in the current row for the  specified column.<br>
 <strong>[[#Totals], [Column Name]]</strong> : Refers to the total row of a table.  _if a total row is enabled.</p>
-<br>
-<Br>
 <p>자 이제 해보는 거다.<br>
 워크북에서 처음 테이블을 생성하면 기본적으로 주어지는 이름은 Table1 이다. 변경은 가능하지만, 귀찮으니, 두자.</p>
 <p>전체 선택 , 그냥 Table1 이라고만 해도 된다.</p>
 <p class="text-box">Table1[#All]</p>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>테이블 헤더 전체 선택</p>
 <p class="text-box">Table1[#Headers]</p>
-<Br>
-<Br>
 <p>테이블 헤더만 선택, 필드명으로 영역을 한정 지어 줄 수 있다.</p>
 <p class="text-box">Table1[[#Headers],[1월]:[2월]]</p>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>테이블 데이터만 선택, 필드명으로 영역을 한정 지어 줄 수 있다.</p>
 <p class="text-box">Table1[[#Data],[2월]:[4월]]</p>
-<Br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>예시는 여기까지만 하고, Structed references로 손쉽게 영역을 선택할 수 있음을 확인했다. 이제, 이를 이름정의로 등록해보자. 아래와 같이 입력하면, 이름정의가 잘 됨을 알 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>간단하게 배열수식으로 확인을 해보면, 아래와 같다. 과일 조건엘에 대하여, 동일하게 테이블 참조를 사용하였는데, 수식이 좀 길어지니, 마찬가지로, 이름정의를 해두는 것이 나을 것 같다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>자 이제 마지막이다.<br>
 현재 2월~4월로 한정되어 있는 값에 대해서, 내가 원하는 영역을 수시로 바꿔서 확인할 수 있을까?<br>
 정의된 이름 _2월_4월에 대하여, 현재는 아래와 같은 수식이 설정되어있는데, 아래 값에서, 2월과 4월을 참조값으로 변경해주면 될 것이다.</p>
 <p class="text-box">=Table1[[#Data],[2월]:[4월]]</p>
-<Br>
-<br>
 <p>시작월과 종료월에 대한 조건 값을 입력할 수 있는 셀을 만들고, indirect 함수를 사용하여, 아래와 같이 영역을 다시설정해 주면 어떨까?</p>
 <p class="text-box">=indirect(&ldquo;Table1[[#Data],[&rdquo; &amp; Sheet2!$H$11 &amp; &ldquo;]:[&rdquo; &amp; Sheet2!$H$12 &amp; &ldquo;]]&rdquo;)</p>
-<Br>
-<br>
 <p>마찬가지로 복숭아의 2~3월 값이 합산되어 잘 들어가는 것을 확인할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01880/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>두서없이 적었지만, 오늘은 여기까지. 연산속도가 빨라지는지는, 실무에 적용해보고 추가로 적기로 한다.</p>
 <p>위의 글을 적은 이후, 몇 시간이 지나, 몇개의 관리 파일에 적용을 해 보았지만, 속도는 개선되지 않았다. 아니 오히려 느려진듯 한건 내 느낌인가? 서두에 적은 내용 중 두번째는 빼는걸로 하자.</p>
 <p>끝.</p>

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01899/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885190" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -665,8 +665,6 @@
 <p>매크로를 실행하고, 페이지 번호를 넣으면 해당 페이지가 이미지로 전환되도록 설계하였다.<br>
 저장 위치는 PPT 파일이 위치한 곳과 동일하게 저장되도록 했으며, 여러 페이지를 동시에 변환할 때는 그냥 JPG로 내보내기 하는 기능이 있기 때문에 구지 따로 넣지 않았다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01899/01.gif" alt="myimg"></p>
-<br>
-<br>
 <p>개발새발 코드는 아래와 같으며, PPAM 추가 기능 파일로 만들어 놓는다면 가끔 사용하기 편할 것이다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">jpgExport</span>()
 </span></span><span style="display:flex;"><span>
@@ -692,7 +690,6 @@
 <li>ppt파일이 반드시 어딘가에 저장이 된 상태여야 한다는 것이다. 새로 만들기 해서 presentation1.pptx 상태일때는 이미지 저장 경로를 정할수가 없다. 임의로 정하는 예외처리를 할까 하다가&hellip; 큰 의미가 없어서 하지 않는다.</li>
 <li>인풋박스에서 &ldquo;-&ldquo;를 통해서 슬라이드 범위를 지정하도록 할까 했었지만, 그럴바에는 전체를 jpg파일르 export하는 기본 기능을 사용하는 것이 낫다.</li>
 </ul>
-<br>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">jpgExport</span>()
 </span></span><span style="display:flex;"><span>    filepath <span style="color:#f92672">=</span> ActivePresentation.Path
 </span></span><span style="display:flex;"><span>    slidenum <span style="color:#f92672">=</span> InputBox(<span style="color:#e6db74">&#34;Input PageNumber&#34;</span>)
@@ -722,9 +719,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    MsgBox (<span style="color:#e6db74">&#34;export complete&#34;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>심심해서 만들었는데, 나름 쓸모가 많은 듯하여 기분이 좋다.</p>
+</span></span></code></pre></div><p>심심해서 만들었는데, 나름 쓸모가 많은 듯하여 기분이 좋다.</p>
 <p>끝.</p>
 
         

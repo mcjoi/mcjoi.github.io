@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01853/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,15 +663,11 @@
           <h2 id="sheets로-이미지-url의-exif-정보-얻어내기">sheets로 이미지 URL의 EXIF 정보 얻어내기</h2>
 <p>아래 그림처럼 플러터에서 이미지를 띄워주고, 하단에 EXIF 정보를 표기하고 싶다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01853/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>DB를 Sheets에 저장했다. 즉, 이미지는 별도의 웹에 올려져 있고, 이미지 경로만 있는 셈이다.</p>
 <p>EXIF 정보를 보기하는 방법은 두가지로, 플러터에서 이미지를 호출, bytecode로 변환, EXIF 정보추출하는 방법과 Sheets에서 미리 EXIF 정보를 추출 각 컬럼에 정보를 기재하는 방식이다.</p>
 <p>플러터에서 추출하는 첫번째 방법은 이미지를 호출하는 것과 맞물려서, 퍼포먼스에 악영향을 줄 것이기 때문에 배제가 되었다. 두번째 방법은 Sheets의 appscript를 활용하여, EXIF 정보를 받아오는 방식으로 사전에 한번만 해놓으면 DB에 값이 들어가기 때문에, 플러터 앱 구동 시점에 무리가 전혀 없을 것이다.</p>
 <p>정리가 된다면 Sheets 상의 DB테이블은 아래 이미지처럼 될 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01853/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>그럼, appscript를 고민할 차례. 구글링을 통해 개발새발 노가다로 짜깁기를 한 결과는 아래와 같다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getExifDataFromUrl</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
@@ -709,9 +705,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">cameraModel</span>, <span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">lens</span>, <span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">aperture</span>];
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><br>
-<br>
-<p>생각보다, 잘 되서 석연치 않기는 하지만, 좀 오래 걸리긴 하는데, 음.. 뭘 걷어내야할지는 잘 모르겠다.</p>
+</span></span></code></pre></div><p>생각보다, 잘 되서 석연치 않기는 하지만, 좀 오래 걸리긴 하는데, 음.. 뭘 걷어내야할지는 잘 모르겠다.</p>
 <p>끝.</p>
 
         

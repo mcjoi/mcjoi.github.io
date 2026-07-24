@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01892/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885190" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,8 +664,6 @@
 <p class="text-box">sub 내부 dim 변수(지역변수) : 범위 - 동일 sub<br>
 sub 외부 dim 변수(모듈변수) : 범위 - 동일 module<br>
 sub 외부 public 변수(전역변수) : 범위 - 동일 file</p>
-<br>
-<br>
 <h2 id="sub-function">sub, function</h2>
 <p>아무것도 붙이지 않으면, public으로 동작하는데, private로 한정지어 줄 수 있다.</p>
 <p><code>0번 모듈에 변수 선언</code></p>
@@ -673,9 +671,7 @@ sub 외부 public 변수(전역변수) : 범위 - 동일 file</p>
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> num1 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> num2 <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span>
-</span></span></code></pre></div><br>
-<br>
-<p><code>1번 모듈에서 변수값 입력</code></p>
+</span></span></code></pre></div><p><code>1번 모듈에서 변수값 입력</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;module1
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Option</span> Explicit
@@ -687,9 +683,7 @@ sub 외부 public 변수(전역변수) : 범위 - 동일 file</p>
 </span></span><span style="display:flex;"><span>MsgBox num1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; / &#34;</span> <span style="color:#f92672">&amp;</span> num2 <span style="color:#75715e">&#39;23 / 45
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><Br>
-<Br>
-<p>2번 모듈에서<br>
+</span></span></code></pre></div><p>2번 모듈에서<br>
 1번 모듈 호출 가능(private 붙이면 불가)<br>
 전역 변수 호출 가능(private 붙이면 불가)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;module2
@@ -703,9 +697,7 @@ sub 외부 public 변수(전역변수) : 범위 - 동일 file</p>
 </span></span></span><span style="display:flex;"><span>    MsgBox num1 <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34; / &#34;</span> <span style="color:#f92672">&amp;</span> num2  <span style="color:#75715e">&#39;23 / 45
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<Br>
-<p>비개발자로서, 적합한 용어를 사용하기 참 애매하다.</p>
+</span></span></code></pre></div><p>비개발자로서, 적합한 용어를 사용하기 참 애매하다.</p>
 <p>끝.</p>
 
         

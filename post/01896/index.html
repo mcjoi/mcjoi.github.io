@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01896/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882976" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885190" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -662,60 +662,35 @@
         
           <h2 id="구글시트---웹페이지-내용-가져오기importxml-importhtml">구글시트 - 웹페이지 내용 가져오기(IMPORTXML, IMPORTHTML)</h2>
 <p>Google Sheets는 온라인에서 구동되므로, 웹에서 데이터를 참조하는 부분이 가능하다. 설치 프로그램이라고 해서 안될 건 없지만.. 대표적으로 IMPORTXML, IMPORTHTML 등의 함수가 존재하고, 사용법은 아래와 같다.</p>
-<br>
-<Br>
 <h2 id="importxml-예시--롯데마트-휴점일-확인">IMPORTXML 예시 : 롯데마트 휴점일 확인</h2>
 <p>롯데마트 휴점일 페이지는 테이블로 되어있으므로, 알아내야하는 것은 두가지,</p>
 <ol class="text-box">
 <li>테이블의 페이지가 전환될떄 파라미터가 주소에 반영되는 방식</li>
 <li>테이블에 따른 점포명과 휴점일의 열/행에 대한 HTML 구성</li>
 </ol>
-<Br>
-<br>
 <p>테이블 페이지를 하나씩 넘겨보면, 단순히 페이지 번호를 파라미터로 넘겨주는 방식임을 알 수 있다. 이번에는 14페이지까지 존재하는 것을 확인 할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>테이블의 점포명에서 3번째 제주점 텍스트 위에서 크롬 기준 마우스 우측버튼 &gt; 검사를 눌러주면, 코드창이 뜬다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>제주점 위에서 마우스 우측버튼 &gt; 복사 &gt; XPath 복사를 눌러 주소를 복사해준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>복사해둔 XPath의 구조를 보면 아래와 같고, 아무리 html을 모르는 내가 봐도, 몇개를 복사해보면, 아래 빨간색을 칠한 tr[3]이 제주점이 있는 3번째 행을 의미한다는 걸 알 수 있다. 그렇다면 뒤에 있는 td[2]는 열번호 일 것이고, (3,2) 위치에 해당 텍스트가 있는 셈이다.</p>
 <p class="text-box">/html/body/section/div[2]/div[2]/div[2]/div/div/div[2]/table/tbody/tr[3]/td[2]</p>
-<br>
-<br>
 <p>마찬가지로, 휴점일을 확인해보면 아래와 같고, 예상대로 파란색 td[2] 값이 [4]로 바뀐걸 알 수 있다. 그렇다면 휴점일의 위치는 (3,4)가 되는 것이다.</p>
 <p class="text-box">/html/body/section/div[2]/div[2]/div[2]/div/div/div[2]/table/tbody/tr[3]/td[4]/div/div/span[2]</p>
-<br>
-<br>
 <p>자 이제, 변경되는 행/열 번호로 점포명과 휴점일 테이블을 만들어보면 아래와 같다. IMPORTXML 함수안에 게시판 순번을 1부터 순차적으로 들어가게 하고, 행번호를 1부터 10까지 넣도록 했다.(해당 테이블은 한 페이지에 10행까지 존재한다.)</p>
 <p class="text-box">=IMPORTXML(페이지주소, 원하는값의PATH)</p>
-<br>
-<br>
 <p>점포명과 휴점일 두 가지 값을 묶어서, 한개 셀에 표기되도록 했다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>이런식으로 10X14 짜리 테이블을 만드니, 느리다&hellip;.. 엄청&hellip; 느리다&hellip; 무슨 기준인지 모르겠지만, 계속 리프레시가 된다.<br>
 대충 해석해보면, 함수를 줄이라고 나온다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/05.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>눈물의 삼성주식 확인용으로나 사용해야겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/06.jpg" alt="myimg"></p>
-<br>
-<br>
 <h2 id="importhtml-예시--롯데마트-휴점일-확인">IMPORTHTML 예시 : 롯데마트 휴점일 확인</h2>
 <p>위에서 확보한 주소를 바탕으로 게시판 1페이지에서 해당 테이블을 모조리 긁어올 수 있다. 거두절미하고 위의 방법 대비해서 엄청난 속도를 보여준다. 아래와 같은 간단한 수식으로 가능하며, 몇 번째 테이블인지 몇번 찍어보면 나온다 ㅋㅋ</p>
 <p class="text-box">=IMPORTHTML(페이지주소, &ldquo;TABLE&rdquo; 또는 &ldquo;LIST&rdquo;, 테이블 순번)</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01896/07.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>정확하지는 않으나, 검색을 날린 결과 페이지나 업데이트가 계속 되는 값에 대해서는 잘 적용이 안되는 듯하다.<br>
 자세히 알아보기 귀찮으므로 끝.</p>
 <p>끝.</p>

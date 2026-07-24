@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01857/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784882975" />
+    <link rel="stylesheet" href="/css/main.css?v=1784885189" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -685,12 +685,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">auto_close</span>()
 </span></span><span style="display:flex;"><span>    Application.CommandBars(<span style="color:#e6db74">&#34;tools&#34;</span>).Reset
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>이와 같이 실행하면, 아래와 같이 리본메뉴가 생성된다. 사실 너무 간편하다. 메뉴를 늘리는 작업도 크게 어렵지 않다.</p>
+</span></span></code></pre></div><p>이와 같이 실행하면, 아래와 같이 리본메뉴가 생성된다. 사실 너무 간편하다. 메뉴를 늘리는 작업도 크게 어렵지 않다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>그러던 중 XML을 사용해서, 리본메뉴를 생성하는 방법을 보았다. xml로 customUI를 구성했을 때의 장점은 위의 단점들을 상쇄시킨다. XML 파일의 기본 구성은 다음과 같다. 이는 오피스2019 기준이며, 아래의 모든 설명도 마찬가지이다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#a6e22e">&lt;customUI xmlns=&#34;http://schemas.microsoft.com/office/2009/07/customui&#34; &gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>ribbon<span style="color:#f92672">&gt;</span>
@@ -706,38 +702,23 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>tabs<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>ribbon<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;/customUI&gt;</span>
-</span></span></code></pre></div><br>
-<br>
-<p>이를 통하면 그룹을 나눠관리할수가 있다. 아이콘도 faceId에서 imageMso를 사용하게 된다.</p>
+</span></span></code></pre></div><p>이를 통하면 그룹을 나눠관리할수가 있다. 아이콘도 faceId에서 imageMso를 사용하게 된다.</p>
 <a class="btn-link" href="https://bert-toolkit.com/imagemso-list.html" target="_blank" rel="noopener noreferrer">imageMso</a>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>이를 구현하는 방법은 두가지가 있다.</p>
 <p>매크로를 사용해야 하므로 pptm 파일을 생성한 뒤, 확장자를 zip 파일로 변경해준다. 해당 압축 파일을 풀면 아래와 같은 폴더를 볼 수 있을 것이다. 여기에 <code>customUI</code> 폴더를 생성해 준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>그 안에 xml 파일을 customUI14.xml로 저장한다. 이 때, xml 파일에 선언된 프로시저가 pptm의 vba에 선언이 되어있는지 사전에 미리 확인을 해야한다. 프로시저가 없다면 리본메뉴는 에러와 함께 보이지 않게 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>다시 폴더를 zip 파일로 압축하고, 확장자를 원래대로 pptm으로 강제로 바꿔준다. pptm 파일을 실행해보자. 설정한데로 리본메뉴가 활성화 된 것을 확인할 수 있다.<br>
 이제 ppam 파일로 저장해서, 자동으로 실행되도록 설정해주면 끝이다.</p>
 <p>여기서는 myaddin 메뉴가 xml로 생성한 customUI이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>수정할때마다 압축을 풀었다 했다 과정이 귀찮다면, 오픈소스 툴(Office RibbonX Editor)을 사용할 수 있다. 새로운 건 아니고, 아는사람은 아는 툴인듯하다.</p>
 <a class="btn-link" href="https://github.com/fernandreu/office-ribbonx-editor" target="_blank" rel="noopener noreferrer">office-ribbonx-editor</a>
-<br>
-<br>
 <p>아래 그림에서처럼, 코드를 작성하고 저장하면, xml 파일이 저장된다.<br>
 이외에 xml코드가 제대로 들어갔는지 검증하는 기능이나, 사용자 icon을 포함해주는 기능이라던지, 유용한 기능은 많지만, 귀찮은 관계로 다 사용해보지는 못했다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01857/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>꽤나 나이스한 프로그램이지만, 반드시 설치가 진행되어야 하므로 살짝 부담스럽긴 하다.</p>
 <p>사실 처음 적은 vba로 구성한 리본메뉴의 단점들이 크게 불편하지는 않았지만, 그냥 있길래 한번 해봤다. 취향에 따라 선택하면 될 것 같으며, 나는 그냥 vba로 구성해서 사용할 것 같은 느낌이다.</p>
 <p>끝.</p>
