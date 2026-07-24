@@ -42,6 +42,7 @@
   --shadow: rgba(0, 0, 0, 0.35);
   --shadow-strong: rgba(0, 0, 0, 0.45);
   --heading-accent: #fbcfd0;
+  --post-h3-accent: #ffb45c;
   --chip-bg: color-mix(in srgb, var(--heading-accent) 14%, transparent);
   --chip-text: var(--heading-accent);
   --chip-border: color-mix(in srgb, var(--heading-accent) 42%, transparent);
@@ -1408,6 +1409,7 @@ html.gallery-unlocked .gallery-gate {
 
 .post-content h3 {
   font-size: 20px;
+  color: var(--post-h3-accent);
 }
 
 .post-content h1,
@@ -2042,6 +2044,10 @@ thead th,
 .post-content h2,
 .post-content h3 {
   color: var(--heading-accent);
+}
+
+.post-content h3 {
+  color: var(--post-h3-accent);
 }
 
 .post-content h1::before,
