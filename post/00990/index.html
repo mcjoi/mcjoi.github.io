@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/00990/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876544" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879111" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,21 +664,15 @@
 <p>엑셀용량이 비정상적으로 커진 파일들을 의외로 자주 보게된다. 몇가지 이유가 있겠지만 일반화 시키기는 어렵다.<br>
 일반적인 상황에서는 아래 글에서 도움을 받을 수 있다.</p>
 <a class="btn-link" href="https://www.oppadu.com/%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%ED%81%AC%EA%B8%B0-%EC%A4%84%EC%9D%B4%EA%B8%B0" target="_blank" rel="noopener noreferrer">엑셀 파일 크기 줄이기, 모든 해결방법 총정리 - 오빠두 엑셀</a>
-<br>
-<br>
 <p>불행히도 위의 경우가 모든 것이 아닌데, 용량이 늘어나서 로딩 속도가 길어지는 것도 문제지만, 관리상 짜증나는 경우는 다음과 같다.</p>
 <p class="text-box">✶ cell style이 몇 백개 되는 경우<br>
 ✶ 이름관리자에서 선언된 이름이 몇 백개 되는 경우<br>
 ✶ 원치 않는 사용영역(UsedRange)이 설정된 경우</p>
-<br>
-<br>
 <h2 id="execution-1">execution-1</h2>
 <p>이 중 &lsquo;원치 않는 사용영역(usedRange)이 설정된 경우&rsquo;는 그 무엇보다 짜증나는 상황이고 용량도 어마무시하게 늘어난다.</p>
 <p>대부분 엑셀을 잘하는 친구들이 <code>ctrl/shift</code> 와 방향키로 손이 안보이게 움직이다가 맨 마지막셀 어딘가에 스페이스바나 글자 하나를 입력한 경우라 할 수 있다.</p>
 <p>서너개의 시트로 구성된 워크북이라면, 일일이 <code>ctrl + end</code> 키로 <code>usedrange</code> 를 체크하면 되겠지만, 수십개의 시트가 있다면 그 또한 쉬운 일이 아니다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00990/01.png" alt="img"></p>
-<br>
-<br>
 <p>과거 USEDRANGE의 마지막 셀주소를 찾는 글을 쓴 적이 있는데, 아주 약간만 변형해서, 사용해 본다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00990/02.png" alt="img"></p>
 <p><code>sample.bas</code></p>
@@ -700,14 +694,10 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> x
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>위 코드를 실행하면 왼쪽부터 SHEET INDEX, 마지막 셀의 ROW(행), COLUMN(열), SHEETNAME 순서로 나온다.<br>
+</span></span></code></pre></div><p>위 코드를 실행하면 왼쪽부터 SHEET INDEX, 마지막 셀의 ROW(행), COLUMN(열), SHEETNAME 순서로 나온다.<br>
 귀찮아서, HEAD는 안붙였다.</p>
 <p>아래 예시에서 보면, Sheet1번의 마지막 행이 이상하다는 걸 알수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00990/03.png" alt="img"></p>
-<br>
-<br>
 <h2 id="execution-2">execution-2</h2>
 <p>하지만, 위의 방법이 먹히지 않는 경우가 있는데, 도무지 이유도 알 수 없고, 심지어 모든 값을 다 지워도, 용량이 줄지 않는 때가 있더란 말이다.<br>
 그래도, 끝없이 구글링을 한 결과, 먹히는 VBA를 찾아냈으니, 모든 케이스가 먹히지 않는다면, 시도해 보길 바란다. 링크가 깨져서 직접 코드를 올린다. 단, 그 어떤 검증도 되지 않았으니, 심각한 위기 상황에만 사용을 고려해보길 바란다. 🤪</p>
@@ -804,9 +794,7 @@
 </span></span><span style="display:flex;"><span>    Application.DisplayAlerts <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 </span></span><span style="display:flex;"><span>     
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>되긴 되더라.</p>
+</span></span></code></pre></div><p>되긴 되더라.</p>
 <p>끝.</p>
 
         

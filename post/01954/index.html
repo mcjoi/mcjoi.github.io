@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01954/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,8 +663,6 @@
           <h2 id="엑셀vba에서-영역선택-이름관리자를-vba에서-사용">엑셀VBA에서 영역선택, 이름관리자를 VBA에서 사용</h2>
 <p>1부터 16까지 16행의 값이 들어가 있다고 하자. VBA에서 해당 영역을 지정하는 방식을 알아본다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>알고 있는 방법은 크게 3가지로,</p>
 <ul class="text-box">
 <li>range로 영역을 지정하는 방법,</li>
@@ -673,27 +671,16 @@
 </ul>
 <p>대충 영역 내 셀 개수를 세는 프로시저를 작성해보면 아래와 같고, 결과는 모두 16이 나올 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>이때, 셀이 하나 추가가 된다면, 어떻게 될까? 셀이 하나 추가되어도 기존 영역을 물고 있다면, 곤란하다고 할 수 있다.<br>
 3가지 방법 중 동적으로 작동하는 방식은 뭘까?</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>약간 코드를 수정하고 실행해 보자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>영역을 세팅해 놓는 range는 당연히, 그대로 16이고, <code>currentRegion</code> 이나, <code>usedrange</code> 는 값이 17로 변한 걸 알 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>이름 정의를 사용한 것도 값이 17로 바뀌었지만, 당연히 워크시트의 이름관리자에서 영역을 수정해주었기 때문에 가능한 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/06.png" alt="myimg"></p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01954/07.png" alt="myimg"></p>
-<br>
-<br>
 <p>아무래도 이름정의를 통하면, VBA와 워크시트가 따로 노는 일이 줄어들 것 같은 느낌적인 느낌이다.</p>
 <p>끝.</p>
 

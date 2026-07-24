@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/00978/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876544" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879111" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -673,37 +673,24 @@
 </div>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","description":"TEXT 함수로 숫자에 천단위 콤마와 소수 자릿수 서식을 적용하는 방법을 예시로 정리합니다. 표시형식 문자열 팁 포함.","embedUrl":"https://www.youtube.com/embed/-dUDUGryHuI","name":"[남들다아는 엑셀] 셀서식(format) 설정해서 워드처럼 사용하기","thumbnailUrl":["https://i.ytimg.com/vi/-dUDUGryHuI/hqdefault.jpg"],"uploadDate":"2016-11-29T00:00:00+00:00","url":"https://www.youtube.com/watch?v=-dUDUGryHuI"}</script>
 
-<br>
-<br>
 <h2 id="텍스트-중간-숫자에-천단위-구분-컴마-넣기">텍스트 중간 숫자에 천단위 구분 컴마 넣기</h2>
 <p>나는 엑셀을 표 그리기 쉬운 워드프로세서로 많이 사용하고 있다.<br>
 워드에서 가장 짜증나는 부분은 숫자를 칠때 오타가 발생하는 점이라고 할 수 있는데, 적어도 엑셀에서 수식오류는 있어도 계산 오류는 없을 것이기 때문이다.</p>
 <p>아래처럼 텍스트 중간에 숫자를 넣는다고 해보자, <code>&amp;</code> 로 연결할 경우, 아래처럼 숫자에 서식이 들어가질 않는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00978/1.jpg" alt="img"></p>
-<br>
-<Br>
 <p><code>text</code> 함수를 통해 표시형식을 간이로 지정해 줄 수 있다.</p>
 <p class="text-box">=text(텍스트,&ldquo;표시형식&rdquo;) : 쌍 따옴표를 잊지말아야 한다.</p>
-<br>
 <p>표시형식은 셀 표시형식의 사용자 지정 옵션과 거의 동일하다.<br>
 난 천단위 컴마만 찍을 예정이므로 <code>&quot;#,###&quot;</code> 로 설정했다.<br>
 아래처럼 설정 됐다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00978/2.jpg" alt="img"></p>
-<br>
-<Br>
 <p>소숫점 자리를 표기하려면, <code>&quot;#,##0.0&quot;</code> 으로 넣자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00978/3.jpg" alt="img"></p>
-<br>
-<Br>
 <hr>
-<br>
-<Br>
 <h2 id="엑셀-날짜-데이터-참조시-날짜-서식-유지하기text함수">엑셀 날짜 데이터 참조시 날짜 서식 유지하기(text함수)</h2>
 <p>날짜는 참 귀찮은 형식이다. 엑셀에서도 그렇고, 다른 프로그램에서도 마찬가지 이다.</p>
 <p>그럼에도 반드시 써야하기 땜시, 알아야 하겠지.<br>
 우릴 귀찮게 하는 근본원인은, 날짜 데이터는 실제 데이터와 보여지는 데이터가 다른데서 부터 출발하겠다.</p>
-<br>
-<br>
 <p>예를 들어 2017년9월14일은 실제로는 42992이다.<br>
 아래 표를 보자.<br>
 날짜형식으로 2017-09-14만 적는다면 아무 문제가 없다. 물론 포맷도 자유롭게 바꿀수 있다.</p>
@@ -712,8 +699,6 @@
 <p>그래서 text함수를 쓴다.<br>
 <code>=text(참조셀, &quot;문자포맷&quot;)</code></p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00978/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>워드 대용으로 엑셀을 쓰는 유저에겐 꼭 필요한 함수다.<br>
 적어도 나는 그랬다.</p>
 <p>끝.</p>

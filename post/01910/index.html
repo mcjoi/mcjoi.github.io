@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01910/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,32 +663,20 @@
           <h2 id="이름정의로-정의된-이름-확인하기">이름정의로 정의된 이름 확인하기</h2>
 <p>이름정의 기능은 잘쓰면 아주 유용하지만, 어설프게 사용한다면, 꼬여서 상당히 골치가 아파질 수 있는 기능이다. 정의된 이름 관련 리본 메뉴는 수식 탭에서 확인할 수 있다. 직관적으로 찾기 좀 애매한 위치에 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <h2 id="정의된-이름-관리">정의된 이름 관리</h2>
 <p>정의된 이름은 &ldquo;수식에서 사용&rdquo; 버튼을 통해 수식안에 넣을 수 있고, &ldquo;이름관리자&quot;에서 편집 혹은 삭제가 가능하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>또는, 주소창에서 등록된 이름을 확인, 이동할 수 있고,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>F5키를 눌러 해당 영역으로 이동할 수도 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/04.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="정의된-이름-좀-편하게-확인-가능">정의된 이름 좀 편하게 확인 가능?</h2>
 <p>그럼에도 이름이 여러개 만들어지다 보면, 프로그래밍하다가 변수명이 뭐였는지 잘 기억이 안나는 것처럼, 꼬이게 된다.<br>
 그래서 아래와 같이 등록된 이름을 확인할 수 있는 창을 만들어 보았다.<br>
 정의된 이름 리스트가 나오고, 해당 이름의 정의된 위치가 나온다. 더블 클릭하면 해당 영역으로 이동할 수 있게 해 주었다. 물론, 영역이 변경되거나, 신규로 등록된 이름의 경우, 해당 창을 껏다 켜줘야 한다. 리프레시 버튼을 추가해주는 것이 좋을 거 같기는 하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01910/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>편하게 이름을 확인하고, 틀어진 셀위치가 없는지 확인해보자.</p>
 <p class="text-box">딴건 모르겠고, 이번에는 Range의 Parent 개념을 이해할 필요가 있다. 정의된 이름의 Array(or List?)인 workbook.Names(idx)를 호출할때, RefersToRange 메소드를 사용하는데, 이 때, 해당 Range의 Parent, 즉 시트를 먼저 Select 해주고 난 다음, Range를 Activate해줘야 한다. 그렇지 않으면, 에러를 만나게 된다. 쓸데없이 이것 때문에 시간을 좀 허비했다.</p>
-<br>
-<br>
 <p>끝.</p>
 
         

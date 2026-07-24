@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/00975/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876544" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879111" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -670,15 +670,12 @@
 <li>셀에 노란색을 칠하고 싶다.</li>
 <li>노란색을 칠하고 싶은 셀은 주소가 항상 일정하다. (C2라고 가정하자.)</li>
 </ul>
-<br>
 <p>아래 그림처럼 녹화를 하면 간단하다.<br>
 상대참조 버튼은 누르지 않은 상태이다.<br>
 잘보면, 녹화를 시작하고 나서, 왼쪽으로 두칸 움직인 다음 노란색을 칠했다.</p>
 <p>하지만 매크로를 실행하면, 왼쪽으로 두칸 움직인 내용은 무시된다.<br>
 즉 어느 셀에서 클릭하든 C2 셀로 이동하게 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00975/1.gif" alt="img"></p>
-<br>
-<br>
 <p>그럼 상대 참조를 누르고 녹화를 해보자.<br>
 내가 하고자 하는 조건은 아래와 같다고 하자.</p>
 <ul class="text-box">
@@ -686,17 +683,13 @@
 <li>내가 위치한 열에서 왼쪽으로 두칸 옮긴 셀에노란색을 칠하고 싶다.</li>
 <li>나의 위치가 항상 변하고, 색이 칠해질 셀의 주소도 항상 변한다.</li>
 </ul>
-<br>
 <p>방법은 매우 간단하다.<br>
 상대참조로 기록 버튼을 누르고 동일하게 녹화를 진행하면 된다.</p>
 <ul class="text-box">
 <li>편의상 나는 이름도 바꾸지 않고, 단축키도 설정하지 않았으나, 실제 사용에서는 다른 기능도 활용하시길 바란다.</li>
 <li>매크로를 실행하는 단축키는 ALT + F8 이다. 외워두면 편하다.</li>
 </ul>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00975/2.gif" alt="img"></p>
-<br>
-<br>
 <p>두개 매크로 사이에는 어떤 차이가 있을까.<br>
 코드를 살펴보자. 아래 그림을 한번 보자.</p>
 <p>매크로1이 절대참조, 매크로2가 상대참조이다.<br>
@@ -708,8 +701,6 @@
 그리고, OFFSET 명령으로 왼쪽으로 두칸을 이동한다.<br>
 나머지 색을 지정하는 명령은 동일하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00975/1.jpg" alt="img"></p>
-<Br>
-<Br>
 <p>회사에서 쓰는 많은 반복적인 업무는 매크로를 통해 편하게 할 수 있다.<br>
 단, 매번 던져지는 자료의 형태가다르다면, 그냥 노가다 하는게 편할 수 있다.</p>
 <p>끝.</p>

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01983/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -664,8 +664,6 @@
 <p>마지막 셀을 찾는 작업은 항상 중요한 것 같다. <code>CURRENTREGION</code>과 <code>USEDRANGE</code>, <code>END</code> 정도면 충분할까?<br>
 시트에 사용된 마지막 셀을 찾아봤다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/01.gif" alt="myimg"></p>
-<br>
-<br>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LastCellNum</span>()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> sht <span style="color:#f92672">As</span> Worksheet
@@ -680,23 +678,15 @@
 </span></span><span style="display:flex;"><span>MsgBox <span style="color:#e6db74">&#34;마지막셀은 &#34;</span> <span style="color:#f92672">&amp;</span> LastRow <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째 행, &#34;</span> <span style="color:#f92672">&amp;</span> LastColumn <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;번째열 입니다.&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<h2 id="range-문제있는-시트-찾기">RANGE 문제있는 시트 찾기</h2>
+</span></span></code></pre></div><h2 id="range-문제있는-시트-찾기">RANGE 문제있는 시트 찾기</h2>
 <p>엑셀 파일의 용량이 커지는 이유는 많겠지만, USEDRANGE가 잘못 설정되는 경우가 많다. 한마디로 말하면, CTRL이나 SHIFT 단축키 치다가 실수로 10만번째 행이 사용중인 영역으로 인식되는 경우라 하겠다.</p>
 <p>서너개의 시트로 구성된 파일이라면, 일일이 CTRL+END키로 USEDRANGE를 체크하면 되겠지만, 워크시트가 스무개가 넘어가면, 그 또한 일이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/001.png" alt="myimg"></p>
-<br>
-<br>
 <p>과거 USEDRANGE의 마지막 셀주소를 찾는 글을 쓴 적이 있는데, 아주 약간만 변형해서, 사용해 본다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/002.png" alt="myimg"></p>
-<br>
-<br>
 <p>왼쪽부터 SHEET INDEX, 마지막 셀의 ROW(행), COLUMN(열), SHEETNAME 순서로 나온다. 귀찮아서, HEAD는 안붙였다.<br>
 아래 예시에서 보면, Sheet1번의 마지막 행이 이상하다는 걸 알수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01983/003.png" alt="myimg"></p>
-<br>
-<br>
 <p>물론, 용량이 커지는 이유가 이것 때문이라고 할수는 없지만, 가능성은 열어두자.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">LastCellNumBySheet</span>()
 </span></span><span style="display:flex;"><span>

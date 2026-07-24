@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01994/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -662,13 +662,9 @@
         
           <h2 id="도형-잠그기">도형 잠그기</h2>
 <p>오피스365에는 도형 잠그기 기능이 있어 배경 등으로 사용된 박스, 이미지가 선택되지 않도록 할 수 있다. 애석하게도 오피스2019버전에는 도형 잠그기 기능이 없는데.. 우회하는 방법으로 비슷하게 사용은 할 수 있다.</p>
-<br>
-<br>
 <h2 id="vba코드">VBA코드</h2>
 <p>VBA사용 코드를 모르는 경우, 아래 글을 참고한다.</p>
 <a class="btn-link" href="/post/01995/" target="_blank" rel="noopener noreferrer">VBA사용법</a>
-<br>
-<br>
 <p>vba에 표준 모듈 2개와 클래스 모듈 1개를 만든다. 클래스 모듈의 이름을 <code>clsPPTEvent</code> 로 한다.</p>
 <p><code>module #1</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#75715e">&#39;proc module
@@ -747,18 +743,12 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span> shp
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>실행 방식은<br>
+</span></span></code></pre></div><p>실행 방식은<br>
 → 1번 표준 모듈의 <code>MarkSelectedShapesAsLocked</code> 로 선택한 도형에 마킹을 한다.<br>
 → 2번 표준 모듈의 <code>StartLockMonitor</code> 로 모니터링을 시작한다.</p>
-<br>
-<br>
 <p>해제를 원한다면,<br>
 → 1번 표준모듈의 <code>UnlockLockedShapesOnCurrentSlide</code> 또는 <code>UnlockAllLockedShapes</code> 를 사용한다.<br>
 → 선택된 슬라이드만 해제할지 전체를 해제할지에 따라 나뉜다.</p>
-<br>
-<br>
 <p>작동은 하지만, 사용하려면, 적어도 선택/시작/해제 버튼이 3개나 필요하므로..<br>
 그냥 둔다.</p>
 <p>끝.</p>

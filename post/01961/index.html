@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01961/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -665,20 +665,12 @@
 문제는 당연히(?) 없는 함수도 있다는 점인데, 그냥 생각해보면 VBA에서 셀에다가 그냥 수식 텍스트가 입력되게 하면 될 것 같다&hellip;. 확신은 없지만..</p>
 <p>우선, worksheetfuction을 써보자.</p>
 <p class="text-box">Cells(1, 2).Value = Application.WorksheetFunction.Sum(1, 2)</p>
-<Br>
-<Br>
 <p>요 식은 이런 텍스트를 쳤을때와 동일한 효과일 것이다.</p>
 <p class="text-box">=sum(1,2)</p>
-<Br>
-<Br>
 <p>이런 형태의 수식을 적어보는건 어떨까..?</p>
 <p class="text-box">=HYPERLINK(&quot;#&rsquo;&quot;&amp;&ldquo;Sheet2&rdquo;&amp;&quot;&rsquo;!A1&quot;,&ldquo;GO&rdquo;)</p>
-<br>
-<br>
 <p>특수문자는 쌍따옴표 안에 넣어 텍스트로 처리하거나, (=, &amp;, ! 등) chr 함수로 사용할 수 있다. char함수는 엑셀함수에서 아스키코드를 반환하게 되는데, 마찬가지로 vba에서는 chr로 기재를 해줘야 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/01.jpg" alt="myimg"></p>
-<Br>
-<Br>
 <p>수식이 길어지면 헤깔리기 때문에, 나의 경우에는 chr함수를 사용하는 쪽으로 작성했다.<br>
 예를 들어, 첫 서두, <code>=HYPERLINK(&quot;</code> 까지를</p>
 <p><code>&quot;=HYPERLINK(&quot;&quot;&quot;</code> 이렇게 써도 되고,<br>
@@ -687,12 +679,8 @@
 <p class="text-box">Dim txt As String<br>
 txt = Cells(2, 4).Value</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>한줄로 쓰면 이런식이 되겠다.</p>
 <p class="text-box">Chr(61) &amp; &ldquo;HYPERLINK(&rdquo;&quot;&quot; &amp; Chr(35) &amp; &ldquo;&rsquo;&rdquo;&quot;&quot; &amp; Chr(38) &amp; &quot;&quot;&quot;&quot; &amp; txt &amp; &quot;&quot;&quot;&quot; &amp; Chr(38) &amp; &ldquo;&rdquo;&quot;&rsquo;!A1&quot;&quot;,&ldquo;&ldquo;GO&rdquo;&rdquo;)&quot;</p>
-<Br>
-<br>
 <p>원래 쌍따옴표때문에, 복잡한 수식인데, 더 복잡해 졌다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">test</span>()
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> txt <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>
@@ -703,44 +691,28 @@ txt = Cells(2, 4).Value</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;=HYPERLINK(&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(35) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#39;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> txt <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#34;</span> <span style="color:#f92672">&amp;</span> Chr(38) <span style="color:#f92672">&amp;</span> <span style="color:#e6db74">&#34;&#34;&#34;&#39;!A1&#34;&#34;,&#34;&#34;GO&#34;&#34;)&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><Br>
-<br>
-<p>실행해보면, 잘 실행이 되고, 하이퍼링크 기능도 잘 된다.</p>
+</span></span></code></pre></div><p>실행해보면, 잘 실행이 되고, 하이퍼링크 기능도 잘 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <h2 id="엑셀함수를-텍스트로-넣기">엑셀함수를 텍스트로 넣기</h2>
 <p>엑셀VBA의 사용자 함수는 다른 사람과 공유하기가 어렵다. 이번에 하고자 하는 것은 반복 사용되는 엑셀함수를 매크로로 만들어 두는 것이다.</p>
 <p>말이 좀 애매한데&hellip; 아래와 같은 표가 있다고 하자</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>예를 들어 올해(21년) 실적과 전년(20년) 실적의 성장율을 구한다고 하자.<br>
 시트에서 함수를 쓴다면, 아래와 같이 함수를 작성해야 한다.</p>
 <p class="text-box">=(올해실적 - 전년실적) / 전년실적</p>
-<br>
-<br>
 <p>괄호치기도 그렇고, 전년실적을 두번 찍어주는 것이 귀찮다.</p>
 <p>아래 기능이 되었으면 한다.</p>
 <ul class="text-box">
 <li>매크로로, 올해실적과 전년실적 셀을 선택하면, 해당 함수가 기재된다.</li>
 <li>자동완성을 써야할 가능성이 높으므로, 상대참조가 먹도록 한다.</li>
 </ul>
-<br>
-<br>
 <p>마찬가지로, 달성율과 RATE함수를 활용한 CAGR을 구해본다.<br>
 (옆 창은 만든 매크로를 모아놓은 사용자폼이다.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/05.gif" alt="myimg"></p>
-<br>
-<br>
 <p>함수로 작성이 되기 때문에,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>행이 추가되었을 경우, 상대참조가 되어, 자동완성도 가능하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01961/07.png" alt="myimg"></p>
-<br>
-<br>
 <p>말은 장황하지만 별거 없다.<br>
 아래 코드처럼 워크시트 함수를 노가다로 적어주면 된다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">growthRate</span>()
@@ -790,9 +762,7 @@ txt = Cells(2, 4).Value</p>
 </span></span><span style="display:flex;"><span>DD:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>그냥 생각만으로 썼는데, 더 쉬운 방법을 알고 계신다면, 그거 사용하시면 될듯 ㅋㅋ</p>
+</span></span></code></pre></div><p>그냥 생각만으로 썼는데, 더 쉬운 방법을 알고 계신다면, 그거 사용하시면 될듯 ㅋㅋ</p>
 <p>끝.</p>
 
         

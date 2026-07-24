@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01978/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -674,8 +674,6 @@
 <li>단, 조건부 서식에서 설정된 색은 먹히지 않는다!!!!</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01978/01.gif" alt="myimg"></p>
-<br>
-<br>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">row_del_COLOR</span>()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> myRNG <span style="color:#f92672">As</span> Range
@@ -706,8 +704,6 @@
 <p>특정 영역에서 값이 짝수이면, 회색을 칠하고, 우측셀에 +1 한 값을 넣어본다.<br>
 아무 의미는 없다. 어느새 mod 함수를 까먹고 있었다는 사실을 알아냈다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01978/01.gif" alt="myimg"></p>
-<br>
-<br>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">range_T</span>()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Dim</span> a <span style="color:#f92672">As</span> Range
@@ -722,20 +718,14 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Next</span> i
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<Br>
-<h2 id="색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</h2>
+</span></span></code></pre></div><h2 id="색칠된-셀의-합계-구하기">색칠된 셀의 합계 구하기</h2>
 <p>특정 조건에 대하여 셀 색을 칠하는 것은 조건부 서식으로 되는데,<br>
 색이 칠해진 셀에 대하여, 합계를 구하는 방법이 묘연하다.</p>
 <p>배열수식으로 간단하게 만들어질 줄 알았는데, VBA를 사용해야하는 것 같다.<br>
 없으면 만들어야지 뭐..</p>
-<br>
-<br>
 <h2 id="방법">방법</h2>
 <p>다들 아는 것이겠지만, VBA 프로시저 중, 일반적으로 사용하는 SUB프로시저를 만들기엔 변수가 좀 많다. FUNCTION 프로시저로 UDF를 만들어서 사용하는 게 나을 것 같다.</p>
 <p>그래도 뭐가 나을지 모르니, 둘 다 해보자.</p>
- <br>
- <br>
 <h3 id="case-1-sub-프로시저-사용">CASE #1. SUB 프로시저 사용</h3>
 <p>영역을 INPUTBOX로 받아서, 색상을 확인한다.흰색이 아니면, 값을 저장해서, 이후에 해당하는 값을 합산한다. 모든 영역에 검사가 끝나면, 최종적으로 합산된 값을 반환한다.</p>
 <p>그런데.. 어디다가 반환할 것인가?<br>
@@ -758,9 +748,7 @@
 </span></span><span style="display:flex;"><span>ActiveCell.Value <span style="color:#f92672">=</span> 합계
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<h3 id="case-2-function-프로시저-사용">CASE #2. FUNCTION 프로시저 사용</h3>
+</span></span></code></pre></div><h3 id="case-2-function-프로시저-사용">CASE #2. FUNCTION 프로시저 사용</h3>
 <p>함수의 인수로 영역을 넣어준다.<br>
 나머지 과정은 위와 동일하고, 함수이니, 현재 셀에 반환이 된다.</p>
 <p>그런데.. 색상값을 변경해도, 값이 변하지 않기 때문에, 함수가 재계산되지 않는다.<br>
@@ -777,9 +765,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> i
 </span></span><span style="display:flex;"><span>    cSum <span style="color:#f92672">=</span> 합계
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
-</span></span></code></pre></div><Br>
-<Br>
-<p>조건부 서식에서의 색상만 인식했어도 좋았을텐데, 참 아쉽다.</p>
+</span></span></code></pre></div><p>조건부 서식에서의 색상만 인식했어도 좋았을텐데, 참 아쉽다.</p>
 <p>끝.</p>
 
         

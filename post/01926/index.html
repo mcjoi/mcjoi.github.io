@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01926/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -665,30 +665,18 @@
 <p>뭔.. 헛소린가 하면&hellip;.<br>
 차량열에 대한 조건을 코나로 주고 배열 처리를 하면 아래와 같은 배열값이 생긴다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>자, 이제 차량 열을 통해서, 1부터 영역의 수량만큼을 뱉어내는 배열을 만든다. ROW함수를 사용하해서 해당 행번호를 순서대로 만든 뒤에, INDEX함수로 첫번째 행번호를 찾고, 각 배열에서 빼준다음 1을 더해준다. (1을 빼주지 않으면, 0부터 시작된다.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>이제 IF함수로 TRUE인 경우에만 숫자를 넣도록, 위 두개의 수식을 연결 해준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>자 드디어, SMALL 함수를 사용할 때가 되었다. 위에 만들어진 <code>{1;FALSE;FALSE;4;5;FALSE}</code> 에서 두번째로 작은 값을 찾는 수식이다. SMALL(배열, K) 에서 K값이 몇번째 작은 값을 찾겠느냐는 뜻이다. 결과는 FALSE는 무시가 되고, 4가 두번째로 작은 값이므로, 4가 나오고, 더 이상 배열이 아니게 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/04.jpg" alt="myimg"></p>
-<br>
-<br>
 <h2 id="index-함수">index 함수</h2>
 <p>INDEX함수를 사용해 찾을 배열을 선택하고, 4번째가 찍히도록 만들어놓은 수식을 ROW 위치에 넣어주면 끝이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/05.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>어렵게 왔다. 좀 쉽게 할 수 있는 방법도 있을까?<br>
 AGGREGATE 함수가 있지만, 방식은 동일하다. 썩 나이스해지지 않는다. 답은 아래 그림처럼 동일하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01926/06.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>횡설수설한 느낌은 있지만,</p>
 <p>끝.</p>
 

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01925/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -667,24 +667,16 @@
 ③ &mdash;&mdash;&mdash;&mdash;&mdash;- =SUBTOTAL(9,D20:D28)<br>
 ④ &mdash;&mdash;&mdash;&mdash;&mdash;- =AGGREGATE(9,0,D20:D28)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>①은 위의 표에서 대리점이 늘어날 경우, 즉 행이 증가할때, 추가된 소계 셀을 추가로 기재해줘야 한다는 단점이 있다.<br>
 ②는 실무에서 자주 보이는 영리한 수식이지만, 아래 그림과 같이 값들과 소계 1:1 대응을 벗어나는 값이 들어오는 경우에 문제가 될 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>③ SUBTOTAL 함수는 이름처럼 소계를 위한 함수이다. 중요한 점은 합산 영역안에 포함된 SUBTOTAL 함수를 무시한다는 것이다. 고로 위의 소계 부분은 전부 무시된다.</p>
 <ul>
 <li>첫 인자의 9는 SUM 이고, 109는 숨기기된 값을 제외하는 SUM이다.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>④ AGGREGATE 함수는 두번째 인자를 통해 SUBTOTAL / AGGREGATE 함수를 포함할지, 무시할지 선택할 수 있는 옵션을 제공한다는 점에서 SUBTOTAL과 약간 다르다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01925/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>상황에 따라 구분하여 사용하면 유용할 수 있다.</p>
 <p>끝.</p>
 

@@ -1410,7 +1410,12 @@ html.gallery-unlocked .gallery-gate {
 
 .post-content h3 {
   font-size: 20px;
+  margin-top: 108px;
   color: var(--post-h3-accent);
+}
+
+.post-content h2 + h3 {
+  margin-top: 16px;
 }
 
 .post-content h1,
@@ -1436,7 +1441,7 @@ html.gallery-unlocked .gallery-gate {
 }
 
 .post-content .text-box {
-  margin: 0 0 16px;
+  margin: 16px 0 54px;
   padding: 16px 18px;
   background: linear-gradient(180deg, #222222, #1d1d1d);
   border: 1px solid #2a2a2a;
@@ -1512,7 +1517,7 @@ html.gallery-unlocked .gallery-gate {
 .post-content .highlight {
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 0 16px;
+  margin: 0 0 108px;
 }
 
 .code-block {
@@ -1631,12 +1636,12 @@ html.gallery-unlocked .gallery-gate {
   max-width: 100%;
   border-radius: 10px;
   display: block;
-  margin: 20px auto;
+  margin: 16px auto 108px;
 }
 
 .video-embed {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 20px auto 108px;
 }
 
 .video-embed-inner {
@@ -1670,14 +1675,27 @@ html.gallery-unlocked .gallery-gate {
 
 .post-content .btn-link {
   color: #ffffff !important;
+  margin: 16px 0 54px;
 }
 
 .post-content p + .btn-link {
-  margin-top: 0;
+  margin-top: 16px;
 }
 
 .post-content .btn-link + p {
   margin-top: 0;
+}
+
+.post-content p:has(+ .btn-link) {
+  margin-bottom: 0;
+}
+
+.post-content p:has(> .btn-link:first-child) {
+  margin: 16px 0 54px;
+}
+
+.post-content p:has(> .btn-link:first-child) .btn-link {
+  margin: 0;
 }
 
 .btn-link:hover {

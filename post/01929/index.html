@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01929/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,39 +663,24 @@
           <h2 id="시트이름을-수식에서-사용하기날짜-계산">시트이름을 수식에서 사용하기(날짜 계산)</h2>
 <p>회사에서 일을하다보면, 시트이름을 월로 해두고 동일한 양식을 복사해서 사용하는 경우가 왕왕 있다.<br>
 이때, 시트이름에서 월데이터 정보를 얻어서, 시트 내에서 사용한다면, 유용할 수 있겠다는 생각을 해봤다.</p>
-<br>
-<br>
 <h2 id="시트이름-호출">시트이름 호출</h2>
 <p>아래 수식을 복사한다면, 당신은 시트이름을 반환받을 수 있다.<br>
 CELL 함수로 워크북 저장경로, 파일이름, 시트이름을 불러오고, FIND 함수로 시트이름의 시작을 찾아서,MID 함수로 발라내는 방식이다.<br>
 아래 함수보다 복잡하지 않은 범용 사용법을 안다면 꼭 댓글을 부탁한다.</p>
 <p class="text-box">=MID(CELL(&ldquo;filename&rdquo;,A1),FIND(&quot;]&quot;,CELL(&ldquo;filename&rdquo;,A1),1)+1,LEN(CELL(&ldquo;filename&rdquo;,A1)))</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/01.webp" alt="myimg"></p>
-<br>
-<br>
 <p>여기서 사용된 B1셀 참조값은 시트 내 아무 값이어도 무방하다. 바뀌는 것이 보기 싫다면, $A$1으로 고정을 해두는 것도 나쁘지 않다. MID 함수의 마지막에 LEN함수로 길이를 정한 이유는 적어도 시트이름이 시트이름을 포함한 경로 전체보다는 작을 것이기 때문이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/02.webp" alt="myimg"></p>
-<br>
-<br>
 <h2 id="마지막-날짜와-날짜수-확인">마지막 날짜와 날짜수 확인</h2>
 <p>연도와 월 값을 불러왔으니, 사용할 수 있는게 뭐가 있을까? 월마다 바뀌는 지표는 마지막 날짜이니, 30일인 달인지, 31일인 달인지, 28일인 달인지 아래와 같이 확인해보려고 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/03.webp" alt="myimg"></p>
-<br>
-<br>
 <p>위에 불러진 연도와 월 값을 이용해서, 순차적으로 적용한 수식은 아래와 같다.</p>
 <p>시작일 같은 경우는, 위에서 얻어낸 월 정보 202203에서, LEFT 함수로 좌측 4개 텍스트를 DATE함수의 YEAR, MID 함수로 DATE함수의 MONTH 값을 넣어주고, DATE함수의 DAY에는 1을 넣어주었다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/04.webp" alt="myimg"></p>
-<br>
-<br>
 <p>마지막날은 동일한 수식에, EOMONTH 함수로 마지막날을 구해주었다. 특별한 건 없다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/05.webp" alt="myimg"></p>
-<br>
-<br>
 <p>날짜수는 엄청 복잡해 보이지만, 위에 만들어놓은 마지막일에서 시작일을 빼고, +1 해준 값이다. 물론, 마지막 날짜를 구한 것에서 DAY 값만 빼낸 것과 동일하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01929/06.webp" alt="myimg"></p>
-<br>
-<br>
 <p>다음부터는 시트이름의 규칙이 동일하다면, 수식을 그냥 복사해서 쓸수 있다. 하지만 명심해야 할 것은 윈도우 저장경로를 이용하기 때문에 온라인 엑셀에서는 되지 않는다는 것.(CELL함수 자체가 없음)</p>
 <p>끝.</p>
 

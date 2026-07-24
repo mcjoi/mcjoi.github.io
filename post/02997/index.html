@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/02997/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -668,14 +668,10 @@
 <p>블로그 최적화를 위해서, webp 포맷을 자주 사용한다. 그런데, 매번 온라인상에서 이미지를 올려서 변환하기도, 포토샵을 사용하기도 좀 그렇다.</p>
 <p>구글 dev 사이트에서 변환 프로그램을 다운받았는데, 매번 cmd를 입력해줘야 하는 방식이다.<br>
 이 또한 귀찮으니, 파이썬으로 간단한 프로그램을 짜본다.</p>
-<br>
-<br>
 <h2 id="execution">execution</h2>
 <p>프로그램 위치는 아래와 같이 구성하고, 당연히 python 실행은 윈도우즈 path에 걸어서 어디서든 동작하게 만들어 둔다. 샘플코드는 다음과 같다.</p>
 <p class="text-box">아래 코드가 저장된 python.py 파일<br>
 └─ ─ ─ ─ ─ ─ libwebp-1.4.0-windows-x64 폴더</p>
-<br>
-<br>
 <p>바탕화면이든 어디든 batch 파일을 써서, 해당 python 프로그램이 실행될 수 있도록 해주면 끝이다.<br>
 단, 본인의 python에 아래 패키지들이 사전에 install 되어있어야 한다.</p>
 <p>첫번째 탐색기가 뜨면 변환하고 싶은 파일을 선택해주고, 두번째 탐색기에서는 저장할 폴더를 선택해주면 된다.<br>
@@ -724,20 +720,14 @@
 </span></span><span style="display:flex;"><span>            command <span style="color:#f92672">=</span> programPath <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; &#34;&#39;</span> <span style="color:#f92672">+</span> fileConvertion <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&#34; -q 100 -o &#34;&#39;</span> <span style="color:#f92672">+</span> dir_path <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.webp&#34;&#39;</span>
 </span></span><span style="display:flex;"><span>   
 </span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(command<span style="color:#f92672">=</span>command)
-</span></span></code></pre></div><br>
-<br>
-<p>그런데, webp 변환 이후 결과물의 이미지 퀄리티가 떨어져 보이는건 느낌적인 느낌일까?</p>
+</span></span></code></pre></div><p>그런데, webp 변환 이후 결과물의 이미지 퀄리티가 떨어져 보이는건 느낌적인 느낌일까?</p>
 <p>단지 느낌만은 아니다.<br>
 전반적으로 레드 컬러톤이 다운된다는 것을 알게 되었다. 해당 프로그램 설명페이지에 있는 수많은 옵션들을 건드려봐야 알 수 있을 것 같기는하다.</p>
-<br>
-<br>
 <h2 id="옵션-업데이트-exif-정보-유지">옵션 업데이트, exif 정보 유지</h2>
 <p>위에 언급했듯 변환을 하면서, 레드 컬러의 열화가 있고, exif정보가 날아가는 문제가 있었는데, 옵션조정과 exif 프로그램을 추가하여 정보를 유지하도록 했다.</p>
 <p class="text-box">아래 코드가 저장된 python.py 파일<br>
 └─ ─ ─ ─ ─ ─ libwebp-1.4.0-windows-x64 폴더<br>
 └─ ─ ─ ─ ─ ─ exiftool-13.12_64 폴더</p>
-<br>
-<br>
 <p>파이썬 실행코드를 아래와 같이 수정해봤다.</p>
 <p class="text-box">✶ 메뉴얼을 보고, 화질에 영향을 준다는 요소들을 전부 제외하거나 추가를 해봤지만, 옵션 조정으로 레드컬러를 보존하는 것도 신통치 않은 것 같다.<br>
 ✶ exiftool 프로그램을 다운 받은 뒤 동일한 경로에 추가해서 exif 정보 유지를 하도록 했는데 이건 어느정도 성공한 듯하다.</p>
@@ -806,9 +796,7 @@
 </span></span><span style="display:flex;"><span>               
 </span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(command<span style="color:#f92672">=</span>command)
 </span></span><span style="display:flex;"><span>        os<span style="color:#f92672">.</span>system(command<span style="color:#f92672">=</span>command_exif)
-</span></span></code></pre></div><br>
-<br>
-<p>일단은 여기까지.</p>
+</span></span></code></pre></div><p>일단은 여기까지.</p>
 <p>끝.</p>
 
         

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01920/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -663,35 +663,20 @@
           <h2 id="텍스트-합치기행-누적">텍스트 합치기(행 누적)</h2>
 <p>아래 그림처럼, 행마다 값이 있다. 원본 값의 우측열에, 텍스트가 누적으로 합쳐져서 기재되면서, 각 행은 줄바꿈으로 처리되는 함수를 만드려고 한다. 글로 적기도 힘든데.. 쓸일은 거의 없다고 봐야겠다. 그래도 생각난거 해보자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01920/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>몇 가지 사용할 함수를 살펴본다.<br>
 CONCAT함수는 입력된 배열을 하나의 텍스트로 합쳐주는 함수이다. 누적식으로 기재할 것이므로, 시작열을 절대참조 해준다. 그리고, CHAR(10)으로 값마다 줄바꿈을 해준다. 배열수식으로 처리를 해줘야한다.</p>
 <p class="text-box">{ = CONCAT(($B$3:B3)&amp;CHAR(10)) }</p>
-<br>
-<br>
 <p>그러나, 아래 그림처럼, 맨 마지막 값에도 CHAR(10)값이 포함되어, 마지막행에 원치않는 줄바꿈이 생긴걸 확인할 수 있다. 없애야한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01920/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>두번째 사용할 함수는 맨 마지막에 생긴 원치않는 줄바꿈을 없애줄 RIGHT함수이다. 맨 우측 1개의 문자를 선택하는 역할이고, 아래 수식의 결과는.. 그림과 같다. 줄바꿈 아스키(?) 문자이고, CHAR(8)이다.</p>
 <p class="text-box">= RIGHT(CONCAT(($B$3:B3)&amp;CHAR(10)),1)</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01920/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>이제 SUBSTITUTE 함수로 줄바꿈 문자를 지워준다. 음.. 그런데, 아래 그림처럼 모든 줄바꿈 문자가 지워지는 것을 확인할 수 있다.</p>
 <p class="text-box">{ = SUBSTITUTE(CONCAT(($B$3:B3)&amp;CHAR(10)),RIGHT(CONCAT(($B$3:B3)&amp;CHAR(10)),1),&quot;&quot;) }</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01920/04.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>SUBSTITUTE 함수의 4번째 값은 교체 대상의 인덱스 번호를 입력하는 곳이다. aa는 1번째 줄바꿈, aabb는 2번째 줄바꿈&hellip;.을 없앨 것이기 때문에, 동일 영역에 대한 행순서를 넣어주면 된다.</p>
 <p class="text-box">{ = SUBSTITUTE(CONCAT(($B$3:B3)&amp;CHAR(10)),RIGHT(CONCAT(($B$3:B3)&amp;CHAR(10)),1),&quot;&quot;,ROWS($B$3:B3)) }</p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01920/05.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>아이러니하게도, 마지막 줄바꿈 하나 없애는데 공을 들인 수식이 되어버렸다.</p>
 <p>끝.</p>
 

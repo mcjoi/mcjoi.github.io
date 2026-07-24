@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01941/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -667,30 +667,20 @@
 <p>먼저, 아래 그림의 왼쪽에 보이는 MAX는 단독으로 쓸 수 있다.<br>
 순번을 매길 셀을 선택한 이후에 첫번째 셀에 아래와 같은 수식을 입력한다.</p>
 <p class="text-box">=MAX($A$1:A1)+1</p>
-<br>
-<Br>
 <p>여기서 A1은 머릿글행이라고 봐도 좋고, 순번이 시작되는 바로 위 셀이라고 생각해도 좋다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01941/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>사용상 주의점 : 절대 머릿글행에 숫자값이 있으면 안된다.<br>
 보면 알수 있다시피, 행이 아래로 내려가면서 그보다 위쪽의 값들의 최대값보다 1큰수를 넣어주는 방식이다.</p>
 <p>아래처럼 머릿글에 2가 있으면, 다음 행 값은 3이 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01941/02.png" alt="myimg"></p>
-<Br>
-<Br>
 <h2 id="counta">COUNTA</h2>
 <p>두번째로, 아래 그림의 오른쪽에 보이는 COUNTA는 단독으로 쓸 수 없고, 우측에 동일하게 셀 병합이 되어 있는 셀값이 있을 때만 사용 가능하다.</p>
 <p>MAX와 마찬가지로,<br>
 순번을 매길 셀을 선택한 이후에 첫번째 셀에 아래와 같은 수식을 입력한다.</p>
 <p class="text-box">=COUNTA($D$2:D2)</p>
-<br>
-<br>
 <p>사용상 주의점 : 절대 우측 셀 값이 비어 있으면 안된다.<br>
 보면 알수 있다시피, 우측 첫번째 열부터 값이 들어있는 경우, 누적 카운트 하는 방식이기 때문이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01941/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>두가지 방법 모두, 장단점으로 인해 생각을 좀 해야하므로, 과연 수기 입력이 빠를지, 이게 빠를지 0.5초 생각이 필요하다.</p>
 <p>끝.</p>
 

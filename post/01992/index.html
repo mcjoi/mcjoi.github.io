@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01992/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -669,22 +669,16 @@ IFERROR 와 NOT 를 사용하는 방법도 있고, ISNUMBER 함수를 사용하�
 이 경우에는 별다른 문제가 없고 굳이 배열수식을 사용하지 않아도 된다. (B열이 조건범위1, C열이 조건범위2, D열이 합산범위이다.)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>{ <span style="color:#f92672">=</span>SUM( <span style="color:#66d9ef">IF</span>( (<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>12<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;사과&#34;</span>), <span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>12 )) }
 </span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01992/01.png" alt="img"></p>
-<br>
-<br>
 <p>조건을 조금 변경해<br>
 조건영역1에 사과 또는 포도가 포함되어 있고, 조건영역2가 겨울이라면 이야기가 달라진다.<br>
 이 경우에는 수식도 길어지고  논리식에 포함되는 값들도 꽤 많아진다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>{ <span style="color:#f92672">=</span>SUM(<span style="color:#66d9ef">IF</span>( (ISNUMBER(FIND({<span style="color:#e6db74">&#34;사과&#34;</span>,<span style="color:#e6db74">&#34;포도&#34;</span>}, <span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>12))) <span style="color:#f92672">*</span> (<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>12<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;겨울&#34;</span>),<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>12)) }
 </span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01992/02.png" alt="img"></p>
-<br>
-<br>
 <p>즉, 사과 또는 포도가 포함되어 있다는 조건을 조금 더 깔끔한 함수로 처리할 수 있다면 수식도 훨씬 간단해질 것이다.</p>
 <p>사용자정의함수(범위, or조건1, or조건2&hellip;) 이런 형태가 가능하다면 말이다.<br>
 사용법은 함수 이름만 봐도 의미가 직관적이고, 기존 수식과 기능은 동일하지만 가독성은 훨씬 좋아진다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>{ <span style="color:#f92672">=</span>SUM(<span style="color:#66d9ef">IF</span>( (myIsIn(<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>B<span style="color:#960050;background-color:#1e0010">$</span>12,<span style="color:#e6db74">&#34;사과&#34;</span>,<span style="color:#e6db74">&#34;사도&#34;</span>)) <span style="color:#f92672">*</span> (<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>C<span style="color:#960050;background-color:#1e0010">$</span>12<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;겨울&#34;</span>),<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>3:<span style="color:#960050;background-color:#1e0010">$</span>D<span style="color:#960050;background-color:#1e0010">$</span>12)) }
-</span></span></code></pre></div><br>
-<br>
-<p>사용자 정의 함수(UDF)는 과거에는 접근성이 다소 떨어졌지만 요즘은 ChatGPT 등을 활용해 필요한 기능을 빠르게 구현할 수 있다. 동작 원리를 완벽히 이해하지 않아도 실무에서 사용하는 데에는 큰 문제가 없다.</p>
+</span></span></code></pre></div><p>사용자 정의 함수(UDF)는 과거에는 접근성이 다소 떨어졌지만 요즘은 ChatGPT 등을 활용해 필요한 기능을 빠르게 구현할 수 있다. 동작 원리를 완벽히 이해하지 않아도 실무에서 사용하는 데에는 큰 문제가 없다.</p>
 <p>또한 xla 파일로 만들어 두면 필요할 때마다 불러와 재사용할 수도 있다.</p>
 <p>아래는 실제로 사용한 코드이다.<br>
 myIsIn이라는 이름의 함수로 정의했다. 기능 대비 코드가 조금 길지만, 재사용성은 충분하다.</p>
@@ -805,9 +799,7 @@ myIsIn이라는 이름의 함수로 정의했다. 기능 대비 코드가 조금
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">ReDim</span> arr(0 <span style="color:#66d9ef">To</span> 0)
 </span></span><span style="display:flex;"><span>    arr(0) <span style="color:#f92672">=</span> s
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>설명이 길어질 수 있으니 UDF를 사용하지 않는 기본 방식도 함께 익혀두는 것을 추천한다.<br>
+</span></span></code></pre></div><p>설명이 길어질 수 있으니 UDF를 사용하지 않는 기본 방식도 함께 익혀두는 것을 추천한다.<br>
 상황에 따라 더 단순한 방법이 정답</p>
 <p>끝.</p>
 

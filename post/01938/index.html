@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01938/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -665,39 +665,23 @@
 <p>아래와 같은 범위로 된 데이터가 있다. 데이터 표가 아니다. 이럴때, 흔히 표의 특정 영역을 지정하여, 이름정의를 한다.<br>
 B2:C20의 영역을 잡아서, 과일이름 영역이라 이름정의를 했다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>정의된 이름(범위)을 사용해서 VLOOKUP 함수를 건다면 다음과 같다. 가장 일반적이지만, 오류의 가능성을 가진 형식이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>오류가 발생하는 이유는 다음과 같이, 17번 이후에 18번 행(신규 행)이 추가되었을때, 이를 이름정의에서 동적으로 반영하지 못한다는 점이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>물론, 102번처럼, 이름정의가 사용된 범위의 중간에 행이 들어가게 된다면, 동적으로 반영된다. 아래 그림에서 과일이름영역확장의 중간신규값이 들어갔음에도 제대로 나오는 것을 확인할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/04.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>이름정의를 할때, 다음과 같이 OFFSET으로 영역을 정해주면, 동적으로 값을 받을 수 있다. 방식은 OFFSET 함수의 범위를 설정할때, COUNTA로 행의 개수를 세어주고, 기준셀에서 HEIGHT값을 잡아주는 방식이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/05.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>여기까지 이해를 했다면, 아래 처럼, WIDTH 값을 잡아주는 것도 이해가 갈 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>해당 영역을 통해 동일하게 VLOOKUP을 잡을 경우, 추가되는 행도 반영이 가능하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01938/07.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>사용상 치명적인 단점이자, 주의할 점은 아래와 같다.</p>
 <ul class="text-box">
 <li>영역 하단에 추가적인 내용을 기재하면 안된다. 영역이 확장된다.</li>
 <li>이름정의로 설정될 경우, 이름을 좌상단 ADDRESS창에서 직관적으로 확인 할 수 있는데, 이럴 경우 안보인다.</li>
 </ul>
-<br>
-<br>
 <p>필요한 경우, 사용해보도록 하자.</p>
 <p>끝.</p>
 

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01944/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -671,20 +671,12 @@
 <p>위에 적었 듯 파워포인트에는 문단 또는 줄간격을 맞추는 기능이 있는데, 이를 사용하는 것이 바람직한 방법이긴 할 것이다. 하지만, 창으로 뜨는 관계로 확인을 눌러 적용하기 전까지는 수치 변경에 대해서 즉각적인 확인이 불가능해서, 개인적으로는 별로 좋아하지는 않는 방법이지만, 일단은 알아두는 것이 좋을 것이다.</p>
 <p>창의 생김새는 아래와 같으나, 맨 하단에 있는 줄간격 조정 기능인 Spacing 만 사용해보자. 두개의 영역으로 구분되어 있으며, Before/After 기능으로 엔터를 쳤을때 구분이 지어지는 문단(Paragraph)의 간격을 조정하고, (Shift + Enter 를 치거나 줄이 길어져 하단으로 내려갈 때는 적용되지 않는다.) Line Spacing 기능으로 모든 간격을 조정하는 줄간격 기능으로 나누어진다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/01.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래 그림은 아무것도 설정하지 않은 상태이다. 줄간격이 빽빽해 보이므로 조정이 필요한 상황이다. 폰트마다 기본으로 주어지는 줄간격이 다르므로, 본인이 자주쓰는 폰트에 대한 이해가 필요하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>일단 전체 줄간격을 일괄로 맞추기 위해, paragraph든 line이든 모든 행에 적용되는 Line spacing 기능을 통해 전체 간격을 정해준다. Exactly 옵션을 주고 18pt 값을 넣은 결과는 아래와 같다. Exactly 옵션은 절대값으로 간격을 준다는 뜻이므로, 폰트 사이즈가 변하면 매번 설정값을 바꿔줘야 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>이제 Enter로 구분된 paragraph만 별도의 줄간격 주기 위해 After값을 12pt로 주었다. 알겠지만, before값을 같이 주면 위아래 텍스트가 있는 경우, 합산이 된 만큼 떨어진다. After 값을 적용한 결과는 아래와 같다. 한결 보기 편해졌다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>파워포인트에서는 글을 저렇게 적을 일이 많지는 않겠지만&hellip; 실시간으로 보면서 수정할 수 있는 기능이 있었으면 좋을 것 같다는 생각이 들었다.</p>
 <p>대충 떠오르는데로 만들어본 사용자 폼은 다음과 같다.</p>
 <ul class="text-box">
@@ -694,8 +686,6 @@
 <li>맨 아래 Reset &amp; Close 버튼을 누르면, 줄간격이 설정되지 않은 상태로 복원</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/05.gif" alt="myimg"></p>
-<br>
-<br>
 <p>사용된 코드는 아래와 같다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_shp <span style="color:#f92672">As</span> Shape
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_after_textbox <span style="color:#f92672">As</span> TextBox
@@ -794,8 +784,6 @@
 희한한건 Before와 After는 LineRule의 용도를 모르겠다. 그래서 그냥 배제를 한다. 속성값을 False로 두자. Within 값을 False로 두는 경우, SpaceWithin값은 pt값이 들어가고, True로 둘 경우 배수가 된다.</p>
 <p>이를 활용하여 좀더 진보한 userform을 만들 수 있다. 텍스트 박스를 선택하여 refresh하고 유형을 변경할 수 있도록 해보았다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01944/06.gif" alt="myimg"></p>
-<br>
-<br>
 <p>급하게 생각한 코드는 아래와 같다. 필요한 부분이 있다면 잘라서 쓰면 될 것이다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_shp <span style="color:#f92672">As</span> Shape
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Public</span> sp_para <span style="color:#f92672">As</span> ParagraphFormat2
@@ -892,9 +880,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
 </span></span><span style="display:flex;"><span>    Unload <span style="color:#66d9ef">Me</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><Br>
-<Br>
-<p>간만에 오랜만에 약간 생각이란걸 하는 코드를 만들어보았다.</p>
+</span></span></code></pre></div><p>간만에 오랜만에 약간 생각이란걸 하는 코드를 만들어보았다.</p>
 <p>끝.</p>
 
         

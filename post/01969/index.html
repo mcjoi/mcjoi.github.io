@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01969/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -665,8 +665,6 @@
 워크시트 함수로 만들면, 랜덤함수는 셀계산을 매번하는데, VBA로 만들면, 이를 방지할 수 있다.<br>
 예를 들어, 몇 개의 숫자가 있고, 이를 임의로 가져오는 방법을 함수와 VBA로 만들어 봤다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01969/01.gif" alt="myimg"></p>
-<br>
-<br>
 <p>여러가지 방법이 있겠으나, 함수로 쓰면 대략 이런 모양이 되지 않을까?<br>
 <code>=&quot;선택한 값은 &quot;&amp; TEXT(OFFSET(D5,0,RANDBETWEEN(0,10)),&quot;#,###&quot;) &amp;&quot; 입니다.&quot;</code></p>
 <p>이번에는 VBA로 RANDBEETWEEN 함수를 OFFSET과 함께 사용했다. 별 건 없다.<br>
@@ -691,24 +689,15 @@
 </span></span><span style="display:flex;"><span>Range(<span style="color:#e6db74">&#34;d9&#34;</span>).Value <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> Format(CL.Offset(x, WorksheetFunction.RandBetween(x, y)), <span style="color:#e6db74">&#34;#,###&#34;</span>) <span style="color:#f92672">&amp;</span> b
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<Br>
-<h2 id="날짜-자동-기재-연습용-더미-데이터-생성">날짜 자동 기재, 연습용 더미 데이터 생성</h2>
+</span></span></code></pre></div><h2 id="날짜-자동-기재-연습용-더미-데이터-생성">날짜 자동 기재, 연습용 더미 데이터 생성</h2>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01969/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>아마, 반복적으로 하는 작업 중 하나가, 날짜 열을 생성하는 것이다. 대부분 시작일자를 치고, 드래그하여 만들텐데, 귀찮으니, VBA로 만들어 보자.</p>
 <p>방법은 여러가지가 있겠지만, 내가 하고 싶은건 시작일자와 종료일자를 입력하면, 아래쪽으로 자동입력 되는 형태이다.<br>
 아래 이미지과 같은 방식으로</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01969/03.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>날짜가 입력되었으면, 우측에 연습용 데이터를 넣어본다. 내가 할 방식은 작은 수와 큰 수를 넣으면, 랜덤방식으로 정수를 넣는 것이다. 아래와 같이 더미데이터가 랜덤으로 생성된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01969/04.png" alt="myimg"></p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01969/05.gif" alt="myimg"></p>
-<br>
-<br>
 <p>코드는 아래와 같다. 취향과 용도에 따라서, 바꿔서 사용하면 되겠다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">inputRandomValue</span>()
 </span></span><span style="display:flex;"><span>
@@ -769,9 +758,7 @@
 </span></span><span style="display:flex;"><span>MsgBox <span style="color:#e6db74">&#34;입력완료&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<br>
-<p>물론, 근본은 없는 코드이다.</p>
+</span></span></code></pre></div><p>물론, 근본은 없는 코드이다.</p>
 <p>끝.</p>
 
         

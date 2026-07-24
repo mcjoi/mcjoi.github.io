@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/01924/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879112" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -662,19 +662,13 @@
         
           <h2 id="파워포인트의-색">파워포인트의 색</h2>
 <p>색을 고르는 일은 몹시 어려운 일이다. 이색 저색 써보는 것도 방법이지만, 실상 회사에서 사용하는 색은 주로 CI색을 사용하기 때문에, 몇가지 자주쓰는 색을 박아놓고 쓰는 것도 나쁘지 않다.</p>
-<br>
-<br>
 <h2 id="슬라이드-마스터-팔레트">슬라이드 마스터 팔레트</h2>
 <p>파워포인트에 피커기능이 생긴 이후로, 마스터에 박스로 팔레트를 만들어 놓고 쓰는 사람이 꽤 보인다. 그럼 처음 켰을 때, 마스터에 내가 자주쓰는 색 팔레트를 만들어 놓는 버튼을 해두면 어떨까?</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/01.jpg" alt="myimg"></p>
-<br>
-<br>
 <h2 id="생각보다-귀찮다">생각보다&hellip; 귀찮다.</h2>
 <p>아쉽게도 파워포인트 VBA는 엑셀만큼 나이스 하지 않으므로, 최소한의 기능으로 생각을 한다.<br>
 새문서를 켜고, 버튼을 누르면, 8개 작은 박스에 주황/파랑 그라데이션이 들어간 팔레트를 만들어준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/02.jpg" alt="myimg"></p>
-<br>
-<br>
 <p>만들기 전에는 많은 걸 생각했지만, 코딩실력의 한계는 자동으로 기능의 간소화로 이어진다.<br>
 colorIndex를 지원하지 않으..(맞나?)므로, 필요한 컬러에서 RGB를 강제로 조정하는 꼼수를 쓴다&hellip; 나름 애썼다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">pal</span>()
@@ -727,11 +721,7 @@ colorIndex를 지원하지 않으..(맞나?)므로, 필요한 컬러에서 RGB�
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Next</span> c
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div><br>
-<Br>
-<hr>
-<Br>
-<Br>
+</span></span></code></pre></div><hr>
 <h2 id="자주-쓰는-색-컬러팔레트-두번째">자주 쓰는 색 컬러팔레트 두번째</h2>
 <p>일전에, 자주 쓰는 색을 슬라이드 마스터에 자동 등록하는 매크로를 만드는 글을 작성한 적이 있다. 애초 설계를 했을 때, 내가 사용하는 색이 두가지 뿐이었으므로, 두가지 색만 강제로 생기도록 설계를 했었는데, 사용상 아쉬움이 많다.</p>
 <h2 id="번-선택창">①번 선택창</h2>
@@ -740,46 +730,28 @@ colorIndex를 지원하지 않으..(맞나?)므로, 필요한 컬러에서 RGB�
 <li>Yes : CI 색상 2개 컬러와 회색 컬러 2개 박스가 생기고, 종료.</li>
 <li>No : ②번 선택창으로 이동</li>
 </ul>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/03.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="번-선택창-1">②번 선택창</h2>
 <p>원하는 컬러를 입력하는 방식을 선택 - HEX color 형태를 입력할지 여부를 선택</p>
 <ul>
 <li>Yes : ③번 입력창(HEX color)으로 이동</li>
 <li>No : ④번 입력창(RGB color)으로 이동</li>
 </ul>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/04.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="번-입력창hex-color">③번 입력창(HEX color)</h2>
 <p>HEX color code 값을 입력해준다. #000000 형태로, #은 넣어도 되고, 빼도 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>좌측 정렬된 박스 중 몇번째에 넣을지 인덱스 값을 넣어준다. 위에서부터 1번이며, 없는 인덱스 값일 경우, 신규로 생성을 한다. 단, 기존에 있는 인덱스 번호이면, 위에 올려진다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래는 3번 인덱스 값에 녹색을 넣은 결과이다. HEX code가 뭐였는지는 기억이 나질 않는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/07.png" alt="myimg"></p>
-<br>
-<br>
 <h2 id="번-입력창hex-color-1">④번 입력창(HEX color)</h2>
 <p>한 개의 창에서 입력하는 형태로 할까 했는데, 그렇게 되면 파워포인트 기본 컬러 세팅하는 창과 별 차이가 없어서, R, G, B 값을 순차적으로 넣게 했다. 입력된 값이 0보다 작으면 0이, 255보다 크면 255가 입력된다. 내가 설계한게 아니라, 파워포인트에서 자동으로 그렇게 하더라.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/08.png" alt="myimg"></p>
-<br>
-<br>
 <p>HEX code 때와 마찬가지로, 인덱스 값을 입력해준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/09.png" alt="myimg"></p>
-<br>
-<br>
 <p>4번 인덱스에 덮어쓰면 아래 그림처럼 된다. 슬라이드 마스터에 들어가서 위에 박스를 지우거나 치우면, 아래 박스는 그대로 살아있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01924/10.png" alt="myimg"></p>
-<br>
-<br>
 <p>코드는 아래와 같다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">pal2</span>()
 </span></span><span style="display:flex;"><span>
@@ -894,9 +866,7 @@ colorIndex를 지원하지 않으..(맞나?)므로, 필요한 컬러에서 RGB�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Exit</span> <span style="color:#66d9ef">Function</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">End</span> <span style="color:#66d9ef">Function</span>
-</span></span></code></pre></div><Br>
-<br>
-<p>끝.</p>
+</span></span></code></pre></div><p>끝.</p>
 
         
       </div>

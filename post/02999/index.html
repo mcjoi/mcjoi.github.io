@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/post/02999/" />
     <meta property="og:type" content="article" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=1784876545" />
+    <link rel="stylesheet" href="/css/main.css?v=1784879113" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -668,9 +668,6 @@
 <ul>
 <li>PDF의 테이블은 테이블 형태의 데이터가 아니라 텍스트 + 이미지(라인)이기 때문에 벌어지는 현상으로 추정된다.</li>
 </ul>
-<br>
-<br>
-<br>
 <h2 id="1-python---camelot">#1 python - camelot</h2>
 <p>현재까지 사용해본 방법중에서는 python의 camelot 패키지가 가장 우수한 결과를 보여준다. PDF 파일을 선택하면, 테이블이 있는 페이지에 대하여, 각 시트별로 테이블을 작성해준다.</p>
 <p><code>sample.py</code></p>
@@ -721,119 +718,62 @@
 </span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>df<span style="color:#f92672">.</span>to_excel(writer, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, sheet_name<span style="color:#f92672">=</span>sheet_name)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><br>
-<br>
-<hr>
-<br>
-<br>
+</span></span></code></pre></div><hr>
 <h2 id="2-excel---vba">#2 excel - vba</h2>
 <p>엑셀 본연의 기능만으로 돌파를 해본다.<br>
 아래와 같은 표가 있다고 했을 때, 1번 값부터 복사를 하면, 엑셀에 바로 붙이면, 다음과 같이 붙는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/01.png" alt="myimg"></p>
-<br>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/02.png" alt="myimg"></p>
-<br>
-<br>
 <p>위의 원본 테이블을 유심히 보면 알 수 있지만, 셀 안에 공백이 하나도 없다. 그러므로 사실 해당 테이블은 그렇게 까다로운 테이블이 아니다. 여백이 발생하는 경우, 컬럼을 구분해주면 되기 때문이다.</p>
 <p>간단한 VBA 코드만으로 이를 파싱하는 코드를 바로 짤 수 있다. 아래와 같이 간단한, userform을 만들었다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/03.png" alt="myimg"></p>
-<br>
-<br>
 <p>컬럼을 몇개를 사용할지만, 지정해주면 다른 작업이 필요가 없다. ExportToSheet 버튼 한번이면 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/04.png" alt="myimg"></p>
-<br>
-<br>
 <p>문제는 테이블 값들 안에 여백이 있는 경우이다. 이때는 같은 셀 안에 있어야할 값들을 머징해주는 과정이 필요하다. 예를들어 아래와 같은 테이블이 있다고 하자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/05.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래와 같이 userform에서 같은 셀안에 있어야 할 값을 붙여주고, 순서가 이상하다면 순서도 맞춰줘야 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/06.png" alt="myimg"></p>
-<br>
-<br>
 <p>결과는 다음과 같다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/07.png" alt="myimg"></p>
-<br>
-<br>
 <p>마지막으로 맨 위에 사용했던 예제의 header처럼, 셀 병합이 되어있는 경우이다. 알겠지만, 병합이 된 셀의 경우, 값이 없을 뿐 자리는 차지를 해야한다. 따라서, 빈 문자로 자리를 잡아줘야 한다.</p>
 <p>아래 header는 총 11개이고, 두번째 줄은 7번째 부터 시작한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/08.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래와 같이 비어있는 셀을 고려하여 작성을 한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/09.png" alt="myimg"></p>
-<br>
-<br>
 <p>엑셀의 결과는 다음과 같다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/10.png" alt="myimg"></p>
-<br>
-<br>
 <p>위에서 했던 데이터와 합쳐서 사용한다면 다음과 같다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/11.png" alt="myimg"></p>
-<br>
-<br>
 <p>다른 예시를 한 번 보자. 위와 마찬가지로, 헤더가 복잡하게 되어있는 테이블이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/12.png" alt="myimg"></p>
-<br>
-<br>
 <p>아래와 같이 분리를 해주면 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/13.png" alt="myimg"></p>
-<br>
-<br>
 <p>그야말로 복잡하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/14.png" alt="myimg"></p>
-<br>
-<br>
 <p>PDF 안에 있는 테이블에 대한 이해는 좀 필요할 듯하다. 예를 들어 아래와 같은 표라면, 구지, 이 방법 보다는, 그냥 copy-paste 하는 것이 더 빠를 수 있다는 것이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/15.png" alt="myimg"></p>
-<br>
-<br>
 <p>구지 적용하자면 아래와 같이 가능은 하지만, 꽤나 오래 걸린다. 이런 경우 그냥 메모장을 이용하는 방법이 낫겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/16.png" alt="myimg"></p>
-<br>
-<br>
 <hr>
-<br>
-<br>
 <h2 id="3-excel---from-web">#3 excel - from web</h2>
 <p>PDF파일을 크롬브라우저에서 열면 주소창에 로컬 저장소의 주소가 찍히는데,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/17.png" alt="myimg"></p>
-<Br>
-<br>
 <p>엑셀의 데이터 탭에서, From Web (한글로 뭐였는지 모르겠다)를 클릭하면,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/18.png" alt="myimg"></p>
-<Br>
-<br>
 <p>주소를 넣는 창이 뜨는데, 크롬브라우저상의 주소를 기재하여 파워쿼리까지 불러올 수 있다. 메모장에 붙여넣는 수고로움이 덜어진다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/19.png" alt="myimg"></p>
-<Br>
-<br>
 <p>파일명을 더블클릭해주고,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/20.png" alt="myimg"></p>
-<Br>
-<br>
 <p>데이터 열에 있는 첫번째 Table을 클릭한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/21.png" alt="myimg"></p>
-<Br>
-<br>
 <p>만약 여러 페이지가 있고, 테이블도 여러개가 있는 경우에는, 테이블의 row가 페이지별로 구분되어, 원하는 테이블만 선택할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/22.png" alt="myimg"></p>
-<Br>
-<br>
 <p>그럼 아래와 같이 테이블을 확인할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/23.png" alt="myimg"></p>
-<Br>
-<br>
 <p>눌러주면, 엑셀에 테이블이 생성된다. 원본 테이블과 거의 차이가 없을을 알 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/24.png" alt="myimg"></p>
-<Br>
-<br>
 <p>물론, 간단한 테이블만 빠르게 복사할 때는 메모장에 복사하는 방법이 여전히 유효할지 모른다.</p>
-<br>
-<br>
 <hr>
-<br>
-<br>
 <h2 id="4-excel---ocr">#4 excel - OCR</h2>
 <p>MS365에서는 OCR 기능을 활용해서 이미지를 데이터화 하는 기능이 있다. 역시, MS의 AI는 갑자기 하늘에서 떨어진게 아니다.<br>
 회사에서 2019 버전을 사용하는 관계로, 해당 기능은 없다. 그래서 아직 몰랐던 것 같다. 그러나, 온라인 엑셀에 최신 기능이 어느정도 반영되어있을 것이라 생각해서 찾아본 결과 역시, 기능이 있었다.<br>
@@ -841,69 +781,39 @@
 <a href="https://www.office.com/launch/excel">https://www.office.com/launch/excel</a></p>
 <p>이제 PDF 표를 옮겨 보자. 아래와 같이 PDF 내 표가 있다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/25.jpg" alt="myimg"></p>
-<Br>
-<br>
 <p>스크린 샷을 통해 해당 표를 이미지로 만들어 준다. OCR(Optical Character Recognition)을 활용하므로 화질은 깨끗한 것이 좋겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/26.png" alt="myimg"></p>
-<Br>
-<br>
 <p>온라인 엑셀에 들어와서, 데이터 탭의 맨 왼쪽, 그림데이터를 클릭하면, 그림 선택 탐색기가 뜬다. 이미지를 선택하면, 작업의 90%는 끝난다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/27.png" alt="myimg"></p>
-<Br>
-<br>
 <p>엑셀의 우측에 해석한 결과가 뜨고, 제대로 입력이 되었는지 확인하고, 수정할 수 있는 창이 뜬다.<br>
 한글은 다소 깨지는 듯하고, 숫자는 거의 결과가 맞는 것 같다. 중요한 건 숫자니까&hellip;<br>
 해당 창에서 텍스트를 수정해도 되고, 불러와서 엑셀에서 수정을 해도 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/28.png" alt="myimg"></p>
-<Br>
-<br>
 <p>자 아래와 같이 데이터를 삽입해줬다. 로컬 엑셀로 복사를 해주고 작업을 진행하면 된다.<br>
 위에 기술했 듯, &lsquo;과기정쀼&rsquo; 나 &lsquo;행 안부&rsquo; 같이 띄어쓰기 혹은 전혀 이상한 말이 들어가 있다면 수정해주면 된다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/29.png" alt="myimg"></p>
-<Br>
-<br>
 <p>이미지 처리되어, 텍스트가 긁히지 않는 PDF에서 잘 써먹을 수 있을것 같다.<br>
 여담이지만, ai 서비스들도 많이 있으니, 시간될 때, 여러가지를 시도해 보는 것도 좋겠다.</p>
-<br>
-<br>
 <hr>
-<br>
-<br>
 <h2 id="5-notepad-csv">#5 notepad, csv</h2>
 <p>아래와 같은 표가 있다고 하면,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/30.png" alt="myimg"></p>
-<Br>
-<br>
 <p>그냥 카피-페이스트를 하면, 이런식으로 붙는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/31.png" alt="myimg"></p>
-<Br>
-<br>
 <p>자세히 보면, 컬럼이 공백으로 분리되어 있음을 알 수있다. 방법은 PDF 표복사 → 메모장 붙여넣기 → CSV파일 저장하기 → 엑셀에서 CSV불러오기 순서로 진행하면 된다.</p>
 <p>표를 복사해서 메모장에 넣어준다. 아래 회사명처럼 공백이 이상한곳에 있는 경우, 임의로 붙여줘야한다. 인공지능 따위는 없다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/32.png" alt="myimg"></p>
-<Br>
-<br>
 <p>CSV파일로 저장한다. 여기서 한글 인코딩 방식을 잘 봐둔다. UTF-8이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/33.png" alt="myimg"></p>
-<Br>
-<br>
 <p>엑셀 데이터 탭에서, 텍스트/CSV 메뉴를 눌러주자.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/34.png" alt="myimg"></p>
-<Br>
-<br>
 <p>엑셀 버전마다 보이는 창이 다를 수 있다. 아래 창은 2019버전이다. 인코딩방식(파일 원본)을 UTF-8로, 구분기호를 공백으로 해준다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/35.png" alt="myimg"></p>
-<Br>
-<br>
 <p>다 된거라 할수 있다. 로드 버튼을 눌러 불러오거나 데이터변환 버튼을 통해 파워쿼리를 실행할 수 있다. 문제가 없다면 로드 버튼을 누르자. 로드 버튼의 옵션을 통해 불러올 방식을 정할 수 있다.<br>
 기본 값은 데이터표이다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/36.png" alt="myimg"></p>
-<Br>
-<br>
 <p>데이터 표가 완성됐다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/37.png" alt="myimg"></p>
-<Br>
-<br>
 <p>끝.</p>
 
         
