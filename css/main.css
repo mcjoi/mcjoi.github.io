@@ -817,6 +817,130 @@ ul li::marker {
   color: var(--muted);
 }
 
+.now-editor {
+  max-width: 980px;
+  margin: 0 auto 72px;
+  padding: 0 20px;
+}
+
+.now-editor-gate,
+.now-editor-panel {
+  border-top: 1px solid var(--line-gray-muted);
+  padding-top: 18px;
+}
+
+.now-editor-gate {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.now-editor-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.now-editor-panel[hidden],
+.now-editor-gate[hidden] {
+  display: none;
+}
+
+.now-editor-label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.now-editor-input,
+.now-editor-textarea {
+  width: 100%;
+  border: 1px solid var(--line-gray-muted);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+}
+
+.now-editor-input {
+  max-width: 220px;
+  height: 40px;
+  padding: 0 11px;
+}
+
+.now-editor-textarea {
+  min-height: 112px;
+  padding: 11px;
+  resize: vertical;
+}
+
+.now-editor-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line-gray-muted);
+  border-radius: 8px;
+  background: var(--surface-3);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.now-editor-btn:hover,
+.now-editor-item button:hover {
+  border-color: var(--heading-accent);
+  color: var(--heading-accent);
+}
+
+.now-editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.now-editor-status,
+.now-editor-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.now-editor-stored {
+  display: grid;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.now-editor-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-gray-muted);
+}
+
+.now-editor-item time {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.now-editor-item p {
+  margin: 4px 0 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.now-editor-item button {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--line-gray-muted);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
 .grid {
   max-width: 1200px;
   margin: 0 auto;
