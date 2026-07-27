@@ -1,5 +1,5 @@
 (function() {
-  const API_ENDPOINT = 'https://sunnybong-python-api.onrender.com/api/now';
+  const API_ENDPOINT = 'https://pserver-w4e1.onrender.com/api/now';
   const DATA_URL = '/now/now.json';
   const PASSWORD = '9680';
   const DEFAULT_ITEMS = [
@@ -229,7 +229,7 @@
             renderStored();
             setStatus('삭제했습니다.');
           } catch (error) {
-            setStatus(error.message);
+            setStatus(error.message === 'Failed to fetch' ? 'API 서버에 연결할 수 없습니다.' : error.message);
           }
         });
 
@@ -292,7 +292,7 @@
         renderStored();
         setStatus('저장했습니다.');
       } catch (error) {
-        setStatus(error.message);
+        setStatus(error.message === 'Failed to fetch' ? 'API 서버에 연결할 수 없습니다.' : error.message);
       }
     });
   };
