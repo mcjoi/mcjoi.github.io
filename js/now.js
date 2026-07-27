@@ -1,7 +1,6 @@
 (function() {
-  const STORAGE_KEY = 'sunnybong.now.items';
-  const EDITS_KEY = 'sunnybong.now.edits';
-  const DELETED_KEY = 'sunnybong.now.deleted';
+  const API_ENDPOINT = 'https://sunnybong-python-api.onrender.com/api/now';
+  const DATA_URL = '/now/now.json';
   const PASSWORD = '9680';
   const DEFAULT_ITEMS = [
     {
@@ -26,68 +25,13 @@
     }
   ];
 
-  const readFallbackItems = () => {
-    const data = document.getElementById('now-data');
-    if (!data) return DEFAULT_ITEMS;
-    try {
-      let parsed = JSON.parse(data.textContent || '[]');
-      if (typeof parsed === 'string') {
-        parsed = JSON.parse(parsed || '[]');
-      }
-      return Array.isArray(parsed) ? parsed : [];
-    } catch (error) {
-      return DEFAULT_ITEMS;
-    }
-  };
-
-  const readStoredItems = () => {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-      return Array.isArray(parsed) ? parsed : [];
-    } catch (error) {
-      return [];
-    }
-  };
-
-  const writeStoredItems = (items) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-  };
-
-  const readEdits = () => {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(EDITS_KEY) || '{}');
-      return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
-    } catch (error) {
-      return {};
-    }
-  };
-
-  const writeEdits = (edits) => {
-    localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
-  };
-
-  const readDeletedKeys = () => {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(DELETED_KEY) || '[]');
-      return Array.isArray(parsed) ? parsed : [];
-    } catch (error) {
-      return [];
-    }
-  };
-
-  const writeDeletedKeys = (keys) => {
-    localStorage.setItem(DELETED_KEY, JSON.stringify(keys));
-  };
+  let nowItems = DEFAULT_ITEMS;
+  let editingIndex = -1;
 
   const normalizeItem = (item) => ({
     date: String(item.date || '').slice(0, 10),
     text: String(item.text || '').trim()
   });
-
-  const getItemKey = (item) => {
-    const normalized = normalizeItem(item);
-    return `${normalized.date}\n${normalized.text}`;
-  };
 
   const sortItems = (items) => {
     return items
@@ -96,49 +40,8 @@
       .sort((a, b) => b.date.localeCompare(a.date));
   };
 
-  const sortManagedItems = (items) => {
-    return items
-      .map((item) => ({
-        ...item,
-        ...normalizeItem(item)
-      }))
-      .filter((item) => item.date && item.text)
-      .sort((a, b) => b.date.localeCompare(a.date));
-  };
-
-  const getManagedItems = () => {
-    const edits = readEdits();
-    const deleted = new Set(readDeletedKeys());
-    const stored = sortItems(readStoredItems()).map((item) => ({
-      date: item.date,
-      text: item.text,
-      key: getItemKey(item),
-      source: 'stored'
-    }));
-    const fallback = sortItems(readFallbackItems())
-      .map((item) => {
-        const key = getItemKey(item);
-        const edited = edits[key] ? normalizeItem(edits[key]) : item;
-        return {
-          date: edited.date,
-          text: edited.text,
-          key,
-          source: 'default'
-        };
-      })
-      .filter((item) => !deleted.has(item.key));
-
-    return sortManagedItems([...stored, ...fallback]);
-  };
-
-  const getItems = () => {
-    const seen = new Set();
-    return getManagedItems().filter((item) => {
-      const key = getItemKey(item);
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+  const setItems = (items) => {
+    nowItems = sortItems(items);
   };
 
   const appendLinkedText = (target, text) => {
@@ -168,7 +71,7 @@
   const renderList = () => {
     document.querySelectorAll('[data-now-list]').forEach((list) => {
       const limit = Number(list.dataset.nowLimit || 0);
-      const items = limit > 0 ? getItems().slice(0, limit) : getItems();
+      const items = limit > 0 ? nowItems.slice(0, limit) : nowItems;
       list.replaceChildren();
 
       if (!items.length) {
@@ -198,12 +101,46 @@
     });
   };
 
+  const loadItems = async () => {
+    try {
+      const response = await fetch(`${DATA_URL}?v=${Date.now()}`, {
+        cache: 'no-store'
+      });
+      if (!response.ok) throw new Error('now.json load failed');
+      const data = await response.json();
+      setItems(Array.isArray(data.items) ? data.items : data);
+    } catch (error) {
+      setItems(DEFAULT_ITEMS);
+    }
+    renderList();
+  };
+
   const formatLocalDate = () => {
     const date = new Date();
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
+  };
+
+  const saveRemoteItems = async (password, items) => {
+    const response = await fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        password,
+        items: sortItems(items)
+      })
+    });
+
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(payload.error || '저장에 실패했습니다.');
+    }
+
+    return Array.isArray(payload.items) ? payload.items : items;
   };
 
   const setupEditor = () => {
@@ -219,18 +156,23 @@
     const save = editor.querySelector('[data-now-save]');
     const status = editor.querySelector('[data-now-status]');
     const storedList = editor.querySelector('[data-now-stored]');
-    let editingItem = null;
 
     const setStatus = (message) => {
       if (status) status.textContent = message;
     };
 
+    const resetForm = () => {
+      editingIndex = -1;
+      if (save) save.textContent = '저장';
+      if (date) date.value = formatLocalDate();
+      if (text) text.value = '';
+    };
+
     const renderStored = () => {
       if (!storedList) return;
-      const items = getManagedItems();
       storedList.replaceChildren();
 
-      if (!items.length) {
+      if (!nowItems.length) {
         const empty = document.createElement('p');
         empty.className = 'now-editor-empty';
         empty.textContent = '관리할 항목이 없습니다.';
@@ -238,7 +180,7 @@
         return;
       }
 
-      items.forEach((item) => {
+      nowItems.forEach((item, index) => {
         const row = document.createElement('div');
         row.className = 'now-editor-item';
 
@@ -258,7 +200,7 @@
         edit.type = 'button';
         edit.textContent = '수정';
         edit.addEventListener('click', () => {
-          editingItem = item;
+          editingIndex = index;
           if (date) date.value = item.date;
           if (text) {
             text.value = item.text;
@@ -271,24 +213,24 @@
         const remove = document.createElement('button');
         remove.type = 'button';
         remove.textContent = '삭제';
-        remove.addEventListener('click', () => {
-          if (item.source === 'stored') {
-            writeStoredItems(readStoredItems().filter((storedItem) => getItemKey(storedItem) !== item.key));
-          } else {
-            const deleted = new Set(readDeletedKeys());
-            const edits = readEdits();
-            deleted.add(item.key);
-            delete edits[item.key];
-            writeDeletedKeys(Array.from(deleted));
-            writeEdits(edits);
+        remove.addEventListener('click', async () => {
+          if (!password || password.value !== PASSWORD) {
+            setStatus('비밀번호가 맞지 않습니다.');
+            return;
           }
-          editingItem = null;
-          if (save) save.textContent = '저장';
-          if (date) date.value = formatLocalDate();
-          if (text) text.value = '';
-          renderStored();
-          renderList();
-          setStatus('삭제했습니다.');
+
+          const next = nowItems.filter((_, itemIndex) => itemIndex !== index);
+          setStatus('삭제 저장 중...');
+          try {
+            const saved = await saveRemoteItems(password.value, next);
+            setItems(saved);
+            resetForm();
+            renderList();
+            renderStored();
+            setStatus('삭제했습니다.');
+          } catch (error) {
+            setStatus(error.message);
+          }
         });
 
         actions.appendChild(edit);
@@ -299,7 +241,7 @@
       });
     };
 
-    if (date) date.value = formatLocalDate();
+    resetForm();
 
     if (unlock) unlock.addEventListener('click', () => {
       if (!password || password.value !== PASSWORD) {
@@ -318,7 +260,12 @@
       if (event.key === 'Enter' && unlock) unlock.click();
     });
 
-    if (save) save.addEventListener('click', () => {
+    if (save) save.addEventListener('click', async () => {
+      if (!password || password.value !== PASSWORD) {
+        setStatus('비밀번호가 맞지 않습니다.');
+        return;
+      }
+
       const item = normalizeItem({
         date: date ? date.value : '',
         text: text ? text.value : ''
@@ -329,32 +276,26 @@
         return;
       }
 
-      if (editingItem && editingItem.source === 'default') {
-        const edits = readEdits();
-        edits[editingItem.key] = item;
-        writeEdits(edits);
-      } else if (editingItem && editingItem.source === 'stored') {
-        const next = readStoredItems().map((storedItem) => (
-          getItemKey(storedItem) === editingItem.key ? item : storedItem
-        ));
-        writeStoredItems(sortItems(next));
+      const next = nowItems.slice();
+      if (editingIndex >= 0) {
+        next[editingIndex] = item;
       } else {
-        const deleted = new Set(readDeletedKeys());
-        deleted.delete(getItemKey(item));
-        writeDeletedKeys(Array.from(deleted));
-        writeStoredItems(sortItems([item, ...readStoredItems()]));
+        next.unshift(item);
       }
 
-      editingItem = null;
-      if (save) save.textContent = '저장';
-      if (date) date.value = formatLocalDate();
-      if (text) text.value = '';
-      renderStored();
-      renderList();
-      setStatus('저장했습니다.');
+      setStatus('저장 중...');
+      try {
+        const saved = await saveRemoteItems(password.value, next);
+        setItems(saved);
+        resetForm();
+        renderList();
+        renderStored();
+        setStatus('저장했습니다.');
+      } catch (error) {
+        setStatus(error.message);
+      }
     });
   };
 
-  renderList();
-  setupEditor();
+  loadItems().then(setupEditor);
 })();
