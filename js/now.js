@@ -1,5 +1,7 @@
 (function() {
   const STORAGE_KEY = 'sunnybong.now.items';
+  const EDITS_KEY = 'sunnybong.now.edits';
+  const DELETED_KEY = 'sunnybong.now.deleted';
   const PASSWORD = '9680';
   const DEFAULT_ITEMS = [
     {
@@ -51,10 +53,41 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   };
 
+  const readEdits = () => {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(EDITS_KEY) || '{}');
+      return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+    } catch (error) {
+      return {};
+    }
+  };
+
+  const writeEdits = (edits) => {
+    localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
+  };
+
+  const readDeletedKeys = () => {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(DELETED_KEY) || '[]');
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      return [];
+    }
+  };
+
+  const writeDeletedKeys = (keys) => {
+    localStorage.setItem(DELETED_KEY, JSON.stringify(keys));
+  };
+
   const normalizeItem = (item) => ({
     date: String(item.date || '').slice(0, 10),
     text: String(item.text || '').trim()
   });
+
+  const getItemKey = (item) => {
+    const normalized = normalizeItem(item);
+    return `${normalized.date}\n${normalized.text}`;
+  };
 
   const sortItems = (items) => {
     return items
@@ -63,10 +96,45 @@
       .sort((a, b) => b.date.localeCompare(a.date));
   };
 
+  const sortManagedItems = (items) => {
+    return items
+      .map((item) => ({
+        ...item,
+        ...normalizeItem(item)
+      }))
+      .filter((item) => item.date && item.text)
+      .sort((a, b) => b.date.localeCompare(a.date));
+  };
+
+  const getManagedItems = () => {
+    const edits = readEdits();
+    const deleted = new Set(readDeletedKeys());
+    const stored = sortItems(readStoredItems()).map((item) => ({
+      date: item.date,
+      text: item.text,
+      key: getItemKey(item),
+      source: 'stored'
+    }));
+    const fallback = sortItems(readFallbackItems())
+      .map((item) => {
+        const key = getItemKey(item);
+        const edited = edits[key] ? normalizeItem(edits[key]) : item;
+        return {
+          date: edited.date,
+          text: edited.text,
+          key,
+          source: 'default'
+        };
+      })
+      .filter((item) => !deleted.has(item.key));
+
+    return sortManagedItems([...stored, ...fallback]);
+  };
+
   const getItems = () => {
     const seen = new Set();
-    return sortItems([...readStoredItems(), ...readFallbackItems()]).filter((item) => {
-      const key = `${item.date}\n${item.text}`;
+    return getManagedItems().filter((item) => {
+      const key = getItemKey(item);
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -151,6 +219,7 @@
     const save = editor.querySelector('[data-now-save]');
     const status = editor.querySelector('[data-now-status]');
     const storedList = editor.querySelector('[data-now-stored]');
+    let editingItem = null;
 
     const setStatus = (message) => {
       if (status) status.textContent = message;
@@ -158,18 +227,18 @@
 
     const renderStored = () => {
       if (!storedList) return;
-      const stored = sortItems(readStoredItems());
+      const items = getManagedItems();
       storedList.replaceChildren();
 
-      if (!stored.length) {
+      if (!items.length) {
         const empty = document.createElement('p');
         empty.className = 'now-editor-empty';
-        empty.textContent = '브라우저에 저장된 작성 항목이 없습니다.';
+        empty.textContent = '관리할 항목이 없습니다.';
         storedList.appendChild(empty);
         return;
       }
 
-      stored.forEach((item, index) => {
+      items.forEach((item) => {
         const row = document.createElement('div');
         row.className = 'now-editor-item';
 
@@ -182,20 +251,50 @@
         body.appendChild(itemDate);
         body.appendChild(itemText);
 
+        const actions = document.createElement('div');
+        actions.className = 'now-editor-item-actions';
+
+        const edit = document.createElement('button');
+        edit.type = 'button';
+        edit.textContent = '수정';
+        edit.addEventListener('click', () => {
+          editingItem = item;
+          if (date) date.value = item.date;
+          if (text) {
+            text.value = item.text;
+            text.focus();
+          }
+          if (save) save.textContent = '수정 저장';
+          setStatus('수정할 내용을 입력해 주세요.');
+        });
+
         const remove = document.createElement('button');
         remove.type = 'button';
         remove.textContent = '삭제';
         remove.addEventListener('click', () => {
-          const next = sortItems(readStoredItems());
-          next.splice(index, 1);
-          writeStoredItems(next);
+          if (item.source === 'stored') {
+            writeStoredItems(readStoredItems().filter((storedItem) => getItemKey(storedItem) !== item.key));
+          } else {
+            const deleted = new Set(readDeletedKeys());
+            const edits = readEdits();
+            deleted.add(item.key);
+            delete edits[item.key];
+            writeDeletedKeys(Array.from(deleted));
+            writeEdits(edits);
+          }
+          editingItem = null;
+          if (save) save.textContent = '저장';
+          if (date) date.value = formatLocalDate();
+          if (text) text.value = '';
           renderStored();
           renderList();
           setStatus('삭제했습니다.');
         });
 
+        actions.appendChild(edit);
+        actions.appendChild(remove);
         row.appendChild(body);
-        row.appendChild(remove);
+        row.appendChild(actions);
         storedList.appendChild(row);
       });
     };
@@ -230,8 +329,25 @@
         return;
       }
 
-      const items = sortItems([item, ...readStoredItems()]);
-      writeStoredItems(items);
+      if (editingItem && editingItem.source === 'default') {
+        const edits = readEdits();
+        edits[editingItem.key] = item;
+        writeEdits(edits);
+      } else if (editingItem && editingItem.source === 'stored') {
+        const next = readStoredItems().map((storedItem) => (
+          getItemKey(storedItem) === editingItem.key ? item : storedItem
+        ));
+        writeStoredItems(sortItems(next));
+      } else {
+        const deleted = new Set(readDeletedKeys());
+        deleted.delete(getItemKey(item));
+        writeDeletedKeys(Array.from(deleted));
+        writeStoredItems(sortItems([item, ...readStoredItems()]));
+      }
+
+      editingItem = null;
+      if (save) save.textContent = '저장';
+      if (date) date.value = formatLocalDate();
       if (text) text.value = '';
       renderStored();
       renderList();

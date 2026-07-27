@@ -930,6 +930,11 @@ ul li::marker {
   overflow-wrap: anywhere;
 }
 
+.now-editor-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
 .now-editor-item button {
   min-height: 34px;
   padding: 0 10px;
