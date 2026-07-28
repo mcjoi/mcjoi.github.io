@@ -42,7 +42,7 @@
   --shadow: rgba(0, 0, 0, 0.35);
   --shadow-strong: rgba(0, 0, 0, 0.45);
   --heading-accent: #fbcfd0;
-  --post-h3-accent: #ffb45c;
+  --post-h3-accent: #cfe5fb;
   --chip-bg: color-mix(in srgb, var(--heading-accent) 14%, transparent);
   --chip-text: var(--heading-accent);
   --chip-border: color-mix(in srgb, var(--heading-accent) 42%, transparent);
