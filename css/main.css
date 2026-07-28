@@ -1380,6 +1380,34 @@ html.gallery-unlocked .gallery-gate {
   }
 }
 
+.kakao-ad-slot {
+  margin: 24px auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.kakao-ad-slot--pc {
+  width: 728px;
+  height: 90px;
+}
+
+.kakao-ad-slot--mobile {
+  display: none;
+  width: 320px;
+  height: 100px;
+}
+
+@media (max-width: 640px) {
+  .kakao-ad-slot--pc {
+    display: none;
+  }
+
+  .kakao-ad-slot--mobile {
+    display: flex;
+  }
+}
+
 .post-header {
   margin-bottom: 18px;
   max-width: 980px;
