@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://sunnybong.xyz/tag/work/" />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=2367f91e64" />
+    <link rel="stylesheet" href="/css/main.css?v=85f751558b" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -876,19 +876,23 @@
           toggle.setAttribute('aria-expanded', 'false');
           toggle.textContent = 'Show';
 
-          header.appendChild(title);
-          header.appendChild(toggle);
-
-          const body = document.createElement('div');
-          body.className = 'code-block-body';
-          body.appendChild(block.cloneNode(true));
-
           const copy = document.createElement('button');
           copy.className = 'code-block-copy';
           copy.type = 'button';
           copy.setAttribute('aria-label', 'Copy code');
           copy.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z"/></svg>';
-          body.appendChild(copy);
+
+          const actions = document.createElement('div');
+          actions.className = 'code-block-actions';
+          actions.appendChild(toggle);
+          actions.appendChild(copy);
+
+          header.appendChild(title);
+          header.appendChild(actions);
+
+          const body = document.createElement('div');
+          body.className = 'code-block-body';
+          body.appendChild(block.cloneNode(true));
 
           wrapper.appendChild(header);
           wrapper.appendChild(body);

@@ -1723,17 +1723,19 @@ html.gallery-unlocked .gallery-gate {
 
 .code-block-body {
   padding: 0;
-  position: relative;
 }
 
 .code-block.collapsed .code-block-body {
   display: none;
 }
 
+.code-block-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .code-block-copy {
-  position: absolute;
-  top: 10px;
-  right: 10px;
   width: 28px;
   height: 28px;
   border-radius: 8px;
@@ -1781,20 +1783,20 @@ html.gallery-unlocked .gallery-gate {
   font-size: 14px;
   background: #212121;
   display: inline-block;
-  padding: 1px 4px;
-  padding-inline: 4px;
-  padding-left: 4px !important;
-  padding-right: 4px !important;
-  border-radius: 4px;
+  padding: 1px 10px;
+  padding-inline: 10px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  border-radius: 8px;
 }
 
 .post-content code:not([class]),
 .post-content p > code,
 .post-content li > code,
 .post-content td > code {
-  padding-left: 4px !important;
-  padding-right: 4px !important;
-  padding-inline: 4px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-inline: 10px !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
