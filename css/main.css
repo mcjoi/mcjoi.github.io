@@ -1565,6 +1565,10 @@ html.gallery-unlocked .gallery-gate {
   margin-top: 108px;
 }
 
+.post-content h2:first-child {
+  margin-top: 20px;
+}
+
 .post-content h3 {
   font-size: 20px;
   margin-top: 108px;
