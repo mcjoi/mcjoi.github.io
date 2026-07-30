@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Category on shaaaaallow dive</title>
+    <title>category on shaaaaallow dive</title>
     <link>https://sunnybong.xyz/category/</link>
-    <description>Recent content in Category on shaaaaallow dive</description>
+    <description>Recent content in category on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sunnybong.xyz/category/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Life</title>
+      <title>life</title>
       <link>https://sunnybong.xyz/category/life/</link>
       <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://sunnybong.xyz/category/life/</guid>
       <description></description>
     </item>
     <item>
-      <title>Gear</title>
+      <title>gear</title>
       <link>https://sunnybong.xyz/category/gear/</link>
       <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://sunnybong.xyz/category/gear/</guid>
       <description></description>
     </item>
     <item>
-      <title>Office</title>
+      <title>office</title>
       <link>https://sunnybong.xyz/category/office/</link>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://sunnybong.xyz/category/office/</guid>
       <description></description>
     </item>
     <item>
-      <title>Dev</title>
+      <title>dev</title>
       <link>https://sunnybong.xyz/category/dev/</link>
       <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
       <guid>https://sunnybong.xyz/category/dev/</guid>
