@@ -664,12 +664,22 @@
 <script>
   (function() {
     
-    const PASS = '9680';
+    
+    
+    const PASS_HASH = '47b61a126c54a6b117c3fc4ea2023c6a8637572f30ca97c179279cf607f156d0';
     const KEY = 'gallery_gate_ok_v1';
     const FAIL_KEY = 'gallery_gate_fail_v1';
     const MAX_FAILS = 3;
     
     const REDIRECT_TO = '/';
+
+    const sha256Hex = async (text) => {
+      const data = new TextEncoder().encode(text);
+      const digest = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(digest))
+        .map((b) => b.toString(16).padStart(2, '0'))
+        .join('');
+    };
 
     const html = document.documentElement;
     const gate = document.querySelector('[data-gallery-gate]');
@@ -700,11 +710,12 @@
     setLocked();
     if (input) input.focus();
 
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!input) return;
       const val = (input.value || '').trim();
-      if (val === PASS) {
+      const valHash = await sha256Hex(val);
+      if (valHash === PASS_HASH) {
         if (error) error.textContent = '';
         setUnlocked();
         return;
