@@ -2017,6 +2017,121 @@ html.gallery-unlocked .gallery-gate {
   color: #8f8f8f;
 }
 
+.tool-writer {
+  max-width: 980px;
+  margin: 0 auto 60px;
+  padding: 0 20px 40px;
+}
+
+.tool-writer-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.tool-writer-panel {
+  background: var(--surface-2);
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.tool-writer-panel-inner {
+  padding: 18px;
+}
+
+.tool-writer-meta {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 10px 12px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.tool-writer-meta label {
+  align-self: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.tool-writer-meta input {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tool-writer-cover-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.tool-writer-cover-presets .tool-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.tool-writer-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.tool-writer-toolbar .tool-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.tool-writer-body {
+  width: 100%;
+  min-height: 420px;
+  resize: vertical;
+  background: #141414;
+  color: #ffffff;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 14px;
+  font-family: "Hack", "IBMPlexSansKR-Regular", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+}
+
+.tool-writer-body:focus {
+  outline: 1px solid var(--accent);
+}
+
+.wr-empty-hint {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 16px 18px;
+  color: var(--muted);
+  border: 1px dashed var(--outline);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.wr-shortcode-warn {
+  margin: 0 0 40px;
+  padding: 10px 14px;
+  border: 1px dashed var(--danger);
+  border-radius: 8px;
+  color: var(--danger);
+  font-size: 14px;
+}
+
 
 /* Theme-aware overrides */
 .appbar,

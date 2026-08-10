@@ -6,8 +6,15 @@
     <description>Recent content in tools on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sunnybong.xyz/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>글쓰기 도우미</title>
+      <link>https://sunnybong.xyz/tool/writer/</link>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://sunnybong.xyz/tool/writer/</guid>
+      <description>&lt;p&gt;frontmatter를 입력하고 마크다운으로 본문을 작성한 뒤 &amp;ldquo;미리보기&amp;rdquo; 버튼을 누르면, 실제 포스트와 동일한 스타일로 확인할 수 있습니다. 완성되면 .md로 다운로드하거나 클립보드로 복사해서 그대로 포스트에 사용하세요.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>EXIF Resize Tool</title>
       <link>https://sunnybong.xyz/tool/exif/</link>
