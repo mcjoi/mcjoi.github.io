@@ -2106,6 +2106,10 @@ html.gallery-unlocked .gallery-gate {
   border-radius: 8px;
 }
 
+.tool-writer-emoji-picker[hidden] {
+  display: none;
+}
+
 .tw-emoji-btn {
   background: transparent;
   border: 1px solid transparent;
