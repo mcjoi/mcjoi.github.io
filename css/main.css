@@ -720,6 +720,11 @@ ul li::marker {
   font-size: 14px;
 }
 
+.page-header--sr-only {
+  padding: 0;
+  margin: 0;
+}
+
 .now-preview,
 .now-page {
   max-width: 1200px;
@@ -1236,6 +1241,18 @@ html.gallery-unlocked .gallery-gate {
 
 .hidden {
   display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .no-scroll {
