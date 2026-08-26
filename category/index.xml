@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>category on shaaaaallow dive</title>
-    <link>https://sunnybong.xyz/category/</link>
+    <link>https://mcjoi.github.io/category/</link>
     <description>Recent content in category on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Tue, 18 Aug 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sunnybong.xyz/category/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcjoi.github.io/category/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gear</title>
-      <link>https://sunnybong.xyz/category/gear/</link>
+      <link>https://mcjoi.github.io/category/gear/</link>
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://sunnybong.xyz/category/gear/</guid>
+      <guid>https://mcjoi.github.io/category/gear/</guid>
       <description></description>
     </item>
     <item>
       <title>life</title>
-      <link>https://sunnybong.xyz/category/life/</link>
+      <link>https://mcjoi.github.io/category/life/</link>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://sunnybong.xyz/category/life/</guid>
+      <guid>https://mcjoi.github.io/category/life/</guid>
       <description></description>
     </item>
     <item>
       <title>office</title>
-      <link>https://sunnybong.xyz/category/office/</link>
+      <link>https://mcjoi.github.io/category/office/</link>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>https://sunnybong.xyz/category/office/</guid>
+      <guid>https://mcjoi.github.io/category/office/</guid>
       <description></description>
     </item>
     <item>
       <title>dev</title>
-      <link>https://sunnybong.xyz/category/dev/</link>
+      <link>https://mcjoi.github.io/category/dev/</link>
       <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://sunnybong.xyz/category/dev/</guid>
+      <guid>https://mcjoi.github.io/category/dev/</guid>
       <description></description>
     </item>
   </channel>
