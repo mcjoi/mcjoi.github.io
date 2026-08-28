@@ -6,8 +6,15 @@
     <description>Recent content in Home on shaaaaallow dive</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcjoi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pdf 파일 한장씩 쪼개서 저장하기</title>
+      <link>https://mcjoi.github.io/post/02993/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://mcjoi.github.io/post/02993/</guid>
+      <description>&lt;h2 id=&#34;스캔&#34;&gt;스캔&lt;/h2&gt;&#xA;&lt;p&gt;오늘 회사에서 서류를 여러장 스캔하는데, 각각 페이지마다 다른 곳으로 메일을 발송해야하는 일이었다. 스캔을 하고 보니, 한개의 파일로 바인딩이 되어있어서, acrobat으로 작업을 할까 하다가, 그냥 chatgpt 시켜서 스크립트를 짰더니, 음&amp;hellip; 뭐 나쁘지 않다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pypdf&#34;&gt;pypdf&lt;/h2&gt;&#xA;&lt;p&gt;뭔들 없겠느냐만, python 패키지는 찾는것도 일이다. AI덕분에 이제는 그냥 생각만 해도 되니 꽤나 편하다.&lt;/p&gt;&#xA;&lt;p&gt;당장 써야하는 관계로 설계랄 것 없이 바로 돌릴 수 있는 형태로 만들었다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;여러-페이지의-pdf를-각-페이지-기준으로-저장&#34;&gt;여러 페이지의 pdf를 각 페이지 기준으로 저장&lt;/h3&gt;&#xA;&lt;p&gt;내가 써먹을 스크립트이다. 뭐 향후 사용을 위해 생각을 하자만 한도 끝도 없지만, 일단 필요한 건 바로 쓰기 편한 형태로 간다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Trusting UGREEN Was a Mistake.</title>
       <link>https://mcjoi.github.io/post/05860/</link>
