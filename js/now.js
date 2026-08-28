@@ -5,7 +5,7 @@
   const DEFAULT_ITEMS = [
     {
       date: '2026-07-01',
-      text: 'AI로 Chrome Extension을 만들어 봤다. https://mcjoi.github.io/post/01844'
+      text: 'AI로 Chrome Extension을 만들어 봤다. https://sunnybong.xyz/post/01844'
     },
     {
       date: '2026-07-14',
@@ -17,7 +17,7 @@
     },
     {
       date: '2026-07-22',
-      text: 'viltrox 28mm F4.5 렌즈를 샀다. https://mcjoi.github.io/post/05866'
+      text: 'viltrox 28mm F4.5 렌즈를 샀다. https://sunnybong.xyz/post/05866'
     },
     {
       date: '2026-07-24',
