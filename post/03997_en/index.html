@@ -14,7 +14,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=8443fb8a35" />
+    <link rel="stylesheet" href="/css/main.css?v=c8ff95684b" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -34,6 +34,10 @@
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -704,26 +708,82 @@
     
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
         
         
-          <h2 id="what-is-it">What is it?</h2>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="what-is-it">What is it?</h2>
 <p>I was tired of digging for folders and files, so I made a shortcut app.<br>
 You can do this with Windows shortcuts or tools like Rainmeter, but they&rsquo;re too broad for my use.<br>
 So I rebuilt it with Flutter desktop.</p>
-<h2 id="structure">Structure</h2>
+
+            
+          
+            
+              
+              <h2 id="structure">Structure</h2>
 <p>Goal: a floating panel with program launches, site shortcuts, and folder shortcuts.<br>
 Windows shortcuts are enough, but mine kept disappearing when I cleaned the desktop.<br>
 So I made this.</p>
 <p class="text-box">✶ No input UI. Edit the accompanying <code>json</code> file instead.<br>
 ✶ Fixed width. Height grows with the number of bookmarks.<br>
 ✶ Use icons, but show a hover tooltip so I remember what each one is.</p>
-<h2 id="package">Package</h2>
+
+            
+          
+            
+              
+              <h2 id="package">Package</h2>
 <p>Flutter Windows has matured enough to build an exe without much trouble.<br>
 Packages I used:</p>
-<h2 id="window-manager">window manager</h2>
+
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+                </div>
+              
+              <h2 id="window-manager">window manager</h2>
 <p>I picked the first package on pub.dev for controlling the window.<br>
 Not sure if it&rsquo;s the best, but it does what I need.</p>
 <p><code>init</code></p>
@@ -755,7 +815,12 @@ Not sure if it&rsquo;s the best, but it does what I need.</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> windowManager.show();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> windowManager.focus();
 </span></span><span style="display:flex;"><span>  });
-</span></span></code></pre></div><h2 id="flutter_acrylic">flutter_acrylic</h2>
+</span></span></code></pre></div>
+            
+          
+            
+              
+              <h2 id="flutter_acrylic">flutter_acrylic</h2>
 <p>I wanted some visual style, so I used acrylic.<br>
 But the window border kept misaligning by ~5px, not sure if it&rsquo;s Windows 10 or me.<br>
 So I ended up using transparent only.<br>
@@ -768,20 +833,48 @@ It looked fine on Windows 10, but Windows 11 doesn&rsquo;t seem to like it.</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// color: fc.Colors.black.withAlpha(200),
 </span></span></span><span style="display:flex;"><span>    dark: <span style="color:#66d9ef">true</span>,
 </span></span><span style="display:flex;"><span>  );
-</span></span></code></pre></div><h2 id="system_tray">system_tray</h2>
+</span></span></code></pre></div>
+            
+          
+            
+              
+              <h2 id="system_tray">system_tray</h2>
 <p>Because the window is always on top, it can get in the way.<br>
 I used system_tray to minimize it into the tray when needed.<br>
 The sample code works out of the box.</p>
-<h2 id="result">Result</h2>
+
+            
+          
+            
+              
+              <h2 id="result">Result</h2>
 <p>Using a json file for bookmarks was convenient at first.<br>
 But once the list grows and changes often, it gets annoying.<br>
 I&rsquo;ll need a settings page eventually.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03997/03997_desktop_bookmark.gif" alt="img"></p>
 <p>end.</p>
 
+            
+          
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     
@@ -859,12 +952,9 @@ I&rsquo;ll need a settings page eventually.</p>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
-    <div class="fab fab--quick">
-      <button class="fab-btn" type="button" aria-label="Open quick links" aria-expanded="false">
-        <span class="fab-preview" aria-hidden="true">
-          <img src="/icon/youtube.svg" alt="" />
-          <img src="/icon/instagram.svg" alt="" />
-        </span>
+    <div class="fab">
+      <button class="fab-btn" type="button" aria-label="Open quick menu" aria-expanded="false">
+        <span class="fab-plus" aria-hidden="true"></span>
       </button>
       <div class="fab-menu" aria-hidden="true">
         <a class="fab-item" href="https://www.youtube.com/channel/UCuHWXrgMa5vkGVNseVu03JQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" data-tooltip="YouTube">
@@ -873,17 +963,6 @@ I&rsquo;ll need a settings page eventually.</p>
         <a class="fab-item" href="https://www.instagram.com/mcjoi80/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-tooltip="Instagram">
           <img src="/icon/instagram.svg" alt="" />
         </a>
-      </div>
-    </div>
-    <div class="fab fab--tools">
-      <button class="fab-btn" type="button" aria-label="Open tools" aria-expanded="false">
-        <span class="fab-preview" aria-hidden="true">
-          <img src="/icon/writer.svg" alt="" />
-          <img src="/icon/exif.svg" alt="" />
-          <img src="/icon/gallery.svg" alt="" />
-        </span>
-      </button>
-      <div class="fab-menu" aria-hidden="true">
         <a class="fab-item" href="/tool/writer/" aria-label="글쓰기 도우미" data-tooltip="글쓰기 도우미">
           <img src="/icon/writer.svg" alt="" />
         </a>

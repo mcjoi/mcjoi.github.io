@@ -14,7 +14,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="shaaaaallow dive" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/css/main.css?v=8443fb8a35" />
+    <link rel="stylesheet" href="/css/main.css?v=c8ff95684b" />
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCBX55V1KD"></script>
     <script>
@@ -34,6 +34,10 @@
       }
     </script>
 
+    
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
+              crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -702,15 +706,45 @@
     
 
     
+      <div class="ad-slot ad-slot--body">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
+    
 
     <div class="post-content">
         
         
         
-          <h2 id="rust-instead-of-c">Rust instead of c++</h2>
+          
+          
+          
+            
+              
+            
+          
+            
+              
+              <h2 id="rust-instead-of-c">Rust instead of c++</h2>
 <p>I made a simple example to use a Rust DLL from Flutter instead of C++.<br>
 It reads the mouse position on Windows.</p>
-<h2 id="create-a-rust-project">Create a Rust project</h2>
+
+            
+          
+            
+              
+              <h2 id="create-a-rust-project">Create a Rust project</h2>
 <p>Create a library project.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cargo new mousepos --lib // --bin (cargo run)
 </span></span><span style="display:flex;"><span>cd mousepos
@@ -756,7 +790,28 @@ It reads the mouse position on Windows.</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Build the DLL and copy the file somewhere safe.</p>
-<h2 id="flutter-setup">Flutter setup</h2>
+
+            
+          
+            
+              
+                <div class="ad-slot ad-slot--body">
+                  
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="6643349525"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+                </div>
+              
+              <h2 id="flutter-setup">Flutter setup</h2>
 <p>Load the DLL.</p>
 <p><code>mousepos_ffi.dart</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:ffi&#39;</span>;
@@ -866,20 +921,48 @@ It reads the mouse position on Windows.</p>
 </span></span><span style="display:flex;"><span>    );
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="dll-location">DLL location</h2>
+</span></span></code></pre></div>
+            
+          
+            
+              
+              <h2 id="dll-location">DLL location</h2>
 <p class="text-box">build/windows/x64/runner/Debug<br>
 build/windows/x64/runner/Release</p>
 <p>Copy <code>mousepos.dll</code> into the folder next to the exe.<br>
 If the DLL is missing, the exe fails to load.</p>
-<h2 id="result">Result</h2>
+
+            
+          
+            
+              
+              <h2 id="result">Result</h2>
 <p>Compared to writing a C++ DLL, Rust felt less dependent on Visual Studio settings, and the code was much simpler.<br>
 Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/flutter/03995/01.webp" alt="img"></p>
 <p>end.</p>
 
+            
+          
         
       </div>
 
+    
+      <div class="ad-slot ad-slot--footer">
+        
+  
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7362089186642274"
+       data-ad-slot="2162488542"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+      </div>
     
 
     
@@ -957,12 +1040,9 @@ Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
 
     </main>
     <div class="bottom-spacer" aria-hidden="true"></div>
-    <div class="fab fab--quick">
-      <button class="fab-btn" type="button" aria-label="Open quick links" aria-expanded="false">
-        <span class="fab-preview" aria-hidden="true">
-          <img src="/icon/youtube.svg" alt="" />
-          <img src="/icon/instagram.svg" alt="" />
-        </span>
+    <div class="fab">
+      <button class="fab-btn" type="button" aria-label="Open quick menu" aria-expanded="false">
+        <span class="fab-plus" aria-hidden="true"></span>
       </button>
       <div class="fab-menu" aria-hidden="true">
         <a class="fab-item" href="https://www.youtube.com/channel/UCuHWXrgMa5vkGVNseVu03JQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube" data-tooltip="YouTube">
@@ -971,17 +1051,6 @@ Not sure how far I&rsquo;ll push it, though. (Rust and C++ are both hard.)</p>
         <a class="fab-item" href="https://www.instagram.com/mcjoi80/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-tooltip="Instagram">
           <img src="/icon/instagram.svg" alt="" />
         </a>
-      </div>
-    </div>
-    <div class="fab fab--tools">
-      <button class="fab-btn" type="button" aria-label="Open tools" aria-expanded="false">
-        <span class="fab-preview" aria-hidden="true">
-          <img src="/icon/writer.svg" alt="" />
-          <img src="/icon/exif.svg" alt="" />
-          <img src="/icon/gallery.svg" alt="" />
-        </span>
-      </button>
-      <div class="fab-menu" aria-hidden="true">
         <a class="fab-item" href="/tool/writer/" aria-label="글쓰기 도우미" data-tooltip="글쓰기 도우미">
           <img src="/icon/writer.svg" alt="" />
         </a>

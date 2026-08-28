@@ -443,10 +443,6 @@ ul li::marker {
   z-index: 40;
 }
 
-.fab--tools {
-  bottom: calc(30px + 72px + env(safe-area-inset-bottom));
-}
-
 .fab-btn {
   width: 56px;
   height: 56px;
@@ -460,40 +456,45 @@ ul li::marker {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
-.fab-preview {
-  display: grid;
-  grid-template-columns: repeat(2, 12px);
-  grid-template-rows: repeat(2, 12px);
-  gap: 6px;
+.fab-plus {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: block;
+  transition: transform 0.2s ease;
 }
 
-.fab-preview--single {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.fab-plus::before,
+.fab-plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--icon);
+  transform: translate(-50%, -50%);
 }
 
-.fab-preview img {
-  width: 12px;
-  height: 12px;
-  object-fit: contain;
-  border-radius: 3px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  filter: brightness(0) invert(1);
+.fab-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.fab.open .fab-plus {
+  transform: rotate(45deg);
 }
 
 .fab-menu {
   position: absolute;
-  right: 64px;
-  bottom: 6px;
+  right: 6px;
+  bottom: 64px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(10px);
+  transform: translateY(10px);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -525,9 +526,9 @@ ul li::marker {
 .fab-item[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 54px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 54px;
+  top: 50%;
+  transform: translate(6px, -50%);
   background: #121212;
   color: #f2f2f2;
   font-size: 12px;
@@ -542,12 +543,12 @@ ul li::marker {
 .fab-item[data-tooltip]::before {
   content: "";
   position: absolute;
-  bottom: 46px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px 5px 0 5px;
+  right: 46px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
   border-style: solid;
-  border-color: #121212 transparent transparent transparent;
+  border-color: transparent transparent transparent #121212;
   opacity: 0;
   transition: opacity 0.15s ease;
 }
@@ -555,6 +556,10 @@ ul li::marker {
 .fab-item[data-tooltip]:hover::after,
 .fab-item[data-tooltip]:hover::before {
   opacity: 1;
+}
+
+.fab-item[data-tooltip]:hover::after {
+  transform: translate(0, -50%);
 }
 
 .bottom-appbar {
@@ -2245,7 +2250,6 @@ html.gallery-unlocked .gallery-gate {
 }
 
 .social-link img,
-.fab-preview img,
 .fab-item img,
 .bottom-appbar-item img {
   filter: var(--icon-filter);
