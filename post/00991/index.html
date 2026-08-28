@@ -35,10 +35,6 @@
     </script>
 
     
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
-    
   </head>
   <body>
     <div class="appbar">
@@ -708,37 +704,12 @@
     
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="셀서식-표시형식-셀스타일">셀서식, 표시형식, 셀스타일</h2>
+          <h2 id="셀서식-표시형식-셀스타일">셀서식, 표시형식, 셀스타일</h2>
 <p>결국 같은 셀의 포맷팅이지만, 단어가 다르니, 개념을 살펴본다.</p>
 <ul class="text-box">
 <li>셀서식(cell format, format cells)</li>
@@ -758,40 +729,14 @@ Cell Styles (셀스타일)<br>
 └─ Custom Cell Styles (사용자정의 셀스타일)</li>
 </ul>
 <p>흔히 사용자정의 셀서식이라고 불리운 것은 사용자정의 표시형식이라고 해야 더 정확한 뜻인 셈이다. 응용 사례 위주로 살펴본다.</p>
-
-            
-          
-            
-              
-              <h2 id="사용자정의-표시형식">사용자정의 표시형식</h2>
+<h2 id="사용자정의-표시형식">사용자정의 표시형식</h2>
 <p>기존에는 몇가지 서식에 대하여, 매크로 버튼을 만들어 사용하고 있었다.<br>
 불행하게도 이는 <code>TEXT</code> 함수 안에 적용하기가 어려워&hellip; 같은 셀 안에 두개의 서식을 사용하기가 어렵다.</p>
 <p class="text-box">+114<br>
 (+2%)</p>
 <p><code>TEXT</code> 함수를 써서 간단하게 해결할 수 있기는 하지만, 매번 표시형식을 직접 적어주는 건 매우 귀찮은 일이다.<br>
 이 문제를 해결하기 위해 몇 가지 방법을 고민해 보았다.</p>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="1-vba로-mdf-만들기">#1 VBA로 MDF 만들기</h2>
+<h2 id="1-vba로-mdf-만들기">#1 VBA로 MDF 만들기</h2>
 <p>자주 쓰는 서식을 몇가지 <code>MDF</code> 로 저장해두고, 문자 값으로 반환하도록 하자.<br>
 숫자를 천단위나, 백만단위 등으로 표기하거나, 퍼센트를 기재해주는 방식이다. 양수나 음수를 구분할수 있도록 적어뒀다.</p>
 <p><code>sample.bas</code></p>
@@ -825,12 +770,7 @@ Cell Styles (셀스타일)<br>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Function</span>
 </span></span></code></pre></div><p>그런데 .. MDF를 사용자 함수를 <code>XLAM</code> 파일로 사용하더라도 내가 파일을 다른사람에게 전달을 하면 함수가 무용지물이 된다.<br>
 다른 방법을 찾아야 한다.</p>
-
-            
-          
-            
-              
-              <h2 id="2-이름정의로-서식-지정하기">#2 이름정의로 서식 지정하기</h2>
+<h2 id="2-이름정의로-서식-지정하기">#2 이름정의로 서식 지정하기</h2>
 <p>이름정의는 다재다능하다. 특히 불필요한 참조시트나 테이블을 생성하고 싶지 않을 때 유용한데.. 서식을 반환하는 이름정의를 걸어두면 찾기도 편하고, 불필요한 함수를 호출할 필요도 없다.</p>
 <p>사용하기는 무지 간단한데, 대상영역에 서식을 넣어주기만 하면 된다.</p>
 <p>문제는 위와 비슷하지만 다른데, 같은 파일을 다른 사람에게 넘겨줄때는 문제가 아니지만, 내가 새로운 파일을 사용할 떄는 또 이름정의를 해야하는 수고로움이 있다.<br>
@@ -891,12 +831,7 @@ Cell Styles (셀스타일)<br>
 <p>적용된 결과는 다음과 같다.<br>
 TEXT 함수이기 때문에 CHAR(10)과 함께 두줄을 표기하고, 각 줄에 다른 서식을 적용하는 것도 가능하다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/00991/02.png" alt="img"></p>
-
-            
-          
-            
-              
-              <h2 id="3-이름정의의-한계-어쩔수-없이-사용해야하는-셀스타일">#3 이름정의의 한계, 어쩔수 없이 사용해야하는 셀스타일</h2>
+<h2 id="3-이름정의의-한계-어쩔수-없이-사용해야하는-셀스타일">#3 이름정의의 한계, 어쩔수 없이 사용해야하는 셀스타일</h2>
 <p>이름정의는 TEXT 함수를 쓰기 위함이었는데, TEXT 함수를 사용하니, 문제가 있다. 바로, TEXT 함수의 반환값이 TEXT가 되버린다는 것이다.<br>
 즉, 1000000 을 백만단위 표기로 바꾸면 1이 되는데, 표시형식 뿐 아니라 값까지 1이 되어버린다는 것이다. 즉, 연산을 하게 되면, 1백만이 아니라 1이 연산이 된다.</p>
 <p>그래서&hellip;</p>
@@ -1022,12 +957,7 @@ TEXT 함수이기 때문에 CHAR(10)과 함께 두줄을 표기하고, 각 줄�
 <p class="text-box">→ 엑셀 호출시 불러들일 xlam 파일을 xlstart 폴더에 저장 (이름 자유)<br>
 → 이름이 macro.xlam 이면, 해당 파일에 위에 적은 코드를 신규 프로시저로 복사 후 저장, 리본메뉴에 버튼 등록.<br>
 → 해당 파일이 엑셀 시작될때마다, 뜰 것이고, 필요한 workbook 활성화 상태에서 리본메뉴에서 버튼을 클릭하면 이름정의로 저장</p>
-
-            
-          
-            
-              
-              <h2 id="4-새문서에-셀스타일-자동-정의-하기">#4 새문서에 셀스타일 자동 정의 하기</h2>
+<h2 id="4-새문서에-셀스타일-자동-정의-하기">#4 새문서에 셀스타일 자동 정의 하기</h2>
 <p>xlxt 파일을 사용해서 새문서에 자동으로 셀스타일을 적용하는 방식이다. 특히 셀스타일을 자주 건드려야하는 일을 하고 있다면 추천할만한 기능이다. 방법은 간단하다.</p>
 <p class="text-box">→ 새문서를 켠다.<br>
 → 원하는 셀서식을 미리 저장한다.<br>
@@ -1047,27 +977,9 @@ TEXT 함수이기 때문에 CHAR(10)과 함께 두줄을 표기하고, 각 줄�
 나는 회사에서 빈번하게 천단위나 백만단위로 표시 형식을 바꿀일이 있기 때문에, 스타일로 지정해 놓았다. 테두리를 사전 지정해서 테이블을 그릴 때 활용해도 괜찮을 것이다.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     

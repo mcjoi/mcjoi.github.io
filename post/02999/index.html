@@ -35,10 +35,6 @@
     </script>
 
     
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
-    
   </head>
   <body>
     <div class="appbar">
@@ -708,48 +704,18 @@
     
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="상황">상황</h2>
+          <h2 id="상황">상황</h2>
 <p>PDF파일에서 테이블을 추출하기 위해 OCR을 사용하거나, CSV로 변환하는 등 많은 방법을 사용해 보았다.<br>
 하지만 테이블을 온전한 형태로 추출하는 것은 거의 불가능했고, 각각의 방법마다 뭔가 하나  빠진듯한 결과물이 나왔다.</p>
 <ul>
 <li>PDF의 테이블은 테이블 형태의 데이터가 아니라 텍스트 + 이미지(라인)이기 때문에 벌어지는 현상으로 추정된다.</li>
 </ul>
-
-            
-          
-            
-              
-              <h2 id="1-python---camelot">#1 python - camelot</h2>
+<h2 id="1-python---camelot">#1 python - camelot</h2>
 <p>현재까지 사용해본 방법중에서는 python의 camelot 패키지가 가장 우수한 결과를 보여준다. PDF 파일을 선택하면, 테이블이 있는 페이지에 대하여, 각 시트별로 테이블을 작성해준다.</p>
 <p><code>sample.py</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> camelot
@@ -800,28 +766,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Excel file saved successfully: </span><span style="color:#e6db74">{</span>excel_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span></code></pre></div><hr>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="2-excel---vba">#2 excel - vba</h2>
+<h2 id="2-excel---vba">#2 excel - vba</h2>
 <p>엑셀 본연의 기능만으로 돌파를 해본다.<br>
 아래와 같은 표가 있다고 했을 때, 1번 값부터 복사를 하면, 엑셀에 바로 붙이면, 다음과 같이 붙는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/01.png" alt="myimg"></p>
@@ -857,12 +802,7 @@
 <p>구지 적용하자면 아래와 같이 가능은 하지만, 꽤나 오래 걸린다. 이런 경우 그냥 메모장을 이용하는 방법이 낫겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/16.png" alt="myimg"></p>
 <hr>
-
-            
-          
-            
-              
-              <h2 id="3-excel---from-web">#3 excel - from web</h2>
+<h2 id="3-excel---from-web">#3 excel - from web</h2>
 <p>PDF파일을 크롬브라우저에서 열면 주소창에 로컬 저장소의 주소가 찍히는데,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/17.png" alt="myimg"></p>
 <p>엑셀의 데이터 탭에서, From Web (한글로 뭐였는지 모르겠다)를 클릭하면,</p>
@@ -881,12 +821,7 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/24.png" alt="myimg"></p>
 <p>물론, 간단한 테이블만 빠르게 복사할 때는 메모장에 복사하는 방법이 여전히 유효할지 모른다.</p>
 <hr>
-
-            
-          
-            
-              
-              <h2 id="4-excel---ocr">#4 excel - OCR</h2>
+<h2 id="4-excel---ocr">#4 excel - OCR</h2>
 <p>MS365에서는 OCR 기능을 활용해서 이미지를 데이터화 하는 기능이 있다. 역시, MS의 AI는 갑자기 하늘에서 떨어진게 아니다.<br>
 회사에서 2019 버전을 사용하는 관계로, 해당 기능은 없다. 그래서 아직 몰랐던 것 같다. 그러나, 온라인 엑셀에 최신 기능이 어느정도 반영되어있을 것이라 생각해서 찾아본 결과 역시, 기능이 있었다.<br>
 아래 주소로 온라인엑셀에 접속하자, 당연히 MS계정은 있어야하겠다.<br>
@@ -907,12 +842,7 @@
 <p>이미지 처리되어, 텍스트가 긁히지 않는 PDF에서 잘 써먹을 수 있을것 같다.<br>
 여담이지만, ai 서비스들도 많이 있으니, 시간될 때, 여러가지를 시도해 보는 것도 좋겠다.</p>
 <hr>
-
-            
-          
-            
-              
-              <h2 id="5-notepad-csv">#5 notepad, csv</h2>
+<h2 id="5-notepad-csv">#5 notepad, csv</h2>
 <p>아래와 같은 표가 있다고 하면,</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/30.png" alt="myimg"></p>
 <p>그냥 카피-페이스트를 하면, 이런식으로 붙는다.</p>
@@ -933,27 +863,9 @@
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/python/02999/37.png" alt="myimg"></p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     

@@ -35,10 +35,6 @@
     </script>
 
     
-      
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7362089186642274"
-              crossorigin="anonymous"></script>
-    
   </head>
   <body>
     <div class="appbar">
@@ -706,57 +702,22 @@
     
 
     
-      <div class="ad-slot ad-slot--body">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
-    
 
     <div class="post-content">
         
         
         
-          
-          
-          
-            
-              
-            
-          
-            
-              
-              <h2 id="중복값-처리">중복값 처리</h2>
+          <h2 id="중복값-처리">중복값 처리</h2>
 <p>중복값을 확인하는 이유는 너무도 많기 때문에, 어떻게 처리할 것인지에 따라, 다양한 방법이 있으리라. 아래와 같은 간단한 원본 데이터에 대하여, 자주 쓰는 몇가지 방법을 요약해 보았다</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/10.png" alt="myimg"></p>
-
-            
-          
-            
-              
-              <h2 id="countif">COUNTIF</h2>
+<h2 id="countif">COUNTIF</h2>
 <p>아래 수식만으로도 중복값을 알아낼 수 있으며, 자기 자신을 배제해야하니, 결과값이 2이상인 경우 중복이라 볼 수 있다. 중복된 수량을 직관적으로 알 수 있으며, 정렬을 통해 손쉽게 후처리가 가능하다.</p>
 <p class="text-box">=COUNTIF($B$3:$B$11,B3)</p>
 <p>아래와 같은 식으로 결과값을 조정할 수 있고, 조건부 서식을 병행하여 색으로 구분할 수도 있다.</p>
 <p class="text-box">=IF(COUNTIF($B$3:$B$11,B3)&gt;1,COUNTIF($B$3:$B$11,B3)&amp;&ldquo;개 중복&rdquo;,&ldquo;유니크&rdquo;)</p>
 <p>단점은 다른 열을 하나 더 사용해야한다는 점이겠다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/11.png" alt="myimg"></p>
-
-            
-          
-            
-              
-              <h2 id="중복된-항목-제거">중복된 항목 제거</h2>
+<h2 id="중복된-항목-제거">중복된 항목 제거</h2>
 <p>중복된 항목만 남기고, 행을 지워버리는 기능으로, 데이터 탭의 중복된 항목제거 버튼이 있다.<br>
 값이 삭제되므로, 원본데이터에 사용하는 것은 별로이고, 주로, 값을 따서, 요약테이블 등을 새로 만든 후, 배열함수 등의 조건을 만들때 사용한다.</p>
 <p>구체적인 예시를 하나 더 살펴 보자. 아래와 같이 표가 두개 있다고 하자..<br>
@@ -781,37 +742,11 @@ E,F,G 열이 있고 각각 들어가 있는 값이 다르다. 해당 영역을 �
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/08.jpg" alt="myimg"></p>
 <p>간단하다. 위쪽 행이 살아남는다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/09.jpg" alt="myimg"></p>
-
-            
-          
-            
-              
-                <div class="ad-slot ad-slot--body">
-                  
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="6643349525"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-                </div>
-              
-              <h2 id="조건부-서식">조건부 서식</h2>
+<h2 id="조건부-서식">조건부 서식</h2>
 <p>색이나 서식을 지정하여 중복값을 처리할 떄 사용한다.<br>
 아는 사람은 알겠지만, 조건부 서식은 이름정의와 함께 여러명이 작업할 떄, 파일을 뒤죽박죽으로 만드는 원흉이 되곤한다.</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/12.png" alt="myimg"></p>
-
-            
-          
-            
-              
-              <h2 id="자작-매크로">자작 매크로</h2>
+<h2 id="자작-매크로">자작 매크로</h2>
 <p>조건부 서식과 동일한 기능을 매크로로 지정하여 사용하는 방법이 있다.<br>
 아래 코드로, 중복이 발생하는 경우, 첫번째 값을 제외한 값부터 칠하거나, 모두 칠하는 것이 가능하다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">checkDuplication</span>()
@@ -853,57 +788,24 @@ E,F,G 열이 있고 각각 들어가 있는 값이 다르다. 해당 영역을 �
 </span></span><span style="display:flex;"><span>dd:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</span></span></code></pre></div>
-            
-          
-            
-              
-              <h2 id="응용---중복값-없애고-텍스트-목록-가로로-이어붙이기">응용 - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</h2>
+</span></span></code></pre></div><h2 id="응용---중복값-없애고-텍스트-목록-가로로-이어붙이기">응용 - 중복값 없애고, 텍스트 목록 가로로 이어붙이기</h2>
 <p>아래와 같은 테이블이 있을때, 우측의 테이블에 차종을 하나, 브랜드 이름을 현대/기아&hellip;. 이런식으로 나열을 하고 싶다. 차종은 추가될때 마다 자동으로 들어가게 하고 싶다. 당신의 선택은 무엇인가?</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/13.png" alt="myimg"></p>
-
-            
-          
-            
-              
-              <h2 id="중복값-없애고-동적으로-값-등록하기">중복값 없애고 동적으로 값 등록하기</h2>
+<h2 id="중복값-없애고-동적으로-값-등록하기">중복값 없애고 동적으로 값 등록하기</h2>
 <p>편하긴 한데, 잘 안쓰게 되는 방법이긴 하다. 원리는 간단한데, 이미 등록된 행들에 같은 값이 있으면, 스킵을 하고, 처음 나오는 값을 등록하는 것이다. COUNTIF 함수에서 찾는 대상을 동적으로 설정하는게 핵심이다. 표 사이에 새로운 값이 들어와도 처리가 가능하다.<br>
 IFERROR문은 사실 데코레이션인데, 더이상 새로운 값이 없으면, &ldquo;-&rdquo; 처리해준다. 실제로는 #N/A 에러가 뜰것이다.</p>
 <p class="text-box">{=IFERROR(INDEX($B$3:$B$15,MATCH(0,COUNTIF($E$2:E2,$B$3:$B$15),0)),&quot;-&quot;)}</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/14.png" alt="myimg"></p>
-
-            
-          
-            
-              
-              <h2 id="조건에-따라-텍스트-이어주기">조건에 따라 텍스트 이어주기</h2>
+<h2 id="조건에-따라-텍스트-이어주기">조건에 따라 텍스트 이어주기</h2>
 <p>TEXTJOIN함수에서 TEXT부분에 IF문으로 조건을 걸어주고, 배열수식 처리를 해주면 된다.</p>
 <p class="text-box">{=TEXTJOIN(&quot;/&quot;,TRUE,IF($B$3:$B$15=K3,$C$3:$C$15,&quot;&quot;))}</p>
 <p><img src="https://raw.githubusercontent.com/mcjoi/img1-repo/refs/heads/master/office/01974/15.png" alt="myimg"></p>
 <p>자주 쓰지 않아서, 기억은 가물가물하지만, 언젠가는 유용하게 써먹을 날이 오겠지.</p>
 <p>끝.</p>
 
-            
-          
         
       </div>
 
-    
-      <div class="ad-slot ad-slot--footer">
-        
-  
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7362089186642274"
-       data-ad-slot="2162488542"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
-      </div>
     
 
     
