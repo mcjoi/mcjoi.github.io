@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sunnybong.xyz/sitemap.xml
+Sitemap: https://mcjoi.github.io/sitemap.xml
