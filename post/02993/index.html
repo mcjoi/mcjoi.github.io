@@ -710,8 +710,7 @@
           <h2 id="스캔">스캔</h2>
 <p>오늘 회사에서 서류를 여러장 스캔하는데, 각각 페이지마다 다른 곳으로 메일을 발송해야하는 일이었다. 스캔을 하고 보니, 한개의 파일로 바인딩이 되어있어서, acrobat으로 작업을 할까 하다가, 그냥 chatgpt 시켜서 스크립트를 짰더니, 음&hellip; 뭐 나쁘지 않다.</p>
 <h2 id="pypdf">pypdf</h2>
-<p>뭔들 없겠느냐만, python 패키지는 찾는것도 일이다. AI덕분에 이제는 그냥 생각만 해도 되니 꽤나 편하다.<br>
-당장 써야하는 관계로 설계랄 것 없이 바로 돌릴 수 있는 형태로 만들었다.</p>
+<p>뭔들 없겠느냐만, python 패키지는 찾는것도 일이다. AI덕분에 이제는 그냥 생각만 해도 되니 꽤나 편하다. 당장 써야하는 관계로 설계랄 것 없이 바로 돌릴 수 있는 형태로 만들었다.</p>
 <h3 id="여러-페이지의-pdf를-각-페이지-기준으로-저장">여러 페이지의 pdf를 각 페이지 기준으로 저장</h3>
 <p>내가 써먹을 스크립트이다. 뭐 향후 사용을 위해 생각을 하자만 한도 끝도 없지만, 일단 필요한 건 바로 쓰기 편한 형태로 간다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfReader, PdfWriter
@@ -737,6 +736,91 @@
 </span></span><span style="display:flex;"><span>        writer<span style="color:#f92672">.</span>write(f)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;완료: 총 </span><span style="color:#e6db74">{</span>len(reader<span style="color:#f92672">.</span>pages)<span style="color:#e6db74">}</span><span style="color:#e6db74"> 페이지 분리&#34;</span>)
+</span></span></code></pre></div><h3 id="선택한-페이지만-변환">선택한 페이지만 변환</h3>
+<p>선택한 페이지만 변환하는 옵션 정도는 있어야하겠다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter <span style="color:#66d9ef">as</span> tk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog, messagebox, simpledialog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfReader, PdfWriter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parse_pages</span>(value: str, total_pages: int) <span style="color:#f92672">-&gt;</span> list[int]:
+</span></span><span style="display:flex;"><span>    pages: list[int] <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> value<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;,&#34;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> item:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;페이지 번호를 입력해 주세요.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">in</span> item:
+</span></span><span style="display:flex;"><span>                parts <span style="color:#f92672">=</span> item<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;-&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(parts) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>
+</span></span><span style="display:flex;"><span>                start, end <span style="color:#f92672">=</span> map(int, parts)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> start <span style="color:#f92672">&gt;</span> end:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;범위의 시작이 끝보다 큽니다: </span><span style="color:#e6db74">{</span>item<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>                selected <span style="color:#f92672">=</span> range(start, end <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                selected <span style="color:#f92672">=</span> [int(item)]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span> <span style="color:#66d9ef">as</span> exc:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> str(exc):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;잘못된 페이지 형식입니다: </span><span style="color:#e6db74">{</span>item<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">from</span> exc
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page <span style="color:#f92672">in</span> selected:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=</span> page <span style="color:#f92672">&lt;=</span> total_pages:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>page<span style="color:#e6db74">}</span><span style="color:#e6db74">페이지는 범위를 벗어납니다. 1~</span><span style="color:#e6db74">{</span>total_pages<span style="color:#e6db74">}</span><span style="color:#e6db74"> 사이로 입력하세요.&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> page <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> pages:
+</span></span><span style="display:flex;"><span>                pages<span style="color:#f92672">.</span>append(page <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pages
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>() <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> tk<span style="color:#f92672">.</span>Tk()
+</span></span><span style="display:flex;"><span>    root<span style="color:#f92672">.</span>withdraw()
+</span></span><span style="display:flex;"><span>    input_file <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askopenfilename(
+</span></span><span style="display:flex;"><span>        title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;원본 PDF 선택&#34;</span>, filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF 파일&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)]
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> input_file:
+</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span>destroy()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        reader <span style="color:#f92672">=</span> PdfReader(input_file)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> reader<span style="color:#f92672">.</span>is_encrypted <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> reader<span style="color:#f92672">.</span>decrypt(<span style="color:#e6db74">&#34;&#34;</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;암호가 설정된 PDF는 처리할 수 없습니다.&#34;</span>)
+</span></span><span style="display:flex;"><span>        total_pages <span style="color:#f92672">=</span> len(reader<span style="color:#f92672">.</span>pages)
+</span></span><span style="display:flex;"><span>        page_text <span style="color:#f92672">=</span> simpledialog<span style="color:#f92672">.</span>askstring(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;페이지 선택&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;총 </span><span style="color:#e6db74">{</span>total_pages<span style="color:#e6db74">}</span><span style="color:#e6db74">페이지입니다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">추출할 페이지를 입력하세요.</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">예: 1,3,5-8&#34;</span>,
+</span></span><span style="display:flex;"><span>            parent<span style="color:#f92672">=</span>root,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> page_text <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>        selected_pages <span style="color:#f92672">=</span> parse_pages(page_text, total_pages)
+</span></span><span style="display:flex;"><span>        source <span style="color:#f92672">=</span> Path(input_file)
+</span></span><span style="display:flex;"><span>        output_file <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>asksaveasfilename(
+</span></span><span style="display:flex;"><span>            title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;선택한 페이지 저장&#34;</span>,
+</span></span><span style="display:flex;"><span>            initialdir<span style="color:#f92672">=</span>str(source<span style="color:#f92672">.</span>parent),
+</span></span><span style="display:flex;"><span>            initialfile<span style="color:#f92672">=</span><span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>source<span style="color:#f92672">.</span>stem<span style="color:#e6db74">}</span><span style="color:#e6db74">_selected.pdf&#34;</span>,
+</span></span><span style="display:flex;"><span>            defaultextension<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.pdf&#34;</span>,
+</span></span><span style="display:flex;"><span>            filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF 파일&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)],
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> output_file:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>        writer <span style="color:#f92672">=</span> PdfWriter()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page_index <span style="color:#f92672">in</span> selected_pages:
+</span></span><span style="display:flex;"><span>            writer<span style="color:#f92672">.</span>add_page(reader<span style="color:#f92672">.</span>pages[page_index])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(output_file, <span style="color:#e6db74">&#34;wb&#34;</span>) <span style="color:#66d9ef">as</span> output:
+</span></span><span style="display:flex;"><span>            writer<span style="color:#f92672">.</span>write(output)
+</span></span><span style="display:flex;"><span>        messagebox<span style="color:#f92672">.</span>showinfo(<span style="color:#e6db74">&#34;완료&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>len(selected_pages)<span style="color:#e6db74">}</span><span style="color:#e6db74">개 페이지를 저장했습니다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span>output_file<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>, parent<span style="color:#f92672">=</span>root)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> (<span style="color:#a6e22e">ValueError</span>, <span style="color:#a6e22e">OSError</span>) <span style="color:#66d9ef">as</span> exc:
+</span></span><span style="display:flex;"><span>        messagebox<span style="color:#f92672">.</span>showerror(<span style="color:#e6db74">&#34;오류&#34;</span>, str(exc), parent<span style="color:#f92672">=</span>root)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> exc:
+</span></span><span style="display:flex;"><span>        messagebox<span style="color:#f92672">.</span>showerror(<span style="color:#e6db74">&#34;오류&#34;</span>, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;PDF 처리 중 오류가 발생했습니다.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span>exc<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>, parent<span style="color:#f92672">=</span>root)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span>destroy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
 </span></span></code></pre></div><h3 id="합치기">합치기</h3>
 <p>분리를 하다보면 또 붙이는게 아쉬우니, 하는김에 같이 해둔다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pypdf <span style="color:#f92672">import</span> PdfWriter
@@ -765,9 +849,98 @@
 </span></span><span style="display:flex;"><span>image<span style="color:#f92672">.</span>save(imgname <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.pdf&#34;</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;완료&#34;</span>)
+</span></span></code></pre></div><h3 id="pdf를-jpg로-변환">pdf를 jpg로 변환</h3>
+<p>반대로 pjf를 jpg 파일로 변환하는 기능 정도는 있어야겠지?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tkinter <span style="color:#66d9ef">as</span> tk
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> filedialog, messagebox
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pypdfium2 <span style="color:#66d9ef">as</span> pdfium
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DPI <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>JPEG_QUALITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pdf_to_jpg</span>(pdf_path: str, output_dir: str, dpi: int <span style="color:#f92672">=</span> DPI) <span style="color:#f92672">-&gt;</span> list[Path]:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;PDF의 모든 페이지를 JPG 파일로 변환하고 저장 경로 목록을 반환한다.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    source <span style="color:#f92672">=</span> Path(pdf_path)
+</span></span><span style="display:flex;"><span>    destination <span style="color:#f92672">=</span> Path(output_dir)
+</span></span><span style="display:flex;"><span>    destination<span style="color:#f92672">.</span>mkdir(parents<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    document <span style="color:#f92672">=</span> pdfium<span style="color:#f92672">.</span>PdfDocument(str(source))
+</span></span><span style="display:flex;"><span>    saved_files: list[Path] <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    scale <span style="color:#f92672">=</span> dpi <span style="color:#f92672">/</span> <span style="color:#ae81ff">72</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        page_count <span style="color:#f92672">=</span> len(document)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> page_count <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;페이지가 없는 PDF입니다.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        digits <span style="color:#f92672">=</span> max(<span style="color:#ae81ff">3</span>, len(str(page_count)))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> page_number <span style="color:#f92672">in</span> range(page_count):
+</span></span><span style="display:flex;"><span>            page <span style="color:#f92672">=</span> document[page_number]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                bitmap <span style="color:#f92672">=</span> page<span style="color:#f92672">.</span>render(scale<span style="color:#f92672">=</span>scale)
+</span></span><span style="display:flex;"><span>                image <span style="color:#f92672">=</span> bitmap<span style="color:#f92672">.</span>to_pil()<span style="color:#f92672">.</span>convert(<span style="color:#e6db74">&#34;RGB&#34;</span>)
+</span></span><span style="display:flex;"><span>                output_file <span style="color:#f92672">=</span> destination <span style="color:#f92672">/</span> (
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>source<span style="color:#f92672">.</span>stem<span style="color:#e6db74">}</span><span style="color:#e6db74">_page_</span><span style="color:#e6db74">{</span>page_number <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">:</span><span style="color:#e6db74">0</span><span style="color:#e6db74">{</span>digits<span style="color:#e6db74">}</span><span style="color:#e6db74">d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>                image<span style="color:#f92672">.</span>save(output_file, <span style="color:#e6db74">&#34;JPEG&#34;</span>, quality<span style="color:#f92672">=</span>JPEG_QUALITY, optimize<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>                image<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>                bitmap<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>                saved_files<span style="color:#f92672">.</span>append(output_file)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>                page<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>        document<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> saved_files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>() <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    root <span style="color:#f92672">=</span> tk<span style="color:#f92672">.</span>Tk()
+</span></span><span style="display:flex;"><span>    root<span style="color:#f92672">.</span>withdraw()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    pdf_path <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askopenfilename(
+</span></span><span style="display:flex;"><span>        title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;JPG로 변환할 PDF 선택&#34;</span>,
+</span></span><span style="display:flex;"><span>        filetypes<span style="color:#f92672">=</span>[(<span style="color:#e6db74">&#34;PDF 파일&#34;</span>, <span style="color:#e6db74">&#34;*.pdf&#34;</span>)],
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> pdf_path:
+</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span>destroy()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    source <span style="color:#f92672">=</span> Path(pdf_path)
+</span></span><span style="display:flex;"><span>    output_dir <span style="color:#f92672">=</span> filedialog<span style="color:#f92672">.</span>askdirectory(
+</span></span><span style="display:flex;"><span>        title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;JPG를 저장할 폴더 선택&#34;</span>,
+</span></span><span style="display:flex;"><span>        initialdir<span style="color:#f92672">=</span>str(source<span style="color:#f92672">.</span>parent),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> output_dir:
+</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span>destroy()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        saved_files <span style="color:#f92672">=</span> pdf_to_jpg(pdf_path, output_dir)
+</span></span><span style="display:flex;"><span>        messagebox<span style="color:#f92672">.</span>showinfo(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;변환 완료&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;총 </span><span style="color:#e6db74">{</span>len(saved_files)<span style="color:#e6db74">}</span><span style="color:#e6db74">페이지를 JPG로 저장했습니다.</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">{</span>output_dir<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>            parent<span style="color:#f92672">=</span>root,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> exc:
+</span></span><span style="display:flex;"><span>        messagebox<span style="color:#f92672">.</span>showerror(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;변환 실패&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;PDF를 JPG로 변환하는 중 오류가 발생했습니다.</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">{</span>exc<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>            parent<span style="color:#f92672">=</span>root,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">finally</span>:
+</span></span><span style="display:flex;"><span>        root<span style="color:#f92672">.</span>destroy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
 </span></span></code></pre></div><h2 id="결론">결론</h2>
-<p>프론트 엔드를 붙여서 여러형태의 작업을 자유자재로 하는 것도 생각해봤으나, 그게 무슨 의미인가. 그냥 그때 그때 AI로 만드는게 더 빠를 수 있다.</p>
-<p>그런데 왜 이 코드를 블로그에 적고 있는 거지?</p>
+<p>프론트 엔드를 붙여서 여러형태의 작업을 자유자재로 하는 것도 생각해봤으나, 그게 무슨 의미인가. 그냥 그때 그때 AI로 만드는게 더 빠를 수 있다. 이걸 활용해서 무엇을 할 수 있을지 생각해봐야한다.<br>
+그런데 왜 이 코드를 블로그에 적고 있는 거지?</p>
 <p>끝.</p>
 
         
