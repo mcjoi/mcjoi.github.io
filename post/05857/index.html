@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qCBCvelNiGg9-YydwmAkQziJ_pgLxNRTyRKQiCzQo_A" />
     <meta name="naver-site-verification" content="dda86908f8573ac8a36f8da3e99625a5c772c203" /><title>SCRCPY 무선으로 연결하기 | shaaaaallow dive</title>
-    <meta name="description" content="scrcpy 개인 태블릿을 회사에서 쓰면서, PC 창에 태블릿을 띄울수 있는 좋은 프로그램이다. 매번 USB로 연결했었는데, 무선으로 사용해 본다. 포트 열어주기 같은 네트워크(wifi)에 붙어있어야 한다. 안드로이드 platform-Tools 를 설치하여 adb를 사용할 수 있도록 한 …" />
+    <meta name="description" content="scrcpy 개인 태블릿을 회사에서 쓰면서, PC 창에 태블릿을 띄울수 있는 좋은 프로그램이다. 매번 USB로 연결했었는데, 무선으로 사용해 본다. 포트 열어주기 PC와 태블릿은 같은 네트워크(wifi)에 붙어있어야 한다. 안드로이드 platform-Tools 를 설치하여 adb를 사용 …" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://mcjoi.github.io/post/05857/" />
     <meta property="og:title" content="SCRCPY 무선으로 연결하기 | shaaaaallow dive" />
-    <meta property="og:description" content="scrcpy 개인 태블릿을 회사에서 쓰면서, PC 창에 태블릿을 띄울수 있는 좋은 프로그램이다. 매번 USB로 연결했었는데, 무선으로 사용해 본다. 포트 열어주기 같은 네트워크(wifi)에 붙어있어야 한다. 안드로이드 platform-Tools 를 설치하여 adb를 사용할 수 있도록 한 …" />
+    <meta property="og:description" content="scrcpy 개인 태블릿을 회사에서 쓰면서, PC 창에 태블릿을 띄울수 있는 좋은 프로그램이다. 매번 USB로 연결했었는데, 무선으로 사용해 본다. 포트 열어주기 PC와 태블릿은 같은 네트워크(wifi)에 붙어있어야 한다. 안드로이드 platform-Tools 를 설치하여 adb를 사용 …" />
     <meta property="og:url" content="https://mcjoi.github.io/post/05857/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="shaaaaallow dive" />
@@ -738,14 +738,18 @@
 <p>개인 태블릿을 회사에서 쓰면서, PC 창에 태블릿을 띄울수 있는 좋은 프로그램이다.<br>
 매번 USB로 연결했었는데, 무선으로 사용해 본다.</p>
 <h3 id="포트-열어주기">포트 열어주기</h3>
-<p>같은 네트워크(wifi)에 붙어있어야 한다.<br>
-안드로이드 platform-Tools 를 설치하여 adb를 사용할 수 있도록 한다.(자세한 설명은 생략한다.)<br>
-일단, USB로 기기를 연결하고, adb tcpip 5555 명령으로 포트를 열어준다.<br>
-wifi의 ip 주소를 확인한다음 adb connect xxx.xxx.xxx.xxx:5555 로 포트를 붙여준다.<br>
-adb devices 명령으로 제대로 붙었는지 확인한다.</p>
+<ul>
+<li>PC와 태블릿은 같은 네트워크(wifi)에 붙어있어야 한다.</li>
+<li>안드로이드 platform-Tools 를 설치하여 adb를 사용할 수 있도록 한다.(자세한 설명은 생략한다.)</li>
+<li>일단, USB로 기기를 연결하고, adb tcpip 5555 명령으로 포트를 열어준다.</li>
+<li>wifi의 ip 주소를 확인한다음 adb connect xxx.xxx.xxx.xxx:5555 로 포트를 붙여준다.</li>
+<li>adb devices 명령으로 제대로 붙었는지 확인한다.</li>
+</ul>
 <h3 id="태블릿-연결">태블릿 연결</h3>
-<p>태블릿에서 무선 디버깅을 개발자 모드에서 열어준다.<br>
-scrcpy 를 실행시키면 무선으로 PC 화면에 태블릿 화면이 열린다.</p>
+<ul>
+<li>태블릿에서 무선 디버깅을 개발자 모드에서 열어준다.</li>
+<li>scrcpy 를 실행시키면 무선으로 PC 화면에 태블릿 화면이 열린다.</li>
+</ul>
 <p>내가 알고 있기로 무선 디버깅은 일정 시간이 지나면 꺼지는데, 다시 켜주면 된다.<br>
 이외, -S, -K 옵션을 쓰면 태블릿 화면이 꺼진상태로 연결이 되며, PC 키보드도 활성화 된다.</p>
 <p>생각보다 별거 없다.</p>
